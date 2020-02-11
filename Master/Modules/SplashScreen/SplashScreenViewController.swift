@@ -20,8 +20,7 @@ class SplashScreenViewController: BaseViewController {
         // TODO: Use routers!
         
         let navigationController = UINavigationController()
-        navigationController.navigationBar.tintColor = .black
-        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.tintColor = UIColor.Master.green
         
         if #available(iOS 11.0, *) {
             navigationController.navigationBar.prefersLargeTitles = true

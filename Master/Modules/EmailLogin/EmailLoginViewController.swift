@@ -30,6 +30,8 @@ class EmailLoginViewController: BaseViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        addIconInNavigationBar()
+        
         title = "Continuar con Email"
         
         loginButton.style = .green

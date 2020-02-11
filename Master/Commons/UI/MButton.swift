@@ -29,7 +29,7 @@ class MButton: UIButton {
             return
         }
         
-        titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         
         backgroundColor = selectedStyle.bg
         setTitleColor(selectedStyle.text, for: .normal)

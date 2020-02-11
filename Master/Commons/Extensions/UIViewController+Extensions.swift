@@ -9,6 +9,11 @@
 import UIKit
 
 extension UIViewController {
+    func addIconInNavigationBar() {
+        let rightImage = UIBarButtonItem(image: .greenLogoIcon, style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = rightImage
+    }
+    
     func enableKeyboardDismiss() {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
     }
