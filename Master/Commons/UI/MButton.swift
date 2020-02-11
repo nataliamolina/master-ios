@@ -16,15 +16,31 @@ enum MButtonType {
     case onlyWhiteText
 }
 
-class MButton: UIButton {
+@IBDesignable class MButton: UIButton {
+    // MARK: - Life Cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setupStyle()
+    }
     
+    // MARK: - Properties
     var style: MButtonType = .greenBorder {
         didSet {
-           setupStyle()
+            setupStyle()
         }
     }
     
-    func setupStyle() {
+    override open var isEnabled: Bool {
+        didSet {
+            animateState()
+        }
+    }
+    
+    // MARK: - Private Methods
+    private func setupStyle() {
+        animateState()
+        
         guard let selectedStyle: ButtonStyleConfig = Styles.buttonStyles[style] else {
             return
         }
@@ -37,5 +53,11 @@ class MButton: UIButton {
         layer.borderWidth = 1.5
         layer.borderColor = selectedStyle.border.cgColor
         layer.cornerRadius = 24
+    }
+    
+    private func animateState() {
+        UIView.animate(withDuration: 0.5) {
+            self.alpha = self.isEnabled ? 1.0 : 0.5
+        }
     }
 }
