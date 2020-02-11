@@ -30,6 +30,8 @@ class SplashScreenViewController: BaseViewController {
         
         let mainVC = navigationController
         mainVC.modalPresentationStyle = .fullScreen
+        mainVC.hero.isEnabled = true
+        mainVC.hero.modalAnimationType = .zoom
         
         present(mainVC, animated: true, completion: nil)
     }

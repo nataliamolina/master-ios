@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class EmailLoginViewController: BaseViewController { 
     // MARK: - UI References
@@ -30,6 +31,7 @@ class EmailLoginViewController: BaseViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        
         addIconInNavigationBar()
         
         title = "Continuar con Email"

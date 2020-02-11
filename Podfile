@@ -12,11 +12,9 @@ def commons
 end
 
 target 'Master' do
-  use_frameworks!
   commons
 end 
 
 target 'MasterTests' do
-  inherit! :search_paths
   commons
 end

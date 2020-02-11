@@ -10,5 +10,6 @@
 "general.legal.continue" = "Al continuar, estás aceptando nuestros términos y condiciones.";
 
 // Email Login
+"emailLogin.title" = "Continuar con Email";
 "emailLogin.placeholder.email" = "Correo";
 "emailLogin.placeholder.password" = "Contraseña";
