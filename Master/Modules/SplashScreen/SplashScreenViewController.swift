@@ -1,0 +1,37 @@
+//
+//  SplashScreenViewController.swift
+//  Master
+//
+//  Created by Luis Carlos Mejia Garcia on 12/26/19.
+//  Copyright © 2019 Master. All rights reserved.
+//
+
+import UIKit
+
+class SplashScreenViewController: BaseViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // TODO: Use routers!
+        
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.isTranslucent = false
+        
+        if #available(iOS 11.0, *) {
+            navigationController.navigationBar.prefersLargeTitles = true
+        }
+        
+        navigationController.setViewControllers([MainViewController()], animated: false)
+        
+        let mainVC = navigationController
+        mainVC.modalPresentationStyle = .fullScreen
+        
+        present(mainVC, animated: true, completion: nil)
+    }
+}

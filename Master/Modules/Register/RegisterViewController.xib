@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Master" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="TXf-HZ-a9a" id="E8u-yY-z5J"/>
+                <outlet property="emailTextField" destination="OrN-gd-Eb0" id="fko-uv-dvP"/>
+                <outlet property="mainStackview" destination="vnJ-KG-oTW" id="xoO-hs-mJ1"/>
+                <outlet property="namesTextField" destination="Ojq-3J-oer" id="LHa-5T-ATn"/>
+                <outlet property="passwordTextField" destination="Ltd-PN-SuG" id="hnp-2D-EVb"/>
+                <outlet property="phoneTextField" destination="mja-aa-T6z" id="ecl-Gi-M3P"/>
+                <outlet property="registerButton" destination="ldf-nI-4V7" id="1dc-DA-q13"/>
+                <outlet property="view" destination="3yS-W8-Jgc" id="ECV-zG-dQb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3yS-W8-Jgc">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vnJ-KG-oTW">
+                    <rect key="frame" x="20" y="64" width="374" height="373"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW2-WM-tkE">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-gd-Eb0" customClass="MTextField" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="35.5" width="374" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="emn-7I-3k0"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-3J-oer" customClass="MTextField" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="90.5" width="374" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="oBr-C2-ZJd"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mja-aa-T6z" customClass="MTextField" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="145.5" width="374" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="n4X-wT-Pyk"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ltd-PN-SuG" customClass="MTextField" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="200.5" width="374" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="RjK-zf-Ijb"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="join" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9L-bm-5Wv">
+                            <rect key="frame" x="0.0" y="255.5" width="374" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TXf-HZ-a9a">
+                            <rect key="frame" x="0.0" y="291" width="374" height="20"/>
+                        </activityIndicatorView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-nI-4V7" customClass="MButton" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="326" width="374" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="7cB-aF-2jr"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vnJ-KG-oTW" firstAttribute="top" secondItem="qv8-6J-ePw" secondAttribute="top" constant="20" id="07p-SM-khf"/>
+                <constraint firstItem="qv8-6J-ePw" firstAttribute="trailing" secondItem="vnJ-KG-oTW" secondAttribute="trailing" constant="20" id="ZCS-tv-SXp"/>
+                <constraint firstItem="vnJ-KG-oTW" firstAttribute="leading" secondItem="qv8-6J-ePw" secondAttribute="leading" constant="20" id="vSK-aU-ePD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="qv8-6J-ePw"/>
+        </view>
+    </objects>
+</document>
