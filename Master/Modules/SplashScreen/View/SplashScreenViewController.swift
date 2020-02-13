@@ -15,8 +15,13 @@ class SplashScreenViewController: BaseViewController {
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
+    private var router: RouterBase<MainRouterTransitions> {
+        return MainRouter(rootViewController: self)
+    }
+    
     private let viewModel = SplashScreenViewModel()
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,22 +56,10 @@ class SplashScreenViewController: BaseViewController {
     }
     
     private func route(toHome: Bool) {
-        // TODO: Use routers!
-        
-        let navigationController = UINavigationController()
-        navigationController.navigationBar.tintColor = UIColor.Master.green
-        
-        if #available(iOS 11.0, *) {
-            navigationController.navigationBar.prefersLargeTitles = true
+        if toHome {
+            router.transition(to: .home)
+        } else {
+            router.transition(to: .main)
         }
-        
-        navigationController.setViewControllers([MainViewController()], animated: false)
-        
-        let mainVC = navigationController
-        mainVC.modalPresentationStyle = .fullScreen
-        mainVC.hero.isEnabled = true
-        mainVC.hero.modalAnimationType = .zoom
-        
-        present(mainVC, animated: true, completion: nil)
     }
 }
