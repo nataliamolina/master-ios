@@ -9,6 +9,8 @@
 import UIKit
 
 class MLegalButton: UIButton {
+    @IBInspectable var localizableKey: String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,7 +23,7 @@ class MLegalButton: UIButton {
         titleLabel?.numberOfLines = 2
         titleLabel?.lineBreakMode = .byWordWrapping
         
-        let text = titleLabel?.text ?? ""
+        let text = localizableKey.localized
         let titleString = NSMutableAttributedString(string: text)
         titleString.addAttribute(NSAttributedString.Key.underlineStyle,
                                  value: NSUnderlineStyle.single.rawValue,

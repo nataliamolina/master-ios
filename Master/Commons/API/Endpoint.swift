@@ -8,4 +8,7 @@
 
 import Foundation
 
-struct Endpoint {}
+struct Endpoint {
+    // FIXME: move me!
+    static let base = "https://master-app-api.azurewebsites.net/api/v1/"
+}

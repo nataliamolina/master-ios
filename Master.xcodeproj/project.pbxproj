@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C198D1723F4C33600346395 /* SplashScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1623F4C33600346395 /* SplashScreenService.swift */; };
+		2C198D1923F4C34600346395 /* SplashScreenServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1823F4C34600346395 /* SplashScreenServiceProtocol.swift */; };
+		2C198D1B23F4C35700346395 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1A23F4C35700346395 /* SplashScreenViewModel.swift */; };
+		2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1C23F4CD3A00346395 /* SplashScreenEndpoints.swift */; };
+		2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1E23F4D00800346395 /* EmptyCodable.swift */; };
 		2C2B1AB723F23B1A00243D3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B1AB623F23B1A00243D3E /* GoogleService-Info.plist */; };
 		2C2B1AB923F24B0E00243D3E /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AB823F24B0E00243D3E /* UIImage+Extensions.swift */; };
 		2C2B1ABF23F2560F00243D3E /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC123F2560F00243D3E /* Strings.strings */; };
@@ -15,6 +20,14 @@
 		2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC923F2745500243D3E /* EmailLoginService.swift */; };
 		2C2B1AD223F274D000243D3E /* EmailLoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AD123F274D000243D3E /* EmailLoginEndpoint.swift */; };
 		2C2B1AD423F274E300243D3E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AD323F274E300243D3E /* Endpoint.swift */; };
+		2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* Storage.swift */; };
+		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
+		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
+		2C8C6C6523F4BB3400FE06BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6423F4BB3400FE06BE /* User.swift */; };
+		2C8C6C6823F4BB5B00FE06BE /* ServerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6723F4BB5B00FE06BE /* ServerStatus.swift */; };
+		2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6923F4BB6700FE06BE /* ServerResponse.swift */; };
+		2C8C6C6C23F4BDA700FE06BE /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */; };
+		2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */; };
 		5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */; };
 		A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
 		A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
@@ -60,6 +73,11 @@
 /* Begin PBXFileReference section */
 		0FC7148F0CFE4FA0A5FCA190 /* Pods-Master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master.release.xcconfig"; path = "Target Support Files/Pods-Master/Pods-Master.release.xcconfig"; sourceTree = "<group>"; };
 		28A455F73CCB32D7506AD43D /* Pods-Master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master.debug.xcconfig"; path = "Target Support Files/Pods-Master/Pods-Master.debug.xcconfig"; sourceTree = "<group>"; };
+		2C198D1623F4C33600346395 /* SplashScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenService.swift; sourceTree = "<group>"; };
+		2C198D1823F4C34600346395 /* SplashScreenServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenServiceProtocol.swift; sourceTree = "<group>"; };
+		2C198D1A23F4C35700346395 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
+		2C198D1C23F4CD3A00346395 /* SplashScreenEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenEndpoints.swift; sourceTree = "<group>"; };
+		2C198D1E23F4D00800346395 /* EmptyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCodable.swift; sourceTree = "<group>"; };
 		2C2B1AB623F23B1A00243D3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C2B1AB823F24B0E00243D3E /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		2C2B1AC023F2560F00243D3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Strings.strings; sourceTree = "<group>"; };
@@ -68,6 +86,14 @@
 		2C2B1AC923F2745500243D3E /* EmailLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginService.swift; sourceTree = "<group>"; };
 		2C2B1AD123F274D000243D3E /* EmailLoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoint.swift; sourceTree = "<group>"; };
 		2C2B1AD323F274E300243D3E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2C8C6C5A23F4B64000FE06BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		2C8C6C6423F4BB3400FE06BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2C8C6C6723F4BB5B00FE06BE /* ServerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStatus.swift; sourceTree = "<group>"; };
+		2C8C6C6923F4BB6700FE06BE /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagerProtocol.swift; sourceTree = "<group>"; };
 		3024BACA975641C9852C5D83 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				2C2B1AD323F274E300243D3E /* Endpoint.swift */,
+				2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */,
+				2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -171,6 +199,61 @@
 		2C2B1AD523F27C5200243D3E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C35F3C023F4B6160034D8D1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C6C5A23F4B64000FE06BE /* Storage.swift */,
+				2C8C6C5C23F4B6FE00FE06BE /* Session.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2C8C6C5E23F4B9D100FE06BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5F30D3623B4C7DE005258A8 /* SplashScreenViewController.swift */,
+				A5F30D3723B4C7DE005258A8 /* SplashScreenViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8C6C5F23F4B9D400FE06BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C198D1A23F4C35700346395 /* SplashScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C8C6C6023F4B9DB00FE06BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C198D1623F4C33600346395 /* SplashScreenService.swift */,
+				2C198D1823F4C34600346395 /* SplashScreenServiceProtocol.swift */,
+				2C198D1C23F4CD3A00346395 /* SplashScreenEndpoints.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2C8C6C6123F4BA9300FE06BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */,
+				2C8C6C6423F4BB3400FE06BE /* User.swift */,
+				2C198D1E23F4D00800346395 /* EmptyCodable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C8C6C6623F4BB5300FE06BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C6C6723F4BB5B00FE06BE /* ServerStatus.swift */,
+				2C8C6C6923F4BB6700FE06BE /* ServerResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,6 +309,8 @@
 		A5F30D3A23B4C7F0005258A8 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				2C8C6C6123F4BA9300FE06BE /* Models */,
+				2C35F3C023F4B6160034D8D1 /* Helpers */,
 				2C2B1ACB23F2746600243D3E /* API */,
 				2C2B1ABA23F2536100243D3E /* Lang */,
 				A5F30D6023B4DA34005258A8 /* Cells */,
@@ -254,8 +339,10 @@
 		A5F30D3C23B4C7FB005258A8 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A5F30D3623B4C7DE005258A8 /* SplashScreenViewController.swift */,
-				A5F30D3723B4C7DE005258A8 /* SplashScreenViewController.xib */,
+				2C8C6C6623F4BB5300FE06BE /* Models */,
+				2C8C6C6023F4B9DB00FE06BE /* Services */,
+				2C8C6C5F23F4B9D400FE06BE /* ViewModel */,
+				2C8C6C5E23F4B9D100FE06BE /* View */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -535,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C198D1723F4C33600346395 /* SplashScreenService.swift in Sources */,
 				A5F30D6623B4DA85005258A8 /* UITableView+Extensions.swift in Sources */,
 				A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */,
 				2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */,
@@ -543,23 +631,35 @@
 				2C2B1AD223F274D000243D3E /* EmailLoginEndpoint.swift in Sources */,
 				A5F30D4523B4C8E1005258A8 /* BaseViewController.swift in Sources */,
 				2C2B1AC823F2744600243D3E /* EmailLoginViewModel.swift in Sources */,
+				2C8C6C6523F4BB3400FE06BE /* User.swift in Sources */,
 				A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */,
 				2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2C2B1AB923F24B0E00243D3E /* UIImage+Extensions.swift in Sources */,
+				2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */,
 				A5F30D6423B4DA63005258A8 /* UITableViewCell+Extensions.swift in Sources */,
+				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* IdentificableViewModelProtocol.swift in Sources */,
 				A5F30D5023B4CDB7005258A8 /* Styles.swift in Sources */,
+				2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */,
 				A5F30D3823B4C7DE005258A8 /* SplashScreenViewController.swift in Sources */,
+				2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */,
 				A5F30D5923B4D5EE005258A8 /* UIViewController+Extensions.swift in Sources */,
 				A5F30D4E23B4CC2B005258A8 /* UIColor+Extensions.swift in Sources */,
 				A5F30D7423B4DC94005258A8 /* CategoryCellViewModel.swift in Sources */,
 				A5F30D6823B4DAE5005258A8 /* ConfigurableCellProtocol.swift in Sources */,
+				2C198D1B23F4C35700346395 /* SplashScreenViewModel.swift in Sources */,
+				2C8C6C6823F4BB5B00FE06BE /* ServerStatus.swift in Sources */,
+				2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */,
 				A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */,
+				2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */,
+				2C198D1923F4C34600346395 /* SplashScreenServiceProtocol.swift in Sources */,
 				A5F30D5423B4D2CC005258A8 /* EmailLoginViewController.swift in Sources */,
 				A5F30D4C23B4CBC3005258A8 /* MButton.swift in Sources */,
+				2C8C6C6C23F4BDA700FE06BE /* ConnectionManager.swift in Sources */,
 				2C2B1AD423F274E300243D3E /* Endpoint.swift in Sources */,
+				2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

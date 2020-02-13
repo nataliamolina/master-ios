@@ -7,16 +7,50 @@
 //
 
 import UIKit
+import SimpleBinding
+import NotificationBannerSwift
 
 class SplashScreenViewController: BaseViewController {
-
+    // MARK: - UI Refereces
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    
+    // MARK: - Properties
+    private let viewModel = SplashScreenViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        viewModel.fetchRequiredServices()
+    }
+    
+    // MARK: - Private Methods
+    private func setupUI() {
+        viewModel.isLoading.bindTo(activityIndicator)
+        
+        viewModel.status.valueDidChange = { [weak self] status in
+            switch status {
+            case .preloadReady(let hasSession):
+                self?.route(toHome: hasSession)
+            case .error(let error):
+                self?.showError(message: error)
+                
+            default:
+                return
+            }
+        }
+    }
+    
+    private func showError(message: String?) {
+        NotificationBanner(title: "Error", subtitle: message, style: .danger).show()
+    }
+    
+    private func route(toHome: Bool) {
         // TODO: Use routers!
         
         let navigationController = UINavigationController()
