@@ -17,6 +17,8 @@ class Session {
     private let storage: StorageProtocol = Storage()
     static let shared = Session()
     
+    var profile: UserProfile = .empty
+    
     var token: String? {
         set(newValue) {
             storage.save(value: newValue ?? "",

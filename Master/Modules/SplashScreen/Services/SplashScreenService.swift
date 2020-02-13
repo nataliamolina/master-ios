@@ -20,34 +20,21 @@ class SplashScreenService: SplashScreenServiceProtocol {
     }
     
     // MARK: - Public Methods
-    func saveAuthenticationToken(_ token: String) {
-        connectionDependency.setAuthenticationToken(token)
-    }
-    
-    func checkServerStatus(onComplete: @escaping (ServerStatus?, Error?) -> Void) {
+    func checkServerStatus(onComplete: @escaping (ServerStatus?, CMError?) -> Void) {
         connectionDependency
             .get(url: Endpoint.serverStatus) {
-                (response: ServerStatus?, error: Error?) in
+                (response: ServerStatus?, error: CMError?) in
                 
-            onComplete(response, error)
+                onComplete(response, error)
         }
     }
     
-    func checkSessionToken(onComplete: @escaping (ServerResponse<Bool>?, Error?) -> Void) {
+    func checkSessionToken(onComplete: @escaping (Bool, CMError?) -> Void) {
         connectionDependency
             .get(url: Endpoint.validateSessionToken) {
-                (response: ServerResponse<Bool>?, error: Error?) in
+                (response: EmptyCodable?, error: CMError?) in
                 
-            onComplete(response, error)
-        }
-    }
-    
-    func fetchUserSession(onComplete: @escaping (User?, Error?) -> Void) {
-        connectionDependency
-            .get(url: Endpoint.userSession) {
-                (response: User?, error: Error?) in
-                
-            onComplete(response, error)
+                onComplete(response != nil, error)
         }
     }
     

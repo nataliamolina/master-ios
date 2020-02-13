@@ -17,8 +17,10 @@ protocol StorageProtocol {
 
 // FIXME: Use keychain!
 class Storage: StorageProtocol {
+    // MARK: - Properties
     private let defaults = UserDefaults.standard
     
+    // MARK: - Public Methods
     func get<T>(key: String) -> T? {
         return defaults.object(forKey: key) as? T
     }

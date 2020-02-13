@@ -20,12 +20,17 @@ class SplashScreenViewModel {
     let status = Var<SplashScreenViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let service: SplashScreenServiceProtocol
+    let loginService: EmailLoginServiceProtocol
     
     // MARK: - Life Cycle
-    init(service: SplashScreenServiceProtocol? = nil) {
-        let defaultService = SplashScreenService(connectionDependency: ConnectionManager())
+    init(service: SplashScreenServiceProtocol? = nil, loginService: EmailLoginServiceProtocol? = nil) {
+        let connectionManager = ConnectionManager()
+        
+        let defaultService = SplashScreenService(connectionDependency: connectionManager)
+        let defaultLoginService = EmailLoginService(connectionDependency: connectionManager)
         
         self.service = service ?? defaultService
+        self.loginService = loginService ?? defaultLoginService
     }
     
     func fetchRequiredServices() {
@@ -36,7 +41,7 @@ class SplashScreenViewModel {
     // MARK: - Private Methods
     
     private func checkServerStatus() {
-        service.checkServerStatus { [weak self] (response: ServerStatus?, error: Error?) in
+        service.checkServerStatus { [weak self] (response: ServerStatus?, error: CMError?) in
             self?.isLoading.value = false
             
             if response?.isOnline == true {
@@ -50,27 +55,29 @@ class SplashScreenViewModel {
     }
     
     private func validateTokenIfNeeded() {
-        guard Session.shared.token != nil else {
+        guard let token = Session.shared.token, !token.isEmpty else {
             status.value = .preloadReady(hasSession: false)
             
             return
         }
         
-        service.checkSessionToken { [weak self] (response: ServerResponse<Bool>?, error: Error?) in
+        loginService.saveAuthenticationToken(token)
+        
+        service.checkSessionToken { [weak self] (response: Bool, error: CMError?) in
             self?.isLoading.value = false
             
-            if response?.data == true {
+            if response {
                 self?.fetchUserInformation()
                 
                 return
             }
             
-            self?.status.value = .error(error: response?.userErrorMessage ?? error?.localizedDescription)
+            self?.status.value = .error(error: error?.localizedDescription)
         }
     }
     
     private func fetchUserInformation() {
-        service.fetchUserSession { [weak self] (response: User?, error: Error?) in
+        loginService.fetchUserSession { [weak self] (response: User?, error: CMError?) in
             self?.isLoading.value = false
             
             guard let user = response, error == nil else {
@@ -79,7 +86,7 @@ class SplashScreenViewModel {
                 return
             }
             
-            // TODO: Save user session
+            Session.shared.profile = user.asUserProfile
             self?.status.value = .preloadReady(hasSession: true)
         }
     }

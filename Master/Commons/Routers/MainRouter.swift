@@ -12,7 +12,7 @@ enum MainRouterTransitions {
     case main
     case emailLogin
     case register
-    case home
+    case home(router: RouterBase<HomeRouterTransitions>)
 }
 
 class MainRouter: RouterBase<MainRouterTransitions> {
@@ -20,11 +20,11 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     private let navigationController: UINavigationController
     
     // MARK: - Life Cycle
-    override init(rootViewController: BaseViewController) {
+    override init(rootViewController: UIViewController) {
         self.navigationController = UINavigationController()
         
         super.init(rootViewController: rootViewController)
-   
+        
         setupNavigationController()
     }
     
@@ -35,13 +35,13 @@ class MainRouter: RouterBase<MainRouterTransitions> {
             handleMainTransition()
             
         case .emailLogin:
-            return
+            handleEmailLoginTransition()
             
-        case .home:
-            return
+        case .home(let router):
+            handleHomeTransition(router: router)
             
         case .register:
-            return
+            handleRegisterTransition()
         }
     }
     
@@ -59,8 +59,28 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     }
     
     private func handleMainTransition() {
-        navigationController.setViewControllers([MainViewController()], animated: false)
+        let viewController = MainViewController()
+        viewController.router = self
+        
+        navigationController.setViewControllers([viewController], animated: false)
         
         rootViewController.present(navigationController, animated: true, completion: nil)
+    }
+    
+    private func handleEmailLoginTransition() {
+        let viewController = EmailLoginViewController()
+        viewController.router = self
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleHomeTransition(router: RouterBase<HomeRouterTransitions>) {
+        router.transition(to: .home)
+    }
+    
+    private func handleRegisterTransition() {
+        let viewController = RegisterViewController()
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

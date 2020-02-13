@@ -30,13 +30,17 @@ class ConnectionManager: ConnectionManagerProtocol {
         SN.get(endpoint: url) { [weak self] (response: SNResultWithEntity<ServerResponse<T>, ServerResponse<EmptyCodable>>) in
             switch response {
             case .error(let error):
-                onComplete?(nil, error)
+                onComplete?(nil, self?.getErrorWith(error: error))
                 
             case .errorResult(let entity):
                 onComplete?(nil, self?.getErrorWith(text: entity.userErrorMessage))
                 
             case .success(let response):
-                onComplete?(response.data, nil)
+                if response.isError {
+                    onComplete?(nil, self?.getErrorWith(text: response.userErrorMessage))
+                } else {
+                    onComplete?(response.data, nil)
+                }
             }
         }
     }
@@ -45,25 +49,32 @@ class ConnectionManager: ConnectionManagerProtocol {
                           request: Codable,
                           onComplete: ResultBlock<T>?) {
         
-        SN.post(endpoint: url,
-                model: request) { [weak self] (response: SNResultWithEntity<T, ServerResponse<EmptyCodable>>) in
-                    
+        SN.post(endpoint: url, model: request) { [weak self] (response: SNResultWithEntity<ServerResponse<T>, ServerResponse<EmptyCodable>>) in
+            
             switch response {
             case .error(let error):
-                onComplete?(nil, error)
+                onComplete?(nil, self?.getErrorWith(error: error))
                 
             case .errorResult(let entity):
                 onComplete?(nil, self?.getErrorWith(text: entity.userErrorMessage))
                 
             case .success(let response):
-                onComplete?(response, nil)
+                if response.isError {
+                    onComplete?(nil, self?.getErrorWith(text: response.userErrorMessage))
+                } else {
+                    onComplete?(response.data, nil)
+                }
             }
         }
     }
     
     // MARK: - Private Methods
-    private func getErrorWith(text: String?) -> Error {
-        return NSError(domain: "", code: 0, userInfo: ["error": text ?? ""])
+    private func getErrorWith(error: Error) -> CMError {
+        return CMError(error: error.localizedDescription, details: error)
+    }
+    
+    private func getErrorWith(text: String?) -> CMError {
+        return CMError(error: text ?? "", details: nil)
     }
 }
 

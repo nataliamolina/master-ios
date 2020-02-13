@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: BaseViewController {
+class RegisterViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var mainStackview: UIStackView!
     @IBOutlet private weak var emailTextField: MTextField!

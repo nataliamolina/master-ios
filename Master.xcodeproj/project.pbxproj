@@ -20,8 +20,15 @@
 		2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC223F25EA800243D3E /* MLegalButton.swift */; };
 		2C2B1AC823F2744600243D3E /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC723F2744600243D3E /* EmailLoginViewModel.swift */; };
 		2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC923F2745500243D3E /* EmailLoginService.swift */; };
-		2C2B1AD223F274D000243D3E /* EmailLoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AD123F274D000243D3E /* EmailLoginEndpoint.swift */; };
 		2C2B1AD423F274E300243D3E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AD323F274E300243D3E /* Endpoint.swift */; };
+		2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
+		2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */; };
+		2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8E23F4E9E900267899 /* LoginRequest.swift */; };
+		2C73AE9123F4EA4E00267899 /* LoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9023F4EA4E00267899 /* LoginServiceProtocol.swift */; };
+		2C73AE9323F4EC5100267899 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9223F4EC5100267899 /* UserProfile.swift */; };
+		2C73AE9523F4F16A00267899 /* CMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9423F4F16A00267899 /* CMError.swift */; };
+		2C73AE9723F4FD5700267899 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9623F4FD5700267899 /* Result.swift */; };
+		2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9823F4FE8700267899 /* HomeRouter.swift */; };
 		2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* Storage.swift */; };
 		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
 		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
@@ -38,7 +45,6 @@
 		A5F30D3823B4C7DE005258A8 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D3623B4C7DE005258A8 /* SplashScreenViewController.swift */; };
 		A5F30D3923B4C7DE005258A8 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D3723B4C7DE005258A8 /* SplashScreenViewController.xib */; };
 		A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4123B4C8A0005258A8 /* Array+Extensions.swift */; };
-		A5F30D4523B4C8E1005258A8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4423B4C8E1005258A8 /* BaseViewController.swift */; };
 		A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4623B4CB48005258A8 /* MainViewController.swift */; };
 		A5F30D4923B4CB48005258A8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D4723B4CB48005258A8 /* MainViewController.xib */; };
 		A5F30D4C23B4CBC3005258A8 /* MButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4B23B4CBC3005258A8 /* MButton.swift */; };
@@ -88,8 +94,15 @@
 		2C2B1AC223F25EA800243D3E /* MLegalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLegalButton.swift; sourceTree = "<group>"; };
 		2C2B1AC723F2744600243D3E /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
 		2C2B1AC923F2745500243D3E /* EmailLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginService.swift; sourceTree = "<group>"; };
-		2C2B1AD123F274D000243D3E /* EmailLoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoint.swift; sourceTree = "<group>"; };
 		2C2B1AD323F274E300243D3E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoints.swift; sourceTree = "<group>"; };
+		2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		2C73AE8E23F4E9E900267899 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		2C73AE9023F4EA4E00267899 /* LoginServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceProtocol.swift; sourceTree = "<group>"; };
+		2C73AE9223F4EC5100267899 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		2C73AE9423F4F16A00267899 /* CMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMError.swift; sourceTree = "<group>"; };
+		2C73AE9623F4FD5700267899 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2C73AE9823F4FE8700267899 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -113,7 +126,6 @@
 		A5F30D3623B4C7DE005258A8 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		A5F30D3723B4C7DE005258A8 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
 		A5F30D4123B4C8A0005258A8 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		A5F30D4423B4C8E1005258A8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A5F30D4623B4CB48005258A8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A5F30D4723B4CB48005258A8 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		A5F30D4B23B4CBC3005258A8 /* MButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MButton.swift; sourceTree = "<group>"; };
@@ -159,6 +171,7 @@
 		2C198D2223F4E4EA00346395 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				2C73AE9823F4FE8700267899 /* HomeRouter.swift */,
 				2C198D2323F4E4FB00346395 /* MainRouter.swift */,
 				2C198D2523F4E6AF00346395 /* RouterBase.swift */,
 			);
@@ -179,6 +192,7 @@
 				2C2B1AD323F274E300243D3E /* Endpoint.swift */,
 				2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */,
 				2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */,
+				2C73AE9423F4F16A00267899 /* CMError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -204,7 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				2C2B1AC923F2745500243D3E /* EmailLoginService.swift */,
-				2C2B1AD123F274D000243D3E /* EmailLoginEndpoint.swift */,
+				2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */,
+				2C73AE9023F4EA4E00267899 /* LoginServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -212,6 +227,9 @@
 		2C2B1AD523F27C5200243D3E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C8C6C6423F4BB3400FE06BE /* User.swift */,
+				2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */,
+				2C73AE8E23F4E9E900267899 /* LoginRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,9 +273,10 @@
 		2C8C6C6123F4BA9300FE06BE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C73AE9223F4EC5100267899 /* UserProfile.swift */,
 				2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */,
-				2C8C6C6423F4BB3400FE06BE /* User.swift */,
 				2C198D1E23F4D00800346395 /* EmptyCodable.swift */,
+				2C73AE9623F4FD5700267899 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,7 +402,6 @@
 		A5F30D3F23B4C890005258A8 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
-				A5F30D4423B4C8E1005258A8 /* BaseViewController.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -643,12 +661,13 @@
 				2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */,
 				A5F30D5723B4D470005258A8 /* MTextField.swift in Sources */,
 				A5F30D6C23B4DB34005258A8 /* HomeViewController.swift in Sources */,
-				2C2B1AD223F274D000243D3E /* EmailLoginEndpoint.swift in Sources */,
-				A5F30D4523B4C8E1005258A8 /* BaseViewController.swift in Sources */,
 				2C2B1AC823F2744600243D3E /* EmailLoginViewModel.swift in Sources */,
 				2C8C6C6523F4BB3400FE06BE /* User.swift in Sources */,
 				A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */,
+				2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */,
 				2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */,
+				2C73AE9123F4EA4E00267899 /* LoginServiceProtocol.swift in Sources */,
+				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2C2B1AB923F24B0E00243D3E /* UIImage+Extensions.swift in Sources */,
 				2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */,
@@ -656,6 +675,7 @@
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* IdentificableViewModelProtocol.swift in Sources */,
+				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
 				A5F30D5023B4CDB7005258A8 /* Styles.swift in Sources */,
 				2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */,
 				A5F30D3823B4C7DE005258A8 /* SplashScreenViewController.swift in Sources */,
@@ -665,15 +685,19 @@
 				A5F30D7423B4DC94005258A8 /* CategoryCellViewModel.swift in Sources */,
 				A5F30D6823B4DAE5005258A8 /* ConfigurableCellProtocol.swift in Sources */,
 				2C198D1B23F4C35700346395 /* SplashScreenViewModel.swift in Sources */,
+				2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */,
 				2C8C6C6823F4BB5B00FE06BE /* ServerStatus.swift in Sources */,
 				2C198D2423F4E4FB00346395 /* MainRouter.swift in Sources */,
 				2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */,
 				A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */,
+				2C73AE9723F4FD5700267899 /* Result.swift in Sources */,
 				2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */,
 				2C198D1923F4C34600346395 /* SplashScreenServiceProtocol.swift in Sources */,
 				A5F30D5423B4D2CC005258A8 /* EmailLoginViewController.swift in Sources */,
 				A5F30D4C23B4CBC3005258A8 /* MButton.swift in Sources */,
 				2C8C6C6C23F4BDA700FE06BE /* ConnectionManager.swift in Sources */,
+				2C73AE9323F4EC5100267899 /* UserProfile.swift in Sources */,
+				2C73AE9523F4F16A00267899 /* CMError.swift in Sources */,
 				2C2B1AD423F274E300243D3E /* Endpoint.swift in Sources */,
 				2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */,
 			);

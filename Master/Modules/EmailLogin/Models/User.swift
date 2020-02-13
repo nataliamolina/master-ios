@@ -18,6 +18,16 @@ struct User: Codable {
     let document: String
     let provider: UserProvider?
     let DocumentType: UserDocument?
+    
+    var asUserProfile: UserProfile {
+        return UserProfile(id: id,
+                           imageUrl: imageUrl,
+                           email: email,
+                           firstName: firstName,
+                           lastName: lastName,
+                           phoneNumber: phoneNumber,
+                           document: document)
+    }
 }
 
 struct UserProvider: Codable {

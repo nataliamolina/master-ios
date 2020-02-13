@@ -12,5 +12,5 @@ struct ServerResponse<T: Codable>: Codable {
     let isError: Bool
     let userErrorMessage: String?
     let technicalErrorMessage: String?
-    let data: T
+    let data: T?
 }

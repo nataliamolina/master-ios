@@ -9,7 +9,7 @@
 import UIKit
 import Hero
 
-class EmailLoginViewController: BaseViewController { 
+class EmailLoginViewController: UIViewController { 
     // MARK: - UI References
     @IBOutlet private weak var mainStackview: UIStackView!
     @IBOutlet private weak var emailTextField: MTextField!
@@ -19,48 +19,48 @@ class EmailLoginViewController: BaseViewController {
     
     // MARK: - IBActions
     @IBAction private func loginButtonAction() {
-        
+        viewModel.login(email: emailTextField.safeText,
+                        password: passwordTextField.safeText)
     }
+    
+    // MARK: - Properties
+    private let viewModel = EmailLoginViewModel()
+    var router: RouterBase<MainRouterTransitions>?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
     }
     
     // MARK: - Private Methods
     private func setupUI() {
+        title = viewModel.title
+        viewModel.isLoading.bindTo(activityIndicator)
+        
+        viewModel.status.valueDidChange = { [weak self] status in
+            guard let self = self else { return }
+            
+            switch status {
+            case .loginReady:
+                self.router?.transition(to: .home(router: HomeRouter(rootViewController: self)))
+                
+            case .error(let error):
+                self.showError(message: error)
+                
+            default:
+                return
+            }
+        }
         
         addIconInNavigationBar()
-        
-        title = "Continuar con Email"
         
         loginButton.style = .green
         
         enableKeyboardDismiss()
         
         enableFieldSwitch(fieldsHolder: mainStackview, delegate: self)
-    }
-    
-    private func routeToHome() {
-        // TODO: Use routers!
-        
-        let navigationController = UINavigationController()
-        navigationController.navigationBar.tintColor = .black
-        navigationController.navigationBar.isTranslucent = false
-        
-        if #available(iOS 11.0, *) {
-            navigationController.navigationBar.prefersLargeTitles = true
-        }
-        
-        navigationController.setViewControllers([HomeViewController()], animated: false)
-        
-        let mainVC = navigationController
-        mainVC.modalPresentationStyle = .fullScreen
-        
-        present(mainVC, animated: true, completion: nil)
-
     }
 }
 
@@ -69,7 +69,6 @@ extension EmailLoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         handleTextfieldSwitch(fieldsHolder: mainStackview, textField: textField) { [weak self] in
             self?.dismissKeyboard()
-            self?.routeToHome()
         }
         
         return true

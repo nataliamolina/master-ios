@@ -15,6 +15,10 @@ class MTextField: UITextField {
     // MARK: - Properties
     private var toggleButton = UIButton()
     
+    var safeText: String {
+        return text ?? ""
+    }
+    
     // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()

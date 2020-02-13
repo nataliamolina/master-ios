@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
 extension UIViewController {
     func addIconInNavigationBar() {
@@ -44,5 +45,13 @@ extension UIViewController {
         }
         
         nextTextField.becomeFirstResponder()
+    }
+    
+    func showError(message: String?) {
+        NotificationBanner(title: "Error", subtitle: message, style: .danger).show()
+    }
+    
+    func showWarning(message: String?) {
+        NotificationBanner(title: "Error", subtitle: message, style: .warning).show()
     }
 }

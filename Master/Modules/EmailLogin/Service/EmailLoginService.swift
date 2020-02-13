@@ -8,21 +8,36 @@
 
 import Foundation
 
-typealias ServiceResponseBlock<ResultModel: Codable> = (_ error: ErrorCustom?, _ result: ResultModel?) -> Void
-
-protocol ServiceProtocol {
-    func post<ResultModel: Codable>(to endpoint: Endpoint,
-                                    model: Codable?,
-                                    result: ServiceResponseBlock<ResultModel>)
+class EmailLoginService: EmailLoginServiceProtocol {
+    // MARK: - Properties
+    let connectionDependency: ConnectionManagerProtocol
     
-    func get<ResultModel: Codable>(to endpoint: Endpoint,
-                                   model: Codable?,
-                                   result: ServiceResponseBlock<ResultModel>)
-}
-
-struct ErrorCustom: Codable {}
-struct LoginResponse: Codable {}
-
-class EmailLoginService {
-
+    // MARK: - Life Cycle
+    init(connectionDependency: ConnectionManagerProtocol) {
+        self.connectionDependency = connectionDependency
+    }
+    
+    // MARK: - Public Methods
+    
+    func performLoginRequest(request: LoginRequest, onComplete: @escaping (LoginResponse?, CMError?) -> Void) {
+        connectionDependency
+            .post(url: Endpoint.emailLogin, request: request) {
+                (response: LoginResponse?, error: CMError?) in
+                
+                onComplete(response, error)
+        }
+    }
+    
+    func fetchUserSession(onComplete: @escaping (User?, CMError?) -> Void) {
+        connectionDependency
+            .get(url: Endpoint.userSession) {
+                (response: User?, error: CMError?) in
+                
+                onComplete(response, error)
+        }
+    }
+    
+    func saveAuthenticationToken(_ token: String) {
+        connectionDependency.setAuthenticationToken(token)
+    }
 }

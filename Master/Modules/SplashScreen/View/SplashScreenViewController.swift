@@ -10,7 +10,7 @@ import UIKit
 import SimpleBinding
 import NotificationBannerSwift
 
-class SplashScreenViewController: BaseViewController {
+class SplashScreenViewController: UIViewController {
     // MARK: - UI Refereces
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
@@ -51,13 +51,9 @@ class SplashScreenViewController: BaseViewController {
         }
     }
     
-    private func showError(message: String?) {
-        NotificationBanner(title: "Error", subtitle: message, style: .danger).show()
-    }
-    
     private func route(toHome: Bool) {
         if toHome {
-            router.transition(to: .home)
+            router.transition(to: .home(router: HomeRouter(rootViewController: self)))
         } else {
             router.transition(to: .main)
         }

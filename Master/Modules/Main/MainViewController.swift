@@ -8,19 +8,22 @@
 
 import UIKit
 
-class MainViewController: BaseViewController {
+class MainViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var emailLoginButton: MButton!
     @IBOutlet private weak var registerButton: MButton!
     
     // MARK: - UI References
     @IBAction func emailLoginButtonAction() {
-        navigationController?.pushViewController(EmailLoginViewController(), animated: true)
+        router?.transition(to: .emailLogin)
     }
     
     @IBAction func registerButtonAction() {
-        navigationController?.pushViewController(RegisterViewController(), animated: true)
+        router?.transition(to: .register)
     }
+    
+    // MARK: - Properties
+    var router: RouterBase<MainRouterTransitions>?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {

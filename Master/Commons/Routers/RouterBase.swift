@@ -9,9 +9,9 @@
 import UIKit
 
 class RouterBase<T> {
-    var rootViewController: BaseViewController
+    var rootViewController: UIViewController
     
-    init(rootViewController: BaseViewController) {
+    init(rootViewController: UIViewController) {
         self.rootViewController = rootViewController
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias ResultBlock<T: Codable> = ((_ result: T?, _ error: Error?) -> Void)
+typealias ResultBlock<T: Codable> = ((_ result: T?, _ error: CMError?) -> Void)
 
 protocol ConnectionManagerProtocol {
     func setAuthenticationToken(_ token: String)
