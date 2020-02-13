@@ -1,4 +1,5 @@
 PODS:
+  - EasyBinding (0.1.1)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
   - Firebase/Core (6.14.0):
@@ -74,22 +75,22 @@ PODS:
     - MarqueeLabel (~> 4.0.0)
     - SnapKit (~> 5.0.0)
   - Simple-Networking (0.3.3)
-  - SimpleBinding (0.1.7)
   - SimpleKeychain (0.10.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - EasyBinding (~> 0.1.1)
   - Firebase/Analytics
   - Hero
   - Kingfisher (~> 5.0)
   - Localize
   - NotificationBannerSwift (~> 3.0.0)
   - Simple-Networking (~> 0.3.3)
-  - SimpleBinding (~> 0.1.7)
   - SimpleKeychain
 
 SPEC REPOS:
   trunk:
+    - EasyBinding
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -107,11 +108,11 @@ SPEC REPOS:
     - nanopb
     - NotificationBannerSwift
     - Simple-Networking
-    - SimpleBinding
     - SimpleKeychain
     - SnapKit
 
 SPEC CHECKSUMS:
+  EasyBinding: 149194694aaf70f0dbeab469a23f5ede9490005b
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
   FirebaseCore: 632e05cc5e1199d9147122c16d92305eb04c34bd
@@ -129,10 +130,9 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   NotificationBannerSwift: 713e20f21b6105f4a36a00e5d9fa414a930d3d8e
   Simple-Networking: 4d190b9b79fc239b2728e280fc22611e491a092e
-  SimpleBinding: 85148268e693d0cf19210d59bcb2dcf220bcee77
   SimpleKeychain: a5ed8ebd0ab7e46a910353ffe0293cd6f017a160
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 4ceae0389786e06dd4514df5bb6a7deec1b81a31
+PODFILE CHECKSUM: e8621fe463ef70515fd6998e727eb94c2518310c
 
 COCOAPODS: 1.8.4

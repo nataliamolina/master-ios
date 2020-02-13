@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SimpleBinding
+import EasyBinding
 
 enum EmailLoginViewModelStatus {
     case loginReady
@@ -19,6 +19,7 @@ class EmailLoginViewModel {
     // MARK: - Properties
     let title = "Continuar con Email"
     let status = Var<EmailLoginViewModelStatus>(.undefined)
+    let controlsEnabled = Var(true)
     let isLoading = Var(false)
     let service: EmailLoginServiceProtocol
     
@@ -27,6 +28,10 @@ class EmailLoginViewModel {
         let defaultService = EmailLoginService(connectionDependency: ConnectionManager())
         
         self.service = service ?? defaultService
+        
+        isLoading.valueDidChange = { [weak self] value in
+            self?.controlsEnabled.value = !value
+        }
     }
     
     // MARK: - Public Methods

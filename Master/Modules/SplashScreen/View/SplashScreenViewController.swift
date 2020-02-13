@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SimpleBinding
+import EasyBinding
 import NotificationBannerSwift
 
 class SplashScreenViewController: UIViewController {
@@ -36,7 +36,7 @@ class SplashScreenViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
-        viewModel.isLoading.bindTo(activityIndicator)
+        viewModel.isLoading.bindTo(activityIndicator, to: .state)
         
         viewModel.status.valueDidChange = { [weak self] status in
             switch status {

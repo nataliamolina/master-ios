@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 
 def commons
-  pod 'SimpleBinding', '~> 0.1.7'
+  pod 'EasyBinding', '~> 0.1.1'
   pod 'Simple-Networking', '~> 0.3.3'
   pod 'SimpleKeychain'
   pod 'Kingfisher', '~> 5.0'

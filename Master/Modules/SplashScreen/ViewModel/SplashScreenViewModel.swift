@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SimpleBinding
+import EasyBinding
 
 enum SplashScreenViewModelStatus {
     case preloadReady(hasSession: Bool)

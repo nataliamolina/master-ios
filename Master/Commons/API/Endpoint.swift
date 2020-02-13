@@ -10,6 +10,6 @@ import Foundation
 
 struct Endpoint {
     // FIXME: move me!
-    //static let base = "https://master-app-api.azurewebsites.net/api/v1/"
-    static let base = "http://127.0.0.1:5001/api/v1/"
+    static let base = "https://master-app-api.azurewebsites.net/api/v1/"
+    //static let base = "http://127.0.0.1:5001/api/v1/"
 }

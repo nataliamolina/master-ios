@@ -19,6 +19,7 @@ class EmailLoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func loginButtonAction() {
+        dismissKeyboard()
         viewModel.login(email: emailTextField.safeText,
                         password: passwordTextField.safeText)
     }
@@ -37,8 +38,11 @@ class EmailLoginViewController: UIViewController {
     // MARK: - Private Methods
     private func setupUI() {
         title = viewModel.title
-        viewModel.isLoading.bindTo(activityIndicator)
-        
+        viewModel.isLoading.bindTo(activityIndicator, to: .state)
+        viewModel.controlsEnabled.bindTo(emailTextField, to: .state)
+        viewModel.controlsEnabled.bindTo(passwordTextField, to: .state)
+        viewModel.controlsEnabled.bindTo(loginButton, to: .state)
+
         viewModel.status.valueDidChange = { [weak self] status in
             guard let self = self else { return }
             
