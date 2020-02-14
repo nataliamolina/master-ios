@@ -11,11 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Master" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="TXf-HZ-a9a" id="E8u-yY-z5J"/>
-                <outlet property="emailTextField" destination="OrN-gd-Eb0" id="fko-uv-dvP"/>
+                <outlet property="emailTextField" destination="mja-aa-T6z" id="qoe-5c-F65"/>
                 <outlet property="mainStackview" destination="vnJ-KG-oTW" id="xoO-hs-mJ1"/>
-                <outlet property="namesTextField" destination="Ojq-3J-oer" id="LHa-5T-ATn"/>
-                <outlet property="passwordTextField" destination="Ltd-PN-SuG" id="hnp-2D-EVb"/>
-                <outlet property="phoneTextField" destination="mja-aa-T6z" id="ecl-Gi-M3P"/>
+                <outlet property="namesTextField" destination="OrN-gd-Eb0" id="LMl-ax-br3"/>
+                <outlet property="passwordTextField" destination="Ltd-PN-SuG" id="lbG-NB-ZQ7"/>
+                <outlet property="phoneTextField" destination="Ojq-3J-oer" id="adc-nq-nZD"/>
                 <outlet property="registerButton" destination="ldf-nI-4V7" id="1dc-DA-q13"/>
                 <outlet property="view" destination="3yS-W8-Jgc" id="ECV-zG-dQb"/>
             </connections>
@@ -25,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utX-8G-5XE">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utX-8G-5XE">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNR-QG-eSu">
@@ -49,7 +49,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="emn-7I-3k0"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next" textContentType="name"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.names"/>
                                             </userDefinedRuntimeAttributes>
@@ -60,7 +60,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="oBr-C2-ZJd"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="tel"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.phone"/>
                                             </userDefinedRuntimeAttributes>
@@ -71,7 +71,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="n4X-wT-Pyk"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.email"/>
                                             </userDefinedRuntimeAttributes>
@@ -88,15 +88,11 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="showToggler" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31F-No-a0y" customClass="MLegalButton" customModule="Master" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzg-Lr-xL7" customClass="MLegalButton" customModule="Master" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="277" width="374" height="30"/>
-                                            <state key="normal" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. ">
+                                            <state key="normal" title="Button">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableKey" value="general.legal.continue"/>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="autoLocalize" value="NO"/>
-                                            </userDefinedRuntimeAttributes>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-nI-4V7" customClass="MButton" customModule="Master" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="327" width="374" height="47"/>
@@ -107,6 +103,9 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="register.button.register"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="registerButtonAction" destination="-1" eventType="touchUpInside" id="HpM-0O-rAM"/>
+                                            </connections>
                                         </button>
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TXf-HZ-a9a">
                                             <rect key="frame" x="0.0" y="394" width="374" height="20"/>

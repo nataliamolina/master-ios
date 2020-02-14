@@ -16,7 +16,7 @@
 "emailLogin.button.login" = "Iniciar Sesión";
 
 // Register
-"register.title" = "Continuar con Email";
+"register.title" = "Registro";
 "register.placeholder.email" = "Correo";
 "register.placeholder.password" = "Contraseña";
 "register.placeholder.names" = "Nombre y Apellido";

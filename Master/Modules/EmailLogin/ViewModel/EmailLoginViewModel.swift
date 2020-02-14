@@ -17,7 +17,7 @@ enum EmailLoginViewModelStatus {
 
 class EmailLoginViewModel {
     // MARK: - Properties
-    let title = "Continuar con Email"
+    let title = "emailLogin.title".localized
     let status = Var<EmailLoginViewModelStatus>(.undefined)
     let controlsEnabled = Var(true)
     let isLoading = Var(false)

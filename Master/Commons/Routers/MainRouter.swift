@@ -82,7 +82,8 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     
     private func handleRegisterTransition() {
         let viewController = RegisterViewController()
-        
+        viewController.router = self
+
         navigationController.pushViewController(viewController, animated: true)
     }
 }

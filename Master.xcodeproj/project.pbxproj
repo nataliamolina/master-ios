@@ -37,6 +37,11 @@
 		2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6923F4BB6700FE06BE /* ServerResponse.swift */; };
 		2C8C6C6C23F4BDA700FE06BE /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */; };
 		2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */; };
+		2CCFED7023F62B36005E5CB1 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED6F23F62B36005E5CB1 /* RegisterService.swift */; };
+		2CCFED7223F62B85005E5CB1 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7123F62B85005E5CB1 /* RegisterRequest.swift */; };
+		2CCFED7423F62BD3005E5CB1 /* RegisterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7323F62BD3005E5CB1 /* RegisterEndpoints.swift */; };
+		2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */; };
+		2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */; };
 		5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */; };
 		A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
 		A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
@@ -111,6 +116,11 @@
 		2C8C6C6923F4BB6700FE06BE /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagerProtocol.swift; sourceTree = "<group>"; };
+		2CCFED6F23F62B36005E5CB1 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		2CCFED7123F62B85005E5CB1 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		2CCFED7323F62BD3005E5CB1 /* RegisterEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndpoints.swift; sourceTree = "<group>"; };
+		2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServiceProtocol.swift; sourceTree = "<group>"; };
 		3024BACA975641C9852C5D83 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +300,41 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2CCFED6B23F62B0E005E5CB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5F30D5B23B4D8DF005258A8 /* RegisterViewController.swift */,
+				A5F30D5C23B4D8DF005258A8 /* RegisterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2CCFED6C23F62B1F005E5CB1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2CCFED6D23F62B24005E5CB1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFED6F23F62B36005E5CB1 /* RegisterService.swift */,
+				2CCFED7323F62BD3005E5CB1 /* RegisterEndpoints.swift */,
+				2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2CCFED6E23F62B29005E5CB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CCFED7123F62B85005E5CB1 /* RegisterRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4B22BBC4B3B743F3ED2CE7CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,8 +496,10 @@
 		A5F30D5A23B4D8D0005258A8 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				A5F30D5B23B4D8DF005258A8 /* RegisterViewController.swift */,
-				A5F30D5C23B4D8DF005258A8 /* RegisterViewController.xib */,
+				2CCFED6E23F62B29005E5CB1 /* Models */,
+				2CCFED6D23F62B24005E5CB1 /* Service */,
+				2CCFED6C23F62B1F005E5CB1 /* ViewModel */,
+				2CCFED6B23F62B0E005E5CB1 /* View */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -655,12 +702,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C198D1723F4C33600346395 /* SplashScreenService.swift in Sources */,
+				2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */,
 				A5F30D6623B4DA85005258A8 /* UITableView+Extensions.swift in Sources */,
 				2C198D2623F4E6AF00346395 /* RouterBase.swift in Sources */,
 				A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */,
 				2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */,
 				A5F30D5723B4D470005258A8 /* MTextField.swift in Sources */,
 				A5F30D6C23B4DB34005258A8 /* HomeViewController.swift in Sources */,
+				2CCFED7423F62BD3005E5CB1 /* RegisterEndpoints.swift in Sources */,
 				2C2B1AC823F2744600243D3E /* EmailLoginViewModel.swift in Sources */,
 				2C8C6C6523F4BB3400FE06BE /* User.swift in Sources */,
 				A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */,
@@ -668,10 +717,12 @@
 				2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */,
 				2C73AE9123F4EA4E00267899 /* LoginServiceProtocol.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
+				2CCFED7223F62B85005E5CB1 /* RegisterRequest.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2C2B1AB923F24B0E00243D3E /* UIImage+Extensions.swift in Sources */,
 				2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */,
 				A5F30D6423B4DA63005258A8 /* UITableViewCell+Extensions.swift in Sources */,
+				2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */,
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* IdentificableViewModelProtocol.swift in Sources */,
@@ -691,6 +742,7 @@
 				2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */,
 				A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */,
 				2C73AE9723F4FD5700267899 /* Result.swift in Sources */,
+				2CCFED7023F62B36005E5CB1 /* RegisterService.swift in Sources */,
 				2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */,
 				2C198D1923F4C34600346395 /* SplashScreenServiceProtocol.swift in Sources */,
 				A5F30D5423B4D2CC005258A8 /* EmailLoginViewController.swift in Sources */,

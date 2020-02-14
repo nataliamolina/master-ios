@@ -9,7 +9,18 @@
 import UIKit
 
 class MLegalButton: UIButton {
-    @IBInspectable var localizableKey: String = ""
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupStlye()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        setupStlye()
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +34,8 @@ class MLegalButton: UIButton {
         titleLabel?.numberOfLines = 2
         titleLabel?.lineBreakMode = .byWordWrapping
         
-        let text = localizableKey.localized
+        let text = "general.legal.continue".localized
+        setTitle(text, for: .normal)
         let titleString = NSMutableAttributedString(string: text)
         titleString.addAttribute(NSAttributedString.Key.underlineStyle,
                                  value: NSUnderlineStyle.single.rawValue,
