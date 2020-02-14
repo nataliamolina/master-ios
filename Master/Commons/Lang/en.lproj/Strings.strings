@@ -13,3 +13,13 @@
 "emailLogin.title" = "Continuar con Email";
 "emailLogin.placeholder.email" = "Correo";
 "emailLogin.placeholder.password" = "Contraseña";
+"emailLogin.button.login" = "Iniciar Sesión";
+
+// Register
+"register.title" = "Continuar con Email";
+"register.placeholder.email" = "Correo";
+"register.placeholder.password" = "Contraseña";
+"register.placeholder.names" = "Nombre y Apellido";
+"register.placeholder.phone" = "Celular";
+"register.button.register" = "Continuar";
+"register.label.legal" = "¡Hola!, los datos que completarás a continuación son 100% privados, nunca haremos mal uso de ellos.";

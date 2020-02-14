@@ -63,6 +63,8 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         viewController.router = self
         
         navigationController.setViewControllers([viewController], animated: false)
+        navigationController.interactivePopGestureRecognizer?.delegate = viewController
+        navigationController.interactivePopGestureRecognizer?.isEnabled = true
         
         rootViewController.present(navigationController, animated: true, completion: nil)
     }

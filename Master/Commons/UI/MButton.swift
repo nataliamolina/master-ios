@@ -16,7 +16,7 @@ enum MButtonType {
     case onlyWhiteText
 }
 
-@IBDesignable class MButton: UIButton {
+class MButton: UIButton {
     // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()

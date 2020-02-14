@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,67 +25,87 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vnJ-KG-oTW">
-                    <rect key="frame" x="20" y="64" width="374" height="373"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vnJ-KG-oTW">
+                    <rect key="frame" x="20" y="64" width="374" height="414"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW2-WM-tkE">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW2-WM-tkE">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="register.label.legal"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-gd-Eb0" customClass="MTextField" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="35.5" width="374" height="40"/>
+                            <rect key="frame" x="0.0" y="37" width="374" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="emn-7I-3k0"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.names"/>
+                            </userDefinedRuntimeAttributes>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-3J-oer" customClass="MTextField" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="90.5" width="374" height="40"/>
+                            <rect key="frame" x="0.0" y="97" width="374" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="oBr-C2-ZJd"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="tel"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.phone"/>
+                            </userDefinedRuntimeAttributes>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mja-aa-T6z" customClass="MTextField" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="145.5" width="374" height="40"/>
+                            <rect key="frame" x="0.0" y="157" width="374" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="n4X-wT-Pyk"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.email"/>
+                            </userDefinedRuntimeAttributes>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ltd-PN-SuG" customClass="MTextField" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="200.5" width="374" height="40"/>
+                            <rect key="frame" x="0.0" y="217" width="374" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="RjK-zf-Ijb"/>
                             </constraints>
-                            <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="join" secureTextEntry="YES" textContentType="password"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.password"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="showToggler" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9L-bm-5Wv">
-                            <rect key="frame" x="0.0" y="255.5" width="374" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TXf-HZ-a9a">
-                            <rect key="frame" x="0.0" y="291" width="374" height="20"/>
-                        </activityIndicatorView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31F-No-a0y" customClass="MLegalButton" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="277" width="374" height="30"/>
+                            <state key="normal" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. ">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizableKey" value="general.legal.continue"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="autoLocalize" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-nI-4V7" customClass="MButton" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="326" width="374" height="47"/>
+                            <rect key="frame" x="0.0" y="327" width="374" height="47"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="47" id="7cB-aF-2jr"/>
                             </constraints>
                             <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="register.button.register"/>
+                            </userDefinedRuntimeAttributes>
                         </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TXf-HZ-a9a">
+                            <rect key="frame" x="0.0" y="394" width="374" height="20"/>
+                            <color key="color" red="0.49019607840000001" green="0.80000000000000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </activityIndicatorView>
                     </subviews>
                 </stackView>
             </subviews>
@@ -98,6 +116,7 @@
                 <constraint firstItem="vnJ-KG-oTW" firstAttribute="leading" secondItem="qv8-6J-ePw" secondAttribute="leading" constant="20" id="vSK-aU-ePD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="qv8-6J-ePw"/>
+            <point key="canvasLocation" x="141" y="154"/>
         </view>
     </objects>
 </document>

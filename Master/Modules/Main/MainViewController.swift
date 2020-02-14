@@ -40,3 +40,11 @@ class MainViewController: UIViewController {
         registerButton.style = .onlyWhiteText
     }
 }
+
+// MARK: - UIViewControllerTransitioningDelegate
+extension MainViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}
