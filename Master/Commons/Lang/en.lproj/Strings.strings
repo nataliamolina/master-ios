@@ -9,6 +9,12 @@
 // General
 "general.legal.continue" = "Al continuar, estás aceptando nuestros términos y condiciones.";
 
+// Main
+"main.title" = "¡Hola!";
+"main.desc" = "En Master encontrarás una persona para todas tus necesidades en casa.";
+"main.button.email" = "Iniciar Sesión con Email";
+"main.button.register" = "Registrarme";
+
 // Email Login
 "emailLogin.title" = "Continuar con Email";
 "emailLogin.placeholder.email" = "Correo";

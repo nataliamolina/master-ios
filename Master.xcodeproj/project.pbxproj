@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,9 @@
 		2C2B1AC823F2744600243D3E /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC723F2744600243D3E /* EmailLoginViewModel.swift */; };
 		2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC923F2745500243D3E /* EmailLoginService.swift */; };
 		2C2B1AD423F274E300243D3E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AD323F274E300243D3E /* Endpoint.swift */; };
+		2C42088B23F647680058873D /* GmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088A23F647680058873D /* GmailRequest.swift */; };
+		2C42088E23F647E00058873D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088D23F647E00058873D /* MainViewModel.swift */; };
+		2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */; };
 		2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
 		2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */; };
 		2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8E23F4E9E900267899 /* LoginRequest.swift */; };
@@ -100,6 +103,9 @@
 		2C2B1AC723F2744600243D3E /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
 		2C2B1AC923F2745500243D3E /* EmailLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginService.swift; sourceTree = "<group>"; };
 		2C2B1AD323F274E300243D3E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2C42088A23F647680058873D /* GmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailRequest.swift; sourceTree = "<group>"; };
+		2C42088D23F647E00058873D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_bg_video_new.mp4; sourceTree = "<group>"; };
 		2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoints.swift; sourceTree = "<group>"; };
 		2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		2C73AE8E23F4E9E900267899 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -240,6 +246,7 @@
 				2C8C6C6423F4BB3400FE06BE /* User.swift */,
 				2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */,
 				2C73AE8E23F4E9E900267899 /* LoginRequest.swift */,
+				2C42088A23F647680058873D /* GmailRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +258,31 @@
 				2C8C6C5C23F4B6FE00FE06BE /* Session.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2C42088C23F647D60058873D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C42088D23F647E00058873D /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C5DE68923F6445000183E34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5F30D4623B4CB48005258A8 /* MainViewController.swift */,
+				A5F30D4723B4CB48005258A8 /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C5DE68A23F6445800183E34 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		2C8C6C5E23F4B9D100FE06BE /* View */ = {
@@ -428,8 +460,9 @@
 		A5F30D3D23B4C801005258A8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A5F30D4623B4CB48005258A8 /* MainViewController.swift */,
-				A5F30D4723B4CB48005258A8 /* MainViewController.xib */,
+				2C42088C23F647D60058873D /* ViewModel */,
+				2C5DE68A23F6445800183E34 /* Video */,
+				2C5DE68923F6445000183E34 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -555,6 +588,7 @@
 				A58132A623B4C7560032FC8B /* Sources */,
 				A58132A723B4C7560032FC8B /* Frameworks */,
 				A58132A823B4C7560032FC8B /* Resources */,
+				12FDF0753FB6088A7AD72B2F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -573,6 +607,7 @@
 				A58132BA23B4C7570032FC8B /* Sources */,
 				A58132BB23B4C7570032FC8B /* Frameworks */,
 				A58132BC23B4C7570032FC8B /* Resources */,
+				A4F69423AA9F4920FBC38401 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -634,6 +669,7 @@
 				A5F30D5523B4D2CC005258A8 /* EmailLoginViewController.xib in Resources */,
 				2C2B1ABF23F2560F00243D3E /* Strings.strings in Resources */,
 				A5F30D4923B4CB48005258A8 /* MainViewController.xib in Resources */,
+				2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */,
 				A5F30D6D23B4DB34005258A8 /* HomeViewController.xib in Resources */,
 				A5F30D5E23B4D8DF005258A8 /* RegisterViewController.xib in Resources */,
 				A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */,
@@ -650,6 +686,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12FDF0753FB6088A7AD72B2F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		595F2405D72E94154A4FBEFF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -670,6 +723,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F69423AA9F4920FBC38401 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MasterTests/Pods-MasterTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MasterTests/Pods-MasterTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MasterTests/Pods-MasterTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC68A9407ABDBFAC6D457603 /* [CP] Check Pods Manifest.lock */ = {
@@ -717,6 +787,7 @@
 				2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */,
 				2C73AE9123F4EA4E00267899 /* LoginServiceProtocol.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
+				2C42088E23F647E00058873D /* MainViewModel.swift in Sources */,
 				2CCFED7223F62B85005E5CB1 /* RegisterRequest.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2C2B1AB923F24B0E00243D3E /* UIImage+Extensions.swift in Sources */,
@@ -725,6 +796,7 @@
 				2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */,
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
+				2C42088B23F647680058873D /* GmailRequest.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* IdentificableViewModelProtocol.swift in Sources */,
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
 				A5F30D5023B4CDB7005258A8 /* Styles.swift in Sources */,

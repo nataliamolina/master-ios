@@ -40,4 +40,15 @@ class EmailLoginService: EmailLoginServiceProtocol {
     func saveAuthenticationToken(_ token: String) {
         connectionDependency.setAuthenticationToken(token)
     }
+    
+    func performGmailRequest(request: GmailRequest,
+                             onComplete: @escaping (_ result: LoginResponse?, _ error: CMError?) -> Void) {
+        
+        connectionDependency
+            .post(url: Endpoint.gmailLogin, request: request) {
+                (response: LoginResponse?, error: CMError?) in
+                
+                onComplete(response, error)
+        }
+    }
 }

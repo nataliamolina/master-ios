@@ -16,4 +16,8 @@ extension Endpoint {
     static var getUserSession: String {
         return base + "user"
     }
+    
+    static var gmailLogin: String {
+        return base + "login/gmail"
+    }
 }

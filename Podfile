@@ -10,6 +10,7 @@ def commons
   pod 'Hero'
   pod 'Firebase/Analytics'
   pod 'Localize'
+  pod 'GoogleSignIn'
 end
 
 target 'Master' do
