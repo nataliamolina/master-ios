@@ -12,7 +12,7 @@ import Simple_Networking
 class ConnectionManager: ConnectionManagerProtocol {
     // MARK: - Life Cycle
     init() {
-        SimpleNetworking.debugMode = .all
+        SimpleNetworking.debugMode = .disabled
     }
     
     // MARK: - Public Methods
@@ -99,4 +99,3 @@ class ConnectionManager: ConnectionManagerProtocol {
         return CMError(error: text ?? "", details: nil)
     }
 }
-

@@ -32,3 +32,6 @@
 
 // Home
 "home.pendingServices" = "Servicios en Curso:";
+
+// Service Detail
+"serviceDetail.orders" = "pedidos";

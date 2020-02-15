@@ -181,8 +181,7 @@ extension MainViewController: GIDSignInDelegate {
                              id: user.userID,
                              gmailToken: user.authentication.idToken,
                              email: profile.email,
-                             firstName: profile.givenName,
-                             lastName: profile.familyName)
+                             names: (profile.givenName, profile.familyName))
     }
     
     func sign(_ signIn: GIDSignIn, didDisconnectWith user: GIDGoogleUser, withError error: Error!) {}

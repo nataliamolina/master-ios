@@ -21,8 +21,7 @@ class EmailLoginService: EmailLoginServiceProtocol {
     
     func performLoginRequest(request: LoginRequest, onComplete: @escaping (LoginResponse?, CMError?) -> Void) {
         connectionDependency
-            .post(url: Endpoint.emailLogin, request: request) {
-                (response: LoginResponse?, error: CMError?) in
+            .post(url: Endpoint.emailLogin, request: request) { (response: LoginResponse?, error: CMError?) in
                 
                 onComplete(response, error)
         }
@@ -30,8 +29,7 @@ class EmailLoginService: EmailLoginServiceProtocol {
     
     func fetchUserSession(onComplete: @escaping (User?, CMError?) -> Void) {
         connectionDependency
-            .get(url: Endpoint.userSession) {
-                (response: User?, error: CMError?) in
+            .get(url: Endpoint.userSession) { (response: User?, error: CMError?) in
                 
                 onComplete(response, error)
         }
@@ -45,8 +43,7 @@ class EmailLoginService: EmailLoginServiceProtocol {
                              onComplete: @escaping (_ result: LoginResponse?, _ error: CMError?) -> Void) {
         
         connectionDependency
-            .post(url: Endpoint.gmailLogin, request: request) {
-                (response: LoginResponse?, error: CMError?) in
+            .post(url: Endpoint.gmailLogin, request: request) { (response: LoginResponse?, error: CMError?) in
                 
                 onComplete(response, error)
         }

@@ -17,7 +17,7 @@ struct User: Codable {
     let phoneNumber: String
     let document: String
     let provider: UserProvider?
-    let DocumentType: UserDocument?
+    let documentType: UserDocument?
     
     var asUserProfile: UserProfile {
         return UserProfile(id: id,

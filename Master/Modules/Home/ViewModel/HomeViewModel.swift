@@ -58,6 +58,14 @@ class HomeViewModel {
         return dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
     }
     
+    func getServiceIdAt(indexPath: IndexPath) -> Int? {
+        guard let viewModel = getViewModelAt(indexPath: indexPath) as? CategoryCellViewModel else {
+            return nil
+        }
+        
+        return viewModel.serviceId
+    }
+    
     // MARK: - Private Methods
     
     private func fetchOrders() {
@@ -78,7 +86,7 @@ class HomeViewModel {
         
         models.forEach {
             let viewModels: [CellViewModelProtocol] = $0.serviceCategories.map {
-                CategoryCellViewModel(imageUrl: $0.imageUrl)
+                CategoryCellViewModel(serviceId: $0.id, imageUrl: $0.imageUrl)
             }
             
             data.append(viewModels)

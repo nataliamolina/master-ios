@@ -96,7 +96,14 @@ class HomeViewController: UIViewController {
 // MARK: - CategoryCellDelegate
 extension HomeViewController: CategoryCellDelegate {
     func cellTapped(_ cell: CategoryCell) {
-        router.transition(to: .categoryDetail)
+        guard
+            let indexPath = tableView.indexPath(for: cell),
+            let cellViewModel = viewModel.getViewModelAt(indexPath: indexPath) as? CategoryCellViewModel else {
+                return
+        }
+        
+        router.transition(to: .categoryDetail(id: cellViewModel.serviceId,
+                                              serviceImageUrl: cellViewModel.imageUrl))
     }
 }
 

@@ -73,6 +73,7 @@ extension EmailLoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         handleTextfieldSwitch(fieldsHolder: mainStackview, textField: textField) { [weak self] in
             self?.dismissKeyboard()
+            self?.loginButtonAction()
         }
         
         return true

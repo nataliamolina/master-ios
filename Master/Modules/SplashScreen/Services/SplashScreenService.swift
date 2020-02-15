@@ -22,8 +22,7 @@ class SplashScreenService: SplashScreenServiceProtocol {
     // MARK: - Public Methods
     func checkServerStatus(onComplete: @escaping (ServerStatus?, CMError?) -> Void) {
         connectionDependency
-            .get(url: Endpoint.serverStatus) {
-                (response: ServerStatus?, error: CMError?) in
+            .get(url: Endpoint.serverStatus) { (response: ServerStatus?, error: CMError?) in
                 
                 onComplete(response, error)
         }
@@ -31,8 +30,7 @@ class SplashScreenService: SplashScreenServiceProtocol {
     
     func checkSessionToken(onComplete: @escaping (Bool, CMError?) -> Void) {
         connectionDependency
-            .get(url: Endpoint.validateSessionToken) {
-                (response: EmptyCodable?, error: CMError?) in
+            .get(url: Endpoint.validateSessionToken) { (response: EmptyCodable?, error: CMError?) in
                 
                 onComplete(response != nil, error)
         }

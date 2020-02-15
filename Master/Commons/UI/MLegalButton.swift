@@ -21,7 +21,6 @@ class MLegalButton: UIButton {
         setupStlye()
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -39,7 +38,7 @@ class MLegalButton: UIButton {
         let titleString = NSMutableAttributedString(string: text)
         titleString.addAttribute(NSAttributedString.Key.underlineStyle,
                                  value: NSUnderlineStyle.single.rawValue,
-                                 range: NSMakeRange(0, text.count))
+                                 range: NSRange(location: 0, length: text.count))
         
         setAttributedTitle(titleString, for: .normal)
     }

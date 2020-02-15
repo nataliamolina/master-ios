@@ -23,7 +23,7 @@ extension UITableView {
         let cell = dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         (cell as? ConfigurableCellProtocol)?.setupWith(viewModel: cellViewModel,
                                                        indexPath: indexPath,
-                                                       delegate: self)
+                                                       delegate: delegate)
         
         return cell
     }

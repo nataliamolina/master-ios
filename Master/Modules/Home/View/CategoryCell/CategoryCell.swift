@@ -23,7 +23,7 @@ class CategoryCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet weak var categoryImageView: UIImageView!
     
     // MARK: - Properties
-    weak var delegate: CategoryCellDelegate?
+    private weak var delegate: CategoryCellDelegate?
 
     // MARK: - Life Cycle
     override func awakeFromNib() {

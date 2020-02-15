@@ -41,7 +41,7 @@ class MainViewModel {
     
     func gmailLogin(photoUrl: String, id: String,
                     gmailToken: String, email: String,
-                    firstName: String, lastName: String) {
+                    names: (first: String, last: String)) {
         
         isLoading.value = true
         
@@ -50,8 +50,8 @@ class MainViewModel {
                                    id: id,
                                    gmailToken: gmailToken,
                                    email: email,
-                                   firstName: firstName,
-                                   lastName: lastName)
+                                   firstName: names.first,
+                                   lastName: names.last)
         
         service.performGmailRequest(request: request) { [weak self] (response: LoginResponse?, error: CMError?) in
             self?.isLoading.value = false

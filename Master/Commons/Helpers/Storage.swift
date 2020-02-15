@@ -15,7 +15,6 @@ protocol StorageProtocol {
     func delete(key: String)
 }
 
-// FIXME: Use keychain!
 class Storage: StorageProtocol {
     // MARK: - Properties
     private let defaults = UserDefaults.standard

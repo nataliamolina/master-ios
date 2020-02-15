@@ -23,8 +23,7 @@ class RegisterService: RegisterServiceProtocol {
                          onComplete: @escaping (_ result: LoginResponse?, _ error: CMError?) -> Void) {
         
         connectionDependency
-            .post(url: Endpoint.register, request: request) {
-                (response: LoginResponse?, error: CMError?) in
+            .post(url: Endpoint.register, request: request) { (response: LoginResponse?, error: CMError?) in
                 
                 onComplete(response, error)
         }

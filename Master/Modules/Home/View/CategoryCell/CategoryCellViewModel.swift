@@ -9,10 +9,7 @@
 import Foundation
 
 struct CategoryCellViewModel: CategoryCellDataSource, CellViewModelProtocol {
-    var imageUrl: String
-    var identifier: String = CategoryCell.cellIdentifier
-    
-    init(imageUrl: String) {
-        self.imageUrl = imageUrl
-    }
+    let serviceId: Int
+    let imageUrl: String
+    let identifier: String = CategoryCell.cellIdentifier
 }
