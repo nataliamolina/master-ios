@@ -13,4 +13,18 @@ extension UITableView {
         register(UINib(nibName: String(describing: type), bundle: nil),
                  forCellReuseIdentifier: String(describing: type))
     }
+    
+    func getWith(cellViewModel: CellViewModelProtocol?,
+                 indexPath: IndexPath,
+                 delegate: Any?) -> UITableViewCell {
+        
+        let identifier = cellViewModel?.identifier ?? ""
+        
+        let cell = dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        (cell as? ConfigurableCellProtocol)?.setupWith(viewModel: cellViewModel,
+                                                       indexPath: indexPath,
+                                                       delegate: self)
+        
+        return cell
+    }
 }

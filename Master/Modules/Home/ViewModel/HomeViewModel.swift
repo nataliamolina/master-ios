@@ -54,6 +54,10 @@ class HomeViewModel {
         }
     }
     
+    func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {
+        return dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
+    }
+    
     // MARK: - Private Methods
     
     private func fetchOrders() {

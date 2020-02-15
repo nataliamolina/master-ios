@@ -18,9 +18,20 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel = HomeViewModel()
-    var router: RouterBase<HomeRouterTransitions>?
+    private let router: RouterBase<HomeRouterTransitions>
     
     // MARK: - Life Cycle
+    
+    init(router: RouterBase<HomeRouterTransitions>) {
+        self.router = router
+        
+        super.init(nibName: String(describing: HomeViewController.self), bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,14 +89,14 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func menuButtonTapped() {
-        showMenu()
+        showMenu(router: router)
     }
 }
 
 // MARK: - CategoryCellDelegate
 extension HomeViewController: CategoryCellDelegate {
     func cellTapped(_ cell: CategoryCell) {
-        router?.transition(to: .categoryDetail)
+        router.transition(to: .categoryDetail)
     }
 }
 
@@ -104,20 +115,19 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellViewModel = viewModel.dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
-        let identifier = cellViewModel?.identifier ?? ""
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        (cell as? ConfigurableCellProtocol)?.setupWith(viewModel: cellViewModel,
-                                                       indexPath: indexPath,
-                                                       delegate: self)
-        
-        return cell
+        return tableView.getWith(cellViewModel: viewModel.getViewModelAt(indexPath: indexPath),
+                                 indexPath: indexPath,
+                                 delegate: self)
     }
 }
 
 // MARK: - UIViewControllerTransitioningDelegate
 extension HomeViewController: UIGestureRecognizerDelegate {
+    private func setupNavigationGesture() {
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
+    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
                            shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         

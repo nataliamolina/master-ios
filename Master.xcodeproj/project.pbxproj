@@ -34,6 +34,8 @@
 		2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9823F4FE8700267899 /* HomeRouter.swift */; };
 		2C7E7FAC23F85BC000D7835E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */; };
 		2C7E7FAD23F85BC000D7835E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */; };
+		2C7E7FAF23F869B500D7835E /* TableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAE23F869B500D7835E /* TableAdapter.swift */; };
+		2C7E7FB123F8743E00D7835E /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */; };
 		2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* Storage.swift */; };
 		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
 		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
@@ -132,6 +134,8 @@
 		2C73AE9823F4FE8700267899 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		2C7E7FAE23F869B500D7835E /* TableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAdapter.swift; sourceTree = "<group>"; };
+		2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 			children = (
 				2C8C6C5A23F4B64000FE06BE /* Storage.swift */,
 				2C8C6C5C23F4B6FE00FE06BE /* Session.swift */,
+				2C7E7FAE23F869B500D7835E /* TableAdapter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -347,10 +352,19 @@
 		2C7E7FA923F85BAC00D7835E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */,
-				2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */,
+				2C7E7FB223F874F100D7835E /* Menu */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		2C7E7FB223F874F100D7835E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */,
+				2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */,
+				2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		2C8C6C5E23F4B9D100FE06BE /* View */ = {
@@ -911,6 +925,7 @@
 				A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */,
 				2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */,
 				2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */,
+				2C7E7FAF23F869B500D7835E /* TableAdapter.swift in Sources */,
 				2C73AE9123F4EA4E00267899 /* LoginServiceProtocol.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
 				2C42088E23F647E00058873D /* MainViewModel.swift in Sources */,
@@ -949,6 +964,7 @@
 				2CF6ABBA23F7AE6700F9EF40 /* HomeEndpoints.swift in Sources */,
 				2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */,
 				A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */,
+				2C7E7FB123F8743E00D7835E /* MenuViewModel.swift in Sources */,
 				2C73AE9723F4FD5700267899 /* Result.swift in Sources */,
 				2CCFED7023F62B36005E5CB1 /* RegisterService.swift in Sources */,
 				2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */,

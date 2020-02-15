@@ -56,8 +56,10 @@ extension UIViewController {
         NotificationBanner(title: "Error", subtitle: message, style: .warning).show()
     }
     
-    func showMenu() {
-        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: MenuViewController())
+    func showMenu(router: RouterBase<HomeRouterTransitions>) {
+        let menuVC = MenuViewController(router: router)
+        
+        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: menuVC)
         leftMenuNavigationController.setNavigationBarHidden(true, animated: false)
         leftMenuNavigationController.menuWidth = UIScreen.main.bounds.width - (UIScreen.main.bounds.width / 4)
         leftMenuNavigationController.statusBarEndAlpha = 0
@@ -67,10 +69,5 @@ extension UIViewController {
         SideMenuManager.default.leftMenuNavigationController?.presentationStyle.presentingEndAlpha = 0.5
         
         present(leftMenuNavigationController, animated: true, completion: nil)
-    }
-    
-    func setupNavigationGesture() {
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
 }
