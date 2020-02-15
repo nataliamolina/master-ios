@@ -23,6 +23,12 @@ class CategoryCell: UITableViewCell, ConfigurableCellProtocol {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        categoryImageView.kf.cancelDownloadTask()
+    }
 
     // MARK: - Public Methods
     func setupWith(viewModel: Any?, indexPath: IndexPath?, delegate: Any?) {
@@ -30,6 +36,13 @@ class CategoryCell: UITableViewCell, ConfigurableCellProtocol {
             return
         }
         
+        setupUI()
         categoryImageView.kf.setImage(with: URL(string: viewModel.imageUrl))
+    }
+    
+    // MARK: - Private Methods
+    private func setupUI() {
+        cardView.layer.cornerRadius = 10
+        cardView.clipsToBounds = true
     }
 }

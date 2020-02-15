@@ -29,3 +29,6 @@
 "register.placeholder.phone" = "Celular";
 "register.button.register" = "Continuar";
 "register.label.legal" = "¡Hola!, los datos que completarás a continuación son 100% privados, nunca haremos mal uso de ellos.";
+
+// Home
+"home.pendingServices" = "Servicios en Curso:";

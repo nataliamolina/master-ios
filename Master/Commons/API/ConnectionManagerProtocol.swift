@@ -15,4 +15,5 @@ protocol ConnectionManagerProtocol {
     func setCustomHeaders(_ headers: [String: String])
     func get<T: Codable>(url: String, onComplete: ResultBlock<T>?)
     func post<T: Codable>(url: String, request: Codable, onComplete: ResultBlock<T>?)
+    func put<T: Codable>(url: String, onComplete: ResultBlock<T>?)
 }

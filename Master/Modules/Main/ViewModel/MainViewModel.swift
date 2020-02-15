@@ -23,7 +23,8 @@ class MainViewModel {
     let status = Var<MainViewModelStatus>(.undefined)
     let controlsEnabled = Var(true)
     let isLoading = Var(false)
-    let service: EmailLoginServiceProtocol
+    
+    private let service: EmailLoginServiceProtocol
     
     // MARK: - Life Cycle
     init(service: EmailLoginServiceProtocol? = nil) {

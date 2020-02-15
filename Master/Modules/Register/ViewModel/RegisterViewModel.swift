@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-import Foundation
 import EasyBinding
 
 enum RegisterViewModelStatus {
@@ -23,8 +21,9 @@ class RegisterViewModel {
     let status = Var<RegisterViewModelStatus>(.undefined)
     let controlsEnabled = Var(true)
     let isLoading = Var(false)
-    let service: RegisterServiceProtocol
-    let loginService: EmailLoginServiceProtocol
+    
+    private let service: RegisterServiceProtocol
+    private let loginService: EmailLoginServiceProtocol
     
     // MARK: - Life Cycle
     init(service: RegisterServiceProtocol? = nil, loginService: EmailLoginServiceProtocol? = nil) {

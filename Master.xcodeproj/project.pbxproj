@@ -45,6 +45,19 @@
 		2CCFED7423F62BD3005E5CB1 /* RegisterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7323F62BD3005E5CB1 /* RegisterEndpoints.swift */; };
 		2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */; };
 		2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */; };
+		2CF6ABB323F7AD9200F9EF40 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB223F7AD9200F9EF40 /* HomeService.swift */; };
+		2CF6ABB623F7ADBD00F9EF40 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB523F7ADBD00F9EF40 /* Service.swift */; };
+		2CF6ABB823F7AE3500F9EF40 /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB723F7AE3500F9EF40 /* ServiceCategory.swift */; };
+		2CF6ABBA23F7AE6700F9EF40 /* HomeEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB923F7AE6700F9EF40 /* HomeEndpoints.swift */; };
+		2CF6ABBE23F7AF0200F9EF40 /* OrdersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABBD23F7AF0200F9EF40 /* OrdersService.swift */; };
+		2CF6ABC123F7AF2C00F9EF40 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC023F7AF2C00F9EF40 /* Order.swift */; };
+		2CF6ABC323F7B00A00F9EF40 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC223F7B00A00F9EF40 /* Provider.swift */; };
+		2CF6ABC523F7B1FF00F9EF40 /* OrderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC423F7B1FF00F9EF40 /* OrderServiceProtocol.swift */; };
+		2CF6ABC723F7B21000F9EF40 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC623F7B21000F9EF40 /* ProviderService.swift */; };
+		2CF6ABC923F7B23B00F9EF40 /* OrdersEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC823F7B23B00F9EF40 /* OrdersEndpoints.swift */; };
+		2CF6ABCB23F7B26A00F9EF40 /* OrdersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABCA23F7B26A00F9EF40 /* OrdersServiceProtocol.swift */; };
+		2CF6ABCD23F7B43000F9EF40 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABCC23F7B43000F9EF40 /* HomeViewModel.swift */; };
+		2CF6ABCF23F7BB0400F9EF40 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABCE23F7BB0400F9EF40 /* UIView+Extensions.swift */; };
 		5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */; };
 		A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
 		A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
@@ -127,6 +140,19 @@
 		2CCFED7323F62BD3005E5CB1 /* RegisterEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndpoints.swift; sourceTree = "<group>"; };
 		2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServiceProtocol.swift; sourceTree = "<group>"; };
+		2CF6ABB223F7AD9200F9EF40 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		2CF6ABB523F7ADBD00F9EF40 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2CF6ABB723F7AE3500F9EF40 /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
+		2CF6ABB923F7AE6700F9EF40 /* HomeEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoints.swift; sourceTree = "<group>"; };
+		2CF6ABBD23F7AF0200F9EF40 /* OrdersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersService.swift; sourceTree = "<group>"; };
+		2CF6ABC023F7AF2C00F9EF40 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		2CF6ABC223F7B00A00F9EF40 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		2CF6ABC423F7B1FF00F9EF40 /* OrderServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceProtocol.swift; sourceTree = "<group>"; };
+		2CF6ABC623F7B21000F9EF40 /* ProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderService.swift; sourceTree = "<group>"; };
+		2CF6ABC823F7B23B00F9EF40 /* OrdersEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersEndpoints.swift; sourceTree = "<group>"; };
+		2CF6ABCA23F7B26A00F9EF40 /* OrdersServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersServiceProtocol.swift; sourceTree = "<group>"; };
+		2CF6ABCC23F7B43000F9EF40 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2CF6ABCE23F7BB0400F9EF40 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		3024BACA975641C9852C5D83 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +223,7 @@
 		2C0C599223F7A71F00C59A18 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2CF6ABCC23F7B43000F9EF40 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -204,6 +231,8 @@
 		2C0C599323F7A72600C59A18 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2CF6ABB223F7AD9200F9EF40 /* HomeService.swift */,
+				2CF6ABB923F7AE6700F9EF40 /* HomeEndpoints.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -343,6 +372,8 @@
 				2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */,
 				2C198D1E23F4D00800346395 /* EmptyCodable.swift */,
 				2C73AE9623F4FD5700267899 /* Result.swift */,
+				2CF6ABC223F7B00A00F9EF40 /* Provider.swift */,
+				2CF6ABC623F7B21000F9EF40 /* ProviderService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +418,43 @@
 			isa = PBXGroup;
 			children = (
 				2CCFED7123F62B85005E5CB1 /* RegisterRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2CF6ABB423F7ADB200F9EF40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CF6ABB523F7ADBD00F9EF40 /* Service.swift */,
+				2CF6ABB723F7AE3500F9EF40 /* ServiceCategory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2CF6ABBB23F7AEF000F9EF40 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				2CF6ABBF23F7AF2400F9EF40 /* Models */,
+				2CF6ABBC23F7AEF500F9EF40 /* Services */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		2CF6ABBC23F7AEF500F9EF40 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2CF6ABBD23F7AF0200F9EF40 /* OrdersService.swift */,
+				2CF6ABC823F7B23B00F9EF40 /* OrdersEndpoints.swift */,
+				2CF6ABCA23F7B26A00F9EF40 /* OrdersServiceProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2CF6ABBF23F7AF2400F9EF40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CF6ABC423F7B1FF00F9EF40 /* OrderServiceProtocol.swift */,
+				2CF6ABC023F7AF2C00F9EF40 /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,6 +529,7 @@
 		A5F30D3B23B4C7F6005258A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2CF6ABBB23F7AEF000F9EF40 /* Orders */,
 				A5F30D6923B4DB29005258A8 /* Home */,
 				A5F30D5A23B4D8D0005258A8 /* Register */,
 				A5F30D5123B4D20B005258A8 /* EmailLogin */,
@@ -518,6 +587,7 @@
 				A5F30D6323B4DA63005258A8 /* UITableViewCell+Extensions.swift */,
 				A5F30D6523B4DA85005258A8 /* UITableView+Extensions.swift */,
 				2C2B1AB823F24B0E00243D3E /* UIImage+Extensions.swift */,
+				2CF6ABCE23F7BB0400F9EF40 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -573,6 +643,7 @@
 		A5F30D6923B4DB29005258A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2CF6ABB423F7ADB200F9EF40 /* Models */,
 				2C0C599323F7A72600C59A18 /* Service */,
 				2C0C599223F7A71F00C59A18 /* ViewModel */,
 				2C0C599123F7A71600C59A18 /* View */,
@@ -802,6 +873,9 @@
 				A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */,
 				2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */,
 				A5F30D5723B4D470005258A8 /* MTextField.swift in Sources */,
+				2CF6ABB823F7AE3500F9EF40 /* ServiceCategory.swift in Sources */,
+				2CF6ABCD23F7B43000F9EF40 /* HomeViewModel.swift in Sources */,
+				2CF6ABCB23F7B26A00F9EF40 /* OrdersServiceProtocol.swift in Sources */,
 				A5F30D6C23B4DB34005258A8 /* HomeViewController.swift in Sources */,
 				2CCFED7423F62BD3005E5CB1 /* RegisterEndpoints.swift in Sources */,
 				2C2B1AC823F2744600243D3E /* EmailLoginViewModel.swift in Sources */,
@@ -813,12 +887,19 @@
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
 				2C42088E23F647E00058873D /* MainViewModel.swift in Sources */,
 				2CCFED7223F62B85005E5CB1 /* RegisterRequest.swift in Sources */,
+				2CF6ABC123F7AF2C00F9EF40 /* Order.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2C2B1AB923F24B0E00243D3E /* UIImage+Extensions.swift in Sources */,
 				2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */,
+				2CF6ABBE23F7AF0200F9EF40 /* OrdersService.swift in Sources */,
+				2CF6ABB623F7ADBD00F9EF40 /* Service.swift in Sources */,
 				A5F30D6423B4DA63005258A8 /* UITableViewCell+Extensions.swift in Sources */,
+				2CF6ABC523F7B1FF00F9EF40 /* OrderServiceProtocol.swift in Sources */,
 				2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */,
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
+				2CF6ABC323F7B00A00F9EF40 /* Provider.swift in Sources */,
+				2CF6ABC723F7B21000F9EF40 /* ProviderService.swift in Sources */,
+				2CF6ABB323F7AD9200F9EF40 /* HomeService.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				2C42088B23F647680058873D /* GmailRequest.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* CellViewModelProtocol.swift in Sources */,
@@ -832,11 +913,14 @@
 				A5F30D7423B4DC94005258A8 /* CategoryCellViewModel.swift in Sources */,
 				A5F30D6823B4DAE5005258A8 /* ConfigurableCellProtocol.swift in Sources */,
 				2C198D1B23F4C35700346395 /* SplashScreenViewModel.swift in Sources */,
+				2CF6ABC923F7B23B00F9EF40 /* OrdersEndpoints.swift in Sources */,
 				2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */,
 				2C8C6C6823F4BB5B00FE06BE /* ServerStatus.swift in Sources */,
 				2C198D2423F4E4FB00346395 /* MainRouter.swift in Sources */,
+				2CF6ABBA23F7AE6700F9EF40 /* HomeEndpoints.swift in Sources */,
 				2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */,
 				A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */,
+				2CF6ABCF23F7BB0400F9EF40 /* UIView+Extensions.swift in Sources */,
 				2C73AE9723F4FD5700267899 /* Result.swift in Sources */,
 				2CCFED7023F62B36005E5CB1 /* RegisterService.swift in Sources */,
 				2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */,

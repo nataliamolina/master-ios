@@ -11,9 +11,12 @@ import UIKit
 class HomeViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var tableView: UITableView!
-    
+    @IBOutlet private weak var pendingView: UIView!
+    @IBOutlet private weak var pendingLabel: UILabel!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+
     // MARK: - Properties
-    private var dataSource: [CellViewModelProtocol] = []
+    private let viewModel = HomeViewModel()
     
     // MARK: - Life Cycle
     
@@ -24,25 +27,25 @@ class HomeViewController: UIViewController {
     }
     
     private func setupUI() {
+        setupBindings()
+        
+        pendingView.isHidden = false
+        
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.registerNib(CategoryCell.self)
         
         setupMenuIcon()
         setupLogoIcon()
+        
+        viewModel.fetchServices()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        dataSource = [
-            CategoryCellViewModel(imageUrl: "https://about.canva.com/es_co/wp-content/uploads/sites/3/2015/02/Etsy-Banners.png"),
-            CategoryCellViewModel(imageUrl: "https://about.canva.com/es_co/wp-content/uploads/sites/3/2015/02/Etsy-Banners.png"),
-            CategoryCellViewModel(imageUrl: "https://about.canva.com/es_co/wp-content/uploads/sites/3/2015/02/Etsy-Banners.png"),
-            CategoryCellViewModel(imageUrl: "https://about.canva.com/es_co/wp-content/uploads/sites/3/2015/02/Etsy-Banners.png"),
-            CategoryCellViewModel(imageUrl: "https://about.canva.com/es_co/wp-content/uploads/sites/3/2015/02/Etsy-Banners.png")
-        ]
-        
-        
-        tableView.reloadData()
+    private func setupBindings() {
+        viewModel.dataSource.bindTo(tableView, to: .dataSource)
+        //viewModel.hasPendingOrders.bindTo(pendingView, to: .visibility)
+        viewModel.totalOrders.bindTo(pendingLabel, to: .text)
+        viewModel.isLoading.bindTo(activityIndicator, to: .state)
     }
     
     // MARK: - Private Methods
@@ -67,16 +70,24 @@ class HomeViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.dataSource.value.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.sectionTitles.safeContains(section)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return viewModel.dataSource.value.safeContains(section)?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = dataSource.safeContains(indexPath.row)
-        let identifier = viewModel?.identifier ?? ""
+        let cellViewModel = viewModel.dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
+        let identifier = cellViewModel?.identifier ?? ""
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        (cell as? ConfigurableCellProtocol)?.setupWith(viewModel: viewModel, indexPath: indexPath, delegate: nil)
+        (cell as? ConfigurableCellProtocol)?.setupWith(viewModel: cellViewModel, indexPath: indexPath, delegate: nil)
         
         return cell
     }
