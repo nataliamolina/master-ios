@@ -79,9 +79,6 @@ class MainViewController: UIViewController {
         
         title = ""
         
-        emailLoginButton.style = .onlyWhiteText
-        registerButton.style = .onlyWhiteText
-        
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         setupGoogleAuth()

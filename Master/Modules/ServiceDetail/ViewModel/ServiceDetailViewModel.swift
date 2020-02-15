@@ -9,9 +9,10 @@
 import UIKit
 import EasyBinding
 
-enum  ServiceDetailViewModelStatus {
+enum ServiceDetailViewModelStatus {
     case undefined
     case error(error: String?)
+    case emptyStateRequired
 }
 
 class ServiceDetailViewModel {
@@ -44,6 +45,12 @@ class ServiceDetailViewModel {
             
             guard let models = response, error == nil else {
                 self?.status.value = .error(error: error?.localizedDescription)
+                
+                return
+            }
+            
+            if models.isEmpty {
+                self?.status.value = .emptyStateRequired
                 
                 return
             }

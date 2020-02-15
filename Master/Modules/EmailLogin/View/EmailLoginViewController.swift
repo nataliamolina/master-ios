@@ -60,8 +60,6 @@ class EmailLoginViewController: UIViewController {
         
         addIconInNavigationBar()
         
-        loginButton.style = .green
-        
         enableKeyboardDismiss()
         
         enableFieldSwitch(fieldsHolder: mainStackview, delegate: self)

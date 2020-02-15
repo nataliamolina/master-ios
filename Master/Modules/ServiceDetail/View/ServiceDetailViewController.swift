@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Lottie
 
 class ServiceDetailViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var lottieView: UIView!
+    @IBOutlet private weak var emptyStateView: UIView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var headerImage: UIImageView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
@@ -39,6 +42,7 @@ class ServiceDetailViewController: UIViewController {
     private func setupUI() {
         headerImage.kf.setImage(with: URL(string: viewModel.serviceImageUrl ?? ""))
         
+        emptyStateView.isHidden = true
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.registerNib(ProviderCell.self)
@@ -49,8 +53,29 @@ class ServiceDetailViewController: UIViewController {
     }
     
     private func setupBindings() {
+        viewModel.status.valueDidChange = { [weak self] status in
+            switch status {
+            case .emptyStateRequired:
+                self?.setupEmptyState()
+                
+            default:
+                return
+            }
+        }
+        
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         viewModel.isLoading.bindTo(activityIndicator, to: .state)
+    }
+    
+    private func setupEmptyState() {
+        emptyStateView.isHidden = false
+
+        let starAnimationView = AnimationView(name: AnimationType.emptyStateForProviders.rawValue)
+        starAnimationView.frame = lottieView.bounds
+        starAnimationView.play()
+        starAnimationView.loopMode = .loop
+        
+        lottieView.addSubview(starAnimationView)
     }
 }
 

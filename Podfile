@@ -13,6 +13,7 @@ def commons
   pod 'GoogleSignIn'
   pod 'SideMenu', '~> 6.0'
   pod 'SwiftLint'
+  pod 'lottie-ios'
 end
 
 target 'Master' do

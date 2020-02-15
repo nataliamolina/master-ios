@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum MButtonType {
+enum MButtonType: Int {
     case whiteBorder
     case greenBorder
     case white
@@ -17,19 +17,30 @@ enum MButtonType {
 }
 
 class MButton: UIButton {
+    // MARK: - UI Referneces
+    @IBInspectable var styleId: Int = 1
+    
     // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        setupStyle()
+        setupStyleId()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupStyleId()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        setupStyleId()
     }
     
     // MARK: - Properties
-    var style: MButtonType = .greenBorder {
-        didSet {
-            setupStyle()
-        }
-    }
+    var style: MButtonType = .greenBorder
     
     override open var isEnabled: Bool {
         didSet {
@@ -38,6 +49,15 @@ class MButton: UIButton {
     }
     
     // MARK: - Private Methods
+    private func setupStyleId() {
+        guard let styleSelected = MButtonType(rawValue: styleId) else {
+            return
+        }
+        
+        style = styleSelected
+        setupStyle()
+    }
+    
     private func setupStyle() {
         animateState()
         

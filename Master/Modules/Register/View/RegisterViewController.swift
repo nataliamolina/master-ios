@@ -69,8 +69,6 @@ class RegisterViewController: UIViewController {
         
         addIconInNavigationBar()
         
-        registerButton.style = .green
-        
         enableKeyboardDismiss()
         
         enableFieldSwitch(fieldsHolder: mainStackview, delegate: self)

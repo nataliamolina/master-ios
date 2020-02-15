@@ -82,6 +82,7 @@ PODS:
     - Kingfisher/Core (= 5.12.0)
   - Kingfisher/Core (5.12.0)
   - Localize (2.3.0)
+  - lottie-ios (3.1.6)
   - MarqueeLabel (4.0.0)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -104,6 +105,7 @@ DEPENDENCIES:
   - Hero
   - Kingfisher (~> 5.0)
   - Localize
+  - lottie-ios
   - NotificationBannerSwift (~> 3.0.0)
   - SideMenu (~> 6.0)
   - Simple-Networking (~> 0.3.3)
@@ -130,6 +132,7 @@ SPEC REPOS:
     - Hero
     - Kingfisher
     - Localize
+    - lottie-ios
     - MarqueeLabel
     - nanopb
     - NotificationBannerSwift
@@ -158,6 +161,7 @@ SPEC CHECKSUMS:
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   Localize: cb1ae53ed73decaad0dce217806ed983091913f5
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
   MarqueeLabel: b55b26e690b6ad41faedd95cbf5eae6f1d1735b4
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   NotificationBannerSwift: 713e20f21b6105f4a36a00e5d9fa414a930d3d8e
@@ -167,6 +171,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 8128806e0ea3279b8e6cc3798926f7f001df276a
+PODFILE CHECKSUM: 266f62861884509e243a90103b8759deadfb2121
 
 COCOAPODS: 1.8.4
