@@ -63,7 +63,7 @@ class HomeViewModel {
             }
             
             self?.totalOrders.value = "\(models.count)"
-            self?.hasPendingOrders.value = models.isEmpty
+            self?.hasPendingOrders.value = !models.isEmpty
         }
     }
     

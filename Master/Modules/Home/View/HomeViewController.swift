@@ -14,12 +14,11 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var pendingView: UIView!
     @IBOutlet private weak var pendingLabel: UILabel!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
-
+    
     // MARK: - Properties
     private let viewModel = HomeViewModel()
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +28,7 @@ class HomeViewController: UIViewController {
     private func setupUI() {
         setupBindings()
         
-        pendingView.isHidden = false
+        pendingView.isHidden = true
         
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -42,8 +41,13 @@ class HomeViewController: UIViewController {
     }
     
     private func setupBindings() {
+        viewModel.hasPendingOrders.valueDidChange = { hasPendingOrders in
+            UIView.animate(withDuration: 0.4) { [weak self] in
+                self?.pendingView.isHidden = !hasPendingOrders
+            }
+        }
+        
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
-        //viewModel.hasPendingOrders.bindTo(pendingView, to: .visibility)
         viewModel.totalOrders.bindTo(pendingLabel, to: .text)
         viewModel.isLoading.bindTo(activityIndicator, to: .state)
     }

@@ -54,4 +54,16 @@ extension UIViewController {
     func showWarning(message: String?) {
         NotificationBanner(title: "Error", subtitle: message, style: .warning).show()
     }
+    
+    func turnOnLargeTitles() {
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
+    }
+    
+    func turnOffLargeTitles() {
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = false
+        }
+    }
 }

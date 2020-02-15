@@ -42,9 +42,10 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         navigationController.navigationBar.tintColor = UIColor.Master.green
         
         if #available(iOS 11.0, *) {
-            navigationController.navigationBar.prefersLargeTitles = true
+            navigationController.navigationBar.prefersLargeTitles = false
         }
         
+        navigationController.navigationBar.isTranslucent = false
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.hero.isEnabled = true
         navigationController.hero.modalAnimationType = .zoom
