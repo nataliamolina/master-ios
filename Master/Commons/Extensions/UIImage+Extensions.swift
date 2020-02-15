@@ -24,4 +24,8 @@ extension UIImage {
     static var closedEye: UIImage? {
         return UIImage(named: "eye_closed")
     }
+    
+    static var menu: UIImage? {
+        return UIImage(named: "menu_icon")
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol CategoryCellDataSource {
     var imageUrl: String { get }
@@ -29,7 +30,6 @@ class CategoryCell: UITableViewCell, ConfigurableCellProtocol {
             return
         }
         
-        // FIXME: Temporal
-        categoryImageView.backgroundColor = UIColor.Master.green
+        categoryImageView.kf.setImage(with: URL(string: viewModel.imageUrl))
     }
 }

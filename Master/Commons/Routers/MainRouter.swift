@@ -12,7 +12,7 @@ enum MainRouterTransitions {
     case main
     case emailLogin
     case register
-    case home(router: RouterBase<HomeRouterTransitions>)
+    case home
 }
 
 class MainRouter: RouterBase<MainRouterTransitions> {
@@ -37,8 +37,8 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         case .emailLogin:
             handleEmailLoginTransition()
             
-        case .home(let router):
-            handleHomeTransition(router: router)
+        case .home:
+            handleHomeTransition()
             
         case .register:
             handleRegisterTransition()
@@ -76,8 +76,9 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    private func handleHomeTransition(router: RouterBase<HomeRouterTransitions>) {
-        router.transition(to: .home)
+    private func handleHomeTransition() {
+        let homeRouter = HomeRouter(rootViewController: rootViewController)
+        homeRouter.transition(to: .home)
     }
     
     private func handleRegisterTransition() {

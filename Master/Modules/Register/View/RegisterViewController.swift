@@ -57,7 +57,7 @@ class RegisterViewController: UIViewController {
             
             switch status {
             case .registerReady:
-                self.router?.transition(to: .home(router: HomeRouter(rootViewController: self)))
+                self.router?.transition(to: .home)
                 
             case .error(let error):
                 self.showError(message: error)

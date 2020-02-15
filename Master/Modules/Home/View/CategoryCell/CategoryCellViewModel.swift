@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CategoryCellViewModel: CategoryCellDataSource, IdentificableViewModelProtocol {
+struct CategoryCellViewModel: CategoryCellDataSource, CellViewModelProtocol {
     var imageUrl: String
     var identifier: String = CategoryCell.cellIdentifier
     

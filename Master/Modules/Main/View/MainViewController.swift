@@ -97,7 +97,7 @@ class MainViewController: UIViewController {
             
             switch status {
             case .gmailLoginReady:
-                self.router?.transition(to: .home(router: HomeRouter(rootViewController: self)))
+                self.router?.transition(to: .home)
                 
             case .error(let error):
                 self.showError(message: error)

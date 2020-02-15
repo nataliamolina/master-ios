@@ -53,7 +53,7 @@ class SplashScreenViewController: UIViewController {
     
     private func route(toHome: Bool) {
         if toHome {
-            router.transition(to: .home(router: HomeRouter(rootViewController: self)))
+            router.transition(to: .home)
         } else {
             router.transition(to: .main)
         }

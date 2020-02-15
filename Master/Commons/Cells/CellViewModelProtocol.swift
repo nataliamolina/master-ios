@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol IdentificableViewModelProtocol {
+protocol CellViewModelProtocol {
     var identifier: String { get }
 }

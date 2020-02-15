@@ -64,7 +64,7 @@
 		A5F30D5923B4D5EE005258A8 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D5823B4D5EE005258A8 /* UIViewController+Extensions.swift */; };
 		A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D5B23B4D8DF005258A8 /* RegisterViewController.swift */; };
 		A5F30D5E23B4D8DF005258A8 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D5C23B4D8DF005258A8 /* RegisterViewController.xib */; };
-		A5F30D6223B4DA41005258A8 /* IdentificableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6123B4DA41005258A8 /* IdentificableViewModelProtocol.swift */; };
+		A5F30D6223B4DA41005258A8 /* CellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6123B4DA41005258A8 /* CellViewModelProtocol.swift */; };
 		A5F30D6423B4DA63005258A8 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6323B4DA63005258A8 /* UITableViewCell+Extensions.swift */; };
 		A5F30D6623B4DA85005258A8 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6523B4DA85005258A8 /* UITableView+Extensions.swift */; };
 		A5F30D6823B4DAE5005258A8 /* ConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6723B4DAE5005258A8 /* ConfigurableCellProtocol.swift */; };
@@ -153,7 +153,7 @@
 		A5F30D5823B4D5EE005258A8 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		A5F30D5B23B4D8DF005258A8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A5F30D5C23B4D8DF005258A8 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		A5F30D6123B4DA41005258A8 /* IdentificableViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificableViewModelProtocol.swift; sourceTree = "<group>"; };
+		A5F30D6123B4DA41005258A8 /* CellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelProtocol.swift; sourceTree = "<group>"; };
 		A5F30D6323B4DA63005258A8 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		A5F30D6523B4DA85005258A8 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		A5F30D6723B4DAE5005258A8 /* ConfigurableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCellProtocol.swift; sourceTree = "<group>"; };
@@ -184,6 +184,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0C599123F7A71600C59A18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5F30D6E23B4DB7C005258A8 /* CategoryCell */,
+				A5F30D6A23B4DB34005258A8 /* HomeViewController.swift */,
+				A5F30D6B23B4DB34005258A8 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C0C599223F7A71F00C59A18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C0C599323F7A72600C59A18 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		2C198D2223F4E4EA00346395 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,7 +564,7 @@
 		A5F30D6023B4DA34005258A8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A5F30D6123B4DA41005258A8 /* IdentificableViewModelProtocol.swift */,
+				A5F30D6123B4DA41005258A8 /* CellViewModelProtocol.swift */,
 				A5F30D6723B4DAE5005258A8 /* ConfigurableCellProtocol.swift */,
 			);
 			path = Cells;
@@ -549,9 +573,9 @@
 		A5F30D6923B4DB29005258A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A5F30D6E23B4DB7C005258A8 /* CategoryCell */,
-				A5F30D6A23B4DB34005258A8 /* HomeViewController.swift */,
-				A5F30D6B23B4DB34005258A8 /* HomeViewController.xib */,
+				2C0C599323F7A72600C59A18 /* Service */,
+				2C0C599223F7A71F00C59A18 /* ViewModel */,
+				2C0C599123F7A71600C59A18 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -797,7 +821,7 @@
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				2C42088B23F647680058873D /* GmailRequest.swift in Sources */,
-				A5F30D6223B4DA41005258A8 /* IdentificableViewModelProtocol.swift in Sources */,
+				A5F30D6223B4DA41005258A8 /* CellViewModelProtocol.swift in Sources */,
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
 				A5F30D5023B4CDB7005258A8 /* Styles.swift in Sources */,
 				2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */,
