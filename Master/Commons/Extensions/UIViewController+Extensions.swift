@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationBannerSwift
+import SideMenu
 
 extension UIViewController {
     func addIconInNavigationBar() {
@@ -55,15 +56,21 @@ extension UIViewController {
         NotificationBanner(title: "Error", subtitle: message, style: .warning).show()
     }
     
-    func turnOnLargeTitles() {
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        }
+    func showMenu() {
+        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: MenuViewController())
+        leftMenuNavigationController.setNavigationBarHidden(true, animated: false)
+        leftMenuNavigationController.menuWidth = UIScreen.main.bounds.width - (UIScreen.main.bounds.width / 4)
+        leftMenuNavigationController.statusBarEndAlpha = 0
+        
+        SideMenuManager.default.leftMenuNavigationController = leftMenuNavigationController
+        SideMenuManager.default.leftMenuNavigationController?.presentationStyle = .menuSlideIn
+        SideMenuManager.default.leftMenuNavigationController?.presentationStyle.presentingEndAlpha = 0.5
+        
+        present(leftMenuNavigationController, animated: true, completion: nil)
     }
     
-    func turnOffLargeTitles() {
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = false
-        }
+    func setupNavigationGesture() {
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
 }

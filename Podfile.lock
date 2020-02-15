@@ -91,9 +91,11 @@ PODS:
   - NotificationBannerSwift (3.0.2):
     - MarqueeLabel (~> 4.0.0)
     - SnapKit (~> 5.0.0)
+  - SideMenu (6.4.7)
   - Simple-Networking (0.3.3)
   - SimpleKeychain (0.10.0)
   - SnapKit (5.0.1)
+  - SwiftLint (0.39.1)
 
 DEPENDENCIES:
   - EasyBinding (~> 0.1.1)
@@ -103,8 +105,10 @@ DEPENDENCIES:
   - Kingfisher (~> 5.0)
   - Localize
   - NotificationBannerSwift (~> 3.0.0)
+  - SideMenu (~> 6.0)
   - Simple-Networking (~> 0.3.3)
   - SimpleKeychain
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
@@ -129,9 +133,11 @@ SPEC REPOS:
     - MarqueeLabel
     - nanopb
     - NotificationBannerSwift
+    - SideMenu
     - Simple-Networking
     - SimpleKeychain
     - SnapKit
+    - SwiftLint
 
 SPEC CHECKSUMS:
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
@@ -155,10 +161,12 @@ SPEC CHECKSUMS:
   MarqueeLabel: b55b26e690b6ad41faedd95cbf5eae6f1d1735b4
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   NotificationBannerSwift: 713e20f21b6105f4a36a00e5d9fa414a930d3d8e
+  SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   Simple-Networking: 4d190b9b79fc239b2728e280fc22611e491a092e
   SimpleKeychain: a5ed8ebd0ab7e46a910353ffe0293cd6f017a160
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: e63aeb12f59b85327b8e102f1232a99d11e002da
+PODFILE CHECKSUM: 8128806e0ea3279b8e6cc3798926f7f001df276a
 
 COCOAPODS: 1.8.4

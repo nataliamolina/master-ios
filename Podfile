@@ -11,6 +11,8 @@ def commons
   pod 'Firebase/Analytics'
   pod 'Localize'
   pod 'GoogleSignIn'
+  pod 'SideMenu', '~> 6.0'
+  pod 'SwiftLint'
 end
 
 target 'Master' do

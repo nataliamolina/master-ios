@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class HomeViewController: UIViewController {
     // MARK: - UI References
@@ -17,6 +18,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel = HomeViewModel()
+    var router: RouterBase<HomeRouterTransitions>?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -25,7 +27,15 @@ class HomeViewController: UIViewController {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupNavigationGesture()
+    }
+    
     private func setupUI() {
+        title = ""
+        
         setupBindings()
         
         pendingView.isHidden = true
@@ -54,7 +64,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupMenuIcon() {
-        let leftImage = UIBarButtonItem(image: .menu, style: .plain, target: #selector(menuButtonTapped), action: nil)
+        let leftImage = UIBarButtonItem(image: .menu, style: .plain, target: self, action: #selector(menuButtonTapped))
         leftImage.tintColor = .black
         navigationItem.leftBarButtonItem = leftImage
     }
@@ -68,7 +78,14 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func menuButtonTapped() {
-        
+        showMenu()
+    }
+}
+
+// MARK: - CategoryCellDelegate
+extension HomeViewController: CategoryCellDelegate {
+    func cellTapped(_ cell: CategoryCell) {
+        router?.transition(to: .categoryDetail)
     }
 }
 
@@ -91,8 +108,25 @@ extension HomeViewController: UITableViewDataSource {
         let identifier = cellViewModel?.identifier ?? ""
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        (cell as? ConfigurableCellProtocol)?.setupWith(viewModel: cellViewModel, indexPath: indexPath, delegate: nil)
+        (cell as? ConfigurableCellProtocol)?.setupWith(viewModel: cellViewModel,
+                                                       indexPath: indexPath,
+                                                       delegate: self)
         
         return cell
+    }
+}
+
+// MARK: - UIViewControllerTransitioningDelegate
+extension HomeViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        return true
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        return (otherGestureRecognizer is UIScreenEdgePanGestureRecognizer)
     }
 }

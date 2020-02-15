@@ -15,7 +15,7 @@ enum HomeRouterTransitions {
 
 class HomeRouter: RouterBase<HomeRouterTransitions> {
     // MARK: - Properties
-    private let navigationController: UINavigationController
+    let navigationController: UINavigationController
     
     // MARK: - Life Cycle
     override init(rootViewController: UIViewController) {
@@ -45,18 +45,25 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
             navigationController.navigationBar.prefersLargeTitles = false
         }
         
-        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.backgroundColor = .white
+        navigationController.navigationBar.barTintColor = .white
+        navigationController.navigationBar.isTranslucent = true
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.hero.isEnabled = true
         navigationController.hero.modalAnimationType = .zoom
     }
     
     private func handleHomeTransition() {
-        navigationController.setViewControllers([HomeViewController()], animated: false)
+        let viewController = HomeViewController()
+        viewController.router = self
         
+        navigationController.setViewControllers([viewController], animated: false)
+
         rootViewController.present(navigationController, animated: true, completion: nil)
     }
     
     private func handleCategoryDetailTransition() {
+        navigationController.pushViewController(ServiceDetailViewController(), animated: true)
     }
 }
