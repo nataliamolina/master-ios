@@ -19,11 +19,13 @@ class ServiceDetailViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel: ServiceDetailViewModel
-    
+    private let router: RouterBase<HomeRouterTransitions>
+
     // MARK: - Life Cycle
-    init(viewModel: ServiceDetailViewModel) {
+    init(viewModel: ServiceDetailViewModel, router: RouterBase<HomeRouterTransitions>) {
         self.viewModel = viewModel
-        
+        self.router = router
+
         super.init(nibName: String(describing: ServiceDetailViewController.self), bundle: nil)
     }
     
@@ -40,6 +42,8 @@ class ServiceDetailViewController: UIViewController {
     // MARK: - Private Methods
     
     private func setupUI() {
+        title = ""
+        
         headerImage.kf.setImage(with: URL(string: viewModel.serviceImageUrl ?? ""))
         
         emptyStateView.isHidden = true
@@ -76,6 +80,22 @@ class ServiceDetailViewController: UIViewController {
         starAnimationView.loopMode = .loop
         
         lottieView.addSubview(starAnimationView)
+    }
+}
+
+// getProviderProfileViewModelAt
+
+// MARK: - ProviderCellDelegate
+extension ServiceDetailViewController: ProviderCellDelegate {
+    func cellTappped(_ cell: ProviderCell) {
+        guard
+            let indexPath = tableView.indexPath(for: cell),
+            let providerViewModel = viewModel.getProviderProfileViewModelAt(indexPath: indexPath) else {
+                
+            return
+        }
+        
+        router.transition(to: .providerDetail(viewModel: providerViewModel))
     }
 }
 

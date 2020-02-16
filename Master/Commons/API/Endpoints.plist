@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>getCommentsByProviderId</key>
+	<string>orders/comments/provider/{providerId}</string>
+	<key>providerServicesByCategoryId</key>
+	<string>provider-services/provider/{providerId}/category/{categoryId}</string>
+	<key>providerProfileByUserId</key>
+	<string>provider/profile/{userId}</string>
 	<key>serviceDetail</key>
 	<string>provider/service/category/{id}</string>
 	<key>userOrders</key>

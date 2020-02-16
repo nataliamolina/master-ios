@@ -14,7 +14,7 @@ struct ProviderWithScore: Codable {
     let names: String
     let nickname: String
     var score: Double
-    var totalOrders: Int
+    var totalOrders: Double
     var photoUrl: String
     let description: String
 }

@@ -59,19 +59,28 @@ class ServiceDetailViewModel {
         }
     }
     
-    func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {
-        return dataSource.value.safeContains(indexPath.row)
+    func getProviderProfileViewModelAt(indexPath: IndexPath) -> ProviderProfileViewModel? {
+          guard let selectedProviderId = getViewModelAt(indexPath: indexPath)?.userId else {
+              return nil
+          }
+        
+          return ProviderProfileViewModel(userId: selectedProviderId, categoryId: serviceId)
+      }
+      
+    func getViewModelAt(indexPath: IndexPath) -> ProviderCellViewModel? {
+        return dataSource.value.safeContains(indexPath.row) as? ProviderCellViewModel
     }
     
     // MARK: - Private Methods
     
     private func servicesToViewModels(models: [ProviderWithScore]) {
         dataSource.value = models.map {
-            ProviderCellViewModel(imageUrl: $0.photoUrl,
+            ProviderCellViewModel(userId: $0.userId,
+                                  imageUrl: $0.photoUrl,
                                   names: $0.names,
                                   score: $0.score,
                                   desc: $0.description,
-                                  totalOrders: $0.score,
+                                  totalOrders: $0.totalOrders,
                                   isLastItem: models.last?.id == $0.id)
         }
     }

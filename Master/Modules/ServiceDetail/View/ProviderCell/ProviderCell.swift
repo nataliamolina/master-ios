@@ -29,14 +29,14 @@ class ProviderCell: UITableViewCell, ConfigurableCellProtocol {
     // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupUI()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        photoImageView.kf.cancelDownloadTask()
-        photoImageView.image = nil
+        setupUI()
     }
     
     // MARK: - Public Methods
@@ -57,14 +57,24 @@ class ProviderCell: UITableViewCell, ConfigurableCellProtocol {
         totalOrdersLabel.isHidden = viewModel.totalOrders <= 0
         totalOrdersLabel.text = "\(viewModel.totalOrders)"
         
-        photoImageView.layer.cornerRadius = photoImageView.frame.width / 2
-        photoImageView.layer.borderColor = UIColor.Master.green.cgColor
-        photoImageView.layer.borderWidth = 2
-        photoImageView.clipsToBounds = true
         photoImageView.kf.setImage(with: URL(string: viewModel.imageUrl))
         
         bottomLineView.isHidden = viewModel.isLastItem
         
         self.delegate = delegate as? ProviderCellDelegate
+        
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cellTapped)))
+    }
+    
+    private func setupUI() {
+        photoImageView.kf.cancelDownloadTask()
+        photoImageView.image = nil
+        namesLabel.text = nil
+        scoreLabel.text = nil
+        totalOrdersLabel.text = nil
+    }
+    
+    @objc private func cellTapped() {
+        delegate?.cellTappped(self)
     }
 }

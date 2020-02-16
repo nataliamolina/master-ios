@@ -10,6 +10,7 @@ import UIKit
 
 enum HomeRouterTransitions {
     case categoryDetail(id: Int, serviceImageUrl: String)
+    case providerDetail(viewModel: ProviderProfileViewModel)
     case home
     case logout
 }
@@ -39,6 +40,9 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         case .logout:
             handleLogoutTransition()
             
+        case .providerDetail(let viewModel):
+            handleProviderDetailTransition(viewModel: viewModel)
+            
         }
     }
     
@@ -62,18 +66,24 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     private func handleHomeTransition() {
         let viewController = HomeViewController(router: self)
         navigationController.setViewControllers([viewController], animated: false)
-
+        
         rootViewController.present(navigationController, animated: true, completion: nil)
     }
     
     private func handleCategoryDetailTransition(serviceId: Int, serviceImageUrl: String) {
         let viewModel = ServiceDetailViewModel(serviceId: serviceId, serviceImageUrl: serviceImageUrl)
-        let viewController = ServiceDetailViewController(viewModel: viewModel)
+        let viewController = ServiceDetailViewController(viewModel: viewModel, router: self)
         
         navigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleLogoutTransition() {
         navigationController.dismiss(animated: true, completion: nil)
+    }
+    
+    private func handleProviderDetailTransition(viewModel: ProviderProfileViewModel) {
+        let viewController = ProviderProfileViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
