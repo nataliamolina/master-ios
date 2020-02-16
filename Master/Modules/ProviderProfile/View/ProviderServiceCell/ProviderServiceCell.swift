@@ -8,17 +8,58 @@
 
 import UIKit
 
-class ProviderServiceCell: UITableViewCell {
+protocol ProviderServiceCellDelegate: class {
+    func cellTapped(_ cell: ProviderServiceCell)
+}
 
+class ProviderServiceCell: UITableViewCell, ConfigurableCellProtocol {
+    // MARK: - UI References
+    @IBOutlet private weak var productImageView: UIImageView!
+    @IBOutlet private weak var productNameLabel: UILabel!
+    @IBOutlet private weak var productPriceLabel: UILabel!
+    @IBOutlet private weak var productDescLabel: UILabel!
+    @IBOutlet private weak var productCountLabel: UILabel!
+    
+    // MARK: - Properties
+    private weak var delegate: ProviderServiceCellDelegate?
+    
+    // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        setupUI()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        setupUI()
+    }
+    
+    // MARK: - Public Methods
+    func setupWith(viewModel: Any?, indexPath: IndexPath?, delegate: Any?) {
+        guard let viewModel = viewModel as? ProviderServiceCellDataSource else {
+            return
+        }
+        
+        self.productImageView.kf.setImage(with: URL(string: viewModel.productImageUrl))
+        self.productNameLabel.text = viewModel.productName
+        self.productPriceLabel.text = viewModel.productPrice.toFormattedCurrency(withSymbol: false)
+        self.productDescLabel.text = viewModel.productDesc
+        self.productCountLabel.text = viewModel.productCount.asString
+        
+        self.delegate = delegate as? ProviderServiceCellDelegate
+    }
+    
+    // MARK: - Private Methods
+    private func setupUI() {
+        productCountLabel.backgroundColor = UIColor.Master.green
+        productCountLabel.textColor = .white
+        productCountLabel.layer.cornerRadius = productCountLabel.frame.width / 2
+        productCountLabel.clipsToBounds = true
+        
+        productImageView.layer.cornerRadius = 12
+        productImageView.kf.cancelDownloadTask()
+        productImageView.image = nil
+    }
 }

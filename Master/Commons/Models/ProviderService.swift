@@ -16,14 +16,4 @@ struct ProviderService: OrderServiceProtocol {
     let description: String
     let order: Order?
     let serviceCategory: ServiceCategory?
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case photoUrl
-        case name = "nameSaved"
-        case price = "priceSaved"
-        case description = "descriptionSaved"
-        case order
-        case serviceCategory
-    }
 }

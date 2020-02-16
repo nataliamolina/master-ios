@@ -16,8 +16,9 @@ enum ProviderProfileViewModelStatus {
 
 class ProviderProfileViewModel {
     // MARK: - Properties
-    let userId: Int
-    let categoryId: Int
+    private let providerUserId: Int
+    private let providerId: Int
+    private let categoryId: Int
     let status = Var<ProviderProfileViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource: Var<[CellViewModelProtocol]> = Var([])
@@ -26,11 +27,12 @@ class ProviderProfileViewModel {
     private let service: ProviderProfileServiceProtocol
     
     // MARK: - Life Cycle
-    init(userId: Int, categoryId: Int, service: ProviderProfileServiceProtocol? = nil) {
+    init(providerUserId: Int, categoryId: Int, providerId: Int, service: ProviderProfileServiceProtocol? = nil) {
         let defaultService = ProviderProfileService(connectionDependency: ConnectionManager())
         
+        self.providerId = providerId
         self.categoryId = categoryId
-        self.userId = userId
+        self.providerUserId = providerUserId
         self.service = service ?? defaultService
     }
     
@@ -39,7 +41,7 @@ class ProviderProfileViewModel {
     func fetchProfile() {
         isLoading.value = true
         
-        service.fetchProfile(userId: userId) { [weak self] (response: Provider?, error: CMError?) in
+        service.fetchProfile(userId: providerUserId) { [weak self] (response: Provider?, error: CMError?) in
             
             guard let model = response, error == nil else {
                 self?.isLoading.value = false
@@ -61,7 +63,7 @@ class ProviderProfileViewModel {
     // MARK: - Private Methods
     
     private func fetchProviderServices() {
-        service.fetchProviderServices(providerId: userId, categoryId: categoryId) { [weak self] (response: [ProviderService]?, error: CMError?) in
+        service.fetchProviderServices(providerId: providerId, categoryId: categoryId) { [weak self] (response: [ProviderService]?, error: CMError?) in
             
             guard let models = response, error == nil else {
                 self?.isLoading.value = false
@@ -70,11 +72,13 @@ class ProviderProfileViewModel {
             }
             
             self?.servicesToViewModels(models: models)
+            self?.fetchProviderComments()
         }
     }
     
     private func fetchProviderComments() {
-        service.fetchComments(providerId: userId) { [weak self] (response: CommentsResponse?, error: CMError?) in
+        service.fetchComments(providerId: providerUserId) { [weak self] (response: CommentsResponse?, error: CMError?) in
+            self?.isLoading.value = false
             
             guard let model = response, error == nil else {
                 self?.isLoading.value = false
@@ -101,6 +105,14 @@ class ProviderProfileViewModel {
     }
     
     private func servicesToViewModels(models: [ProviderService]) {
+        let viewModels = models.map {
+            ProviderServiceCellViewModel(productImageUrl: $0.photoUrl ?? "",
+                                         productName: $0.name,
+                                         productDesc: $0.description,
+                                         productPrice: $0.price,
+                                         productCount: 0)
+        }
         
+        dataSource.value.append(contentsOf: viewModels)
     }
 }

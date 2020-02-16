@@ -19,7 +19,8 @@ protocol ProviderCellDataSource {
 
 struct ProviderCellViewModel: ProviderCellDataSource, CellViewModelProtocol {
     let identifier: String = ProviderCell.cellIdentifier
-    let userId: Int
+    let providerUserId: Int
+    let providerId: Int
     let imageUrl: String
     let names: String
     let score: Double

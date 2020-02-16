@@ -60,11 +60,13 @@ class ServiceDetailViewModel {
     }
     
     func getProviderProfileViewModelAt(indexPath: IndexPath) -> ProviderProfileViewModel? {
-          guard let selectedProviderId = getViewModelAt(indexPath: indexPath)?.userId else {
+          guard let selectedProvider = getViewModelAt(indexPath: indexPath) else {
               return nil
           }
         
-          return ProviderProfileViewModel(userId: selectedProviderId, categoryId: serviceId)
+        return ProviderProfileViewModel(providerUserId: selectedProvider.providerUserId,
+                                        categoryId: serviceId,
+                                        providerId: selectedProvider.providerId)
       }
       
     func getViewModelAt(indexPath: IndexPath) -> ProviderCellViewModel? {
@@ -75,7 +77,8 @@ class ServiceDetailViewModel {
     
     private func servicesToViewModels(models: [ProviderWithScore]) {
         dataSource.value = models.map {
-            ProviderCellViewModel(userId: $0.userId,
+            ProviderCellViewModel(providerUserId: $0.userId,
+                                  providerId: $0.id,
                                   imageUrl: $0.photoUrl,
                                   names: $0.names,
                                   score: $0.score,

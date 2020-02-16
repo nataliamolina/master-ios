@@ -93,6 +93,8 @@
 		2CFF4DAD23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DAC23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift */; };
 		2CFF4DAF23F9AE560024B3F1 /* MImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DAE23F9AE560024B3F1 /* MImageView.swift */; };
 		2CFF4DB123F9B1420024B3F1 /* ProviderProfileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB023F9B1420024B3F1 /* ProviderProfileCellViewModel.swift */; };
+		2CFF4DB323F9F1370024B3F1 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB223F9F1370024B3F1 /* Int+Extensions.swift */; };
+		2CFF4DB523F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB423F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift */; };
 		5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */; };
 		A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
 		A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
@@ -223,6 +225,8 @@
 		2CFF4DAC23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileServiceProtocol.swift; sourceTree = "<group>"; };
 		2CFF4DAE23F9AE560024B3F1 /* MImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MImageView.swift; sourceTree = "<group>"; };
 		2CFF4DB023F9B1420024B3F1 /* ProviderProfileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileCellViewModel.swift; sourceTree = "<group>"; };
+		2CFF4DB223F9F1370024B3F1 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		2CFF4DB423F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceCellViewModel.swift; sourceTree = "<group>"; };
 		3024BACA975641C9852C5D83 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -672,6 +676,7 @@
 			children = (
 				2CFF4D9D23F99A980024B3F1 /* ProviderServiceCell.swift */,
 				2CFF4D9E23F99A980024B3F1 /* ProviderServiceCell.xib */,
+				2CFF4DB423F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift */,
 			);
 			path = ProviderServiceCell;
 			sourceTree = "<group>";
@@ -820,6 +825,7 @@
 				2C2B1AB823F24B0E00243D3E /* UIImage+Extensions.swift */,
 				2C05F05923F8DA3C003D1925 /* Utils.swift */,
 				2C05F05B23F8E6BC003D1925 /* String+Extensions.swift */,
+				2CFF4DB223F9F1370024B3F1 /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1169,6 +1175,7 @@
 				2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */,
 				2CFF4DAB23F9A0430024B3F1 /* Comment.swift in Sources */,
 				2CA494D323F9989B00F87AD6 /* ProviderProfileViewController.swift in Sources */,
+				2CFF4DB323F9F1370024B3F1 /* Int+Extensions.swift in Sources */,
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
 				2CF6ABC323F7B00A00F9EF40 /* Provider.swift in Sources */,
 				2CF6ABC723F7B21000F9EF40 /* ProviderService.swift in Sources */,
@@ -1184,6 +1191,7 @@
 				A5F30D3823B4C7DE005258A8 /* SplashScreenViewController.swift in Sources */,
 				2C7E7FAC23F85BC000D7835E /* MenuViewController.swift in Sources */,
 				2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */,
+				2CFF4DB523F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift in Sources */,
 				2CA494DA23F998B800F87AD6 /* ProviderProfileViewModel.swift in Sources */,
 				2CA494DE23F998CE00F87AD6 /* ProviderProfileEndpoints.swift in Sources */,
 				A5F30D5923B4D5EE005258A8 /* UIViewController+Extensions.swift in Sources */,
