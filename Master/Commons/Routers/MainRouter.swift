@@ -77,7 +77,7 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     }
     
     private func handleHomeTransition() {
-        let homeRouter = HomeRouter(rootViewController: rootViewController)
+        let homeRouter = HomeRouter(rootViewController: navigationController.topViewController ?? rootViewController)
         homeRouter.transition(to: .home)
     }
     
