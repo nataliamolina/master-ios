@@ -102,6 +102,9 @@
                                             <state key="normal" title="Button"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="register.button.register"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="registerButtonAction" destination="-1" eventType="touchUpInside" id="HpM-0O-rAM"/>

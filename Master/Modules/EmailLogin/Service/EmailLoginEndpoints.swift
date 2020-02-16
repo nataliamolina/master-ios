@@ -8,16 +8,22 @@
 
 import Foundation
 
+private enum EndpointsKeys: String {
+    case emailLogin
+    case getUserSession
+    case gmailLogin
+}
+
 extension Endpoint {
     static var emailLogin: String {
-        return base + "login"
+        return Endpoint.url(with: EndpointsKeys.emailLogin.rawValue)
     }
     
-    static var getUserSession: String {
-        return base + "user"
+    static var userSession: String {
+        return Endpoint.url(with: EndpointsKeys.getUserSession.rawValue)
     }
     
     static var gmailLogin: String {
-        return base + "login/gmail"
+        return Endpoint.url(with: EndpointsKeys.gmailLogin.rawValue)
     }
 }

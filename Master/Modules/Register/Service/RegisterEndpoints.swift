@@ -8,8 +8,12 @@
 
 import Foundation
 
+private enum EndpointsKeys: String {
+    case register
+}
+
 extension Endpoint {
     static var register: String {
-        return base + "register"
+        return Endpoint.url(with: EndpointsKeys.register.rawValue)
     }
 }

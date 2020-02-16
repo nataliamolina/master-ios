@@ -9,6 +9,13 @@
 import Foundation
 
 struct Endpoint {
-    static let base = "https://master-app-api.azurewebsites.net/api/v1/"
-    //static let base = "http://127.0.0.1:5001/api/v1/"
+    static var base: String {
+        let endpoint = Utils.plist?.value(forKey: "ApiEndpoint") as? String
+        
+        return endpoint ?? ""
+    }
+    
+    static func url(with key: String) -> String {
+        return base + ((Utils.endpoints?.value(forKey: key) as? String) ?? "")
+    }
 }

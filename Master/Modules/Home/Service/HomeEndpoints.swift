@@ -8,12 +8,17 @@
 
 import Foundation
 
+private enum EndpointsKeys: String {
+    case services
+    case updatePushToken
+}
+
 extension Endpoint {
     static var services: String {
-        return base + "services"
+        return Endpoint.url(with: EndpointsKeys.services.rawValue)
     }
     
     static func updateToken(with token: String) -> String {
-        return base + "user/push-token/" + token
+        return Endpoint.url(with: EndpointsKeys.updatePushToken.rawValue).replace("{token}", with: token)
     }
 }

@@ -8,8 +8,12 @@
 
 import Foundation
 
+private enum EndpointsKeys: String {
+    case userOrders
+}
+
 extension Endpoint {
     static var orders: String {
-        return base + "orders/user"
+        return Endpoint.url(with: EndpointsKeys.userOrders.rawValue)
     }
 }

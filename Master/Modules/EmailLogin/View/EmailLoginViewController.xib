@@ -67,6 +67,9 @@
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="emailLogin.button.login"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="loginButtonAction" destination="-1" eventType="touchUpInside" id="Qon-k3-r57"/>

@@ -8,8 +8,12 @@
 
 import Foundation
 
+private enum EndpointsKeys: String {
+    case serviceDetail
+}
+
 extension Endpoint {
     static func serviceDetailById(_ id: Int) -> String {
-        return base + "provider/service/category/\(id)"
+        return Endpoint.url(with: EndpointsKeys.serviceDetail.rawValue).replace("{id}", with: "\(id)")
     }
 }

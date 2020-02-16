@@ -8,16 +8,17 @@
 
 import Foundation
 
+private enum EndpointsKeys: String {
+    case serverStatus
+    case validateSession
+}
+
 extension Endpoint {
     static var serverStatus: String {
-        return base + "server/ios"
+        return Endpoint.url(with: EndpointsKeys.serverStatus.rawValue)
     }
     
     static var validateSessionToken: String {
-        return base + "login/validate"
-    }
-    
-    static var userSession: String {
-        return base + "user"
+        return Endpoint.url(with: EndpointsKeys.validateSession.rawValue)
     }
 }
