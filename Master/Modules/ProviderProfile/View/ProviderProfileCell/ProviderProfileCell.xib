@@ -32,14 +32,14 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sebastian Mejía" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kg-ni-Kcz">
-                        <rect key="frame" x="20" y="24.5" width="215" height="31.5"/>
+                        <rect key="frame" x="20" y="20" width="215" height="31.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGO-NT-AcX">
-                        <rect key="frame" x="20" y="61" width="215" height="16"/>
-                        <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                        <rect key="frame" x="20" y="56.5" width="215" height="20.5"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                         <color key="textColor" red="0.6666602492" green="0.66666227580000004" blue="0.66666692500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -51,13 +51,13 @@
                     <constraint firstItem="AcH-ch-mwm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="63b-uO-fMx"/>
                     <constraint firstItem="nGO-NT-AcX" firstAttribute="leading" secondItem="9kg-ni-Kcz" secondAttribute="leading" id="9jT-Vb-ccm"/>
                     <constraint firstAttribute="trailing" secondItem="VKa-LN-GRA" secondAttribute="trailing" constant="20" id="LxK-ip-LYf"/>
-                    <constraint firstItem="nGO-NT-AcX" firstAttribute="top" secondItem="AcH-ch-mwm" secondAttribute="centerY" id="OT7-TI-B3O"/>
-                    <constraint firstItem="VKa-LN-GRA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nGO-NT-AcX" secondAttribute="bottom" constant="5" id="Z9e-0h-10r"/>
+                    <constraint firstItem="9kg-ni-Kcz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="VGS-Og-FC3"/>
+                    <constraint firstItem="VKa-LN-GRA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nGO-NT-AcX" secondAttribute="bottom" constant="10" id="Z9e-0h-10r"/>
                     <constraint firstAttribute="bottom" secondItem="VKa-LN-GRA" secondAttribute="bottom" id="eH6-ys-Jiq"/>
                     <constraint firstItem="AcH-ch-mwm" firstAttribute="leading" secondItem="9kg-ni-Kcz" secondAttribute="trailing" constant="20" id="oy5-YZ-r0J"/>
                     <constraint firstItem="VKa-LN-GRA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rSC-yB-jWE"/>
                     <constraint firstItem="VKa-LN-GRA" firstAttribute="top" secondItem="AcH-ch-mwm" secondAttribute="bottom" constant="20" id="rqM-Yb-pyn"/>
-                    <constraint firstItem="nGO-NT-AcX" firstAttribute="top" secondItem="9kg-ni-Kcz" secondAttribute="bottom" constant="5" id="zqZ-lp-EIw"/>
+                    <constraint firstItem="nGO-NT-AcX" firstAttribute="top" secondItem="9kg-ni-Kcz" secondAttribute="bottom" constant="5" id="seH-ZB-OPx"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

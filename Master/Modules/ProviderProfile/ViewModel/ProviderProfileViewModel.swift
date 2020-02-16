@@ -101,7 +101,16 @@ class ProviderProfileViewModel {
                                                             names: names,
                                                             description: provider.description)
         
-        dataSource.value.append(profileViewModel)
+        let viewModels: [CellViewModelProtocol] = [profileViewModel, getButtonsCellViewModel()]
+        
+        dataSource.value.append(contentsOf: viewModels)
+    }
+    
+    private func getButtonsCellViewModel() -> SelectorCellViewModel {
+        return SelectorCellViewModel(buttons: [
+            SelectorCellButton(style: .green, title: "Servicios"),
+            SelectorCellButton(style: .greenBorder, title: "Comentarios")
+        ])
     }
     
     private func servicesToViewModels(models: [ProviderService]) {

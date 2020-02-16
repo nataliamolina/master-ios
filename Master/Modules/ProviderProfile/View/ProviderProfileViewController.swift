@@ -46,6 +46,7 @@ class ProviderProfileViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.registerNib(ProviderServiceCell.self)
         tableView.registerNib(ProviderProfileCell.self)
+        tableView.registerNib(SelectorCell.self)
         
         totalView.isHidden = true
         

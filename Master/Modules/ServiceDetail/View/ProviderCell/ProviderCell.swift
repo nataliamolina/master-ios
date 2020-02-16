@@ -55,7 +55,7 @@ class ProviderCell: UITableViewCell, ConfigurableCellProtocol {
         
         totalOrdersTextLabel.isHidden = viewModel.totalOrders <= 0
         totalOrdersLabel.isHidden = viewModel.totalOrders <= 0
-        totalOrdersLabel.text = "\(viewModel.totalOrders)"
+        totalOrdersLabel.text = "\(Int(viewModel.totalOrders))"
         
         photoImageView.kf.setImage(with: URL(string: viewModel.imageUrl))
         

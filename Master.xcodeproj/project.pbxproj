@@ -95,6 +95,9 @@
 		2CFF4DB123F9B1420024B3F1 /* ProviderProfileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB023F9B1420024B3F1 /* ProviderProfileCellViewModel.swift */; };
 		2CFF4DB323F9F1370024B3F1 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB223F9F1370024B3F1 /* Int+Extensions.swift */; };
 		2CFF4DB523F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB423F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift */; };
+		2CFF4DBA23F9FE650024B3F1 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB823F9FE650024B3F1 /* SelectorCell.swift */; };
+		2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB923F9FE650024B3F1 /* SelectorCell.xib */; };
+		2CFF4DBD23FA007B0024B3F1 /* SelectorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */; };
 		5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */; };
 		A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
 		A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
@@ -227,6 +230,9 @@
 		2CFF4DB023F9B1420024B3F1 /* ProviderProfileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileCellViewModel.swift; sourceTree = "<group>"; };
 		2CFF4DB223F9F1370024B3F1 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		2CFF4DB423F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceCellViewModel.swift; sourceTree = "<group>"; };
+		2CFF4DB823F9FE650024B3F1 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
+		2CFF4DB923F9FE650024B3F1 /* SelectorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorCell.xib; sourceTree = "<group>"; };
+		2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCellViewModel.swift; sourceTree = "<group>"; };
 		3024BACA975641C9852C5D83 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -691,6 +697,16 @@
 			path = ProviderProfileCell;
 			sourceTree = "<group>";
 		};
+		2CFF4DB623F9FE310024B3F1 /* SelectorCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CFF4DB823F9FE650024B3F1 /* SelectorCell.swift */,
+				2CFF4DB923F9FE650024B3F1 /* SelectorCell.xib */,
+				2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */,
+			);
+			path = SelectorCell;
+			sourceTree = "<group>";
+		};
 		4B22BBC4B3B743F3ED2CE7CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -873,6 +889,7 @@
 		A5F30D6023B4DA34005258A8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2CFF4DB623F9FE310024B3F1 /* SelectorCell */,
 				A5F30D6123B4DA41005258A8 /* CellViewModelProtocol.swift */,
 				A5F30D6723B4DAE5005258A8 /* ConfigurableCellProtocol.swift */,
 			);
@@ -1015,6 +1032,7 @@
 				A5F30D4923B4CB48005258A8 /* MainViewController.xib in Resources */,
 				2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */,
 				A5F30D6D23B4DB34005258A8 /* HomeViewController.xib in Resources */,
+				2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */,
 				A5F30D5E23B4D8DF005258A8 /* RegisterViewController.xib in Resources */,
 				A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */,
 				2C22B39923F8AFC300678A41 /* loading_order_anim.json in Resources */,
@@ -1164,6 +1182,7 @@
 				2CF6ABC123F7AF2C00F9EF40 /* Order.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */,
+				2CFF4DBD23FA007B0024B3F1 /* SelectorCellViewModel.swift in Sources */,
 				2C7E7FBA23F89A6E00D7835E /* ProviderWithScore.swift in Sources */,
 				2C2B1AB923F24B0E00243D3E /* UIImage+Extensions.swift in Sources */,
 				2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */,
@@ -1222,6 +1241,7 @@
 				2C73AE9523F4F16A00267899 /* CMError.swift in Sources */,
 				2C2B1AD423F274E300243D3E /* Endpoint.swift in Sources */,
 				2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */,
+				2CFF4DBA23F9FE650024B3F1 /* SelectorCell.swift in Sources */,
 				2C7E7FC823F8A17200D7835E /* ProviderCellViewModel.swift in Sources */,
 				2C7E7FBF23F89DF200D7835E /* ServiceDetailViewModel.swift in Sources */,
 				2C7E7FC523F8A0A600D7835E /* ProviderCell.swift in Sources */,

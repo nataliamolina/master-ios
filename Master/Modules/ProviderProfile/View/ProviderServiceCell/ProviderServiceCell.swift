@@ -47,6 +47,7 @@ class ProviderServiceCell: UITableViewCell, ConfigurableCellProtocol {
         self.productPriceLabel.text = viewModel.productPrice.toFormattedCurrency(withSymbol: false)
         self.productDescLabel.text = viewModel.productDesc
         self.productCountLabel.text = viewModel.productCount.asString
+        self.productCountLabel.isHidden = viewModel.productCount <= 0
         
         self.delegate = delegate as? ProviderServiceCellDelegate
     }
