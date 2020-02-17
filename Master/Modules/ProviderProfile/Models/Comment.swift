@@ -9,6 +9,7 @@
 import Foundation
 
 struct Comment: Codable {
+    let id: Int
     let text: String
     let author: User
     let score: Double

@@ -44,9 +44,11 @@ class ProviderProfileViewController: UIViewController {
     private func setupUI() {
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        
         tableView.registerNib(ProviderServiceCell.self)
         tableView.registerNib(ProviderProfileCell.self)
         tableView.registerNib(SelectorCell.self)
+        tableView.registerNib(CommentCell.self)
         
         totalView.isHidden = true
         

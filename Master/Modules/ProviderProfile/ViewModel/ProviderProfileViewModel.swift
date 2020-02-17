@@ -19,6 +19,9 @@ class ProviderProfileViewModel {
     private let providerUserId: Int
     private let providerId: Int
     private let categoryId: Int
+    private var commentsDataSource = [CommentCellViewModel]()
+    
+    let average: Var<Double> = Var(0)
     let status = Var<ProviderProfileViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource: Var<[CellViewModelProtocol]> = Var([])
@@ -77,7 +80,7 @@ class ProviderProfileViewModel {
     }
     
     private func fetchProviderComments() {
-        service.fetchComments(providerId: providerUserId) { [weak self] (response: CommentsResponse?, error: CMError?) in
+        service.fetchComments(providerId: providerId) { [weak self] (response: CommentsResponse?, error: CMError?) in
             self?.isLoading.value = false
             
             guard let model = response, error == nil else {
@@ -91,7 +94,17 @@ class ProviderProfileViewModel {
     }
     
     private func commentsToViewModel(_ model: CommentsResponse) {
+        average.value = model.average
         
+        commentsDataSource = model.comments.map {
+            CommentCellViewModel(authorImageUrl: $0.author.imageUrl,
+                                 authorNames: $0.author.names,
+                                 authorMessage: $0.text,
+                                 authorScore: $0.score,
+                                 isLastItem: $0.id == model.comments.last?.id)
+        }
+        
+        dataSource.value.append(contentsOf: commentsDataSource)
     }
     
     private func providerModelToViewModel(_ provider: Provider) {

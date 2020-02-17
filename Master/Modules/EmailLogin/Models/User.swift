@@ -28,6 +28,10 @@ struct User: Codable {
                            phoneNumber: phoneNumber,
                            document: document)
     }
+    
+    var names: String {
+        return firstName + " " + lastName
+    }
 }
 
 struct UserProvider: Codable {

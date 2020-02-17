@@ -65,7 +65,7 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rk3-pu-xya">
-                        <rect key="frame" x="0.0" y="115" width="433" height="1"/>
+                        <rect key="frame" x="20" y="115" width="393" height="1"/>
                         <color key="backgroundColor" red="0.70979714390000004" green="0.70979934929999999" blue="0.70980423690000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="iar-IK-BZK"/>
@@ -89,11 +89,10 @@
                     <constraint firstItem="ZYP-OT-TJL" firstAttribute="leading" secondItem="0qN-TZ-wE2" secondAttribute="trailing" constant="7" id="L3r-xb-bt1"/>
                     <constraint firstItem="ofz-1M-HKq" firstAttribute="leading" secondItem="LbZ-8O-ucr" secondAttribute="leading" id="N6H-dP-zZM"/>
                     <constraint firstItem="LYW-wQ-VPt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="NpI-fa-gAm"/>
-                    <constraint firstAttribute="trailing" secondItem="Rk3-pu-xya" secondAttribute="trailing" id="T4O-PW-G9y"/>
+                    <constraint firstItem="Rk3-pu-xya" firstAttribute="leading" secondItem="LYW-wQ-VPt" secondAttribute="leading" id="Rkl-eb-NVd"/>
                     <constraint firstItem="X2Z-A9-IQM" firstAttribute="centerY" secondItem="LbZ-8O-ucr" secondAttribute="centerY" id="U6b-Gn-NDH"/>
                     <constraint firstItem="0qN-TZ-wE2" firstAttribute="leading" secondItem="ofz-1M-HKq" secondAttribute="trailing" constant="5" id="VmA-hT-Ezc"/>
                     <constraint firstItem="0qN-TZ-wE2" firstAttribute="bottom" secondItem="ofz-1M-HKq" secondAttribute="bottom" id="WGj-f6-fX1"/>
-                    <constraint firstItem="Rk3-pu-xya" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WMO-d3-xUk"/>
                     <constraint firstItem="LbZ-8O-ucr" firstAttribute="top" secondItem="ofz-1M-HKq" secondAttribute="bottom" constant="5" id="atN-dz-0kr"/>
                     <constraint firstItem="Rk3-pu-xya" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NRy-od-913" secondAttribute="bottom" constant="20" id="bRx-4z-7cr"/>
                     <constraint firstItem="ofz-1M-HKq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="k24-cG-obP"/>
@@ -103,6 +102,7 @@
                     <constraint firstItem="NRy-od-913" firstAttribute="top" secondItem="LbZ-8O-ucr" secondAttribute="bottom" constant="5" id="vAi-Fm-9Aq"/>
                     <constraint firstItem="LYW-wQ-VPt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="vY6-af-0QY"/>
                     <constraint firstItem="ZYP-OT-TJL" firstAttribute="centerY" secondItem="0qN-TZ-wE2" secondAttribute="centerY" id="vbW-j0-kVs"/>
+                    <constraint firstItem="Rk3-pu-xya" firstAttribute="trailing" secondItem="X2Z-A9-IQM" secondAttribute="trailing" id="zhA-47-giP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

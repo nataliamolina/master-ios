@@ -99,6 +99,9 @@
 		2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB923F9FE650024B3F1 /* SelectorCell.xib */; };
 		2CFF4DBD23FA007B0024B3F1 /* SelectorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */; };
 		2CFF4DBF23FA130B0024B3F1 /* OrderProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DBE23FA130B0024B3F1 /* OrderProviderService.swift */; };
+		2CFF4DC323FA144D0024B3F1 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC123FA144D0024B3F1 /* CommentCell.swift */; };
+		2CFF4DC423FA144D0024B3F1 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC223FA144D0024B3F1 /* CommentCell.xib */; };
+		2CFF4DC623FA15760024B3F1 /* CommentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC523FA15760024B3F1 /* CommentCellViewModel.swift */; };
 		5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */; };
 		A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
 		A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
@@ -235,6 +238,9 @@
 		2CFF4DB923F9FE650024B3F1 /* SelectorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorCell.xib; sourceTree = "<group>"; };
 		2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCellViewModel.swift; sourceTree = "<group>"; };
 		2CFF4DBE23FA130B0024B3F1 /* OrderProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderProviderService.swift; sourceTree = "<group>"; };
+		2CFF4DC123FA144D0024B3F1 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		2CFF4DC223FA144D0024B3F1 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		2CFF4DC523FA15760024B3F1 /* CommentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellViewModel.swift; sourceTree = "<group>"; };
 		3024BACA975641C9852C5D83 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -561,6 +567,7 @@
 		2CA494CD23F9986E00F87AD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2CFF4DC023FA143C0024B3F1 /* CommentCell */,
 				2CFF4DA123F99D050024B3F1 /* ProviderProfileCell */,
 				2CFF4D9C23F99A830024B3F1 /* ProviderServiceCell */,
 				2CA494D123F9989B00F87AD6 /* ProviderProfileViewController.swift */,
@@ -708,6 +715,16 @@
 				2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */,
 			);
 			path = SelectorCell;
+			sourceTree = "<group>";
+		};
+		2CFF4DC023FA143C0024B3F1 /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CFF4DC123FA144D0024B3F1 /* CommentCell.swift */,
+				2CFF4DC223FA144D0024B3F1 /* CommentCell.xib */,
+				2CFF4DC523FA15760024B3F1 /* CommentCellViewModel.swift */,
+			);
+			path = CommentCell;
 			sourceTree = "<group>";
 		};
 		4B22BBC4B3B743F3ED2CE7CB /* Frameworks */ = {
@@ -1017,6 +1034,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFF4DC423FA144D0024B3F1 /* CommentCell.xib in Resources */,
 				2C22B39823F8AFC300678A41 /* empty_state_anim.json in Resources */,
 				2C22B39B23F8AFC300678A41 /* payment_anim.json in Resources */,
 				2CA494D423F9989B00F87AD6 /* ProviderProfileViewController.xib in Resources */,
@@ -1157,6 +1175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFF4DC323FA144D0024B3F1 /* CommentCell.swift in Sources */,
 				2C198D1723F4C33600346395 /* SplashScreenService.swift in Sources */,
 				2C05F05C23F8E6BC003D1925 /* String+Extensions.swift in Sources */,
 				2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */,
@@ -1208,6 +1227,7 @@
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
 				2CFF4DBF23FA130B0024B3F1 /* OrderProviderService.swift in Sources */,
 				2CFF4DAD23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift in Sources */,
+				2CFF4DC623FA15760024B3F1 /* CommentCellViewModel.swift in Sources */,
 				A5F30D5023B4CDB7005258A8 /* Styles.swift in Sources */,
 				2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */,
 				2CFF4DA723F99D670024B3F1 /* HomeServiceProtocol.swift in Sources */,
