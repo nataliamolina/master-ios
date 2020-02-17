@@ -18,29 +18,18 @@ enum MButtonType: Int {
 
 class MButton: UIButton {
     // MARK: - UI Referneces
-    @IBInspectable var styleId: Int = 1
-    
-    // MARK: - Life Cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        setupStyleId()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupStyleId()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        setupStyleId()
+    @IBInspectable var styleId: Int = 1 {
+        didSet {
+            setupStyleId()
+        }
     }
     
     // MARK: - Properties
-    var style: MButtonType = .greenBorder
+    var style: MButtonType? {
+        didSet {
+            setupStyle(style: self.style ?? .greenBorder)
+        }
+    }
     
     override open var isEnabled: Bool {
         didSet {
@@ -50,15 +39,12 @@ class MButton: UIButton {
     
     // MARK: - Private Methods
     private func setupStyleId() {
-        guard let styleSelected = MButtonType(rawValue: styleId) else {
-            return
+        if let styleSelected = MButtonType(rawValue: styleId) {
+            setupStyle(style: styleSelected)
         }
-        
-        style = styleSelected
-        setupStyle()
     }
     
-    private func setupStyle() {
+    private func setupStyle(style: MButtonType) {
         animateState()
         
         guard let selectedStyle: ButtonStyleConfig = Styles.buttonStyles[style] else {

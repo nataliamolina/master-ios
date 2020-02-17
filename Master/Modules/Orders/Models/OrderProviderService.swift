@@ -1,43 +1,41 @@
 //
-//  ProviderService.swift
+//  OrderProviderService.swift
 //  Master
 //
-//  Created by Carlos Mejía on 14/02/20.
+//  Created by Carlos Mejía on 16/02/20.
 //  Copyright © 2020 Master. All rights reserved.
 //
 
 import Foundation
 
-struct ProviderService: Codable, OrderServiceProtocol {
+struct OrderProviderService: Codable, OrderServiceProtocol {
     let id: Int
-    let photoUrl: String?
-    let name: String
-    let price: Double
-    let description: String
-    let order: Order?
-    let serviceCategory: ServiceCategory?
+    let nameSaved: String
+    let priceSaved: Double
+    let descriptionSaved: String
+    let providerService: ProviderService?
     
     func getId() -> Int {
         return id
     }
     
     func getName() -> String {
-        return name
+        return nameSaved
     }
     
     func getDescription() -> String {
-        return description
+        return descriptionSaved
     }
     
     func getPrice() -> Double {
-        return price
+        return priceSaved
     }
     
     func getServiceCategory() -> ServiceCategory? {
-        return serviceCategory
+        return nil
     }
     
     func getPhotoUrl() -> String? {
-        return photoUrl
+        return providerService?.photoUrl
     }
 }

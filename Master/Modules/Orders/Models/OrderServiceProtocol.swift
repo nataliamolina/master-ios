@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol OrderServiceProtocol: Codable {
-    var id: Int { get }
-    var name: String { get }
-    var description: String { get }
-    var price: Double { get }
-    var serviceCategory: ServiceCategory? { get }
-    var photoUrl: String? { get }
+protocol OrderServiceProtocol {
+    func getId() -> Int
+    func getName() -> String
+    func getDescription() -> String
+    func getPrice() -> Double
+    func getServiceCategory() -> ServiceCategory?
+    func getPhotoUrl() -> String?
 }

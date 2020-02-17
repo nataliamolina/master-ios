@@ -11,7 +11,7 @@
 	<key>serviceDetail</key>
 	<string>provider/service/category/{id}</string>
 	<key>userOrders</key>
-	<string>orders</string>
+	<string>orders/user</string>
 	<key>updatePushToken</key>
 	<string>user/push-token/{token}</string>
 	<key>services</key>

@@ -30,7 +30,7 @@ struct Order: Codable {
     var orderState: OrderState
     let notes: String
     let time: String?
-    let orderProviderServices: [ProviderService]
+    let orderProviderServices: [OrderProviderService]
 }
 
 struct OrderState: Codable {

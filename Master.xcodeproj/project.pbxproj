@@ -98,6 +98,7 @@
 		2CFF4DBA23F9FE650024B3F1 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB823F9FE650024B3F1 /* SelectorCell.swift */; };
 		2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB923F9FE650024B3F1 /* SelectorCell.xib */; };
 		2CFF4DBD23FA007B0024B3F1 /* SelectorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */; };
+		2CFF4DBF23FA130B0024B3F1 /* OrderProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DBE23FA130B0024B3F1 /* OrderProviderService.swift */; };
 		5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */; };
 		A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
 		A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
@@ -233,6 +234,7 @@
 		2CFF4DB823F9FE650024B3F1 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
 		2CFF4DB923F9FE650024B3F1 /* SelectorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorCell.xib; sourceTree = "<group>"; };
 		2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCellViewModel.swift; sourceTree = "<group>"; };
+		2CFF4DBE23FA130B0024B3F1 /* OrderProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderProviderService.swift; sourceTree = "<group>"; };
 		3024BACA975641C9852C5D83 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -662,6 +664,7 @@
 			children = (
 				2CF6ABC423F7B1FF00F9EF40 /* OrderServiceProtocol.swift */,
 				2CF6ABC023F7AF2C00F9EF40 /* Order.swift */,
+				2CFF4DBE23FA130B0024B3F1 /* OrderProviderService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1203,6 +1206,7 @@
 				2C42088B23F647680058873D /* GmailRequest.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* CellViewModelProtocol.swift in Sources */,
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
+				2CFF4DBF23FA130B0024B3F1 /* OrderProviderService.swift in Sources */,
 				2CFF4DAD23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift in Sources */,
 				A5F30D5023B4CDB7005258A8 /* Styles.swift in Sources */,
 				2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */,
