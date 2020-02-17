@@ -63,10 +63,28 @@ class ProviderProfileViewController: UIViewController {
     }
 }
 
-// MARK: -
+// MARK: - SelectorCellDelegate
+extension ProviderProfileViewController: SelectorCellDelegate {
+    func buttonTapped(at index: Int, title: String, button: MButton) {
+        var newies = SelectorCellViewModel(buttons: [
+            SelectorCellButton(style: .greenBorder, title: "Servicios"),
+            SelectorCellButton(style: .greenBorder, title: "Comentarios")
+        ])
+        
+        newies.buttons[index].style = .green
+        
+        viewModel.dataSource.value[1] = [newies]
+    }
+}
+
+// MARK: - UITableViewDataSource
 extension ProviderProfileViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.dataSource.value.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.dataSource.value.safeContains(section)?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

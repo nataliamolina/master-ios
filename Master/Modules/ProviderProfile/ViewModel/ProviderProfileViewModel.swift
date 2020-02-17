@@ -24,7 +24,7 @@ class ProviderProfileViewModel {
     let average: Var<Double> = Var(0)
     let status = Var<ProviderProfileViewModelStatus>(.undefined)
     let isLoading = Var(false)
-    let dataSource: Var<[CellViewModelProtocol]> = Var([])
+    let dataSource: Var<[[CellViewModelProtocol]]> = Var([[]])
     
     private(set) var sectionTitles = [String]()
     private let service: ProviderProfileServiceProtocol
@@ -60,7 +60,7 @@ class ProviderProfileViewModel {
     }
     
     func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {
-        return dataSource.value.safeContains(indexPath.row)
+        return dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
     }
     
     // MARK: - Private Methods
@@ -104,7 +104,7 @@ class ProviderProfileViewModel {
                                  isLastItem: $0.id == model.comments.last?.id)
         }
         
-        dataSource.value.append(contentsOf: commentsDataSource)
+        //dataSource.value.append([commentsDataSource])
     }
     
     private func providerModelToViewModel(_ provider: Provider) {
@@ -114,9 +114,8 @@ class ProviderProfileViewModel {
                                                             names: names,
                                                             description: provider.description)
         
-        let viewModels: [CellViewModelProtocol] = [profileViewModel, getButtonsCellViewModel()]
-        
-        dataSource.value.append(contentsOf: viewModels)
+        dataSource.value[0] = [profileViewModel]
+        dataSource.value.append([getButtonsCellViewModel()])
     }
     
     private func getButtonsCellViewModel() -> SelectorCellViewModel {
@@ -135,6 +134,6 @@ class ProviderProfileViewModel {
                                          productCount: 0)
         }
         
-        dataSource.value.append(contentsOf: viewModels)
+        dataSource.value.append(viewModels)
     }
 }

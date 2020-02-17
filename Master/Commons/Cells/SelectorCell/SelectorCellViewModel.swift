@@ -9,7 +9,7 @@
 import Foundation
 
 struct SelectorCellButton {
-    let style: MButtonType
+    var style: MButtonType
     let title: String
 }
 
@@ -18,6 +18,6 @@ protocol SelectorCellDataSource {
 }
 
 struct SelectorCellViewModel: SelectorCellDataSource, CellViewModelProtocol {
-    let buttons: [SelectorCellButton]
+    var buttons: [SelectorCellButton]
     let identifier: String = SelectorCell.cellIdentifier
 }
