@@ -14,12 +14,19 @@ enum ProviderProfileViewModelStatus {
     case error(error: String?)
 }
 
+private enum Sections: Int {
+    case header
+    case buttons
+    case list
+}
+
 class ProviderProfileViewModel {
     // MARK: - Properties
     private let providerUserId: Int
     private let providerId: Int
     private let categoryId: Int
     private var commentsDataSource = [CommentCellViewModel]()
+    private var providerServicesDataSource = [ProviderServiceCellViewModel]()
     
     let average: Var<Double> = Var(0)
     let status = Var<ProviderProfileViewModelStatus>(.undefined)
@@ -63,7 +70,35 @@ class ProviderProfileViewModel {
         return dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
     }
     
+    func toggleCommentsSection(with index: Int) {
+        let section = dataSource.value[Sections.buttons.rawValue].first
+        
+        guard var buttonsViewModel = section as? SelectorCellViewModel else {
+            return
+        }
+        
+        buttonsViewModel.buttons.indices.forEach {
+            buttonsViewModel.buttons[$0].style = index == $0 ? .green : .greenBorder
+        }
+        
+        dataSource.value[Sections.buttons.rawValue] = [buttonsViewModel]
+        
+        if index == 1 {
+            setCommentsDataSource()
+        } else {
+            setProviderServicesDataSource()
+        }
+    }
+    
     // MARK: - Private Methods
+    
+    private func setCommentsDataSource() {
+        dataSource.value[Sections.list.rawValue] = commentsDataSource
+    }
+    
+    private func setProviderServicesDataSource() {
+        dataSource.value[Sections.list.rawValue] = providerServicesDataSource
+    }
     
     private func fetchProviderServices() {
         service.fetchProviderServices(providerId: providerId, categoryId: categoryId) { [weak self] (response: [ProviderService]?, error: CMError?) in
@@ -103,8 +138,6 @@ class ProviderProfileViewModel {
                                  authorScore: $0.score,
                                  isLastItem: $0.id == model.comments.last?.id)
         }
-        
-        //dataSource.value.append([commentsDataSource])
     }
     
     private func providerModelToViewModel(_ provider: Provider) {
@@ -114,7 +147,7 @@ class ProviderProfileViewModel {
                                                             names: names,
                                                             description: provider.description)
         
-        dataSource.value[0] = [profileViewModel]
+        dataSource.value[Sections.header.rawValue] = [profileViewModel]
         dataSource.value.append([getButtonsCellViewModel()])
     }
     
@@ -126,7 +159,7 @@ class ProviderProfileViewModel {
     }
     
     private func servicesToViewModels(models: [ProviderService]) {
-        let viewModels = models.map {
+        providerServicesDataSource = models.map {
             ProviderServiceCellViewModel(productImageUrl: $0.photoUrl ?? "",
                                          productName: $0.name,
                                          productDesc: $0.description,
@@ -134,6 +167,6 @@ class ProviderProfileViewModel {
                                          productCount: 0)
         }
         
-        dataSource.value.append(viewModels)
+        dataSource.value.append(providerServicesDataSource)
     }
 }

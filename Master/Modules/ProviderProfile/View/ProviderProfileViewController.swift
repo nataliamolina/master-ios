@@ -66,14 +66,7 @@ class ProviderProfileViewController: UIViewController {
 // MARK: - SelectorCellDelegate
 extension ProviderProfileViewController: SelectorCellDelegate {
     func buttonTapped(at index: Int, title: String, button: MButton) {
-        var newies = SelectorCellViewModel(buttons: [
-            SelectorCellButton(style: .greenBorder, title: "Servicios"),
-            SelectorCellButton(style: .greenBorder, title: "Comentarios")
-        ])
-        
-        newies.buttons[index].style = .green
-        
-        viewModel.dataSource.value[1] = [newies]
+        viewModel.toggleCommentsSection(with: index)
     }
 }
 

@@ -33,5 +33,11 @@ class Session {
     // MARK: - Life Cycle
     private init() {}
     
+    // MARK: - Public Methods
+    func logout() {
+        token = nil
+        profile = .empty
+    }
+    
     // MARK: - Private Methods
 }

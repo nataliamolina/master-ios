@@ -42,8 +42,12 @@ class SplashScreenViewController: UIViewController {
             switch status {
             case .preloadReady(let hasSession):
                 self?.route(toHome: hasSession)
+                
             case .error(let error):
                 self?.showError(message: error)
+                
+            case .tokenExpired:
+                self?.route(toHome: false)
                 
             default:
                 return

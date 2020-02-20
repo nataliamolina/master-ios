@@ -11,6 +11,7 @@ import EasyBinding
 
 enum SplashScreenViewModelStatus {
     case preloadReady(hasSession: Bool)
+    case tokenExpired
     case undefined
     case error(error: String?)
 }
@@ -70,6 +71,9 @@ class SplashScreenViewModel {
                 self?.fetchUserInformation()
                 
                 return
+            } else {
+                Session.shared.logout()
+                self?.status.value = .tokenExpired
             }
             
             self?.status.value = .error(error: error?.localizedDescription)
