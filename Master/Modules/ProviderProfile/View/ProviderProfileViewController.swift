@@ -70,6 +70,13 @@ extension ProviderProfileViewController: SelectorCellDelegate {
     }
 }
 
+// MARK: - ProviderServiceCellDelegate
+extension ProviderProfileViewController: ProviderServiceCellDelegate {
+    func cellTapped(_ cell: ProviderServiceCell) {
+        ProductSelector.show(in: self, item: ProductSelectorItem(imageUrl: "", name: "", description: "", price: 1))
+    }
+}
+
 // MARK: - UITableViewDataSource
 extension ProviderProfileViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {

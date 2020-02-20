@@ -41,6 +41,8 @@
 		2C73AE9523F4F16A00267899 /* CMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9423F4F16A00267899 /* CMError.swift */; };
 		2C73AE9723F4FD5700267899 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9623F4FD5700267899 /* Result.swift */; };
 		2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9823F4FE8700267899 /* HomeRouter.swift */; };
+		2C76018723FE34AD00252531 /* ProductSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76018623FE34AD00252531 /* ProductSelectorViewController.swift */; };
+		2C76018923FE34BE00252531 /* ProductSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C76018823FE34BE00252531 /* ProductSelectorViewController.xib */; };
 		2C7E7FAC23F85BC000D7835E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */; };
 		2C7E7FAD23F85BC000D7835E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */; };
 		2C7E7FB123F8743E00D7835E /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */; };
@@ -180,6 +182,8 @@
 		2C73AE9423F4F16A00267899 /* CMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMError.swift; sourceTree = "<group>"; };
 		2C73AE9623F4FD5700267899 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2C73AE9823F4FE8700267899 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		2C76018623FE34AD00252531 /* ProductSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectorViewController.swift; sourceTree = "<group>"; };
+		2C76018823FE34BE00252531 /* ProductSelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSelectorViewController.xib; sourceTree = "<group>"; };
 		2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -439,6 +443,15 @@
 				2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		2C76018523FE349600252531 /* ProductSelector */ = {
+			isa = PBXGroup;
+			children = (
+				2C76018623FE34AD00252531 /* ProductSelectorViewController.swift */,
+				2C76018823FE34BE00252531 /* ProductSelectorViewController.xib */,
+			);
+			path = ProductSelector;
 			sourceTree = "<group>";
 		};
 		2C7E7FA923F85BAC00D7835E /* Modules */ = {
@@ -876,6 +889,7 @@
 		A5F30D4A23B4CBB6005258A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C76018523FE349600252531 /* ProductSelector */,
 				A5F30D4B23B4CBC3005258A8 /* MButton.swift */,
 				A5F30D5623B4D470005258A8 /* MTextField.swift */,
 				2C2B1AC223F25EA800243D3E /* MLegalButton.swift */,
@@ -1049,6 +1063,7 @@
 				2C05F05823F8D9E6003D1925 /* Endpoints.plist in Resources */,
 				2CFF4DA523F99D1C0024B3F1 /* ProviderProfileCell.xib in Resources */,
 				2C7E7FC623F8A0A600D7835E /* ProviderCell.xib in Resources */,
+				2C76018923FE34BE00252531 /* ProductSelectorViewController.xib in Resources */,
 				2C2B1ABF23F2560F00243D3E /* Strings.strings in Resources */,
 				A5F30D4923B4CB48005258A8 /* MainViewController.xib in Resources */,
 				2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */,
@@ -1220,6 +1235,7 @@
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
 				2CF6ABC323F7B00A00F9EF40 /* Provider.swift in Sources */,
 				2CF6ABC723F7B21000F9EF40 /* ProviderService.swift in Sources */,
+				2C76018723FE34AD00252531 /* ProductSelectorViewController.swift in Sources */,
 				2CF6ABB323F7AD9200F9EF40 /* HomeService.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				2C42088B23F647680058873D /* GmailRequest.swift in Sources */,

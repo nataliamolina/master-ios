@@ -62,5 +62,11 @@ class ProviderServiceCell: UITableViewCell, ConfigurableCellProtocol {
         productImageView.layer.cornerRadius = 12
         productImageView.kf.cancelDownloadTask()
         productImageView.image = nil
+        
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cellTapped)))
+    }
+    
+    @objc private func cellTapped() {
+        delegate?.cellTapped(self)
     }
 }
