@@ -61,6 +61,7 @@
 		2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6923F4BB6700FE06BE /* ServerResponse.swift */; };
 		2C8C6C6C23F4BDA700FE06BE /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */; };
 		2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */; };
+		2C99B27F24005929003525B9 /* MAnimatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */; };
 		2CA494D323F9989B00F87AD6 /* ProviderProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494D123F9989B00F87AD6 /* ProviderProfileViewController.swift */; };
 		2CA494D423F9989B00F87AD6 /* ProviderProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA494D223F9989B00F87AD6 /* ProviderProfileViewController.xib */; };
 		2CA494DA23F998B800F87AD6 /* ProviderProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494D923F998B800F87AD6 /* ProviderProfileViewModel.swift */; };
@@ -202,6 +203,7 @@
 		2C8C6C6923F4BB6700FE06BE /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagerProtocol.swift; sourceTree = "<group>"; };
+		2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAnimatedTableViewCell.swift; sourceTree = "<group>"; };
 		2CA494D123F9989B00F87AD6 /* ProviderProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileViewController.swift; sourceTree = "<group>"; };
 		2CA494D223F9989B00F87AD6 /* ProviderProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderProfileViewController.xib; sourceTree = "<group>"; };
 		2CA494D923F998B800F87AD6 /* ProviderProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileViewModel.swift; sourceTree = "<group>"; };
@@ -894,6 +896,7 @@
 				A5F30D5623B4D470005258A8 /* MTextField.swift */,
 				2C2B1AC223F25EA800243D3E /* MLegalButton.swift */,
 				2CFF4DAE23F9AE560024B3F1 /* MImageView.swift */,
+				2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1266,6 +1269,7 @@
 				2C198D2423F4E4FB00346395 /* MainRouter.swift in Sources */,
 				2CF6ABBA23F7AE6700F9EF40 /* HomeEndpoints.swift in Sources */,
 				2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */,
+				2C99B27F24005929003525B9 /* MAnimatedTableViewCell.swift in Sources */,
 				A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */,
 				2C7E7FB123F8743E00D7835E /* MenuViewModel.swift in Sources */,
 				2C73AE9723F4FD5700267899 /* Result.swift in Sources */,

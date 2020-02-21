@@ -17,7 +17,7 @@ protocol CategoryCellDelegate: class {
     func cellTapped(_ cell: CategoryCell)
 }
 
-class CategoryCell: UITableViewCell, ConfigurableCellProtocol {
+class CategoryCell: MAnimatedTableViewCell, ConfigurableCellProtocol {
     // MARK: - UI References
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var categoryImageView: UIImageView!

@@ -3,7 +3,7 @@
 
 def commons
   pod 'EasyBinding', '~> 0.1.1'
-  pod 'Simple-Networking', '~> 0.3.3'
+  pod 'Simple-Networking', '~> 0.3.4'
   pod 'SimpleKeychain'
   pod 'Kingfisher', '~> 5.0'
   pod 'NotificationBannerSwift', '~> 3.0.0'

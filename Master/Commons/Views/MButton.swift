@@ -17,6 +17,24 @@ enum MButtonType: Int {
 }
 
 class MButton: UIButton {
+    private let touchAnimationTime: TimeInterval = 0.2
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        UIView.animate(withDuration: touchAnimationTime) {
+            self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        
+        UIView.animate(withDuration: touchAnimationTime) {
+            self.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
+    }
+    
     // MARK: - UI Referneces
     @IBInspectable var styleId: Int = 1 {
         didSet {
