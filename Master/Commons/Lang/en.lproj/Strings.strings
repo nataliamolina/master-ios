@@ -10,6 +10,8 @@
 "general.legal.continue" = "Al continuar, estás aceptando nuestros términos y condiciones.";
 "general.close" = "Cerrar";
 "general.accept" = "Aceptar";
+"general.services" = "Servicios";
+"general.comments" = "Comentarios";
 
 // Main
 "main.title" = "¡Hola!";

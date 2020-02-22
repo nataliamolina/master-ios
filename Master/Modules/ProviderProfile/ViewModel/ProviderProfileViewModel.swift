@@ -187,8 +187,8 @@ class ProviderProfileViewModel {
     
     private func getButtonsCellViewModel() -> SelectorCellViewModel {
         return SelectorCellViewModel(buttons: [
-            SelectorCellButton(style: .green, title: "Servicios"),
-            SelectorCellButton(style: .greenBorder, title: "Comentarios")
+            SelectorCellButton(style: .green, title: "general.services".localized),
+            SelectorCellButton(style: .greenBorder, title: "general.comments".localized)
         ])
     }
     

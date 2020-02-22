@@ -50,9 +50,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-zZ-3C4" customClass="MButton" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="314" y="20" width="80" height="30"/>
+                            <rect key="frame" x="314" y="11.5" width="80" height="47"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="ILd-pa-kKH"/>
+                                <constraint firstAttribute="height" constant="47" id="adM-No-zfA"/>
                             </constraints>
                             <state key="normal" title="Btn"/>
                             <userDefinedRuntimeAttributes>
