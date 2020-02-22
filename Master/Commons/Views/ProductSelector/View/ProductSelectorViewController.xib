@@ -29,7 +29,7 @@
                     <color key="tintColor" red="0.49701553580000002" green="0.76978808639999996" blue="0.70195633170000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <items>
                         <navigationItem title="Title" id="DUX-cq-xAB">
-                            <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="hSU-0z-qJx">
+                            <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="hSU-0z-qJx">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="general.close"/>
                                 </userDefinedRuntimeAttributes>
@@ -39,7 +39,7 @@
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="Item" style="done" id="Jba-I0-lpD">
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="general.accept"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="general.add"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doneButtonAction:" destination="-1" id="rpj-xX-Rm2"/>

@@ -35,8 +35,8 @@
                     <rect key="frame" x="0.0" y="826" width="414" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgf-wh-2Ua">
-                            <rect key="frame" x="20" y="26.5" width="35.5" height="17"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <rect key="frame" x="20" y="25" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
@@ -44,16 +44,16 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B17-Qn-cT0">
-                            <rect key="frame" x="60.5" y="22" width="29.5" height="26.5"/>
+                            <rect key="frame" x="67" y="22" width="29.5" height="26.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-zZ-3C4" customClass="MButton" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="314" y="11.5" width="80" height="47"/>
+                            <rect key="frame" x="294" y="11.5" width="100" height="47"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="80" id="ILd-pa-kKH"/>
                                 <constraint firstAttribute="height" constant="47" id="adM-No-zfA"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="l6K-Jk-0gU"/>
                             </constraints>
                             <state key="normal" title="Btn"/>
                             <userDefinedRuntimeAttributes>

@@ -12,6 +12,7 @@
 "general.accept" = "Aceptar";
 "general.services" = "Servicios";
 "general.comments" = "Comentarios";
+"general.add" = "Agregar";
 
 // Main
 "main.title" = "¡Hola!";
