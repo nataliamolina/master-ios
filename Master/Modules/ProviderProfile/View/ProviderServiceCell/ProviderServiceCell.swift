@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProviderServiceCellDelegate: class {
-    func cellTapped(_ cell: ProviderServiceCell)
+    func cellTapped(_ cell: ProviderServiceCell, viewModel: ProviderServiceCellDataSource?)
 }
 
 class ProviderServiceCell: UITableViewCell, ConfigurableCellProtocol {
@@ -22,6 +22,7 @@ class ProviderServiceCell: UITableViewCell, ConfigurableCellProtocol {
     
     // MARK: - Properties
     private weak var delegate: ProviderServiceCellDelegate?
+    private var viewModel: ProviderServiceCellDataSource?
     
     // MARK: - Life Cycle
     override func awakeFromNib() {
@@ -49,6 +50,7 @@ class ProviderServiceCell: UITableViewCell, ConfigurableCellProtocol {
         self.productCountLabel.text = viewModel.productCount.asString
         self.productCountLabel.isHidden = viewModel.productCount <= 0
         
+        self.viewModel = viewModel
         self.delegate = delegate as? ProviderServiceCellDelegate
     }
     
@@ -67,6 +69,6 @@ class ProviderServiceCell: UITableViewCell, ConfigurableCellProtocol {
     }
     
     @objc private func cellTapped() {
-        delegate?.cellTapped(self)
+        delegate?.cellTapped(self, viewModel: viewModel)
     }
 }

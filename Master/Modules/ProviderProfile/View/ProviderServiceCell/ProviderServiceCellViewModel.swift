@@ -22,18 +22,48 @@ class ProviderServiceCellViewModel: ProviderServiceCellDataSource, CellViewModel
     let productName: String
     let productDesc: String
     let productPrice: Double
+    let productId: Int
     var productCount: Int
     
     init(productImageUrl: String,
          productName: String,
          productDesc: String,
          productPrice: Double,
-         productCount: Int) {
+         productCount: Int,
+         productId: Int) {
         
         self.productImageUrl = productImageUrl
         self.productName = productName
         self.productDesc = productDesc
         self.productPrice = productPrice
         self.productCount = productCount
+        self.productId = productId
+    }
+}
+
+// MARK: - ProductSelectorDataSource
+extension ProviderServiceCellViewModel: ProductSelectorDataSource {
+    func getImageUrl() -> String {
+        return productImageUrl
+    }
+    
+    func getName() -> String {
+        return productName
+    }
+    
+    func getDescription() -> String {
+        return productDesc
+    }
+    
+    func getPrice() -> Double {
+        return productPrice
+    }
+    
+    func getFormattedPrice() -> String {
+        return productPrice.toFormattedCurrency(withSymbol: true)
+    }
+    
+    func getIdentifier() -> String {
+        return productId.asString
     }
 }

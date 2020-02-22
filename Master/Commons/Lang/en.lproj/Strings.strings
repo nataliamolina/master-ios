@@ -8,6 +8,8 @@
 
 // General
 "general.legal.continue" = "Al continuar, estás aceptando nuestros términos y condiciones.";
+"general.close" = "Cerrar";
+"general.accept" = "Aceptar";
 
 // Main
 "main.title" = "¡Hola!";

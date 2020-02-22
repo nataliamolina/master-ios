@@ -72,8 +72,23 @@ extension ProviderProfileViewController: SelectorCellDelegate {
 
 // MARK: - ProviderServiceCellDelegate
 extension ProviderProfileViewController: ProviderServiceCellDelegate {
-    func cellTapped(_ cell: ProviderServiceCell) {
-        ProductSelector.show(in: self, item: ProductSelectorItem(imageUrl: "", name: "", description: "", price: 1))
+    func cellTapped(_ cell: ProviderServiceCell, viewModel: ProviderServiceCellDataSource?) {
+        guard let viewModel = viewModel as? ProductSelectorDataSource else {
+            return
+        }
+        
+        ProductSelector.show(in: self, viewModel: viewModel, delegate: self)
+    }
+}
+
+// MARK: - ProductSelectorDelegate
+extension ProviderProfileViewController: ProductSelectorDelegate {
+    func productChanged(result: ProductSelectorResult) {}
+    
+    func cancelButtonTapped() {}
+    
+    func doneButtonTapped(result: ProductSelectorResult) {
+        print(result)
     }
 }
 

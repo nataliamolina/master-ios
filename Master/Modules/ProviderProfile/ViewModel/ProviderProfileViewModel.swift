@@ -164,7 +164,8 @@ class ProviderProfileViewModel {
                                          productName: $0.name,
                                          productDesc: $0.description,
                                          productPrice: $0.price,
-                                         productCount: 0)
+                                         productCount: 0,
+                                         productId: $0.getId())
         }
         
         dataSource.value.append(providerServicesDataSource)
