@@ -40,3 +40,7 @@
 "serviceDetail.emptyState.title" = "Estamos buscando Masters para ti";
 "serviceDetail.emptyState.desc" = "Estamos buscando Masters que se quieran unir a la comunidad más grande de servicios online, pronto los tendremos disponibles.";
 "serviceDetail.emptyState.button" = "Quiero ser un Master";
+
+// Provider Detail
+"providerDetail.total" = "Total: ";
+"providerDetail.continue" = "Continuar";

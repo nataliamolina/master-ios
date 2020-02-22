@@ -25,6 +25,10 @@ class ProviderServiceCellViewModel: ProviderServiceCellDataSource, CellViewModel
     let productId: Int
     var productCount: Int
     
+    var totalPrice: Double {
+        return Double(productCount * Int(productPrice))
+    }
+    
     init(productImageUrl: String,
          productName: String,
          productDesc: String,
@@ -43,6 +47,14 @@ class ProviderServiceCellViewModel: ProviderServiceCellDataSource, CellViewModel
 
 // MARK: - ProductSelectorDataSource
 extension ProviderServiceCellViewModel: ProductSelectorDataSource {
+    func getTotalPrice() -> Double {
+        return totalPrice
+    }
+    
+    func getTotalCount() -> Int {
+        return productCount
+    }
+    
     func getImageUrl() -> String {
         return productImageUrl
     }

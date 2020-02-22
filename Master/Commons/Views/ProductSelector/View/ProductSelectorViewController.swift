@@ -24,17 +24,20 @@ class ProductSelectorViewController: UIViewController {
     @IBOutlet private weak var countLabel: UILabel!
     
     // MARK: - UI Actions
-    @IBAction func dismissButtonAction(_ sender: Any) {
+    @IBAction private func dismissButtonAction(_ sender: Any) {
         delegate?.cancelButtonTapped()
         ProductSelector.dismiss()
     }
     
-    @IBAction func doneButtonAction(_ sender: Any) {
-        delegate?.doneButtonTapped(result: getResult())
-        ProductSelector.dismiss()
+    @IBAction private func doneButtonAction(_ sender: Any) {
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            
+            self.delegate?.doneButtonTapped(result: self.getResult())
+        }
     }
     
-    @IBAction func stepperAction() {
+    @IBAction private func stepperAction() {
         setCountValue()
     }
     
@@ -64,7 +67,15 @@ class ProductSelectorViewController: UIViewController {
     private func setupUI() {
         navigationBar.topItem?.title = viewModel.getName()
         productDescLabel.text = viewModel.getDescription()
-        productPriceLabel.text = viewModel.getFormattedPrice()
+        
+        if viewModel.getTotalCount() == 0 {
+            productPriceLabel.text = viewModel.getFormattedPrice()
+            countLabel.text = 1.asString
+        } else {
+            stepper.value = Double(viewModel.getTotalCount())
+            productPriceLabel.text = viewModel.getTotalPrice().toFormattedCurrency(withSymbol: true)
+            countLabel.text = viewModel.getTotalCount().asString
+        }
         
         productImageview.kf.setImage(with: URL(string: viewModel.getImageUrl()))
     }

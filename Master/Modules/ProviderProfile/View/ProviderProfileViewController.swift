@@ -12,7 +12,8 @@ class ProviderProfileViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var totalView: UIView!
+    @IBOutlet private weak var totalViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var totalViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var totalLabel: UILabel!
     
     // MARK: - UI Actions
@@ -21,6 +22,9 @@ class ProviderProfileViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel: ProviderProfileViewModel
+    private var isTotalViewVisible: Bool {
+        return totalViewBottomConstraint.constant == 0
+    }
     
     // MARK: - Life Cycle
     
@@ -50,7 +54,7 @@ class ProviderProfileViewController: UIViewController {
         tableView.registerNib(SelectorCell.self)
         tableView.registerNib(CommentCell.self)
         
-        totalView.isHidden = true
+        totalViewBottomConstraint.constant = -totalViewHeightConstraint.constant
         
         setupBindings()
         
@@ -60,6 +64,7 @@ class ProviderProfileViewController: UIViewController {
     private func setupBindings() {
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         viewModel.isLoading.bindTo(activityIndicator, to: .state)
+        viewModel.formattedTotal.bindTo(totalLabel, to: .text)
     }
 }
 
@@ -88,7 +93,16 @@ extension ProviderProfileViewController: ProductSelectorDelegate {
     func cancelButtonTapped() {}
     
     func doneButtonTapped(result: ProductSelectorResult) {
-        print(result)
+        if !isTotalViewVisible {
+            totalViewBottomConstraint.constant = 0
+            
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                self?.view.layoutIfNeeded()
+            }
+        }
+        
+        viewModel.updateTotalForItem(identifier: result.identifier,
+                                     total: result.total)
     }
 }
 

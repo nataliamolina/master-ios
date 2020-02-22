@@ -32,6 +32,13 @@ class ProviderProfileViewModel {
     let status = Var<ProviderProfileViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource: Var<[[CellViewModelProtocol]]> = Var([[]])
+    let formattedTotal: Var<String> = Var("$0")
+    
+    private(set) var total: Double = 0 {
+        didSet {
+            formattedTotal.value = total.toFormattedCurrency(withSymbol: true)
+        }
+    }
     
     private(set) var sectionTitles = [String]()
     private let service: ProviderProfileServiceProtocol
@@ -90,7 +97,34 @@ class ProviderProfileViewModel {
         }
     }
     
+    func updateTotalForItem(identifier: String, total: Int) {
+        let index = dataSource.value[Sections.list.rawValue].firstIndex {
+            ($0 as? ProviderServiceCellViewModel)?.getIdentifier() == identifier
+        }
+        
+        if let index = index, let providerService = dataSource.value[Sections.list.rawValue][index] as? ProviderServiceCellViewModel {
+            providerService.productCount = total
+            dataSource.value[Sections.list.rawValue][index] = providerService
+        }
+        
+        updateTotal()
+    }
+    
     // MARK: - Private Methods
+    
+    private func updateTotal() {
+        var total: Double = 0
+        
+        dataSource.value[Sections.list.rawValue].forEach {
+            guard let item = ($0 as? ProviderServiceCellViewModel), item.productCount > 0 else {
+                return
+            }
+            
+            total += item.totalPrice
+        }
+        
+        self.total = total
+    }
     
     private func setCommentsDataSource() {
         dataSource.value[Sections.list.rawValue] = commentsDataSource

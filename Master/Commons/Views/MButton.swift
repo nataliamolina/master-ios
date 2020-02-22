@@ -42,6 +42,8 @@ class MButton: UIButton {
         }
     }
     
+    @IBInspectable var cornerRadius: CGFloat = 24
+    
     // MARK: - Properties
     var style: MButtonType? {
         didSet {
@@ -76,7 +78,7 @@ class MButton: UIButton {
         
         layer.borderWidth = 1.5
         layer.borderColor = selectedStyle.border.cgColor
-        layer.cornerRadius = 24
+        layer.cornerRadius = cornerRadius
     }
     
     private func animateState() {

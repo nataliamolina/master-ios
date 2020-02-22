@@ -15,4 +15,6 @@ protocol ProductSelectorDataSource {
     func getPrice() -> Double
     func getFormattedPrice() -> String
     func getIdentifier() -> String
+    func getTotalCount() -> Int
+    func getTotalPrice() -> Double
 }
