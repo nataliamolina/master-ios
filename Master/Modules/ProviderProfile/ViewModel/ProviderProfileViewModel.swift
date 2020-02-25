@@ -77,6 +77,21 @@ class ProviderProfileViewModel {
         return dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
     }
     
+    func getViewModelForCheckout() -> CheckoutViewModel? {
+        guard
+            let providerViewModel = dataSource.value[Sections.header.rawValue].first as? ProviderProfileCellViewModel,
+            let cart = dataSource.value[Sections.list.rawValue] as? [ProviderServiceCellViewModel] else {
+            return nil
+        }
+        
+        let checkoutProvider = CheckoutProvider(id: providerId,
+                                                names: providerViewModel.names,
+                                                photoUrl: providerViewModel.photoUrl,
+                                                description: providerViewModel.description)
+        
+        return CheckoutViewModel(provider: checkoutProvider, cart: cart.filter { $0.productCount > 0 })
+    }
+    
     func toggleCommentsSection(with index: Int) {
         let section = dataSource.value[Sections.buttons.rawValue].first
         

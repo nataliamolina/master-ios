@@ -9,6 +9,9 @@
 import UIKit
 
 class MImageView: UIImageView {
+    // MARK: - UI Properties
+    @IBInspectable var borderColor: UIColor = UIColor.Master.green
+    
     // MARK: - Life Cycle
       override func awakeFromNib() {
           super.awakeFromNib()
@@ -31,7 +34,7 @@ class MImageView: UIImageView {
     // MARK: - Private Methods
     private func setupUI() {
         layer.cornerRadius = frame.width / 2
-        layer.borderColor = UIColor.Master.green.cgColor
+        layer.borderColor = borderColor.cgColor
         layer.borderWidth = 2
         
         contentMode = .scaleAspectFill

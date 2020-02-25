@@ -13,6 +13,10 @@ extension Double {
         return "\(self)"
     }
     
+    var asInt: Int {
+        return Int(self)
+    }
+    
     func toFormattedCurrency(withSymbol: Bool = true) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -31,6 +35,10 @@ extension Double {
 extension Int {
     var asString: String {
         return "\(self)"
+    }
+    
+    var asDouble: Double {
+        return Double(self)
     }
 }
 

@@ -18,9 +18,12 @@ class ProviderProfileViewController: UIViewController {
     
     // MARK: - UI Actions
     @IBAction private func continueButtonAction() {
+        guard let checkoutViewModel = viewModel.getViewModelForCheckout() else { return }
+        router.transition(to: .checkout(viewModel: checkoutViewModel))
     }
     
     // MARK: - Properties
+    private let router: RouterBase<HomeRouterTransitions>
     private let viewModel: ProviderProfileViewModel
     private var isTotalViewVisible: Bool {
         return totalViewBottomConstraint.constant == 0
@@ -28,8 +31,9 @@ class ProviderProfileViewController: UIViewController {
     
     // MARK: - Life Cycle
     
-    init(viewModel: ProviderProfileViewModel) {
+    init(viewModel: ProviderProfileViewModel, router: RouterBase<HomeRouterTransitions>) {
         self.viewModel = viewModel
+        self.router = router
         
         super.init(nibName: String(describing: ProviderProfileViewController.self), bundle: nil)
     }
@@ -46,6 +50,8 @@ class ProviderProfileViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        disableTitle()
+        
         tableView.dataSource = self
         tableView.separatorStyle = .none
         

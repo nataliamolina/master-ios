@@ -12,7 +12,9 @@
 "general.accept" = "Aceptar";
 "general.services" = "Servicios";
 "general.comments" = "Comentarios";
+"general.continue" = "Continuar";
 "general.add" = "Agregar";
+"general.bogota" = "Bogotá";
 
 // Main
 "main.title" = "¡Hola!";
@@ -47,3 +49,14 @@
 // Provider Detail
 "providerDetail.total" = "Total: ";
 "providerDetail.continue" = "Continuar";
+
+// Checkout
+"checkout.title" = "Reserva";
+"checkout.desc" = "Completa la siguiente información para acordar detalles con tu Master.";
+"checkout.fields.text" = "Completar información";
+"checkout.fields.products" = " productos";
+"checkout.fields.product" = " producto";
+
+// Complete Text
+"completeText.help" = "Completa la información a continuación";
+"completeText.placeholder" = "Completar";

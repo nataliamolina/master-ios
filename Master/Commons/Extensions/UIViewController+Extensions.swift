@@ -70,4 +70,8 @@ extension UIViewController {
         
         present(leftMenuNavigationController, animated: true, completion: nil)
     }
+    
+    func disableTitle() {
+        title = ""
+    }
 }

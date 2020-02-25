@@ -11,6 +11,9 @@ import UIKit
 enum HomeRouterTransitions {
     case categoryDetail(id: Int, serviceImageUrl: String)
     case providerDetail(viewModel: ProviderProfileViewModel)
+    case checkout(viewModel: CheckoutViewModel)
+    case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate?)
+    case reserveDone
     case home
     case logout
 }
@@ -34,6 +37,12 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         case .categoryDetail(let id, let serviceImageUrl):
             handleCategoryDetailTransition(serviceId: id, serviceImageUrl: serviceImageUrl)
             
+        case .completeText(let viewModel, let delegate):
+            handleCompelteTextTransition(viewModel: viewModel, delegate: delegate)
+            
+        case .reserveDone:
+            return
+            
         case .home:
             handleHomeTransition()
             
@@ -42,6 +51,9 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
             
         case .providerDetail(let viewModel):
             handleProviderDetailTransition(viewModel: viewModel)
+            
+        case .checkout(let viewModel):
+            handleCheckoutTransition(viewModel: viewModel)
             
         }
     }
@@ -82,8 +94,20 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleProviderDetailTransition(viewModel: ProviderProfileViewModel) {
-        let viewController = ProviderProfileViewController(viewModel: viewModel)
+        let viewController = ProviderProfileViewController(viewModel: viewModel, router: self)
         
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    private func handleCheckoutTransition(viewModel: CheckoutViewModel) {
+        let viewController = CheckoutViewController(router: self, viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleCompelteTextTransition(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate?) {
+          let viewController = CompleteTextViewController(viewModel: viewModel, delegate: delegate)
+          
+          navigationController.pushViewController(viewController, animated: true)
+      }
 }

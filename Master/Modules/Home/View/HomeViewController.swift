@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = ""
+        disableTitle()
         
         setupBindings()
         
@@ -133,10 +133,6 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - UIViewControllerTransitioningDelegate
 extension HomeViewController: UIGestureRecognizerDelegate {
     private func setupNavigationGesture() {
-        navigationController?.delegate = self
-        navigationController?.hero.navigationAnimationType = .selectBy(presenting: .zoomSlide(direction: .leading),
-                                                                       dismissing:.zoomSlide(direction: .trailing))
-
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
@@ -151,23 +147,5 @@ extension HomeViewController: UIGestureRecognizerDelegate {
                            shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         
         return (otherGestureRecognizer is UIScreenEdgePanGestureRecognizer)
-    }
-}
-
-// MARK: - UINavigationControllerDelegate
-extension HomeViewController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController,
-                              interactionControllerFor animationController: UIViewControllerAnimatedTransitioning)
-        -> UIViewControllerInteractiveTransitioning? {
-            
-            return heroTransition.navigationController(navigationController, interactionControllerFor: animationController)
-    }
-    
-    func navigationController(_ navigationController: UINavigationController,
-                              animationControllerFor operation: UINavigationController.Operation,
-                              from fromVC: UIViewController,
-                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        return heroTransition.navigationController(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
     }
 }

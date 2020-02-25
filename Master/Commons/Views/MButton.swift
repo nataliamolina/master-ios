@@ -42,7 +42,11 @@ class MButton: UIButton {
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat = 24
+    @IBInspectable var cornerRadius: CGFloat = 24 {
+        didSet {
+            setupStyleId()
+        }
+    }
     
     // MARK: - Properties
     var style: MButtonType? {

@@ -79,11 +79,7 @@ class MainViewController: UIViewController {
         
         setupVideo()
         
-        title = ""
-        
-        navigationController?.delegate = self
-        navigationController?.hero.navigationAnimationType = .selectBy(presenting: .zoomSlide(direction: .leading),
-                                                                       dismissing:.zoomSlide(direction: .trailing))
+        disableTitle()
         
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
@@ -188,22 +184,4 @@ extension MainViewController: GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn, didDisconnectWith user: GIDGoogleUser, withError error: Error!) {}
-}
-
-// MARK: - UINavigationControllerDelegate
-extension MainViewController: UINavigationControllerDelegate {
-    func navigationController(_ navigationController: UINavigationController,
-                              interactionControllerFor animationController: UIViewControllerAnimatedTransitioning)
-        -> UIViewControllerInteractiveTransitioning? {
-            
-            return heroTransition.navigationController(navigationController, interactionControllerFor: animationController)
-    }
-    
-    func navigationController(_ navigationController: UINavigationController,
-                              animationControllerFor operation: UINavigationController.Operation,
-                              from fromVC: UIViewController,
-                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        return heroTransition.navigationController(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
-    }
 }

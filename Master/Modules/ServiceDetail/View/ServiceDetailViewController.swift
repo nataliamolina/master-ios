@@ -42,7 +42,7 @@ class ServiceDetailViewController: UIViewController {
     // MARK: - Private Methods
     
     private func setupUI() {
-        title = ""
+        disableTitle()
         
         headerImage.kf.setImage(with: URL(string: viewModel.serviceImageUrl ?? ""))
         

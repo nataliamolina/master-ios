@@ -1,0 +1,115 @@
+//
+//  CheckoutViewModel.swift
+//  Master
+//
+//  Created by Carlos Mejía on 24/02/20.
+//  Copyright © 2020 Master. All rights reserved.
+//
+
+import Foundation
+import EasyBinding
+
+enum CheckoutViewModelStatus {
+    case undefined
+    case error(error: String?)
+}
+
+private enum Sections: Int {
+    case header
+    case buttons
+    case list
+}
+
+class CheckoutViewModel {
+    // MARK: - Properties
+    private typealias Lang = CheckoutConstants.Lang
+    private let provider: CheckoutProvider
+    private let cart: [ProviderServiceCellViewModel]
+    
+    let status = Var<CheckoutViewModelStatus>(.undefined)
+    let isLoading = Var(false)
+    let dataSource: Var<[CellViewModelProtocol]> = Var([])
+    
+    // MARK: - Life Cycle
+    init(provider: CheckoutProvider, cart: [ProviderServiceCellViewModel]) {
+        self.provider = provider
+        self.cart = cart
+    }
+    
+    // MARK: - Public Methods
+    func createViewModels() {
+        let headerCell = CheckoutHeaderCellViewModel(title: Lang.title,
+                                                     value: getCartTotal().toFormattedCurrency(withSymbol: true))
+        
+        let providerCell = CheckoutProviderCellViewModel(name: provider.names,
+                                                         description: provider.description,
+                                                         photoUrl: provider.photoUrl)
+        
+        let fieldsCells = [
+            CheckoutFieldCellViewModel(title: Lang.address, value: "", image: .gps, type: .address),
+            CheckoutFieldCellViewModel(title: Lang.city, value: Lang.bogota, image: .building, type: .city),
+            CheckoutFieldCellViewModel(title: Lang.dateAndHour, value: "", image: .calendar, type: .dates),
+            CheckoutFieldCellViewModel(title: Lang.notes, value: "", image: .note, type: .notes),
+            
+            CheckoutFieldCellViewModel(title: Lang.products,
+                                       value: Lang.cartTotal(getCartCountTotal()),
+                                       image: .cart,
+                                       bottomLineVisible: false,
+                                       type: .cart)
+        ]
+        
+        let buttonCell = ButtonCellViewModel(style: .green, title: Lang.reserve, value: nil)
+        
+        var viewModels: [CellViewModelProtocol] = [
+            headerCell,
+            providerCell,
+            buttonCell
+        ]
+        
+        viewModels.insert(contentsOf: fieldsCells, at: 2)
+        
+        /*
+         Developer notes:
+         You are probably wondering why we don't append directly to the data source these viewmodels right?
+         - Well, by every time you append something new to the data source, the suscriber (in this case a UITableView) will be reloaded,
+         so we should take care of the performance only with ONE append.
+         */
+        
+        dataSource.value.append(contentsOf: viewModels)
+    }
+    
+    func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {
+        return dataSource.value.safeContains(indexPath.row)
+    }
+    
+    func getViewModelForCompleteAt(index: Int) -> CompleteTextViewModel {
+        guard let textFieldViewModel = dataSource.value.safeContains(index) as? CheckoutFieldCellViewModel else {
+            return .empty
+        }
+        
+        return CompleteTextViewModel(title: textFieldViewModel.title,
+                                     desc: "",
+                                     placeholder: "",
+                                     index: index,
+                                     savedValue: textFieldViewModel.value)
+    }
+    
+    func updateViewModelValueAt(index: Int, value: String) {
+        guard let expectedField = dataSource.value.safeContains(index) as? CheckoutFieldCellViewModel else {
+            return
+        }
+        
+        expectedField.value = value
+        
+        dataSource.value[index] = expectedField
+    }
+    
+    // MARK: - Private Methods
+    private func getCartTotal() -> Double {
+        return cart.map { $0.totalPrice }.reduce(0, +)
+    }
+    
+    private func getCartCountTotal() -> Double {
+        return Double(cart.map { $0.productCount }.reduce(0, +))
+    }
+}

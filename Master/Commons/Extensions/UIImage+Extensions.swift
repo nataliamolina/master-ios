@@ -28,4 +28,24 @@ extension UIImage {
     static var menu: UIImage? {
         return UIImage(named: "menu_icon")
     }
+    
+    static var gps: UIImage? {
+        return UIImage(named: "gps_icon")
+    }
+
+    static var building: UIImage? {
+        return UIImage(named: "building_icon")
+    }
+    
+    static var calendar: UIImage? {
+        return UIImage(named: "calendar_icon")
+    }
+    
+    static var note: UIImage? {
+        return UIImage(named: "note_icon")
+    }
+    
+    static var cart: UIImage? {
+        return UIImage(named: "cart_icon")
+    }
 }
