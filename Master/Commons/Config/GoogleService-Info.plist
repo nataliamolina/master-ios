@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>693225996301-dfpnfbpnkv5p7tomsdh69u94afuud6mt.apps.googleusercontent.com</string>
+	<string>693225996301-1k2pp3ksrop09u69n2p0k5q8rf661va9.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.693225996301-dfpnfbpnkv5p7tomsdh69u94afuud6mt</string>
+	<string>com.googleusercontent.apps.693225996301-1k2pp3ksrop09u69n2p0k5q8rf661va9</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>693225996301-kdb9pum0rrfk3qsurkc40o72h2m01k82.apps.googleusercontent.com</string>
+	<string>693225996301-vt4e7mauupr09vvbj1vtkp6hom6s9ifc.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCdf6mtoNk3JXex712-iJgwLkSwKx0GOC4</string>
+	<string>AIzaSyA2eSuDJoy5Mcry16M-fU8zpe0Qzqz3EEw</string>
 	<key>GCM_SENDER_ID</key>
 	<string>693225996301</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.master.ios</string>
+	<string>com.masterapp.ios</string>
 	<key>PROJECT_ID</key>
 	<string>master-app-5bd23</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,7 +31,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:693225996301:ios:0e9f18407186dda74d9544</string>
+	<string>1:693225996301:ios:848559184f0fd8154d9544</string>
 	<key>DATABASE_URL</key>
 	<string>https://master-app-5bd23.firebaseio.com</string>
 </dict>

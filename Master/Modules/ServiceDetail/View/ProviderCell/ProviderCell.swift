@@ -57,7 +57,7 @@ class ProviderCell: UITableViewCell, ConfigurableCellProtocol {
         totalOrdersLabel.isHidden = viewModel.totalOrders <= 0
         totalOrdersLabel.text = "\(Int(viewModel.totalOrders))"
         
-        photoImageView.kf.setImage(with: URL(string: viewModel.imageUrl))
+        photoImageView.kf.setImage(with: URL(string: viewModel.imageUrl), placeholder: UIImage.avatar)
         
         bottomLineView.isHidden = viewModel.isLastItem
         

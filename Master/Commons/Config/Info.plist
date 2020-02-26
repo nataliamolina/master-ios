@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>ApiEndpoint</key>
-    <string>${API_ENDPOINT}</string>
-    <key>ApiClientHeader</key>
-    <string>${CLIENT_HEADER}</string>
-    <key>ApiClientId</key>
-    <string>${CLIENT_ID}</string>
+	<key>ApiClientHeader</key>
+	<string>${CLIENT_HEADER}</string>
+	<key>ApiClientId</key>
+	<string>${CLIENT_ID}</string>
+	<key>ApiEndpoint</key>
+	<string>${API_ENDPOINT}</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

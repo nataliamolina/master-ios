@@ -43,7 +43,7 @@ class ProviderServiceCell: UITableViewCell, ConfigurableCellProtocol {
             return
         }
         
-        self.productImageView.kf.setImage(with: URL(string: viewModel.productImageUrl))
+        self.productImageView.kf.setImage(with: URL(string: viewModel.productImageUrl), placeholder: UIImage.product)
         self.productNameLabel.text = viewModel.productName
         self.productPriceLabel.text = viewModel.productPrice.toFormattedCurrency(withSymbol: false)
         self.productDescLabel.text = viewModel.productDesc

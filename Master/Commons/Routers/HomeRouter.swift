@@ -62,10 +62,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     private func setupNavigationController() {
         navigationController.navigationBar.tintColor = UIColor.Master.green
         
-        if #available(iOS 11.0, *) {
-            navigationController.navigationBar.prefersLargeTitles = false
-        }
-        
+        navigationController.navigationBar.prefersLargeTitles = false
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.backgroundColor = .white
         navigationController.navigationBar.barTintColor = .white

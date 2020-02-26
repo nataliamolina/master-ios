@@ -48,4 +48,12 @@ extension UIImage {
     static var cart: UIImage? {
         return UIImage(named: "cart_icon")
     }
+    
+    static var avatar: UIImage? {
+        return UIImage(named: "avatar_placeholder")
+    }
+    
+    static var product: UIImage? {
+        return UIImage(named: "product_placeholder")
+    }
 }

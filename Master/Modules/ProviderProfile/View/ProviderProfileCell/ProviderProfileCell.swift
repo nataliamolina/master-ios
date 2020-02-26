@@ -41,7 +41,8 @@ class ProviderProfileCell: UITableViewCell, ConfigurableCellProtocol {
         }
         
         self.delegate = delegate as? ProviderProfileCellDelegate
-        self.photoImageView.kf.setImage(with: URL(string: viewModel.photoUrl))
+        
+        self.photoImageView.kf.setImage(with: URL(string: viewModel.photoUrl), placeholder: UIImage.avatar)
         self.nameLabel.text = viewModel.names
         self.descLabel.text = viewModel.description
     }

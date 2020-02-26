@@ -9,6 +9,7 @@ def commons
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'Hero'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
   pod 'Localize'
   pod 'GoogleSignIn'
   pod 'SideMenu', '~> 6.0'
