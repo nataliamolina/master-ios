@@ -187,6 +187,7 @@
 		2C198D1E23F4D00800346395 /* EmptyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCodable.swift; sourceTree = "<group>"; };
 		2C198D2323F4E4FB00346395 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		2C198D2523F4E6AF00346395 /* RouterBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBase.swift; sourceTree = "<group>"; };
+		2C1A6F4424062153000DB0FC /* Master.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Master.entitlements; sourceTree = "<group>"; };
 		2C22B39223F8AFC200678A41 /* success_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_anim.json; sourceTree = "<group>"; };
 		2C22B39323F8AFC300678A41 /* empty_state_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_state_anim.json; sourceTree = "<group>"; };
 		2C22B39423F8AFC300678A41 /* loading_order_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_order_anim.json; sourceTree = "<group>"; };
@@ -944,6 +945,7 @@
 		A58132AC23B4C7560032FC8B /* Master */ = {
 			isa = PBXGroup;
 			children = (
+				2C1A6F4424062153000DB0FC /* Master.entitlements */,
 				A5F30D3B23B4C7F6005258A8 /* Modules */,
 				A5F30D3A23B4C7F0005258A8 /* Commons */,
 				A58132B423B4C7570032FC8B /* Assets.xcassets */,
@@ -1681,6 +1683,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
+				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
@@ -1706,6 +1709,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
+				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;

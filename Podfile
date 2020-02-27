@@ -1,6 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+def firebase
+  pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/InAppMessaging'
+  pod 'Firebase/Messaging'
+end
+
 def commons
   pod 'EasyBinding', '~> 0.1.1'
   pod 'Simple-Networking', '~> 0.3.4'
@@ -8,13 +16,12 @@ def commons
   pod 'Kingfisher', '~> 5.0'
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'Hero'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Crashlytics'
   pod 'Localize'
   pod 'GoogleSignIn'
   pod 'SideMenu', '~> 6.0'
   pod 'SwiftLint'
   pod 'lottie-ios'
+  firebase
 end
 
 target 'Master' do
