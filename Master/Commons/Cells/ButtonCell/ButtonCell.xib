@@ -22,7 +22,9 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="47" id="tT1-Xv-ibl"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="buttonAction" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OBY-y8-U9g"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

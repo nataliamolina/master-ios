@@ -12,6 +12,7 @@ import EasyBinding
 enum CheckoutViewModelStatus {
     case undefined
     case error(error: String?)
+    case fieldError(name: String)
 }
 
 private enum Sections: Int {
@@ -102,6 +103,40 @@ class CheckoutViewModel {
         expectedField.value = value
         
         dataSource.value[index] = expectedField
+    }
+    
+    func updateDateViewModelValueAt(index: Int, date: Date) {
+        guard let expectedField = dataSource.value.safeContains(index) as? CheckoutFieldCellViewModel else {
+            return
+        }
+        
+        expectedField.date = date
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale.current
+        
+        expectedField.value = dateFormatter.string(from: date)
+        
+        dataSource.value[index] = expectedField
+    }
+    
+    func performProviderReservation() {
+        let fields = dataSource.value.filter { $0 is CheckoutFieldCellViewModel } as? [CheckoutFieldCellViewModel] ?? []
+        let notes = fields.first(where: { $0.type == .notes })?.value
+        
+        guard let address = fields.first(where: { $0.type == .address })?.value, !address.isEmpty else {
+            status.value = .fieldError(name: Lang.address)
+            
+            return
+        }
+        
+        guard let date = fields.first(where: { $0.type == .dates })?.dateAsJSON, !date.isEmpty else {
+            status.value = .fieldError(name: Lang.dateAndHour)
+            
+            return
+        }
     }
     
     // MARK: - Private Methods

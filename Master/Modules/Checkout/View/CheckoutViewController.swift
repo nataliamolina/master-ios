@@ -13,6 +13,7 @@ class CheckoutViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
+    private typealias Lang = CheckoutConstants.Lang
     private let viewModel: CheckoutViewModel
     private let router: RouterBase<HomeRouterTransitions>
     
@@ -45,12 +46,50 @@ class CheckoutViewController: UIViewController {
         tableView.registerNib(CheckoutHeaderCell.self)
         tableView.registerNib(CheckoutProviderCell.self)
         tableView.registerNib(ButtonCell.self)
-
+        
         viewModel.createViewModels()
     }
     
     private func setupBindings() {
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
+        
+        viewModel.status.valueDidChange = { [weak self] status in
+            switch status {
+            case .fieldError(let name):
+                self?.showWarning(message: Lang.completeField + name.lowercased())
+                
+            default:
+                return
+            }
+        }
+    }
+    
+    private func showCityDialog() {
+        showWarning(title: Lang.ups, message: Lang.bogotaRestriction)
+    }
+    
+    private func showTextEditorBy(index: Int) {
+        let viewModel = self.viewModel.getViewModelForCompleteAt(index: index)
+        
+        router.transition(to: .completeText(viewModel: viewModel, delegate: self))
+    }
+    
+    func showDatePickerBy(index: Int) {
+        DatePicker.show(in: self, delegate: self, index: index)
+    }
+}
+
+// MARK: - DatePickerViewDelegate
+extension CheckoutViewController: DatePickerViewDelegate {
+    func dateSelected(_ date: Date, at index: Int) {
+        viewModel.updateDateViewModelValueAt(index: index, date: date)
+    }
+}
+
+// MARK: - ButtonCellDelegate
+extension CheckoutViewController: ButtonCellDelegate {
+    func cellTapped(_ cell: ButtonCell, viewModel: ButtonCellDataSource) {
+        self.viewModel.performProviderReservation()
     }
 }
 
@@ -61,9 +100,19 @@ extension CheckoutViewController: CheckoutFieldCellDelegate {
             return
         }
         
-        let viewModel = self.viewModel.getViewModelForCompleteAt(index: index)
-        
-        router.transition(to: .completeText(viewModel: viewModel, delegate: self))
+        switch viewModel.type {
+        case .dates:
+            showDatePickerBy(index: index)
+            
+        case .notes, .address:
+            showTextEditorBy(index: index)
+            
+        case .city:
+            showCityDialog()
+            
+        default:
+            return
+        }
     }
 }
 

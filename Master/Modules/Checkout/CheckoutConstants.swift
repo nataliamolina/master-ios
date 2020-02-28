@@ -19,6 +19,11 @@ struct CheckoutConstants {
         static let products = "Productos".localized
         static let reserve = "Reservar Master".localized
         static let bogota = "general.bogota".localized
+        static let ups = "general.ups".localized
+        static let bogotaRestriction = "checkout.bogotaRestriction".localized
+        static let `continue` = "general.continue".localized
+        static let cancel = "general.close".localized
+        static let completeField = "Debes completar ".localized
         
         static func cartTotal(_ total: Double) -> String {
             let plural = "s"

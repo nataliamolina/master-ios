@@ -46,6 +46,7 @@ class CategoryCell: MAnimatedTableViewCell, ConfigurableCellProtocol {
         self.delegate = delegate as? CategoryCellDelegate
         
         setupUI()
+        
         categoryImageView.kf.setImage(with: URL(string: viewModel.imageUrl))
     }
     

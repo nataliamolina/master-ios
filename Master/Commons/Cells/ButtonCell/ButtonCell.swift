@@ -16,6 +16,11 @@ class ButtonCell: UITableViewCell, ConfigurableCellProtocol {
     // MARK: - UI References
     @IBOutlet weak var mainButton: MButton!
     
+    // MARK: - UI Actions
+    @IBAction private func buttonAction() {
+        cellTapped()
+    }
+    
     // MARK: - Properties
     private weak var delegate: ButtonCellDelegate?
     private var viewModel: ButtonCellDataSource?
@@ -36,17 +41,18 @@ class ButtonCell: UITableViewCell, ConfigurableCellProtocol {
         self.viewModel = viewModel
         self.delegate = delegate as? ButtonCellDelegate
         self.mainButton.style = viewModel.style
-        self.mainButton.setTitle(viewModel.title, for: .normal)
         
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cellTapped)))
+        self.mainButton.setTitle(viewModel.title, for: .normal)
+        self.mainButton.setTitle(viewModel.title, for: .selected)
+        self.mainButton.setTitle(viewModel.title, for: .focused)
+        self.mainButton.setTitle(viewModel.title, for: .application)
     }
     
     // MARK: - Private Methods
     private func setupUI() {
-        mainButton.setTitle(nil, for: .normal)
     }
     
-    @objc private func cellTapped() {
+    private func cellTapped() {
         guard let viewModel = self.viewModel else {
             return
         }

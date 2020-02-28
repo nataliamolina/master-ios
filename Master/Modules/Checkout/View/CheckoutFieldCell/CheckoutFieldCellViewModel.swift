@@ -30,7 +30,19 @@ class CheckoutFieldCellViewModel: CheckoutFieldCellDataSource, CellViewModelProt
     let image: UIImage?
     let bottomLineVisible: Bool
     let identifier: String = CheckoutFieldCell.cellIdentifier
-    let type: CheckoutFieldCellType
+    var type: CheckoutFieldCellType
+    var date: Date?
+    
+    var dateAsJSON: String? {
+        guard let date = date else {
+            return nil
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+
+        return formatter.string(from: date)
+    }
     
     init(title: String, value: String, image: UIImage?, bottomLineVisible: Bool = true, type: CheckoutFieldCellType) {
         self.title = title

@@ -34,9 +34,13 @@
 		2C305D9B24008EFF005B76EB /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9A24008EFF005B76EB /* UIApplication+Extensions.swift */; };
 		2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9E2400A1DE005B76EB /* ProductSelectorResult.swift */; };
 		2C3160FC23F8B32500A5F6B8 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3160FB23F8B32500A5F6B8 /* AnimationType.swift */; };
+		2C3E0EED2408A299005453BA /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E0EEB2408A299005453BA /* DatePickerViewController.swift */; };
+		2C3E0EEE2408A299005453BA /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3E0EEC2408A299005453BA /* DatePickerViewController.xib */; };
 		2C3EB4E22405F894002BB2DA /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */; };
 		2C42088B23F647680058873D /* GmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088A23F647680058873D /* GmailRequest.swift */; };
 		2C42088E23F647E00058873D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088D23F647E00058873D /* MainViewModel.swift */; };
+		2C55F3AF2408BAF600F458AC /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55F3AE2408BAF600F458AC /* DatePicker.swift */; };
+		2C55F3B12408DE9D00F458AC /* CheckoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55F3B02408DE9D00F458AC /* CheckoutService.swift */; };
 		2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */; };
 		2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
 		2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */; };
@@ -204,9 +208,13 @@
 		2C305D9A24008EFF005B76EB /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		2C305D9E2400A1DE005B76EB /* ProductSelectorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectorResult.swift; sourceTree = "<group>"; };
 		2C3160FB23F8B32500A5F6B8 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		2C3E0EEB2408A299005453BA /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		2C3E0EEC2408A299005453BA /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
 		2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		2C42088A23F647680058873D /* GmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailRequest.swift; sourceTree = "<group>"; };
 		2C42088D23F647E00058873D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2C55F3AE2408BAF600F458AC /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		2C55F3B02408DE9D00F458AC /* CheckoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutService.swift; sourceTree = "<group>"; };
 		2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_bg_video_new.mp4; sourceTree = "<group>"; };
 		2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoints.swift; sourceTree = "<group>"; };
 		2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -495,6 +503,16 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		2C3E0EEA2408A284005453BA /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				2C3E0EEB2408A299005453BA /* DatePickerViewController.swift */,
+				2C3E0EEC2408A299005453BA /* DatePickerViewController.xib */,
+				2C55F3AE2408BAF600F458AC /* DatePicker.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
 		2C42088C23F647D60058873D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,6 +713,7 @@
 		2CAD87AA24048C8F0063AEB2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2C55F3B02408DE9D00F458AC /* CheckoutService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1067,6 +1086,7 @@
 		A5F30D4A23B4CBB6005258A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C3E0EEA2408A284005453BA /* DatePicker */,
 				2CAD87AE24049A340063AEB2 /* SingleTextField */,
 				2C76018523FE349600252531 /* ProductSelector */,
 				A5F30D4B23B4CBC3005258A8 /* MButton.swift */,
@@ -1258,6 +1278,7 @@
 				2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */,
 				2C1218CD2405E7580098BE55 /* GoogleService-Info.plist in Resources */,
 				A5F30D5E23B4D8DF005258A8 /* RegisterViewController.xib in Resources */,
+				2C3E0EEE2408A299005453BA /* DatePickerViewController.xib in Resources */,
 				A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */,
 				2C22B39923F8AFC300678A41 /* loading_order_anim.json in Resources */,
 				2C22B39A23F8AFC300678A41 /* empty_state_providers.json in Resources */,
@@ -1311,7 +1332,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+			shellScript = "#\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		2C7E7FBD23F89B4500D7835E /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1424,6 +1445,7 @@
 				A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */,
 				2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */,
 				2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */,
+				2C55F3B12408DE9D00F458AC /* CheckoutService.swift in Sources */,
 				2C73AE9123F4EA4E00267899 /* LoginServiceProtocol.swift in Sources */,
 				2CEECC972400C90A00C67D80 /* CheckoutViewController.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
@@ -1461,6 +1483,7 @@
 				2CC731382404722E006FF85D /* CheckoutProviderCell.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* CellViewModelProtocol.swift in Sources */,
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
+				2C55F3AF2408BAF600F458AC /* DatePicker.swift in Sources */,
 				2CFF4DBF23FA130B0024B3F1 /* OrderProviderService.swift in Sources */,
 				2CFF4DAD23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift in Sources */,
 				2CC7313D24047500006FF85D /* CheckoutHeaderCellViewModel.swift in Sources */,
@@ -1515,6 +1538,7 @@
 				2C7E7FC523F8A0A600D7835E /* ProviderCell.swift in Sources */,
 				2CC7313B24047401006FF85D /* CheckoutFieldCellViewModel.swift in Sources */,
 				2CFF4DA423F99D1C0024B3F1 /* ProviderProfileCell.swift in Sources */,
+				2C3E0EED2408A299005453BA /* DatePickerViewController.swift in Sources */,
 				2CFF4DA923F9A0370024B3F1 /* CommentsResponse.swift in Sources */,
 				2CEECC9C2400D22200C67D80 /* CheckoutFieldCell.swift in Sources */,
 				2CAD87A9240485840063AEB2 /* CheckoutConstants.swift in Sources */,

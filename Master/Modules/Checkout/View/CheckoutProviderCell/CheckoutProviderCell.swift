@@ -32,7 +32,7 @@ class CheckoutProviderCell: UITableViewCell, ConfigurableCellProtocol {
         
         self.nameLabel.text = viewModel.name
         self.descLabel.text = viewModel.description
-        self.photoImageView.kf.setImage(with: URL(string: viewModel.photoUrl))
+        self.photoImageView.kf.setImage(with: URL(string: viewModel.photoUrl), placeholder: UIImage.avatar)
     }
     
     // MARK: - Private Methods

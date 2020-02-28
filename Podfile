@@ -5,8 +5,8 @@ def firebase
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
-  pod 'Firebase/InAppMessaging'
   pod 'Firebase/Messaging'
+
 end
 
 def commons

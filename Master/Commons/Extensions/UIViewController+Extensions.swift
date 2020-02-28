@@ -52,8 +52,8 @@ extension UIViewController {
         NotificationBanner(title: "Error", subtitle: message, style: .danger).show()
     }
     
-    func showWarning(message: String?) {
-        NotificationBanner(title: "Error", subtitle: message, style: .warning).show()
+    func showWarning(title: String = "Error", message: String?) {
+        NotificationBanner(title: title, subtitle: message, style: .warning).show()
     }
     
     func showMenu(router: RouterBase<HomeRouterTransitions>) {
