@@ -9,10 +9,11 @@
 import UIKit
 import EasyBinding
 import NotificationBannerSwift
+import Lottie
 
 class SplashScreenViewController: UIViewController {
     // MARK: - UI Refereces
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var animationView: UIView!
     
     // MARK: - Properties
     private var router: RouterBase<MainRouterTransitions> {
@@ -36,8 +37,17 @@ class SplashScreenViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
-        viewModel.isLoading.bindTo(activityIndicator, to: .state)
+        let starAnimationView = AnimationView(name: AnimationType.loader.rawValue)
+        starAnimationView.frame = animationView.bounds
+        starAnimationView.play()
+        starAnimationView.loopMode = .loop
         
+        animationView.addSubview(starAnimationView)
+        
+        setupBindings()
+    }
+    
+    private func setupBindings() {
         viewModel.status.observe = { [weak self] status in
             switch status {
             case .preloadReady(let hasSession):

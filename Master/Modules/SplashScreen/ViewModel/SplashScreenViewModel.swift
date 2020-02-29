@@ -19,7 +19,6 @@ enum SplashScreenViewModelStatus {
 class SplashScreenViewModel {
     // MARK: - Properties
     let status = Var<SplashScreenViewModelStatus>(.undefined)
-    let isLoading = Var(false)
     let service: SplashScreenServiceProtocol
     let loginService: EmailLoginServiceProtocol
     
@@ -35,7 +34,6 @@ class SplashScreenViewModel {
     }
     
     func fetchRequiredServices() {
-        isLoading.value = true
         checkServerStatus()
     }
     
@@ -43,7 +41,6 @@ class SplashScreenViewModel {
     
     private func checkServerStatus() {
         service.checkServerStatus { [weak self] (response: ServerStatus?, error: CMError?) in
-            self?.isLoading.value = false
             
             if response?.isOnline == true {
                 self?.validateTokenIfNeeded()
@@ -65,7 +62,6 @@ class SplashScreenViewModel {
         loginService.saveAuthenticationToken(token)
         
         service.checkSessionToken { [weak self] (response: Bool, error: CMError?) in
-            self?.isLoading.value = false
             
             if response {
                 self?.fetchUserInformation()
@@ -82,7 +78,6 @@ class SplashScreenViewModel {
     
     private func fetchUserInformation() {
         loginService.fetchUserSession { [weak self] (response: User?, error: CMError?) in
-            self?.isLoading.value = false
             
             guard let user = response, error == nil else {
                 self?.status.value = .error(error: error?.localizedDescription)

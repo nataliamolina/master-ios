@@ -63,6 +63,7 @@
 		2C7E7FC623F8A0A600D7835E /* ProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC423F8A0A600D7835E /* ProviderCell.xib */; };
 		2C7E7FC823F8A17200D7835E /* ProviderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC723F8A17200D7835E /* ProviderCellViewModel.swift */; };
 		2C829EBB240AD4FD00D7DD81 /* loader_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C829EBA240AD4FC00D7DD81 /* loader_anim.json */; };
+		2C829EBD240B16ED00D7DD81 /* CheckoutServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EBC240B16ED00D7DD81 /* CheckoutServiceProtocol.swift */; };
 		2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* Storage.swift */; };
 		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
 		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
@@ -243,6 +244,7 @@
 		2C7E7FC423F8A0A600D7835E /* ProviderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderCell.xib; sourceTree = "<group>"; };
 		2C7E7FC723F8A17200D7835E /* ProviderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCellViewModel.swift; sourceTree = "<group>"; };
 		2C829EBA240AD4FC00D7DD81 /* loader_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_anim.json; sourceTree = "<group>"; };
+		2C829EBC240B16ED00D7DD81 /* CheckoutServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutServiceProtocol.swift; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -736,7 +738,9 @@
 		2CAD87AA24048C8F0063AEB2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2C976A07240AC39B0073DD07 /* CheckoutEndpoints.swift */,
 				2C55F3B02408DE9D00F458AC /* CheckoutService.swift */,
+				2C829EBC240B16ED00D7DD81 /* CheckoutServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -746,7 +750,6 @@
 			children = (
 				2CAD87AC24048CAE0063AEB2 /* CheckoutProvider.swift */,
 				2C976A05240AC2B40073DD07 /* OrderRequest.swift */,
-				2C976A07240AC39B0073DD07 /* CheckoutEndpoints.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1480,6 +1483,7 @@
 				2CEECC972400C90A00C67D80 /* CheckoutViewController.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
 				2C42088E23F647E00058873D /* MainViewModel.swift in Sources */,
+				2C829EBD240B16ED00D7DD81 /* CheckoutServiceProtocol.swift in Sources */,
 				2CCFED7223F62B85005E5CB1 /* RegisterRequest.swift in Sources */,
 				2CF6ABC123F7AF2C00F9EF40 /* Order.swift in Sources */,
 				2CC7312F24045586006FF85D /* XibView.swift in Sources */,
@@ -1741,6 +1745,7 @@
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				INFOPLIST_FILE = "$(SRCROOT)/Master/Commons/Config/Info.plist";
@@ -1768,6 +1773,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				INFOPLIST_FILE = "$(SRCROOT)/Master/Commons/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

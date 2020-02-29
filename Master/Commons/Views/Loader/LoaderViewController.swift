@@ -12,11 +12,9 @@ import Lottie
 class LoaderViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var animationView: UIView!
-    @IBOutlet private weak var animationViewHorizontalConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
-    private lazy var hiddenConstraint = UIScreen.main.bounds.height / 2
-    private let animationTime: TimeInterval = 0.3
+    private let animationTime: TimeInterval = 0.2
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -33,9 +31,8 @@ class LoaderViewController: UIViewController {
     
     // MARK: - Public Methods
     func dismissAnimated() {
-        animationViewHorizontalConstraint.constant = hiddenConstraint
-        
         UIView.animate(withDuration: animationTime, animations: { [weak self] in
+            self?.animationView.alpha = 0
             self?.view.backgroundColor = .clear
             self?.view.layoutIfNeeded()
         }, completion: { [weak self] _ in
@@ -46,7 +43,7 @@ class LoaderViewController: UIViewController {
     // MARK: - Private Methods
     private func setupUI() {
         view.backgroundColor = .clear
-        animationViewHorizontalConstraint.constant = hiddenConstraint
+        animationView.alpha = 0
         
         animationView.layer.cornerRadius = 15
         animationView.clipsToBounds = true
@@ -60,9 +57,8 @@ class LoaderViewController: UIViewController {
     }
     
     private func showLoader() {
-        animationViewHorizontalConstraint.constant = 0
-        
         UIView.animate(withDuration: animationTime) { [weak self] in
+            self?.animationView.alpha = 1
             self?.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
             self?.view.layoutIfNeeded()
         }

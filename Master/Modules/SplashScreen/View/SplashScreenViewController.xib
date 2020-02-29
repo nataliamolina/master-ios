@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreenViewController" customModule="Master" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="ngt-Z8-uVG" id="bdc-KZ-1be"/>
+                <outlet property="animationView" destination="vdg-Nt-FgO" id="rse-uQ-7Lr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,17 +25,21 @@
                         <constraint firstAttribute="width" constant="100" id="wA5-qE-ohm"/>
                     </constraints>
                 </imageView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ngt-Z8-uVG">
-                    <rect key="frame" x="197" y="772" width="20" height="20"/>
-                    <color key="color" red="0.49019607843137253" green="0.80000000000000004" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-Nt-FgO">
+                    <rect key="frame" x="172" y="722" width="70" height="70"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="agV-PB-rza"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="XTH-VJ-Rtp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BGU-Fe-16z"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ngt-Z8-uVG" secondAttribute="bottom" constant="70" id="hIb-zm-2bH"/>
+                <constraint firstItem="vdg-Nt-FgO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Isv-L1-o0D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vdg-Nt-FgO" secondAttribute="bottom" constant="70" id="W49-0B-Bq4"/>
+                <constraint firstItem="vdg-Nt-FgO" firstAttribute="width" secondItem="vdg-Nt-FgO" secondAttribute="height" multiplier="1:1" id="ZSF-wm-h6c"/>
                 <constraint firstItem="XTH-VJ-Rtp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="seg-jt-wHx"/>
-                <constraint firstItem="ngt-Z8-uVG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xaG-G4-xzG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="154"/>

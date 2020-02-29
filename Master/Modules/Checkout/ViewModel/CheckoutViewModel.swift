@@ -13,7 +13,6 @@ enum CheckoutViewModelStatus {
     case undefined
     case error(error: String?)
     case fieldError(name: String)
-    case isLoading(isVisible: Bool)
 }
 
 private enum Sections: Int {
@@ -141,13 +140,18 @@ class CheckoutViewModel {
             return
         }
         
-        guard let date = fields.first(where: { $0.type == .dates })?.dateAsJSON, !date.isEmpty else {
-            status.value = .fieldError(name: Lang.dateAndHour)
-            
-            return
+        guard
+            let dateField = fields.first(where: { $0.type == .dates }),
+            let date = dateField.date,
+            let json = dateField.dateAsJSON,
+            !json.isEmpty else {
+                
+                status.value = .fieldError(name: Lang.dateAndHour)
+                
+                return
         }
         
-        performPayment(address: address, notes: notes, jsonDate: date)
+        performPayment(address: address, notes: notes, jsonDate: json, date: date)
     }
     
     // MARK: - Private Methods
@@ -159,7 +163,25 @@ class CheckoutViewModel {
         return Double(cart.map { $0.productCount }.reduce(0, +))
     }
     
-    func performPayment(address: String, notes: String?, jsonDate: String) {
+    func performPayment(address: String, notes: String?, jsonDate: String, date: Date) {
+        let request = OrderRequest(providerId: provider.id,
+                                   orderAddress: address,
+                                   notes: notes ?? "",
+                                   serviceCategoryId: categoryId,
+                                   servicesIds: getCartIds(),
+                                   orderDate: jsonDate,
+                                   time: getFormattedTimeFrom(date: date))
+        
+        isLoading.value = true
+        
+        service.performCheckout(request: request) { [weak self] (result: Order?, error: CMError?) in
+            self?.isLoading.value = false
+            
+            print(result)
+        }
+    }
+    
+    private func getCartIds() -> [Int] {
         var servicesIds = [Int]()
         
         cart.forEach { item in
@@ -168,21 +190,16 @@ class CheckoutViewModel {
             }
         }
         
-        let request = OrderRequest(providerId: provider.id,
-                                   orderAddress: address,
-                                   notes: notes ?? "",
-                                   serviceCategoryId: categoryId,
-                                   servicesIds: servicesIds,
-                                   orderDate: jsonDate,
-                                   time: "ARREGLAME")
+        return servicesIds
+    }
+    
+    private func getFormattedTimeFrom(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
         
-        status.value = .isLoading(isVisible: true)
-        
-        
-        service.performCheckout(request: request) { [weak self] (result: OrderRequest?, error: CMError?) in
-            self?.status.value = .isLoading(isVisible: false)
-            
-            print(result)
-        }
+        return dateFormatter.string(from: date)
     }
 }

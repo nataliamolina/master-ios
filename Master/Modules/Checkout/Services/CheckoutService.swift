@@ -8,13 +8,6 @@
 
 import Foundation
 
-protocol CheckoutServiceProtocol {
-    var connectionDependency: ConnectionManagerProtocol { get }
-    
-    func performCheckout(request: OrderRequest,
-                         onComplete: @escaping (_ result: OrderRequest?, _ error: CMError?) -> Void)
-}
-
 class CheckoutService: CheckoutServiceProtocol {
     // MARK: - Properties
     let connectionDependency: ConnectionManagerProtocol
@@ -27,10 +20,10 @@ class CheckoutService: CheckoutServiceProtocol {
     // MARK: - Public Methods
     
     func performCheckout(request: OrderRequest,
-                         onComplete: @escaping (_ result: OrderRequest?, _ error: CMError?) -> Void) {
+                         onComplete: @escaping (_ result: Order?, _ error: CMError?) -> Void) {
         
         connectionDependency
-            .post(url: Endpoint.postOrder, request: request) { (response: OrderRequest?, error: CMError?) in
+            .post(url: Endpoint.postOrder, request: request) { (response: Order?, error: CMError?) in
                 
                 onComplete(response, error)
         }
