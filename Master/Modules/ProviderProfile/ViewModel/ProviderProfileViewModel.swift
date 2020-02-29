@@ -31,7 +31,7 @@ class ProviderProfileViewModel {
     let average: Var<Double> = Var(0)
     let status = Var<ProviderProfileViewModelStatus>(.undefined)
     let isLoading = Var(false)
-    let dataSource: Var<[[CellViewModelProtocol]]> = Var([[]])
+    let dataSource: Var<[[CellViewModelProtocol]]> = Var([])
     let formattedTotal: Var<String> = Var("$0")
     
     private(set) var total: Double = 0 {
@@ -89,7 +89,9 @@ class ProviderProfileViewModel {
                                                 photoUrl: providerViewModel.photoUrl,
                                                 description: providerViewModel.description)
         
-        return CheckoutViewModel(provider: checkoutProvider, cart: cart.filter { $0.productCount > 0 })
+        return CheckoutViewModel(provider: checkoutProvider,
+                                 cart: cart.filter { $0.productCount > 0 },
+                                 categoryId: categoryId)
     }
     
     func toggleCommentsSection(with index: Int) {
@@ -196,7 +198,7 @@ class ProviderProfileViewModel {
                                                             names: names,
                                                             description: provider.description)
         
-        dataSource.value[Sections.header.rawValue] = [profileViewModel]
+        dataSource.value = [[profileViewModel]]
         dataSource.value.append([getButtonsCellViewModel()])
     }
     

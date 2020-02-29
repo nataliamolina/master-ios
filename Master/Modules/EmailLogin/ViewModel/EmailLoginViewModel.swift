@@ -30,7 +30,7 @@ class EmailLoginViewModel {
         
         self.service = service ?? defaultService
         
-        isLoading.valueDidChange = { [weak self] value in
+        isLoading.observe = { [weak self] value in
             self?.controlsEnabled.value = !value
         }
     }

@@ -38,7 +38,7 @@ class SplashScreenViewController: UIViewController {
     private func setupUI() {
         viewModel.isLoading.bindTo(activityIndicator, to: .state)
         
-        viewModel.status.valueDidChange = { [weak self] status in
+        viewModel.status.observe = { [weak self] status in
             switch status {
             case .preloadReady(let hasSession):
                 self?.route(toHome: hasSession)

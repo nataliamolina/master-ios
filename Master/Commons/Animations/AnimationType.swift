@@ -10,4 +10,5 @@ import Foundation
 
 enum AnimationType: String {
     case emptyStateForProviders = "empty_state_providers"
+    case loader = "loader_anim"
 }

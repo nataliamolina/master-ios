@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderProfileViewController" customModule="Master" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="jL7-Ni-cyt" id="TsY-pt-3B0"/>
                 <outlet property="tableView" destination="vHA-Vx-o8m" id="WL7-bG-ESr"/>
                 <outlet property="totalLabel" destination="B17-Qn-cT0" id="Se8-kV-Se4"/>
                 <outlet property="totalViewBottomConstraint" destination="aP5-Te-TRW" id="GaD-e5-yFb"/>
@@ -27,10 +26,6 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="782"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jL7-Ni-cyt">
-                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                    <color key="color" red="0.49701553580000002" green="0.76978808639999996" blue="0.70195633170000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                </activityIndicatorView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQX-XT-CZe">
                     <rect key="frame" x="0.0" y="826" width="414" height="70"/>
                     <subviews>
@@ -87,8 +82,6 @@
                 <constraint firstItem="AQX-XT-CZe" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Uyr-kJ-Z90"/>
                 <constraint firstItem="vHA-Vx-o8m" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y8u-bu-3if"/>
                 <constraint firstAttribute="bottom" secondItem="AQX-XT-CZe" secondAttribute="bottom" id="aP5-Te-TRW"/>
-                <constraint firstItem="jL7-Ni-cyt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ntB-ih-8RR"/>
-                <constraint firstItem="jL7-Ni-cyt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qyZ-Qj-cNu"/>
                 <constraint firstItem="vHA-Vx-o8m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u73-df-13x"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var pendingView: UIView!
     @IBOutlet private weak var pendingLabel: UILabel!
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
     private let viewModel = HomeViewModel()
@@ -44,6 +43,10 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
         
         setupNavigationGesture()
+        
+        if viewModel.dataSource.value.isEmpty {
+            viewModel.fetchServices()
+        }
     }
     
     private func setupUI() {
@@ -59,12 +62,10 @@ class HomeViewController: UIViewController {
         
         setupMenuIcon()
         setupLogoIcon()
-        
-        viewModel.fetchServices()
     }
     
     private func setupBindings() {
-        viewModel.hasPendingOrders.valueDidChange = { hasPendingOrders in
+        viewModel.hasPendingOrders.observe = { hasPendingOrders in
             UIView.animate(withDuration: 0.4) { [weak self] in
                 self?.pendingView.isHidden = !hasPendingOrders
             }
@@ -72,7 +73,11 @@ class HomeViewController: UIViewController {
         
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         viewModel.totalOrders.bindTo(pendingLabel, to: .text)
-        viewModel.isLoading.bindTo(activityIndicator, to: .state)
+        
+        viewModel.isLoading.observe = { [weak self] isLoading in
+            guard let self = self else { return }
+            isLoading ? Loader.show(in: self) : Loader.dismiss()
+        }
     }
     
     // MARK: - Private Methods

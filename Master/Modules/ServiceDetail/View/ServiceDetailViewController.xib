@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceDetailViewController" customModule="Master" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="Sh2-a3-1SB" id="C07-yN-3hu"/>
                 <outlet property="emptyStateView" destination="c8F-rR-Vht" id="MHl-SY-KHf"/>
                 <outlet property="headerImage" destination="lJX-js-iZq" id="Oko-vw-DJb"/>
                 <outlet property="lottieView" destination="FYa-Vg-Zsr" id="OhF-Bg-hY8"/>
@@ -33,10 +32,6 @@
                     <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Sh2-a3-1SB">
-                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                    <color key="color" red="0.49019607840000001" green="0.80000000000000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                </activityIndicatorView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8F-rR-Vht">
                     <rect key="frame" x="40" y="194" width="334" height="252.5"/>
                     <subviews>
@@ -103,9 +98,7 @@
                 <constraint firstItem="3Pq-Nb-xqq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="48S-u5-ysl"/>
                 <constraint firstItem="lJX-js-iZq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8Rq-sp-nuY"/>
                 <constraint firstItem="c8F-rR-Vht" firstAttribute="top" secondItem="lJX-js-iZq" secondAttribute="bottom" constant="50" id="IQt-Ds-EbH"/>
-                <constraint firstItem="Sh2-a3-1SB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JUm-zY-KPw"/>
                 <constraint firstItem="c8F-rR-Vht" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="LQL-bP-8VI"/>
-                <constraint firstItem="Sh2-a3-1SB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="WVC-vJ-9wo"/>
                 <constraint firstItem="lJX-js-iZq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hD4-Ik-0TS"/>
                 <constraint firstItem="3Pq-Nb-xqq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hqu-dY-wAI"/>
                 <constraint firstItem="3Pq-Nb-xqq" firstAttribute="top" secondItem="lJX-js-iZq" secondAttribute="bottom" id="mro-2N-OsU"/>

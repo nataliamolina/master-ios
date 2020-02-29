@@ -91,7 +91,7 @@ class MainViewController: UIViewController {
         viewModel.controlsEnabled.bindTo(emailLoginButton, to: .state)
         viewModel.controlsEnabled.bindTo(registerButton, to: .state)
         
-        viewModel.status.valueDidChange = { [weak self] status in
+        viewModel.status.observe = { [weak self] status in
             guard let self = self else { return }
             
             switch status {

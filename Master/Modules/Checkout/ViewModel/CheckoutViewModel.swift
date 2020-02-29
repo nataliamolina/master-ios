@@ -13,6 +13,7 @@ enum CheckoutViewModelStatus {
     case undefined
     case error(error: String?)
     case fieldError(name: String)
+    case isLoading(isVisible: Bool)
 }
 
 private enum Sections: Int {
@@ -26,15 +27,23 @@ class CheckoutViewModel {
     private typealias Lang = CheckoutConstants.Lang
     private let provider: CheckoutProvider
     private let cart: [ProviderServiceCellViewModel]
+    private let categoryId: Int
+    private let service: CheckoutServiceProtocol
     
     let status = Var<CheckoutViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource: Var<[CellViewModelProtocol]> = Var([])
     
     // MARK: - Life Cycle
-    init(provider: CheckoutProvider, cart: [ProviderServiceCellViewModel]) {
+    init(provider: CheckoutProvider,
+         cart: [ProviderServiceCellViewModel],
+         categoryId: Int,
+         service: CheckoutServiceProtocol = CheckoutService(connectionDependency: ConnectionManager())) {
+        
         self.provider = provider
         self.cart = cart
+        self.categoryId = categoryId
+        self.service = service
     }
     
     // MARK: - Public Methods
@@ -137,6 +146,8 @@ class CheckoutViewModel {
             
             return
         }
+        
+        performPayment(address: address, notes: notes, jsonDate: date)
     }
     
     // MARK: - Private Methods
@@ -146,5 +157,32 @@ class CheckoutViewModel {
     
     private func getCartCountTotal() -> Double {
         return Double(cart.map { $0.productCount }.reduce(0, +))
+    }
+    
+    func performPayment(address: String, notes: String?, jsonDate: String) {
+        var servicesIds = [Int]()
+        
+        cart.forEach { item in
+            (1...item.productCount).forEach {_ in
+                servicesIds.append(item.productId)
+            }
+        }
+        
+        let request = OrderRequest(providerId: provider.id,
+                                   orderAddress: address,
+                                   notes: notes ?? "",
+                                   serviceCategoryId: categoryId,
+                                   servicesIds: servicesIds,
+                                   orderDate: jsonDate,
+                                   time: "ARREGLAME")
+        
+        status.value = .isLoading(isVisible: true)
+        
+        
+        service.performCheckout(request: request) { [weak self] (result: OrderRequest?, error: CMError?) in
+            self?.status.value = .isLoading(isVisible: false)
+            
+            print(result)
+        }
     }
 }

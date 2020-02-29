@@ -18,7 +18,7 @@ class HomeViewModel {
     // MARK: - Properties
     let status = Var<HomeViewModelStatus>(.undefined)
     let isLoading = Var(false)
-    let dataSource: Var<[[CellViewModelProtocol]]> = Var([[]])
+    let dataSource: Var<[[CellViewModelProtocol]]> = Var([])
     let hasPendingOrders = Var(false)
     let totalOrders = Var("0")
     

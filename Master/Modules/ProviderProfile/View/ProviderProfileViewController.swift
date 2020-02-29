@@ -10,7 +10,6 @@ import UIKit
 
 class ProviderProfileViewController: UIViewController {
     // MARK: - UI References
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var totalViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet private weak var totalViewHeightConstraint: NSLayoutConstraint!
@@ -48,6 +47,14 @@ class ProviderProfileViewController: UIViewController {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if viewModel.dataSource.value.isEmpty {
+            viewModel.fetchProfile()
+        }
+    }
+    
     // MARK: - Private Methods
     private func setupUI() {
         disableTitle()
@@ -63,13 +70,16 @@ class ProviderProfileViewController: UIViewController {
         totalViewBottomConstraint.constant = -totalViewHeightConstraint.constant
         
         setupBindings()
-        
-        viewModel.fetchProfile()
     }
     
     private func setupBindings() {
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
-        viewModel.isLoading.bindTo(activityIndicator, to: .state)
+        
+        viewModel.isLoading.observe = { [weak self] isLoading in
+            guard let self = self else { return }
+            isLoading ? Loader.show(in: self) : Loader.dismiss()
+        }
+        
         viewModel.formattedTotal.bindTo(totalLabel, to: .text)
     }
 }

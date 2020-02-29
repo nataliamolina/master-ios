@@ -43,7 +43,7 @@ class EmailLoginViewController: UIViewController {
         viewModel.controlsEnabled.bindTo(passwordTextField, to: .state)
         viewModel.controlsEnabled.bindTo(loginButton, to: .state)
 
-        viewModel.status.valueDidChange = { [weak self] status in
+        viewModel.status.observe = { [weak self] status in
             guard let self = self else { return }
             
             switch status {

@@ -15,17 +15,16 @@ class ServiceDetailViewController: UIViewController {
     @IBOutlet private weak var emptyStateView: UIView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var headerImage: UIImageView!
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
     private let viewModel: ServiceDetailViewModel
     private let router: RouterBase<HomeRouterTransitions>
-
+    
     // MARK: - Life Cycle
     init(viewModel: ServiceDetailViewModel, router: RouterBase<HomeRouterTransitions>) {
         self.viewModel = viewModel
         self.router = router
-
+        
         super.init(nibName: String(describing: ServiceDetailViewController.self), bundle: nil)
     }
     
@@ -37,6 +36,14 @@ class ServiceDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if viewModel.dataSource.value.isEmpty {
+            viewModel.fetchDetail()
+        }
     }
     
     // MARK: - Private Methods
@@ -51,13 +58,11 @@ class ServiceDetailViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.registerNib(ProviderCell.self)
         
-        viewModel.fetchDetail()
-        
         setupBindings()
     }
     
     private func setupBindings() {
-        viewModel.status.valueDidChange = { [weak self] status in
+        viewModel.status.observe = { [weak self] status in
             switch status {
             case .emptyStateRequired:
                 self?.setupEmptyState()
@@ -68,12 +73,16 @@ class ServiceDetailViewController: UIViewController {
         }
         
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
-        viewModel.isLoading.bindTo(activityIndicator, to: .state)
+        
+        viewModel.isLoading.observe = { [weak self] isLoading in
+            guard let self = self else { return }
+            isLoading ? Loader.show(in: self) : Loader.dismiss()
+        }
     }
     
     private func setupEmptyState() {
         emptyStateView.isHidden = false
-
+        
         let starAnimationView = AnimationView(name: AnimationType.emptyStateForProviders.rawValue)
         starAnimationView.frame = lottieView.bounds
         starAnimationView.play()
@@ -92,7 +101,7 @@ extension ServiceDetailViewController: ProviderCellDelegate {
             let indexPath = tableView.indexPath(for: cell),
             let providerViewModel = viewModel.getProviderProfileViewModelAt(indexPath: indexPath) else {
                 
-            return
+                return
         }
         
         router.transition(to: .providerDetail(viewModel: providerViewModel))
