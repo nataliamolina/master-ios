@@ -35,7 +35,7 @@ class CommentCell: UITableViewCell, ConfigurableCellProtocol {
             return
         }
         
-        authorImageView.kf.setImage(with: URL(string: viewModel.authorImageUrl))
+        authorImageView.kf.setImage(with: URL(string: viewModel.authorImageUrl), placeholder: UIImage.avatar)
         authorNameLabel.text = viewModel.authorNames
         authorMessageLabel.text = viewModel.authorMessage
         scoreLabel.text = viewModel.authorScore.asString
@@ -61,6 +61,8 @@ class CommentCell: UITableViewCell, ConfigurableCellProtocol {
         guard viewModel.authorImageUrl.isEmpty else {
             return
         }
+        
+        authorImageView.image = nil
         
         let letterLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         letterLabel.text = String(viewModel.authorNames.first ?? Character(""))

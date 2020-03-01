@@ -1853,7 +1853,7 @@
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				INFOPLIST_FILE = "$(SRCROOT)/Master/Commons/Config/Info.plist";
@@ -1881,7 +1881,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				INFOPLIST_FILE = "$(SRCROOT)/Master/Commons/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
