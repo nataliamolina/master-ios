@@ -61,6 +61,7 @@ class HomeViewController: UIViewController {
                                                                 action: #selector(pendingViewTapped)))
         
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.registerNib(CategoryCell.self)
         
@@ -125,11 +126,6 @@ extension HomeViewController: CategoryCellDelegate {
 
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        (view as? UITableViewHeaderFooterView)?.contentView.backgroundColor = UIColor.white
-        (view as? UITableViewHeaderFooterView)?.textLabel?.textColor = UIColor.black
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.dataSource.value.count
     }
@@ -146,6 +142,14 @@ extension HomeViewController: UITableViewDataSource {
         return tableView.getWith(cellViewModel: viewModel.getViewModelAt(indexPath: indexPath),
                                  indexPath: indexPath,
                                  delegate: self)
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as? UITableViewHeaderFooterView)?.contentView.backgroundColor = UIColor.white
+        (view as? UITableViewHeaderFooterView)?.textLabel?.textColor = UIColor.black
     }
 }
 
