@@ -69,7 +69,7 @@ class ProviderProfileViewController: UIViewController {
     private func setupBindings() {
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         
-        viewModel.isLoading.observe = { isLoading in
+        viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
         }
         

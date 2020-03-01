@@ -14,7 +14,6 @@ class EmailLoginViewController: UIViewController {
     @IBOutlet private weak var mainStackview: UIStackView!
     @IBOutlet private weak var emailTextField: MTextField!
     @IBOutlet private weak var passwordTextField: MTextField!
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var loginButton: MButton!
     
     // MARK: - IBActions
@@ -38,12 +37,16 @@ class EmailLoginViewController: UIViewController {
     // MARK: - Private Methods
     private func setupUI() {
         title = viewModel.title
-        viewModel.isLoading.bindTo(activityIndicator, to: .state)
+        
+        viewModel.isLoading.listen { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
+        }
+        
         viewModel.controlsEnabled.bindTo(emailTextField, to: .state)
         viewModel.controlsEnabled.bindTo(passwordTextField, to: .state)
         viewModel.controlsEnabled.bindTo(loginButton, to: .state)
 
-        viewModel.status.observe = { [weak self] status in
+        viewModel.status.listen { [weak self] status in
             guard let self = self else { return }
             
             switch status {

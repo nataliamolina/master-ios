@@ -53,7 +53,7 @@ class CheckoutViewController: UIViewController {
     private func setupBindings() {
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         
-        viewModel.status.observe = { [weak self] status in
+        viewModel.status.listen { [weak self] status in
             switch status {
             case .fieldError(let name):
                 self?.showWarning(message: Lang.completeField + name.lowercased())
@@ -66,7 +66,7 @@ class CheckoutViewController: UIViewController {
             }
         }
         
-        viewModel.isLoading.observe = { isLoading in
+        viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
         }
     }

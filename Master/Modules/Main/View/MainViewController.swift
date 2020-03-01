@@ -17,7 +17,6 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var emailLoginButton: MButton!
     @IBOutlet private weak var registerButton: MButton!
     @IBOutlet private weak var signInButton: GIDSignInButton!
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - UI References
     @IBAction func emailLoginButtonAction() {
@@ -87,11 +86,14 @@ class MainViewController: UIViewController {
     }
     
     private func setupBindings() {
-        viewModel.isLoading.bindTo(activityIndicator, to: .state)
+        viewModel.isLoading.listen { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
+        }
+        
         viewModel.controlsEnabled.bindTo(emailLoginButton, to: .state)
         viewModel.controlsEnabled.bindTo(registerButton, to: .state)
         
-        viewModel.status.observe = { [weak self] status in
+        viewModel.status.listen { [weak self] status in
             guard let self = self else { return }
             
             switch status {
@@ -147,7 +149,7 @@ extension MainViewController {
     
     @objc private func playerItemDidReachEnd(_ notification: Notification) {
         if let player: AVPlayerItem = notification.object as? AVPlayerItem {
-            player.seek(to: .zero)
+            player.seek(to: .zero, completionHandler: nil)
         }
     }
 }

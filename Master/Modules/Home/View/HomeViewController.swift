@@ -57,6 +57,8 @@ class HomeViewController: UIViewController {
         setupBindings()
         
         pendingView.isHidden = true
+        pendingView.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                                action: #selector(pendingViewTapped)))
         
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -69,7 +71,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupBindings() {
-        viewModel.hasPendingOrders.observe = { hasPendingOrders in
+        viewModel.hasPendingOrders.listen { hasPendingOrders in
             UIView.animate(withDuration: 0.4) { [weak self] in
                 self?.pendingView.isHidden = !hasPendingOrders
             }
@@ -78,7 +80,7 @@ class HomeViewController: UIViewController {
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         viewModel.totalOrders.bindTo(pendingLabel, to: .text)
         
-        viewModel.isLoading.observe = { isLoading in
+        viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
         }
     }
@@ -100,6 +102,10 @@ class HomeViewController: UIViewController {
     
     @objc private func menuButtonTapped() {
         showMenu(router: router)
+    }
+    
+    @objc private func pendingViewTapped() {
+        router.transition(to: .orders)
     }
 }
 

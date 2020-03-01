@@ -33,7 +33,7 @@ class RegisterViewModel {
         self.loginService = loginService ?? defaultLoginService
         self.service = service ?? defaultService
         
-        isLoading.observe = { [weak self] value in
+        isLoading.listen { [weak self] value in
             self?.controlsEnabled.value = !value
         }
     }

@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Master" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="TXf-HZ-a9a" id="E8u-yY-z5J"/>
                 <outlet property="emailTextField" destination="mja-aa-T6z" id="qoe-5c-F65"/>
                 <outlet property="mainStackview" destination="vnJ-KG-oTW" id="xoO-hs-mJ1"/>
                 <outlet property="namesTextField" destination="OrN-gd-Eb0" id="LMl-ax-br3"/>

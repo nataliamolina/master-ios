@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Master" customModuleProvider="target">
             <connections>
-                <outlet property="activityIndicator" destination="O2Q-o7-s4o" id="7Yu-GI-cZo"/>
                 <outlet property="emailLoginButton" destination="0Hx-av-2vF" id="5HR-Sc-KGF"/>
                 <outlet property="registerButton" destination="BXl-0C-KF9" id="J3X-Zy-OWN"/>
                 <outlet property="signInButton" destination="68i-ts-7xh" id="lmt-ch-nKW"/>
@@ -33,7 +32,7 @@
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1Lf-08-Fsb">
-                    <rect key="frame" x="50" y="244.5" width="314" height="407.5"/>
+                    <rect key="frame" x="50" y="264.5" width="314" height="367.5"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whitr_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2du-4q-3mf">
                             <rect key="frame" x="0.0" y="0.0" width="314" height="104"/>
@@ -63,12 +62,8 @@
                                 <constraint firstAttribute="height" constant="47" id="n3D-Y0-6gG"/>
                             </constraints>
                         </view>
-                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="O2Q-o7-s4o">
-                            <rect key="frame" x="0.0" y="287.5" width="314" height="20"/>
-                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </activityIndicatorView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hx-av-2vF" customClass="MButton" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="327.5" width="314" height="30"/>
+                            <rect key="frame" x="0.0" y="287.5" width="314" height="30"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                             <state key="normal" title="Button">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,7 +79,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-0C-KF9" customClass="MButton" customModule="Master" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="377.5" width="314" height="30"/>
+                            <rect key="frame" x="0.0" y="337.5" width="314" height="30"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                             <state key="normal" title="Button">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

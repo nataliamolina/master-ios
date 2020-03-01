@@ -15,7 +15,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var passwordTextField: MTextField!
     @IBOutlet private weak var phoneTextField: MTextField!
     @IBOutlet private weak var namesTextField: MTextField!
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var registerButton: MButton!
     
     // MARK: - IBActions
@@ -45,14 +44,13 @@ class RegisterViewController: UIViewController {
     // MARK: - Private Methods
     private func setupUI() {
         title = viewModel.title
-        viewModel.isLoading.bindTo(activityIndicator, to: .state)
         viewModel.controlsEnabled.bindTo(emailTextField, to: .state)
         viewModel.controlsEnabled.bindTo(passwordTextField, to: .state)
         viewModel.controlsEnabled.bindTo(phoneTextField, to: .state)
         viewModel.controlsEnabled.bindTo(namesTextField, to: .state)
         viewModel.controlsEnabled.bindTo(registerButton, to: .state)
         
-        viewModel.status.observe = { [weak self] status in
+        viewModel.status.listen { [weak self] status in
             guard let self = self else { return }
             
             switch status {
@@ -65,6 +63,10 @@ class RegisterViewController: UIViewController {
             default:
                 return
             }
+        }
+        
+        viewModel.isLoading.listen { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
         }
         
         addIconInNavigationBar()

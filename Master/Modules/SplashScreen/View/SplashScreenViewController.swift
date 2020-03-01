@@ -48,7 +48,7 @@ class SplashScreenViewController: UIViewController {
     }
     
     private func setupBindings() {
-        viewModel.status.observe = { [weak self] status in
+        viewModel.status.listen { [weak self] status in
             switch status {
             case .preloadReady(let hasSession):
                 self?.route(toHome: hasSession)

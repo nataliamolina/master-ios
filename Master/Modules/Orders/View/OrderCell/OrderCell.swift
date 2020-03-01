@@ -24,7 +24,8 @@ class OrderCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var orderCategoryLabel: UILabel!
     @IBOutlet private weak var orderStateLabel: UILabel!
     @IBOutlet private weak var providerImageView: UIImageView!
-    
+    @IBOutlet private weak var bottomView: UIView!
+
     // MARK: - Properties
     private weak var delegate: OrderCellDelegate?
     private var viewModel: OrderCellDataSource?
