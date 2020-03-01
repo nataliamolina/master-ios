@@ -87,3 +87,8 @@
 // Success Order
 "successOrder.title" = "¡Listo!";
 "successOrder.desc" = "To solicitud se ha procesado con éxito, pronto tendrás noticias de tu Máster.";
+
+// Legal
+"legal.title" = "Legal";
+"legal.tyc" = "Términos y condiciones";
+"legal.privacy" = "Privacidad";

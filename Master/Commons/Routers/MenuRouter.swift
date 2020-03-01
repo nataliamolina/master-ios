@@ -14,6 +14,7 @@ enum MenuRouterTransitions {
     case ordersList
     case legal
     case logout
+    case privacy
 }
 
 class MenuRouter: RouterBase<MenuRouterTransitions> {
@@ -43,6 +44,9 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
         case .logout:
             handleLogoutTransition()
             
+        case .privacy:
+            handleLegalTransition()
+            
         }
     }
     
@@ -68,6 +72,11 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     }
     
     private func handleLegalTransition() {
+        let viewController = LegalViewController()
+        
+        sideMenuNavigationController?.dismiss(animated: true) { [weak self] in
+            self?.navigationController.pushViewController(viewController, animated: true)
+        }
     }
     
     private func handleOrdersTransition() {

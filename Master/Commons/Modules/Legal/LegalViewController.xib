@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LegalViewController" customModule="Master" customModuleProvider="target">
+            <connections>
+                <outlet property="privacyButton" destination="3Md-Wt-KEc" id="Ifx-R6-qgd"/>
+                <outlet property="termsButton" destination="AWv-Gi-oDV" id="2hT-Bs-8ri"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="J7Q-oj-BhU" id="2f7-In-ALB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyv-hH-wDF">
+                    <rect key="frame" x="20" y="44" width="374" height="41"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="legal.title"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1qU-4Q-vgq">
+                    <rect key="frame" x="20" y="105" width="374" height="47"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWv-Gi-oDV" customClass="MButton" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="168.5" height="47"/>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="legal.tyc"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="termsButtonAction" destination="-1" eventType="touchUpInside" id="Hus-vh-oLg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Md-Wt-KEc" customClass="MButton" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="178.5" y="0.0" width="195.5" height="47"/>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="legal.privacy"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="privacyButtonAction" destination="-1" eventType="touchUpInside" id="O7e-cE-6tS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="Mu9-9M-t7S"/>
+                    </constraints>
+                </stackView>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7Q-oj-BhU">
+                    <rect key="frame" x="20" y="172" width="374" height="690"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="J7Q-oj-BhU" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8Sf-XY-VjJ"/>
+                <constraint firstItem="J7Q-oj-BhU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="DDP-rE-8Ns"/>
+                <constraint firstItem="1qU-4Q-vgq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Dtw-I9-tFd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1qU-4Q-vgq" secondAttribute="trailing" constant="20" id="QDz-2d-8Qy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fyv-hH-wDF" secondAttribute="trailing" constant="20" id="bYe-ON-ID9"/>
+                <constraint firstItem="Fyv-hH-wDF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hyK-z7-w9S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J7Q-oj-BhU" secondAttribute="trailing" constant="20" id="nvk-UW-7br"/>
+                <constraint firstItem="Fyv-hH-wDF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qwP-ba-CCo"/>
+                <constraint firstItem="1qU-4Q-vgq" firstAttribute="top" secondItem="Fyv-hH-wDF" secondAttribute="bottom" constant="20" id="x02-ky-ZsB"/>
+                <constraint firstItem="J7Q-oj-BhU" firstAttribute="top" secondItem="1qU-4Q-vgq" secondAttribute="bottom" constant="20" id="yTy-tt-Mr4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="150"/>
+        </view>
+    </objects>
+</document>

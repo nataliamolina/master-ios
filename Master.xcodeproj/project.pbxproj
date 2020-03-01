@@ -33,6 +33,8 @@
 		2C305D9B24008EFF005B76EB /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9A24008EFF005B76EB /* UIApplication+Extensions.swift */; };
 		2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9E2400A1DE005B76EB /* ProductSelectorResult.swift */; };
 		2C3160FC23F8B32500A5F6B8 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3160FB23F8B32500A5F6B8 /* AnimationType.swift */; };
+		2C3B8071240BFD8F00D4C6FE /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B806F240BFD8F00D4C6FE /* LegalViewController.swift */; };
+		2C3B8072240BFD8F00D4C6FE /* LegalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B8070240BFD8F00D4C6FE /* LegalViewController.xib */; };
 		2C3E0EED2408A299005453BA /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E0EEB2408A299005453BA /* DatePickerViewController.swift */; };
 		2C3E0EEE2408A299005453BA /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3E0EEC2408A299005453BA /* DatePickerViewController.xib */; };
 		2C3EB4E22405F894002BB2DA /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */; };
@@ -227,6 +229,8 @@
 		2C305D9A24008EFF005B76EB /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		2C305D9E2400A1DE005B76EB /* ProductSelectorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectorResult.swift; sourceTree = "<group>"; };
 		2C3160FB23F8B32500A5F6B8 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		2C3B806F240BFD8F00D4C6FE /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
+		2C3B8070240BFD8F00D4C6FE /* LegalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LegalViewController.xib; sourceTree = "<group>"; };
 		2C3E0EEB2408A299005453BA /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		2C3E0EEC2408A299005453BA /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
 		2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -546,6 +550,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		2C3B806E240BFD7900D4C6FE /* Legal */ = {
+			isa = PBXGroup;
+			children = (
+				2C3B806F240BFD8F00D4C6FE /* LegalViewController.swift */,
+				2C3B8070240BFD8F00D4C6FE /* LegalViewController.xib */,
+			);
+			path = Legal;
+			sourceTree = "<group>";
+		};
 		2C3E0EEA2408A284005453BA /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,6 +606,7 @@
 		2C7E7FA923F85BAC00D7835E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C3B806E240BFD7900D4C6FE /* Legal */,
 				2C7E7FB223F874F100D7835E /* Menu */,
 			);
 			path = Modules;
@@ -1363,6 +1377,7 @@
 				2C22B39823F8AFC300678A41 /* empty_state_anim.json in Resources */,
 				2C22B39B23F8AFC300678A41 /* payment_anim.json in Resources */,
 				2CA494D423F9989B00F87AD6 /* ProviderProfileViewController.xib in Resources */,
+				2C3B8072240BFD8F00D4C6FE /* LegalViewController.xib in Resources */,
 				A58132B823B4C7570032FC8B /* LaunchScreen.storyboard in Resources */,
 				2CFF4DA023F99A980024B3F1 /* ProviderServiceCell.xib in Resources */,
 				2CC73134240471CF006FF85D /* CheckoutHeaderCell.xib in Resources */,
@@ -1612,6 +1627,7 @@
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
 				2C55F3AF2408BAF600F458AC /* DatePicker.swift in Sources */,
 				2CFF4DBF23FA130B0024B3F1 /* OrderProviderService.swift in Sources */,
+				2C3B8071240BFD8F00D4C6FE /* LegalViewController.swift in Sources */,
 				2CFF4DAD23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift in Sources */,
 				2CC7313D24047500006FF85D /* CheckoutHeaderCellViewModel.swift in Sources */,
 				2CFF4DC623FA15760024B3F1 /* CommentCellViewModel.swift in Sources */,

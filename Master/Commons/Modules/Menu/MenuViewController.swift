@@ -22,6 +22,10 @@ class MenuViewController: UIViewController {
         router.transition(to: .ordersList)
     }
     
+    @IBAction func legalButtonAction() {
+        router.transition(to: .legal)
+    }
+    
     // MARK: - Properties
     private let router: MenuRouter
     private let viewModel = MenuViewModel()

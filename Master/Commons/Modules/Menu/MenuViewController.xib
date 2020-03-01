@@ -65,7 +65,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h38-xt-LKa">
-                            <rect key="frame" x="107" y="15" width="44.5" height="20.5"/>
+                            <rect key="frame" x="102" y="15" width="44.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                         <constraint firstItem="h38-xt-LKa" firstAttribute="centerY" secondItem="BGq-WO-JsN" secondAttribute="centerY" id="bF6-Cq-y7b"/>
                         <constraint firstAttribute="bottom" secondItem="2Rc-8W-df5" secondAttribute="bottom" id="fPd-kG-Cec"/>
                         <constraint firstItem="2Rc-8W-df5" firstAttribute="top" secondItem="LXZ-UM-ilv" secondAttribute="top" id="laY-af-hJW"/>
-                        <constraint firstItem="h38-xt-LKa" firstAttribute="leading" secondItem="BGq-WO-JsN" secondAttribute="trailing" constant="5" id="peq-M6-q4s"/>
+                        <constraint firstItem="h38-xt-LKa" firstAttribute="leading" secondItem="BGq-WO-JsN" secondAttribute="trailing" id="peq-M6-q4s"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z69-hM-KfF">
@@ -159,6 +159,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="menu.legal"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="legalButtonAction" destination="-1" eventType="touchUpInside" id="L7v-xb-5lI"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
