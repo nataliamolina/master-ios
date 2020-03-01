@@ -90,6 +90,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="bottomView" destination="ujL-ZE-CvG" id="JRW-n9-ZQq"/>
+                <outlet property="detailImageView" destination="xPi-Ox-vvG" id="068-89-t1h"/>
                 <outlet property="iconImageView" destination="cu9-6X-Ema" id="FlO-Xj-cHE"/>
                 <outlet property="titleLabel" destination="O8C-Zs-koL" id="Nfh-aN-qLB"/>
                 <outlet property="valueLabel" destination="cwi-sT-SbE" id="9Ow-Ha-Loh"/>

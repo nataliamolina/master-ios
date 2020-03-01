@@ -22,6 +22,7 @@ protocol CheckoutFieldCellDataSource {
     var image: UIImage? { get }
     var bottomLineVisible: Bool { get }
     var type: CheckoutFieldCellType { get }
+    var detailIconVisible: Bool { get }
 }
 
 class CheckoutFieldCellViewModel: CheckoutFieldCellDataSource, CellViewModelProtocol {
@@ -30,6 +31,7 @@ class CheckoutFieldCellViewModel: CheckoutFieldCellDataSource, CellViewModelProt
     let image: UIImage?
     let bottomLineVisible: Bool
     let identifier: String = CheckoutFieldCell.cellIdentifier
+    let detailIconVisible: Bool
     var type: CheckoutFieldCellType
     var date: Date?
     
@@ -44,11 +46,18 @@ class CheckoutFieldCellViewModel: CheckoutFieldCellDataSource, CellViewModelProt
         return formatter.string(from: date)
     }
     
-    init(title: String, value: String, image: UIImage?, bottomLineVisible: Bool = true, type: CheckoutFieldCellType) {
+    init(title: String,
+         value: String,
+         image: UIImage?,
+         bottomLineVisible: Bool = true,
+         type: CheckoutFieldCellType,
+         detailIconVisible: Bool = true) {
+        
         self.title = title
         self.value = value
         self.image = image
         self.bottomLineVisible = bottomLineVisible
         self.type = type
+        self.detailIconVisible = detailIconVisible
     }
 }

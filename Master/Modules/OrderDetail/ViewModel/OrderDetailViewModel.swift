@@ -67,16 +67,24 @@ class OrderDetailViewModel {
                                                              orderDate: Utils.jsonToFormattedDate(model.orderDate))
         
         let fieldsCells = [
-            CheckoutFieldCellViewModel(title: CheckoutLang.address, value: "", image: .gps, type: .address),
-            CheckoutFieldCellViewModel(title: CheckoutLang.city, value: CheckoutLang.bogota, image: .building, type: .city),
-            CheckoutFieldCellViewModel(title: CheckoutLang.dateAndHour, value: "", image: .calendar, type: .dates),
-            CheckoutFieldCellViewModel(title: CheckoutLang.notes, value: "", image: .note, type: .notes),
+            CheckoutFieldCellViewModel(title: CheckoutLang.address,
+                                       value: model.orderAddress,
+                                       image: .gps,
+                                       type: .address,
+                                       detailIconVisible: false),
             
-            CheckoutFieldCellViewModel(title: CheckoutLang.products,
-                                       value: CheckoutLang.cartTotal(getCartCountTotal()),
-                                       image: .cart,
+            CheckoutFieldCellViewModel(title: CheckoutLang.dateAndHour,
+                                       value: Utils.jsonToFormattedDate(model.orderDate),
+                                       image: .calendar,
+                                       type: .dates,
+                                       detailIconVisible: false),
+            
+            CheckoutFieldCellViewModel(title: CheckoutLang.notes, 
+                                       value: model.notes.isEmpty ? "-" : model.notes,
+                                       image: .note,
                                        bottomLineVisible: false,
-                                       type: .cart)
+                                       type: .notes,
+                                       detailIconVisible: false)
         ]
         
         dataSource.value.append(headerViewModel)

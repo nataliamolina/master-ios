@@ -18,6 +18,7 @@ class CheckoutFieldCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var valueLabel: UILabel!
     @IBOutlet private weak var bottomView: UIView!
+    @IBOutlet private weak var detailImageView: UIImageView!
 
     // MARK: - Properties
     private weak var delegate: CheckoutFieldCellDelegate?
@@ -45,6 +46,7 @@ class CheckoutFieldCell: UITableViewCell, ConfigurableCellProtocol {
             self.valueLabel.text = viewModel.value
         }
         
+        self.detailImageView.isHidden = !viewModel.detailIconVisible
         self.bottomView.isHidden = !viewModel.bottomLineVisible
     }
     
