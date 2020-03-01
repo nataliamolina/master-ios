@@ -13,6 +13,7 @@ enum HomeRouterTransitions {
     case providerDetail(viewModel: ProviderProfileViewModel)
     case checkout(viewModel: CheckoutViewModel)
     case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate?)
+    case orders
     case reserveDone
     case home
     case logout
@@ -54,6 +55,9 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
             
         case .checkout(let viewModel):
             handleCheckoutTransition(viewModel: viewModel)
+            
+        case .orders:
+            handleOrdersTransition()
             
         }
     }
@@ -102,8 +106,14 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleCompelteTextTransition(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate?) {
-          let viewController = CompleteTextViewController(viewModel: viewModel, delegate: delegate)
-          
-          navigationController.pushViewController(viewController, animated: true)
-      }
+        let viewController = CompleteTextViewController(viewModel: viewModel, delegate: delegate)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleOrdersTransition() {
+        let viewController = OrdersViewController()
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }

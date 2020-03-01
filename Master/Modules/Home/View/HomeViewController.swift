@@ -18,12 +18,12 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel = HomeViewModel()
-    private let router: RouterBase<HomeRouterTransitions>
+    private let router: HomeRouter
     private let heroTransition = HeroTransition()
 
     // MARK: - Life Cycle
     
-    init(router: RouterBase<HomeRouterTransitions>) {
+    init(router: HomeRouter) {
         self.router = router
         
         super.init(nibName: String(describing: HomeViewController.self), bundle: nil)
@@ -37,6 +37,18 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupNavigationGesture()
+        
+        if HomeViewModel.needsToOpenOrders {
+            HomeViewModel.needsToOpenOrders = false
+            
+            router.transition(to: .orders)
+        }
     }
     
     private func setupUI() {
