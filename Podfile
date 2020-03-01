@@ -26,7 +26,11 @@ end
 
 target 'Master' do
   commons
-end 
+end
+
+target 'Dev' do
+  commons
+end
 
 target 'MasterTests' do
   commons
