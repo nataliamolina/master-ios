@@ -117,6 +117,7 @@
 		2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */; };
 		2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */; };
 		2CD6715B240B6B14007917E8 /* OrderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6715A240B6B14007917E8 /* OrderCellViewModel.swift */; };
+		2CD6715E240B83E9007917E8 /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6715D240B83E9007917E8 /* MenuRouter.swift */; };
 		2CEECC972400C90A00C67D80 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC952400C90A00C67D80 /* CheckoutViewController.swift */; };
 		2CEECC982400C90A00C67D80 /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEECC962400C90A00C67D80 /* CheckoutViewController.xib */; };
 		2CEECC9C2400D22200C67D80 /* CheckoutFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC9B2400D22200C67D80 /* CheckoutFieldCell.swift */; };
@@ -310,6 +311,7 @@
 		2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServiceProtocol.swift; sourceTree = "<group>"; };
 		2CD6715A240B6B14007917E8 /* OrderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellViewModel.swift; sourceTree = "<group>"; };
+		2CD6715D240B83E9007917E8 /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
 		2CEECC952400C90A00C67D80 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		2CEECC962400C90A00C67D80 /* CheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutViewController.xib; sourceTree = "<group>"; };
 		2CEECC9B2400D22200C67D80 /* CheckoutFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFieldCell.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				2C198D2323F4E4FB00346395 /* MainRouter.swift */,
 				2C198D2523F4E6AF00346395 /* RouterBase.swift */,
 				2C829EC3240B205E00D7DD81 /* CheckoutRouter.swift */,
+				2CD6715D240B83E9007917E8 /* MenuRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -1636,6 +1639,7 @@
 				2C198D2423F4E4FB00346395 /* MainRouter.swift in Sources */,
 				2CC731422404769C006FF85D /* CheckoutViewModel.swift in Sources */,
 				2CF6ABBA23F7AE6700F9EF40 /* HomeEndpoints.swift in Sources */,
+				2CD6715E240B83E9007917E8 /* MenuRouter.swift in Sources */,
 				2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */,
 				2C99B27F24005929003525B9 /* MAnimatedTableViewCell.swift in Sources */,
 				A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */,

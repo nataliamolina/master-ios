@@ -9,17 +9,25 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+    // MARK: - UI References
+    @IBOutlet private weak var userNamesLabel: UILabel!
+    @IBOutlet private weak var userImageView: UIImageView!
+    
     // MARK: - UI Actions
     @IBAction private func logoutAction() {
         performLogout()
     }
     
+    @IBAction func ordersButtonAction() {
+        router.transition(to: .ordersList)
+    }
+    
     // MARK: - Properties
-    private let router: RouterBase<HomeRouterTransitions>
+    private let router: MenuRouter
     private let viewModel = MenuViewModel()
     
     // MARK: - Life Cycle
-    init(router: RouterBase<HomeRouterTransitions>) {
+    init(router: MenuRouter) {
         self.router = router
         
         super.init(nibName: String(describing: MenuViewController.self), bundle: nil)
@@ -31,9 +39,17 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI(firstName: Session.shared.profile.firstName,
+                imageUrl: Session.shared.profile.imageUrl)
     }
     
     // MARK: - Private Methods
+    private func setupUI(firstName: String, imageUrl: String) {
+        userNamesLabel.text = firstName
+        userImageView.kf.setImage(with: URL(string: imageUrl), placeholder: UIImage.avatar)
+    }
+    
     private func performLogout() {
         viewModel.logout()
 

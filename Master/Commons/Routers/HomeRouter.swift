@@ -16,8 +16,8 @@ enum HomeRouterTransitions {
     case orders
     case reserveDone
     case home
-    case logout
     case productSelector(viewModel: ProductSelectorDataSource, delegate: ProductSelectorDelegate)
+    case menu
 }
 
 class HomeRouter: RouterBase<HomeRouterTransitions> {
@@ -47,10 +47,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
             
         case .home:
             handleHomeTransition()
-            
-        case .logout:
-            handleLogoutTransition()
-            
+ 
         case .providerDetail(let viewModel):
             handleProviderDetailTransition(viewModel: viewModel)
             
@@ -62,6 +59,9 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
             
         case .productSelector(let viewModel, let delegate):
             handleProductSelectorTransition(viewModel: viewModel, delegate: delegate)
+            
+        case .menu:
+            handleMenuTransition()
             
         }
     }
@@ -86,9 +86,12 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         let viewController = ProductSelectorViewController(viewModel: viewModel, delegate: delegate)
         
         navigationController.pushViewController(viewController, animated: true)
-        
     }
     
+    private func handleMenuTransition() {
+        let menuRouter = MenuRouter(rootViewController: navigationController)
+        menuRouter.transition(to: .menu)
+    }
     
     private func handleHomeTransition() {
         let viewController = HomeViewController(router: self)
@@ -102,10 +105,6 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         let viewController = ServiceDetailViewController(viewModel: viewModel, router: self)
         
         navigationController.pushViewController(viewController, animated: true)
-    }
-    
-    private func handleLogoutTransition() {
-        navigationController.dismiss(animated: true, completion: nil)
     }
     
     private func handleProviderDetailTransition(viewModel: ProviderProfileViewModel) {

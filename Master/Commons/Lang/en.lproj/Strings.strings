@@ -26,6 +26,15 @@
 "general.state.paymentPending" = "Pendiente de pago";
 "general.state.paymentDone" = "Pago realizado";
 
+// Menu
+"menu.greetings" = "Hola, ";
+"menu.services" = "Servicios";
+"menu.orders" = "Mis pedidos";
+"menu.account" = "Mi cuenta";
+"menu.legal" = "Legal";
+"menu.help" = "Ayuda";
+"menu.logout" = "Cerrar sesión";
+
 // Main
 "main.title" = "¡Hola!";
 "main.desc" = "En Master encontrarás una persona para todas tus necesidades en casa.";

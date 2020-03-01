@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     private let viewModel = HomeViewModel()
     private let router: HomeRouter
     private let heroTransition = HeroTransition()
-
+    
     // MARK: - Life Cycle
     
     init(router: HomeRouter) {
@@ -101,7 +101,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func menuButtonTapped() {
-        showMenu(router: router)
+        router.transition(to: .menu)
     }
     
     @objc private func pendingViewTapped() {
@@ -125,6 +125,11 @@ extension HomeViewController: CategoryCellDelegate {
 
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as? UITableViewHeaderFooterView)?.contentView.backgroundColor = UIColor.white
+        (view as? UITableViewHeaderFooterView)?.textLabel?.textColor = UIColor.black
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.dataSource.value.count
     }

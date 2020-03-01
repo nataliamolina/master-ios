@@ -56,21 +56,6 @@ extension UIViewController {
         NotificationBanner(title: title, subtitle: message, style: .warning).show()
     }
     
-    func showMenu(router: RouterBase<HomeRouterTransitions>) {
-        let menuVC = MenuViewController(router: router)
-        
-        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: menuVC)
-        leftMenuNavigationController.setNavigationBarHidden(true, animated: false)
-        leftMenuNavigationController.menuWidth = UIScreen.main.bounds.width - (UIScreen.main.bounds.width / 4)
-        leftMenuNavigationController.statusBarEndAlpha = 0
-        
-        SideMenuManager.default.leftMenuNavigationController = leftMenuNavigationController
-        SideMenuManager.default.leftMenuNavigationController?.presentationStyle = .menuSlideIn
-        SideMenuManager.default.leftMenuNavigationController?.presentationStyle.presentingEndAlpha = 0.5
-        
-        present(leftMenuNavigationController, animated: true, completion: nil)
-    }
-    
     func disableTitle() {
         title = ""
     }
