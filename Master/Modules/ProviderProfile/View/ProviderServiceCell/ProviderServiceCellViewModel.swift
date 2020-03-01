@@ -45,6 +45,16 @@ class ProviderServiceCellViewModel: ProviderServiceCellDataSource, CellViewModel
     }
 }
 
+// MARK: - Equatable
+extension ProviderServiceCellViewModel: Equatable {
+    static func == (lhs: ProviderServiceCellViewModel, rhs: ProviderServiceCellViewModel) -> Bool {
+        let leftName = lhs.productName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        let rightName = rhs.productName.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        return leftName == rightName
+    }
+}
+
 // MARK: - ProductSelectorDataSource
 extension ProviderServiceCellViewModel: ProductSelectorDataSource {
     func getTotalPrice() -> Double {

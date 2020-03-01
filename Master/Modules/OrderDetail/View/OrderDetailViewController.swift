@@ -11,7 +11,13 @@ import UIKit
 class OrderDetailViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalLabel: UILabel!
     
+    // MARK: - UI Actions
+    @IBAction private func paymentButtonAction() {
+        
+    }
+
     // MARK: - Properties
     private let viewModel: OrderDetailViewModel
     
@@ -49,6 +55,7 @@ class OrderDetailViewController: UIViewController {
     }
     
     private func setupBindings() {
+        viewModel.formattedTotal.bindTo(totalLabel, to: .text)
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         
         viewModel.isLoading.listen { isLoading in

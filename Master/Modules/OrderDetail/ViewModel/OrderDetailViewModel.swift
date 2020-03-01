@@ -18,9 +18,10 @@ class OrderDetailViewModel {
     // MARK: - Properties
     private var cart = [OrderProviderService]()
     private let service: OrderDetailServiceProtocol
-    private typealias CheckoutLang = CheckoutConstants.Lang
     private let orderId: Int
-    
+    private typealias CheckoutLang = CheckoutConstants.Lang
+
+    let formattedTotal: Var<String> = Var("$0")
     let status = Var<OrderDetailViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource = Var<[CellViewModelProtocol]>([])
@@ -61,6 +62,8 @@ class OrderDetailViewModel {
     // MARK: - Private Methods
     
     private func responseToViewModels(model: Order) {
+        self.formattedTotal.value = model.grossTotal.toFormattedCurrency()
+        
         let headerViewModel = OrderDetailHeaderCellViewModel(orderId: model.id,
                                                              status: model.orderState.type,
                                                              providerName: model.provider.user.names,
@@ -119,7 +122,7 @@ class OrderDetailViewModel {
                                          productId: $0.getId())
         }
         
-        dataSource.value.append(contentsOf: products)
+        dataSource.value.append(contentsOf: getGroupedServices(models: products))
     }
     
     private func validateOrderRating() {
@@ -132,5 +135,19 @@ class OrderDetailViewModel {
             
             print(response)
         }
+    }
+    
+    private func getGroupedServices(models: [ProviderServiceCellViewModel]) -> [ProviderServiceCellViewModel] {
+        var result = [ProviderServiceCellViewModel]()
+        
+        for index in models.indices {
+            if let indexFound = result.firstIndex(where: { $0 == models[index] }) {
+                result[indexFound].productCount += 1
+            } else {
+                result.append(models[index])
+            }
+        }
+        
+        return result
     }
 }

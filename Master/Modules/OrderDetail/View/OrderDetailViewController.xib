@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderDetailViewController" customModule="Master" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="xS5-g2-eo8" id="UWj-bs-vDW"/>
+                <outlet property="totalLabel" destination="bF0-rs-09t" id="0Fn-fB-p8j"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,19 +21,69 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xS5-g2-eo8">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="782"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITO-j4-rAh">
+                    <rect key="frame" x="0.0" y="826" width="414" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktA-nx-Vav">
+                            <rect key="frame" x="20" y="26.5" width="35.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="orderDetail.total"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF0-rs-09t">
+                            <rect key="frame" x="65.5" y="22.5" width="54" height="25.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgm-8Y-7fq" customClass="MButton" customModule="Master" customModuleProvider="target">
+                            <rect key="frame" x="294" y="11.5" width="100" height="47"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="HSh-ol-Rmj"/>
+                                <constraint firstAttribute="height" constant="47" id="uM2-uU-obN"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="orderDetail.pay"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="paymentButtonAction" destination="-1" eventType="touchDragInside" id="2Uz-RF-DCX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.49701553580000002" green="0.76978808639999996" blue="0.70195633170000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="ktA-nx-Vav" firstAttribute="centerY" secondItem="ITO-j4-rAh" secondAttribute="centerY" id="6wc-iS-GD3"/>
+                        <constraint firstItem="kgm-8Y-7fq" firstAttribute="centerY" secondItem="ITO-j4-rAh" secondAttribute="centerY" id="78E-5v-hm9"/>
+                        <constraint firstItem="bF0-rs-09t" firstAttribute="leading" secondItem="ktA-nx-Vav" secondAttribute="trailing" constant="10" id="91l-mB-0bB"/>
+                        <constraint firstAttribute="height" constant="70" id="DRL-dP-C8A"/>
+                        <constraint firstItem="ktA-nx-Vav" firstAttribute="leading" secondItem="ITO-j4-rAh" secondAttribute="leading" constant="20" id="Ppv-rh-dYL"/>
+                        <constraint firstAttribute="trailing" secondItem="kgm-8Y-7fq" secondAttribute="trailing" constant="20" id="gBC-6n-2EP"/>
+                        <constraint firstItem="bF0-rs-09t" firstAttribute="centerY" secondItem="ktA-nx-Vav" secondAttribute="centerY" id="vTl-JS-fjI"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ITO-j4-rAh" firstAttribute="top" secondItem="xS5-g2-eo8" secondAttribute="bottom" id="0fg-5X-Ige"/>
+                <constraint firstItem="ITO-j4-rAh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1is-PP-cuD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xS5-g2-eo8" secondAttribute="trailing" id="EmT-w9-dqr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xS5-g2-eo8" secondAttribute="bottom" id="bFS-Qa-K0d"/>
+                <constraint firstAttribute="bottom" secondItem="ITO-j4-rAh" secondAttribute="bottom" id="Wjy-PL-jcY"/>
                 <constraint firstItem="xS5-g2-eo8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lBy-bh-ni7"/>
+                <constraint firstItem="ITO-j4-rAh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pot-6W-SV6"/>
                 <constraint firstItem="xS5-g2-eo8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uu1-JX-jsq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="154"/>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </view>
     </objects>
 </document>

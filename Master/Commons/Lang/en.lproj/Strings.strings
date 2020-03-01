@@ -92,3 +92,8 @@
 "legal.title" = "Legal";
 "legal.tyc" = "Términos y condiciones";
 "legal.privacy" = "Privacidad";
+
+// Order Detail
+"orderDetail.title" = "Pedido #";
+"orderDetail.total" = "Total";
+"orderDetail.pay" = "Pagar";
