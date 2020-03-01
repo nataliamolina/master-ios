@@ -17,6 +17,7 @@ enum HomeRouterTransitions {
     case reserveDone
     case home
     case logout
+    case productSelector(viewModel: ProductSelectorDataSource, delegate: ProductSelectorDelegate)
 }
 
 class HomeRouter: RouterBase<HomeRouterTransitions> {
@@ -59,6 +60,9 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         case .orders:
             handleOrdersTransition()
             
+        case .productSelector(let viewModel, let delegate):
+            handleProductSelectorTransition(viewModel: viewModel, delegate: delegate)
+            
         }
     }
     
@@ -75,6 +79,16 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         navigationController.hero.isEnabled = true
         navigationController.hero.modalAnimationType = .zoom
     }
+    
+    private func handleProductSelectorTransition(viewModel: ProductSelectorDataSource,
+                                                 delegate: ProductSelectorDelegate) {
+        
+        let viewController = ProductSelectorViewController(viewModel: viewModel, delegate: delegate)
+        
+        navigationController.pushViewController(viewController, animated: true)
+        
+    }
+    
     
     private func handleHomeTransition() {
         let viewController = HomeViewController(router: self)

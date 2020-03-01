@@ -91,15 +91,13 @@ extension ProviderProfileViewController: ProviderServiceCellDelegate {
             return
         }
         
-        ProductSelector.show(in: self, viewModel: viewModel, delegate: self)
+        router.transition(to: .productSelector(viewModel: viewModel, delegate: self))
     }
 }
 
 // MARK: - ProductSelectorDelegate
 extension ProviderProfileViewController: ProductSelectorDelegate {
     func productChanged(result: ProductSelectorResult) {}
-    
-    func cancelButtonTapped() {}
     
     func doneButtonTapped(result: ProductSelectorResult) {
         if !isTotalViewVisible {
