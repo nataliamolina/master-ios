@@ -13,6 +13,7 @@ enum CheckoutViewModelStatus {
     case undefined
     case error(error: String?)
     case fieldError(name: String)
+    case orderSucceded
 }
 
 private enum Sections: Int {
@@ -174,10 +175,16 @@ class CheckoutViewModel {
         
         isLoading.value = true
         
-        service.performCheckout(request: request) { [weak self] (result: Order?, error: CMError?) in
+        service.performCheckout(request: request) { [weak self] (_, error: CMError?) in
             self?.isLoading.value = false
             
-            print(result)
+            if let error = error {
+                self?.status.value = .error(error: error.error)
+                
+                return
+            }
+            
+            self?.status.value = .orderSucceded
         }
     }
     

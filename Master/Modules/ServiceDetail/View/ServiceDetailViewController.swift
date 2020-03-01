@@ -38,14 +38,6 @@ class ServiceDetailViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if viewModel.dataSource.value.isEmpty {
-            viewModel.fetchDetail()
-        }
-    }
-    
     // MARK: - Private Methods
     
     private func setupUI() {
@@ -59,6 +51,8 @@ class ServiceDetailViewController: UIViewController {
         tableView.registerNib(ProviderCell.self)
         
         setupBindings()
+        
+        viewModel.fetchDetail()
     }
     
     private func setupBindings() {
@@ -74,9 +68,8 @@ class ServiceDetailViewController: UIViewController {
         
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         
-        viewModel.isLoading.observe = { [weak self] isLoading in
-            guard let self = self else { return }
-            isLoading ? Loader.show(in: self) : Loader.dismiss()
+        viewModel.isLoading.observe = { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
         }
     }
     

@@ -1,5 +1,5 @@
 //
-//  LoaderViewController.swift
+//  LoaderView.swift
 //  Master
 //
 //  Created by Carlos Mejía on 29/02/20.
@@ -9,7 +9,7 @@
 import UIKit
 import Lottie
 
-class LoaderViewController: UIViewController {
+class LoaderView: UIView {
     // MARK: - UI References
     @IBOutlet private weak var animationView: UIView!
     
@@ -17,32 +17,32 @@ class LoaderViewController: UIViewController {
     private let animationTime: TimeInterval = 0.2
     
     // MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        showLoader()
-    }
-    
     // MARK: - Public Methods
-    func dismissAnimated() {
+    func dismissAnimated(onComplete: (() -> Void)?) {
         UIView.animate(withDuration: animationTime, animations: { [weak self] in
             self?.animationView.alpha = 0
-            self?.view.backgroundColor = .clear
-            self?.view.layoutIfNeeded()
-        }, completion: { [weak self] _ in
-            self?.dismiss(animated: false, completion: nil)
+            self?.backgroundColor = .clear
+            }, completion: { _ in
+                onComplete?()
         })
+    }
+    
+    func showLoader() {
+        UIView.animate(withDuration: animationTime) { [weak self] in
+            self?.animationView.alpha = 1
+            self?.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        }
     }
     
     // MARK: - Private Methods
     private func setupUI() {
-        view.backgroundColor = .clear
+        backgroundColor = .clear
         animationView.alpha = 0
         
         animationView.layer.cornerRadius = 15
@@ -54,13 +54,5 @@ class LoaderViewController: UIViewController {
         starAnimationView.loopMode = .loop
         
         animationView.addSubview(starAnimationView)
-    }
-    
-    private func showLoader() {
-        UIView.animate(withDuration: animationTime) { [weak self] in
-            self?.animationView.alpha = 1
-            self?.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
-            self?.view.layoutIfNeeded()
-        }
     }
 }

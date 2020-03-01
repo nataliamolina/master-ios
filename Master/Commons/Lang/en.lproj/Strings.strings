@@ -65,3 +65,7 @@
 
 // Date Picker
 "datePicker.title" = "Fecha y hora";
+
+// Success Order
+"successOrder.title" = "¡Listo!";
+"successOrder.desc" = "To solicitud se ha procesado con éxito, pronto tendrás noticias de tu Máster.";

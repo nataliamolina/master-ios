@@ -64,6 +64,9 @@
 		2C7E7FC823F8A17200D7835E /* ProviderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC723F8A17200D7835E /* ProviderCellViewModel.swift */; };
 		2C829EBB240AD4FD00D7DD81 /* loader_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C829EBA240AD4FC00D7DD81 /* loader_anim.json */; };
 		2C829EBD240B16ED00D7DD81 /* CheckoutServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EBC240B16ED00D7DD81 /* CheckoutServiceProtocol.swift */; };
+		2C829EC1240B1CB500D7DD81 /* SuccessOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EBF240B1CB500D7DD81 /* SuccessOrderViewController.swift */; };
+		2C829EC2240B1CB500D7DD81 /* SuccessOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C829EC0240B1CB500D7DD81 /* SuccessOrderViewController.xib */; };
+		2C829EC4240B205E00D7DD81 /* CheckoutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EC3240B205E00D7DD81 /* CheckoutRouter.swift */; };
 		2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* Storage.swift */; };
 		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
 		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
@@ -74,8 +77,8 @@
 		2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */; };
 		2C976A06240AC2B40073DD07 /* OrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A05240AC2B40073DD07 /* OrderRequest.swift */; };
 		2C976A08240AC39B0073DD07 /* CheckoutEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A07240AC39B0073DD07 /* CheckoutEndpoints.swift */; };
-		2C976A0C240ACF070073DD07 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A0A240ACF070073DD07 /* LoaderViewController.swift */; };
-		2C976A0D240ACF070073DD07 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C976A0B240ACF070073DD07 /* LoaderViewController.xib */; };
+		2C976A0C240ACF070073DD07 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A0A240ACF070073DD07 /* LoaderView.swift */; };
+		2C976A0D240ACF070073DD07 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C976A0B240ACF070073DD07 /* LoaderView.xib */; };
 		2C976A11240AD0F20073DD07 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A10240AD0F20073DD07 /* Loader.swift */; };
 		2C99B27F24005929003525B9 /* MAnimatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */; };
 		2CA494D323F9989B00F87AD6 /* ProviderProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494D123F9989B00F87AD6 /* ProviderProfileViewController.swift */; };
@@ -245,6 +248,9 @@
 		2C7E7FC723F8A17200D7835E /* ProviderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCellViewModel.swift; sourceTree = "<group>"; };
 		2C829EBA240AD4FC00D7DD81 /* loader_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_anim.json; sourceTree = "<group>"; };
 		2C829EBC240B16ED00D7DD81 /* CheckoutServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutServiceProtocol.swift; sourceTree = "<group>"; };
+		2C829EBF240B1CB500D7DD81 /* SuccessOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOrderViewController.swift; sourceTree = "<group>"; };
+		2C829EC0240B1CB500D7DD81 /* SuccessOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessOrderViewController.xib; sourceTree = "<group>"; };
+		2C829EC3240B205E00D7DD81 /* CheckoutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutRouter.swift; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -255,8 +261,8 @@
 		2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManagerProtocol.swift; sourceTree = "<group>"; };
 		2C976A05240AC2B40073DD07 /* OrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequest.swift; sourceTree = "<group>"; };
 		2C976A07240AC39B0073DD07 /* CheckoutEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutEndpoints.swift; sourceTree = "<group>"; };
-		2C976A0A240ACF070073DD07 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
-		2C976A0B240ACF070073DD07 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
+		2C976A0A240ACF070073DD07 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		2C976A0B240ACF070073DD07 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		2C976A10240AD0F20073DD07 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAnimatedTableViewCell.swift; sourceTree = "<group>"; };
 		2CA494D123F9989B00F87AD6 /* ProviderProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileViewController.swift; sourceTree = "<group>"; };
@@ -415,6 +421,7 @@
 				2C73AE9823F4FE8700267899 /* HomeRouter.swift */,
 				2C198D2323F4E4FB00346395 /* MainRouter.swift */,
 				2C198D2523F4E6AF00346395 /* RouterBase.swift */,
+				2C829EC3240B205E00D7DD81 /* CheckoutRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -626,6 +633,15 @@
 			path = ProviderCell;
 			sourceTree = "<group>";
 		};
+		2C829EBE240B1CA400D7DD81 /* SuccessOrder */ = {
+			isa = PBXGroup;
+			children = (
+				2C829EBF240B1CB500D7DD81 /* SuccessOrderViewController.swift */,
+				2C829EC0240B1CB500D7DD81 /* SuccessOrderViewController.xib */,
+			);
+			path = SuccessOrder;
+			sourceTree = "<group>";
+		};
 		2C8C6C5E23F4B9D100FE06BE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,8 +694,8 @@
 		2C976A09240ACEF00073DD07 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
-				2C976A0A240ACF070073DD07 /* LoaderViewController.swift */,
-				2C976A0B240ACF070073DD07 /* LoaderViewController.xib */,
+				2C976A0A240ACF070073DD07 /* LoaderView.swift */,
+				2C976A0B240ACF070073DD07 /* LoaderView.xib */,
 				2C976A10240AD0F20073DD07 /* Loader.swift */,
 			);
 			path = Loader;
@@ -1033,6 +1049,7 @@
 		A5F30D3B23B4C7F6005258A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C829EBE240B1CA400D7DD81 /* SuccessOrder */,
 				2CEECC942400C66A00C67D80 /* Checkout */,
 				2CA494CB23F9977700F87AD6 /* ProviderProfile */,
 				2CF6ABD023F7D82D00F9EF40 /* ServiceDetail */,
@@ -1287,6 +1304,7 @@
 				A58132B823B4C7570032FC8B /* LaunchScreen.storyboard in Resources */,
 				2CFF4DA023F99A980024B3F1 /* ProviderServiceCell.xib in Resources */,
 				2CC73134240471CF006FF85D /* CheckoutHeaderCell.xib in Resources */,
+				2C829EC2240B1CB500D7DD81 /* SuccessOrderViewController.xib in Resources */,
 				A5F30D3923B4C7DE005258A8 /* SplashScreenViewController.xib in Resources */,
 				2C7E7FAD23F85BC000D7835E /* MenuViewController.xib in Resources */,
 				A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */,
@@ -1312,7 +1330,7 @@
 				A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */,
 				2C22B39923F8AFC300678A41 /* loading_order_anim.json in Resources */,
 				2C22B39A23F8AFC300678A41 /* empty_state_providers.json in Resources */,
-				2C976A0D240ACF070073DD07 /* LoaderViewController.xib in Resources */,
+				2C976A0D240ACF070073DD07 /* LoaderView.xib in Resources */,
 				2CF6ABD423F7D84500F9EF40 /* ServiceDetailViewController.xib in Resources */,
 				2CEECCA02400D37B00C67D80 /* CheckoutFieldCell.xib in Resources */,
 			);
@@ -1476,11 +1494,12 @@
 				2C8C6C6523F4BB3400FE06BE /* User.swift in Sources */,
 				A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */,
 				2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */,
-				2C976A0C240ACF070073DD07 /* LoaderViewController.swift in Sources */,
+				2C976A0C240ACF070073DD07 /* LoaderView.swift in Sources */,
 				2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */,
 				2C55F3B12408DE9D00F458AC /* CheckoutService.swift in Sources */,
 				2C73AE9123F4EA4E00267899 /* LoginServiceProtocol.swift in Sources */,
 				2CEECC972400C90A00C67D80 /* CheckoutViewController.swift in Sources */,
+				2C829EC1240B1CB500D7DD81 /* SuccessOrderViewController.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
 				2C42088E23F647E00058873D /* MainViewModel.swift in Sources */,
 				2C829EBD240B16ED00D7DD81 /* CheckoutServiceProtocol.swift in Sources */,
@@ -1492,6 +1511,7 @@
 				2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */,
 				2CFF4DBD23FA007B0024B3F1 /* SelectorCellViewModel.swift in Sources */,
 				2C7E7FBA23F89A6E00D7835E /* ProviderWithScore.swift in Sources */,
+				2C829EC4240B205E00D7DD81 /* CheckoutRouter.swift in Sources */,
 				2C2B1AB923F24B0E00243D3E /* UIImage+Extensions.swift in Sources */,
 				2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */,
 				2CF6ABBE23F7AF0200F9EF40 /* OrdersService.swift in Sources */,

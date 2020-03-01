@@ -97,9 +97,8 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleCheckoutTransition(viewModel: CheckoutViewModel) {
-        let viewController = CheckoutViewController(router: self, viewModel: viewModel)
-        
-        navigationController.pushViewController(viewController, animated: true)
+        let checkoutRouter = CheckoutRouter(rootViewController: navigationController)
+        checkoutRouter.transition(to: .checkout(viewModel: viewModel))
     }
     
     private func handleCompelteTextTransition(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate?) {

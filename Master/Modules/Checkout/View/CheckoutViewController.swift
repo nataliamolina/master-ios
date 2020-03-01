@@ -15,10 +15,10 @@ class CheckoutViewController: UIViewController {
     // MARK: - Properties
     private typealias Lang = CheckoutConstants.Lang
     private let viewModel: CheckoutViewModel
-    private let router: RouterBase<HomeRouterTransitions>
+    private let router: RouterBase<CheckoutRouterTransitions>
     
     // MARK: - Life Cycle
-    init(router: RouterBase<HomeRouterTransitions>, viewModel: CheckoutViewModel) {
+    init(router: RouterBase<CheckoutRouterTransitions>, viewModel: CheckoutViewModel) {
         self.router = router
         self.viewModel = viewModel
         
@@ -58,14 +58,16 @@ class CheckoutViewController: UIViewController {
             case .fieldError(let name):
                 self?.showWarning(message: Lang.completeField + name.lowercased())
                 
+            case .orderSucceded:
+                self?.router.transition(to: .successOrder)
+                
             default:
                 return
             }
         }
         
-        viewModel.isLoading.observe = { [weak self] isLoading in
-            guard let self = self else { return }
-            isLoading ? Loader.show(in: self) : Loader.dismiss()
+        viewModel.isLoading.observe = { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
         }
     }
     

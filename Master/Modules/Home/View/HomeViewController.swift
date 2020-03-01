@@ -39,16 +39,6 @@ class HomeViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        setupNavigationGesture()
-        
-        if viewModel.dataSource.value.isEmpty {
-            viewModel.fetchServices()
-        }
-    }
-    
     private func setupUI() {
         disableTitle()
         
@@ -62,6 +52,8 @@ class HomeViewController: UIViewController {
         
         setupMenuIcon()
         setupLogoIcon()
+        
+        viewModel.fetchServices()
     }
     
     private func setupBindings() {
@@ -74,9 +66,8 @@ class HomeViewController: UIViewController {
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         viewModel.totalOrders.bindTo(pendingLabel, to: .text)
         
-        viewModel.isLoading.observe = { [weak self] isLoading in
-            guard let self = self else { return }
-            isLoading ? Loader.show(in: self) : Loader.dismiss()
+        viewModel.isLoading.observe = { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
         }
     }
     

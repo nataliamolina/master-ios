@@ -10,7 +10,7 @@ def firebase
 end
 
 def commons
-  pod 'EasyBinding', '~> 0.1.2'
+  pod 'EasyBinding', '~> 0.2.1'
   pod 'Simple-Networking', '~> 0.3.4'
   pod 'SimpleKeychain'
   pod 'Kingfisher', '~> 5.0'

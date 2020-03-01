@@ -47,14 +47,6 @@ class ProviderProfileViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if viewModel.dataSource.value.isEmpty {
-            viewModel.fetchProfile()
-        }
-    }
-    
     // MARK: - Private Methods
     private func setupUI() {
         disableTitle()
@@ -70,14 +62,15 @@ class ProviderProfileViewController: UIViewController {
         totalViewBottomConstraint.constant = -totalViewHeightConstraint.constant
         
         setupBindings()
+        
+        viewModel.fetchProfile()
     }
     
     private func setupBindings() {
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
         
-        viewModel.isLoading.observe = { [weak self] isLoading in
-            guard let self = self else { return }
-            isLoading ? Loader.show(in: self) : Loader.dismiss()
+        viewModel.isLoading.observe = { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
         }
         
         viewModel.formattedTotal.bindTo(totalLabel, to: .text)
