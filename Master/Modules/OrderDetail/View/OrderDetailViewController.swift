@@ -1,28 +1,26 @@
 //
-//  OrdersViewController.swift
+//  OrderDetailViewController.swift
 //  Master
 //
-//  Created by Carlos Mejía on 29/02/20.
+//  Created by Carlos Mejía on 1/03/20.
 //  Copyright © 2020 Master. All rights reserved.
 //
 
 import UIKit
 
-class OrdersViewController: UIViewController {
+class OrderDetailViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    private let router: OrdersRouter
-    private var viewModel: OrdersViewModel = {
-        return OrdersViewModel()
-    }()
+    private let viewModel: OrderDetailViewModel
     
     // MARK: - Life Cycle
-    init(router: OrdersRouter) {
-        self.router = router
+    
+    init(viewModel: OrderDetailViewModel) {
+        self.viewModel = viewModel
         
-        super.init(nibName: String(describing: OrdersViewController.self), bundle: nil)
+        super.init(nibName: String(describing: OrderDetailViewController.self), bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -39,16 +37,15 @@ class OrdersViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
-        disableTitle()
-        
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        tableView.registerNib(TitleCell.self)
-        tableView.registerNib(OrderCell.self)
-        
+        tableView.registerNib(OrderDetailHeaderCell.self)
+        tableView.registerNib(ProviderServiceCell.self)
+        tableView.registerNib(CheckoutFieldCell.self)
+
         setupBindings()
         
-        viewModel.fetchServices()
+        viewModel.fetchDetail()
     }
     
     private func setupBindings() {
@@ -60,17 +57,8 @@ class OrdersViewController: UIViewController {
     }
 }
 
-// MARK: - OrderCellDelegate
-extension OrdersViewController: OrderCellDelegate {
-    func cellTapped(_ cell: OrderCell, viewModel: OrderCellDataSource) {
-        let orderDetailViewModel = self.viewModel.getOrderDetailViewModel(with: viewModel)
-        
-        router.transition(to: .orderDetail(viewModel: orderDetailViewModel))
-    }
-}
-
 // MARK: - UITableViewDataSource
-extension OrdersViewController: UITableViewDataSource {
+extension OrderDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSource.value.count
     }

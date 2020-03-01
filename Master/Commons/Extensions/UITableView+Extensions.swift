@@ -18,7 +18,7 @@ extension UITableView {
                  indexPath: IndexPath,
                  delegate: Any?) -> UITableViewCell {
         
-        let identifier = cellViewModel?.identifier ?? ""
+        let identifier = cellViewModel?.identifier ?? "😭 This is a crash, i'm sorry."
         
         let cell = dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         (cell as? ConfigurableCellProtocol)?.setupWith(viewModel: cellViewModel,

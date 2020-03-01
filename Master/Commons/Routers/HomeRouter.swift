@@ -125,8 +125,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleOrdersTransition() {
-        let viewController = OrdersViewController()
-        
-        navigationController.pushViewController(viewController, animated: true)
+        let ordersRouter = OrdersRouter(rootViewController: navigationController)
+        ordersRouter.transition(to: .orders)
     }
 }

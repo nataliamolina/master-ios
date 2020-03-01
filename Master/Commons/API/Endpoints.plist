@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>validateOrderRatingById</key>
+	<string>orders/comments/validate/{orderId}</string>
+	<key>getOrderServicesById</key>
+	<string>orders/{orderId}/services</string>
+	<key>getOrderById</key>
+	<string>orders/{orderId}</string>
 	<key>postOrder</key>
 	<string>orders</string>
 	<key>getCommentsByProviderId</key>

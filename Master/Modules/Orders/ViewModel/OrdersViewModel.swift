@@ -52,6 +52,10 @@ class OrdersViewModel {
         return dataSource.value.safeContains(indexPath.row)
     }
     
+    func getOrderDetailViewModel(with cellViewModel: OrderCellDataSource) -> OrderDetailViewModel {
+        return OrderDetailViewModel(orderId: Int(cellViewModel.id) ?? 0)
+    }
+    
     // MARK: - Private Methods
     
     private func servicesToViewModels(models: [Order]) {
@@ -60,7 +64,7 @@ class OrdersViewModel {
                                providerName: $0.provider.user.names,
                                providerImageUrl: $0.provider.photoUrl,
                                orderTotal: $0.grossTotal,
-                               orderCategory: $0.serviceCategory.name,
+                               orderCategory: $0.serviceCategory?.name ?? "-",
                                orderState: $0.orderState.type,
                                isLastItem: $0.id == models.last?.id)
         })

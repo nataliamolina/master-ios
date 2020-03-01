@@ -80,10 +80,10 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     }
     
     private func handleOrdersTransition() {
-        let viewController = OrdersViewController()
-
-        sideMenuNavigationController?.dismiss(animated: true) { [weak self] in
-            self?.navigationController.pushViewController(viewController, animated: true)
+        let ordersRouter = OrdersRouter(rootViewController: navigationController)
+        
+        sideMenuNavigationController?.dismiss(animated: true) {
+            ordersRouter.transition(to: .orders)
         }
     }
     

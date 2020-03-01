@@ -23,7 +23,6 @@ class ServiceDetailViewModel {
     let isLoading = Var(false)
     let dataSource = Var<[CellViewModelProtocol]>([])
     
-    private(set) var sectionTitles = [String]()
     private let service: ServiceDetailServiceProtocol
     
     // MARK: - Life Cycle

@@ -22,7 +22,7 @@ struct Order: Codable {
     let id: Int
     let user: User
     let provider: Provider
-    let serviceCategory: ServiceCategory
+    let serviceCategory: ServiceCategory?
     let orderAddress: String
     let grossTotal: Double
     let createdAt: String
@@ -30,7 +30,7 @@ struct Order: Codable {
     var orderState: OrderState
     let notes: String
     let time: String?
-    let orderProviderServices: [OrderProviderService]
+    let orderProviderServices: [OrderProviderService]?
 }
 
 struct OrderState: Codable {

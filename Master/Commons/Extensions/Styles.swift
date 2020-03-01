@@ -16,6 +16,8 @@ struct Styles {
         .greenBorder: (.clear, UIColor.Master.green, UIColor.Master.green),
         .white: (.white, .clear, UIColor.Master.green),
         .green: (UIColor.Master.green, .clear, .white),
-        .onlyWhiteText: (.clear, .clear, .white)
+        .onlyWhiteText: (.clear, .clear, .white),
+        .redBorder: (.clear, UIColor.Master.red, UIColor.Master.red),
+        .yellow: (UIColor.Master.yellow, .clear, .white)
     ]
 }

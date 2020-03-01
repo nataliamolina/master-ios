@@ -8,13 +8,6 @@
 
 import Foundation
 
-protocol ServiceDetailServiceProtocol {
-    var connectionDependency: ConnectionManagerProtocol { get }
-    
-    func fetchServiceDetailById(_ id: Int,
-                                onComplete: @escaping (_ result: [ProviderWithScore]?, _ error: CMError?) -> Void)
-}
-
 class ServiceDetailService: ServiceDetailServiceProtocol {
     // MARK: - Properties
     let connectionDependency: ConnectionManagerProtocol
