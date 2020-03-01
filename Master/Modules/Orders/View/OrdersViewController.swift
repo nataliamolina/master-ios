@@ -31,6 +31,7 @@ class OrdersViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.registerNib(TitleCell.self)
+        tableView.registerNib(OrderCell.self)
         
         setupBindings()
         

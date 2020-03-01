@@ -17,6 +17,15 @@
 "general.bogota" = "Bogotá";
 "general.ups" = "¡Ups!";
 
+// States
+"general.state.acepted" = "Aceptado";
+"general.state.finished" = "Terminado";
+"general.state.inProgress" = "En progreso";
+"general.state.rejected" = "Rechazado";
+"general.state.pending" = "Pendiente";
+"general.state.paymentPending" = "Pendiente de pago";
+"general.state.paymentDone" = "Pago realizado";
+
 // Main
 "main.title" = "¡Hola!";
 "main.desc" = "En Master encontrarás una persona para todas tus necesidades en casa.";

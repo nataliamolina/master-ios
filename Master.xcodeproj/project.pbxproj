@@ -116,6 +116,7 @@
 		2CCFED7423F62BD3005E5CB1 /* RegisterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7323F62BD3005E5CB1 /* RegisterEndpoints.swift */; };
 		2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */; };
 		2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */; };
+		2CD6715B240B6B14007917E8 /* OrderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6715A240B6B14007917E8 /* OrderCellViewModel.swift */; };
 		2CEECC972400C90A00C67D80 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC952400C90A00C67D80 /* CheckoutViewController.swift */; };
 		2CEECC982400C90A00C67D80 /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEECC962400C90A00C67D80 /* CheckoutViewController.xib */; };
 		2CEECC9C2400D22200C67D80 /* CheckoutFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC9B2400D22200C67D80 /* CheckoutFieldCell.swift */; };
@@ -308,6 +309,7 @@
 		2CCFED7323F62BD3005E5CB1 /* RegisterEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndpoints.swift; sourceTree = "<group>"; };
 		2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServiceProtocol.swift; sourceTree = "<group>"; };
+		2CD6715A240B6B14007917E8 /* OrderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellViewModel.swift; sourceTree = "<group>"; };
 		2CEECC952400C90A00C67D80 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		2CEECC962400C90A00C67D80 /* CheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutViewController.xib; sourceTree = "<group>"; };
 		2CEECC9B2400D22200C67D80 /* CheckoutFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFieldCell.swift; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 			children = (
 				2C829ECE240B3E1E00D7DD81 /* OrderCell.swift */,
 				2C829ECF240B3E1E00D7DD81 /* OrderCell.xib */,
+				2CD6715A240B6B14007917E8 /* OrderCellViewModel.swift */,
 			);
 			path = OrderCell;
 			sourceTree = "<group>";
@@ -1662,6 +1665,7 @@
 				2CFF4DA923F9A0370024B3F1 /* CommentsResponse.swift in Sources */,
 				2CEECC9C2400D22200C67D80 /* CheckoutFieldCell.swift in Sources */,
 				2CAD87A9240485840063AEB2 /* CheckoutConstants.swift in Sources */,
+				2CD6715B240B6B14007917E8 /* OrderCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

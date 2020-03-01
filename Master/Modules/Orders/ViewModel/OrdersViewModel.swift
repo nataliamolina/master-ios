@@ -55,7 +55,15 @@ class OrdersViewModel {
     // MARK: - Private Methods
     
     private func servicesToViewModels(models: [Order]) {
-      
+        dataSource.value.append(contentsOf: models.map {
+            OrderCellViewModel(id: $0.id.asString,
+                               providerName: $0.provider.user.names,
+                               providerImageUrl: $0.provider.photoUrl,
+                               orderTotal: $0.grossTotal,
+                               orderCategory: $0.serviceCategory.name,
+                               orderState: $0.orderState.type,
+                               isLastItem: $0.id == models.last?.id)
+        })
     }
     
     private func addInitialViewModels() {
