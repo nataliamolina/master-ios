@@ -11,5 +11,5 @@ import Foundation
 struct ServerStatus: Codable {
     let isOnline: Bool
     let offlineMessage: String?
-    let helpUrl: String
+    let helpUrl: String?
 }

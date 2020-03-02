@@ -278,6 +278,14 @@
 		2C829ED8240B44FC00D7DD81 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829ED6240B44FC00D7DD81 /* TitleCell.swift */; };
 		2C829ED9240B44FC00D7DD81 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C829ED7240B44FC00D7DD81 /* TitleCell.xib */; };
 		2C829EDB240B459700D7DD81 /* TitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EDA240B459700D7DD81 /* TitleCellViewModel.swift */; };
+		2C88979C240C81D800423B11 /* PaymentezSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C889799240C81C500423B11 /* PaymentezSDK.framework */; };
+		2C88979D240C81D800423B11 /* PaymentezSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C889799240C81C500423B11 /* PaymentezSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C88979E240C832000423B11 /* PaymentezSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C889799240C81C500423B11 /* PaymentezSDK.framework */; };
+		2C88979F240C832000423B11 /* PaymentezSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C889799240C81C500423B11 /* PaymentezSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C8897A5240C852F00423B11 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8897A3240C852F00423B11 /* PaymentViewController.swift */; };
+		2C8897A6240C852F00423B11 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8897A3240C852F00423B11 /* PaymentViewController.swift */; };
+		2C8897A7240C852F00423B11 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8897A4240C852F00423B11 /* PaymentViewController.xib */; };
+		2C8897A8240C852F00423B11 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8897A4240C852F00423B11 /* PaymentViewController.xib */; };
 		2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* Storage.swift */; };
 		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
 		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
@@ -402,25 +410,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2C88978F240C7FD500423B11 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		2C889797240C803900423B11 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2C88979D240C81D800423B11 /* PaymentezSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8897A0240C832000423B11 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C88979F240C832000423B11 /* PaymentezSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -512,6 +522,9 @@
 		2C829ED6240B44FC00D7DD81 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		2C829ED7240B44FC00D7DD81 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		2C829EDA240B459700D7DD81 /* TitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellViewModel.swift; sourceTree = "<group>"; };
+		2C889799240C81C500423B11 /* PaymentezSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PaymentezSDK.framework; sourceTree = "<group>"; };
+		2C8897A3240C852F00423B11 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		2C8897A4240C852F00423B11 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -639,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78954D4C662121A06E470CE /* libPods-Dev.a in Frameworks */,
+				2C88979E240C832000423B11 /* PaymentezSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				448F534E2E89B59C562B66F2 /* libPods-Master.a in Frameworks */,
+				2C88979C240C81D800423B11 /* PaymentezSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,6 +1031,15 @@
 			path = TitleCell;
 			sourceTree = "<group>";
 		};
+		2C8897A2240C851D00423B11 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				2C8897A3240C852F00423B11 /* PaymentViewController.swift */,
+				2C8897A4240C852F00423B11 /* PaymentViewController.xib */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
 		2C8C6C5E23F4B9D100FE06BE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1355,6 +1379,7 @@
 		4B22BBC4B3B743F3ED2CE7CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C889799240C81C500423B11 /* PaymentezSDK.framework */,
 				80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */,
 				54DC24950A095F17F44DFC46 /* libPods-Dev.a */,
 				F7EF31F4F93F1D4F760BEAEE /* libPods-Master.a */,
@@ -1427,6 +1452,7 @@
 		A5F30D3B23B4C7F6005258A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C8897A2240C851D00423B11 /* Payment */,
 				2C3B8073240C0A1100D4C6FE /* OrderDetail */,
 				2C829EBE240B1CA400D7DD81 /* SuccessOrder */,
 				2CEECC942400C66A00C67D80 /* Checkout */,
@@ -1607,8 +1633,8 @@
 				2C3E515B240C79B500873495 /* [CP] Copy Pods Resources */,
 				2C3E515C240C79B500873495 /* SwiftLint */,
 				2C3E515D240C79B500873495 /* Crashlytics */,
-				2C88978F240C7FD500423B11 /* Embed Frameworks */,
 				2C889783240C7D7C00423B11 /* Paymentez */,
+				2C8897A0240C832000423B11 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1630,8 +1656,8 @@
 				12FDF0753FB6088A7AD72B2F /* [CP] Copy Pods Resources */,
 				2C7E7FBD23F89B4500D7835E /* SwiftLint */,
 				2C3EB4E32405FB5A002BB2DA /* Crashlytics */,
-				2C889797240C803900423B11 /* Embed Frameworks */,
 				2C889782240C7D6F00423B11 /* Paymentez */,
+				2C889797240C803900423B11 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1737,6 +1763,7 @@
 				2C3E514D240C79B500873495 /* OrderDetailViewController.xib in Resources */,
 				2C3E514E240C79B500873495 /* SelectorCell.xib in Resources */,
 				2C3E514F240C79B500873495 /* GoogleService-Info.plist in Resources */,
+				2C8897A7240C852F00423B11 /* PaymentViewController.xib in Resources */,
 				2C3E5150240C79B500873495 /* loader_anim.json in Resources */,
 				2C3E5151240C79B500873495 /* RegisterViewController.xib in Resources */,
 				2C3E5152240C79B500873495 /* DatePickerViewController.xib in Resources */,
@@ -1786,6 +1813,7 @@
 				2C3B8077240C0A2B00D4C6FE /* OrderDetailViewController.xib in Resources */,
 				2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */,
 				2C1218CD2405E7580098BE55 /* GoogleService-Info.plist in Resources */,
+				2C8897A8240C852F00423B11 /* PaymentViewController.xib in Resources */,
 				2C829EBB240AD4FD00D7DD81 /* loader_anim.json in Resources */,
 				A5F30D5E23B4D8DF005258A8 /* RegisterViewController.xib in Resources */,
 				2C3E0EEE2408A299005453BA /* DatePickerViewController.xib in Resources */,
@@ -1958,7 +1986,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaymentezSDK.framework/install_dynamic.sh\"\n";
+			shellScript = "#bash \"./PaymentezSDK.framework/install_dynamic.sh\"\n";
 		};
 		2C889783240C7D7C00423B11 /* Paymentez */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1976,7 +2004,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaymentezSDK.framework/install_dynamic.sh\"\n";
+			shellScript = "#bash \"./PaymentezSDK.framework/install_dynamic.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		595F2405D72E94154A4FBEFF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2129,6 +2158,7 @@
 				2C3E50EB240C79B500873495 /* OrderRequest.swift in Sources */,
 				2C3E50EC240C79B500873495 /* CellViewModelProtocol.swift in Sources */,
 				2C3E50ED240C79B500873495 /* LoginResponse.swift in Sources */,
+				2C8897A5240C852F00423B11 /* PaymentViewController.swift in Sources */,
 				2C3E50EE240C79B500873495 /* DatePicker.swift in Sources */,
 				2C3E50EF240C79B500873495 /* OrderProviderService.swift in Sources */,
 				2C3E50F0240C79B500873495 /* LegalViewController.swift in Sources */,
@@ -2283,6 +2313,7 @@
 				2C976A06240AC2B40073DD07 /* OrderRequest.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* CellViewModelProtocol.swift in Sources */,
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
+				2C8897A6240C852F00423B11 /* PaymentViewController.swift in Sources */,
 				2C55F3AF2408BAF600F458AC /* DatePicker.swift in Sources */,
 				2CFF4DBF23FA130B0024B3F1 /* OrderProviderService.swift in Sources */,
 				2C3B8071240BFD8F00D4C6FE /* LegalViewController.swift in Sources */,
@@ -2406,6 +2437,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Master/Commons/Config",
 					"$(PROJECT_DIR)/Master",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2442,6 +2474,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Master/Commons/Config",
 					"$(PROJECT_DIR)/Master",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Dev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2594,6 +2627,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Master/Commons/Config",
 					"$(PROJECT_DIR)/Master",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Master/Commons/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2629,6 +2663,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Master/Commons/Config",
 					"$(PROJECT_DIR)/Master",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Master/Commons/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

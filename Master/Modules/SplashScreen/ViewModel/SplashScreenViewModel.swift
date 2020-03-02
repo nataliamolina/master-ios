@@ -80,7 +80,8 @@ class SplashScreenViewModel {
         loginService.fetchUserSession { [weak self] (response: User?, error: CMError?) in
             
             guard let user = response, error == nil else {
-                self?.status.value = .error(error: error?.localizedDescription)
+                Session.shared.logout()
+                self?.status.value = .tokenExpired
                 
                 return
             }

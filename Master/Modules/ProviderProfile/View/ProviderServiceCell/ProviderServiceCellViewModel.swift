@@ -45,6 +45,7 @@ class ProviderServiceCellViewModel: ProviderServiceCellDataSource, CellViewModel
     }
 }
 
+// FIXME: this comparation is worng as hell
 // MARK: - Equatable
 extension ProviderServiceCellViewModel: Equatable {
     static func == (lhs: ProviderServiceCellViewModel, rhs: ProviderServiceCellViewModel) -> Bool {
