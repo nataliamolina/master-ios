@@ -109,21 +109,15 @@ class CompleteTextViewController: UIViewController {
         let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height
         
         backButtonBottomConstraint.constant = (keyboardHeight ?? 0) + backButtonBottomValue
-        performLayoutAnimations()
+        animateLayout()
     }
     
     @objc private func keyboardWillHide() {
         backButtonBottomConstraint.constant = backButtonBottomValue
-        performLayoutAnimations()
+        animateLayout()
     }
     
     @objc private func valueChanged() {
         viewModel.value = textField.text
-    }
-    
-    private func performLayoutAnimations() {
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.view.layoutIfNeeded()
-        }
     }
 }

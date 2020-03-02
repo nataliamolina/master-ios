@@ -97,3 +97,12 @@
 "orderDetail.title" = "Pedido #";
 "orderDetail.total" = "Total";
 "orderDetail.pay" = "Pagar";
+
+// Payment
+"payment.title" = "Pago";
+"payment.desc" = "Tu Master ha aceptado tu solicitud, ahora debes hacer el pago del servicio. ¡Ya casi acabamos!";
+"payment.pay" = "Pagar";
+"payment.total" = "Total";
+"payment.cardOwner" = "Propietario";
+"payment.cardNumber" = "Número de tarjeta";
+"payment.invalidCard" = "Porfavor Revisa nuevamente los datos de tu tarjeta";

@@ -59,4 +59,10 @@ extension UIViewController {
     func disableTitle() {
         title = ""
     }
+    
+    func animateLayout() {
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
+    }
 }
