@@ -7,10 +7,24 @@
 //
 
 import UIKit
+import PaymentezSDK
 
 class PaymentViewController: UIViewController {
-
+    // MARK: - UI References
+    @IBOutlet private weak var paymentezView: UIView!
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+    }
+    
+    // MARK: - Private Methods
+    private func setupUI() {
+        _ = addPaymentezWidget(toView: paymentezView,
+                               delegate: nil,
+                               uid: "testing uuid",
+                               email: "testing email")
     }
 }

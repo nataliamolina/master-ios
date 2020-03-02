@@ -15,16 +15,18 @@ class OrderDetailViewController: UIViewController {
     
     // MARK: - UI Actions
     @IBAction private func paymentButtonAction() {
-        
+        router.transition(to: .payment)
     }
 
     // MARK: - Properties
+    private let router: OrdersRouter
     private let viewModel: OrderDetailViewModel
     
     // MARK: - Life Cycle
     
-    init(viewModel: OrderDetailViewModel) {
+    init(viewModel: OrderDetailViewModel, router: OrdersRouter) {
         self.viewModel = viewModel
+        self.router = router
         
         super.init(nibName: String(describing: OrderDetailViewController.self), bundle: nil)
     }
@@ -43,6 +45,8 @@ class OrderDetailViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        disableTitle()
+        
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.registerNib(OrderDetailHeaderCell.self)

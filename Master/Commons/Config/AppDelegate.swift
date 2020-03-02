@@ -11,6 +11,7 @@ import Firebase
 import Localize
 import GoogleSignIn
 import UserNotifications
+import PaymentezSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        setupPaymentez()
         setupFirebase()
         setupPushNotificationsWith(application: application)
         setupInitialVC()
@@ -67,6 +69,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // MARK: - Private Methods
+    private func setupPaymentez() {
+        guard
+            let appCode = Utils.plist?.value(forKey: "PaymentezAppKey") as? String,
+            let appKey = Utils.plist?.value(forKey: "PaymentezAppCode") as? String else {
+                
+            return
+        }
+        
+        PaymentezSDKClient.setEnvironment(appCode, secretKey: appKey, testMode: true)
+    }
+    
     private func setupInitialVC() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = SplashScreenViewController()
