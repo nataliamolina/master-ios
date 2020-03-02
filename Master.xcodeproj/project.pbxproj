@@ -38,7 +38,7 @@
 		2C3B8076240C0A2B00D4C6FE /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8074240C0A2B00D4C6FE /* OrderDetailViewController.swift */; };
 		2C3B8077240C0A2B00D4C6FE /* OrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B8075240C0A2B00D4C6FE /* OrderDetailViewController.xib */; };
 		2C3B807C240C0AEE00D4C6FE /* OrderDetailEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807B240C0AEE00D4C6FE /* OrderDetailEndpoints.swift */; };
-		2C3B807E240C0B4800D4C6FE /* ServiceDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807D240C0B4800D4C6FE /* ServiceDetailServiceProtocol.swift */; };
+		2C3B807E240C0B4800D4C6FE /* ProviderListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807D240C0B4800D4C6FE /* ProviderListServiceProtocol.swift */; };
 		2C3B8080240C0B5B00D4C6FE /* OrderDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807F240C0B5B00D4C6FE /* OrderDetailService.swift */; };
 		2C3B8082240C0B7500D4C6FE /* OrderDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8081240C0B7500D4C6FE /* OrderDetailServiceProtocol.swift */; };
 		2C3B8086240C0D4F00D4C6FE /* OrderDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8084240C0D4F00D4C6FE /* OrderDetailHeaderCell.swift */; };
@@ -56,13 +56,13 @@
 		2C3E50A0240C79B500873495 /* OrderDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8084240C0D4F00D4C6FE /* OrderDetailHeaderCell.swift */; };
 		2C3E50A1240C79B500873495 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */; };
 		2C3E50A2240C79B500873495 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6523B4DA85005258A8 /* UITableView+Extensions.swift */; };
-		2C3E50A3240C79B500873495 /* ServiceDetailEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBB23F89AC600D7835E /* ServiceDetailEndpoint.swift */; };
+		2C3E50A3240C79B500873495 /* ProviderListServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBB23F89AC600D7835E /* ProviderListServiceEndpoint.swift */; };
 		2C3E50A4240C79B500873495 /* RouterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D2523F4E6AF00346395 /* RouterBase.swift */; };
 		2C3E50A5240C79B500873495 /* CompleteTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD87B32404AA230063AEB2 /* CompleteTextViewModel.swift */; };
 		2C3E50A6240C79B500873495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
-		2C3E50A7240C79B500873495 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD123F7D84500F9EF40 /* ServiceDetailViewController.swift */; };
+		2C3E50A7240C79B500873495 /* ProviderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD123F7D84500F9EF40 /* ProviderListViewController.swift */; };
 		2C3E50A8240C79B500873495 /* ButtonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7314924047B56006FF85D /* ButtonCellViewModel.swift */; };
-		2C3E50A9240C79B500873495 /* ServiceDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB623F89A2200D7835E /* ServiceDetailService.swift */; };
+		2C3E50A9240C79B500873495 /* ProviderListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB623F89A2200D7835E /* ProviderListService.swift */; };
 		2C3E50AA240C79B500873495 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829ECB240B3AC500D7DD81 /* UINavigationController+Extensions.swift */; };
 		2C3E50AB240C79B500873495 /* EmailLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC923F2745500243D3E /* EmailLoginService.swift */; };
 		2C3E50AC240C79B500873495 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829ED6240B44FC00D7DD81 /* TitleCell.swift */; };
@@ -121,7 +121,7 @@
 		2C3E50E1240C79B500873495 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC623F7B21000F9EF40 /* ProviderService.swift */; };
 		2C3E50E2240C79B500873495 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A10240AD0F20073DD07 /* Loader.swift */; };
 		2C3E50E3240C79B500873495 /* ProductSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76018623FE34AD00252531 /* ProductSelectorViewController.swift */; };
-		2C3E50E4240C79B500873495 /* ServiceDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807D240C0B4800D4C6FE /* ServiceDetailServiceProtocol.swift */; };
+		2C3E50E4240C79B500873495 /* ProviderListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807D240C0B4800D4C6FE /* ProviderListServiceProtocol.swift */; };
 		2C3E50E5240C79B500873495 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB223F7AD9200F9EF40 /* HomeService.swift */; };
 		2C3E50E6240C79B500873495 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9A24008EFF005B76EB /* UIApplication+Extensions.swift */; };
 		2C3E50E7240C79B500873495 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4123B4C8A0005258A8 /* Array+Extensions.swift */; };
@@ -186,7 +186,7 @@
 		2C3E5122240C79B500873495 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8074240C0A2B00D4C6FE /* OrderDetailViewController.swift */; };
 		2C3E5123240C79B500873495 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB823F9FE650024B3F1 /* SelectorCell.swift */; };
 		2C3E5124240C79B500873495 /* ProviderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC723F8A17200D7835E /* ProviderCellViewModel.swift */; };
-		2C3E5125240C79B500873495 /* ServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBE23F89DF200D7835E /* ServiceDetailViewModel.swift */; };
+		2C3E5125240C79B500873495 /* ProviderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBE23F89DF200D7835E /* ProviderListViewModel.swift */; };
 		2C3E5126240C79B500873495 /* ProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC323F8A0A600D7835E /* ProviderCell.swift */; };
 		2C3E5127240C79B500873495 /* CheckoutFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7313A24047401006FF85D /* CheckoutFieldCellViewModel.swift */; };
 		2C3E5128240C79B500873495 /* ProviderProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DA223F99D1C0024B3F1 /* ProviderProfileCell.swift */; };
@@ -235,7 +235,7 @@
 		2C3E5156240C79B500873495 /* empty_state_providers.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C22B39523F8AFC300678A41 /* empty_state_providers.json */; };
 		2C3E5157240C79B500873495 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C829ED7240B44FC00D7DD81 /* TitleCell.xib */; };
 		2C3E5158240C79B500873495 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C976A0B240ACF070073DD07 /* LoaderView.xib */; };
-		2C3E5159240C79B500873495 /* ServiceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD223F7D84500F9EF40 /* ServiceDetailViewController.xib */; };
+		2C3E5159240C79B500873495 /* ProviderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD223F7D84500F9EF40 /* ProviderListViewController.xib */; };
 		2C3E515A240C79B500873495 /* CheckoutFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEECC9F2400D37B00C67D80 /* CheckoutFieldCell.xib */; };
 		2C3EB4E22405F894002BB2DA /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */; };
 		2C42088B23F647680058873D /* GmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088A23F647680058873D /* GmailRequest.swift */; };
@@ -257,10 +257,10 @@
 		2C7E7FAC23F85BC000D7835E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */; };
 		2C7E7FAD23F85BC000D7835E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */; };
 		2C7E7FB123F8743E00D7835E /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */; };
-		2C7E7FB723F89A2200D7835E /* ServiceDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB623F89A2200D7835E /* ServiceDetailService.swift */; };
+		2C7E7FB723F89A2200D7835E /* ProviderListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB623F89A2200D7835E /* ProviderListService.swift */; };
 		2C7E7FBA23F89A6E00D7835E /* ProviderWithScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB923F89A6E00D7835E /* ProviderWithScore.swift */; };
-		2C7E7FBC23F89AC600D7835E /* ServiceDetailEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBB23F89AC600D7835E /* ServiceDetailEndpoint.swift */; };
-		2C7E7FBF23F89DF200D7835E /* ServiceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBE23F89DF200D7835E /* ServiceDetailViewModel.swift */; };
+		2C7E7FBC23F89AC600D7835E /* ProviderListServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBB23F89AC600D7835E /* ProviderListServiceEndpoint.swift */; };
+		2C7E7FBF23F89DF200D7835E /* ProviderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBE23F89DF200D7835E /* ProviderListViewModel.swift */; };
 		2C7E7FC523F8A0A600D7835E /* ProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC323F8A0A600D7835E /* ProviderCell.swift */; };
 		2C7E7FC623F8A0A600D7835E /* ProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC423F8A0A600D7835E /* ProviderCell.xib */; };
 		2C7E7FC823F8A17200D7835E /* ProviderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC723F8A17200D7835E /* ProviderCellViewModel.swift */; };
@@ -346,8 +346,8 @@
 		2CF6ABC923F7B23B00F9EF40 /* OrdersEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC823F7B23B00F9EF40 /* OrdersEndpoints.swift */; };
 		2CF6ABCB23F7B26A00F9EF40 /* OrdersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABCA23F7B26A00F9EF40 /* OrdersServiceProtocol.swift */; };
 		2CF6ABCD23F7B43000F9EF40 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABCC23F7B43000F9EF40 /* HomeViewModel.swift */; };
-		2CF6ABD323F7D84500F9EF40 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD123F7D84500F9EF40 /* ServiceDetailViewController.swift */; };
-		2CF6ABD423F7D84500F9EF40 /* ServiceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD223F7D84500F9EF40 /* ServiceDetailViewController.xib */; };
+		2CF6ABD323F7D84500F9EF40 /* ProviderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD123F7D84500F9EF40 /* ProviderListViewController.swift */; };
+		2CF6ABD423F7D84500F9EF40 /* ProviderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD223F7D84500F9EF40 /* ProviderListViewController.xib */; };
 		2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4D9D23F99A980024B3F1 /* ProviderServiceCell.swift */; };
 		2CFF4DA023F99A980024B3F1 /* ProviderServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4D9E23F99A980024B3F1 /* ProviderServiceCell.xib */; };
 		2CFF4DA423F99D1C0024B3F1 /* ProviderProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DA223F99D1C0024B3F1 /* ProviderProfileCell.swift */; };
@@ -469,7 +469,7 @@
 		2C3B8074240C0A2B00D4C6FE /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		2C3B8075240C0A2B00D4C6FE /* OrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailViewController.xib; sourceTree = "<group>"; };
 		2C3B807B240C0AEE00D4C6FE /* OrderDetailEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailEndpoints.swift; sourceTree = "<group>"; };
-		2C3B807D240C0B4800D4C6FE /* ServiceDetailServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailServiceProtocol.swift; sourceTree = "<group>"; };
+		2C3B807D240C0B4800D4C6FE /* ProviderListServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderListServiceProtocol.swift; sourceTree = "<group>"; };
 		2C3B807F240C0B5B00D4C6FE /* OrderDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailService.swift; sourceTree = "<group>"; };
 		2C3B8081240C0B7500D4C6FE /* OrderDetailServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailServiceProtocol.swift; sourceTree = "<group>"; };
 		2C3B8084240C0D4F00D4C6FE /* OrderDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailHeaderCell.swift; sourceTree = "<group>"; };
@@ -501,10 +501,10 @@
 		2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
-		2C7E7FB623F89A2200D7835E /* ServiceDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailService.swift; sourceTree = "<group>"; };
+		2C7E7FB623F89A2200D7835E /* ProviderListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderListService.swift; sourceTree = "<group>"; };
 		2C7E7FB923F89A6E00D7835E /* ProviderWithScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderWithScore.swift; sourceTree = "<group>"; };
-		2C7E7FBB23F89AC600D7835E /* ServiceDetailEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailEndpoint.swift; sourceTree = "<group>"; };
-		2C7E7FBE23F89DF200D7835E /* ServiceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewModel.swift; sourceTree = "<group>"; };
+		2C7E7FBB23F89AC600D7835E /* ProviderListServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderListServiceEndpoint.swift; sourceTree = "<group>"; };
+		2C7E7FBE23F89DF200D7835E /* ProviderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderListViewModel.swift; sourceTree = "<group>"; };
 		2C7E7FC323F8A0A600D7835E /* ProviderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCell.swift; sourceTree = "<group>"; };
 		2C7E7FC423F8A0A600D7835E /* ProviderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderCell.xib; sourceTree = "<group>"; };
 		2C7E7FC723F8A17200D7835E /* ProviderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCellViewModel.swift; sourceTree = "<group>"; };
@@ -585,8 +585,8 @@
 		2CF6ABC823F7B23B00F9EF40 /* OrdersEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersEndpoints.swift; sourceTree = "<group>"; };
 		2CF6ABCA23F7B26A00F9EF40 /* OrdersServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersServiceProtocol.swift; sourceTree = "<group>"; };
 		2CF6ABCC23F7B43000F9EF40 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		2CF6ABD123F7D84500F9EF40 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
-		2CF6ABD223F7D84500F9EF40 /* ServiceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceDetailViewController.xib; sourceTree = "<group>"; };
+		2CF6ABD123F7D84500F9EF40 /* ProviderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderListViewController.swift; sourceTree = "<group>"; };
+		2CF6ABD223F7D84500F9EF40 /* ProviderListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderListViewController.xib; sourceTree = "<group>"; };
 		2CFF4D9D23F99A980024B3F1 /* ProviderServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceCell.swift; sourceTree = "<group>"; };
 		2CFF4D9E23F99A980024B3F1 /* ProviderServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderServiceCell.xib; sourceTree = "<group>"; };
 		2CFF4DA223F99D1C0024B3F1 /* ProviderProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileCell.swift; sourceTree = "<group>"; };
@@ -942,8 +942,8 @@
 			isa = PBXGroup;
 			children = (
 				2C7E7FC023F8A07F00D7835E /* ProviderCell */,
-				2CF6ABD123F7D84500F9EF40 /* ServiceDetailViewController.swift */,
-				2CF6ABD223F7D84500F9EF40 /* ServiceDetailViewController.xib */,
+				2CF6ABD123F7D84500F9EF40 /* ProviderListViewController.swift */,
+				2CF6ABD223F7D84500F9EF40 /* ProviderListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -951,7 +951,7 @@
 		2C7E7FB423F89A0900D7835E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2C7E7FBE23F89DF200D7835E /* ServiceDetailViewModel.swift */,
+				2C7E7FBE23F89DF200D7835E /* ProviderListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -959,9 +959,9 @@
 		2C7E7FB523F89A0E00D7835E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2C7E7FB623F89A2200D7835E /* ServiceDetailService.swift */,
-				2C7E7FBB23F89AC600D7835E /* ServiceDetailEndpoint.swift */,
-				2C3B807D240C0B4800D4C6FE /* ServiceDetailServiceProtocol.swift */,
+				2C7E7FB623F89A2200D7835E /* ProviderListService.swift */,
+				2C7E7FBB23F89AC600D7835E /* ProviderListServiceEndpoint.swift */,
+				2C3B807D240C0B4800D4C6FE /* ProviderListServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1325,7 +1325,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2CF6ABD023F7D82D00F9EF40 /* ServiceDetail */ = {
+		2CF6ABD023F7D82D00F9EF40 /* ProviderListViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2C7E7FB823F89A5600D7835E /* Models */,
@@ -1333,7 +1333,7 @@
 				2C7E7FB423F89A0900D7835E /* ViewModel */,
 				2C7E7FB323F899C200D7835E /* View */,
 			);
-			path = ServiceDetail;
+			path = ProviderListViewController;
 			sourceTree = "<group>";
 		};
 		2CFF4D9C23F99A830024B3F1 /* ProviderServiceCell */ = {
@@ -1457,7 +1457,7 @@
 				2C829EBE240B1CA400D7DD81 /* SuccessOrder */,
 				2CEECC942400C66A00C67D80 /* Checkout */,
 				2CA494CB23F9977700F87AD6 /* ProviderProfile */,
-				2CF6ABD023F7D82D00F9EF40 /* ServiceDetail */,
+				2CF6ABD023F7D82D00F9EF40 /* ProviderListViewController */,
 				2CF6ABBB23F7AEF000F9EF40 /* Orders */,
 				A5F30D6923B4DB29005258A8 /* Home */,
 				A5F30D5A23B4D8D0005258A8 /* Register */,
@@ -1773,7 +1773,7 @@
 				2C3E5156240C79B500873495 /* empty_state_providers.json in Resources */,
 				2C3E5157240C79B500873495 /* TitleCell.xib in Resources */,
 				2C3E5158240C79B500873495 /* LoaderView.xib in Resources */,
-				2C3E5159240C79B500873495 /* ServiceDetailViewController.xib in Resources */,
+				2C3E5159240C79B500873495 /* ProviderListViewController.xib in Resources */,
 				2C3E515A240C79B500873495 /* CheckoutFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1823,7 +1823,7 @@
 				2C22B39A23F8AFC300678A41 /* empty_state_providers.json in Resources */,
 				2C829ED9240B44FC00D7DD81 /* TitleCell.xib in Resources */,
 				2C976A0D240ACF070073DD07 /* LoaderView.xib in Resources */,
-				2CF6ABD423F7D84500F9EF40 /* ServiceDetailViewController.xib in Resources */,
+				2CF6ABD423F7D84500F9EF40 /* ProviderListViewController.xib in Resources */,
 				2CEECCA02400D37B00C67D80 /* CheckoutFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2083,13 +2083,13 @@
 				2C3E50A0240C79B500873495 /* OrderDetailHeaderCell.swift in Sources */,
 				2C3E50A1240C79B500873495 /* RegisterViewModel.swift in Sources */,
 				2C3E50A2240C79B500873495 /* UITableView+Extensions.swift in Sources */,
-				2C3E50A3240C79B500873495 /* ServiceDetailEndpoint.swift in Sources */,
+				2C3E50A3240C79B500873495 /* ProviderListServiceEndpoint.swift in Sources */,
 				2C3E50A4240C79B500873495 /* RouterBase.swift in Sources */,
 				2C3E50A5240C79B500873495 /* CompleteTextViewModel.swift in Sources */,
 				2C3E50A6240C79B500873495 /* AppDelegate.swift in Sources */,
-				2C3E50A7240C79B500873495 /* ServiceDetailViewController.swift in Sources */,
+				2C3E50A7240C79B500873495 /* ProviderListViewController.swift in Sources */,
 				2C3E50A8240C79B500873495 /* ButtonCellViewModel.swift in Sources */,
-				2C3E50A9240C79B500873495 /* ServiceDetailService.swift in Sources */,
+				2C3E50A9240C79B500873495 /* ProviderListService.swift in Sources */,
 				2C3E50AA240C79B500873495 /* UINavigationController+Extensions.swift in Sources */,
 				2C3E50AB240C79B500873495 /* EmailLoginService.swift in Sources */,
 				2C3E50AC240C79B500873495 /* TitleCell.swift in Sources */,
@@ -2148,7 +2148,7 @@
 				2C3E50E1240C79B500873495 /* ProviderService.swift in Sources */,
 				2C3E50E2240C79B500873495 /* Loader.swift in Sources */,
 				2C3E50E3240C79B500873495 /* ProductSelectorViewController.swift in Sources */,
-				2C3E50E4240C79B500873495 /* ServiceDetailServiceProtocol.swift in Sources */,
+				2C3E50E4240C79B500873495 /* ProviderListServiceProtocol.swift in Sources */,
 				2C3E50E5240C79B500873495 /* HomeService.swift in Sources */,
 				2C3E50E6240C79B500873495 /* UIApplication+Extensions.swift in Sources */,
 				2C3E50E7240C79B500873495 /* Array+Extensions.swift in Sources */,
@@ -2214,7 +2214,7 @@
 				2C3E5122240C79B500873495 /* OrderDetailViewController.swift in Sources */,
 				2C3E5123240C79B500873495 /* SelectorCell.swift in Sources */,
 				2C3E5124240C79B500873495 /* ProviderCellViewModel.swift in Sources */,
-				2C3E5125240C79B500873495 /* ServiceDetailViewModel.swift in Sources */,
+				2C3E5125240C79B500873495 /* ProviderListViewModel.swift in Sources */,
 				2C3E5126240C79B500873495 /* ProviderCell.swift in Sources */,
 				2C3E5127240C79B500873495 /* CheckoutFieldCellViewModel.swift in Sources */,
 				2C3E5128240C79B500873495 /* ProviderProfileCell.swift in Sources */,
@@ -2238,13 +2238,13 @@
 				2C3B8086240C0D4F00D4C6FE /* OrderDetailHeaderCell.swift in Sources */,
 				2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */,
 				A5F30D6623B4DA85005258A8 /* UITableView+Extensions.swift in Sources */,
-				2C7E7FBC23F89AC600D7835E /* ServiceDetailEndpoint.swift in Sources */,
+				2C7E7FBC23F89AC600D7835E /* ProviderListServiceEndpoint.swift in Sources */,
 				2C198D2623F4E6AF00346395 /* RouterBase.swift in Sources */,
 				2CAD87B42404AA230063AEB2 /* CompleteTextViewModel.swift in Sources */,
 				A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */,
-				2CF6ABD323F7D84500F9EF40 /* ServiceDetailViewController.swift in Sources */,
+				2CF6ABD323F7D84500F9EF40 /* ProviderListViewController.swift in Sources */,
 				2CC7314A24047B56006FF85D /* ButtonCellViewModel.swift in Sources */,
-				2C7E7FB723F89A2200D7835E /* ServiceDetailService.swift in Sources */,
+				2C7E7FB723F89A2200D7835E /* ProviderListService.swift in Sources */,
 				2C829ECC240B3AC500D7DD81 /* UINavigationController+Extensions.swift in Sources */,
 				2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */,
 				2C829ED8240B44FC00D7DD81 /* TitleCell.swift in Sources */,
@@ -2303,7 +2303,7 @@
 				2CF6ABC723F7B21000F9EF40 /* ProviderService.swift in Sources */,
 				2C976A11240AD0F20073DD07 /* Loader.swift in Sources */,
 				2C76018723FE34AD00252531 /* ProductSelectorViewController.swift in Sources */,
-				2C3B807E240C0B4800D4C6FE /* ServiceDetailServiceProtocol.swift in Sources */,
+				2C3B807E240C0B4800D4C6FE /* ProviderListServiceProtocol.swift in Sources */,
 				2CF6ABB323F7AD9200F9EF40 /* HomeService.swift in Sources */,
 				2C305D9B24008EFF005B76EB /* UIApplication+Extensions.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
@@ -2369,7 +2369,7 @@
 				2C3B8076240C0A2B00D4C6FE /* OrderDetailViewController.swift in Sources */,
 				2CFF4DBA23F9FE650024B3F1 /* SelectorCell.swift in Sources */,
 				2C7E7FC823F8A17200D7835E /* ProviderCellViewModel.swift in Sources */,
-				2C7E7FBF23F89DF200D7835E /* ServiceDetailViewModel.swift in Sources */,
+				2C7E7FBF23F89DF200D7835E /* ProviderListViewModel.swift in Sources */,
 				2C7E7FC523F8A0A600D7835E /* ProviderCell.swift in Sources */,
 				2CC7313B24047401006FF85D /* CheckoutFieldCellViewModel.swift in Sources */,
 				2CFF4DA423F99D1C0024B3F1 /* ProviderProfileCell.swift in Sources */,

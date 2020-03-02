@@ -119,8 +119,8 @@ extension HomeViewController: CategoryCellDelegate {
                 return
         }
         
-        router.transition(to: .categoryDetail(id: cellViewModel.serviceId,
-                                              serviceImageUrl: cellViewModel.imageUrl))
+        router.transition(to: .providerList(id: cellViewModel.serviceId,
+                                            serviceImageUrl: cellViewModel.imageUrl))
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  ServiceDetailService.swift
+//  ProviderListService.swift
 //  Master
 //
 //  Created by Carlos Mejía on 15/02/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ServiceDetailService: ServiceDetailServiceProtocol {
+class ProviderListService: ProviderListServiceProtocol {
     // MARK: - Properties
     let connectionDependency: ConnectionManagerProtocol
     

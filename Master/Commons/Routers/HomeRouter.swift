@@ -9,7 +9,7 @@
 import UIKit
 
 enum HomeRouterTransitions {
-    case categoryDetail(id: Int, serviceImageUrl: String)
+    case providerList(id: Int, serviceImageUrl: String)
     case providerDetail(viewModel: ProviderProfileViewModel)
     case checkout(viewModel: CheckoutViewModel)
     case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate?)
@@ -36,7 +36,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     // MARK: - Public Methods
     override func transition(to transition: HomeRouterTransitions) {
         switch transition {
-        case .categoryDetail(let id, let serviceImageUrl):
+        case .providerList(let id, let serviceImageUrl):
             handleCategoryDetailTransition(serviceId: id, serviceImageUrl: serviceImageUrl)
             
         case .completeText(let viewModel, let delegate):
@@ -101,8 +101,8 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleCategoryDetailTransition(serviceId: Int, serviceImageUrl: String) {
-        let viewModel = ServiceDetailViewModel(serviceId: serviceId, serviceImageUrl: serviceImageUrl)
-        let viewController = ServiceDetailViewController(viewModel: viewModel, router: self)
+        let viewModel = ProviderListViewModel(serviceId: serviceId, serviceImageUrl: serviceImageUrl)
+        let viewController = ProviderListViewController(viewModel: viewModel, router: self)
         
         navigationController.pushViewController(viewController, animated: true)
     }

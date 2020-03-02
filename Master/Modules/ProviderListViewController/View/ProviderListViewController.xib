@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceDetailViewController" customModule="Master" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderListViewController" customModule="Dev" customModuleProvider="target">
             <connections>
                 <outlet property="emptyStateView" destination="c8F-rR-Vht" id="MHl-SY-KHf"/>
                 <outlet property="headerImage" destination="lJX-js-iZq" id="Oko-vw-DJb"/>
@@ -63,7 +63,7 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="serviceDetail.emptyState.desc"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ls-JY-3Sz" customClass="MButton" customModule="Master" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ls-JY-3Sz" customClass="MButton" customModule="Dev" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="70.5" width="334" height="47"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="47" id="Srd-Zw-I33"/>

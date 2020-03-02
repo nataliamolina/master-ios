@@ -1,5 +1,5 @@
 //
-//  ServiceDetailViewModel.swift
+//  ProviderListViewModel.swift
 //  Master
 //
 //  Created by Carlos Mejía on 15/02/20.
@@ -9,25 +9,25 @@
 import UIKit
 import EasyBinding
 
-enum ServiceDetailViewModelStatus {
+enum ProviderListViewModelStatus {
     case undefined
     case error(error: String?)
     case emptyStateRequired
 }
 
-class ServiceDetailViewModel {
+class ProviderListViewModel {
     // MARK: - Properties
     private let serviceId: Int
     let serviceImageUrl: String?
-    let status = Var<ServiceDetailViewModelStatus>(.undefined)
+    let status = Var<ProviderListViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource = Var<[CellViewModelProtocol]>([])
     
-    private let service: ServiceDetailServiceProtocol
+    private let service: ProviderListServiceProtocol
     
     // MARK: - Life Cycle
-    init(serviceId: Int, serviceImageUrl: String?, service: ServiceDetailServiceProtocol? = nil) {
-        let defaultService = ServiceDetailService(connectionDependency: ConnectionManager())
+    init(serviceId: Int, serviceImageUrl: String?, service: ProviderListServiceProtocol? = nil) {
+        let defaultService = ProviderListService(connectionDependency: ConnectionManager())
         
         self.serviceImageUrl = serviceImageUrl
         self.serviceId = serviceId

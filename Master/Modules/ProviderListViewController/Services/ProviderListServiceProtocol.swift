@@ -1,5 +1,5 @@
 //
-//  ServiceDetailServiceProtocol.swift
+//  ProviderListServiceProtocol.swift
 //  Master
 //
 //  Created by Carlos Mejía on 1/03/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ServiceDetailServiceProtocol {
+protocol ProviderListServiceProtocol {
     var connectionDependency: ConnectionManagerProtocol { get }
     
     func fetchServiceDetailById(_ id: Int,

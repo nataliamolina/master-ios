@@ -9,7 +9,7 @@
 import UIKit
 import Lottie
 
-class ServiceDetailViewController: UIViewController {
+class ProviderListViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var lottieView: UIView!
     @IBOutlet private weak var emptyStateView: UIView!
@@ -17,15 +17,15 @@ class ServiceDetailViewController: UIViewController {
     @IBOutlet private weak var headerImage: UIImageView!
     
     // MARK: - Properties
-    private let viewModel: ServiceDetailViewModel
+    private let viewModel: ProviderListViewModel
     private let router: RouterBase<HomeRouterTransitions>
     
     // MARK: - Life Cycle
-    init(viewModel: ServiceDetailViewModel, router: RouterBase<HomeRouterTransitions>) {
+    init(viewModel: ProviderListViewModel, router: RouterBase<HomeRouterTransitions>) {
         self.viewModel = viewModel
         self.router = router
         
-        super.init(nibName: String(describing: ServiceDetailViewController.self), bundle: nil)
+        super.init(nibName: String(describing: ProviderListViewController.self), bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -88,7 +88,7 @@ class ServiceDetailViewController: UIViewController {
 // getProviderProfileViewModelAt
 
 // MARK: - ProviderCellDelegate
-extension ServiceDetailViewController: ProviderCellDelegate {
+extension ProviderListViewController: ProviderCellDelegate {
     func cellTappped(_ cell: ProviderCell) {
         guard
             let indexPath = tableView.indexPath(for: cell),
@@ -102,7 +102,7 @@ extension ServiceDetailViewController: ProviderCellDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension ServiceDetailViewController: UITableViewDataSource {
+extension ProviderListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSource.value.count
     }
