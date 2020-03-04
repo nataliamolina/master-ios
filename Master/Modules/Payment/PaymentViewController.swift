@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PaymentezSDK
+import Paymentez
 
 private struct Constants {
     static let cardOwner = "payment.cardOwner".localized

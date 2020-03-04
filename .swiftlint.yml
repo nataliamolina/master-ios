@@ -4,6 +4,7 @@ disabled_rules: # rule identifiers to exclude from running
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
+  - Paymentez
 line_length: 155
 cyclomatic_complexity: 20
 identifier_name:

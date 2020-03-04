@@ -11,7 +11,7 @@ import Firebase
 import Localize
 import GoogleSignIn
 import UserNotifications
-import PaymentezSDK
+import Paymentez
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -71,8 +71,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Private Methods
     private func setupPaymentez() {
         guard
-            let appCode = Utils.plist?.value(forKey: "PaymentezAppKey") as? String,
-            let appKey = Utils.plist?.value(forKey: "PaymentezAppCode") as? String else {
+            let appKey = Utils.plist?.value(forKey: "PaymentezAppKey") as? String,
+            let appCode = Utils.plist?.value(forKey: "PaymentezAppCode") as? String else {
                 
             return
         }

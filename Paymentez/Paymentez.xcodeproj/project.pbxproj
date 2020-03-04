@@ -1,0 +1,774 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C8F8BBB240F3AB600743D60 /* Paymentez.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F8BB9240F3AB600743D60 /* Paymentez.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C8F8CCC240F3B1200743D60 /* PaymentezSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8C92240F3B1200743D60 /* PaymentezSDKClient.swift */; };
+		2C8F8CCD240F3B1200743D60 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8C93240F3B1200743D60 /* SkyFloatingLabelTextField.swift */; };
+		2C8F8CCE240F3B1200743D60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8F8C94240F3B1200743D60 /* Localizable.strings */; };
+		2C8F8CCF240F3B1200743D60 /* DeviceCollectorLibrary.zip in Resources */ = {isa = PBXBuildFile; fileRef = 2C8F8C96240F3B1200743D60 /* DeviceCollectorLibrary.zip */; };
+		2C8F8CD0240F3B1200743D60 /* PaymentezResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8C97240F3B1200743D60 /* PaymentezResponse.swift */; };
+		2C8F8CD1240F3B1200743D60 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C8F8C98240F3B1200743D60 /* Localization.strings */; };
+		2C8F8CD2240F3B1200743D60 /* PaymentezAddNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8C9A240F3B1200743D60 /* PaymentezAddNativeViewController.swift */; };
+		2C8F8CD3240F3B1200743D60 /* DeviceCollectorSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F8C9B240F3B1200743D60 /* DeviceCollectorSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C8F8CD4240F3B1200743D60 /* PaymentezSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F8C9D240F3B1200743D60 /* PaymentezSDK.h */; };
+		2C8F8CD5240F3B1200743D60 /* PaymentezAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8C9E240F3B1200743D60 /* PaymentezAddViewController.swift */; };
+		2C8F8CD6240F3B1200743D60 /* PaymentezAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8F8C9F240F3B1200743D60 /* PaymentezAddViewController.xib */; };
+		2C8F8CD7240F3B1200743D60 /* PaymentezCardScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CA0240F3B1200743D60 /* PaymentezCardScan.swift */; };
+		2C8F8CD8240F3B1200743D60 /* libKountDataCollector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F8CA2240F3B1200743D60 /* libKountDataCollector.a */; };
+		2C8F8CD9240F3B1200743D60 /* KDataCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F8CA3240F3B1200743D60 /* KDataCollector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C8F8CDA240F3B1200743D60 /* libDeviceCollectorLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F8CA5240F3B1200743D60 /* libDeviceCollectorLibrary.a */; };
+		2C8F8CDB240F3B1200743D60 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CA6240F3B1200743D60 /* Extension.swift */; };
+		2C8F8CDC240F3B1200743D60 /* PaymentezRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CA7240F3B1200743D60 /* PaymentezRequest.swift */; };
+		2C8F8CDD240F3B1200743D60 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CA8240F3B1200743D60 /* UITextField+fixCaretPosition.swift */; };
+		2C8F8CDE240F3B1200743D60 /* PaymentezSDK-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F8CA9240F3B1200743D60 /* PaymentezSDK-Bridging-Header.h */; };
+		2C8F8CDF240F3B1200743D60 /* PaymentezAddNativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8F8CAA240F3B1200743D60 /* PaymentezAddNativeViewController.xib */; };
+		2C8F8CE0240F3B1200743D60 /* PaymentezSecure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CAD240F3B1200743D60 /* PaymentezSecure.swift */; };
+		2C8F8CE1240F3B1200743D60 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CB0240F3B1200743D60 /* Mask.swift */; };
+		2C8F8CE2240F3B1200743D60 /* Next.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CB2240F3B1200743D60 /* Next.swift */; };
+		2C8F8CE3240F3B1200743D60 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CB3240F3B1200743D60 /* State.swift */; };
+		2C8F8CE4240F3B1200743D60 /* ValueState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CB5240F3B1200743D60 /* ValueState.swift */; };
+		2C8F8CE5240F3B1200743D60 /* EOLState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CB6240F3B1200743D60 /* EOLState.swift */; };
+		2C8F8CE6240F3B1200743D60 /* FixedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CB7240F3B1200743D60 /* FixedState.swift */; };
+		2C8F8CE7240F3B1200743D60 /* OptionalValueState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CB8240F3B1200743D60 /* OptionalValueState.swift */; };
+		2C8F8CE8240F3B1200743D60 /* FreeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CB9240F3B1200743D60 /* FreeState.swift */; };
+		2C8F8CE9240F3B1200743D60 /* CaretString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CBA240F3B1200743D60 /* CaretString.swift */; };
+		2C8F8CEA240F3B1200743D60 /* InterfaceBuilderSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CBC240F3B1200743D60 /* InterfaceBuilderSupport.swift */; };
+		2C8F8CEB240F3B1200743D60 /* PolyMaskTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CBD240F3B1200743D60 /* PolyMaskTextFieldDelegate.swift */; };
+		2C8F8CEC240F3B1200743D60 /* MaskedTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CBE240F3B1200743D60 /* MaskedTextFieldDelegate.swift */; };
+		2C8F8CED240F3B1200743D60 /* CaretStringIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC0240F3B1200743D60 /* CaretStringIterator.swift */; };
+		2C8F8CEE240F3B1200743D60 /* Compiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC1240F3B1200743D60 /* Compiler.swift */; };
+		2C8F8CEF240F3B1200743D60 /* FormatSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC2240F3B1200743D60 /* FormatSanitizer.swift */; };
+		2C8F8CF0240F3B1200743D60 /* NSCharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC3240F3B1200743D60 /* NSCharacterSet.swift */; };
+		2C8F8CF1240F3B1200743D60 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC4240F3B1200743D60 /* String.swift */; };
+		2C8F8CF2240F3B1200743D60 /* InputMask.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F8CC5240F3B1200743D60 /* InputMask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C8F8CF3240F3B1200743D60 /* PaymentezCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC6240F3B1200743D60 /* PaymentezCard.swift */; };
+		2C8F8CF4240F3B1200743D60 /* PaymentezAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC7240F3B1200743D60 /* PaymentezAssets.xcassets */; };
+		2C8F8CF5240F3B1200743D60 /* PaymentezConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC8240F3B1200743D60 /* PaymentezConstants.swift */; };
+		2C8F8CF6240F3B1200743D60 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CC9240F3B1200743D60 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		2C8F8CF7240F3B1200743D60 /* install_dynamic.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2C8F8CCA240F3B1200743D60 /* install_dynamic.sh */; };
+		2CEAD6FF240F413C0095E9A4 /* CardIODetectionMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEAD6DD240F413C0095E9A4 /* CardIODetectionMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEAD700240F413C0095E9A4 /* CardIOUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEAD6DE240F413C0095E9A4 /* CardIOUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEAD701240F413C0095E9A4 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD6DF240F413C0095E9A4 /* libopencv_core.a */; };
+		2CEAD702240F413C0095E9A4 /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD6E0240F413C0095E9A4 /* libCardIO.a */; };
+		2CEAD703240F413C0095E9A4 /* CardIOView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEAD6E1240F413C0095E9A4 /* CardIOView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEAD704240F413C0095E9A4 /* CardIOPaymentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEAD6E2240F413C0095E9A4 /* CardIOPaymentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEAD705240F413C0095E9A4 /* CardIOViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEAD6E3240F413C0095E9A4 /* CardIOViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEAD706240F413C0095E9A4 /* CardIOCreditCardInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEAD6E4240F413C0095E9A4 /* CardIOCreditCardInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEAD707240F413C0095E9A4 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD6E5240F413C0095E9A4 /* libopencv_imgproc.a */; };
+		2CEAD708240F413C0095E9A4 /* CardIOPaymentViewControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEAD6E6240F413C0095E9A4 /* CardIOPaymentViewControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEAD709240F413C0095E9A4 /* CardIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CEAD6E7240F413C0095E9A4 /* CardIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEAD71D240F427C0095E9A4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD71C240F427C0095E9A4 /* AudioToolbox.framework */; };
+		2CEAD71F240F43130095E9A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD71E240F43130095E9A4 /* CoreGraphics.framework */; };
+		2CEAD721240F431A0095E9A4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD720240F431A0095E9A4 /* Accelerate.framework */; };
+		2CEAD723240F431F0095E9A4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD722240F431F0095E9A4 /* AVFoundation.framework */; };
+		2CEAD725240F43270095E9A4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD724240F43270095E9A4 /* CoreMedia.framework */; };
+		2CEAD727240F432C0095E9A4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD726240F432C0095E9A4 /* CoreVideo.framework */; };
+		2CEAD729240F43360095E9A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD728240F43360095E9A4 /* Foundation.framework */; };
+		2CEAD72B240F433A0095E9A4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD72A240F433A0095E9A4 /* MobileCoreServices.framework */; platformFilter = ios; };
+		2CEAD72D240F433F0095E9A4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD72C240F433F0095E9A4 /* OpenGLES.framework */; platformFilter = ios; };
+		2CEAD72F240F43440095E9A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD72E240F43440095E9A4 /* QuartzCore.framework */; };
+		2CEAD731240F434A0095E9A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD730240F434A0095E9A4 /* Security.framework */; };
+		A82C84D5A81EF4EB9FD9C07D /* libPods-Paymentez.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 400F98FBF9239971D9E70EC0 /* libPods-Paymentez.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C8F8BB6240F3AB600743D60 /* Paymentez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Paymentez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8F8BB9240F3AB600743D60 /* Paymentez.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Paymentez.h; sourceTree = "<group>"; };
+		2C8F8BBA240F3AB600743D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8F8C92240F3B1200743D60 /* PaymentezSDKClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezSDKClient.swift; sourceTree = "<group>"; };
+		2C8F8C93240F3B1200743D60 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		2C8F8C95240F3B1200743D60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C8F8C96240F3B1200743D60 /* DeviceCollectorLibrary.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DeviceCollectorLibrary.zip; sourceTree = "<group>"; };
+		2C8F8C97240F3B1200743D60 /* PaymentezResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezResponse.swift; sourceTree = "<group>"; };
+		2C8F8C98240F3B1200743D60 /* Localization.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
+		2C8F8C99240F3B1200743D60 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C8F8C9A240F3B1200743D60 /* PaymentezAddNativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezAddNativeViewController.swift; sourceTree = "<group>"; };
+		2C8F8C9B240F3B1200743D60 /* DeviceCollectorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCollectorSDK.h; sourceTree = "<group>"; };
+		2C8F8C9C240F3B1200743D60 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2C8F8C9D240F3B1200743D60 /* PaymentezSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentezSDK.h; sourceTree = "<group>"; };
+		2C8F8C9E240F3B1200743D60 /* PaymentezAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezAddViewController.swift; sourceTree = "<group>"; };
+		2C8F8C9F240F3B1200743D60 /* PaymentezAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentezAddViewController.xib; sourceTree = "<group>"; };
+		2C8F8CA0240F3B1200743D60 /* PaymentezCardScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezCardScan.swift; sourceTree = "<group>"; };
+		2C8F8CA2240F3B1200743D60 /* libKountDataCollector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKountDataCollector.a; sourceTree = "<group>"; };
+		2C8F8CA3240F3B1200743D60 /* KDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDataCollector.h; sourceTree = "<group>"; };
+		2C8F8CA4240F3B1200743D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C8F8CA5240F3B1200743D60 /* libDeviceCollectorLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDeviceCollectorLibrary.a; sourceTree = "<group>"; };
+		2C8F8CA6240F3B1200743D60 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2C8F8CA7240F3B1200743D60 /* PaymentezRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezRequest.swift; sourceTree = "<group>"; };
+		2C8F8CA8240F3B1200743D60 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		2C8F8CA9240F3B1200743D60 /* PaymentezSDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PaymentezSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C8F8CAA240F3B1200743D60 /* PaymentezAddNativeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentezAddNativeViewController.xib; sourceTree = "<group>"; };
+		2C8F8CAB240F3B1200743D60 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2C8F8CAC240F3B1200743D60 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2C8F8CAD240F3B1200743D60 /* PaymentezSecure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezSecure.swift; sourceTree = "<group>"; };
+		2C8F8CB0240F3B1200743D60 /* Mask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
+		2C8F8CB2240F3B1200743D60 /* Next.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Next.swift; sourceTree = "<group>"; };
+		2C8F8CB3240F3B1200743D60 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		2C8F8CB5240F3B1200743D60 /* ValueState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueState.swift; sourceTree = "<group>"; };
+		2C8F8CB6240F3B1200743D60 /* EOLState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EOLState.swift; sourceTree = "<group>"; };
+		2C8F8CB7240F3B1200743D60 /* FixedState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedState.swift; sourceTree = "<group>"; };
+		2C8F8CB8240F3B1200743D60 /* OptionalValueState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalValueState.swift; sourceTree = "<group>"; };
+		2C8F8CB9240F3B1200743D60 /* FreeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeState.swift; sourceTree = "<group>"; };
+		2C8F8CBA240F3B1200743D60 /* CaretString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaretString.swift; sourceTree = "<group>"; };
+		2C8F8CBC240F3B1200743D60 /* InterfaceBuilderSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderSupport.swift; sourceTree = "<group>"; };
+		2C8F8CBD240F3B1200743D60 /* PolyMaskTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolyMaskTextFieldDelegate.swift; sourceTree = "<group>"; };
+		2C8F8CBE240F3B1200743D60 /* MaskedTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskedTextFieldDelegate.swift; sourceTree = "<group>"; };
+		2C8F8CC0240F3B1200743D60 /* CaretStringIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaretStringIterator.swift; sourceTree = "<group>"; };
+		2C8F8CC1240F3B1200743D60 /* Compiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compiler.swift; sourceTree = "<group>"; };
+		2C8F8CC2240F3B1200743D60 /* FormatSanitizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatSanitizer.swift; sourceTree = "<group>"; };
+		2C8F8CC3240F3B1200743D60 /* NSCharacterSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCharacterSet.swift; sourceTree = "<group>"; };
+		2C8F8CC4240F3B1200743D60 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2C8F8CC5240F3B1200743D60 /* InputMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputMask.h; sourceTree = "<group>"; };
+		2C8F8CC6240F3B1200743D60 /* PaymentezCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezCard.swift; sourceTree = "<group>"; };
+		2C8F8CC7240F3B1200743D60 /* PaymentezAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PaymentezAssets.xcassets; sourceTree = "<group>"; };
+		2C8F8CC8240F3B1200743D60 /* PaymentezConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezConstants.swift; sourceTree = "<group>"; };
+		2C8F8CC9240F3B1200743D60 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		2C8F8CCA240F3B1200743D60 /* install_dynamic.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_dynamic.sh; sourceTree = "<group>"; };
+		2CEAD6DD240F413C0095E9A4 /* CardIODetectionMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIODetectionMode.h; sourceTree = "<group>"; };
+		2CEAD6DE240F413C0095E9A4 /* CardIOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOUtilities.h; sourceTree = "<group>"; };
+		2CEAD6DF240F413C0095E9A4 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
+		2CEAD6E0240F413C0095E9A4 /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
+		2CEAD6E1240F413C0095E9A4 /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
+		2CEAD6E2240F413C0095E9A4 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		2CEAD6E3240F413C0095E9A4 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
+		2CEAD6E4240F413C0095E9A4 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		2CEAD6E5240F413C0095E9A4 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
+		2CEAD6E6240F413C0095E9A4 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		2CEAD6E7240F413C0095E9A4 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
+		2CEAD71C240F427C0095E9A4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		2CEAD71E240F43130095E9A4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		2CEAD720240F431A0095E9A4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		2CEAD722240F431F0095E9A4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		2CEAD724240F43270095E9A4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		2CEAD726240F432C0095E9A4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		2CEAD728240F43360095E9A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2CEAD72A240F433A0095E9A4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2CEAD72C240F433F0095E9A4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2CEAD72E240F43440095E9A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		2CEAD730240F434A0095E9A4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		400F98FBF9239971D9E70EC0 /* libPods-Paymentez.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Paymentez.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A18EE58DA3D7C7E2B26D683 /* Pods-Paymentez.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paymentez.debug.xcconfig"; path = "Target Support Files/Pods-Paymentez/Pods-Paymentez.debug.xcconfig"; sourceTree = "<group>"; };
+		CFB9033C82C56DAE69A02A7E /* Pods-Paymentez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paymentez.release.xcconfig"; path = "Target Support Files/Pods-Paymentez/Pods-Paymentez.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C8F8BB3240F3AB600743D60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CEAD72F240F43440095E9A4 /* QuartzCore.framework in Frameworks */,
+				2C8F8CD8240F3B1200743D60 /* libKountDataCollector.a in Frameworks */,
+				2CEAD72B240F433A0095E9A4 /* MobileCoreServices.framework in Frameworks */,
+				2CEAD725240F43270095E9A4 /* CoreMedia.framework in Frameworks */,
+				2CEAD701240F413C0095E9A4 /* libopencv_core.a in Frameworks */,
+				2CEAD723240F431F0095E9A4 /* AVFoundation.framework in Frameworks */,
+				2CEAD72D240F433F0095E9A4 /* OpenGLES.framework in Frameworks */,
+				2CEAD707240F413C0095E9A4 /* libopencv_imgproc.a in Frameworks */,
+				2CEAD702240F413C0095E9A4 /* libCardIO.a in Frameworks */,
+				2CEAD71F240F43130095E9A4 /* CoreGraphics.framework in Frameworks */,
+				2CEAD71D240F427C0095E9A4 /* AudioToolbox.framework in Frameworks */,
+				2CEAD729240F43360095E9A4 /* Foundation.framework in Frameworks */,
+				2CEAD721240F431A0095E9A4 /* Accelerate.framework in Frameworks */,
+				2C8F8CDA240F3B1200743D60 /* libDeviceCollectorLibrary.a in Frameworks */,
+				A82C84D5A81EF4EB9FD9C07D /* libPods-Paymentez.a in Frameworks */,
+				2CEAD731240F434A0095E9A4 /* Security.framework in Frameworks */,
+				2CEAD727240F432C0095E9A4 /* CoreVideo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C8F8BAC240F3AB600743D60 = {
+			isa = PBXGroup;
+			children = (
+				2C8F8BB8240F3AB600743D60 /* Paymentez */,
+				2C8F8BB7240F3AB600743D60 /* Products */,
+				5165DEA152084F0F3E5BD8B1 /* Pods */,
+				6524F706696A3971EBF2080F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C8F8BB7240F3AB600743D60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8BB6240F3AB600743D60 /* Paymentez.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C8F8BB8240F3AB600743D60 /* Paymentez */ = {
+			isa = PBXGroup;
+			children = (
+				2CEAD6DC240F413C0095E9A4 /* CardIO */,
+				2C8F8C91240F3B1200743D60 /* PaymentezSDK */,
+				2C8F8BB9240F3AB600743D60 /* Paymentez.h */,
+				2C8F8BBA240F3AB600743D60 /* Info.plist */,
+			);
+			path = Paymentez;
+			sourceTree = "<group>";
+		};
+		2C8F8C91240F3B1200743D60 /* PaymentezSDK */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8C92240F3B1200743D60 /* PaymentezSDKClient.swift */,
+				2C8F8C93240F3B1200743D60 /* SkyFloatingLabelTextField.swift */,
+				2C8F8C94240F3B1200743D60 /* Localizable.strings */,
+				2C8F8C96240F3B1200743D60 /* DeviceCollectorLibrary.zip */,
+				2C8F8C97240F3B1200743D60 /* PaymentezResponse.swift */,
+				2C8F8C98240F3B1200743D60 /* Localization.strings */,
+				2C8F8C9A240F3B1200743D60 /* PaymentezAddNativeViewController.swift */,
+				2C8F8C9B240F3B1200743D60 /* DeviceCollectorSDK.h */,
+				2C8F8C9D240F3B1200743D60 /* PaymentezSDK.h */,
+				2C8F8C9E240F3B1200743D60 /* PaymentezAddViewController.swift */,
+				2C8F8C9F240F3B1200743D60 /* PaymentezAddViewController.xib */,
+				2C8F8CA0240F3B1200743D60 /* PaymentezCardScan.swift */,
+				2C8F8CA1240F3B1200743D60 /* DeviceCollectorLibrary */,
+				2C8F8CA5240F3B1200743D60 /* libDeviceCollectorLibrary.a */,
+				2C8F8CA6240F3B1200743D60 /* Extension.swift */,
+				2C8F8CA7240F3B1200743D60 /* PaymentezRequest.swift */,
+				2C8F8CA8240F3B1200743D60 /* UITextField+fixCaretPosition.swift */,
+				2C8F8CA9240F3B1200743D60 /* PaymentezSDK-Bridging-Header.h */,
+				2C8F8CAA240F3B1200743D60 /* PaymentezAddNativeViewController.xib */,
+				2C8F8CAD240F3B1200743D60 /* PaymentezSecure.swift */,
+				2C8F8CAE240F3B1200743D60 /* lib */,
+				2C8F8CC6240F3B1200743D60 /* PaymentezCard.swift */,
+				2C8F8CC7240F3B1200743D60 /* PaymentezAssets.xcassets */,
+				2C8F8CC8240F3B1200743D60 /* PaymentezConstants.swift */,
+				2C8F8CC9240F3B1200743D60 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				2C8F8CCA240F3B1200743D60 /* install_dynamic.sh */,
+			);
+			path = PaymentezSDK;
+			sourceTree = "<group>";
+		};
+		2C8F8CA1240F3B1200743D60 /* DeviceCollectorLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8CA2240F3B1200743D60 /* libKountDataCollector.a */,
+				2C8F8CA3240F3B1200743D60 /* KDataCollector.h */,
+			);
+			path = DeviceCollectorLibrary;
+			sourceTree = "<group>";
+		};
+		2C8F8CAE240F3B1200743D60 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8CAF240F3B1200743D60 /* InputMask */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		2C8F8CAF240F3B1200743D60 /* InputMask */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8CB0240F3B1200743D60 /* Mask.swift */,
+				2C8F8CB1240F3B1200743D60 /* Model */,
+				2C8F8CBB240F3B1200743D60 /* View */,
+				2C8F8CBF240F3B1200743D60 /* Helper */,
+				2C8F8CC5240F3B1200743D60 /* InputMask.h */,
+			);
+			path = InputMask;
+			sourceTree = "<group>";
+		};
+		2C8F8CB1240F3B1200743D60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8CB2240F3B1200743D60 /* Next.swift */,
+				2C8F8CB3240F3B1200743D60 /* State.swift */,
+				2C8F8CB4240F3B1200743D60 /* State */,
+				2C8F8CBA240F3B1200743D60 /* CaretString.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C8F8CB4240F3B1200743D60 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8CB5240F3B1200743D60 /* ValueState.swift */,
+				2C8F8CB6240F3B1200743D60 /* EOLState.swift */,
+				2C8F8CB7240F3B1200743D60 /* FixedState.swift */,
+				2C8F8CB8240F3B1200743D60 /* OptionalValueState.swift */,
+				2C8F8CB9240F3B1200743D60 /* FreeState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		2C8F8CBB240F3B1200743D60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8CBC240F3B1200743D60 /* InterfaceBuilderSupport.swift */,
+				2C8F8CBD240F3B1200743D60 /* PolyMaskTextFieldDelegate.swift */,
+				2C8F8CBE240F3B1200743D60 /* MaskedTextFieldDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8F8CBF240F3B1200743D60 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2C8F8CC0240F3B1200743D60 /* CaretStringIterator.swift */,
+				2C8F8CC1240F3B1200743D60 /* Compiler.swift */,
+				2C8F8CC2240F3B1200743D60 /* FormatSanitizer.swift */,
+				2C8F8CC3240F3B1200743D60 /* NSCharacterSet.swift */,
+				2C8F8CC4240F3B1200743D60 /* String.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2CEAD6DC240F413C0095E9A4 /* CardIO */ = {
+			isa = PBXGroup;
+			children = (
+				2CEAD6DD240F413C0095E9A4 /* CardIODetectionMode.h */,
+				2CEAD6DE240F413C0095E9A4 /* CardIOUtilities.h */,
+				2CEAD6DF240F413C0095E9A4 /* libopencv_core.a */,
+				2CEAD6E0240F413C0095E9A4 /* libCardIO.a */,
+				2CEAD6E1240F413C0095E9A4 /* CardIOView.h */,
+				2CEAD6E2240F413C0095E9A4 /* CardIOPaymentViewController.h */,
+				2CEAD6E3240F413C0095E9A4 /* CardIOViewDelegate.h */,
+				2CEAD6E4240F413C0095E9A4 /* CardIOCreditCardInfo.h */,
+				2CEAD6E5240F413C0095E9A4 /* libopencv_imgproc.a */,
+				2CEAD6E6240F413C0095E9A4 /* CardIOPaymentViewControllerDelegate.h */,
+				2CEAD6E7240F413C0095E9A4 /* CardIO.h */,
+			);
+			path = CardIO;
+			sourceTree = "<group>";
+		};
+		5165DEA152084F0F3E5BD8B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A18EE58DA3D7C7E2B26D683 /* Pods-Paymentez.debug.xcconfig */,
+				CFB9033C82C56DAE69A02A7E /* Pods-Paymentez.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		6524F706696A3971EBF2080F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CEAD730240F434A0095E9A4 /* Security.framework */,
+				2CEAD72E240F43440095E9A4 /* QuartzCore.framework */,
+				2CEAD72C240F433F0095E9A4 /* OpenGLES.framework */,
+				2CEAD72A240F433A0095E9A4 /* MobileCoreServices.framework */,
+				2CEAD728240F43360095E9A4 /* Foundation.framework */,
+				2CEAD726240F432C0095E9A4 /* CoreVideo.framework */,
+				2CEAD724240F43270095E9A4 /* CoreMedia.framework */,
+				2CEAD722240F431F0095E9A4 /* AVFoundation.framework */,
+				2CEAD720240F431A0095E9A4 /* Accelerate.framework */,
+				2CEAD71E240F43130095E9A4 /* CoreGraphics.framework */,
+				2CEAD71C240F427C0095E9A4 /* AudioToolbox.framework */,
+				400F98FBF9239971D9E70EC0 /* libPods-Paymentez.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2C8F8BB1240F3AB600743D60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8F8CF2240F3B1200743D60 /* InputMask.h in Headers */,
+				2C8F8CD9240F3B1200743D60 /* KDataCollector.h in Headers */,
+				2C8F8CD3240F3B1200743D60 /* DeviceCollectorSDK.h in Headers */,
+				2CEAD709240F413C0095E9A4 /* CardIO.h in Headers */,
+				2CEAD704240F413C0095E9A4 /* CardIOPaymentViewController.h in Headers */,
+				2C8F8BBB240F3AB600743D60 /* Paymentez.h in Headers */,
+				2CEAD705240F413C0095E9A4 /* CardIOViewDelegate.h in Headers */,
+				2CEAD708240F413C0095E9A4 /* CardIOPaymentViewControllerDelegate.h in Headers */,
+				2CEAD703240F413C0095E9A4 /* CardIOView.h in Headers */,
+				2CEAD6FF240F413C0095E9A4 /* CardIODetectionMode.h in Headers */,
+				2CEAD700240F413C0095E9A4 /* CardIOUtilities.h in Headers */,
+				2CEAD706240F413C0095E9A4 /* CardIOCreditCardInfo.h in Headers */,
+				2C8F8CD4240F3B1200743D60 /* PaymentezSDK.h in Headers */,
+				2C8F8CDE240F3B1200743D60 /* PaymentezSDK-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2C8F8BB5240F3AB600743D60 /* Paymentez */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8F8BBE240F3AB600743D60 /* Build configuration list for PBXNativeTarget "Paymentez" */;
+			buildPhases = (
+				8720F2B1CE96FDEED9128B26 /* [CP] Check Pods Manifest.lock */,
+				2C8F8BB1240F3AB600743D60 /* Headers */,
+				2C8F8BB2240F3AB600743D60 /* Sources */,
+				2C8F8BB3240F3AB600743D60 /* Frameworks */,
+				2C8F8BB4240F3AB600743D60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Paymentez;
+			productName = Paymentez;
+			productReference = 2C8F8BB6240F3AB600743D60 /* Paymentez.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C8F8BAD240F3AB600743D60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Paymentez;
+				TargetAttributes = {
+					2C8F8BB5240F3AB600743D60 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 2C8F8BB0240F3AB600743D60 /* Build configuration list for PBXProject "Paymentez" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+				"es-419",
+				"pt-BR",
+				"es-MX",
+			);
+			mainGroup = 2C8F8BAC240F3AB600743D60;
+			productRefGroup = 2C8F8BB7240F3AB600743D60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C8F8BB5240F3AB600743D60 /* Paymentez */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C8F8BB4240F3AB600743D60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8F8CD6240F3B1200743D60 /* PaymentezAddViewController.xib in Resources */,
+				2C8F8CCE240F3B1200743D60 /* Localizable.strings in Resources */,
+				2C8F8CF7240F3B1200743D60 /* install_dynamic.sh in Resources */,
+				2C8F8CD1240F3B1200743D60 /* Localization.strings in Resources */,
+				2C8F8CCF240F3B1200743D60 /* DeviceCollectorLibrary.zip in Resources */,
+				2C8F8CF4240F3B1200743D60 /* PaymentezAssets.xcassets in Resources */,
+				2C8F8CDF240F3B1200743D60 /* PaymentezAddNativeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8720F2B1CE96FDEED9128B26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Paymentez-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C8F8BB2240F3AB600743D60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8F8CE2240F3B1200743D60 /* Next.swift in Sources */,
+				2C8F8CF6240F3B1200743D60 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				2C8F8CEC240F3B1200743D60 /* MaskedTextFieldDelegate.swift in Sources */,
+				2C8F8CE7240F3B1200743D60 /* OptionalValueState.swift in Sources */,
+				2C8F8CF1240F3B1200743D60 /* String.swift in Sources */,
+				2C8F8CEB240F3B1200743D60 /* PolyMaskTextFieldDelegate.swift in Sources */,
+				2C8F8CEE240F3B1200743D60 /* Compiler.swift in Sources */,
+				2C8F8CF5240F3B1200743D60 /* PaymentezConstants.swift in Sources */,
+				2C8F8CD7240F3B1200743D60 /* PaymentezCardScan.swift in Sources */,
+				2C8F8CE1240F3B1200743D60 /* Mask.swift in Sources */,
+				2C8F8CF0240F3B1200743D60 /* NSCharacterSet.swift in Sources */,
+				2C8F8CCD240F3B1200743D60 /* SkyFloatingLabelTextField.swift in Sources */,
+				2C8F8CE8240F3B1200743D60 /* FreeState.swift in Sources */,
+				2C8F8CDB240F3B1200743D60 /* Extension.swift in Sources */,
+				2C8F8CDD240F3B1200743D60 /* UITextField+fixCaretPosition.swift in Sources */,
+				2C8F8CD2240F3B1200743D60 /* PaymentezAddNativeViewController.swift in Sources */,
+				2C8F8CCC240F3B1200743D60 /* PaymentezSDKClient.swift in Sources */,
+				2C8F8CE0240F3B1200743D60 /* PaymentezSecure.swift in Sources */,
+				2C8F8CE3240F3B1200743D60 /* State.swift in Sources */,
+				2C8F8CE9240F3B1200743D60 /* CaretString.swift in Sources */,
+				2C8F8CD0240F3B1200743D60 /* PaymentezResponse.swift in Sources */,
+				2C8F8CED240F3B1200743D60 /* CaretStringIterator.swift in Sources */,
+				2C8F8CE5240F3B1200743D60 /* EOLState.swift in Sources */,
+				2C8F8CF3240F3B1200743D60 /* PaymentezCard.swift in Sources */,
+				2C8F8CE6240F3B1200743D60 /* FixedState.swift in Sources */,
+				2C8F8CE4240F3B1200743D60 /* ValueState.swift in Sources */,
+				2C8F8CEF240F3B1200743D60 /* FormatSanitizer.swift in Sources */,
+				2C8F8CEA240F3B1200743D60 /* InterfaceBuilderSupport.swift in Sources */,
+				2C8F8CD5240F3B1200743D60 /* PaymentezAddViewController.swift in Sources */,
+				2C8F8CDC240F3B1200743D60 /* PaymentezRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C8F8C94240F3B1200743D60 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C8F8C95240F3B1200743D60 /* en */,
+				2C8F8C99240F3B1200743D60 /* es */,
+				2C8F8C9C240F3B1200743D60 /* es-419 */,
+				2C8F8CA4240F3B1200743D60 /* Base */,
+				2C8F8CAB240F3B1200743D60 /* pt-BR */,
+				2C8F8CAC240F3B1200743D60 /* es-MX */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C8F8BBC240F3AB600743D60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2C8F8BBD240F3AB600743D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2C8F8BBF240F3AB600743D60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A18EE58DA3D7C7E2B26D683 /* Pods-Paymentez.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Paymentez/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK\\ copy/DeviceCollectorLibrary",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK\\ copy",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK\\ copy/DeviceCollectorLibrary",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK\\ copy",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK/DeviceCollectorLibrary",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK",
+					"$(PROJECT_DIR)/Paymentez/CardIO",
+				);
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = com.master.ios.paymentez.Paymentez;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C8F8BC0240F3AB600743D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB9033C82C56DAE69A02A7E /* Pods-Paymentez.release.xcconfig */;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Paymentez/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK\\ copy/DeviceCollectorLibrary",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK\\ copy",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK\\ copy/DeviceCollectorLibrary",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK\\ copy",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK/DeviceCollectorLibrary",
+					"$(PROJECT_DIR)/Paymentez/PaymentezSDK",
+					"$(PROJECT_DIR)/Paymentez/CardIO",
+				);
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = com.master.ios.paymentez.Paymentez;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C8F8BB0240F3AB600743D60 /* Build configuration list for PBXProject "Paymentez" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8F8BBC240F3AB600743D60 /* Debug */,
+				2C8F8BBD240F3AB600743D60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C8F8BBE240F3AB600743D60 /* Build configuration list for PBXNativeTarget "Paymentez" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8F8BBF240F3AB600743D60 /* Debug */,
+				2C8F8BC0240F3AB600743D60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C8F8BAD240F3AB600743D60 /* Project object */;
+}

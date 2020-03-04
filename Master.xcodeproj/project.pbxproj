@@ -278,10 +278,6 @@
 		2C829ED8240B44FC00D7DD81 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829ED6240B44FC00D7DD81 /* TitleCell.swift */; };
 		2C829ED9240B44FC00D7DD81 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C829ED7240B44FC00D7DD81 /* TitleCell.xib */; };
 		2C829EDB240B459700D7DD81 /* TitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EDA240B459700D7DD81 /* TitleCellViewModel.swift */; };
-		2C88979C240C81D800423B11 /* PaymentezSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C889799240C81C500423B11 /* PaymentezSDK.framework */; };
-		2C88979D240C81D800423B11 /* PaymentezSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C889799240C81C500423B11 /* PaymentezSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2C88979E240C832000423B11 /* PaymentezSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C889799240C81C500423B11 /* PaymentezSDK.framework */; };
-		2C88979F240C832000423B11 /* PaymentezSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C889799240C81C500423B11 /* PaymentezSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C8897A5240C852F00423B11 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8897A3240C852F00423B11 /* PaymentViewController.swift */; };
 		2C8897A6240C852F00423B11 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8897A3240C852F00423B11 /* PaymentViewController.swift */; };
 		2C8897A7240C852F00423B11 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8897A4240C852F00423B11 /* PaymentViewController.xib */; };
@@ -329,6 +325,10 @@
 		2CCFED7823F62C01005E5CB1 /* RegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */; };
 		2CD6715B240B6B14007917E8 /* OrderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6715A240B6B14007917E8 /* OrderCellViewModel.swift */; };
 		2CD6715E240B83E9007917E8 /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6715D240B83E9007917E8 /* MenuRouter.swift */; };
+		2CEAD733240F43950095E9A4 /* Paymentez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD732240F43950095E9A4 /* Paymentez.framework */; };
+		2CEAD734240F43950095E9A4 /* Paymentez.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD732240F43950095E9A4 /* Paymentez.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2CEAD737240F439A0095E9A4 /* Paymentez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD736240F439A0095E9A4 /* Paymentez.framework */; };
+		2CEAD738240F439A0095E9A4 /* Paymentez.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD736240F439A0095E9A4 /* Paymentez.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CEECC972400C90A00C67D80 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC952400C90A00C67D80 /* CheckoutViewController.swift */; };
 		2CEECC982400C90A00C67D80 /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEECC962400C90A00C67D80 /* CheckoutViewController.xib */; };
 		2CEECC9C2400D22200C67D80 /* CheckoutFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC9B2400D22200C67D80 /* CheckoutFieldCell.swift */; };
@@ -410,24 +410,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2C889797240C803900423B11 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2C88979D240C81D800423B11 /* PaymentezSDK.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C8897A0240C832000423B11 /* Embed Frameworks */ = {
+		2CEAD735240F43950095E9A4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2C88979F240C832000423B11 /* PaymentezSDK.framework in Embed Frameworks */,
+				2CEAD734240F43950095E9A4 /* Paymentez.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CEAD739240F439A0095E9A4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CEAD738240F439A0095E9A4 /* Paymentez.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,7 +522,6 @@
 		2C829ED6240B44FC00D7DD81 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		2C829ED7240B44FC00D7DD81 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		2C829EDA240B459700D7DD81 /* TitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellViewModel.swift; sourceTree = "<group>"; };
-		2C889799240C81C500423B11 /* PaymentezSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PaymentezSDK.framework; sourceTree = "<group>"; };
 		2C8897A3240C852F00423B11 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		2C8897A4240C852F00423B11 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -568,6 +567,8 @@
 		2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterServiceProtocol.swift; sourceTree = "<group>"; };
 		2CD6715A240B6B14007917E8 /* OrderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCellViewModel.swift; sourceTree = "<group>"; };
 		2CD6715D240B83E9007917E8 /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		2CEAD732240F43950095E9A4 /* Paymentez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Paymentez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CEAD736240F439A0095E9A4 /* Paymentez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Paymentez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEECC952400C90A00C67D80 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		2CEECC962400C90A00C67D80 /* CheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutViewController.xib; sourceTree = "<group>"; };
 		2CEECC9B2400D22200C67D80 /* CheckoutFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFieldCell.swift; sourceTree = "<group>"; };
@@ -651,8 +652,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEAD737240F439A0095E9A4 /* Paymentez.framework in Frameworks */,
 				E78954D4C662121A06E470CE /* libPods-Dev.a in Frameworks */,
-				2C88979E240C832000423B11 /* PaymentezSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,8 +661,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEAD733240F43950095E9A4 /* Paymentez.framework in Frameworks */,
 				448F534E2E89B59C562B66F2 /* libPods-Master.a in Frameworks */,
-				2C88979C240C81D800423B11 /* PaymentezSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1379,7 +1380,8 @@
 		4B22BBC4B3B743F3ED2CE7CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2C889799240C81C500423B11 /* PaymentezSDK.framework */,
+				2CEAD736240F439A0095E9A4 /* Paymentez.framework */,
+				2CEAD732240F43950095E9A4 /* Paymentez.framework */,
 				80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */,
 				54DC24950A095F17F44DFC46 /* libPods-Dev.a */,
 				F7EF31F4F93F1D4F760BEAEE /* libPods-Master.a */,
@@ -1634,7 +1636,7 @@
 				2C3E515C240C79B500873495 /* SwiftLint */,
 				2C3E515D240C79B500873495 /* Crashlytics */,
 				2C889783240C7D7C00423B11 /* Paymentez */,
-				2C8897A0240C832000423B11 /* Embed Frameworks */,
+				2CEAD739240F439A0095E9A4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1657,7 +1659,7 @@
 				2C7E7FBD23F89B4500D7835E /* SwiftLint */,
 				2C3EB4E32405FB5A002BB2DA /* Crashlytics */,
 				2C889782240C7D6F00423B11 /* Paymentez */,
-				2C889797240C803900423B11 /* Embed Frameworks */,
+				2CEAD735240F43950095E9A4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
