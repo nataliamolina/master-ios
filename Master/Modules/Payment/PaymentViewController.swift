@@ -70,10 +70,10 @@ class PaymentViewController: UIViewController {
         }
         
         PaymentezSDKClient.add(validCard,
-                               uid: Session.shared.profile.document,
+                               uid: Session.shared.profile.id.asString,
                                email: Session.shared.profile.email) { (error: PaymentezSDKError?, card: PaymentezCard?) in
                                 
-                                
+              print(error)
         }
     }
     
