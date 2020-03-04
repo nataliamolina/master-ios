@@ -653,12 +653,14 @@ import CommonCrypto
         return "\(timestamp.hashValue)"
     }
     
-    static fileprivate func generateAuthTokenV2()-> String
-    {
-        let timestamp = self.generateAuthTimestamp()
+    static fileprivate func generateAuthTokenV2() -> String {
+        let timestamp = generateAuthTimestamp()
         let uniqueString = secretKey + timestamp
         
-        let dataIn = uniqueString.data(using: String.Encoding.utf8)!
+        guard let dataIn = uniqueString.data(using: String.Encoding.utf8) else {
+            return ""
+        }
+        
         var uniqueToken: String = sha256(data: dataIn).hexDescription
         uniqueToken = uniqueToken.replacingOccurrences(of: " ", with: "")
         uniqueToken = uniqueToken.replacingOccurrences(of: "<", with: "")
@@ -666,14 +668,16 @@ import CommonCrypto
         
         let tokenPlain = apiCode + ";" + timestamp + ";" + uniqueToken
         
-        return tokenPlain.base64Encoded()!
+        return tokenPlain.base64Encoded() ?? ""
     }
     
-    static fileprivate func sha256(data : Data) -> Data {
-        var hash = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
+    static fileprivate func sha256(data: Data) -> Data {
+        var hash = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+        
         data.withUnsafeBytes {
             _ = CC_SHA256($0.baseAddress, CC_LONG(data.count), &hash)
         }
+        
         return Data(hash)
     }
     
@@ -751,7 +755,7 @@ import CommonCrypto
     
 }
 
-extension Data {
+private extension Data {
     var hexDescription: String {
         return reduce("") {$0 + String(format: "%02x", $1)}
     }
