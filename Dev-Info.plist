@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
+        <key>NSCameraUsageDescription</key>
+        <string>Usaremos tu cámara únicamente con tu permiso para sacar fotos que nos ayuden, como métodos de pago o foto de perfil.</string>
+        <key>NSMicrophoneUsageDescription</key>
+        <string>Usaremos tu cámara únicamente con tu permiso para sacar fotos que nos ayuden, como métodos de pago o foto de perfil.</string>
         <key>PaymentezAppKey</key>
         <string>${PAYMENTEZ_APP_KEY}</string>
         <key>PaymentezAppCode</key>
