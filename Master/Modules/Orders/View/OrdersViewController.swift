@@ -13,13 +13,13 @@ class OrdersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    private let router: OrdersRouter
+    private let router: RouterBase<OrdersRouterTransitions>
     private var viewModel: OrdersViewModel = {
         return OrdersViewModel()
     }()
     
     // MARK: - Life Cycle
-    init(router: OrdersRouter) {
+    init(router: RouterBase<OrdersRouterTransitions>) {
         self.router = router
         
         super.init(nibName: String(describing: OrdersViewController.self), bundle: nil)

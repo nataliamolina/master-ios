@@ -59,6 +59,12 @@ class OrderDetailViewModel {
         return dataSource.value.safeContains(indexPath.row)
     }
     
+    func getPaymentViewModel() -> PaymentViewModel {
+        return PaymentViewModel(orderId: orderId,
+                                userId: Session.shared.profile.id,
+                                userEmail: Session.shared.profile.email)
+    }
+    
     // MARK: - Private Methods
     
     private func responseToViewModels(model: Order) {

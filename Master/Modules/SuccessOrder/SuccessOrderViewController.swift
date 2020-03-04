@@ -19,7 +19,7 @@ class SuccessOrderViewController: UIViewController {
     }
     
     // MARK: - Properties
-    private let router: CheckoutRouter
+    private let router: RouterBase<CheckoutRouterTransitions>
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class SuccessOrderViewController: UIViewController {
     
     // MARK: - Life Cycle
     
-    init(router: CheckoutRouter) {
+    init(router: RouterBase<CheckoutRouterTransitions>) {
         self.router = router
         
         super.init(nibName: String(describing: SuccessOrderViewController.self), bundle: nil)

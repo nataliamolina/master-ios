@@ -15,16 +15,16 @@ class OrderDetailViewController: UIViewController {
     
     // MARK: - UI Actions
     @IBAction private func paymentButtonAction() {
-        router.transition(to: .payment)
+        router.transition(to: .payment(viewModel: viewModel.getPaymentViewModel()))
     }
 
     // MARK: - Properties
-    private let router: OrdersRouter
+    private let router: RouterBase<OrdersRouterTransitions>
     private let viewModel: OrderDetailViewModel
     
     // MARK: - Life Cycle
     
-    init(viewModel: OrderDetailViewModel, router: OrdersRouter) {
+    init(viewModel: OrderDetailViewModel, router: RouterBase<OrdersRouterTransitions>) {
         self.viewModel = viewModel
         self.router = router
         

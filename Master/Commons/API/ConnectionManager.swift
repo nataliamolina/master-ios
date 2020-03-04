@@ -90,6 +90,28 @@ class ConnectionManager: ConnectionManagerProtocol {
         }
     }
     
+    func delete<T: Codable>(url: String,
+                            onComplete: ResultBlock<T>?) {
+        
+        SN.delete(endpoint: url) { [weak self] (response: SNResultWithEntity<ServerResponse<T>, ServerResponse<EmptyCodable>>) in
+            
+            switch response {
+            case .error(let error):
+                onComplete?(nil, self?.getErrorWith(error: error))
+                
+            case .errorResult(let entity):
+                onComplete?(nil, self?.getErrorWith(text: entity.userErrorMessage))
+                
+            case .success(let response):
+                if response.isError {
+                    onComplete?(nil, self?.getErrorWith(text: response.userErrorMessage))
+                } else {
+                    onComplete?(response.data, nil)
+                }
+            }
+        }
+    }
+    
     // MARK: - Private Methods
     private func getErrorWith(error: Error) -> CMError {
         return CMError(error: error.localizedDescription, details: error)

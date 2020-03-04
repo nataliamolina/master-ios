@@ -11,7 +11,7 @@ import UIKit
 enum OrdersRouterTransitions {
     case orders
     case orderDetail(viewModel: OrderDetailViewModel)
-    case payment
+    case payment(viewModel: PaymentViewModel)
 }
 
 class OrdersRouter: RouterBase<OrdersRouterTransitions> {
@@ -34,8 +34,8 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
         case .orderDetail(let viewModel):
             handleOrderDetailTransition(viewModel: viewModel)
             
-        case .payment:
-            handlePaymentTransition()
+        case .payment(let viewModel):
+            handlePaymentTransition(viewModel: viewModel)
         }
     }
     
@@ -51,8 +51,8 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    private func handlePaymentTransition() {
-        let viewController = PaymentViewController()
+    private func handlePaymentTransition(viewModel: PaymentViewModel) {
+        let viewController = PaymentViewController(viewModel: viewModel, router: self)
         
         navigationController.pushViewController(viewController, animated: true)
     }

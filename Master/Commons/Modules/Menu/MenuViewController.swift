@@ -27,11 +27,11 @@ class MenuViewController: UIViewController {
     }
     
     // MARK: - Properties
-    private let router: MenuRouter
+    private let router: RouterBase<MenuRouterTransitions>
     private let viewModel = MenuViewModel()
     
     // MARK: - Life Cycle
-    init(router: MenuRouter) {
+    init(router: RouterBase<MenuRouterTransitions>) {
         self.router = router
         
         super.init(nibName: String(describing: MenuViewController.self), bundle: nil)

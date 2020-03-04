@@ -18,12 +18,12 @@ class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel = HomeViewModel()
-    private let router: HomeRouter
+    private let router: RouterBase<HomeRouterTransitions>
     private let heroTransition = HeroTransition()
     
     // MARK: - Life Cycle
     
-    init(router: HomeRouter) {
+    init(router: RouterBase<HomeRouterTransitions>) {
         self.router = router
         
         super.init(nibName: String(describing: HomeViewController.self), bundle: nil)

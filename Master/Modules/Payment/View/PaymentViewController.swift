@@ -19,7 +19,7 @@ class PaymentViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var paymentezView: UIView!
     @IBOutlet private weak var paymentViewBottomConstraint: NSLayoutConstraint!
-
+    
     // MARK: - UI Actions
     @IBAction func paymentButtonAction() {
         performCardValidation()
@@ -27,8 +27,21 @@ class PaymentViewController: UIViewController {
     
     // MARK: - Properties
     private var paymentezAddVC: PaymentezAddNativeViewController?
+    private let viewModel: PaymentViewModel
+    private let router: RouterBase<OrdersRouterTransitions>
     
     // MARK: - Life Cycle
+    init(viewModel: PaymentViewModel, router: RouterBase<OrdersRouterTransitions>) {
+        self.viewModel = viewModel
+        self.router = router
+        
+        super.init(nibName: String(describing: PaymentViewController.self), bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,12 +82,7 @@ class PaymentViewController: UIViewController {
             return
         }
         
-        PaymentezSDKClient.add(validCard,
-                               uid: Session.shared.profile.id.asString,
-                               email: Session.shared.profile.email) { (error: PaymentezSDKError?, card: PaymentezCard?) in
-                                
-              print(error)
-        }
+        viewModel.addCardAndPay(validCard)
     }
     
     private func setupKeyboardListeners() {
