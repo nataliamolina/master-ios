@@ -11,7 +11,6 @@ import UIKit
 class StatusHelper {
     func setupButton(_ button: MButton, state: OrderStateType) {
         button.style = buttonStyles[state]
-        button.isHidden = state == .finished || state == .pending || state == .paymentDone || state == .rejected
     }
     
     func setupLabel(_ label: UILabel, state: OrderStateType) {

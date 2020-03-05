@@ -50,8 +50,11 @@ class OrderDetailViewModel {
             
             self?.cart = model.orderProviderServices ?? []
             self?.responseToViewModels(model: model)
-            self?.validateOrderRating()
             self?.fetchOrderServices()
+            
+            if model.orderState.type == .finished {
+                self?.validateOrderRating()
+            }
         }
     }
     
@@ -73,7 +76,8 @@ class OrderDetailViewModel {
         let headerViewModel = OrderDetailHeaderCellViewModel(orderId: model.id,
                                                              status: model.orderState.type,
                                                              providerName: model.provider.user.names,
-                                                             orderDate: Utils.jsonToFormattedDate(model.orderDate))
+                                                             orderDate: Utils.jsonToFormattedDate(model.orderDate),
+                                                             showMainButton: false)
         
         let fieldsCells = [
             CheckoutFieldCellViewModel(title: CheckoutLang.address,
@@ -133,14 +137,22 @@ class OrderDetailViewModel {
     
     private func validateOrderRating() {
         service.validateOrderRating(id: orderId) { [weak self] (response: Bool, error: CMError?) in
-            guard error == nil else {
+            guard response, error == nil else {
                 self?.status.value = .error(error: error?.localizedDescription)
                 
                 return
             }
             
-            print(response)
+            self?.showRatingButton()
         }
+    }
+    
+    private func showRatingButton() {
+        guard var headerViewModel = dataSource.value.first as? OrderDetailHeaderCellViewModel else {
+            return
+        }
+        
+        headerViewModel.showMainButton = true
     }
     
     private func getGroupedServices(models: [ProviderServiceCellViewModel]) -> [ProviderServiceCellViewModel] {

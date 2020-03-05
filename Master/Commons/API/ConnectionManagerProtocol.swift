@@ -17,4 +17,6 @@ protocol ConnectionManagerProtocol {
     func post<T: Codable>(url: String, request: Codable, onComplete: ResultBlock<T>?)
     func put<T: Codable>(url: String, onComplete: ResultBlock<T>?)
     func delete<T: Codable>(url: String, onComplete: ResultBlock<T>?)
+    func deleteWithBoolResponse(url: String, onComplete: ResultBlock<BoolServerResponse>?)
+    func getWithBoolResponse(url: String, onComplete: ResultBlock<BoolServerResponse>?)
 }

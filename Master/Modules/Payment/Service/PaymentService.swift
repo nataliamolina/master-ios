@@ -32,9 +32,9 @@ class PaymentService: PaymentServiceProtocol {
     func deleteAllCards(onComplete: @escaping (_ result: Bool, _ error: CMError?) -> Void) {
         
         connectionDependency
-            .delete(url: Endpoint.deleteCards) { (response: Bool?, error: CMError?) in
+            .deleteWithBoolResponse(url: Endpoint.deleteCards) { (response: BoolServerResponse?, error: CMError?) in
                 
-                onComplete(response ?? false, error)
+                onComplete(response?.result ?? false, error)
         }
     }
 }

@@ -50,6 +50,8 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         
         statusHelper.setupLabel(statusLabel, state: viewModel.status)
         statusHelper.setupButton(mainActionButton, state: viewModel.status)
+        
+        mainActionButton.isHidden = !viewModel.showMainButton
     }
     
     // MARK: - Private Methods

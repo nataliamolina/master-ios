@@ -14,3 +14,17 @@ struct ServerResponse<T: Codable>: Codable {
     let technicalErrorMessage: String?
     let data: T?
 }
+
+struct BoolServerResponse: Codable {
+    let isError: Bool
+    let userErrorMessage: String?
+    let result: Bool
+}
+
+extension BoolServerResponse {
+    enum CodingKeys: String, CodingKey {
+        case isError
+        case userErrorMessage
+        case result = "data"
+    }
+}

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="Dev" customModuleProvider="target">
             <connections>
+                <outlet property="paymentView" destination="NJG-i8-kPI" id="1HH-gk-emB"/>
                 <outlet property="paymentViewBottomConstraint" destination="kjW-Xz-JyO" id="jHa-w8-24g"/>
                 <outlet property="paymentezView" destination="BMb-13-tQj" id="KTP-Pp-E4d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

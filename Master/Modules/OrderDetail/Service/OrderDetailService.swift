@@ -46,9 +46,9 @@ class OrderDetailService: OrderDetailServiceProtocol {
         
         let endpoint = Endpoint.validateOrderRatingBy(id: id)
         
-        connectionDependency.get(url: endpoint) { (response: Bool?, error: CMError?) in
+        connectionDependency.getWithBoolResponse(url: endpoint) { (response: BoolServerResponse?, error: CMError?) in
             
-            onComplete(response ?? false, error)
+            onComplete(response?.result ?? false, error)
         }
     }
 }

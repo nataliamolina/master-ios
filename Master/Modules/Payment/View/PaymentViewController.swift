@@ -17,6 +17,7 @@ private struct Constants {
 
 class PaymentViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var paymentView: UIView!
     @IBOutlet private weak var paymentezView: UIView!
     @IBOutlet private weak var paymentViewBottomConstraint: NSLayoutConstraint!
     
