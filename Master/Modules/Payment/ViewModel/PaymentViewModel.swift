@@ -40,10 +40,10 @@ class PaymentViewModel {
     // MARK: - Public Methods
     
     func addCardAndPay(_ card: PaymentezCard) {
-        isLoading.value = true
+        loadingState(true)
         
         deleteAllCards { [weak self] (isDone: Bool, error: CMError?) in
-            self?.isLoading.value = false
+            self?.loadingState(false)
             
             if !isDone {
                 self?.status.value = .error(error: error?.localizedDescription)
@@ -59,10 +59,10 @@ class PaymentViewModel {
     // MARK: - Private Methods
     
     private func pay(_ card: PaymentezCard) {
-        isLoading.value = true
+        loadingState(true)
         
         SDK.add(card, uid: userId, email: userEmail) { [weak self] (error: PaymentezSDKError?, card: PaymentezCard?) in
-            self?.isLoading.value = false
+            self?.loadingState(false)
             
             guard let card = card, let cardToken = card.token, error == nil else {
                 self?.status.value = .error(error: nil)
@@ -75,12 +75,12 @@ class PaymentViewModel {
     }
     
     private func performPayment(cardToken: String) {
-        isLoading.value = true
+        loadingState(true)
         
         let request = PaymentRequest(token: cardToken, orderId: orderId)
         
         service.performPayment(request: request) { [weak self] (response: PaymentResponse?, error: CMError?) in
-            self?.isLoading.value = false
+            self?.loadingState(false)
             
             if let error = error {
                 self?.status.value = .error(error: error.localizedDescription)
@@ -103,12 +103,18 @@ class PaymentViewModel {
     }
     
     private func deleteAllCards(onComplete: @escaping (_ isDone: Bool, _ error: CMError?) -> Void) {
-        isLoading.value = true
+        loadingState(true)
         
         service.deleteAllCards { [weak self] (isDone: Bool, error: CMError?) in
-            self?.isLoading.value = true
+            self?.loadingState(false)
             
             onComplete(isDone, error)
+        }
+    }
+    
+    private func loadingState(_ state: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            self?.isLoading.value = state
         }
     }
 }

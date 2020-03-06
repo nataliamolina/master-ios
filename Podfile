@@ -34,6 +34,10 @@ target 'Dev' do
   commons
 end
 
+target 'Local' do
+  commons
+end
+
 target 'MasterTests' do
   commons
 end

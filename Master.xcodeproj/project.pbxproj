@@ -312,6 +312,205 @@
 		2CAD87B124049A5A0063AEB2 /* CompleteTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD87AF24049A5A0063AEB2 /* CompleteTextViewController.swift */; };
 		2CAD87B224049A5A0063AEB2 /* CompleteTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAD87B024049A5A0063AEB2 /* CompleteTextViewController.xib */; };
 		2CAD87B42404AA230063AEB2 /* CompleteTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD87B32404AA230063AEB2 /* CompleteTextViewModel.swift */; };
+		2CC3DBCF2411EBCC001E76B2 /* CheckoutEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A07240AC39B0073DD07 /* CheckoutEndpoints.swift */; };
+		2CC3DBD02411EBCC001E76B2 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC123FA144D0024B3F1 /* CommentCell.swift */; };
+		2CC3DBD12411EBCC001E76B2 /* SplashScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1623F4C33600346395 /* SplashScreenService.swift */; };
+		2CC3DBD22411EBCC001E76B2 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7314524047814006FF85D /* ButtonCell.swift */; };
+		2CC3DBD32411EBCC001E76B2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05F05B23F8E6BC003D1925 /* String+Extensions.swift */; };
+		2CC3DBD42411EBCC001E76B2 /* OrderDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8084240C0D4F00D4C6FE /* OrderDetailHeaderCell.swift */; };
+		2CC3DBD52411EBCC001E76B2 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7523F62BF7005E5CB1 /* RegisterViewModel.swift */; };
+		2CC3DBD62411EBCC001E76B2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6523B4DA85005258A8 /* UITableView+Extensions.swift */; };
+		2CC3DBD72411EBCC001E76B2 /* ProviderListServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBB23F89AC600D7835E /* ProviderListServiceEndpoint.swift */; };
+		2CC3DBD82411EBCC001E76B2 /* RouterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D2523F4E6AF00346395 /* RouterBase.swift */; };
+		2CC3DBD92411EBCC001E76B2 /* CompleteTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD87B32404AA230063AEB2 /* CompleteTextViewModel.swift */; };
+		2CC3DBDA2411EBCC001E76B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
+		2CC3DBDB2411EBCC001E76B2 /* ProviderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD123F7D84500F9EF40 /* ProviderListViewController.swift */; };
+		2CC3DBDC2411EBCC001E76B2 /* ButtonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7314924047B56006FF85D /* ButtonCellViewModel.swift */; };
+		2CC3DBDD2411EBCC001E76B2 /* ProviderListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB623F89A2200D7835E /* ProviderListService.swift */; };
+		2CC3DBDE2411EBCC001E76B2 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829ECB240B3AC500D7DD81 /* UINavigationController+Extensions.swift */; };
+		2CC3DBDF2411EBCC001E76B2 /* EmailLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC923F2745500243D3E /* EmailLoginService.swift */; };
+		2CC3DBE02411EBCC001E76B2 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829ED6240B44FC00D7DD81 /* TitleCell.swift */; };
+		2CC3DBE12411EBCC001E76B2 /* MTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D5623B4D470005258A8 /* MTextField.swift */; };
+		2CC3DBE22411EBCC001E76B2 /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB723F7AE3500F9EF40 /* ServiceCategory.swift */; };
+		2CC3DBE32411EBCC001E76B2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABCC23F7B43000F9EF40 /* HomeViewModel.swift */; };
+		2CC3DBE42411EBCC001E76B2 /* OrdersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABCA23F7B26A00F9EF40 /* OrdersServiceProtocol.swift */; };
+		2CC3DBE52411EBCC001E76B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6A23B4DB34005258A8 /* HomeViewController.swift */; };
+		2CC3DBE62411EBCC001E76B2 /* StatusHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B808B240C12CE00D4C6FE /* StatusHelper.swift */; };
+		2CC3DBE72411EBCC001E76B2 /* RegisterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7323F62BD3005E5CB1 /* RegisterEndpoints.swift */; };
+		2CC3DBE82411EBCC001E76B2 /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC723F2744600243D3E /* EmailLoginViewModel.swift */; };
+		2CC3DBE92411EBCC001E76B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6423F4BB3400FE06BE /* User.swift */; };
+		2CC3DBEA2411EBCC001E76B2 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6F23B4DB97005258A8 /* CategoryCell.swift */; };
+		2CC3DBEB2411EBCC001E76B2 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9823F4FE8700267899 /* HomeRouter.swift */; };
+		2CC3DBEC2411EBCC001E76B2 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A0A240ACF070073DD07 /* LoaderView.swift */; };
+		2CC3DBED2411EBCC001E76B2 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEAD748240F59040095E9A4 /* PaymentViewModel.swift */; };
+		2CC3DBEE2411EBCC001E76B2 /* OrderDetailEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807B240C0AEE00D4C6FE /* OrderDetailEndpoints.swift */; };
+		2CC3DBEF2411EBCC001E76B2 /* MLegalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC223F25EA800243D3E /* MLegalButton.swift */; };
+		2CC3DBF02411EBCC001E76B2 /* CheckoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55F3B02408DE9D00F458AC /* CheckoutService.swift */; };
+		2CC3DBF12411EBCC001E76B2 /* LoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9023F4EA4E00267899 /* LoginServiceProtocol.swift */; };
+		2CC3DBF22411EBCC001E76B2 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC952400C90A00C67D80 /* CheckoutViewController.swift */; };
+		2CC3DBF32411EBCC001E76B2 /* SuccessOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EBF240B1CB500D7DD81 /* SuccessOrderViewController.swift */; };
+		2CC3DBF42411EBCC001E76B2 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8E23F4E9E900267899 /* LoginRequest.swift */; };
+		2CC3DBF52411EBCC001E76B2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088D23F647E00058873D /* MainViewModel.swift */; };
+		2CC3DBF62411EBCC001E76B2 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829ECE240B3E1E00D7DD81 /* OrderCell.swift */; };
+		2CC3DBF72411EBCC001E76B2 /* CheckoutServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EBC240B16ED00D7DD81 /* CheckoutServiceProtocol.swift */; };
+		2CC3DBF82411EBCC001E76B2 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7123F62B85005E5CB1 /* RegisterRequest.swift */; };
+		2CC3DBF92411EBCC001E76B2 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EC7240B3A4800D7DD81 /* OrdersViewController.swift */; };
+		2CC3DBFA2411EBCC001E76B2 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC023F7AF2C00F9EF40 /* Order.swift */; };
+		2CC3DBFB2411EBCC001E76B2 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7312E24045586006FF85D /* XibView.swift */; };
+		2CC3DBFC2411EBCC001E76B2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D5B23B4D8DF005258A8 /* RegisterViewController.swift */; };
+		2CC3DBFD2411EBCC001E76B2 /* ProviderServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4D9D23F99A980024B3F1 /* ProviderServiceCell.swift */; };
+		2CC3DBFE2411EBCC001E76B2 /* ProductSelectorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9E2400A1DE005B76EB /* ProductSelectorResult.swift */; };
+		2CC3DBFF2411EBCC001E76B2 /* SelectorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DBC23FA007B0024B3F1 /* SelectorCellViewModel.swift */; };
+		2CC3DC002411EBCC001E76B2 /* ProviderWithScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB923F89A6E00D7835E /* ProviderWithScore.swift */; };
+		2CC3DC012411EBCC001E76B2 /* CheckoutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EC3240B205E00D7DD81 /* CheckoutRouter.swift */; };
+		2CC3DC022411EBCC001E76B2 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AB823F24B0E00243D3E /* UIImage+Extensions.swift */; };
+		2CC3DC032411EBCC001E76B2 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEAD742240F57B80095E9A4 /* PaymentResponse.swift */; };
+		2CC3DC042411EBCC001E76B2 /* SplashScreenEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1C23F4CD3A00346395 /* SplashScreenEndpoints.swift */; };
+		2CC3DC052411EBCC001E76B2 /* OrderDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807F240C0B5B00D4C6FE /* OrderDetailService.swift */; };
+		2CC3DC062411EBCC001E76B2 /* OrdersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABBD23F7AF0200F9EF40 /* OrdersService.swift */; };
+		2CC3DC072411EBCC001E76B2 /* ProviderProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494DB23F998C600F87AD6 /* ProviderProfileService.swift */; };
+		2CC3DC082411EBCC001E76B2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB523F7ADBD00F9EF40 /* Service.swift */; };
+		2CC3DC092411EBCC001E76B2 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6323B4DA63005258A8 /* UITableViewCell+Extensions.swift */; };
+		2CC3DC0A2411EBCC001E76B2 /* CheckoutProviderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7313E240475C6006FF85D /* CheckoutProviderCellViewModel.swift */; };
+		2CC3DC0B2411EBCC001E76B2 /* OrderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC423F7B1FF00F9EF40 /* OrderServiceProtocol.swift */; };
+		2CC3DC0C2411EBCC001E76B2 /* RegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED7723F62C01005E5CB1 /* RegisterServiceProtocol.swift */; };
+		2CC3DC0D2411EBCC001E76B2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DAA23F9A0430024B3F1 /* Comment.swift */; };
+		2CC3DC0E2411EBCC001E76B2 /* CheckoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD87AC24048CAE0063AEB2 /* CheckoutProvider.swift */; };
+		2CC3DC0F2411EBCC001E76B2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC9D2400D30200C67D80 /* UIView+Extensions.swift */; };
+		2CC3DC102411EBCC001E76B2 /* ProviderProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494D123F9989B00F87AD6 /* ProviderProfileViewController.swift */; };
+		2CC3DC112411EBCC001E76B2 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB223F9F1370024B3F1 /* Int+Extensions.swift */; };
+		2CC3DC122411EBCC001E76B2 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
+		2CC3DC132411EBCC001E76B2 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC223F7B00A00F9EF40 /* Provider.swift */; };
+		2CC3DC142411EBCC001E76B2 /* TitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829EDA240B459700D7DD81 /* TitleCellViewModel.swift */; };
+		2CC3DC152411EBCC001E76B2 /* OrderDetailHeaderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8089240C11AB00D4C6FE /* OrderDetailHeaderCellViewModel.swift */; };
+		2CC3DC162411EBCC001E76B2 /* OrderDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8081240C0B7500D4C6FE /* OrderDetailServiceProtocol.swift */; };
+		2CC3DC172411EBCC001E76B2 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC623F7B21000F9EF40 /* ProviderService.swift */; };
+		2CC3DC182411EBCC001E76B2 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A10240AD0F20073DD07 /* Loader.swift */; };
+		2CC3DC192411EBCC001E76B2 /* ProductSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76018623FE34AD00252531 /* ProductSelectorViewController.swift */; };
+		2CC3DC1A2411EBCC001E76B2 /* ProviderListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B807D240C0B4800D4C6FE /* ProviderListServiceProtocol.swift */; };
+		2CC3DC1B2411EBCC001E76B2 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB223F7AD9200F9EF40 /* HomeService.swift */; };
+		2CC3DC1C2411EBCC001E76B2 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9A24008EFF005B76EB /* UIApplication+Extensions.swift */; };
+		2CC3DC1D2411EBCC001E76B2 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4123B4C8A0005258A8 /* Array+Extensions.swift */; };
+		2CC3DC1E2411EBCC001E76B2 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829ED3240B435300D7DD81 /* OrdersViewModel.swift */; };
+		2CC3DC1F2411EBCC001E76B2 /* GmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088A23F647680058873D /* GmailRequest.swift */; };
+		2CC3DC202411EBCC001E76B2 /* PaymentServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEAD746240F58E10095E9A4 /* PaymentServiceProtocol.swift */; };
+		2CC3DC212411EBCC001E76B2 /* CheckoutProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC731362404722E006FF85D /* CheckoutProviderCell.swift */; };
+		2CC3DC222411EBCC001E76B2 /* OrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A05240AC2B40073DD07 /* OrderRequest.swift */; };
+		2CC3DC232411EBCC001E76B2 /* CellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6123B4DA41005258A8 /* CellViewModelProtocol.swift */; };
+		2CC3DC242411EBCC001E76B2 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */; };
+		2CC3DC252411EBCC001E76B2 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8897A3240C852F00423B11 /* PaymentViewController.swift */; };
+		2CC3DC262411EBCC001E76B2 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55F3AE2408BAF600F458AC /* DatePicker.swift */; };
+		2CC3DC272411EBCC001E76B2 /* OrderProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DBE23FA130B0024B3F1 /* OrderProviderService.swift */; };
+		2CC3DC282411EBCC001E76B2 /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B806F240BFD8F00D4C6FE /* LegalViewController.swift */; };
+		2CC3DC292411EBCC001E76B2 /* ProviderProfileServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DAC23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift */; };
+		2CC3DC2A2411EBCC001E76B2 /* CheckoutHeaderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7313C24047500006FF85D /* CheckoutHeaderCellViewModel.swift */; };
+		2CC3DC2B2411EBCC001E76B2 /* CommentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC523FA15760024B3F1 /* CommentCellViewModel.swift */; };
+		2CC3DC2C2411EBCC001E76B2 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4F23B4CDB7005258A8 /* Styles.swift */; };
+		2CC3DC2D2411EBCC001E76B2 /* EmptyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1E23F4D00800346395 /* EmptyCodable.swift */; };
+		2CC3DC2E2411EBCC001E76B2 /* HomeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DA623F99D670024B3F1 /* HomeServiceProtocol.swift */; };
+		2CC3DC2F2411EBCC001E76B2 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D3623B4C7DE005258A8 /* SplashScreenViewController.swift */; };
+		2CC3DC302411EBCC001E76B2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */; };
+		2CC3DC312411EBCC001E76B2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
+		2CC3DC322411EBCC001E76B2 /* ProviderServiceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB423F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift */; };
+		2CC3DC332411EBCC001E76B2 /* OrdersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63EF31240C161500852EAE /* OrdersRouter.swift */; };
+		2CC3DC342411EBCC001E76B2 /* OrderDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B808D240C135000D4C6FE /* OrderDetailViewModel.swift */; };
+		2CC3DC352411EBCC001E76B2 /* ProviderProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494D923F998B800F87AD6 /* ProviderProfileViewModel.swift */; };
+		2CC3DC362411EBCC001E76B2 /* PaymentEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEAD73D240F57380095E9A4 /* PaymentEndpoints.swift */; };
+		2CC3DC372411EBCC001E76B2 /* ProviderProfileEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494DD23F998CE00F87AD6 /* ProviderProfileEndpoints.swift */; };
+		2CC3DC382411EBCC001E76B2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D5823B4D5EE005258A8 /* UIViewController+Extensions.swift */; };
+		2CC3DC392411EBCC001E76B2 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4D23B4CC2B005258A8 /* UIColor+Extensions.swift */; };
+		2CC3DC3A2411EBCC001E76B2 /* CategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */; };
+		2CC3DC3B2411EBCC001E76B2 /* ConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6723B4DAE5005258A8 /* ConfigurableCellProtocol.swift */; };
+		2CC3DC3C2411EBCC001E76B2 /* ProductSelectorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9824008EE3005B76EB /* ProductSelectorDataSource.swift */; };
+		2CC3DC3D2411EBCC001E76B2 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1A23F4C35700346395 /* SplashScreenViewModel.swift */; };
+		2CC3DC3E2411EBCC001E76B2 /* OrdersEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABC823F7B23B00F9EF40 /* OrdersEndpoints.swift */; };
+		2CC3DC3F2411EBCC001E76B2 /* MImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DAE23F9AE560024B3F1 /* MImageView.swift */; };
+		2CC3DC402411EBCC001E76B2 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
+		2CC3DC412411EBCC001E76B2 /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEAD73F240F57860095E9A4 /* PaymentService.swift */; };
+		2CC3DC422411EBCC001E76B2 /* ServerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6723F4BB5B00FE06BE /* ServerStatus.swift */; };
+		2CC3DC432411EBCC001E76B2 /* CheckoutHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC73131240471CF006FF85D /* CheckoutHeaderCell.swift */; };
+		2CC3DC442411EBCC001E76B2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05F05923F8DA3C003D1925 /* Utils.swift */; };
+		2CC3DC452411EBCC001E76B2 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D2323F4E4FB00346395 /* MainRouter.swift */; };
+		2CC3DC462411EBCC001E76B2 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC731412404769C006FF85D /* CheckoutViewModel.swift */; };
+		2CC3DC472411EBCC001E76B2 /* HomeEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABB923F7AE6700F9EF40 /* HomeEndpoints.swift */; };
+		2CC3DC482411EBCC001E76B2 /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6715D240B83E9007917E8 /* MenuRouter.swift */; };
+		2CC3DC492411EBCC001E76B2 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6923F4BB6700FE06BE /* ServerResponse.swift */; };
+		2CC3DC4A2411EBCC001E76B2 /* MAnimatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */; };
+		2CC3DC4B2411EBCC001E76B2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4623B4CB48005258A8 /* MainViewController.swift */; };
+		2CC3DC4C2411EBCC001E76B2 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */; };
+		2CC3DC4D2411EBCC001E76B2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9623F4FD5700267899 /* Result.swift */; };
+		2CC3DC4E2411EBCC001E76B2 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFED6F23F62B36005E5CB1 /* RegisterService.swift */; };
+		2CC3DC4F2411EBCC001E76B2 /* ProviderProfileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB023F9B1420024B3F1 /* ProviderProfileCellViewModel.swift */; };
+		2CC3DC502411EBCC001E76B2 /* ConnectionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6D23F4C00600FE06BE /* ConnectionManagerProtocol.swift */; };
+		2CC3DC512411EBCC001E76B2 /* CompleteTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD87AF24049A5A0063AEB2 /* CompleteTextViewController.swift */; };
+		2CC3DC522411EBCC001E76B2 /* SplashScreenServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1823F4C34600346395 /* SplashScreenServiceProtocol.swift */; };
+		2CC3DC532411EBCC001E76B2 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D5223B4D2CC005258A8 /* EmailLoginViewController.swift */; };
+		2CC3DC542411EBCC001E76B2 /* MButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D4B23B4CBC3005258A8 /* MButton.swift */; };
+		2CC3DC552411EBCC001E76B2 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6B23F4BDA700FE06BE /* ConnectionManager.swift */; };
+		2CC3DC562411EBCC001E76B2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9223F4EC5100267899 /* UserProfile.swift */; };
+		2CC3DC572411EBCC001E76B2 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3160FB23F8B32500A5F6B8 /* AnimationType.swift */; };
+		2CC3DC582411EBCC001E76B2 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */; };
+		2CC3DC592411EBCC001E76B2 /* CMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9423F4F16A00267899 /* CMError.swift */; };
+		2CC3DC5A2411EBCC001E76B2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AD323F274E300243D3E /* Endpoint.swift */; };
+		2CC3DC5B2411EBCC001E76B2 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* Storage.swift */; };
+		2CC3DC5C2411EBCC001E76B2 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8074240C0A2B00D4C6FE /* OrderDetailViewController.swift */; };
+		2CC3DC5D2411EBCC001E76B2 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB823F9FE650024B3F1 /* SelectorCell.swift */; };
+		2CC3DC5E2411EBCC001E76B2 /* ProviderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC723F8A17200D7835E /* ProviderCellViewModel.swift */; };
+		2CC3DC5F2411EBCC001E76B2 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEAD744240F58370095E9A4 /* PaymentRequest.swift */; };
+		2CC3DC602411EBCC001E76B2 /* ProviderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FBE23F89DF200D7835E /* ProviderListViewModel.swift */; };
+		2CC3DC612411EBCC001E76B2 /* ProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC323F8A0A600D7835E /* ProviderCell.swift */; };
+		2CC3DC622411EBCC001E76B2 /* CheckoutFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7313A24047401006FF85D /* CheckoutFieldCellViewModel.swift */; };
+		2CC3DC632411EBCC001E76B2 /* ProviderProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DA223F99D1C0024B3F1 /* ProviderProfileCell.swift */; };
+		2CC3DC642411EBCC001E76B2 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E0EEB2408A299005453BA /* DatePickerViewController.swift */; };
+		2CC3DC652411EBCC001E76B2 /* CommentsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DA823F9A0370024B3F1 /* CommentsResponse.swift */; };
+		2CC3DC662411EBCC001E76B2 /* CheckoutFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEECC9B2400D22200C67D80 /* CheckoutFieldCell.swift */; };
+		2CC3DC672411EBCC001E76B2 /* CheckoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD87A8240485840063AEB2 /* CheckoutConstants.swift */; };
+		2CC3DC682411EBCC001E76B2 /* OrderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6715A240B6B14007917E8 /* OrderCellViewModel.swift */; };
+		2CC3DC6A2411EBCC001E76B2 /* Paymentez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD736240F439A0095E9A4 /* Paymentez.framework */; };
+		2CC3DC6D2411EBCC001E76B2 /* OrderDetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B8085240C0D4F00D4C6FE /* OrderDetailHeaderCell.xib */; };
+		2CC3DC6E2411EBCC001E76B2 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC223FA144D0024B3F1 /* CommentCell.xib */; };
+		2CC3DC6F2411EBCC001E76B2 /* empty_state_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C22B39323F8AFC300678A41 /* empty_state_anim.json */; };
+		2CC3DC702411EBCC001E76B2 /* payment_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C22B39623F8AFC300678A41 /* payment_anim.json */; };
+		2CC3DC712411EBCC001E76B2 /* ProviderProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA494D223F9989B00F87AD6 /* ProviderProfileViewController.xib */; };
+		2CC3DC722411EBCC001E76B2 /* LegalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B8070240BFD8F00D4C6FE /* LegalViewController.xib */; };
+		2CC3DC732411EBCC001E76B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58132B623B4C7570032FC8B /* LaunchScreen.storyboard */; };
+		2CC3DC742411EBCC001E76B2 /* ProviderServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4D9E23F99A980024B3F1 /* ProviderServiceCell.xib */; };
+		2CC3DC752411EBCC001E76B2 /* CheckoutHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC73132240471CF006FF85D /* CheckoutHeaderCell.xib */; };
+		2CC3DC762411EBCC001E76B2 /* SuccessOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C829EC0240B1CB500D7DD81 /* SuccessOrderViewController.xib */; };
+		2CC3DC772411EBCC001E76B2 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D3723B4C7DE005258A8 /* SplashScreenViewController.xib */; };
+		2CC3DC782411EBCC001E76B2 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */; };
+		2CC3DC792411EBCC001E76B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
+		2CC3DC7A2411EBCC001E76B2 /* EmailLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D5323B4D2CC005258A8 /* EmailLoginViewController.xib */; };
+		2CC3DC7B2411EBCC001E76B2 /* success_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C22B39223F8AFC200678A41 /* success_anim.json */; };
+		2CC3DC7C2411EBCC001E76B2 /* Endpoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C05F05723F8D9E6003D1925 /* Endpoints.plist */; };
+		2CC3DC7D2411EBCC001E76B2 /* ProviderProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4DA323F99D1C0024B3F1 /* ProviderProfileCell.xib */; };
+		2CC3DC7E2411EBCC001E76B2 /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C829EC8240B3A4800D7DD81 /* OrdersViewController.xib */; };
+		2CC3DC7F2411EBCC001E76B2 /* ProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7E7FC423F8A0A600D7835E /* ProviderCell.xib */; };
+		2CC3DC802411EBCC001E76B2 /* CheckoutProviderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC731372404722E006FF85D /* CheckoutProviderCell.xib */; };
+		2CC3DC812411EBCC001E76B2 /* ProductSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C76018823FE34BE00252531 /* ProductSelectorViewController.xib */; };
+		2CC3DC822411EBCC001E76B2 /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEECC962400C90A00C67D80 /* CheckoutViewController.xib */; };
+		2CC3DC832411EBCC001E76B2 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC123F2560F00243D3E /* Strings.strings */; };
+		2CC3DC842411EBCC001E76B2 /* CompleteTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAD87B024049A5A0063AEB2 /* CompleteTextViewController.xib */; };
+		2CC3DC852411EBCC001E76B2 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC7314624047814006FF85D /* ButtonCell.xib */; };
+		2CC3DC862411EBCC001E76B2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D4723B4CB48005258A8 /* MainViewController.xib */; };
+		2CC3DC872411EBCC001E76B2 /* login_bg_video_new.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */; };
+		2CC3DC882411EBCC001E76B2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D6B23B4DB34005258A8 /* HomeViewController.xib */; };
+		2CC3DC892411EBCC001E76B2 /* OrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B8075240C0A2B00D4C6FE /* OrderDetailViewController.xib */; };
+		2CC3DC8A2411EBCC001E76B2 /* SelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4DB923F9FE650024B3F1 /* SelectorCell.xib */; };
+		2CC3DC8B2411EBCC001E76B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C1218CC2405E7580098BE55 /* GoogleService-Info.plist */; };
+		2CC3DC8C2411EBCC001E76B2 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8897A4240C852F00423B11 /* PaymentViewController.xib */; };
+		2CC3DC8D2411EBCC001E76B2 /* loader_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C829EBA240AD4FC00D7DD81 /* loader_anim.json */; };
+		2CC3DC8E2411EBCC001E76B2 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D5C23B4D8DF005258A8 /* RegisterViewController.xib */; };
+		2CC3DC8F2411EBCC001E76B2 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3E0EEC2408A299005453BA /* DatePickerViewController.xib */; };
+		2CC3DC902411EBCC001E76B2 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D7023B4DB97005258A8 /* CategoryCell.xib */; };
+		2CC3DC912411EBCC001E76B2 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C829ECF240B3E1E00D7DD81 /* OrderCell.xib */; };
+		2CC3DC922411EBCC001E76B2 /* loading_order_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C22B39423F8AFC300678A41 /* loading_order_anim.json */; };
+		2CC3DC932411EBCC001E76B2 /* empty_state_providers.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C22B39523F8AFC300678A41 /* empty_state_providers.json */; };
+		2CC3DC942411EBCC001E76B2 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C829ED7240B44FC00D7DD81 /* TitleCell.xib */; };
+		2CC3DC952411EBCC001E76B2 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C976A0B240ACF070073DD07 /* LoaderView.xib */; };
+		2CC3DC962411EBCC001E76B2 /* ProviderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD223F7D84500F9EF40 /* ProviderListViewController.xib */; };
+		2CC3DC972411EBCC001E76B2 /* CheckoutFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEECC9F2400D37B00C67D80 /* CheckoutFieldCell.xib */; };
+		2CC3DC9D2411EBCC001E76B2 /* Paymentez.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEAD736240F439A0095E9A4 /* Paymentez.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CC7312F24045586006FF85D /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC7312E24045586006FF85D /* XibView.swift */; };
 		2CC73133240471CF006FF85D /* CheckoutHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC73131240471CF006FF85D /* CheckoutHeaderCell.swift */; };
 		2CC73134240471CF006FF85D /* CheckoutHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC73132240471CF006FF85D /* CheckoutHeaderCell.xib */; };
@@ -379,8 +578,8 @@
 		2CFF4DC323FA144D0024B3F1 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC123FA144D0024B3F1 /* CommentCell.swift */; };
 		2CFF4DC423FA144D0024B3F1 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC223FA144D0024B3F1 /* CommentCell.xib */; };
 		2CFF4DC623FA15760024B3F1 /* CommentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DC523FA15760024B3F1 /* CommentCellViewModel.swift */; };
-		448F534E2E89B59C562B66F2 /* libPods-Master.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EF31F4F93F1D4F760BEAEE /* libPods-Master.a */; };
-		5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */; };
+		345598FEE0F138A36F2BE901 /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FC5CB5E2246C2D6EA1414D /* libPods-MasterTests.a */; };
+		999162BD65A029CDEEB83D7A /* libPods-Dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F6515EE7D9B03E9193BB45 /* libPods-Dev.a */; };
 		A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58132AD23B4C7560032FC8B /* AppDelegate.swift */; };
 		A58132B523B4C7570032FC8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58132B423B4C7570032FC8B /* Assets.xcassets */; };
 		A58132B823B4C7570032FC8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58132B623B4C7570032FC8B /* LaunchScreen.storyboard */; };
@@ -408,7 +607,9 @@
 		A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6F23B4DB97005258A8 /* CategoryCell.swift */; };
 		A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D7023B4DB97005258A8 /* CategoryCell.xib */; };
 		A5F30D7423B4DC94005258A8 /* CategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */; };
-		E78954D4C662121A06E470CE /* libPods-Dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DC24950A095F17F44DFC46 /* libPods-Dev.a */; };
+		B693B7EE924C9C2FE4F3D62E /* libPods-Master.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF38B7E83CB0400EFD86987 /* libPods-Master.a */; };
+		E78954D4C662121A06E470CE /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		EF02662289A17A9B21801977 /* libPods-Local.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC417BF745280FE18EDE2D1B /* libPods-Local.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -422,6 +623,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2CC3DC9C2411EBCC001E76B2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2CC3DC9D2411EBCC001E76B2 /* Paymentez.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CEAD735240F43950095E9A4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,8 +659,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0FC7148F0CFE4FA0A5FCA190 /* Pods-Master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master.release.xcconfig"; path = "Target Support Files/Pods-Master/Pods-Master.release.xcconfig"; sourceTree = "<group>"; };
-		28A455F73CCB32D7506AD43D /* Pods-Master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master.debug.xcconfig"; path = "Target Support Files/Pods-Master/Pods-Master.debug.xcconfig"; sourceTree = "<group>"; };
 		2C05F05723F8D9E6003D1925 /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoints.plist; sourceTree = "<group>"; };
 		2C05F05923F8DA3C003D1925 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2C05F05B23F8E6BC003D1925 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -560,6 +770,8 @@
 		2CAD87AF24049A5A0063AEB2 /* CompleteTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTextViewController.swift; sourceTree = "<group>"; };
 		2CAD87B024049A5A0063AEB2 /* CompleteTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompleteTextViewController.xib; sourceTree = "<group>"; };
 		2CAD87B32404AA230063AEB2 /* CompleteTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTextViewModel.swift; sourceTree = "<group>"; };
+		2CC3DCA12411EBCC001E76B2 /* Local.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Local.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC3DCA22411EBCD001E76B2 /* Local-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Local-Info.plist"; path = "/Users/carlosmejia/master/ios/Local-Info.plist"; sourceTree = "<absolute>"; };
 		2CC7312E24045586006FF85D /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		2CC73131240471CF006FF85D /* CheckoutHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutHeaderCell.swift; sourceTree = "<group>"; };
 		2CC73132240471CF006FF85D /* CheckoutHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutHeaderCell.xib; sourceTree = "<group>"; };
@@ -625,11 +837,11 @@
 		2CFF4DC123FA144D0024B3F1 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		2CFF4DC223FA144D0024B3F1 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		2CFF4DC523FA15760024B3F1 /* CommentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellViewModel.swift; sourceTree = "<group>"; };
-		5219BE9320E02B764F5C6E71 /* Pods-Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev.release.xcconfig"; path = "Target Support Files/Pods-Dev/Pods-Dev.release.xcconfig"; sourceTree = "<group>"; };
-		54DC24950A095F17F44DFC46 /* libPods-Dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
-		80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A1FDF8DC14BF04403B2FAF0 /* Pods-MasterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.release.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.release.xcconfig"; sourceTree = "<group>"; };
+		6084E04ECCB5F98B5A2103BF /* Pods-Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev.debug.xcconfig"; path = "Target Support Files/Pods-Dev/Pods-Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		67808FBEB1163B45E931F25C /* Pods-MasterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.debug.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		754741F7F1A10D6E0CF6D467 /* Pods-Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev.release.xcconfig"; path = "Target Support Files/Pods-Dev/Pods-Dev.release.xcconfig"; sourceTree = "<group>"; };
+		7A9DD6B73E09B33950883047 /* Pods-MasterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterTests.release.xcconfig"; path = "Target Support Files/Pods-MasterTests/Pods-MasterTests.release.xcconfig"; sourceTree = "<group>"; };
+		8CF38B7E83CB0400EFD86987 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58132AA23B4C7560032FC8B /* Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58132AD23B4C7560032FC8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58132B423B4C7570032FC8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -661,8 +873,13 @@
 		A5F30D6F23B4DB97005258A8 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		A5F30D7023B4DB97005258A8 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModel.swift; sourceTree = "<group>"; };
-		E114D16F98AE7F32333D869F /* Pods-Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev.debug.xcconfig"; path = "Target Support Files/Pods-Dev/Pods-Dev.debug.xcconfig"; sourceTree = "<group>"; };
-		F7EF31F4F93F1D4F760BEAEE /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FC5CB5E2246C2D6EA1414D /* libPods-MasterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MasterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB081F81D4EC75F9BDA36846 /* Pods-Local.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Local.debug.xcconfig"; path = "Target Support Files/Pods-Local/Pods-Local.debug.xcconfig"; sourceTree = "<group>"; };
+		BC4B790CF36A3F6920ACA0B3 /* Pods-Local.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Local.release.xcconfig"; path = "Target Support Files/Pods-Local/Pods-Local.release.xcconfig"; sourceTree = "<group>"; };
+		CF2B2D17A7BB6C2C34362B2B /* Pods-Master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master.debug.xcconfig"; path = "Target Support Files/Pods-Master/Pods-Master.debug.xcconfig"; sourceTree = "<group>"; };
+		D1F6515EE7D9B03E9193BB45 /* libPods-Dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D86C62CD6C87297A5048BEB8 /* Pods-Master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master.release.xcconfig"; path = "Target Support Files/Pods-Master/Pods-Master.release.xcconfig"; sourceTree = "<group>"; };
+		DC417BF745280FE18EDE2D1B /* libPods-Local.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Local.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -671,7 +888,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEAD737240F439A0095E9A4 /* Paymentez.framework in Frameworks */,
-				E78954D4C662121A06E470CE /* libPods-Dev.a in Frameworks */,
+				E78954D4C662121A06E470CE /* (null) in Frameworks */,
+				999162BD65A029CDEEB83D7A /* libPods-Dev.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC3DC692411EBCC001E76B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC3DC6A2411EBCC001E76B2 /* Paymentez.framework in Frameworks */,
+				EF02662289A17A9B21801977 /* libPods-Local.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,7 +907,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEAD733240F43950095E9A4 /* Paymentez.framework in Frameworks */,
-				448F534E2E89B59C562B66F2 /* libPods-Master.a in Frameworks */,
+				B693B7EE924C9C2FE4F3D62E /* libPods-Master.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +915,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D46775E4946133B0F8DB3A2 /* libPods-MasterTests.a in Frameworks */,
+				345598FEE0F138A36F2BE901 /* libPods-MasterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1438,9 +1665,10 @@
 			children = (
 				2CEAD736240F439A0095E9A4 /* Paymentez.framework */,
 				2CEAD732240F43950095E9A4 /* Paymentez.framework */,
-				80DA95A486AE3B0A539B0EEF /* libPods-MasterTests.a */,
-				54DC24950A095F17F44DFC46 /* libPods-Dev.a */,
-				F7EF31F4F93F1D4F760BEAEE /* libPods-Master.a */,
+				D1F6515EE7D9B03E9193BB45 /* libPods-Dev.a */,
+				DC417BF745280FE18EDE2D1B /* libPods-Local.a */,
+				8CF38B7E83CB0400EFD86987 /* libPods-Master.a */,
+				A5FC5CB5E2246C2D6EA1414D /* libPods-MasterTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1462,6 +1690,7 @@
 				A58132AA23B4C7560032FC8B /* Master.app */,
 				A58132BE23B4C7570032FC8B /* MasterTests.xctest */,
 				2C3E5161240C79B500873495 /* Dev.app */,
+				2CC3DCA12411EBCC001E76B2 /* Local.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1550,10 +1779,11 @@
 		A5F30D3E23B4C80B005258A8 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				A58132B923B4C7570032FC8B /* Info.plist */,
+				2CC3DCA22411EBCD001E76B2 /* Local-Info.plist */,
 				2C3E5162240C79B500873495 /* Dev-Info.plist */,
 				2C1218CC2405E7580098BE55 /* GoogleService-Info.plist */,
 				A58132AD23B4C7560032FC8B /* AppDelegate.swift */,
-				A58132B923B4C7570032FC8B /* Info.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -1667,12 +1897,14 @@
 		C54A025159B1A14E4438C4AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				28A455F73CCB32D7506AD43D /* Pods-Master.debug.xcconfig */,
-				0FC7148F0CFE4FA0A5FCA190 /* Pods-Master.release.xcconfig */,
-				6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */,
-				9A1FDF8DC14BF04403B2FAF0 /* Pods-MasterTests.release.xcconfig */,
-				E114D16F98AE7F32333D869F /* Pods-Dev.debug.xcconfig */,
-				5219BE9320E02B764F5C6E71 /* Pods-Dev.release.xcconfig */,
+				6084E04ECCB5F98B5A2103BF /* Pods-Dev.debug.xcconfig */,
+				754741F7F1A10D6E0CF6D467 /* Pods-Dev.release.xcconfig */,
+				AB081F81D4EC75F9BDA36846 /* Pods-Local.debug.xcconfig */,
+				BC4B790CF36A3F6920ACA0B3 /* Pods-Local.release.xcconfig */,
+				CF2B2D17A7BB6C2C34362B2B /* Pods-Master.debug.xcconfig */,
+				D86C62CD6C87297A5048BEB8 /* Pods-Master.release.xcconfig */,
+				67808FBEB1163B45E931F25C /* Pods-MasterTests.debug.xcconfig */,
+				7A9DD6B73E09B33950883047 /* Pods-MasterTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1684,15 +1916,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C3E515E240C79B500873495 /* Build configuration list for PBXNativeTarget "Dev" */;
 			buildPhases = (
-				2C3E5099240C79B500873495 /* [CP] Check Pods Manifest.lock */,
+				2420F74717666D8357CBB306 /* [CP] Check Pods Manifest.lock */,
 				2C3E509A240C79B500873495 /* Sources */,
 				2C3E512E240C79B500873495 /* Frameworks */,
 				2C3E5130240C79B500873495 /* Resources */,
-				2C3E515B240C79B500873495 /* [CP] Copy Pods Resources */,
 				2C3E515C240C79B500873495 /* SwiftLint */,
 				2C3E515D240C79B500873495 /* Crashlytics */,
 				2C889783240C7D7C00423B11 /* Paymentez */,
 				2CEAD739240F439A0095E9A4 /* Embed Frameworks */,
+				174D9412368F5CD0734870E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1703,19 +1935,42 @@
 			productReference = 2C3E5161240C79B500873495 /* Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2CC3DBCC2411EBCC001E76B2 /* Local */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CC3DC9E2411EBCC001E76B2 /* Build configuration list for PBXNativeTarget "Local" */;
+			buildPhases = (
+				5E0DA5D8848E354D34BF75B0 /* [CP] Check Pods Manifest.lock */,
+				2CC3DBCE2411EBCC001E76B2 /* Sources */,
+				2CC3DC692411EBCC001E76B2 /* Frameworks */,
+				2CC3DC6C2411EBCC001E76B2 /* Resources */,
+				2CC3DC992411EBCC001E76B2 /* SwiftLint */,
+				2CC3DC9A2411EBCC001E76B2 /* Crashlytics */,
+				2CC3DC9B2411EBCC001E76B2 /* Paymentez */,
+				2CC3DC9C2411EBCC001E76B2 /* Embed Frameworks */,
+				50FC16111FC5297E1284EB05 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Local;
+			productName = Master;
+			productReference = 2CC3DCA12411EBCC001E76B2 /* Local.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A58132A923B4C7560032FC8B /* Master */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A58132C723B4C7570032FC8B /* Build configuration list for PBXNativeTarget "Master" */;
 			buildPhases = (
-				595F2405D72E94154A4FBEFF /* [CP] Check Pods Manifest.lock */,
+				22D59E435BD0255361EDD1EB /* [CP] Check Pods Manifest.lock */,
 				A58132A623B4C7560032FC8B /* Sources */,
 				A58132A723B4C7560032FC8B /* Frameworks */,
 				A58132A823B4C7560032FC8B /* Resources */,
-				12FDF0753FB6088A7AD72B2F /* [CP] Copy Pods Resources */,
 				2C7E7FBD23F89B4500D7835E /* SwiftLint */,
 				2C3EB4E32405FB5A002BB2DA /* Crashlytics */,
 				2C889782240C7D6F00423B11 /* Paymentez */,
 				2CEAD735240F43950095E9A4 /* Embed Frameworks */,
+				88173CFA3A8EBE5AE2C594B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1730,11 +1985,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A58132CA23B4C7570032FC8B /* Build configuration list for PBXNativeTarget "MasterTests" */;
 			buildPhases = (
-				EC68A9407ABDBFAC6D457603 /* [CP] Check Pods Manifest.lock */,
+				EC7C80888E233A0B4FF76F50 /* [CP] Check Pods Manifest.lock */,
 				A58132BA23B4C7570032FC8B /* Sources */,
 				A58132BB23B4C7570032FC8B /* Frameworks */,
 				A58132BC23B4C7570032FC8B /* Resources */,
-				A4F69423AA9F4920FBC38401 /* [CP] Copy Pods Resources */,
+				48DD339E20D9AADAA4499E34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1778,6 +2033,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				2CC3DBCC2411EBCC001E76B2 /* Local */,
 				2C3E5098240C79B500873495 /* Dev */,
 				A58132A923B4C7560032FC8B /* Master */,
 				A58132BD23B4C7570032FC8B /* MasterTests */,
@@ -1833,6 +2089,56 @@
 				2C3E5158240C79B500873495 /* LoaderView.xib in Resources */,
 				2C3E5159240C79B500873495 /* ProviderListViewController.xib in Resources */,
 				2C3E515A240C79B500873495 /* CheckoutFieldCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC3DC6C2411EBCC001E76B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC3DC6D2411EBCC001E76B2 /* OrderDetailHeaderCell.xib in Resources */,
+				2CC3DC6E2411EBCC001E76B2 /* CommentCell.xib in Resources */,
+				2CC3DC6F2411EBCC001E76B2 /* empty_state_anim.json in Resources */,
+				2CC3DC702411EBCC001E76B2 /* payment_anim.json in Resources */,
+				2CC3DC712411EBCC001E76B2 /* ProviderProfileViewController.xib in Resources */,
+				2CC3DC722411EBCC001E76B2 /* LegalViewController.xib in Resources */,
+				2CC3DC732411EBCC001E76B2 /* LaunchScreen.storyboard in Resources */,
+				2CC3DC742411EBCC001E76B2 /* ProviderServiceCell.xib in Resources */,
+				2CC3DC752411EBCC001E76B2 /* CheckoutHeaderCell.xib in Resources */,
+				2CC3DC762411EBCC001E76B2 /* SuccessOrderViewController.xib in Resources */,
+				2CC3DC772411EBCC001E76B2 /* SplashScreenViewController.xib in Resources */,
+				2CC3DC782411EBCC001E76B2 /* MenuViewController.xib in Resources */,
+				2CC3DC792411EBCC001E76B2 /* Assets.xcassets in Resources */,
+				2CC3DC7A2411EBCC001E76B2 /* EmailLoginViewController.xib in Resources */,
+				2CC3DC7B2411EBCC001E76B2 /* success_anim.json in Resources */,
+				2CC3DC7C2411EBCC001E76B2 /* Endpoints.plist in Resources */,
+				2CC3DC7D2411EBCC001E76B2 /* ProviderProfileCell.xib in Resources */,
+				2CC3DC7E2411EBCC001E76B2 /* OrdersViewController.xib in Resources */,
+				2CC3DC7F2411EBCC001E76B2 /* ProviderCell.xib in Resources */,
+				2CC3DC802411EBCC001E76B2 /* CheckoutProviderCell.xib in Resources */,
+				2CC3DC812411EBCC001E76B2 /* ProductSelectorViewController.xib in Resources */,
+				2CC3DC822411EBCC001E76B2 /* CheckoutViewController.xib in Resources */,
+				2CC3DC832411EBCC001E76B2 /* Strings.strings in Resources */,
+				2CC3DC842411EBCC001E76B2 /* CompleteTextViewController.xib in Resources */,
+				2CC3DC852411EBCC001E76B2 /* ButtonCell.xib in Resources */,
+				2CC3DC862411EBCC001E76B2 /* MainViewController.xib in Resources */,
+				2CC3DC872411EBCC001E76B2 /* login_bg_video_new.mp4 in Resources */,
+				2CC3DC882411EBCC001E76B2 /* HomeViewController.xib in Resources */,
+				2CC3DC892411EBCC001E76B2 /* OrderDetailViewController.xib in Resources */,
+				2CC3DC8A2411EBCC001E76B2 /* SelectorCell.xib in Resources */,
+				2CC3DC8B2411EBCC001E76B2 /* GoogleService-Info.plist in Resources */,
+				2CC3DC8C2411EBCC001E76B2 /* PaymentViewController.xib in Resources */,
+				2CC3DC8D2411EBCC001E76B2 /* loader_anim.json in Resources */,
+				2CC3DC8E2411EBCC001E76B2 /* RegisterViewController.xib in Resources */,
+				2CC3DC8F2411EBCC001E76B2 /* DatePickerViewController.xib in Resources */,
+				2CC3DC902411EBCC001E76B2 /* CategoryCell.xib in Resources */,
+				2CC3DC912411EBCC001E76B2 /* OrderCell.xib in Resources */,
+				2CC3DC922411EBCC001E76B2 /* loading_order_anim.json in Resources */,
+				2CC3DC932411EBCC001E76B2 /* empty_state_providers.json in Resources */,
+				2CC3DC942411EBCC001E76B2 /* TitleCell.xib in Resources */,
+				2CC3DC952411EBCC001E76B2 /* LoaderView.xib in Resources */,
+				2CC3DC962411EBCC001E76B2 /* ProviderListViewController.xib in Resources */,
+				2CC3DC972411EBCC001E76B2 /* CheckoutFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1896,24 +2202,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12FDF0753FB6088A7AD72B2F /* [CP] Copy Pods Resources */ = {
+		174D9412368F5CD0734870E8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Dev/Pods-Dev-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Dev/Pods-Dev-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dev/Pods-Dev-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2C3E5099240C79B500873495 /* [CP] Check Pods Manifest.lock */ = {
+		22D59E435BD0255361EDD1EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Master-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2420F74717666D8357CBB306 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1933,23 +2261,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2C3E515B240C79B500873495 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dev/Pods-Dev-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dev/Pods-Dev-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dev/Pods-Dev-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2C3E515C240C79B500873495 /* SwiftLint */ = {
@@ -2065,7 +2376,7 @@
 			shellScript = "#bash \"./PaymentezSDK.framework/install_dynamic.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		595F2405D72E94154A4FBEFF /* [CP] Check Pods Manifest.lock */ = {
+		2CC3DC992411EBCC001E76B2 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2073,21 +2384,56 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Master-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		2CC3DC9A2411EBCC001E76B2 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		2CC3DC9B2411EBCC001E76B2 /* Paymentez */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Paymentez;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#bash \"./PaymentezSDK.framework/install_dynamic.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A4F69423AA9F4920FBC38401 /* [CP] Copy Pods Resources */ = {
+		48DD339E20D9AADAA4499E34 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2104,7 +2450,63 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MasterTests/Pods-MasterTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC68A9407ABDBFAC6D457603 /* [CP] Check Pods Manifest.lock */ = {
+		50FC16111FC5297E1284EB05 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Local/Pods-Local-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Local/Pods-Local-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Local/Pods-Local-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0DA5D8848E354D34BF75B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Local-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88173CFA3A8EBE5AE2C594B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Master/Pods-Master-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC7C80888E233A0B4FF76F50 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2287,6 +2689,167 @@
 				2C3E512B240C79B500873495 /* CheckoutFieldCell.swift in Sources */,
 				2C3E512C240C79B500873495 /* CheckoutConstants.swift in Sources */,
 				2C3E512D240C79B500873495 /* OrderCellViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC3DBCE2411EBCC001E76B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC3DBCF2411EBCC001E76B2 /* CheckoutEndpoints.swift in Sources */,
+				2CC3DBD02411EBCC001E76B2 /* CommentCell.swift in Sources */,
+				2CC3DBD12411EBCC001E76B2 /* SplashScreenService.swift in Sources */,
+				2CC3DBD22411EBCC001E76B2 /* ButtonCell.swift in Sources */,
+				2CC3DBD32411EBCC001E76B2 /* String+Extensions.swift in Sources */,
+				2CC3DBD42411EBCC001E76B2 /* OrderDetailHeaderCell.swift in Sources */,
+				2CC3DBD52411EBCC001E76B2 /* RegisterViewModel.swift in Sources */,
+				2CC3DBD62411EBCC001E76B2 /* UITableView+Extensions.swift in Sources */,
+				2CC3DBD72411EBCC001E76B2 /* ProviderListServiceEndpoint.swift in Sources */,
+				2CC3DBD82411EBCC001E76B2 /* RouterBase.swift in Sources */,
+				2CC3DBD92411EBCC001E76B2 /* CompleteTextViewModel.swift in Sources */,
+				2CC3DBDA2411EBCC001E76B2 /* AppDelegate.swift in Sources */,
+				2CC3DBDB2411EBCC001E76B2 /* ProviderListViewController.swift in Sources */,
+				2CC3DBDC2411EBCC001E76B2 /* ButtonCellViewModel.swift in Sources */,
+				2CC3DBDD2411EBCC001E76B2 /* ProviderListService.swift in Sources */,
+				2CC3DBDE2411EBCC001E76B2 /* UINavigationController+Extensions.swift in Sources */,
+				2CC3DBDF2411EBCC001E76B2 /* EmailLoginService.swift in Sources */,
+				2CC3DBE02411EBCC001E76B2 /* TitleCell.swift in Sources */,
+				2CC3DBE12411EBCC001E76B2 /* MTextField.swift in Sources */,
+				2CC3DBE22411EBCC001E76B2 /* ServiceCategory.swift in Sources */,
+				2CC3DBE32411EBCC001E76B2 /* HomeViewModel.swift in Sources */,
+				2CC3DBE42411EBCC001E76B2 /* OrdersServiceProtocol.swift in Sources */,
+				2CC3DBE52411EBCC001E76B2 /* HomeViewController.swift in Sources */,
+				2CC3DBE62411EBCC001E76B2 /* StatusHelper.swift in Sources */,
+				2CC3DBE72411EBCC001E76B2 /* RegisterEndpoints.swift in Sources */,
+				2CC3DBE82411EBCC001E76B2 /* EmailLoginViewModel.swift in Sources */,
+				2CC3DBE92411EBCC001E76B2 /* User.swift in Sources */,
+				2CC3DBEA2411EBCC001E76B2 /* CategoryCell.swift in Sources */,
+				2CC3DBEB2411EBCC001E76B2 /* HomeRouter.swift in Sources */,
+				2CC3DBEC2411EBCC001E76B2 /* LoaderView.swift in Sources */,
+				2CC3DBED2411EBCC001E76B2 /* PaymentViewModel.swift in Sources */,
+				2CC3DBEE2411EBCC001E76B2 /* OrderDetailEndpoints.swift in Sources */,
+				2CC3DBEF2411EBCC001E76B2 /* MLegalButton.swift in Sources */,
+				2CC3DBF02411EBCC001E76B2 /* CheckoutService.swift in Sources */,
+				2CC3DBF12411EBCC001E76B2 /* LoginServiceProtocol.swift in Sources */,
+				2CC3DBF22411EBCC001E76B2 /* CheckoutViewController.swift in Sources */,
+				2CC3DBF32411EBCC001E76B2 /* SuccessOrderViewController.swift in Sources */,
+				2CC3DBF42411EBCC001E76B2 /* LoginRequest.swift in Sources */,
+				2CC3DBF52411EBCC001E76B2 /* MainViewModel.swift in Sources */,
+				2CC3DBF62411EBCC001E76B2 /* OrderCell.swift in Sources */,
+				2CC3DBF72411EBCC001E76B2 /* CheckoutServiceProtocol.swift in Sources */,
+				2CC3DBF82411EBCC001E76B2 /* RegisterRequest.swift in Sources */,
+				2CC3DBF92411EBCC001E76B2 /* OrdersViewController.swift in Sources */,
+				2CC3DBFA2411EBCC001E76B2 /* Order.swift in Sources */,
+				2CC3DBFB2411EBCC001E76B2 /* XibView.swift in Sources */,
+				2CC3DBFC2411EBCC001E76B2 /* RegisterViewController.swift in Sources */,
+				2CC3DBFD2411EBCC001E76B2 /* ProviderServiceCell.swift in Sources */,
+				2CC3DBFE2411EBCC001E76B2 /* ProductSelectorResult.swift in Sources */,
+				2CC3DBFF2411EBCC001E76B2 /* SelectorCellViewModel.swift in Sources */,
+				2CC3DC002411EBCC001E76B2 /* ProviderWithScore.swift in Sources */,
+				2CC3DC012411EBCC001E76B2 /* CheckoutRouter.swift in Sources */,
+				2CC3DC022411EBCC001E76B2 /* UIImage+Extensions.swift in Sources */,
+				2CC3DC032411EBCC001E76B2 /* PaymentResponse.swift in Sources */,
+				2CC3DC042411EBCC001E76B2 /* SplashScreenEndpoints.swift in Sources */,
+				2CC3DC052411EBCC001E76B2 /* OrderDetailService.swift in Sources */,
+				2CC3DC062411EBCC001E76B2 /* OrdersService.swift in Sources */,
+				2CC3DC072411EBCC001E76B2 /* ProviderProfileService.swift in Sources */,
+				2CC3DC082411EBCC001E76B2 /* Service.swift in Sources */,
+				2CC3DC092411EBCC001E76B2 /* UITableViewCell+Extensions.swift in Sources */,
+				2CC3DC0A2411EBCC001E76B2 /* CheckoutProviderCellViewModel.swift in Sources */,
+				2CC3DC0B2411EBCC001E76B2 /* OrderServiceProtocol.swift in Sources */,
+				2CC3DC0C2411EBCC001E76B2 /* RegisterServiceProtocol.swift in Sources */,
+				2CC3DC0D2411EBCC001E76B2 /* Comment.swift in Sources */,
+				2CC3DC0E2411EBCC001E76B2 /* CheckoutProvider.swift in Sources */,
+				2CC3DC0F2411EBCC001E76B2 /* UIView+Extensions.swift in Sources */,
+				2CC3DC102411EBCC001E76B2 /* ProviderProfileViewController.swift in Sources */,
+				2CC3DC112411EBCC001E76B2 /* Int+Extensions.swift in Sources */,
+				2CC3DC122411EBCC001E76B2 /* ServerError.swift in Sources */,
+				2CC3DC132411EBCC001E76B2 /* Provider.swift in Sources */,
+				2CC3DC142411EBCC001E76B2 /* TitleCellViewModel.swift in Sources */,
+				2CC3DC152411EBCC001E76B2 /* OrderDetailHeaderCellViewModel.swift in Sources */,
+				2CC3DC162411EBCC001E76B2 /* OrderDetailServiceProtocol.swift in Sources */,
+				2CC3DC172411EBCC001E76B2 /* ProviderService.swift in Sources */,
+				2CC3DC182411EBCC001E76B2 /* Loader.swift in Sources */,
+				2CC3DC192411EBCC001E76B2 /* ProductSelectorViewController.swift in Sources */,
+				2CC3DC1A2411EBCC001E76B2 /* ProviderListServiceProtocol.swift in Sources */,
+				2CC3DC1B2411EBCC001E76B2 /* HomeService.swift in Sources */,
+				2CC3DC1C2411EBCC001E76B2 /* UIApplication+Extensions.swift in Sources */,
+				2CC3DC1D2411EBCC001E76B2 /* Array+Extensions.swift in Sources */,
+				2CC3DC1E2411EBCC001E76B2 /* OrdersViewModel.swift in Sources */,
+				2CC3DC1F2411EBCC001E76B2 /* GmailRequest.swift in Sources */,
+				2CC3DC202411EBCC001E76B2 /* PaymentServiceProtocol.swift in Sources */,
+				2CC3DC212411EBCC001E76B2 /* CheckoutProviderCell.swift in Sources */,
+				2CC3DC222411EBCC001E76B2 /* OrderRequest.swift in Sources */,
+				2CC3DC232411EBCC001E76B2 /* CellViewModelProtocol.swift in Sources */,
+				2CC3DC242411EBCC001E76B2 /* LoginResponse.swift in Sources */,
+				2CC3DC252411EBCC001E76B2 /* PaymentViewController.swift in Sources */,
+				2CC3DC262411EBCC001E76B2 /* DatePicker.swift in Sources */,
+				2CC3DC272411EBCC001E76B2 /* OrderProviderService.swift in Sources */,
+				2CC3DC282411EBCC001E76B2 /* LegalViewController.swift in Sources */,
+				2CC3DC292411EBCC001E76B2 /* ProviderProfileServiceProtocol.swift in Sources */,
+				2CC3DC2A2411EBCC001E76B2 /* CheckoutHeaderCellViewModel.swift in Sources */,
+				2CC3DC2B2411EBCC001E76B2 /* CommentCellViewModel.swift in Sources */,
+				2CC3DC2C2411EBCC001E76B2 /* Styles.swift in Sources */,
+				2CC3DC2D2411EBCC001E76B2 /* EmptyCodable.swift in Sources */,
+				2CC3DC2E2411EBCC001E76B2 /* HomeServiceProtocol.swift in Sources */,
+				2CC3DC2F2411EBCC001E76B2 /* SplashScreenViewController.swift in Sources */,
+				2CC3DC302411EBCC001E76B2 /* MenuViewController.swift in Sources */,
+				2CC3DC312411EBCC001E76B2 /* Session.swift in Sources */,
+				2CC3DC322411EBCC001E76B2 /* ProviderServiceCellViewModel.swift in Sources */,
+				2CC3DC332411EBCC001E76B2 /* OrdersRouter.swift in Sources */,
+				2CC3DC342411EBCC001E76B2 /* OrderDetailViewModel.swift in Sources */,
+				2CC3DC352411EBCC001E76B2 /* ProviderProfileViewModel.swift in Sources */,
+				2CC3DC362411EBCC001E76B2 /* PaymentEndpoints.swift in Sources */,
+				2CC3DC372411EBCC001E76B2 /* ProviderProfileEndpoints.swift in Sources */,
+				2CC3DC382411EBCC001E76B2 /* UIViewController+Extensions.swift in Sources */,
+				2CC3DC392411EBCC001E76B2 /* UIColor+Extensions.swift in Sources */,
+				2CC3DC3A2411EBCC001E76B2 /* CategoryCellViewModel.swift in Sources */,
+				2CC3DC3B2411EBCC001E76B2 /* ConfigurableCellProtocol.swift in Sources */,
+				2CC3DC3C2411EBCC001E76B2 /* ProductSelectorDataSource.swift in Sources */,
+				2CC3DC3D2411EBCC001E76B2 /* SplashScreenViewModel.swift in Sources */,
+				2CC3DC3E2411EBCC001E76B2 /* OrdersEndpoints.swift in Sources */,
+				2CC3DC3F2411EBCC001E76B2 /* MImageView.swift in Sources */,
+				2CC3DC402411EBCC001E76B2 /* EmailLoginEndpoints.swift in Sources */,
+				2CC3DC412411EBCC001E76B2 /* PaymentService.swift in Sources */,
+				2CC3DC422411EBCC001E76B2 /* ServerStatus.swift in Sources */,
+				2CC3DC432411EBCC001E76B2 /* CheckoutHeaderCell.swift in Sources */,
+				2CC3DC442411EBCC001E76B2 /* Utils.swift in Sources */,
+				2CC3DC452411EBCC001E76B2 /* MainRouter.swift in Sources */,
+				2CC3DC462411EBCC001E76B2 /* CheckoutViewModel.swift in Sources */,
+				2CC3DC472411EBCC001E76B2 /* HomeEndpoints.swift in Sources */,
+				2CC3DC482411EBCC001E76B2 /* MenuRouter.swift in Sources */,
+				2CC3DC492411EBCC001E76B2 /* ServerResponse.swift in Sources */,
+				2CC3DC4A2411EBCC001E76B2 /* MAnimatedTableViewCell.swift in Sources */,
+				2CC3DC4B2411EBCC001E76B2 /* MainViewController.swift in Sources */,
+				2CC3DC4C2411EBCC001E76B2 /* MenuViewModel.swift in Sources */,
+				2CC3DC4D2411EBCC001E76B2 /* Result.swift in Sources */,
+				2CC3DC4E2411EBCC001E76B2 /* RegisterService.swift in Sources */,
+				2CC3DC4F2411EBCC001E76B2 /* ProviderProfileCellViewModel.swift in Sources */,
+				2CC3DC502411EBCC001E76B2 /* ConnectionManagerProtocol.swift in Sources */,
+				2CC3DC512411EBCC001E76B2 /* CompleteTextViewController.swift in Sources */,
+				2CC3DC522411EBCC001E76B2 /* SplashScreenServiceProtocol.swift in Sources */,
+				2CC3DC532411EBCC001E76B2 /* EmailLoginViewController.swift in Sources */,
+				2CC3DC542411EBCC001E76B2 /* MButton.swift in Sources */,
+				2CC3DC552411EBCC001E76B2 /* ConnectionManager.swift in Sources */,
+				2CC3DC562411EBCC001E76B2 /* UserProfile.swift in Sources */,
+				2CC3DC572411EBCC001E76B2 /* AnimationType.swift in Sources */,
+				2CC3DC582411EBCC001E76B2 /* UIImageView+Extensions.swift in Sources */,
+				2CC3DC592411EBCC001E76B2 /* CMError.swift in Sources */,
+				2CC3DC5A2411EBCC001E76B2 /* Endpoint.swift in Sources */,
+				2CC3DC5B2411EBCC001E76B2 /* Storage.swift in Sources */,
+				2CC3DC5C2411EBCC001E76B2 /* OrderDetailViewController.swift in Sources */,
+				2CC3DC5D2411EBCC001E76B2 /* SelectorCell.swift in Sources */,
+				2CC3DC5E2411EBCC001E76B2 /* ProviderCellViewModel.swift in Sources */,
+				2CC3DC5F2411EBCC001E76B2 /* PaymentRequest.swift in Sources */,
+				2CC3DC602411EBCC001E76B2 /* ProviderListViewModel.swift in Sources */,
+				2CC3DC612411EBCC001E76B2 /* ProviderCell.swift in Sources */,
+				2CC3DC622411EBCC001E76B2 /* CheckoutFieldCellViewModel.swift in Sources */,
+				2CC3DC632411EBCC001E76B2 /* ProviderProfileCell.swift in Sources */,
+				2CC3DC642411EBCC001E76B2 /* DatePickerViewController.swift in Sources */,
+				2CC3DC652411EBCC001E76B2 /* CommentsResponse.swift in Sources */,
+				2CC3DC662411EBCC001E76B2 /* CheckoutFieldCell.swift in Sources */,
+				2CC3DC672411EBCC001E76B2 /* CheckoutConstants.swift in Sources */,
+				2CC3DC682411EBCC001E76B2 /* OrderCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2491,7 +3054,7 @@
 /* Begin XCBuildConfiguration section */
 		2C3E515F240C79B500873495 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E114D16F98AE7F32333D869F /* Pods-Dev.debug.xcconfig */;
+			baseConfigurationReference = 6084E04ECCB5F98B5A2103BF /* Pods-Dev.debug.xcconfig */;
 			buildSettings = {
 				API_ENDPOINT = "https://master-app-api.azurewebsites.net/api/v1/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2529,7 +3092,7 @@
 		};
 		2C3E5160240C79B500873495 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5219BE9320E02B764F5C6E71 /* Pods-Dev.release.xcconfig */;
+			baseConfigurationReference = 754741F7F1A10D6E0CF6D467 /* Pods-Dev.release.xcconfig */;
 			buildSettings = {
 				API_ENDPOINT = "https://master-app-api.azurewebsites.net/api/v1/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2548,6 +3111,81 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Dev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-CLIENT-STG";
+				PAYMENTEZ_APP_KEY = lgAIjiCmwHAJDPVza9dtkEmu3TElFu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "master-prov-prod";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2CC3DC9F2411EBCC001E76B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB081F81D4EC75F9BDA36846 /* Pods-Local.debug.xcconfig */;
+			buildSettings = {
+				API_ENDPOINT = "http://127.0.0.1:5001/api/v1/";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLIENT_HEADER = 58ecda0e640;
+				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
+				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5D4G5VBTAB;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Master/Commons/Config",
+					"$(PROJECT_DIR)/Master",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Local-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-CLIENT-STG";
+				PAYMENTEZ_APP_KEY = lgAIjiCmwHAJDPVza9dtkEmu3TElFu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "master-prov-dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2CC3DCA02411EBCC001E76B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC4B790CF36A3F6920ACA0B3 /* Pods-Local.release.xcconfig */;
+			buildSettings = {
+				API_ENDPOINT = "http://127.0.0.1:5001/api/v1/";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLIENT_HEADER = 58ecda0e640;
+				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
+				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 5D4G5VBTAB;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Master/Commons/Config",
+					"$(PROJECT_DIR)/Master",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Local-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2682,7 +3320,7 @@
 		};
 		A58132C823B4C7570032FC8B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28A455F73CCB32D7506AD43D /* Pods-Master.debug.xcconfig */;
+			baseConfigurationReference = CF2B2D17A7BB6C2C34362B2B /* Pods-Master.debug.xcconfig */;
 			buildSettings = {
 				API_ENDPOINT = "https://master-api-prod.azurewebsites.net/api/v1/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2719,7 +3357,7 @@
 		};
 		A58132C923B4C7570032FC8B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FC7148F0CFE4FA0A5FCA190 /* Pods-Master.release.xcconfig */;
+			baseConfigurationReference = D86C62CD6C87297A5048BEB8 /* Pods-Master.release.xcconfig */;
 			buildSettings = {
 				API_ENDPOINT = "https://master-api-prod.azurewebsites.net/api/v1/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2755,7 +3393,7 @@
 		};
 		A58132CB23B4C7570032FC8B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CDE78CD72B503D4689AC214 /* Pods-MasterTests.debug.xcconfig */;
+			baseConfigurationReference = 67808FBEB1163B45E931F25C /* Pods-MasterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2776,7 +3414,7 @@
 		};
 		A58132CC23B4C7570032FC8B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A1FDF8DC14BF04403B2FAF0 /* Pods-MasterTests.release.xcconfig */;
+			baseConfigurationReference = 7A9DD6B73E09B33950883047 /* Pods-MasterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2803,6 +3441,15 @@
 			buildConfigurations = (
 				2C3E515F240C79B500873495 /* Debug */,
 				2C3E5160240C79B500873495 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CC3DC9E2411EBCC001E76B2 /* Build configuration list for PBXNativeTarget "Local" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC3DC9F2411EBCC001E76B2 /* Debug */,
+				2CC3DCA02411EBCC001E76B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

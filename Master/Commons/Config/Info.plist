@@ -53,21 +53,6 @@
         <false/>
         <key>LSRequiresIPhoneOS</key>
         <true/>
-        <key>NSAppTransportSecurity</key>
-        <dict>
-            <key>NSAllowsArbitraryLoads</key>
-            <true/>
-            <key>NSExceptionDomains</key>
-            <dict>
-                <key>127.0.0.1:5001</key>
-                <dict>
-                    <key>NSExceptionAllowsInsecureHTTPLoads</key>
-                    <true/>
-                    <key>NSIncludesSubdomains</key>
-                    <true/>
-                </dict>
-            </dict>
-        </dict>
         <key>UIBackgroundModes</key>
         <array>
             <string>fetch</string>
