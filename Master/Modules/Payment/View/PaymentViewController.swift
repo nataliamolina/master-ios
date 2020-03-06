@@ -61,6 +61,7 @@ class PaymentViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        setupBindings()
         setupKeyboardListeners()
         disableTitle()
         enableKeyboardDismiss()
@@ -74,6 +75,12 @@ class PaymentViewController: UIViewController {
         paymentezAddVC?.baseColor = UIColor.Master.green
         paymentezAddVC?.nameTitle = Constants.cardOwner
         paymentezAddVC?.cardTitle = Constants.cardNumber
+    }
+    
+    private func setupBindings() {
+        viewModel.isLoading.listen { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
+        }
     }
     
     private func performCardValidation() {

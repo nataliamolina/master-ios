@@ -9,16 +9,16 @@
 import Foundation
 
 private enum EndpointsKeys: String {
-    case cards
-    case pay
+    case deleteCards
+    case payOrder
 }
 
 extension Endpoint {
     static var deleteCards: String {
-        return Endpoint.url(with: EndpointsKeys.cards.rawValue)
+        return Endpoint.url(with: EndpointsKeys.deleteCards.rawValue)
     }
     
     static var pay: String {
-        return Endpoint.url(with: EndpointsKeys.cards.rawValue)
+        return Endpoint.url(with: EndpointsKeys.payOrder.rawValue)
     }
 }

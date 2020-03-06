@@ -42,25 +42,30 @@ class PaymentViewModel {
     func addCardAndPay(_ card: PaymentezCard) {
         isLoading.value = true
         
-        SDK.add(card, uid: userId, email: userEmail) { [weak self] (error: PaymentezSDKError?, card: PaymentezCard?) in
+        deleteAllCards { [weak self] (isDone: Bool, error: CMError?) in
             self?.isLoading.value = false
-
-            guard let card = card, let cardToken = card.token, error == nil else {
-                self?.status.value = .error(error: nil)
+            
+            if !isDone {
+                self?.status.value = .error(error: error?.localizedDescription)
                 
                 return
             }
             
-            self?.pay(cardToken: cardToken)
+            self?.pay(card)
         }
+        
     }
     
     // MARK: - Private Methods
     
-    private func pay(cardToken: String) {
-        deleteAllCards { [weak self] (isDone: Bool, error: CMError?) in
-            if !isDone {
-                self?.status.value = .error(error: error?.localizedDescription)
+    private func pay(_ card: PaymentezCard) {
+        isLoading.value = true
+        
+        SDK.add(card, uid: userId, email: userEmail) { [weak self] (error: PaymentezSDKError?, card: PaymentezCard?) in
+            self?.isLoading.value = false
+            
+            guard let card = card, let cardToken = card.token, error == nil else {
+                self?.status.value = .error(error: nil)
                 
                 return
             }
