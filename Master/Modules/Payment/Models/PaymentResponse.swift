@@ -10,5 +10,5 @@ import Foundation
 
 struct PaymentResponse: Codable {
     let isPaymentDone: Bool
-    let errorMessage: String
+    let errorMessage: String?
 }

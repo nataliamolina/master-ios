@@ -44,10 +44,10 @@ class HomeViewController: UIViewController {
         
         setupNavigationGesture()
         
-        if HomeViewModel.needsToOpenOrders {
-            HomeViewModel.needsToOpenOrders = false
+        if HomeViewModel.needsToReloadOrders {
+            HomeViewModel.needsToReloadOrders = false
             
-            router.transition(to: .orders)
+            viewModel.fetchServices()
         }
     }
     

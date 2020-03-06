@@ -70,7 +70,7 @@ class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
         successOrderViewControllerRef?.hero.modalAnimationType = .zoomOut
         
         successOrderViewControllerRef?.dismiss(animated: true, completion: { [weak self] in
-            HomeViewModel.needsToOpenOrders = true
+            HomeViewModel.needsToReloadOrders = true
             
             self?.navigationController.popToRootViewController(animated: true)
             self?.successOrderViewControllerRef = nil

@@ -16,7 +16,7 @@ enum HomeViewModelStatus {
 
 class HomeViewModel {
     // MARK: - Properties
-    static var needsToOpenOrders = false
+    static var needsToReloadOrders = false
     let status = Var<HomeViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource: Var<[[CellViewModelProtocol]]> = Var([])

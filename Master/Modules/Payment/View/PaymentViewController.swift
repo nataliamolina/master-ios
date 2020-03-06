@@ -81,6 +81,21 @@ class PaymentViewController: UIViewController {
         viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
         }
+        
+        viewModel.status.listen { [weak self] status in
+            DispatchQueue.main.async {
+                switch status {
+                case .paymentReady:
+                    self?.router.transition(to: .paymentDone)
+                    
+                case .error(let error):
+                    self?.showError(message: error)
+                    
+                default:
+                    return
+                }
+            }
+        }
     }
     
     private func performCardValidation() {
@@ -90,6 +105,7 @@ class PaymentViewController: UIViewController {
             return
         }
         
+        dismissKeyboard()
         viewModel.addCardAndPay(validCard)
     }
     
