@@ -12,7 +12,8 @@ class OrderDetailViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
-    
+    @IBOutlet weak var paymentButton: MButton!
+
     // MARK: - UI Actions
     @IBAction private func paymentButtonAction() {
         router.transition(to: .payment(viewModel: viewModel.getPaymentViewModel()))
@@ -47,6 +48,8 @@ class OrderDetailViewController: UIViewController {
     private func setupUI() {
         disableTitle()
         
+        paymentButton.isHidden = true
+        
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.registerNib(OrderDetailHeaderCell.self)
@@ -61,6 +64,7 @@ class OrderDetailViewController: UIViewController {
     private func setupBindings() {
         viewModel.formattedTotal.bindTo(totalLabel, to: .text)
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
+        viewModel.pendingPayment.bindTo(paymentButton, to: .visibility)
         
         viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()

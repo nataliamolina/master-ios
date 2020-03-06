@@ -25,6 +25,7 @@ class OrderDetailViewModel {
     let status = Var<OrderDetailViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource = Var<[CellViewModelProtocol]>([])
+    let pendingPayment = Var<Bool>(true)
     
     // MARK: - Life Cycle
     init(orderId: Int, service: OrderDetailServiceProtocol? = nil) {
@@ -49,6 +50,7 @@ class OrderDetailViewModel {
             }
             
             self?.cart = model.orderProviderServices ?? []
+            self?.pendingPayment.value = !(model.orderState.type == .pendingForPayment)
             self?.responseToViewModels(model: model)
             self?.fetchOrderServices()
             

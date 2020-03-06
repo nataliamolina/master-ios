@@ -4,7 +4,7 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.3.0)
   - AppAuth/Core (1.3.0)
   - AppAuth/ExternalUserAgent (1.3.0)
-  - EasyBinding (0.2.1)
+  - EasyBinding (0.2.3)
   - Firebase/Analytics (6.18.0):
     - Firebase/Core
   - Firebase/Core (6.18.0):
@@ -127,7 +127,7 @@ PODS:
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
-  - EasyBinding (~> 0.2.1)
+  - EasyBinding (~> 0.2.3)
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Crashlytics
@@ -181,7 +181,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
-  EasyBinding: b4a2b29670a02ffcab6944103094f8d71c5ee34c
+  EasyBinding: 189fd82710395250297f06d930380b8891b90696
   Firebase: 0490eca762a72e4f1582319539153897f1508dee
   FirebaseAnalytics: 058d71e714a1a6804d9e0f25e3bb18e377a51579
   FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
@@ -214,6 +214,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 4786f4e0e9d703eff3fe66e0e0eaa07032794b44
+PODFILE CHECKSUM: b33b480a4a4687ae8ea0ac3dd06a4f22ea36cef2
 
 COCOAPODS: 1.8.4
