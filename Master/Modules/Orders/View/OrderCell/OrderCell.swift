@@ -19,6 +19,7 @@ class OrderCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var orderTotalLabel: UILabel!
     @IBOutlet private weak var orderCategoryLabel: UILabel!
     @IBOutlet private weak var orderStateLabel: UILabel!
+    @IBOutlet private weak var orderStateView: UIView!
     @IBOutlet private weak var providerImageView: UIImageView!
     @IBOutlet private weak var bottomView: UIView!
     
@@ -51,7 +52,7 @@ class OrderCell: UITableViewCell, ConfigurableCellProtocol {
         bottomView.isHidden = viewModel.isLastItem
         
         statusHelper.setupLabel(orderStateLabel, state: viewModel.orderState)
-        
+        statusHelper.setupView(orderStateView, state: viewModel.orderState)
     }
     
     // MARK: - Private Methods

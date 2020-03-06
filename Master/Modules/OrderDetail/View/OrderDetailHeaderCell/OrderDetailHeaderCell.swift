@@ -16,6 +16,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     // MARK: - UI References
     @IBOutlet private weak var orderIdLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private weak var statusView: UIView!
     @IBOutlet private weak var mainActionButton: MButton!
     @IBOutlet private weak var providerNameLabel: UILabel!
     @IBOutlet private weak var orderDateLabel: UILabel!
@@ -49,6 +50,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         self.providerNameLabel.text = viewModel.providerName
         
         statusHelper.setupLabel(statusLabel, state: viewModel.status)
+        statusHelper.setupView(statusView, state: viewModel.status)
         statusHelper.setupButton(mainActionButton, state: viewModel.status)
         
         mainActionButton.isHidden = !viewModel.showMainButton

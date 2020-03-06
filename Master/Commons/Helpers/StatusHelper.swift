@@ -13,12 +13,16 @@ class StatusHelper {
         button.style = buttonStyles[state]
     }
     
-    func setupLabel(_ label: UILabel, state: OrderStateType) {
-        label.backgroundColor = styles[state]
+    func setupLabel(_ label: UILabel, state: OrderStateType, withBackground: Bool = false) {
+        label.backgroundColor = withBackground ? styles[state] : label.backgroundColor
         label.text = stateName[state]
-        label.clipsToBounds = true
-        label.layer.cornerRadius = 10
         label.textColor = .white
+    }
+    
+    func setupView(_ view: UIView, state: OrderStateType) {
+        view.backgroundColor = styles[state]
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 15
     }
     
     private let styles: [OrderStateType: UIColor] = [

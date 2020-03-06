@@ -10,14 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="209" id="pSa-jG-bYT" customClass="OrderCell" customModule="Master" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="209" id="pSa-jG-bYT" customClass="OrderCell" customModule="Dev" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="433" height="209"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pSa-jG-bYT" id="tr3-m7-pN3">
                 <rect key="frame" x="0.0" y="0.0" width="433" height="209"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SgE-h7-RUE" customClass="MImageView" customModule="Master" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SgE-h7-RUE" customClass="MImageView" customModule="Dev" customModuleProvider="target">
                         <rect key="frame" x="20" y="20" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="LnG-s5-uld"/>
@@ -66,39 +66,51 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="serviceDetail.orders"/>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PENDIENTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-TE-b2v">
-                        <rect key="frame" x="100" y="123" width="70" height="20"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kS-Lt-Que">
+                        <rect key="frame" x="100" y="123" width="80" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PENDIENTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-TE-b2v">
+                                <rect key="frame" x="5" y="5" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Kul-Kw-5Zf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="i2q-Rp-JIN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" red="0.45097583530000002" green="0.45097726580000003" blue="0.4509804845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Kul-Kw-5Zf"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="i2q-Rp-JIN"/>
+                            <constraint firstAttribute="trailing" secondItem="cnA-TE-b2v" secondAttribute="trailing" constant="5" id="S20-e9-ALc"/>
+                            <constraint firstItem="cnA-TE-b2v" firstAttribute="top" secondItem="0kS-Lt-Que" secondAttribute="top" constant="5" id="WeH-Bl-qa8"/>
+                            <constraint firstAttribute="bottom" secondItem="cnA-TE-b2v" secondAttribute="bottom" constant="5" id="a2g-66-L63"/>
+                            <constraint firstItem="cnA-TE-b2v" firstAttribute="leading" secondItem="0kS-Lt-Que" secondAttribute="leading" constant="5" id="vJk-uf-qeN"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
-                        <color key="textColor" red="0.45097583530000002" green="0.45097726580000003" blue="0.4509804845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="rgN-0F-Fxp" firstAttribute="top" secondItem="xqg-ie-600" secondAttribute="bottom" constant="5" id="1u3-1i-MbM"/>
                     <constraint firstItem="rgN-0F-Fxp" firstAttribute="leading" secondItem="xqg-ie-600" secondAttribute="leading" id="AeE-ij-0c5"/>
                     <constraint firstItem="0fo-Gy-jlr" firstAttribute="leading" secondItem="xqg-ie-600" secondAttribute="leading" id="C6G-Ft-V7s"/>
+                    <constraint firstItem="0kS-Lt-Que" firstAttribute="top" secondItem="rgN-0F-Fxp" secondAttribute="bottom" constant="5" id="DEc-Gy-Xfc"/>
                     <constraint firstItem="uEz-uP-8tJ" firstAttribute="centerY" secondItem="xqg-ie-600" secondAttribute="centerY" id="HSL-aK-ibW"/>
                     <constraint firstItem="0fo-Gy-jlr" firstAttribute="top" secondItem="tr3-m7-pN3" secondAttribute="top" constant="20" symbolic="YES" id="Hou-W2-WYI"/>
-                    <constraint firstItem="cnA-TE-b2v" firstAttribute="top" secondItem="rgN-0F-Fxp" secondAttribute="bottom" constant="5" id="LNb-8C-iDI"/>
                     <constraint firstItem="SgE-h7-RUE" firstAttribute="leading" secondItem="tr3-m7-pN3" secondAttribute="leading" constant="20" symbolic="YES" id="MwY-ee-roH"/>
                     <constraint firstItem="rgN-0F-Fxp" firstAttribute="trailing" secondItem="xqg-ie-600" secondAttribute="trailing" id="QVm-gh-q9u"/>
                     <constraint firstAttribute="bottom" secondItem="lMY-VX-gGl" secondAttribute="bottom" constant="10" id="Qc6-FY-loa"/>
-                    <constraint firstItem="cnA-TE-b2v" firstAttribute="leading" secondItem="rgN-0F-Fxp" secondAttribute="leading" id="Rep-DO-FLv"/>
                     <constraint firstItem="xb7-gB-TJq" firstAttribute="leading" secondItem="xqg-ie-600" secondAttribute="leading" id="SUa-TI-5Tv"/>
+                    <constraint firstItem="lMY-VX-gGl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0kS-Lt-Que" secondAttribute="bottom" constant="8" symbolic="YES" id="Y3v-EM-7op"/>
                     <constraint firstItem="SgE-h7-RUE" firstAttribute="top" secondItem="tr3-m7-pN3" secondAttribute="top" constant="20" symbolic="YES" id="Y8L-xb-PYN"/>
                     <constraint firstItem="xb7-gB-TJq" firstAttribute="top" secondItem="0fo-Gy-jlr" secondAttribute="bottom" constant="5" id="cIg-4K-QOR"/>
                     <constraint firstItem="lMY-VX-gGl" firstAttribute="trailing" secondItem="uEz-uP-8tJ" secondAttribute="trailing" id="cwu-QU-ass"/>
+                    <constraint firstItem="0kS-Lt-Que" firstAttribute="leading" secondItem="rgN-0F-Fxp" secondAttribute="leading" id="eDr-3P-Nvc"/>
                     <constraint firstItem="lMY-VX-gGl" firstAttribute="leading" secondItem="SgE-h7-RUE" secondAttribute="leading" id="eMR-yr-Mhu"/>
                     <constraint firstAttribute="trailing" secondItem="uEz-uP-8tJ" secondAttribute="trailing" constant="20" symbolic="YES" id="ftk-nS-ULW"/>
                     <constraint firstAttribute="trailing" secondItem="0fo-Gy-jlr" secondAttribute="trailing" constant="20" symbolic="YES" id="iuK-Ji-kBc"/>
                     <constraint firstItem="uEz-uP-8tJ" firstAttribute="leading" secondItem="xqg-ie-600" secondAttribute="trailing" constant="10" id="izk-GW-2f5"/>
                     <constraint firstItem="xqg-ie-600" firstAttribute="top" secondItem="xb7-gB-TJq" secondAttribute="bottom" constant="5" id="syr-XZ-baC"/>
                     <constraint firstItem="xqg-ie-600" firstAttribute="leading" secondItem="SgE-h7-RUE" secondAttribute="trailing" constant="10" id="tGE-tH-ES0"/>
-                    <constraint firstItem="lMY-VX-gGl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cnA-TE-b2v" secondAttribute="bottom" constant="9.5" id="xEi-F3-gRY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="o8a-fC-PV5"/>
@@ -107,6 +119,7 @@
                 <outlet property="idLabel" destination="0fo-Gy-jlr" id="IHW-gr-E4D"/>
                 <outlet property="orderCategoryLabel" destination="xqg-ie-600" id="8r6-ZB-Egv"/>
                 <outlet property="orderStateLabel" destination="cnA-TE-b2v" id="exe-6S-f2t"/>
+                <outlet property="orderStateView" destination="0kS-Lt-Que" id="ceJ-3L-Qux"/>
                 <outlet property="orderTotalLabel" destination="rgN-0F-Fxp" id="8b9-3u-2ia"/>
                 <outlet property="providerImageView" destination="SgE-h7-RUE" id="UJj-vV-cKc"/>
                 <outlet property="providerNameLabel" destination="xb7-gB-TJq" id="Uve-ut-c5b"/>
