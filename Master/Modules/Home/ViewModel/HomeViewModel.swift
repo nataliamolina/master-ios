@@ -75,9 +75,18 @@ class HomeViewModel {
                 return
             }
             
-            self?.totalOrders.value = "\(models.count)"
+            self?.setupTotalOrders(models: models)
             self?.hasPendingOrders.value = !models.isEmpty
         }
+    }
+    
+    private func setupTotalOrders(models: [Order]) {
+        totalOrders.value = models.filter {
+            $0.orderState.type == .pending ||
+            $0.orderState.type == .pendingForPayment ||
+            $0.orderState.type == .inProgress
+            
+        }.count.asString
     }
     
     private func servicesToViewModels(models: [Service]) {

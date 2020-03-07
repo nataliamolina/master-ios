@@ -698,7 +698,10 @@
 					"$(PROJECT_DIR)/Paymentez/PaymentezSDK",
 					"$(PROJECT_DIR)/Paymentez/CardIO",
 				);
-				OTHER_LDFLAGS = "-lc++";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.master.ios.paymentez.Paymentez;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -737,7 +740,10 @@
 					"$(PROJECT_DIR)/Paymentez/PaymentezSDK",
 					"$(PROJECT_DIR)/Paymentez/CardIO",
 				);
-				OTHER_LDFLAGS = "-lc++";
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.master.ios.paymentez.Paymentez;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

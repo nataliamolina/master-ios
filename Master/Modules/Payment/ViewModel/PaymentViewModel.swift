@@ -62,9 +62,10 @@ class PaymentViewModel {
         
         SDK.add(card, uid: userId, email: userEmail) { [weak self] (error: PaymentezSDKError?, card: PaymentezCard?) in
             
-            guard let card = card, let cardToken = card.token, error == nil else {
+            guard let card = card, let cardToken = card.token else {
                 self?.loadingState(false)
-                self?.status.value = .error(error: nil)
+                // FIXME: String
+                self?.status.value = .error(error: "Ocurrió un error al validar tu tarjeta, por favor intenta nuevamente.")
                 
                 return
             }

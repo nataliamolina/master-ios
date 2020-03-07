@@ -79,7 +79,9 @@ class PaymentViewController: UIViewController {
     
     private func setupBindings() {
         viewModel.isLoading.listen { isLoading in
-            isLoading ? Loader.show() : Loader.dismiss()
+            DispatchQueue.main.async {
+                isLoading ? Loader.show() : Loader.dismiss()
+            }
         }
         
         viewModel.status.listen { [weak self] status in
