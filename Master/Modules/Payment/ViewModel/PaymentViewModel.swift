@@ -25,7 +25,9 @@ class PaymentViewModel {
     private let userId: String
     private let userEmail: String
     private let orderId: Int
-    private let service: PaymentServiceProtocol
+    private let service: PaymentServiceProtocol    
+    private let totalTransactionsLimit = 2
+    private var totalTransactions = 0
     
     // MARK: - Life Cycle
     init(service: PaymentServiceProtocol? = nil, orderId: Int, userId: Int, userEmail: String) {
@@ -60,18 +62,32 @@ class PaymentViewModel {
     
     private func pay(_ card: PaymentezCard) {
         
-        SDK.add(card, uid: userId, email: userEmail) { [weak self] (error: PaymentezSDKError?, card: PaymentezCard?) in
+        SDK.add(card, uid: userId, email: userEmail) { [weak self] (error: PaymentezSDKError?, createdCard: PaymentezCard?) in
             
-            guard let card = card, let cardToken = card.token else {
-                self?.loadingState(false)
-                // FIXME: String
-                self?.status.value = .error(error: "Ocurrió un error al validar tu tarjeta, por favor intenta nuevamente.")
+            guard let createdCard = createdCard, let cardToken = createdCard.token, error == nil else {
+                self?.retryPayment(card: card)
                 
                 return
             }
             
             self?.performPayment(cardToken: cardToken)
         }
+    }
+    
+    private func retryPayment(card: PaymentezCard?) {
+        print("Retrying to perform payment. \(totalTransactions)")
+        
+        guard let card = card, totalTransactions <= totalTransactionsLimit else {
+            loadingState(false)
+            
+            status.value = .error(error: String.Lang.generalError)
+            
+            return
+        }
+        
+        totalTransactions += 1
+        
+        pay(card)
     }
     
     private func performPayment(cardToken: String) {

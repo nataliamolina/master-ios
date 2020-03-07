@@ -296,6 +296,9 @@
 		2C976A0D240ACF070073DD07 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C976A0B240ACF070073DD07 /* LoaderView.xib */; };
 		2C976A11240AD0F20073DD07 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C976A10240AD0F20073DD07 /* Loader.swift */; };
 		2C99B27F24005929003525B9 /* MAnimatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */; };
+		2CA2B0C124144C7F000C7131 /* String+Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2B0C024144C7F000C7131 /* String+Lang.swift */; };
+		2CA2B0C224144D14000C7131 /* String+Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2B0C024144C7F000C7131 /* String+Lang.swift */; };
+		2CA2B0C324144D15000C7131 /* String+Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2B0C024144C7F000C7131 /* String+Lang.swift */; };
 		2CA494D323F9989B00F87AD6 /* ProviderProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494D123F9989B00F87AD6 /* ProviderProfileViewController.swift */; };
 		2CA494D423F9989B00F87AD6 /* ProviderProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA494D223F9989B00F87AD6 /* ProviderProfileViewController.xib */; };
 		2CA494DA23F998B800F87AD6 /* ProviderProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA494D923F998B800F87AD6 /* ProviderProfileViewModel.swift */; };
@@ -760,6 +763,7 @@
 		2C976A0B240ACF070073DD07 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		2C976A10240AD0F20073DD07 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAnimatedTableViewCell.swift; sourceTree = "<group>"; };
+		2CA2B0C024144C7F000C7131 /* String+Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Lang.swift"; sourceTree = "<group>"; };
 		2CA494D123F9989B00F87AD6 /* ProviderProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileViewController.swift; sourceTree = "<group>"; };
 		2CA494D223F9989B00F87AD6 /* ProviderProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderProfileViewController.xib; sourceTree = "<group>"; };
 		2CA494D923F998B800F87AD6 /* ProviderProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileViewModel.swift; sourceTree = "<group>"; };
@@ -1811,6 +1815,7 @@
 				2CEECC9D2400D30200C67D80 /* UIView+Extensions.swift */,
 				2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */,
 				2C829ECB240B3AC500D7DD81 /* UINavigationController+Extensions.swift */,
+				2CA2B0C024144C7F000C7131 /* String+Lang.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2546,6 +2551,7 @@
 				2C3E50A3240C79B500873495 /* ProviderListServiceEndpoint.swift in Sources */,
 				2C3E50A4240C79B500873495 /* RouterBase.swift in Sources */,
 				2C3E50A5240C79B500873495 /* CompleteTextViewModel.swift in Sources */,
+				2CA2B0C224144D14000C7131 /* String+Lang.swift in Sources */,
 				2C3E50A6240C79B500873495 /* AppDelegate.swift in Sources */,
 				2C3E50A7240C79B500873495 /* ProviderListViewController.swift in Sources */,
 				2C3E50A8240C79B500873495 /* ButtonCellViewModel.swift in Sources */,
@@ -2707,6 +2713,7 @@
 				2CC3DBD72411EBCC001E76B2 /* ProviderListServiceEndpoint.swift in Sources */,
 				2CC3DBD82411EBCC001E76B2 /* RouterBase.swift in Sources */,
 				2CC3DBD92411EBCC001E76B2 /* CompleteTextViewModel.swift in Sources */,
+				2CA2B0C324144D15000C7131 /* String+Lang.swift in Sources */,
 				2CC3DBDA2411EBCC001E76B2 /* AppDelegate.swift in Sources */,
 				2CC3DBDB2411EBCC001E76B2 /* ProviderListViewController.swift in Sources */,
 				2CC3DBDC2411EBCC001E76B2 /* ButtonCellViewModel.swift in Sources */,
@@ -2868,6 +2875,7 @@
 				A5F30D6623B4DA85005258A8 /* UITableView+Extensions.swift in Sources */,
 				2C7E7FBC23F89AC600D7835E /* ProviderListServiceEndpoint.swift in Sources */,
 				2C198D2623F4E6AF00346395 /* RouterBase.swift in Sources */,
+				2CA2B0C124144C7F000C7131 /* String+Lang.swift in Sources */,
 				2CAD87B42404AA230063AEB2 /* CompleteTextViewModel.swift in Sources */,
 				A58132AE23B4C7560032FC8B /* AppDelegate.swift in Sources */,
 				2CF6ABD323F7D84500F9EF40 /* ProviderListViewController.swift in Sources */,
