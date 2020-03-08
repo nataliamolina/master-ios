@@ -3069,7 +3069,7 @@
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Carlos Mejía (765XN25GLY)";
+				CODE_SIGN_IDENTITY = "Apple Development: Carlos Mejía (765XN25GLY)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
