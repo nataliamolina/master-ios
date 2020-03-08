@@ -7,7 +7,7 @@
 */
 
 // General
-"general.error" = "Ocurrió un error al validar tu tarjeta, por favor intenta nuevamente.";
+"general.error" = "Ocurrió un error inesperado, por favor intenta nuevamente.";
 "general.legal.continue" = "Al continuar, estás aceptando nuestros términos y condiciones.";
 "general.close" = "Cerrar";
 "general.accept" = "Aceptar";

@@ -55,6 +55,9 @@ class CheckoutViewController: UIViewController {
         
         viewModel.status.listen { [weak self] status in
             switch status {
+            case .error:
+                self?.showError(message: String.Lang.generalError)
+                
             case .fieldError(let name):
                 self?.showWarning(message: Lang.completeField + name.lowercased())
                 

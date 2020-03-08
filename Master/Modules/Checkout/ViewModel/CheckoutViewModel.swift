@@ -164,7 +164,7 @@ class CheckoutViewModel {
         return Double(cart.map { $0.productCount }.reduce(0, +))
     }
     
-    func performPayment(address: String, notes: String?, jsonDate: String, date: Date) {
+    private func performPayment(address: String, notes: String?, jsonDate: String, date: Date) {
         let request = OrderRequest(providerId: provider.id,
                                    orderAddress: address,
                                    notes: notes ?? "",
@@ -173,10 +173,10 @@ class CheckoutViewModel {
                                    orderDate: jsonDate,
                                    time: getFormattedTimeFrom(date: date))
         
-        isLoading.value = true
+        loadingState(true)
         
         service.performCheckout(request: request) { [weak self] (_, error: CMError?) in
-            self?.isLoading.value = false
+            self?.loadingState(false)
             
             if let error = error {
                 self?.status.value = .error(error: error.error)
@@ -208,5 +208,11 @@ class CheckoutViewModel {
         dateFormatter.pmSymbol = "PM"
         
         return dateFormatter.string(from: date)
+    }
+    
+    private func loadingState(_ state: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            self?.isLoading.value = state
+        }
     }
 }

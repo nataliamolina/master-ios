@@ -7,7 +7,6 @@ def firebase
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
-  pod 'Firebase/Messaging'
 
 end
 
