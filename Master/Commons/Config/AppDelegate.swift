@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupFirebase()
-        setupPushNotifications()
+        setupPushNotifications(application)
         setupPaymentez()
         setupInitialVC()
         disableDarkMode()
@@ -69,8 +69,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
     }
     
-    private func setupPushNotifications() {
+    private func setupPushNotifications(_ app: UIApplication) {
+        var config: UNAuthorizationOptions = [.alert, .sound, .badge]
         
+        if #available(iOS 13.0, *) {
+            config = [.alert, .announcement, .sound, .badge, .providesAppNotificationSettings]
+        }
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: config) { (isDone: Bool, error: Error?) in
+            guard isDone, error == nil else {
+                print(error?.localizedDescription ?? "")
+                
+                return
+            }
+            
+            DispatchQueue.main.async {
+                app.registerForRemoteNotifications()
+                
+            }
+        }
     }
     
     private func disableDarkMode() {
@@ -83,5 +100,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let localize = Localize.shared
         localize.update(provider: .strings)
         localize.update(language: "en")
+    }
+}
+
+// MARK: - Push Notification methods
+extension AppDelegate {
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        print(getStringFrom(token: deviceToken))
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+        print(error)
+    }
+    
+    func getStringFrom(token: Data) -> String {
+        return token.reduce("") { $0 + String(format: "%02.2hhx", $1) }
     }
 }
