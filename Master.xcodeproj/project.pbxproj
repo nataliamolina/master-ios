@@ -3095,7 +3095,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "master-prov-dev";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -3132,7 +3132,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "master-prov-prod";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -3145,6 +3145,7 @@
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development: Carlos Mejía (765XN25GLY)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3183,7 +3184,7 @@
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
@@ -3336,6 +3337,7 @@
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development: Carlos Mejía (765XN25GLY)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -3373,7 +3375,7 @@
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
@@ -3394,7 +3396,7 @@
 				PAYMENTEZ_APP_KEY = ZgwDXC2we1BKKL1rcPEspf9lzNtiEp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "master-prov-prod";
+				PROVISIONING_PROFILE_SPECIFIER = "master-prov-adhoc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
