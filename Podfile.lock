@@ -15,6 +15,9 @@ PODS:
   - Firebase/Crashlytics (6.18.0):
     - Firebase/CoreOnly
     - FirebaseCrashlytics (~> 4.0.0-beta.4)
+  - Firebase/Messaging (6.18.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 4.3.0)
   - FirebaseAnalytics (6.3.0):
     - FirebaseCore (~> 6.6)
     - FirebaseInstallations (~> 1.1)
@@ -51,6 +54,15 @@ PODS:
     - FirebaseInstallations (~> 1.0)
     - GoogleUtilities/Environment (~> 6.5)
     - GoogleUtilities/UserDefaults (~> 6.5)
+  - FirebaseMessaging (4.3.0):
+    - FirebaseAnalyticsInterop (~> 1.5)
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstanceID (~> 4.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.5)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Reachability (~> 6.5)
+    - GoogleUtilities/UserDefaults (~> 6.5)
+    - Protobuf (>= 3.9.2, ~> 3.9)
   - GoogleAppMeasurement (6.3.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -107,6 +119,7 @@ PODS:
     - MarqueeLabel (~> 4.0.0)
     - SnapKit (~> 5.0.0)
   - PromisesObjC (1.2.8)
+  - Protobuf (3.11.4)
   - SideMenu (6.4.7)
   - Simple-Networking (0.3.4)
   - SimpleKeychain (0.10.0)
@@ -118,6 +131,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Crashlytics
+  - Firebase/Messaging
   - GoogleSignIn
   - Hero
   - Kingfisher (~> 5.0)
@@ -142,6 +156,7 @@ SPEC REPOS:
     - FirebaseCrashlytics
     - FirebaseInstallations
     - FirebaseInstanceID
+    - FirebaseMessaging
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
@@ -157,6 +172,7 @@ SPEC REPOS:
     - nanopb
     - NotificationBannerSwift
     - PromisesObjC
+    - Protobuf
     - SideMenu
     - Simple-Networking
     - SimpleKeychain
@@ -175,6 +191,7 @@ SPEC CHECKSUMS:
   FirebaseCrashlytics: 1dff71c846a3a138f524f79d4740ffed5fdd0c04
   FirebaseInstallations: 575cd32f2aec0feeb0e44f5d0110a09e5e60b47b
   FirebaseInstanceID: 7ee0d6777013bb952f377b41965bf132b6a075be
+  FirebaseMessaging: 4ec33842d36b3319e062e51fb8b35a74f726950d
   GoogleAppMeasurement: 39ecba10918b21c83877d392246157f65db351cf
   GoogleDataTransport: 653963cf5be60fb59cf051e070f0836fdc305f81
   GoogleDataTransportCCTSupport: 84e4d4bbab642f2e9d83ee65d78aca2b5527d314
@@ -190,12 +207,13 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   NotificationBannerSwift: 713e20f21b6105f4a36a00e5d9fa414a930d3d8e
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   Simple-Networking: 9efdb5ad49506fabff7c9d9d965a6e72c68deb08
   SimpleKeychain: a5ed8ebd0ab7e46a910353ffe0293cd6f017a160
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 7656059ad51df2491f52cdc263f626e4df86119f
+PODFILE CHECKSUM: 47d9ef6db8cf611fcc2d2e1e8fcb24384bf81608
 
 COCOAPODS: 1.8.4

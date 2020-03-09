@@ -70,6 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupPushNotifications(_ app: UIApplication) {
+        Messaging.messaging().delegate = self
+        
         var config: UNAuthorizationOptions = [.alert, .sound, .badge]
         
         if #available(iOS 13.0, *) {
@@ -109,6 +111,8 @@ extension AppDelegate {
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
         print("TOKEN!: " + getStringFrom(token: deviceToken))
+        
+        Messaging.messaging().apnsToken = deviceToken
     }
     
     func application(_ application: UIApplication,
@@ -119,5 +123,12 @@ extension AppDelegate {
     
     func getStringFrom(token: Data) -> String {
         return token.reduce("") { $0 + String(format: "%02.2hhx", $1) }
+    }
+}
+
+// MARK: - Push Notification methods
+extension AppDelegate: MessagingDelegate {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
     }
 }
