@@ -49,6 +49,8 @@ class HomeViewController: UIViewController {
             
             viewModel.fetchServices()
         }
+        
+        viewModel.updatePushToken()
     }
     
     private func setupUI() {

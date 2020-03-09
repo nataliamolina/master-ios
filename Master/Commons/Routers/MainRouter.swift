@@ -13,6 +13,7 @@ enum MainRouterTransitions {
     case emailLogin
     case register
     case home
+    case legal
 }
 
 class MainRouter: RouterBase<MainRouterTransitions> {
@@ -42,6 +43,9 @@ class MainRouter: RouterBase<MainRouterTransitions> {
             
         case .register:
             handleRegisterTransition()
+            
+        case .legal:
+            handleLegalTransition()
         }
     }
     
@@ -87,6 +91,13 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         let viewController = RegisterViewController()
         viewController.router = self
 
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleLegalTransition() {
+        let viewController = LegalViewController()
+        viewController.customTitle = "legal.title".localized
+        
         navigationController.pushViewController(viewController, animated: true)
     }
 }

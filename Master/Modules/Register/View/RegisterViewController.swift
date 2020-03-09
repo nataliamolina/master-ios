@@ -31,6 +31,11 @@ class RegisterViewController: UIViewController {
                            phoneNumber: phoneTextField.safeText)
     }
     
+    @IBAction private func legalButtonAction() {
+        dismissKeyboard()
+        router?.transition(to: .legal)
+    }
+    
     // MARK: - Properties
     private let viewModel = RegisterViewModel()
     var router: RouterBase<MainRouterTransitions>?

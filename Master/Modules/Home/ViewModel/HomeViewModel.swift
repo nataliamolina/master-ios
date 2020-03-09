@@ -8,6 +8,7 @@
 
 import Foundation
 import EasyBinding
+import Firebase
 
 enum HomeViewModelStatus {
     case undefined
@@ -67,6 +68,16 @@ class HomeViewModel {
         return viewModel.serviceId
     }
     
+    func updatePushToken() {
+        InstanceID.instanceID().instanceID { [weak self] (result, _) in
+            guard let token = result?.token else {
+                return
+            }
+            
+            self?.service.updatePushToken(token, onComplete: { _, _ in })
+        }
+    }
+    
     // MARK: - Private Methods
     
     private func fetchOrders() {
@@ -83,8 +94,8 @@ class HomeViewModel {
     private func setupTotalOrders(models: [Order]) {
         totalOrders.value = models.filter {
             $0.orderState.type == .pending ||
-            $0.orderState.type == .pendingForPayment ||
-            $0.orderState.type == .inProgress
+                $0.orderState.type == .pendingForPayment ||
+                $0.orderState.type == .inProgress
             
         }.count.asString
     }

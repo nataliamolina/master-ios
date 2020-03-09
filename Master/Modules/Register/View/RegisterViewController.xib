@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Master" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Dev" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="mja-aa-T6z" id="qoe-5c-F65"/>
                 <outlet property="mainStackview" destination="vnJ-KG-oTW" id="xoO-hs-mJ1"/>
@@ -42,7 +42,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="register.label.legal"/>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-gd-Eb0" customClass="MTextField" customModule="Master" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-gd-Eb0" customClass="MTextField" customModule="Dev" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="37" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="emn-7I-3k0"/>
@@ -53,7 +53,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.names"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-3J-oer" customClass="MTextField" customModule="Master" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-3J-oer" customClass="MTextField" customModule="Dev" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="97" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="oBr-C2-ZJd"/>
@@ -64,7 +64,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.phone"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mja-aa-T6z" customClass="MTextField" customModule="Master" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mja-aa-T6z" customClass="MTextField" customModule="Dev" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="157" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="n4X-wT-Pyk"/>
@@ -75,7 +75,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="register.placeholder.email"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ltd-PN-SuG" customClass="MTextField" customModule="Master" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ltd-PN-SuG" customClass="MTextField" customModule="Dev" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="217" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="RjK-zf-Ijb"/>
@@ -87,13 +87,16 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="showToggler" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzg-Lr-xL7" customClass="MLegalButton" customModule="Master" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzg-Lr-xL7" customClass="MLegalButton" customModule="Dev" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="277" width="374" height="30"/>
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="legalButtonAction" destination="-1" eventType="touchUpInside" id="QIS-qt-F2I"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-nI-4V7" customClass="MButton" customModule="Master" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-nI-4V7" customClass="MButton" customModule="Dev" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="327" width="374" height="47"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="47" id="7cB-aF-2jr"/>

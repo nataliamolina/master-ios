@@ -8,10 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LegalViewController" customModule="Master" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LegalViewController" customModule="Dev" customModuleProvider="target">
             <connections>
                 <outlet property="privacyButton" destination="3Md-Wt-KEc" id="Ifx-R6-qgd"/>
                 <outlet property="termsButton" destination="AWv-Gi-oDV" id="2hT-Bs-8ri"/>
+                <outlet property="titleLabel" destination="Fyv-hH-wDF" id="XE8-FH-ny3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="J7Q-oj-BhU" id="2f7-In-ALB"/>
             </connections>
@@ -33,7 +34,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1qU-4Q-vgq">
                     <rect key="frame" x="20" y="105" width="374" height="47"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWv-Gi-oDV" customClass="MButton" customModule="Master" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWv-Gi-oDV" customClass="MButton" customModule="Dev" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="168.5" height="47"/>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
@@ -46,7 +47,7 @@
                                 <action selector="termsButtonAction" destination="-1" eventType="touchUpInside" id="Hus-vh-oLg"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Md-Wt-KEc" customClass="MButton" customModule="Master" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Md-Wt-KEc" customClass="MButton" customModule="Dev" customModuleProvider="target">
                             <rect key="frame" x="178.5" y="0.0" width="195.5" height="47"/>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>

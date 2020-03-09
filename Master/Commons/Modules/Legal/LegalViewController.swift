@@ -26,7 +26,8 @@ class LegalViewController: UIViewController {
     @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var termsButton: MButton!
     @IBOutlet private weak var privacyButton: MButton!
-
+    @IBOutlet private weak var titleLabel: UILabel!
+    
     // MARK: - UI Actions
     @IBAction private func termsButtonAction() {
         termsButton.style = .green
@@ -43,6 +44,8 @@ class LegalViewController: UIViewController {
     }
     
     // MARK: - Properties
+    var customTitle: String?
+    
     private let viewModel: LegalViewModel = {
         return LegalViewModel()
     }()
@@ -56,6 +59,9 @@ class LegalViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        titleLabel.isHidden = customTitle != nil
+        title = customTitle
+        
         webView.navigationDelegate = self
         
         termsButtonAction()

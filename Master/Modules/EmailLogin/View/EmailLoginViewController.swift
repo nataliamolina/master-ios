@@ -23,6 +23,11 @@ class EmailLoginViewController: UIViewController {
                         password: passwordTextField.safeText)
     }
     
+    @IBAction private func legalButtonAction() {
+        dismissKeyboard()
+        router?.transition(to: .legal)
+    }
+    
     // MARK: - Properties
     private let viewModel = EmailLoginViewModel()
     var router: RouterBase<MainRouterTransitions>?
@@ -45,7 +50,7 @@ class EmailLoginViewController: UIViewController {
         viewModel.controlsEnabled.bindTo(emailTextField, to: .state)
         viewModel.controlsEnabled.bindTo(passwordTextField, to: .state)
         viewModel.controlsEnabled.bindTo(loginButton, to: .state)
-
+        
         viewModel.status.listen { [weak self] status in
             guard let self = self else { return }
             
