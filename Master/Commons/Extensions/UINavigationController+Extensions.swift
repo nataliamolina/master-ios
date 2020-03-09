@@ -16,7 +16,7 @@ extension UINavigationController {
         CATransaction.commit()
     }
     
-    func popToRootViewController(completion: @escaping () -> Void) {
+    func popToRootViewController(completion: (() -> Void)?) {
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)
         self.popToRootViewController(animated: true)

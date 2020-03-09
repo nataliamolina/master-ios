@@ -78,7 +78,7 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
     }
     
     private func routeToEndFlow(onComplete: (() -> Void)?) {
-        navigationController.popToRootViewController(animated: true)
+        navigationController.popToRootViewController(completion: onComplete)
     }
     
     private func handleRateOrderTransition(viewModel: RateViewModel) {

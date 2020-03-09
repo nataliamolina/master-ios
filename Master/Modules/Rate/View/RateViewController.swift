@@ -102,7 +102,7 @@ class RateViewController: UIViewController {
     
     @objc private func keyboardWillShow(notification: NSNotification) {
         let screenHeight: CGFloat = UIScreen.main.bounds.height
-        let percentage: CGFloat = screenHeight < 600 ? 40 : 20
+        let percentage: CGFloat = screenHeight < 600 ? 40 : (screenHeight < 800 ? 20 : 10)
         
         mainContainerTopView.constant = -(screenHeight * percentage / 100)
         animateLayout()

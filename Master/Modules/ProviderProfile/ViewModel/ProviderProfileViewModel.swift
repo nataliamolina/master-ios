@@ -180,7 +180,7 @@ class ProviderProfileViewModel {
     }
     
     private func commentsToViewModel(_ model: CommentsResponse) {
-        average.value = model.average
+        average.value = model.average.rounded(toPlaces: 1)
         
         commentsDataSource = model.comments.map {
             CommentCellViewModel(authorImageUrl: $0.author.imageUrl,

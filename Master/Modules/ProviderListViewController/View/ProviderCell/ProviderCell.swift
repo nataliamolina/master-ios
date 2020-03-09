@@ -51,11 +51,15 @@ class ProviderCell: UITableViewCell, ConfigurableCellProtocol {
         
         scoreIconImageView.isHidden = viewModel.score <= 0
         scoreLabel.isHidden = viewModel.score <= 0
-        scoreLabel.text = "\(viewModel.score)"
+        scoreLabel.text = "\(viewModel.score.rounded(toPlaces: 1))"
         
         totalOrdersTextLabel.isHidden = viewModel.totalOrders <= 0
         totalOrdersLabel.isHidden = viewModel.totalOrders <= 0
         totalOrdersLabel.text = "\(Int(viewModel.totalOrders))"
+        
+        if viewModel.totalOrders == 1 {
+            totalOrdersTextLabel.text = String(totalOrdersTextLabel.text?.dropLast() ?? [])
+        }
         
         photoImageView.kf.setImage(with: URL(string: viewModel.imageUrl), placeholder: UIImage.avatar)
         
