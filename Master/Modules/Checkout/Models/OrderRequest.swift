@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct OrderRequest: Codable {
     let providerId: Int
     let orderAddress: String

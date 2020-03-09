@@ -84,3 +84,10 @@ extension OrderDetailViewController: UITableViewDataSource {
                                  delegate: self)
     }
 }
+
+// MARK: - OrderDetailHeaderCellDelegate
+extension OrderDetailViewController: OrderDetailHeaderCellDelegate {
+    func actionButtonTapped(_ cell: OrderDetailHeaderCell) {
+        router.transition(to: .rateOrder(viewModel: viewModel.getRateViewModel()))
+    }
+}

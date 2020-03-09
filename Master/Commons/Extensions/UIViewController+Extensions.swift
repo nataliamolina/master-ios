@@ -48,6 +48,10 @@ extension UIViewController {
         nextTextField.becomeFirstResponder()
     }
     
+    func showSuccess(message: String?) {
+        NotificationBanner(title: "Master", subtitle: message, style: .success).show()
+    }
+    
     func showError(message: String?) {
         NotificationBanner(title: "Error", subtitle: message, style: .danger).show()
     }

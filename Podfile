@@ -23,6 +23,7 @@ def commons
   pod 'SideMenu', '~> 6.0'
   pod 'SwiftLint'
   pod 'lottie-ios'
+  pod 'FloatRatingView', '~> 4'
   firebase
 end
 

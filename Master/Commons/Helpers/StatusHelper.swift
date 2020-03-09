@@ -9,6 +9,10 @@
 import UIKit
 
 class StatusHelper {
+    func getText(state: OrderStateType) -> String {
+        return stateName[state] ?? ""
+    }
+    
     func setupButton(_ button: MButton, state: OrderStateType) {
         button.style = buttonStyles[state]
     }

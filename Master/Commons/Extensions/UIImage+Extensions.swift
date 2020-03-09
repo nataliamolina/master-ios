@@ -32,7 +32,7 @@ extension UIImage {
     static var gps: UIImage? {
         return UIImage(named: "gps_icon")
     }
-
+    
     static var building: UIImage? {
         return UIImage(named: "building_icon")
     }
@@ -55,5 +55,13 @@ extension UIImage {
     
     static var product: UIImage? {
         return UIImage(named: "product_placeholder")
+    }
+    
+    static var fullStar: UIImage? {
+        return UIImage(named: "full_star_template")
+    }
+    
+    static var emptyStar: UIImage? {
+        return UIImage(named: "empty_star_template")
     }
 }

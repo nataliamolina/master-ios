@@ -70,6 +70,10 @@ class OrderDetailViewModel {
                                 userEmail: Session.shared.profile.email)
     }
     
+    func getRateViewModel() -> RateViewModel {
+        return RateViewModel(orderId: orderId)
+    }
+    
     // MARK: - Private Methods
     
     private func responseToViewModels(model: Order) {
@@ -139,7 +143,7 @@ class OrderDetailViewModel {
     
     private func validateOrderRating() {
         service.validateOrderRating(id: orderId) { [weak self] (response: Bool, error: CMError?) in
-            guard response, error == nil else {
+            guard !response, error == nil else {
                 self?.status.value = .error(error: error?.localizedDescription)
                 
                 return
@@ -155,6 +159,8 @@ class OrderDetailViewModel {
         }
         
         headerViewModel.showMainButton = true
+        
+        dataSource.value[0] = headerViewModel
     }
     
     private func getGroupedServices(models: [ProviderServiceCellViewModel]) -> [ProviderServiceCellViewModel] {

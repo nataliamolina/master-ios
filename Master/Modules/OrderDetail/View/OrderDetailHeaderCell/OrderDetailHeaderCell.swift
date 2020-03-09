@@ -23,6 +23,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     
     // MARK: - UI Actions
     @IBAction private func mainButtonAction() {
+        delegate?.actionButtonTapped(self)
     }
     
     // MARK: - Properties
@@ -51,7 +52,6 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         
         statusHelper.setupLabel(statusLabel, state: viewModel.status)
         statusHelper.setupView(statusView, state: viewModel.status)
-        statusHelper.setupButton(mainActionButton, state: viewModel.status)
         
         mainActionButton.isHidden = !viewModel.showMainButton
     }

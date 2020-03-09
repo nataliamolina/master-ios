@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="548" height="309"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mn9-f5-qoA">
-                        <rect key="frame" x="20" y="20" width="508" height="215"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mn9-f5-qoA">
+                        <rect key="frame" x="20" y="0.0" width="508" height="235"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-Oq-xh8">
                                 <rect key="frame" x="0.0" y="0.0" width="508" height="54"/>
@@ -63,22 +63,23 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jk7-Dg-9MH" customClass="MButton" customModule="Dev" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="508" height="47"/>
+                                <rect key="frame" x="0.0" y="74" width="508" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="ZbB-Hp-ecf"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="styleId">
-                                        <integer key="value" value="1"/>
+                                        <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="orderDetail.rate"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="mainButtonAction" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vZH-dA-uSa"/>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmd-s0-Kkc">
-                                <rect key="frame" x="0.0" y="121" width="508" height="94"/>
+                                <rect key="frame" x="0.0" y="141" width="508" height="94"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01e-aU-Lmq">
                                         <rect key="frame" x="20" y="20" width="468" height="28.5"/>
@@ -114,7 +115,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="mn9-f5-qoA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3Gm-6w-9ct"/>
-                    <constraint firstItem="mn9-f5-qoA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="83e-pr-agA"/>
+                    <constraint firstItem="mn9-f5-qoA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="83e-pr-agA"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mn9-f5-qoA" secondAttribute="trailing" id="a2Q-M7-6se"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mn9-f5-qoA" secondAttribute="bottom" constant="20" symbolic="YES" id="itS-0Z-IY6"/>
                 </constraints>

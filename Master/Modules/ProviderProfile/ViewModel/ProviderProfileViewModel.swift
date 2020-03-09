@@ -32,7 +32,7 @@ class ProviderProfileViewModel {
     let status = Var<ProviderProfileViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource: Var<[[CellViewModelProtocol]]> = Var([])
-    let formattedTotal: Var<String> = Var("$0")
+    let formattedTotal = Var("$0")
     
     private(set) var total: Double = 0 {
         didSet {

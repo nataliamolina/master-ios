@@ -73,7 +73,23 @@ class ProviderProfileViewController: UIViewController {
             isLoading ? Loader.show() : Loader.dismiss()
         }
         
+        viewModel.average.listen { [weak self] average in
+            if average > 0 {
+                self?.addRatingView(score: average)
+            }
+        }
+        
         viewModel.formattedTotal.bindTo(totalLabel, to: .text)
+    }
+    
+    private func addRatingView(score: Double) {
+        let rateView: RateView = .fromNib()
+        rateView.frame = CGRect(x: 0, y: 0, width: 75, height: 40)
+        rateView.setupWith(score: score)
+        
+        let rightBarButton = UIBarButtonItem(customView: rateView)
+        
+        navigationItem.rightBarButtonItem = rightBarButton
     }
 }
 

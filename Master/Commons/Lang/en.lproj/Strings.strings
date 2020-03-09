@@ -98,6 +98,7 @@
 "orderDetail.title" = "Pedido #";
 "orderDetail.total" = "Total";
 "orderDetail.pay" = "Pagar";
+"orderDetail.rate" = "Calificar Servicio";
 
 // Payment
 "payment.title" = "Pago";
@@ -107,3 +108,9 @@
 "payment.cardOwner" = "Propietario";
 "payment.cardNumber" = "Número de tarjeta";
 "payment.invalidCard" = "Porfavor Revisa nuevamente los datos de tu tarjeta";
+
+// Payment
+"rate.title" = "Calificar Servicio";
+"rate.desc" = "Cuentanos que te pareció el servicio prestado por tu Master, sé lo más sincero posible, esto ayudará a tu Master a mejorar y a nosotros también.";
+"rate.text" = "¿Te gustó el servicio?, ¿Hay algo que mejorar?";
+"rate.button" = "Enviar Calificación";

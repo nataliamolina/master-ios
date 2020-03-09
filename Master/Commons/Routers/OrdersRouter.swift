@@ -11,8 +11,10 @@ import UIKit
 enum OrdersRouterTransitions {
     case orders
     case orderDetail(viewModel: OrderDetailViewModel)
+    case rateOrder(viewModel: RateViewModel)
     case payment(viewModel: PaymentViewModel)
     case paymentDone
+    case endFlow(onComplete: (() -> Void)?)
 }
 
 class OrdersRouter: RouterBase<OrdersRouterTransitions> {
@@ -32,6 +34,9 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
         case .orders:
             handleOrdersTransition()
             
+        case .rateOrder(let viewModel):
+            handleRateOrderTransition(viewModel: viewModel)
+            
         case .orderDetail(let viewModel):
             handleOrderDetailTransition(viewModel: viewModel)
             
@@ -40,6 +45,9 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
             
         case .paymentDone:
             handlePaymentDoneTransition()
+            
+        case .endFlow(let onComplete):
+            routeToEndFlow(onComplete: onComplete)
         }
     }
     
@@ -67,6 +75,15 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
         navigationController.popToRootViewController {
             checkoutRouter.transition(to: .successOrder)
         }
-
+    }
+    
+    private func routeToEndFlow(onComplete: (() -> Void)?) {
+        navigationController.popToRootViewController(animated: true)
+    }
+    
+    private func handleRateOrderTransition(viewModel: RateViewModel) {
+        let viewController = RateViewController(router: self, viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
