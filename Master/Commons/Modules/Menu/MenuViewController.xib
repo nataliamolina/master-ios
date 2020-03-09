@@ -184,6 +184,9 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="menu.help"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="helpButtonAction" destination="-1" eventType="touchUpInside" id="Ajs-dE-Wxl"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

@@ -17,6 +17,7 @@ class Session {
     private let storage: StorageProtocol = Storage()
     static let shared = Session()
     
+    var helpUrl: String = ""
     var profile: UserProfile = .empty
     
     var token: String? {

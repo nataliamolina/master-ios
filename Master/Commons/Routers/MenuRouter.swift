@@ -15,6 +15,7 @@ enum MenuRouterTransitions {
     case legal
     case logout
     case privacy
+    case help
 }
 
 class MenuRouter: RouterBase<MenuRouterTransitions> {
@@ -46,6 +47,9 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
             
         case .privacy:
             handleLegalTransition()
+            
+        case .help:
+            handleHelpTransition()
             
         }
     }
@@ -89,5 +93,13 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     
     private func handleLogoutTransition() {
         navigationController.dismiss(animated: true, completion: nil)
+    }
+    
+    private func handleHelpTransition() {
+        guard let whatsappURL = URL(string: Session.shared.helpUrl), UIApplication.shared.canOpenURL(whatsappURL) else {
+            return
+        }
+        
+        UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
     }
 }

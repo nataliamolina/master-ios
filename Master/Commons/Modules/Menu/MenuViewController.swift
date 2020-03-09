@@ -26,6 +26,10 @@ class MenuViewController: UIViewController {
         router.transition(to: .legal)
     }
     
+    @IBAction func helpButtonAction() {
+        router.transition(to: .help)
+    }
+    
     // MARK: - Properties
     private let router: RouterBase<MenuRouterTransitions>
     private let viewModel = MenuViewModel()
@@ -56,7 +60,7 @@ class MenuViewController: UIViewController {
     
     private func performLogout() {
         viewModel.logout()
-
+        
         dismiss(animated: true, completion: nil)
         
         router.transition(to: .logout)

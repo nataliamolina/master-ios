@@ -41,7 +41,8 @@ class SplashScreenViewModel {
     
     private func checkServerStatus() {
         service.checkServerStatus { [weak self] (response: ServerStatus?, error: CMError?) in
-            
+            Session.shared.helpUrl = response?.helpUrl ?? ""
+
             if response?.isOnline == true {
                 self?.validateTokenIfNeeded()
                 
