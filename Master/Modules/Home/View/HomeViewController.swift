@@ -103,6 +103,7 @@ class HomeViewController: UIViewController {
             return
         }
         
+        showSuccess(message: pendingNotification.message)
         pushNotificationsRouter = PushNotificationsRouter(notification: pendingNotification)
         pushNotificationsRouter?.ordersRouter = OrdersRouter(rootViewController: navController)
         pushNotificationsRouter?.navigateToPushNotification()
