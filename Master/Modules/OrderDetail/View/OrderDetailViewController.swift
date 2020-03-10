@@ -42,6 +42,12 @@ class OrderDetailViewController: UIViewController {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        viewModel.fetchDetail()
+    }
+    
     // MARK: - Public Methods
     
     // MARK: - Private Methods
@@ -57,8 +63,6 @@ class OrderDetailViewController: UIViewController {
         tableView.registerNib(CheckoutFieldCell.self)
 
         setupBindings()
-        
-        viewModel.fetchDetail()
     }
     
     private func setupBindings() {
@@ -68,6 +72,14 @@ class OrderDetailViewController: UIViewController {
         
         viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
+        }
+        
+        viewModel.needsToRateOrder.listen { [weak self] needsToRateOrder in
+            guard let self = self, needsToRateOrder else {
+                return
+            }
+            
+            self.router.transition(to: .rateOrder(viewModel: self.viewModel.getRateViewModel()))
         }
     }
 }

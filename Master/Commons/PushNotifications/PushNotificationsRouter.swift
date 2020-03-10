@@ -23,6 +23,8 @@ class PushNotificationsRouter {
         default:
             return
         }
+        
+        PushNotifications.shared.notificationResolved()
     }
     
     private func getOrderDetailViewModel() -> OrderDetailViewModel {

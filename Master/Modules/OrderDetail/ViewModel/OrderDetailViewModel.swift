@@ -26,6 +26,7 @@ class OrderDetailViewModel {
     let isLoading = Var(false)
     let dataSource = Var<[CellViewModelProtocol]>([])
     let pendingPayment = Var<Bool>(true)
+    let needsToRateOrder = Var(false)
     
     // MARK: - Life Cycle
     init(orderId: Int, service: OrderDetailServiceProtocol? = nil) {
@@ -149,6 +150,7 @@ class OrderDetailViewModel {
                 return
             }
             
+            self?.needsToRateOrder.value = true
             self?.showRatingButton()
         }
     }
