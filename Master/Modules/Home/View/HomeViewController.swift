@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var pendingLabel: UILabel!
     
     // MARK: - Properties
+    private var pushNotificationsRouter: PushNotificationsRouter?
     private let viewModel = HomeViewModel()
     private let router: RouterBase<HomeRouterTransitions>
     private let heroTransition = HeroTransition()
@@ -53,6 +54,7 @@ class HomeViewController: UIViewController {
         viewModel.updatePushToken()
     }
     
+    // MARK: - Private Methods
     private func setupUI() {
         disableTitle()
         
@@ -71,6 +73,12 @@ class HomeViewController: UIViewController {
         setupLogoIcon()
         
         viewModel.fetchServices()
+        
+        PushNotifications.shared.hasPendingNotification.listen { [weak self] (hasPendingNotification) in
+            if hasPendingNotification {
+                self?.handlePushNotificationIfNeeded()
+            }
+        }
     }
     
     private func setupBindings() {
@@ -88,7 +96,18 @@ class HomeViewController: UIViewController {
         }
     }
     
-    // MARK: - Private Methods
+    private func handlePushNotificationIfNeeded() {
+        guard
+            let pendingNotification = PushNotifications.shared.pendingNotification,
+            let navController = navigationController else {
+            return
+        }
+        
+        pushNotificationsRouter = PushNotificationsRouter(notification: pendingNotification)
+        pushNotificationsRouter?.ordersRouter = OrdersRouter(rootViewController: navController)
+        pushNotificationsRouter?.navigateToPushNotification()
+    }
+    
     private func setupMenuIcon() {
         let leftImage = UIBarButtonItem(image: .menu, style: .plain, target: self, action: #selector(menuButtonTapped))
         leftImage.tintColor = .black

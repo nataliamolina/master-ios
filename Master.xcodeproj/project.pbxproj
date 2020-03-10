@@ -269,6 +269,15 @@
 		2C42088E23F647E00058873D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088D23F647E00058873D /* MainViewModel.swift */; };
 		2C55F3AF2408BAF600F458AC /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55F3AE2408BAF600F458AC /* DatePicker.swift */; };
 		2C55F3B12408DE9D00F458AC /* CheckoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55F3B02408DE9D00F458AC /* CheckoutService.swift */; };
+		2C57B72D24170BC100A3281F /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B72C24170BC100A3281F /* PushNotifications.swift */; };
+		2C57B72E24170BC100A3281F /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B72C24170BC100A3281F /* PushNotifications.swift */; };
+		2C57B72F24170BC100A3281F /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B72C24170BC100A3281F /* PushNotifications.swift */; };
+		2C57B73224170C6A00A3281F /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73124170C6A00A3281F /* PushNotification.swift */; };
+		2C57B73324170C6A00A3281F /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73124170C6A00A3281F /* PushNotification.swift */; };
+		2C57B73424170C6A00A3281F /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73124170C6A00A3281F /* PushNotification.swift */; };
+		2C57B73624170EE700A3281F /* PushNotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */; };
+		2C57B73724170EE700A3281F /* PushNotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */; };
+		2C57B73824170EE700A3281F /* PushNotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */; };
 		2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */; };
 		2C63EF32240C161500852EAE /* OrdersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63EF31240C161500852EAE /* OrdersRouter.swift */; };
 		2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
@@ -756,6 +765,9 @@
 		2C42088D23F647E00058873D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2C55F3AE2408BAF600F458AC /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		2C55F3B02408DE9D00F458AC /* CheckoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutService.swift; sourceTree = "<group>"; };
+		2C57B72C24170BC100A3281F /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
+		2C57B73124170C6A00A3281F /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsRouter.swift; sourceTree = "<group>"; };
 		2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_bg_video_new.mp4; sourceTree = "<group>"; };
 		2C63EF31240C161500852EAE /* OrdersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersRouter.swift; sourceTree = "<group>"; };
 		2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoints.swift; sourceTree = "<group>"; };
@@ -1244,6 +1256,16 @@
 				2C42088D23F647E00058873D /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C57B73024170C5900A3281F /* PushNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				2C57B72C24170BC100A3281F /* PushNotifications.swift */,
+				2C57B73124170C6A00A3281F /* PushNotification.swift */,
+				2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */,
+			);
+			path = PushNotifications;
 			sourceTree = "<group>";
 		};
 		2C5DE68923F6445000183E34 /* View */ = {
@@ -1853,6 +1875,7 @@
 		A5F30D3A23B4C7F0005258A8 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				2C57B73024170C5900A3281F /* PushNotifications */,
 				2C22B38E23F8AE0A00678A41 /* Animations */,
 				2C7E7FA923F85BAC00D7835E /* Modules */,
 				2C198D2223F4E4EA00346395 /* Routers */,
@@ -2705,6 +2728,7 @@
 				2C3E50AD240C79B500873495 /* MTextField.swift in Sources */,
 				2C3E50AE240C79B500873495 /* ServiceCategory.swift in Sources */,
 				2C1636D92416AF9A0083A59A /* RateServiceProtocol.swift in Sources */,
+				2C57B73724170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2C3E50AF240C79B500873495 /* HomeViewModel.swift in Sources */,
 				2C3E50B0240C79B500873495 /* OrdersServiceProtocol.swift in Sources */,
 				2C3E50B1240C79B500873495 /* HomeViewController.swift in Sources */,
@@ -2791,6 +2815,7 @@
 				2C3E50FD240C79B500873495 /* ProviderProfileViewModel.swift in Sources */,
 				2CA96F8D240F5F6C0056C2F0 /* PaymentEndpoints.swift in Sources */,
 				2C3E50FE240C79B500873495 /* ProviderProfileEndpoints.swift in Sources */,
+				2C57B72E24170BC100A3281F /* PushNotifications.swift in Sources */,
 				2C3E50FF240C79B500873495 /* UIViewController+Extensions.swift in Sources */,
 				2C3E5100240C79B500873495 /* UIColor+Extensions.swift in Sources */,
 				2C3E5101240C79B500873495 /* CategoryCellViewModel.swift in Sources */,
@@ -2826,6 +2851,7 @@
 				2C3E511B240C79B500873495 /* ConnectionManager.swift in Sources */,
 				2C3E511C240C79B500873495 /* UserProfile.swift in Sources */,
 				2C3E511D240C79B500873495 /* AnimationType.swift in Sources */,
+				2C57B73324170C6A00A3281F /* PushNotification.swift in Sources */,
 				2C3E511E240C79B500873495 /* UIImageView+Extensions.swift in Sources */,
 				2C3E511F240C79B500873495 /* CMError.swift in Sources */,
 				2C3E5120240C79B500873495 /* Endpoint.swift in Sources */,
@@ -2877,6 +2903,7 @@
 				2CC3DBE12411EBCC001E76B2 /* MTextField.swift in Sources */,
 				2CC3DBE22411EBCC001E76B2 /* ServiceCategory.swift in Sources */,
 				2C1636D82416AF9A0083A59A /* RateServiceProtocol.swift in Sources */,
+				2C57B73624170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2CC3DBE32411EBCC001E76B2 /* HomeViewModel.swift in Sources */,
 				2CC3DBE42411EBCC001E76B2 /* OrdersServiceProtocol.swift in Sources */,
 				2CC3DBE52411EBCC001E76B2 /* HomeViewController.swift in Sources */,
@@ -2963,6 +2990,7 @@
 				2CC3DC352411EBCC001E76B2 /* ProviderProfileViewModel.swift in Sources */,
 				2CC3DC362411EBCC001E76B2 /* PaymentEndpoints.swift in Sources */,
 				2CC3DC372411EBCC001E76B2 /* ProviderProfileEndpoints.swift in Sources */,
+				2C57B72D24170BC100A3281F /* PushNotifications.swift in Sources */,
 				2CC3DC382411EBCC001E76B2 /* UIViewController+Extensions.swift in Sources */,
 				2CC3DC392411EBCC001E76B2 /* UIColor+Extensions.swift in Sources */,
 				2CC3DC3A2411EBCC001E76B2 /* CategoryCellViewModel.swift in Sources */,
@@ -2998,6 +3026,7 @@
 				2CC3DC552411EBCC001E76B2 /* ConnectionManager.swift in Sources */,
 				2CC3DC562411EBCC001E76B2 /* UserProfile.swift in Sources */,
 				2CC3DC572411EBCC001E76B2 /* AnimationType.swift in Sources */,
+				2C57B73224170C6A00A3281F /* PushNotification.swift in Sources */,
 				2CC3DC582411EBCC001E76B2 /* UIImageView+Extensions.swift in Sources */,
 				2CC3DC592411EBCC001E76B2 /* CMError.swift in Sources */,
 				2CC3DC5A2411EBCC001E76B2 /* Endpoint.swift in Sources */,
@@ -3049,6 +3078,7 @@
 				2C829ED8240B44FC00D7DD81 /* TitleCell.swift in Sources */,
 				A5F30D5723B4D470005258A8 /* MTextField.swift in Sources */,
 				2C1636DA2416AF9A0083A59A /* RateServiceProtocol.swift in Sources */,
+				2C57B73824170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2CF6ABB823F7AE3500F9EF40 /* ServiceCategory.swift in Sources */,
 				2CF6ABCD23F7B43000F9EF40 /* HomeViewModel.swift in Sources */,
 				2CF6ABCB23F7B26A00F9EF40 /* OrdersServiceProtocol.swift in Sources */,
@@ -3135,6 +3165,7 @@
 				2CA494DA23F998B800F87AD6 /* ProviderProfileViewModel.swift in Sources */,
 				2CA494DE23F998CE00F87AD6 /* ProviderProfileEndpoints.swift in Sources */,
 				A5F30D5923B4D5EE005258A8 /* UIViewController+Extensions.swift in Sources */,
+				2C57B72F24170BC100A3281F /* PushNotifications.swift in Sources */,
 				A5F30D4E23B4CC2B005258A8 /* UIColor+Extensions.swift in Sources */,
 				A5F30D7423B4DC94005258A8 /* CategoryCellViewModel.swift in Sources */,
 				A5F30D6823B4DAE5005258A8 /* ConfigurableCellProtocol.swift in Sources */,
@@ -3170,6 +3201,7 @@
 				2C8C6C6C23F4BDA700FE06BE /* ConnectionManager.swift in Sources */,
 				2C73AE9323F4EC5100267899 /* UserProfile.swift in Sources */,
 				2CEAD745240F58370095E9A4 /* PaymentRequest.swift in Sources */,
+				2C57B73424170C6A00A3281F /* PushNotification.swift in Sources */,
 				2C3160FC23F8B32500A5F6B8 /* AnimationType.swift in Sources */,
 				2C3EB4E22405F894002BB2DA /* UIImageView+Extensions.swift in Sources */,
 				2C73AE9523F4F16A00267899 /* CMError.swift in Sources */,
