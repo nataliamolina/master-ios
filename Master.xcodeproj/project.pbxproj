@@ -758,7 +758,7 @@
 		2C3B808D240C135000D4C6FE /* OrderDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewModel.swift; sourceTree = "<group>"; };
 		2C3E0EEB2408A299005453BA /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		2C3E0EEC2408A299005453BA /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
-		2C3E5161240C79B500873495 /* Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3E5161240C79B500873495 /* Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3E5162240C79B500873495 /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dev-Info.plist"; path = "/Users/carlosmejia/master/ios/Dev-Info.plist"; sourceTree = "<absolute>"; };
 		2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		2C42088A23F647680058873D /* GmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailRequest.swift; sourceTree = "<group>"; };
@@ -1846,7 +1846,7 @@
 			children = (
 				A58132AA23B4C7560032FC8B /* Master.app */,
 				A58132BE23B4C7570032FC8B /* MasterTests.xctest */,
-				2C3E5161240C79B500873495 /* Dev.app */,
+				2C3E5161240C79B500873495 /* Master.app */,
 				2CC3DCA12411EBCC001E76B2 /* Local.app */,
 			);
 			name = Products;
@@ -2092,7 +2092,7 @@
 			);
 			name = Dev;
 			productName = Master;
-			productReference = 2C3E5161240C79B500873495 /* Dev.app */;
+			productReference = 2C3E5161240C79B500873495 /* Master.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2CC3DBCC2411EBCC001E76B2 /* Local */ = {
@@ -3271,7 +3271,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development: Carlos Mejía (765XN25GLY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				ENABLE_BITCODE = NO;
@@ -3292,7 +3292,7 @@
 				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-CLIENT-STG";
 				PAYMENTEZ_APP_KEY = lgAIjiCmwHAJDPVza9dtkEmu3TElFu;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Master;
 				PROVISIONING_PROFILE_SPECIFIER = "master-prov-dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -3310,7 +3310,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3329,7 +3329,7 @@
 				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-CLIENT-STG";
 				PAYMENTEZ_APP_KEY = lgAIjiCmwHAJDPVza9dtkEmu3TElFu;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Master;
 				PROVISIONING_PROFILE_SPECIFIER = "master-prov-prod";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

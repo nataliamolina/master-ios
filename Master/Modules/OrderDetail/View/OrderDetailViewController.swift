@@ -75,10 +75,11 @@ class OrderDetailViewController: UIViewController {
         }
         
         viewModel.needsToRateOrder.listen { [weak self] needsToRateOrder in
-            guard let self = self, needsToRateOrder else {
+            guard let self = self, needsToRateOrder, self.viewModel.rateAttempts == 0 else {
                 return
             }
             
+            self.viewModel.rateAttempts += 1
             self.router.transition(to: .rateOrder(viewModel: self.viewModel.getRateViewModel()))
         }
     }
