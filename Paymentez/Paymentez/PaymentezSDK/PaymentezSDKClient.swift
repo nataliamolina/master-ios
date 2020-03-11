@@ -741,6 +741,8 @@ import CommonCrypto
         let url = "/v2/card_bin/"+bin
         request.makeRequestGetV2(url, parameters: [:], token: generateAuthTokenV2()) { (err, code, data) in
             
+            print(data)
+            
             if err != nil || code != 200{
                 callback(nil, err)
             } else{

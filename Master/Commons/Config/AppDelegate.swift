@@ -63,13 +63,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Private Methods
     private func setupPaymentez() {
         guard
+            let prodPayment = (Utils.plist?.value(forKey: "PROD_PAYMENT") as? Bool),
             let appKey = Utils.plist?.value(forKey: "PaymentezAppKey") as? String,
             let appCode = Utils.plist?.value(forKey: "PaymentezAppCode") as? String else {
                 
                 return
         }
         
-        PaymentezSDKClient.setEnvironment(appCode, secretKey: appKey, testMode: true)
+        PaymentezSDKClient.setEnvironment(appKey, secretKey: appCode, testMode: !prodPayment)
     }
     
     private func setupInitialVC() {

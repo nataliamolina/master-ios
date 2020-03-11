@@ -74,9 +74,19 @@ class HomeViewController: UIViewController {
         
         viewModel.fetchServices()
         
-        if let pendingNotification = PushNotifications.shared.pendingNotification {
-            handlePushNotificationIfNeeded(pendingNotification: pendingNotification)
+        PushNotifications.shared.hasPendingNotification.listen(triggerInitialValue: true) { [weak self] hasPendingNotification in
+            if hasPendingNotification {
+                self?.checkPendingNotification()
+            }
         }
+    }
+    
+    private func checkPendingNotification() {
+        guard let pendingNotification = PushNotifications.shared.pendingNotification else {
+            return
+        }
+        
+        handlePushNotificationIfNeeded(pendingNotification: pendingNotification)
     }
     
     private func setupBindings() {
