@@ -22,7 +22,7 @@ class OrderDetailViewModel {
     private typealias CheckoutLang = CheckoutConstants.Lang
 
     var rateAttempts = 0
-    let formattedTotal: Var<String> = Var("$0")
+    let formattedTotal = Var("$0")
     let status = Var<OrderDetailViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource = Var<[CellViewModelProtocol]>([])
@@ -70,6 +70,7 @@ class OrderDetailViewModel {
     
     func getPaymentViewModel() -> PaymentViewModel {
         return PaymentViewModel(orderId: orderId,
+                                formattedTotal: formattedTotal.value,
                                 userId: Session.shared.profile.id,
                                 userEmail: Session.shared.profile.email)
     }

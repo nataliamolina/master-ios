@@ -12,6 +12,10 @@ protocol OrderDetailHeaderCellDelegate: class {
     func actionButtonTapped(_ cell: OrderDetailHeaderCell)
 }
 
+private struct Lang {
+    static let orderId = "orderDetail.title".localized
+}
+
 class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     // MARK: - UI References
     @IBOutlet private weak var orderIdLabel: UILabel!
@@ -45,8 +49,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         
         self.delegate = delegate as? OrderDetailHeaderCellDelegate
         
-        // FIXME
-        self.orderIdLabel.text = "Pedido #" + viewModel.orderId.asString
+        self.orderIdLabel.text = Lang.orderId + viewModel.orderId.asString
         self.orderDateLabel.text = viewModel.orderDate
         self.providerNameLabel.text = viewModel.providerName
         

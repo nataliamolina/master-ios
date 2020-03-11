@@ -8,11 +8,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="Dev" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="Local" customModuleProvider="target">
             <connections>
                 <outlet property="paymentView" destination="NJG-i8-kPI" id="1HH-gk-emB"/>
                 <outlet property="paymentViewBottomConstraint" destination="kjW-Xz-JyO" id="jHa-w8-24g"/>
                 <outlet property="paymentezView" destination="BMb-13-tQj" id="KTP-Pp-E4d"/>
+                <outlet property="titleTopConstraint" destination="BmM-9M-WqJ" id="vfh-UX-hi6"/>
+                <outlet property="totalLabel" destination="14H-jt-9E9" id="FGe-eW-NAJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,7 +66,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94S-Vd-epq" customClass="MButton" customModule="Dev" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94S-Vd-epq" customClass="MButton" customModule="Local" customModuleProvider="target">
                             <rect key="frame" x="294" y="11.5" width="100" height="47"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="47" id="MGq-9F-TSY"/>

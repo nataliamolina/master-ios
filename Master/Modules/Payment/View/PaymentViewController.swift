@@ -17,10 +17,12 @@ private struct Constants {
 
 class PaymentViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var titleTopConstraint: NSLayoutConstraint!
     @IBOutlet private weak var paymentView: UIView!
     @IBOutlet private weak var paymentezView: UIView!
     @IBOutlet private weak var paymentViewBottomConstraint: NSLayoutConstraint!
-    
+    @IBOutlet private weak var totalLabel: UILabel!
+
     // MARK: - UI Actions
     @IBAction func paymentButtonAction() {
         performCardValidation()
@@ -78,6 +80,8 @@ class PaymentViewController: UIViewController {
     }
     
     private func setupBindings() {
+        viewModel.formattedTotal.bindTo(totalLabel, to: .text)
+        
         viewModel.isLoading.listen { isLoading in
             DispatchQueue.main.async {
                 isLoading ? Loader.show() : Loader.dismiss()
@@ -126,13 +130,17 @@ class PaymentViewController: UIViewController {
     @objc private func keyboardWillShow(notification: NSNotification) {
         let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height
         
-        // TODO: Hacer lógica para iPhone pequeño y no tapar los campos con el teclado
+        // iPhone 5S, SE
+        if UIScreen.main.bounds.height == 568 {
+            titleTopConstraint.constant -= 120
+        }
         
         paymentViewBottomConstraint.constant = (keyboardHeight ?? 0)
         animateLayout()
     }
     
     @objc private func keyboardWillHide() {
+        titleTopConstraint.constant = 0
         paymentViewBottomConstraint.constant = 0
         animateLayout()
     }

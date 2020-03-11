@@ -74,10 +74,8 @@ class HomeViewController: UIViewController {
         
         viewModel.fetchServices()
         
-        PushNotifications.shared.hasPendingNotification.listen { [weak self] (hasPendingNotification) in
-            if hasPendingNotification {
-                self?.handlePushNotificationIfNeeded()
-            }
+        if let pendingNotification = PushNotifications.shared.pendingNotification {
+            handlePushNotificationIfNeeded(pendingNotification: pendingNotification)
         }
     }
     
@@ -96,11 +94,11 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func handlePushNotificationIfNeeded() {
+    private func handlePushNotificationIfNeeded(pendingNotification: PushNotification) {
         guard
             let pendingNotification = PushNotifications.shared.pendingNotification,
             let navController = navigationController else {
-            return
+                return
         }
         
         showSuccess(message: pendingNotification.message)

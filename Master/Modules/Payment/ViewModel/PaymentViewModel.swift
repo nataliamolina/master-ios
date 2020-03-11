@@ -20,6 +20,7 @@ class PaymentViewModel {
     // MARK: - Properties
     let status = Var<PaymentViewModelStatus>(.undefined)
     let isLoading = Var(false)
+    let formattedTotal = Var("$0")
     
     private typealias SDK = PaymentezSDKClient
     private let userId: String
@@ -30,13 +31,14 @@ class PaymentViewModel {
     private var totalTransactions = 0
     
     // MARK: - Life Cycle
-    init(service: PaymentServiceProtocol? = nil, orderId: Int, userId: Int, userEmail: String) {
+    init(service: PaymentServiceProtocol? = nil, orderId: Int, formattedTotal: String, userId: Int, userEmail: String) {
         let defaultService = PaymentService(connectionDependency: ConnectionManager())
         
         self.userId = userId.asString
         self.userEmail = userEmail
         self.orderId = orderId
         self.service = service ?? defaultService
+        self.formattedTotal.value = formattedTotal
     }
     
     // MARK: - Public Methods

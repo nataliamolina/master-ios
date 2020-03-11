@@ -42,12 +42,6 @@ class OrderDetailViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        viewModel.fetchDetail()
-    }
-    
     // MARK: - Public Methods
     
     // MARK: - Private Methods
@@ -63,6 +57,8 @@ class OrderDetailViewController: UIViewController {
         tableView.registerNib(CheckoutFieldCell.self)
 
         setupBindings()
+        
+        viewModel.fetchDetail()
     }
     
     private func setupBindings() {
