@@ -16,7 +16,7 @@ enum OrdersViewModelStatus {
 
 class OrdersViewModel {
     // MARK: - Properties
-    static var needsToOpenOrders = false
+    let needsToShowEmptyState = Var(false)
     let status = Var<OrdersViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource: Var<[CellViewModelProtocol]> = Var([])
@@ -30,6 +30,10 @@ class OrdersViewModel {
         self.service = service ?? defaultService
         
         addInitialViewModels()
+        
+        dataSource.listen { [weak self] dataSource in
+            self?.needsToShowEmptyState.value = dataSource.count == 1
+        }
     }
     
     // MARK: - Public Methods

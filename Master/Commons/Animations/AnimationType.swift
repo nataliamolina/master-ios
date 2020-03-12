@@ -9,6 +9,7 @@
 import Foundation
 
 enum AnimationType: String {
+    case emptyStateOrders = "empty_state_anim"
     case emptyStateForProviders = "empty_state_providers"
     case loader = "loader_anim"
     case success = "success_anim"

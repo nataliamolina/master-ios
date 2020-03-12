@@ -18,6 +18,7 @@ enum HomeRouterTransitions {
     case home
     case productSelector(viewModel: ProductSelectorDataSource, delegate: ProductSelectorDelegate)
     case menu
+    case providerHome
 }
 
 class HomeRouter: RouterBase<HomeRouterTransitions> {
@@ -63,6 +64,9 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         case .menu:
             handleMenuTransition()
             
+        case .providerHome:
+            handleProviderTransition()
+            
         }
     }
     
@@ -96,6 +100,8 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     private func handleHomeTransition() {
         let viewController = HomeViewController(router: self)
         navigationController.setViewControllers([viewController], animated: false)
+        navigationController.hero.isEnabled = true
+        navigationController.hero.modalAnimationType = .zoom
         
         rootViewController.present(navigationController, animated: true, completion: nil)
     }
@@ -127,5 +133,14 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     private func handleOrdersTransition() {
         let ordersRouter = OrdersRouter(rootViewController: navigationController)
         ordersRouter.transition(to: .orders)
+    }
+    
+    private func handleProviderTransition() {
+        guard let topVC = navigationController.topViewController else {
+            return
+        }
+        
+        let router = ProviderRouter(rootViewController: topVC)
+        router.transition(to: .home)
     }
 }

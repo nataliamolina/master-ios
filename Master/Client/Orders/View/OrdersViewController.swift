@@ -7,10 +7,24 @@
 //
 
 import UIKit
+import Lottie
+import EasyBinding
 
 class OrdersViewController: UIViewController {
     // MARK: - UI References
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var emptyStateView: UIView!
+    @IBOutlet private weak var animationView: UIView!
+    
+    @IBAction private func helpButtonAction() {
+        guard
+            let whatsappURL = URL(string: Session.shared.helpUrl),
+            UIApplication.shared.canOpenURL(whatsappURL) else {
+                return
+        }
+        
+        UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
+    }
     
     // MARK: - Properties
     private let router: RouterBase<OrdersRouterTransitions>
@@ -41,6 +55,7 @@ class OrdersViewController: UIViewController {
     private func setupUI() {
         disableTitle()
         
+        emptyStateView.isHidden = true
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.registerNib(TitleCell.self)
@@ -57,6 +72,23 @@ class OrdersViewController: UIViewController {
         viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
         }
+        
+        viewModel.needsToShowEmptyState.listen { [weak self] needsToShowEmptyState in
+            if needsToShowEmptyState {
+                self?.setupEmptyState()
+            }
+        }
+    }
+    
+    private func setupEmptyState() {
+        let starAnimationView = AnimationView(name: AnimationType.emptyStateOrders.rawValue)
+        starAnimationView.frame = animationView.bounds
+        starAnimationView.play()
+        starAnimationView.loopMode = .loop
+        
+        animationView.addSubview(starAnimationView)
+        
+        emptyStateView.isHidden = false
     }
 }
 

@@ -16,6 +16,11 @@ class ProviderListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var headerImage: UIImageView!
     
+    // MARK: - UI Actions
+    @IBAction private func providerButtonAction() {
+        router.transition(to: .providerHome)
+    }
+    
     // MARK: - Properties
     private let viewModel: ProviderListViewModel
     private let router: RouterBase<HomeRouterTransitions>

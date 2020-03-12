@@ -83,14 +83,30 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     }
     
     private func handleHomeTransition() {
-        let homeRouter = HomeRouter(rootViewController: navigationController.topViewController ?? rootViewController)
+        // is in Register or Login
+        if navigationController.children.count > 1 {
+            navigationController.popViewControllerWithHandler { [weak self] in
+                self?.moveToHome()
+            }
+            
+            return
+        }
+        
+        moveToHome()
+    }
+    
+    private func moveToHome() {
+        let homeRouter = HomeRouter(
+            rootViewController: navigationController.topViewController ?? rootViewController
+        )
+        
         homeRouter.transition(to: .home)
     }
     
     private func handleRegisterTransition() {
         let viewController = RegisterViewController()
         viewController.router = self
-
+        
         navigationController.pushViewController(viewController, animated: true)
     }
     

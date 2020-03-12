@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LegalViewController" customModule="Dev" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LegalViewController" customModule="Local" customModuleProvider="target">
             <connections>
                 <outlet property="privacyButton" destination="3Md-Wt-KEc" id="Ifx-R6-qgd"/>
                 <outlet property="termsButton" destination="AWv-Gi-oDV" id="2hT-Bs-8ri"/>
@@ -31,11 +31,11 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="legal.title"/>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1qU-4Q-vgq">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1qU-4Q-vgq">
                     <rect key="frame" x="20" y="105" width="374" height="47"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWv-Gi-oDV" customClass="MButton" customModule="Dev" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="168.5" height="47"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWv-Gi-oDV" customClass="MButton" customModule="Local" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="182" height="47"/>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="styleId">
@@ -47,8 +47,8 @@
                                 <action selector="termsButtonAction" destination="-1" eventType="touchUpInside" id="Hus-vh-oLg"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Md-Wt-KEc" customClass="MButton" customModule="Dev" customModuleProvider="target">
-                            <rect key="frame" x="178.5" y="0.0" width="195.5" height="47"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Md-Wt-KEc" customClass="MButton" customModule="Local" customModuleProvider="target">
+                            <rect key="frame" x="192" y="0.0" width="182" height="47"/>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="styleId">

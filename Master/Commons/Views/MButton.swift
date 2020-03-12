@@ -14,7 +14,7 @@ enum MButtonType: Int {
     case white
     case green
     case onlyWhiteText
-    case redBorder
+    case redBorder // 5
     case yellow
 }
 
