@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
-        <key>PROD_PAYMENT</key>
-        <false/>
         <key>ApiClientHeader</key>
         <string>${CLIENT_HEADER}</string>
         <key>ApiClientId</key>
@@ -55,6 +53,8 @@
         <string>Usaremos tu cámara únicamente con tu permiso para sacar fotos que nos ayuden, como métodos de pago o foto de perfil.</string>
         <key>NSMicrophoneUsageDescription</key>
         <string>Usaremos tu cámara únicamente con tu permiso para sacar fotos que nos ayuden, como métodos de pago o foto de perfil.</string>
+        <key>PROD_PAYMENT</key>
+        <false/>
         <key>PaymentezAppCode</key>
         <string>${PAYMENTEZ_APP_CODE}</string>
         <key>PaymentezAppKey</key>
