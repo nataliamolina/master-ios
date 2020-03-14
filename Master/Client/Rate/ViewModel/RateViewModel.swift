@@ -15,12 +15,6 @@ enum RateViewModelStatus {
     case rateSucceded
 }
 
-private enum Sections: Int {
-    case header
-    case buttons
-    case list
-}
-
 class RateViewModel {
     // MARK: - Properties
     private let orderId: Int

@@ -79,6 +79,19 @@ class ProviderProfileViewController: UIViewController {
             }
         }
         
+        viewModel.status.listen { [weak self] status in
+            switch status {
+            case .error(let error):
+                self?.showError(message: error)
+                
+            case .providerProfileLoaded(let name):
+                self?.title = name
+                
+            case .undefined:
+                return
+            }
+        }
+        
         viewModel.formattedTotal.bindTo(totalLabel, to: .text)
     }
     

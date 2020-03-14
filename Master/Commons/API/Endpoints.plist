@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>registerProvider</key>
+	<string>provider</string>
+	<key>getProviderPhoto</key>
+	<string>provider/profile/photo</string>
+	<key>getProviderProfile</key>
+	<string>provider/profile</string>
 	<key>logout</key>
 	<string>login/logout</string>
 	<key>addComment</key>

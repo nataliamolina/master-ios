@@ -12,6 +12,7 @@ import EasyBinding
 enum ProviderProfileViewModelStatus {
     case undefined
     case error(error: String?)
+    case providerProfileLoaded(name: String)
 }
 
 private enum Sections: Int {
@@ -68,6 +69,7 @@ class ProviderProfileViewModel {
                 return
             }
             
+            self?.status.value = .providerProfileLoaded(name: model.user.names)
             self?.providerModelToViewModel(model)
             self?.fetchProviderServices()
         }

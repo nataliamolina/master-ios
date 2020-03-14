@@ -34,8 +34,8 @@
                         <constraint firstAttribute="width" constant="65" id="eW5-7q-jaG"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estamos preparando la inscripción para ser Master, esperala muy pronto." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz6-pg-SrC">
-                    <rect key="frame" x="20" y="250" width="280" height="61"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estamos preparando todo para ti, por favor espera un momento." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz6-pg-SrC">
+                    <rect key="frame" x="20" y="250" width="280" height="41"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

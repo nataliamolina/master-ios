@@ -56,6 +56,36 @@
 		2C2B1AC823F2744600243D3E /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC723F2744600243D3E /* EmailLoginViewModel.swift */; };
 		2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AC923F2745500243D3E /* EmailLoginService.swift */; };
 		2C2B1AD423F274E300243D3E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B1AD323F274E300243D3E /* Endpoint.swift */; };
+		2C2DCAFC241D27330024409E /* ProviderRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCAFA241D27330024409E /* ProviderRegisterViewController.swift */; };
+		2C2DCAFD241D27330024409E /* ProviderRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCAFA241D27330024409E /* ProviderRegisterViewController.swift */; };
+		2C2DCAFE241D27330024409E /* ProviderRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCAFA241D27330024409E /* ProviderRegisterViewController.swift */; };
+		2C2DCAFF241D27330024409E /* ProviderRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2DCAFB241D27330024409E /* ProviderRegisterViewController.xib */; };
+		2C2DCB00241D27330024409E /* ProviderRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2DCAFB241D27330024409E /* ProviderRegisterViewController.xib */; };
+		2C2DCB01241D27330024409E /* ProviderRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2DCAFB241D27330024409E /* ProviderRegisterViewController.xib */; };
+		2C2DCB06241D275E0024409E /* ProviderRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB05241D275E0024409E /* ProviderRegisterViewModel.swift */; };
+		2C2DCB07241D275E0024409E /* ProviderRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB05241D275E0024409E /* ProviderRegisterViewModel.swift */; };
+		2C2DCB08241D275E0024409E /* ProviderRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB05241D275E0024409E /* ProviderRegisterViewModel.swift */; };
+		2C2DCB0A241D27740024409E /* ProviderRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB09241D27740024409E /* ProviderRegisterService.swift */; };
+		2C2DCB0B241D27740024409E /* ProviderRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB09241D27740024409E /* ProviderRegisterService.swift */; };
+		2C2DCB0C241D27740024409E /* ProviderRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB09241D27740024409E /* ProviderRegisterService.swift */; };
+		2C2DCB0E241D27950024409E /* ProviderRegisterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB0D241D27950024409E /* ProviderRegisterEndpoints.swift */; };
+		2C2DCB0F241D27950024409E /* ProviderRegisterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB0D241D27950024409E /* ProviderRegisterEndpoints.swift */; };
+		2C2DCB10241D27950024409E /* ProviderRegisterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB0D241D27950024409E /* ProviderRegisterEndpoints.swift */; };
+		2C2DCB15241D27CB0024409E /* ProviderMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB14241D27CB0024409E /* ProviderMainViewModel.swift */; };
+		2C2DCB16241D27CB0024409E /* ProviderMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB14241D27CB0024409E /* ProviderMainViewModel.swift */; };
+		2C2DCB17241D27CB0024409E /* ProviderMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB14241D27CB0024409E /* ProviderMainViewModel.swift */; };
+		2C2DCB19241D27D50024409E /* ProviderMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB18241D27D50024409E /* ProviderMainService.swift */; };
+		2C2DCB1A241D27D50024409E /* ProviderMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB18241D27D50024409E /* ProviderMainService.swift */; };
+		2C2DCB1B241D27D50024409E /* ProviderMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB18241D27D50024409E /* ProviderMainService.swift */; };
+		2C2DCB1D241D27E00024409E /* ProviderMainEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB1C241D27E00024409E /* ProviderMainEndpoints.swift */; };
+		2C2DCB1E241D27E00024409E /* ProviderMainEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB1C241D27E00024409E /* ProviderMainEndpoints.swift */; };
+		2C2DCB1F241D27E00024409E /* ProviderMainEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB1C241D27E00024409E /* ProviderMainEndpoints.swift */; };
+		2C2DCB22241D2A850024409E /* ProviderProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB21241D2A850024409E /* ProviderProfile.swift */; };
+		2C2DCB23241D2A850024409E /* ProviderProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB21241D2A850024409E /* ProviderProfile.swift */; };
+		2C2DCB24241D2A850024409E /* ProviderProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB21241D2A850024409E /* ProviderProfile.swift */; };
+		2C2DCB26241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB25241D2D130024409E /* ProviderMainServiceProtocol.swift */; };
+		2C2DCB27241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB25241D2D130024409E /* ProviderMainServiceProtocol.swift */; };
+		2C2DCB28241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DCB25241D2D130024409E /* ProviderMainServiceProtocol.swift */; };
 		2C305D9924008EE3005B76EB /* ProductSelectorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9824008EE3005B76EB /* ProductSelectorDataSource.swift */; };
 		2C305D9B24008EFF005B76EB /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9A24008EFF005B76EB /* UIApplication+Extensions.swift */; };
 		2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C305D9E2400A1DE005B76EB /* ProductSelectorResult.swift */; };
@@ -280,6 +310,18 @@
 		2C57B73824170EE700A3281F /* PushNotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */; };
 		2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */; };
 		2C63EF32240C161500852EAE /* OrdersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63EF31240C161500852EAE /* OrdersRouter.swift */; };
+		2C6716EC241D41C700C86531 /* ProviderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716EB241D41C700C86531 /* ProviderRequest.swift */; };
+		2C6716ED241D41C700C86531 /* ProviderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716EB241D41C700C86531 /* ProviderRequest.swift */; };
+		2C6716EE241D41C700C86531 /* ProviderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716EB241D41C700C86531 /* ProviderRequest.swift */; };
+		2C6716F0241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716EF241D428A00C86531 /* ProviderRegisterServiceProtocol.swift */; };
+		2C6716F1241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716EF241D428A00C86531 /* ProviderRegisterServiceProtocol.swift */; };
+		2C6716F2241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716EF241D428A00C86531 /* ProviderRegisterServiceProtocol.swift */; };
+		2C6716F9241D458800C86531 /* ProviderPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716F7241D458800C86531 /* ProviderPhotoViewController.swift */; };
+		2C6716FA241D458800C86531 /* ProviderPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716F7241D458800C86531 /* ProviderPhotoViewController.swift */; };
+		2C6716FB241D458800C86531 /* ProviderPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716F7241D458800C86531 /* ProviderPhotoViewController.swift */; };
+		2C6716FC241D458800C86531 /* ProviderPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */; };
+		2C6716FD241D458800C86531 /* ProviderPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */; };
+		2C6716FE241D458800C86531 /* ProviderPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */; };
 		2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
 		2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */; };
 		2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8E23F4E9E900267899 /* LoginRequest.swift */; };
@@ -748,6 +790,16 @@
 		2C2B1AC723F2744600243D3E /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
 		2C2B1AC923F2745500243D3E /* EmailLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginService.swift; sourceTree = "<group>"; };
 		2C2B1AD323F274E300243D3E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2C2DCAFA241D27330024409E /* ProviderRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegisterViewController.swift; sourceTree = "<group>"; };
+		2C2DCAFB241D27330024409E /* ProviderRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderRegisterViewController.xib; sourceTree = "<group>"; };
+		2C2DCB05241D275E0024409E /* ProviderRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegisterViewModel.swift; sourceTree = "<group>"; };
+		2C2DCB09241D27740024409E /* ProviderRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegisterService.swift; sourceTree = "<group>"; };
+		2C2DCB0D241D27950024409E /* ProviderRegisterEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegisterEndpoints.swift; sourceTree = "<group>"; };
+		2C2DCB14241D27CB0024409E /* ProviderMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderMainViewModel.swift; sourceTree = "<group>"; };
+		2C2DCB18241D27D50024409E /* ProviderMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderMainService.swift; sourceTree = "<group>"; };
+		2C2DCB1C241D27E00024409E /* ProviderMainEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderMainEndpoints.swift; sourceTree = "<group>"; };
+		2C2DCB21241D2A850024409E /* ProviderProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfile.swift; sourceTree = "<group>"; };
+		2C2DCB25241D2D130024409E /* ProviderMainServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderMainServiceProtocol.swift; sourceTree = "<group>"; };
 		2C305D9824008EE3005B76EB /* ProductSelectorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectorDataSource.swift; sourceTree = "<group>"; };
 		2C305D9A24008EFF005B76EB /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		2C305D9E2400A1DE005B76EB /* ProductSelectorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectorResult.swift; sourceTree = "<group>"; };
@@ -779,6 +831,10 @@
 		2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsRouter.swift; sourceTree = "<group>"; };
 		2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_bg_video_new.mp4; sourceTree = "<group>"; };
 		2C63EF31240C161500852EAE /* OrdersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersRouter.swift; sourceTree = "<group>"; };
+		2C6716EB241D41C700C86531 /* ProviderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRequest.swift; sourceTree = "<group>"; };
+		2C6716EF241D428A00C86531 /* ProviderRegisterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegisterServiceProtocol.swift; sourceTree = "<group>"; };
+		2C6716F7241D458800C86531 /* ProviderPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderPhotoViewController.swift; sourceTree = "<group>"; };
+		2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderPhotoViewController.xib; sourceTree = "<group>"; };
 		2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoints.swift; sourceTree = "<group>"; };
 		2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		2C73AE8E23F4E9E900267899 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -1167,6 +1223,79 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2C2DCAF9241D27100024409E /* ProviderRegister */ = {
+			isa = PBXGroup;
+			children = (
+				2C6716EA241D41AD00C86531 /* Models */,
+				2C2DCB04241D274A0024409E /* Service */,
+				2C2DCB03241D27400024409E /* ViewModel */,
+				2C2DCB02241D273C0024409E /* View */,
+			);
+			path = ProviderRegister;
+			sourceTree = "<group>";
+		};
+		2C2DCB02241D273C0024409E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C2DCAFA241D27330024409E /* ProviderRegisterViewController.swift */,
+				2C2DCAFB241D27330024409E /* ProviderRegisterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C2DCB03241D27400024409E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C2DCB05241D275E0024409E /* ProviderRegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C2DCB04241D274A0024409E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2C6716EF241D428A00C86531 /* ProviderRegisterServiceProtocol.swift */,
+				2C2DCB09241D27740024409E /* ProviderRegisterService.swift */,
+				2C2DCB0D241D27950024409E /* ProviderRegisterEndpoints.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2C2DCB11241D27A10024409E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8AC53241AC03E005C8628 /* ProviderMainViewController.swift */,
+				2CD8AC54241AC03E005C8628 /* ProviderMainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C2DCB12241D27A80024409E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C2DCB14241D27CB0024409E /* ProviderMainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C2DCB13241D27B20024409E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2C2DCB18241D27D50024409E /* ProviderMainService.swift */,
+				2C2DCB1C241D27E00024409E /* ProviderMainEndpoints.swift */,
+				2C2DCB25241D2D130024409E /* ProviderMainServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2C2DCB20241D2A7B0024409E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C2DCB21241D2A850024409E /* ProviderProfile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2C305D9C2400A1CD005B76EB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1296,6 +1425,47 @@
 				2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		2C6716EA241D41AD00C86531 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C6716EB241D41C700C86531 /* ProviderRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C6716F3241D456600C86531 /* ProviderPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				2C6716F6241D457800C86531 /* Service */,
+				2C6716F5241D457300C86531 /* ViewModel */,
+				2C6716F4241D456D00C86531 /* View */,
+			);
+			path = ProviderPhoto;
+			sourceTree = "<group>";
+		};
+		2C6716F4241D456D00C86531 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C6716F7241D458800C86531 /* ProviderPhotoViewController.swift */,
+				2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C6716F5241D457300C86531 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C6716F6241D457800C86531 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		2C76018523FE349600252531 /* ProductSelector */ = {
@@ -1692,6 +1862,8 @@
 		2CD8AC52241AC028005C8628 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				2C6716F3241D456600C86531 /* ProviderPhoto */,
+				2C2DCAF9241D27100024409E /* ProviderRegister */,
 				2CD8AC5B241AC048005C8628 /* ProviderMain */,
 			);
 			path = Provider;
@@ -1700,8 +1872,10 @@
 		2CD8AC5B241AC048005C8628 /* ProviderMain */ = {
 			isa = PBXGroup;
 			children = (
-				2CD8AC53241AC03E005C8628 /* ProviderMainViewController.swift */,
-				2CD8AC54241AC03E005C8628 /* ProviderMainViewController.xib */,
+				2C2DCB20241D2A7B0024409E /* Models */,
+				2C2DCB13241D27B20024409E /* Service */,
+				2C2DCB12241D27A80024409E /* ViewModel */,
+				2C2DCB11241D27A10024409E /* View */,
 			);
 			path = ProviderMain;
 			sourceTree = "<group>";
@@ -2257,6 +2431,7 @@
 				2C3E5142240C79B500873495 /* OrdersViewController.xib in Resources */,
 				2C3E5143240C79B500873495 /* ProviderCell.xib in Resources */,
 				2C3E5144240C79B500873495 /* CheckoutProviderCell.xib in Resources */,
+				2C6716FD241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
 				2C3E5145240C79B500873495 /* ProductSelectorViewController.xib in Resources */,
 				2C3E5146240C79B500873495 /* CheckoutViewController.xib in Resources */,
 				2C3E5147240C79B500873495 /* Strings.strings in Resources */,
@@ -2269,6 +2444,7 @@
 				2C3E514D240C79B500873495 /* OrderDetailViewController.xib in Resources */,
 				2C3E514E240C79B500873495 /* SelectorCell.xib in Resources */,
 				2C1636E22416BBC50083A59A /* RateView.xib in Resources */,
+				2C2DCB00241D27330024409E /* ProviderRegisterViewController.xib in Resources */,
 				2C3E514F240C79B500873495 /* GoogleService-Info.plist in Resources */,
 				2C8897A7240C852F00423B11 /* PaymentViewController.xib in Resources */,
 				2C3E5150240C79B500873495 /* loader_anim.json in Resources */,
@@ -2310,6 +2486,7 @@
 				2CC3DC7E2411EBCC001E76B2 /* OrdersViewController.xib in Resources */,
 				2CC3DC7F2411EBCC001E76B2 /* ProviderCell.xib in Resources */,
 				2CC3DC802411EBCC001E76B2 /* CheckoutProviderCell.xib in Resources */,
+				2C6716FC241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
 				2CC3DC812411EBCC001E76B2 /* ProductSelectorViewController.xib in Resources */,
 				2CC3DC822411EBCC001E76B2 /* CheckoutViewController.xib in Resources */,
 				2CC3DC832411EBCC001E76B2 /* Strings.strings in Resources */,
@@ -2322,6 +2499,7 @@
 				2CC3DC892411EBCC001E76B2 /* OrderDetailViewController.xib in Resources */,
 				2CC3DC8A2411EBCC001E76B2 /* SelectorCell.xib in Resources */,
 				2C1636E12416BBC50083A59A /* RateView.xib in Resources */,
+				2C2DCAFF241D27330024409E /* ProviderRegisterViewController.xib in Resources */,
 				2CC3DC8B2411EBCC001E76B2 /* GoogleService-Info.plist in Resources */,
 				2CC3DC8C2411EBCC001E76B2 /* PaymentViewController.xib in Resources */,
 				2CC3DC8D2411EBCC001E76B2 /* loader_anim.json in Resources */,
@@ -2363,6 +2541,7 @@
 				2C829ECA240B3A4800D7DD81 /* OrdersViewController.xib in Resources */,
 				2C7E7FC623F8A0A600D7835E /* ProviderCell.xib in Resources */,
 				2CC731392404722E006FF85D /* CheckoutProviderCell.xib in Resources */,
+				2C6716FE241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
 				2C76018923FE34BE00252531 /* ProductSelectorViewController.xib in Resources */,
 				2CEECC982400C90A00C67D80 /* CheckoutViewController.xib in Resources */,
 				2C2B1ABF23F2560F00243D3E /* Strings.strings in Resources */,
@@ -2375,6 +2554,7 @@
 				2C3B8077240C0A2B00D4C6FE /* OrderDetailViewController.xib in Resources */,
 				2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */,
 				2C1636E32416BBC50083A59A /* RateView.xib in Resources */,
+				2C2DCB01241D27330024409E /* ProviderRegisterViewController.xib in Resources */,
 				2C1218CD2405E7580098BE55 /* GoogleService-Info.plist in Resources */,
 				2C8897A8240C852F00423B11 /* PaymentViewController.xib in Resources */,
 				2C829EBB240AD4FD00D7DD81 /* loader_anim.json in Resources */,
@@ -2755,6 +2935,7 @@
 				2C3E50A8240C79B500873495 /* ButtonCellViewModel.swift in Sources */,
 				2C3E50A9240C79B500873495 /* ProviderListService.swift in Sources */,
 				2CC6C599241704CF003C11D2 /* MenuServiceProtocol.swift in Sources */,
+				2C2DCB0B241D27740024409E /* ProviderRegisterService.swift in Sources */,
 				2C3E50AA240C79B500873495 /* UINavigationController+Extensions.swift in Sources */,
 				2C3E50AB240C79B500873495 /* EmailLoginService.swift in Sources */,
 				2C1636C1241684410083A59A /* RateViewController.swift in Sources */,
@@ -2771,6 +2952,7 @@
 				2C3E50B3240C79B500873495 /* RegisterEndpoints.swift in Sources */,
 				2CC6C595241703E3003C11D2 /* MenuEndpoints.swift in Sources */,
 				2C3E50B4240C79B500873495 /* EmailLoginViewModel.swift in Sources */,
+				2C2DCB1A241D27D50024409E /* ProviderMainService.swift in Sources */,
 				2C3E50B5240C79B500873495 /* User.swift in Sources */,
 				2C3E50B6240C79B500873495 /* CategoryCell.swift in Sources */,
 				2C3E50B7240C79B500873495 /* HomeRouter.swift in Sources */,
@@ -2780,16 +2962,20 @@
 				2C3E50BA240C79B500873495 /* MLegalButton.swift in Sources */,
 				2C3E50BB240C79B500873495 /* CheckoutService.swift in Sources */,
 				2C3E50BC240C79B500873495 /* LoginServiceProtocol.swift in Sources */,
+				2C2DCB0F241D27950024409E /* ProviderRegisterEndpoints.swift in Sources */,
 				2C3E50BD240C79B500873495 /* CheckoutViewController.swift in Sources */,
 				2C3E50BE240C79B500873495 /* SuccessOrderViewController.swift in Sources */,
+				2C2DCB23241D2A850024409E /* ProviderProfile.swift in Sources */,
 				2C3E50BF240C79B500873495 /* LoginRequest.swift in Sources */,
 				2C3E50C0240C79B500873495 /* MainViewModel.swift in Sources */,
 				2C3E50C1240C79B500873495 /* OrderCell.swift in Sources */,
 				2C3E50C2240C79B500873495 /* CheckoutServiceProtocol.swift in Sources */,
 				2C3E50C3240C79B500873495 /* RegisterRequest.swift in Sources */,
 				2C3E50C4240C79B500873495 /* OrdersViewController.swift in Sources */,
+				2C6716F1241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */,
 				2C3E50C5240C79B500873495 /* Order.swift in Sources */,
 				2C3E50C6240C79B500873495 /* XibView.swift in Sources */,
+				2C2DCAFD241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
 				2C3E50C7240C79B500873495 /* RegisterViewController.swift in Sources */,
 				2C3E50C8240C79B500873495 /* ProviderServiceCell.swift in Sources */,
 				2C3E50C9240C79B500873495 /* ProductSelectorResult.swift in Sources */,
@@ -2827,7 +3013,9 @@
 				2C3E50E8240C79B500873495 /* OrdersViewModel.swift in Sources */,
 				2C3E50E9240C79B500873495 /* GmailRequest.swift in Sources */,
 				2CA96F8F240F5F790056C2F0 /* PaymentServiceProtocol.swift in Sources */,
+				2C2DCB27241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */,
 				2C3E50EA240C79B500873495 /* CheckoutProviderCell.swift in Sources */,
+				2C6716FA241D458800C86531 /* ProviderPhotoViewController.swift in Sources */,
 				2C3E50EB240C79B500873495 /* OrderRequest.swift in Sources */,
 				2C3E50EC240C79B500873495 /* CellViewModelProtocol.swift in Sources */,
 				2C3E50ED240C79B500873495 /* LoginResponse.swift in Sources */,
@@ -2890,11 +3078,15 @@
 				2C57B73324170C6A00A3281F /* PushNotification.swift in Sources */,
 				2C3E511E240C79B500873495 /* UIImageView+Extensions.swift in Sources */,
 				2C3E511F240C79B500873495 /* CMError.swift in Sources */,
+				2C2DCB16241D27CB0024409E /* ProviderMainViewModel.swift in Sources */,
 				2C3E5120240C79B500873495 /* Endpoint.swift in Sources */,
+				2C2DCB07241D275E0024409E /* ProviderRegisterViewModel.swift in Sources */,
 				2C3E5121240C79B500873495 /* Storage.swift in Sources */,
 				2C3E5122240C79B500873495 /* OrderDetailViewController.swift in Sources */,
 				2C3E5123240C79B500873495 /* SelectorCell.swift in Sources */,
 				2C3E5124240C79B500873495 /* ProviderCellViewModel.swift in Sources */,
+				2C6716ED241D41C700C86531 /* ProviderRequest.swift in Sources */,
+				2C2DCB1E241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2CA96F91240F5F850056C2F0 /* PaymentRequest.swift in Sources */,
 				2C3E5125240C79B500873495 /* ProviderListViewModel.swift in Sources */,
 				2C3E5126240C79B500873495 /* ProviderCell.swift in Sources */,
@@ -2932,6 +3124,7 @@
 				2CC3DBDC2411EBCC001E76B2 /* ButtonCellViewModel.swift in Sources */,
 				2CC3DBDD2411EBCC001E76B2 /* ProviderListService.swift in Sources */,
 				2CC6C598241704CF003C11D2 /* MenuServiceProtocol.swift in Sources */,
+				2C2DCB0A241D27740024409E /* ProviderRegisterService.swift in Sources */,
 				2CC3DBDE2411EBCC001E76B2 /* UINavigationController+Extensions.swift in Sources */,
 				2CC3DBDF2411EBCC001E76B2 /* EmailLoginService.swift in Sources */,
 				2C1636C0241684410083A59A /* RateViewController.swift in Sources */,
@@ -2948,6 +3141,7 @@
 				2CC3DBE72411EBCC001E76B2 /* RegisterEndpoints.swift in Sources */,
 				2CC6C594241703E3003C11D2 /* MenuEndpoints.swift in Sources */,
 				2CC3DBE82411EBCC001E76B2 /* EmailLoginViewModel.swift in Sources */,
+				2C2DCB19241D27D50024409E /* ProviderMainService.swift in Sources */,
 				2CC3DBE92411EBCC001E76B2 /* User.swift in Sources */,
 				2CC3DBEA2411EBCC001E76B2 /* CategoryCell.swift in Sources */,
 				2CC3DBEB2411EBCC001E76B2 /* HomeRouter.swift in Sources */,
@@ -2957,16 +3151,20 @@
 				2CC3DBEF2411EBCC001E76B2 /* MLegalButton.swift in Sources */,
 				2CC3DBF02411EBCC001E76B2 /* CheckoutService.swift in Sources */,
 				2CC3DBF12411EBCC001E76B2 /* LoginServiceProtocol.swift in Sources */,
+				2C2DCB0E241D27950024409E /* ProviderRegisterEndpoints.swift in Sources */,
 				2CC3DBF22411EBCC001E76B2 /* CheckoutViewController.swift in Sources */,
 				2CC3DBF32411EBCC001E76B2 /* SuccessOrderViewController.swift in Sources */,
+				2C2DCB22241D2A850024409E /* ProviderProfile.swift in Sources */,
 				2CC3DBF42411EBCC001E76B2 /* LoginRequest.swift in Sources */,
 				2CC3DBF52411EBCC001E76B2 /* MainViewModel.swift in Sources */,
 				2CC3DBF62411EBCC001E76B2 /* OrderCell.swift in Sources */,
 				2CC3DBF72411EBCC001E76B2 /* CheckoutServiceProtocol.swift in Sources */,
 				2CC3DBF82411EBCC001E76B2 /* RegisterRequest.swift in Sources */,
 				2CC3DBF92411EBCC001E76B2 /* OrdersViewController.swift in Sources */,
+				2C6716F0241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */,
 				2CC3DBFA2411EBCC001E76B2 /* Order.swift in Sources */,
 				2CC3DBFB2411EBCC001E76B2 /* XibView.swift in Sources */,
+				2C2DCAFC241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
 				2CC3DBFC2411EBCC001E76B2 /* RegisterViewController.swift in Sources */,
 				2CC3DBFD2411EBCC001E76B2 /* ProviderServiceCell.swift in Sources */,
 				2CC3DBFE2411EBCC001E76B2 /* ProductSelectorResult.swift in Sources */,
@@ -3004,7 +3202,9 @@
 				2CC3DC1E2411EBCC001E76B2 /* OrdersViewModel.swift in Sources */,
 				2CC3DC1F2411EBCC001E76B2 /* GmailRequest.swift in Sources */,
 				2CC3DC202411EBCC001E76B2 /* PaymentServiceProtocol.swift in Sources */,
+				2C2DCB26241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */,
 				2CC3DC212411EBCC001E76B2 /* CheckoutProviderCell.swift in Sources */,
+				2C6716F9241D458800C86531 /* ProviderPhotoViewController.swift in Sources */,
 				2CC3DC222411EBCC001E76B2 /* OrderRequest.swift in Sources */,
 				2CC3DC232411EBCC001E76B2 /* CellViewModelProtocol.swift in Sources */,
 				2CC3DC242411EBCC001E76B2 /* LoginResponse.swift in Sources */,
@@ -3067,11 +3267,15 @@
 				2C57B73224170C6A00A3281F /* PushNotification.swift in Sources */,
 				2CC3DC582411EBCC001E76B2 /* UIImageView+Extensions.swift in Sources */,
 				2CC3DC592411EBCC001E76B2 /* CMError.swift in Sources */,
+				2C2DCB15241D27CB0024409E /* ProviderMainViewModel.swift in Sources */,
 				2CC3DC5A2411EBCC001E76B2 /* Endpoint.swift in Sources */,
+				2C2DCB06241D275E0024409E /* ProviderRegisterViewModel.swift in Sources */,
 				2CC3DC5B2411EBCC001E76B2 /* Storage.swift in Sources */,
 				2CC3DC5C2411EBCC001E76B2 /* OrderDetailViewController.swift in Sources */,
 				2CC3DC5D2411EBCC001E76B2 /* SelectorCell.swift in Sources */,
 				2CC3DC5E2411EBCC001E76B2 /* ProviderCellViewModel.swift in Sources */,
+				2C6716EC241D41C700C86531 /* ProviderRequest.swift in Sources */,
+				2C2DCB1D241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2CC3DC5F2411EBCC001E76B2 /* PaymentRequest.swift in Sources */,
 				2CC3DC602411EBCC001E76B2 /* ProviderListViewModel.swift in Sources */,
 				2CC3DC612411EBCC001E76B2 /* ProviderCell.swift in Sources */,
@@ -3109,6 +3313,7 @@
 				2CF6ABD323F7D84500F9EF40 /* ProviderListViewController.swift in Sources */,
 				2CC7314A24047B56006FF85D /* ButtonCellViewModel.swift in Sources */,
 				2CC6C59A241704CF003C11D2 /* MenuServiceProtocol.swift in Sources */,
+				2C2DCB0C241D27740024409E /* ProviderRegisterService.swift in Sources */,
 				2C7E7FB723F89A2200D7835E /* ProviderListService.swift in Sources */,
 				2C829ECC240B3AC500D7DD81 /* UINavigationController+Extensions.swift in Sources */,
 				2C1636C2241684410083A59A /* RateViewController.swift in Sources */,
@@ -3125,6 +3330,7 @@
 				2C3B808C240C12CE00D4C6FE /* StatusHelper.swift in Sources */,
 				2CC6C596241703E3003C11D2 /* MenuEndpoints.swift in Sources */,
 				2CCFED7423F62BD3005E5CB1 /* RegisterEndpoints.swift in Sources */,
+				2C2DCB1B241D27D50024409E /* ProviderMainService.swift in Sources */,
 				2C2B1AC823F2744600243D3E /* EmailLoginViewModel.swift in Sources */,
 				2C8C6C6523F4BB3400FE06BE /* User.swift in Sources */,
 				A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */,
@@ -3134,16 +3340,20 @@
 				2C2B1AC323F25EA800243D3E /* MLegalButton.swift in Sources */,
 				2C55F3B12408DE9D00F458AC /* CheckoutService.swift in Sources */,
 				2C73AE9123F4EA4E00267899 /* LoginServiceProtocol.swift in Sources */,
+				2C2DCB10241D27950024409E /* ProviderRegisterEndpoints.swift in Sources */,
 				2CEECC972400C90A00C67D80 /* CheckoutViewController.swift in Sources */,
 				2C829EC1240B1CB500D7DD81 /* SuccessOrderViewController.swift in Sources */,
+				2C2DCB24241D2A850024409E /* ProviderProfile.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
 				2C42088E23F647E00058873D /* MainViewModel.swift in Sources */,
 				2C829ED0240B3E1E00D7DD81 /* OrderCell.swift in Sources */,
 				2C829EBD240B16ED00D7DD81 /* CheckoutServiceProtocol.swift in Sources */,
 				2CCFED7223F62B85005E5CB1 /* RegisterRequest.swift in Sources */,
 				2CEAD747240F58E10095E9A4 /* PaymentServiceProtocol.swift in Sources */,
+				2C6716F2241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */,
 				2C829EC9240B3A4800D7DD81 /* OrdersViewController.swift in Sources */,
 				2CF6ABC123F7AF2C00F9EF40 /* Order.swift in Sources */,
+				2C2DCAFE241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
 				2CC7312F24045586006FF85D /* XibView.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2CEAD743240F57B80095E9A4 /* PaymentResponse.swift in Sources */,
@@ -3181,7 +3391,9 @@
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				2C829ED4240B435300D7DD81 /* OrdersViewModel.swift in Sources */,
 				2C42088B23F647680058873D /* GmailRequest.swift in Sources */,
+				2C2DCB28241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */,
 				2CC731382404722E006FF85D /* CheckoutProviderCell.swift in Sources */,
+				2C6716FB241D458800C86531 /* ProviderPhotoViewController.swift in Sources */,
 				2C976A06240AC2B40073DD07 /* OrderRequest.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* CellViewModelProtocol.swift in Sources */,
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
@@ -3244,11 +3456,15 @@
 				2C57B73424170C6A00A3281F /* PushNotification.swift in Sources */,
 				2C3160FC23F8B32500A5F6B8 /* AnimationType.swift in Sources */,
 				2C3EB4E22405F894002BB2DA /* UIImageView+Extensions.swift in Sources */,
+				2C2DCB17241D27CB0024409E /* ProviderMainViewModel.swift in Sources */,
 				2C73AE9523F4F16A00267899 /* CMError.swift in Sources */,
+				2C2DCB08241D275E0024409E /* ProviderRegisterViewModel.swift in Sources */,
 				2C2B1AD423F274E300243D3E /* Endpoint.swift in Sources */,
 				2C8C6C5B23F4B64000FE06BE /* Storage.swift in Sources */,
 				2C3B8076240C0A2B00D4C6FE /* OrderDetailViewController.swift in Sources */,
 				2CFF4DBA23F9FE650024B3F1 /* SelectorCell.swift in Sources */,
+				2C6716EE241D41C700C86531 /* ProviderRequest.swift in Sources */,
+				2C2DCB1F241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2C7E7FC823F8A17200D7835E /* ProviderCellViewModel.swift in Sources */,
 				2C7E7FBF23F89DF200D7835E /* ProviderListViewModel.swift in Sources */,
 				2C7E7FC523F8A0A600D7835E /* ProviderCell.swift in Sources */,

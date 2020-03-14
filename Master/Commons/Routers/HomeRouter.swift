@@ -141,6 +141,6 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         }
         
         let router = ProviderRouter(rootViewController: topVC)
-        router.transition(to: .home)
+        router.transition(to: .main)
     }
 }

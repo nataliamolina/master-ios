@@ -59,8 +59,11 @@ class LegalViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
-        titleLabel.isHidden = customTitle != nil
-        title = customTitle
+        if let customTitle = customTitle {
+            titleLabel.isHidden = true
+            titleLabel.text = nil
+            title = customTitle
+        }
         
         webView.navigationDelegate = self
         

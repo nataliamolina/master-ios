@@ -61,7 +61,11 @@ extension UIViewController {
     }
     
     func disableTitle() {
-        title = ""
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .white
+        
+        navigationItem.titleView = imageView
     }
     
     func animateLayout() {

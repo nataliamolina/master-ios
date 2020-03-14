@@ -46,6 +46,8 @@ class ProviderListViewController: UIViewController {
     // MARK: - Private Methods
     
     private func setupUI() {
+        // FIXME
+        title = "Masters"
         disableTitle()
         
         headerImage.kf.setImage(with: URL(string: viewModel.serviceImageUrl ?? ""))

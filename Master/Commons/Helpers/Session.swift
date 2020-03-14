@@ -19,6 +19,7 @@ class Session {
     
     var helpUrl: String = ""
     var profile: UserProfile = .empty
+    var provider: ProviderProfile?
     
     var token: String? {
         set(newValue) {

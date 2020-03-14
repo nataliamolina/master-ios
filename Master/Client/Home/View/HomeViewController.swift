@@ -56,7 +56,8 @@ class HomeViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
-        disableTitle()
+        // FIXME
+        title = "Servicios"
         
         setupBindings()
         

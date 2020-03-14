@@ -14,4 +14,11 @@ struct Provider: Codable {
     let nickname: String
     var photoUrl: String
     let description: String
+    
+    var asProviderProfile: ProviderProfile {
+        return ProviderProfile(id: id,
+                               user: user.asUserProfile,
+                               photoUrl: photoUrl,
+                               description: description)
+    }
 }
