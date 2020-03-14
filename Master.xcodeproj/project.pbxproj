@@ -322,6 +322,18 @@
 		2C6716FC241D458800C86531 /* ProviderPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */; };
 		2C6716FD241D458800C86531 /* ProviderPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */; };
 		2C6716FE241D458800C86531 /* ProviderPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */; };
+		2C671702241D89E500C86531 /* ListSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671700241D89E500C86531 /* ListSelectorViewController.swift */; };
+		2C671703241D89E500C86531 /* ListSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671700241D89E500C86531 /* ListSelectorViewController.swift */; };
+		2C671704241D89E500C86531 /* ListSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671700241D89E500C86531 /* ListSelectorViewController.swift */; };
+		2C671705241D89E500C86531 /* ListSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C671701241D89E500C86531 /* ListSelectorViewController.xib */; };
+		2C671706241D89E500C86531 /* ListSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C671701241D89E500C86531 /* ListSelectorViewController.xib */; };
+		2C671707241D89E500C86531 /* ListSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C671701241D89E500C86531 /* ListSelectorViewController.xib */; };
+		2C671709241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671708241D8E0B00C86531 /* ListSelectorViewModel.swift */; };
+		2C67170A241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671708241D8E0B00C86531 /* ListSelectorViewModel.swift */; };
+		2C67170B241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671708241D8E0B00C86531 /* ListSelectorViewModel.swift */; };
+		2C67170D241D903900C86531 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67170C241D903900C86531 /* ListItem.swift */; };
+		2C67170E241D903900C86531 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67170C241D903900C86531 /* ListItem.swift */; };
+		2C67170F241D903900C86531 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67170C241D903900C86531 /* ListItem.swift */; };
 		2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
 		2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */; };
 		2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8E23F4E9E900267899 /* LoginRequest.swift */; };
@@ -835,6 +847,10 @@
 		2C6716EF241D428A00C86531 /* ProviderRegisterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegisterServiceProtocol.swift; sourceTree = "<group>"; };
 		2C6716F7241D458800C86531 /* ProviderPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderPhotoViewController.swift; sourceTree = "<group>"; };
 		2C6716F8241D458800C86531 /* ProviderPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderPhotoViewController.xib; sourceTree = "<group>"; };
+		2C671700241D89E500C86531 /* ListSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSelectorViewController.swift; sourceTree = "<group>"; };
+		2C671701241D89E500C86531 /* ListSelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSelectorViewController.xib; sourceTree = "<group>"; };
+		2C671708241D8E0B00C86531 /* ListSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSelectorViewModel.swift; sourceTree = "<group>"; };
+		2C67170C241D903900C86531 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoints.swift; sourceTree = "<group>"; };
 		2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		2C73AE8E23F4E9E900267899 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -1466,6 +1482,17 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2C6716FF241D89C000C86531 /* ListSelector */ = {
+			isa = PBXGroup;
+			children = (
+				2C671700241D89E500C86531 /* ListSelectorViewController.swift */,
+				2C671701241D89E500C86531 /* ListSelectorViewController.xib */,
+				2C671708241D8E0B00C86531 /* ListSelectorViewModel.swift */,
+				2C67170C241D903900C86531 /* ListItem.swift */,
+			);
+			path = ListSelector;
 			sourceTree = "<group>";
 		};
 		2C76018523FE349600252531 /* ProductSelector */ = {
@@ -2190,6 +2217,7 @@
 		A5F30D4A23B4CBB6005258A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C6716FF241D89C000C86531 /* ListSelector */,
 				2C976A09240ACEF00073DD07 /* Loader */,
 				2C3E0EEA2408A284005453BA /* DatePicker */,
 				2CAD87AE24049A340063AEB2 /* SingleTextField */,
@@ -2440,6 +2468,7 @@
 				2C3E5149240C79B500873495 /* ButtonCell.xib in Resources */,
 				2C3E514A240C79B500873495 /* MainViewController.xib in Resources */,
 				2C3E514B240C79B500873495 /* login_bg_video_new.mp4 in Resources */,
+				2C671706241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				2C3E514C240C79B500873495 /* HomeViewController.xib in Resources */,
 				2C3E514D240C79B500873495 /* OrderDetailViewController.xib in Resources */,
 				2C3E514E240C79B500873495 /* SelectorCell.xib in Resources */,
@@ -2495,6 +2524,7 @@
 				2CC3DC852411EBCC001E76B2 /* ButtonCell.xib in Resources */,
 				2CC3DC862411EBCC001E76B2 /* MainViewController.xib in Resources */,
 				2CC3DC872411EBCC001E76B2 /* login_bg_video_new.mp4 in Resources */,
+				2C671705241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				2CC3DC882411EBCC001E76B2 /* HomeViewController.xib in Resources */,
 				2CC3DC892411EBCC001E76B2 /* OrderDetailViewController.xib in Resources */,
 				2CC3DC8A2411EBCC001E76B2 /* SelectorCell.xib in Resources */,
@@ -2550,6 +2580,7 @@
 				2CC7314824047814006FF85D /* ButtonCell.xib in Resources */,
 				A5F30D4923B4CB48005258A8 /* MainViewController.xib in Resources */,
 				2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */,
+				2C671707241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				A5F30D6D23B4DB34005258A8 /* HomeViewController.xib in Resources */,
 				2C3B8077240C0A2B00D4C6FE /* OrderDetailViewController.xib in Resources */,
 				2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */,
@@ -2915,6 +2946,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C67170E241D903900C86531 /* ListItem.swift in Sources */,
 				2C3E509B240C79B500873495 /* CheckoutEndpoints.swift in Sources */,
 				2C3E509C240C79B500873495 /* CommentCell.swift in Sources */,
 				2C3E509D240C79B500873495 /* SplashScreenService.swift in Sources */,
@@ -2946,6 +2978,7 @@
 				2C1636D92416AF9A0083A59A /* RateServiceProtocol.swift in Sources */,
 				2C57B73724170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2C3E50AF240C79B500873495 /* HomeViewModel.swift in Sources */,
+				2C67170A241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */,
 				2C3E50B0240C79B500873495 /* OrdersServiceProtocol.swift in Sources */,
 				2C3E50B1240C79B500873495 /* HomeViewController.swift in Sources */,
 				2C3E50B2240C79B500873495 /* StatusHelper.swift in Sources */,
@@ -2997,6 +3030,7 @@
 				2C3E50D8240C79B500873495 /* CheckoutProvider.swift in Sources */,
 				2C3E50D9240C79B500873495 /* UIView+Extensions.swift in Sources */,
 				2C3E50DA240C79B500873495 /* ProviderProfileViewController.swift in Sources */,
+				2C671703241D89E500C86531 /* ListSelectorViewController.swift in Sources */,
 				2C3E50DB240C79B500873495 /* Int+Extensions.swift in Sources */,
 				2C3E50DC240C79B500873495 /* ServerError.swift in Sources */,
 				2C3E50DD240C79B500873495 /* Provider.swift in Sources */,
@@ -3104,6 +3138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C67170D241D903900C86531 /* ListItem.swift in Sources */,
 				2CC3DBCF2411EBCC001E76B2 /* CheckoutEndpoints.swift in Sources */,
 				2CC3DBD02411EBCC001E76B2 /* CommentCell.swift in Sources */,
 				2CC3DBD12411EBCC001E76B2 /* SplashScreenService.swift in Sources */,
@@ -3135,6 +3170,7 @@
 				2C1636D82416AF9A0083A59A /* RateServiceProtocol.swift in Sources */,
 				2C57B73624170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2CC3DBE32411EBCC001E76B2 /* HomeViewModel.swift in Sources */,
+				2C671709241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */,
 				2CC3DBE42411EBCC001E76B2 /* OrdersServiceProtocol.swift in Sources */,
 				2CC3DBE52411EBCC001E76B2 /* HomeViewController.swift in Sources */,
 				2CC3DBE62411EBCC001E76B2 /* StatusHelper.swift in Sources */,
@@ -3186,6 +3222,7 @@
 				2CC3DC0E2411EBCC001E76B2 /* CheckoutProvider.swift in Sources */,
 				2CC3DC0F2411EBCC001E76B2 /* UIView+Extensions.swift in Sources */,
 				2CC3DC102411EBCC001E76B2 /* ProviderProfileViewController.swift in Sources */,
+				2C671702241D89E500C86531 /* ListSelectorViewController.swift in Sources */,
 				2CC3DC112411EBCC001E76B2 /* Int+Extensions.swift in Sources */,
 				2CC3DC122411EBCC001E76B2 /* ServerError.swift in Sources */,
 				2CC3DC132411EBCC001E76B2 /* Provider.swift in Sources */,
@@ -3293,6 +3330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C67170F241D903900C86531 /* ListItem.swift in Sources */,
 				2C976A08240AC39B0073DD07 /* CheckoutEndpoints.swift in Sources */,
 				2CFF4DC323FA144D0024B3F1 /* CommentCell.swift in Sources */,
 				2C198D1723F4C33600346395 /* SplashScreenService.swift in Sources */,
@@ -3324,6 +3362,7 @@
 				2C1636DA2416AF9A0083A59A /* RateServiceProtocol.swift in Sources */,
 				2C57B73824170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2CF6ABB823F7AE3500F9EF40 /* ServiceCategory.swift in Sources */,
+				2C67170B241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */,
 				2CF6ABCD23F7B43000F9EF40 /* HomeViewModel.swift in Sources */,
 				2CF6ABCB23F7B26A00F9EF40 /* OrdersServiceProtocol.swift in Sources */,
 				A5F30D6C23B4DB34005258A8 /* HomeViewController.swift in Sources */,
@@ -3375,6 +3414,7 @@
 				2CFF4DAB23F9A0430024B3F1 /* Comment.swift in Sources */,
 				2CAD87AD24048CAE0063AEB2 /* CheckoutProvider.swift in Sources */,
 				2CEECC9E2400D30200C67D80 /* UIView+Extensions.swift in Sources */,
+				2C671704241D89E500C86531 /* ListSelectorViewController.swift in Sources */,
 				2CA494D323F9989B00F87AD6 /* ProviderProfileViewController.swift in Sources */,
 				2CFF4DB323F9F1370024B3F1 /* Int+Extensions.swift in Sources */,
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,

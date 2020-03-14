@@ -40,7 +40,10 @@ class ProviderMainViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        // FIXME
+        title = "Inicio"
         disableTitle()
+        
         setupBindings()
         
         viewModel.getProviderProfile()

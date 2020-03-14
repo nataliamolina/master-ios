@@ -18,7 +18,6 @@ enum ProviderRegisterViewModelStatus {
 class ProviderRegisterViewModel {
     // MARK: - Properties
     private let service: ProviderRegisterServiceProtocol
-    
     let status = Var<ProviderRegisterViewModelStatus>(.undefined)
     let isLoading = Var(false)
     
@@ -28,19 +27,8 @@ class ProviderRegisterViewModel {
     }
     
     // MARK: - Public Methods
-    func postProviderRegister(nickName: String, photoUrl: String,
-                              description: String, document: String,
-                              bankAccountNumber: String, bankAccountType: String,
-                              bankName: String) {
+    func postProviderRegister(request: ProviderRequest) {
         loadingState(true)
-        
-        let request = ProviderRequest(nickName: nickName,
-                                      photoUrl: photoUrl,
-                                      description: description,
-                                      document: document,
-                                      bankAccountNumber: bankAccountNumber,
-                                      bankAccountType: bankAccountType,
-                                      bankName: bankName)
         
         service.createProvider(request: request) { [weak self] (provider: Provider?, error: CMError?) in
             self?.loadingState(false)
@@ -54,6 +42,16 @@ class ProviderRegisterViewModel {
             Session.shared.provider = provider.asProviderProfile
             self?.status.value = .registerDone
         }
+    }
+    
+    func getListSelectorViewModel() -> ListSelectorViewModel {
+        let bankTypes = [
+            ListItem(value: "Cuenta de Ahorros", identifier: 0),
+            ListItem(value: "Cuenta Corriente", identifier: 0),
+            ListItem(value: "Otro", identifier: 0)
+         ]
+         
+        return ListSelectorViewModel(title: nil, desc: "Selecciona tu tipo de cuenta", dataSource: bankTypes)
     }
     
     // MARK: - Private Methods

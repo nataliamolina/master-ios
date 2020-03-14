@@ -24,6 +24,7 @@ def commons
   pod 'SwiftLint'
   pod 'lottie-ios'
   pod 'FloatRatingView', '~> 4'
+  pod 'MBRadioButton'
   firebase
 end
 

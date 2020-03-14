@@ -13,6 +13,7 @@ enum ProviderRouterTransitions {
     case register
     case uploadPhoto
     case home
+    case listSelector(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?)
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
@@ -42,6 +43,9 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             
         case .uploadPhoto:
             handleUploadTransition()
+            
+        case .listSelector(let viewModel, let delegate):
+            handleListSelectorTransition(viewModel: viewModel, delegate: delegate)
         }
     }
     
@@ -77,6 +81,12 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     
     private func handleUploadTransition() {
         let viewController = ProviderPhotoViewController()
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleListSelectorTransition(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?) {
+        let viewController = ListSelectorViewController(viewModel: viewModel, delegate: delegate)
         
         navigationController.pushViewController(viewController, animated: true)
     }

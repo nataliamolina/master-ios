@@ -17,6 +17,8 @@
 "general.add" = "Agregar";
 "general.bogota" = "Bogotá";
 "general.ups" = "¡Ups!";
+"general.select" = "Seleccionar";
+"general.selectOption" = "Selecciona una opción";
 
 // States
 "general.state.acepted" = "Aceptado";
@@ -109,8 +111,22 @@
 "payment.cardNumber" = "Número de tarjeta";
 "payment.invalidCard" = "Porfavor Revisa nuevamente los datos de tu tarjeta";
 
-// Payment
+// Rate
 "rate.title" = "Calificar Servicio";
 "rate.desc" = "Cuentanos que te pareció el servicio prestado por tu Master, sé lo más sincero posible, esto ayudará a tu Master a mejorar y a nosotros también.";
 "rate.text" = "¿Te gustó el servicio?, ¿Hay algo que mejorar?";
 "rate.button" = "Enviar Calificación";
+
+// MARK: - Provider Main
+
+// MARK: - Provider Register
+"provider.register.title" = "¡Hola Master!";
+"provider.register.desc" = "A continuación encontrarás el formulario de registro para convertirte en Master. \n \nEs importante que llenes todos los campos con información verídica para que puedas ser aceptado en el programa de Masters lo más pronto posible.";
+"provider.register.document" = "No. Cédula";
+"provider.register.bank" = "Toda la información Bancaria que nos indicas es únicamente usada con el propósito de pagarte como Master, es 100% confidencial y segura.";
+"provider.register.bankNumer" = "Número de Cuenta Bancaria";
+"provider.register.bankName" = "Nombre del Banco";
+"provider.register.bankType" = "Selecciona un tipo de cuenta";
+"provider.register.about" = "¡Cuéntanos sobre ti!";
+"provider.register.aboutPlaceholder" = "Ejemplo: Soy un gran cocinero...";
+"provider.register.button" = "Unirme al Programa";
