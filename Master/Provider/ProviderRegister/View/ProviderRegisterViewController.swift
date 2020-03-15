@@ -17,7 +17,12 @@ class ProviderRegisterViewController: UIViewController {
     @IBOutlet private weak var bankTypeTextField: MTextField!
     @IBOutlet private weak var bankTypeView: UIView!
     @IBOutlet private weak var aboutTextView: UITextView!
-
+    
+    // MARK: - UI Actions
+    @IBAction private func registerButtonAction() {
+        validateForm()
+    }
+    
     // MARK: - Properties
     private var originalInset: UIEdgeInsets = .zero
     private let viewModel: ProviderRegisterViewModel
@@ -60,12 +65,78 @@ class ProviderRegisterViewController: UIViewController {
         bankTypeView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bankTypeFieldTapped)))
         
         originalInset = scrollView.contentInset
-            
+        
         enableKeyboardDismiss()
         disableTitle()
         setupKeyboardListeners()
-        
         addIconInNavigationBar()
+        setupBindings()
+    }
+    
+    private func setupBindings() {
+        viewModel.isLoading.listen { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
+        }
+        
+        viewModel.status.listen { [weak self] status in
+            switch status {
+            case .error(let error):
+                self?.showError(message: error)
+                
+            case .registerDone:
+                self?.router.transition(to: .uploadPhoto)
+                
+            default:
+                return
+            }
+        }
+    }
+    
+    private func validateForm() {
+        // FIXME: Messages
+        if documentTextField.safeText.isEmpty || documentTextField.safeText.count < 4 {
+            showWarning(message: "Debes ingresar un documento válio.")
+            
+            return
+        }
+        
+        if bankNumberTextField.safeText.isEmpty || bankNumberTextField.safeText.count < 4 {
+            showWarning(message: "Debes ingresar un número bancario válio.")
+            
+            return
+        }
+        
+        if bankNameTextField.safeText.isEmpty || bankNameTextField.safeText.count < 4 {
+            showWarning(message: "Debes ingresar un nombre de banco.")
+            
+            return
+        }
+        
+        if bankTypeTextField.safeText.isEmpty {
+            showWarning(message: "Debes ingresar un tipo de banco.")
+            
+            return
+        }
+        
+        if aboutTextView.text.isEmpty || aboutTextView.text.count < 3 {
+            showWarning(message: "Es muy importante para tus futuros clientes saber algo de ti, por favor completa el campo.")
+            
+            return
+        }
+        
+        submitForm()
+    }
+    
+    private func submitForm() {
+        let request = ProviderRequest(nickName: "",
+                                      photoUrl: "",
+                                      description: aboutTextView.text.trimmingCharacters(in: .whitespacesAndNewlines),
+                                      document: documentTextField.safeText,
+                                      bankAccountNumber: bankNumberTextField.safeText,
+                                      bankAccountType: bankTypeTextField.safeText,
+                                      bankName: bankNameTextField.safeText)
+        
+        viewModel.postProviderRegister(request: request)
     }
     
     private func setupKeyboardListeners() {

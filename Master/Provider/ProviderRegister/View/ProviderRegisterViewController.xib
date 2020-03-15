@@ -166,6 +166,9 @@
                                                     <integer key="value" value="3"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="registerButtonAction" destination="-1" eventType="touchUpInside" id="GPM-m7-ee4"/>
+                                            </connections>
                                         </button>
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CBq-6n-IOS">
                                             <rect key="frame" x="0.0" y="731" width="374" height="20"/>
