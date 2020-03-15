@@ -15,15 +15,35 @@ class ProviderPhotoViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var photoImageView: UIImageView!
     @IBOutlet private weak var photoView: UIView!
+    @IBOutlet private weak var uploadButton: UIButton!
     
     // MARK: - UI Actions
     @IBAction private func uploadButtonAction() {
+        viewModel.uploadImage(photoImageView)
+    }
+    
+    @IBAction private func legalButtonAction() {
+        router.transition(to: .legal)
     }
     
     // MARK: - Properties
+    private let viewModel: ProviderPhotoViewModel
+    private let router: RouterBase<ProviderRouterTransitions>
     private var imagePicker: UIImagePickerController?
     
     // MARK: - Life Cycle
+    
+    init(viewModel: ProviderPhotoViewModel, router: RouterBase<ProviderRouterTransitions>) {
+        self.viewModel = viewModel
+        self.router = router
+        
+        super.init(nibName: String(describing: ProviderPhotoViewController.self), bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +58,10 @@ class ProviderPhotoViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        uploadButton.isEnabled = false
+        
+        // FIXME: Hardcoded title
+        title = "Foto de perfil"
         disableTitle()
         addIconInNavigationBar()
         
@@ -46,6 +70,29 @@ class ProviderPhotoViewController: UIViewController {
         
         photoView.isUserInteractionEnabled = true
         photoView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showSourceSelector)))
+        
+        setupBindings()
+    }
+    
+    private func setupBindings() {
+        viewModel.isLoading.listen { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
+        }
+        
+        viewModel.status.listen { [weak self] status in
+            switch status {
+            case .error(let error):
+                self?.showError(message: error)
+                
+            case .uploadSuccessful:
+                self?.router.transition(to: .home)
+                
+            default:
+                return
+            }
+        }
+        
+        viewModel.placeholderRemoved.bindTo(uploadButton, to: .state)
     }
     
     @objc private func showSourceSelector() {
@@ -102,6 +149,7 @@ extension ProviderPhotoViewController: UINavigationControllerDelegate, UIImagePi
         imagePicker?.dismiss(animated: true, completion: nil)
         
         if info.keys.contains(.originalImage) {
+            viewModel.placeholderRemoved.value = true
             photoImageView.image = info[.originalImage] as? UIImage
         }
     }

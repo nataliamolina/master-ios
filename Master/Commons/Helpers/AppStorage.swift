@@ -1,5 +1,5 @@
 //
-//  Storage.swift
+//  AppStorage.swift
 //  Master
 //
 //  Created by Carlos Mejía on 12/02/20.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol StorageProtocol {
+protocol AppStorageProtocol {
     func get<T>(key: String) -> T?
     func save<T>(value: T, key: String)
     func update<T>(value: T, key: String)
     func delete(key: String)
 }
 
-class Storage: StorageProtocol {
+class AppStorage: AppStorageProtocol {
     // MARK: - Properties
     private let defaults = UserDefaults.standard
     

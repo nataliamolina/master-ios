@@ -44,6 +44,26 @@ class ConnectionManager: ConnectionManagerProtocol {
             }
         }
     }
+
+    func put<T: Codable>(url: String, request: Codable, onComplete: ((T?, CMError?) -> Void)?) {
+         SN.put(endpoint: url, model: request) { [weak self] (response: SNResultWithEntity<ServerResponse<T>, ServerResponse<EmptyCodable>>) in
+             
+             switch response {
+             case .error(let error):
+                 onComplete?(nil, self?.getErrorWith(error: error))
+                 
+             case .errorResult(let entity):
+                 onComplete?(nil, self?.getErrorWith(text: entity.userErrorMessage))
+                 
+             case .success(let response):
+                 if response.isError {
+                     onComplete?(nil, self?.getErrorWith(text: response.userErrorMessage))
+                 } else {
+                     onComplete?(response.data, nil)
+                 }
+             }
+         }
+     }
     
     func post<T: Codable>(url: String,
                           request: Codable,

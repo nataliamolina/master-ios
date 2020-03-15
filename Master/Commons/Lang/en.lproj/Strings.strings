@@ -134,3 +134,4 @@
 // Provider Photo
 "provider.photo.title" = "¡Tu Foto!";
 "provider.photo.desc" = "Tu foto es necesaria para dar seguridad y confianza a los usuarios, usa la más profesional que tengas, procura que tenga buena luz, no uses gafas de sol o elementos sobre la cabeza.";
+"provider.photo.button" = "Tomar una foto";

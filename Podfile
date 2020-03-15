@@ -8,12 +8,12 @@ def firebase
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Messaging'
-
+  pod 'Firebase/Storage'
 end
 
 def commons
   pod 'EasyBinding', '~> 0.2.3'
-  pod 'Simple-Networking', '~> 0.3.6'
+  pod 'Simple-Networking', '~> 0.3.7'
   pod 'SimpleKeychain'
   pod 'Kingfisher', '~> 5.0'
   pod 'NotificationBannerSwift', '~> 3.0.0'

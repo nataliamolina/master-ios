@@ -13,6 +13,7 @@ enum ProviderRouterTransitions {
     case register
     case uploadPhoto
     case home
+    case legal
     case listSelector(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?)
 }
 
@@ -36,7 +37,7 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             handleMainTransition()
             
         case .home:
-            return
+            handleHomeTransition()
             
         case .register:
             handleRegisterTransition()
@@ -46,6 +47,9 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             
         case .listSelector(let viewModel, let delegate):
             handleListSelectorTransition(viewModel: viewModel, delegate: delegate)
+            
+        case .legal:
+            handleLegalTransition()
         }
     }
     
@@ -80,13 +84,31 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     }
     
     private func handleUploadTransition() {
-        let viewController = ProviderPhotoViewController()
+        let viewController = ProviderPhotoViewController(viewModel: ProviderPhotoViewModel(), router: self)
         
         navigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleListSelectorTransition(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?) {
         let viewController = ListSelectorViewController(viewModel: viewModel, delegate: delegate)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleHomeTransition() {
+        guard let providerProfile = Session.shared.provider else {
+            return
+        }
+        
+        let viewController = ProviderHomeViewController(viewModel: ProviderHomeViewModel(provider: providerProfile), router: self)
+
+        navigationController.popToRootViewController { [weak self] in
+            self?.navigationController.pushViewController(viewController, animated: true)
+        }
+    }
+    
+    private func handleLegalTransition() {
+        let viewController = LegalViewController()
         
         navigationController.pushViewController(viewController, animated: true)
     }

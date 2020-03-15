@@ -62,6 +62,7 @@ class ProviderMainViewModel {
             status.value = .providerProfileLoaded
         }
     }
+    
     private func loadingState(_ state: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.isLoading.value = state

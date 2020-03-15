@@ -14,7 +14,7 @@ enum SessionKeys: String {
 
 class Session {
     // MARK: - Properties
-    private let storage: StorageProtocol = Storage()
+    private let storage: AppStorageProtocol = AppStorage()
     static let shared = Session()
     
     var helpUrl: String = ""

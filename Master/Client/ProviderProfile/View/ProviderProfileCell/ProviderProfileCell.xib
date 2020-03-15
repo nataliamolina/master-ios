@@ -10,14 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="212" id="KGk-i7-Jjw" customClass="ProviderProfileCell" customModule="Master" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="212" id="KGk-i7-Jjw" customClass="ProviderProfileCell" customModule="Local" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcH-ch-mwm" customClass="MImageView" customModule="Master" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcH-ch-mwm" customClass="MImageView" customModule="Local" customModuleProvider="target">
                         <rect key="frame" x="200" y="32.5" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="voR-8T-DSE"/>
@@ -52,6 +52,7 @@
                     <constraint firstAttribute="trailing" secondItem="VKa-LN-GRA" secondAttribute="trailing" constant="20" id="LxK-ip-LYf"/>
                     <constraint firstItem="AcH-ch-mwm" firstAttribute="centerY" secondItem="9kg-ni-Kcz" secondAttribute="bottom" id="SWU-Cg-m9c"/>
                     <constraint firstItem="9kg-ni-Kcz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="VGS-Og-FC3"/>
+                    <constraint firstItem="VKa-LN-GRA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AcH-ch-mwm" secondAttribute="bottom" constant="8" symbolic="YES" id="X4S-Jq-vCo"/>
                     <constraint firstItem="VKa-LN-GRA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nGO-NT-AcX" secondAttribute="bottom" constant="10" id="Z9e-0h-10r"/>
                     <constraint firstAttribute="bottom" secondItem="VKa-LN-GRA" secondAttribute="bottom" id="eH6-ys-Jiq"/>
                     <constraint firstItem="AcH-ch-mwm" firstAttribute="leading" secondItem="9kg-ni-Kcz" secondAttribute="trailing" constant="20" id="oy5-YZ-r0J"/>
