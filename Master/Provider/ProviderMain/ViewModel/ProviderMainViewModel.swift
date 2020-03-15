@@ -57,36 +57,11 @@ class ProviderMainViewModel {
         Session.shared.provider = profile.asProviderProfile
         
         if profile.photoUrl.isEmpty {
-            getProviderPhoto()
+            status.value = .needsToUploadPhoto
         } else {
             status.value = .providerProfileLoaded
         }
     }
-    
-    private func getProviderPhoto() {
-        loadingState(true)
-        
-        service.getProviderPhoto { [weak self] (response: String?, error: CMError?) in
-            self?.loadingState(false)
-            
-            if let error = error {
-                self?.status.value = .error(error: error.error)
-                
-                return
-            }
-            
-            self?.handlePhotoResult(response)
-        }
-    }
-    
-    private func handlePhotoResult(_ result: String?) {
-        if let photoUrl = result {
-            Session.shared.provider?.photoUrl = photoUrl
-        } else {
-            status.value = .needsToUploadPhoto
-        }
-    }
-    
     private func loadingState(_ state: Bool) {
         DispatchQueue.main.async { [weak self] in
             self?.isLoading.value = state

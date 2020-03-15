@@ -49,6 +49,8 @@
         </array>
         <key>LSRequiresIPhoneOS</key>
         <true/>
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>Usaremos tu librería de fotos para que puedas seleccionar una foto que tengas guardada.</string>
         <key>NSCameraUsageDescription</key>
         <string>Usaremos tu cámara únicamente con tu permiso para sacar fotos que nos ayuden, como métodos de pago o foto de perfil.</string>
         <key>NSMicrophoneUsageDescription</key>

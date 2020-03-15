@@ -9,13 +9,13 @@
 import UIKit
 
 enum MButtonType: Int {
-    case whiteBorder
-    case greenBorder
-    case white
-    case green
-    case onlyWhiteText
+    case whiteBorder // 0
+    case greenBorder // 1
+    case white // 2
+    case green // 3
+    case onlyWhiteText // 4
     case redBorder // 5
-    case yellow
+    case yellow // 6
 }
 
 class MButton: UIButton {
