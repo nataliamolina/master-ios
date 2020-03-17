@@ -58,7 +58,7 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         navigationController.navigationBar.barTintColor = UIColor(white: 1, alpha: 0)
         navigationController.view.backgroundColor = .clear
         navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.prefersLargeTitles = false
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.hero.isEnabled = true
         navigationController.hero.modalAnimationType = .zoom

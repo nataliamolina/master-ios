@@ -53,6 +53,9 @@ class OrdersViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        // FIXME
+        title = "Pedidos"
+        
         disableTitle()
         
         emptyStateView.isHidden = true

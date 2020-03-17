@@ -74,6 +74,8 @@ class MainViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        title = ""
+        
         setupBindings()
         
         setupVideo()

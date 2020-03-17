@@ -46,6 +46,9 @@ class OrderDetailViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        // FIXME
+        title = "Pedido"
+        
         disableTitle()
         
         paymentButton.isHidden = true
