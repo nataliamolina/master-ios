@@ -14,6 +14,8 @@ class MNavigationController: UINavigationController {
 
     init() {
         super.init(rootViewController: UIViewController())
+        
+        commonSetup()
     }
     
     override init(rootViewController: UIViewController) {
@@ -36,13 +38,11 @@ class MNavigationController: UINavigationController {
     
     private func commonSetup() {
         navigationBar.tintColor = UIColor.Master.green
-        navigationBar.prefersLargeTitles = false
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.prefersLargeTitles = true
         navigationBar.shadowImage = UIImage()
-        navigationBar.backgroundColor = .white
+        navigationBar.backgroundColor = .clear
         navigationBar.barTintColor = .white
         navigationBar.isTranslucent = true
-        modalPresentationStyle = .fullScreen
-        hero.isEnabled = true
-        hero.modalAnimationType = .zoom
     }
 }

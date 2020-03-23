@@ -21,11 +21,13 @@ enum MainRouterTransitions {
 class MainRouter: RouterBase<MainRouterTransitions> {
     // MARK: - Properties
     private let navigationController: MNavigationController
+    private let mainNavigationController: MNavigationController
     private var onComplete: CompletionBlock?
     
     // MARK: - Life Cycle
     init(navigationController: MNavigationController) {
         self.navigationController = navigationController
+        self.mainNavigationController = MNavigationController()
         
         super.init()
     }
@@ -64,11 +66,13 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         self.onComplete = onComplete
         
         let viewController = MainViewController()
-        viewController.router = self
+        viewController.router = MainRouter(navigationController: mainNavigationController)
         
-        navigationController.setViewControllers([viewController], animated: true)
-        navigationController.interactivePopGestureRecognizer?.delegate = viewController
-        navigationController.interactivePopGestureRecognizer?.isEnabled = true
+        mainNavigationController.setViewControllers([viewController], animated: true)
+        mainNavigationController.interactivePopGestureRecognizer?.delegate = viewController
+        mainNavigationController.interactivePopGestureRecognizer?.isEnabled = true
+        
+        navigationController.present(mainNavigationController, animated: true, completion: nil)
     }
     
     private func handleEmailLoginTransition() {

@@ -22,15 +22,21 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func ordersButtonAction() {
-        router.transition(to: .ordersList)
+        closeMenu { [weak self] in
+            self?.router.transition(to: .ordersList)
+        }
     }
     
     @IBAction func legalButtonAction() {
-        router.transition(to: .legal)
+        closeMenu { [weak self] in
+            self?.router.transition(to: .legal)
+        }
     }
     
     @IBAction func helpButtonAction() {
-        router.transition(to: .help)
+        closeMenu { [weak self] in
+            self?.router.transition(to: .help)
+        }
     }
     
     // MARK: - Properties
