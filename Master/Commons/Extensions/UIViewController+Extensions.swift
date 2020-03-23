@@ -8,7 +8,6 @@
 
 import UIKit
 import NotificationBannerSwift
-import SideMenu
 
 extension UIViewController {
     func addIconInNavigationBar() {

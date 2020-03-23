@@ -60,7 +60,7 @@ class RegisterViewController: UIViewController {
             
             switch status {
             case .registerReady:
-                self.router?.transition(to: .home)
+                self.router?.transition(to: .backToPresenter)
                 
             case .error(let error):
                 self.showError(message: error)

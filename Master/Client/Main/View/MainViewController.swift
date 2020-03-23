@@ -10,9 +10,11 @@ import UIKit
 import GoogleSignIn
 import AVFoundation
 import Hero
+import AuthenticationServices
 
 class MainViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var videoView: UIView!
     @IBOutlet private weak var emailLoginButton: MButton!
     @IBOutlet private weak var registerButton: MButton!
@@ -25,6 +27,10 @@ class MainViewController: UIViewController {
     
     @IBAction func registerButtonAction() {
         router?.transition(to: .register)
+    }
+    
+    @IBAction func closeButtonAction() {
+        router?.transition(to: .close)
     }
     
     // MARK: - Properties
@@ -85,6 +91,32 @@ class MainViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         setupGoogleAuth()
+        
+        if #available(iOS 13.0, *) {
+            setupAppelSignInButton()
+        }
+    }
+    
+    @available(iOS 13.0, *)
+    private func setupAppelSignInButton() {
+        let authorizationButton = ASAuthorizationAppleIDButton()
+        authorizationButton.addTarget(self, action: #selector(handleAppleIdRequest), for: .touchUpInside)
+        authorizationButton.cornerRadius = 10
+        authorizationButton.frame = CGRect(x: 0, y: 0, width: authorizationButton.frame.width, height: 47)
+        
+        stackView.insertArrangedSubview(authorizationButton, at: 4)
+    }
+    
+    @available(iOS 13.0, *)
+    @objc private func handleAppleIdRequest() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        
+        request.requestedScopes = [.fullName, .email]
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [viewModel.getAppleAuthorizationRequest()])
+        authorizationController.delegate = viewModel
+        authorizationController.performRequests()
     }
     
     private func setupBindings() {
@@ -100,7 +132,7 @@ class MainViewController: UIViewController {
             
             switch status {
             case .gmailLoginReady:
-                self.router?.transition(to: .home)
+                self.router?.transition(to: .backToPresenter)
                 
             case .error(let error):
                 self.showError(message: error)

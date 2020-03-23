@@ -10,7 +10,7 @@ import Foundation
 import EasyBinding
 
 enum SplashScreenViewModelStatus {
-    case preloadReady(hasSession: Bool)
+    case preloadReady
     case tokenExpired
     case undefined
     case error(error: String?)
@@ -55,7 +55,7 @@ class SplashScreenViewModel {
     
     private func validateTokenIfNeeded() {
         guard let token = Session.shared.token, !token.isEmpty else {
-            status.value = .preloadReady(hasSession: false)
+            status.value = .preloadReady
             
             return
         }
@@ -88,7 +88,7 @@ class SplashScreenViewModel {
             }
             
             Session.shared.profile = user.asUserProfile
-            self?.status.value = .preloadReady(hasSession: true)
+            self?.status.value = .preloadReady
         }
     }
 }

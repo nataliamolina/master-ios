@@ -23,13 +23,13 @@ enum HomeRouterTransitions {
 
 class HomeRouter: RouterBase<HomeRouterTransitions> {
     // MARK: - Properties
-    let navigationController: UINavigationController
+    private let navigationController: MNavigationController
     
     // MARK: - Life Cycle
-    override init(rootViewController: UIViewController) {
-        self.navigationController = UINavigationController()
+    init(navigationController: MNavigationController) {
+        self.navigationController = navigationController
         
-        super.init(rootViewController: rootViewController)
+        super.init()
         
         setupNavigationController()
     }
@@ -93,7 +93,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleMenuTransition() {
-        let menuRouter = MenuRouter(rootViewController: navigationController)
+        let menuRouter = MenuRouter(navigationController: navigationController)
         menuRouter.transition(to: .menu)
     }
     
@@ -103,7 +103,16 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         navigationController.hero.isEnabled = true
         navigationController.hero.modalAnimationType = .zoom
         
-        rootViewController.present(navigationController, animated: true, completion: nil)
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
+
+        let options: UIView.AnimationOptions = .transitionCrossDissolve
+        let duration: TimeInterval = 0.3
+
+        window.rootViewController = navigationController
+        
+        UIView.transition(with: window, duration: duration, options: options, animations: {}, completion: nil)
     }
     
     private func handleCategoryDetailTransition(serviceId: Int, serviceImageUrl: String) {
@@ -120,7 +129,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleCheckoutTransition(viewModel: CheckoutViewModel) {
-        let checkoutRouter = CheckoutRouter(rootViewController: navigationController)
+        let checkoutRouter = CheckoutRouter(navigationController: navigationController)
         checkoutRouter.transition(to: .checkout(viewModel: viewModel))
     }
     
@@ -131,7 +140,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleOrdersTransition() {
-        let ordersRouter = OrdersRouter(rootViewController: navigationController)
+        let ordersRouter = OrdersRouter(navigationController: navigationController)
         ordersRouter.transition(to: .orders)
     }
     
@@ -140,7 +149,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
             return
         }
         
-        let router = ProviderRouter(rootViewController: topVC)
+        let router = ProviderRouter(navigationController: navigationController)
         router.transition(to: .main)
     }
 }

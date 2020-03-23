@@ -10,6 +10,9 @@ import UIKit
 
 class MenuViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var dismissAreaView: UIView!
+    @IBOutlet private weak var mainContainerViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var mainContainerView: UIView!
     @IBOutlet private weak var userNamesLabel: UILabel!
     @IBOutlet private weak var userImageView: UIImageView!
     
@@ -31,12 +34,15 @@ class MenuViewController: UIViewController {
     }
     
     // MARK: - Properties
+    private let animationTime: TimeInterval = 0.2
+    private let menuBackgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
     private let router: RouterBase<MenuRouterTransitions>
-    private let viewModel = MenuViewModel()
+    private let viewModel: MenuViewModel
     
     // MARK: - Life Cycle
-    init(router: RouterBase<MenuRouterTransitions>) {
+    init(viewModel: MenuViewModel, router: RouterBase<MenuRouterTransitions>) {
         self.router = router
+        self.viewModel = viewModel
         
         super.init(nibName: String(describing: MenuViewController.self), bundle: nil)
     }
@@ -52,10 +58,19 @@ class MenuViewController: UIViewController {
                 imageUrl: Session.shared.profile.imageUrl)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showMenu()
+    }
+    
     // MARK: - Private Methods
     private func setupUI(firstName: String, imageUrl: String) {
         userNamesLabel.text = firstName
         userImageView.kf.setImage(with: URL(string: imageUrl), placeholder: UIImage.avatar)
+        
+        hideMenu()
+        setupGestureRecognizers()
     }
     
     private func performLogout() {
@@ -64,5 +79,73 @@ class MenuViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         
         router.transition(to: .logout)
+    }
+    
+    private func setupGestureRecognizers() {
+        mainContainerView.addGestureRecognizer(UIPanGestureRecognizer(target: self,
+                                                                      action: #selector(menuSwapped(_:))))
+        
+        addDismissGesture()
+    }
+    
+    private func addDismissGesture() {
+        dismissAreaView.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                                    action: #selector(dismissView)))
+    }
+    
+    private func hideMenu() {
+        mainContainerViewTrailingConstraint.constant = -UIScreen.main.bounds.width
+    }
+    
+    private func showMenu() {
+        view.bringSubviewToFront(mainContainerView)
+        mainContainerViewTrailingConstraint.constant = .zero
+        
+        UIView.animate(withDuration: animationTime) { [weak self] in
+            self?.view.layoutIfNeeded()
+            self?.view.backgroundColor = self?.menuBackgroundColor
+        }
+    }
+    
+    @objc private func dismissView() {
+        closeMenu()
+    }
+    
+    @objc private func closeMenu(completion: (() -> Void)? = nil) {
+        hideMenu()
+        
+        UIView.animate(withDuration: animationTime, animations: { [weak self] in
+            self?.view.layoutIfNeeded()
+            self?.view.backgroundColor = .clear
+            }, completion: { [weak self] _ in
+                self?.dismiss(animated: false, completion: completion)
+        })
+    }
+    
+    @objc private func menuSwapped(_ panGesture: UIPanGestureRecognizer) {
+        let translation = panGesture.translation(in: mainContainerView)
+        
+        if panGesture.state == .changed {
+            mainContainerViewTrailingConstraint.constant = translation.x >= 0 ? .zero : translation.x
+            view.layoutIfNeeded()
+            
+            return
+        }
+        
+        if panGesture.state == .ended {
+            let revertArea: CGFloat = -(mainContainerView.bounds.width / 2)
+            
+            if translation.x > revertArea {
+                mainContainerViewTrailingConstraint.constant = .zero
+                
+                UIView.animate(withDuration: animationTime) { [weak self] in
+                    self?.view.layoutIfNeeded()
+                }
+                
+                return
+            }
+            
+            closeMenu()
+        }
     }
 }

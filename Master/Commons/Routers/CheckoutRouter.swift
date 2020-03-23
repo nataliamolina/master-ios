@@ -18,13 +18,13 @@ enum CheckoutRouterTransitions {
 class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
     // MARK: - Properties
     private var successOrderViewControllerRef: SuccessOrderViewController?
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
     
     // MARK: - Life Cycle
-    override init(rootViewController: UIViewController) {
-        self.navigationController = (rootViewController as? UINavigationController) ?? UINavigationController()
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
         
-        super.init(rootViewController: rootViewController)
+        super.init()
     }
     
     // MARK: - Public Methods

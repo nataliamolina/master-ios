@@ -20,7 +20,6 @@ def commons
   pod 'Hero'
   pod 'Localize'
   pod 'GoogleSignIn'
-  pod 'SideMenu', '~> 6.0'
   pod 'SwiftLint'
   pod 'lottie-ios'
   pod 'FloatRatingView', '~> 4'

@@ -9,70 +9,66 @@
 import UIKit
 
 enum MainRouterTransitions {
-    case main
+    case main(onComplete: CompletionBlock?)
     case emailLogin
     case register
-    case home
     case legal
+    case backToPresenter
+    case home
+    case close
 }
 
 class MainRouter: RouterBase<MainRouterTransitions> {
     // MARK: - Properties
-    private let navigationController: UINavigationController
+    private let navigationController: MNavigationController
+    private var onComplete: CompletionBlock?
     
     // MARK: - Life Cycle
-    override init(rootViewController: UIViewController) {
-        self.navigationController = UINavigationController()
+    init(navigationController: MNavigationController) {
+        self.navigationController = navigationController
         
-        super.init(rootViewController: rootViewController)
-        
-        setupNavigationController()
+        super.init()
     }
     
     // MARK: - Public Methods
     override func transition(to transition: MainRouterTransitions) {
         switch transition {
-        case .main:
-            handleMainTransition()
+        case .main(let onComplete):
+            handleMainTransition(onComplete: onComplete)
             
         case .emailLogin:
             handleEmailLoginTransition()
-            
-        case .home:
-            handleHomeTransition()
             
         case .register:
             handleRegisterTransition()
             
         case .legal:
             handleLegalTransition()
+            
+        case .backToPresenter:
+            navigationController.dismiss(animated: true) { [weak self] in
+                self?.onComplete?()
+            }
+            
+        case .home:
+            handleHomeTransition()
+            
+        case .close:
+            navigationController.dismiss(animated: true, completion: nil)
         }
     }
     
     // MARK: - Private Methods
-    private func setupNavigationController() {
-        navigationController.navigationBar.tintColor = UIColor.Master.green
-        
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController.navigationBar.shadowImage = UIImage()
-        navigationController.navigationBar.barTintColor = UIColor(white: 1, alpha: 0)
-        navigationController.view.backgroundColor = .clear
-        navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.modalPresentationStyle = .fullScreen
-        navigationController.hero.isEnabled = true
-        navigationController.hero.modalAnimationType = .zoom
-    }
     
-    private func handleMainTransition() {
+    private func handleMainTransition(onComplete: CompletionBlock?) {
+        self.onComplete = onComplete
+        
         let viewController = MainViewController()
         viewController.router = self
         
-        navigationController.setViewControllers([viewController], animated: false)
+        navigationController.setViewControllers([viewController], animated: true)
         navigationController.interactivePopGestureRecognizer?.delegate = viewController
         navigationController.interactivePopGestureRecognizer?.isEnabled = true
-        
-        rootViewController.present(navigationController, animated: true, completion: nil)
     }
     
     private func handleEmailLoginTransition() {
@@ -83,22 +79,7 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     }
     
     private func handleHomeTransition() {
-        // is in Register or Login
-        if navigationController.children.count > 1 {
-            navigationController.popViewControllerWithHandler { [weak self] in
-                self?.moveToHome()
-            }
-            
-            return
-        }
-        
-        moveToHome()
-    }
-    
-    private func moveToHome() {
-        let homeRouter = HomeRouter(
-            rootViewController: navigationController.topViewController ?? rootViewController
-        )
+        let homeRouter = HomeRouter(navigationController: navigationController)
         
         homeRouter.transition(to: .home)
     }

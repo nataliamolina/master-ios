@@ -39,9 +39,9 @@
 "menu.logout" = "Cerrar sesión";
 
 // Main
-"main.title" = "¡Hola!";
-"main.desc" = "En Master encontrarás una persona para todas tus necesidades en casa.";
-"main.button.email" = "Iniciar Sesión con Email";
+"main.title" = "Iniciar Sesión";
+"main.desc" = "Es necesario que inicies sesión para continuar.";
+"main.button.email" = "Continuar con Email";
 "main.button.register" = "Registrarme";
 
 // Email Login

@@ -19,13 +19,13 @@ enum ProviderRouterTransitions {
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     // MARK: - Properties
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
     
     // MARK: - Life Cycle
-    override init(rootViewController: UIViewController) {
-        self.navigationController = UINavigationController()
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
         
-        super.init(rootViewController: rootViewController)
+        super.init()
         
         setupNavigationController()
     }
@@ -74,7 +74,7 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         navigationController.interactivePopGestureRecognizer?.delegate = viewController
         navigationController.interactivePopGestureRecognizer?.isEnabled = true
         
-        rootViewController.present(navigationController, animated: true, completion: nil)
+        navigationController.present(navigationController, animated: true, completion: nil)
     }
     
     private func handleRegisterTransition() {

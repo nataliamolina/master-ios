@@ -130,7 +130,6 @@ PODS:
     - SnapKit (~> 5.0.0)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
-  - SideMenu (6.4.7)
   - Simple-Networking (0.3.7)
   - SimpleKeychain (0.11.0)
   - SnapKit (5.0.1)
@@ -151,7 +150,6 @@ DEPENDENCIES:
   - lottie-ios
   - MBRadioButton
   - NotificationBannerSwift (~> 3.0.0)
-  - SideMenu (~> 6.0)
   - Simple-Networking (~> 0.3.7)
   - SimpleKeychain
   - SwiftLint
@@ -190,7 +188,6 @@ SPEC REPOS:
     - NotificationBannerSwift
     - PromisesObjC
     - Protobuf
-    - SideMenu
     - Simple-Networking
     - SimpleKeychain
     - SnapKit
@@ -229,12 +226,11 @@ SPEC CHECKSUMS:
   NotificationBannerSwift: 713e20f21b6105f4a36a00e5d9fa414a930d3d8e
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
-  SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   Simple-Networking: 5638d9895a51f58d8def21f84b49e8a4aee0c7d6
   SimpleKeychain: 2c135c65e64cd4e7df7ec418407be83ee07ba1c2
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 7d0e29c3bc01531f6ae19b69a90ad2b7ff1f248e
+PODFILE CHECKSUM: c25e44d67f92bfb92bb3a1f042dab5f51e19d85f
 
 COCOAPODS: 1.8.4

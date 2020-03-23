@@ -56,7 +56,7 @@ class EmailLoginViewController: UIViewController {
             
             switch status {
             case .loginReady:
-                self.router?.transition(to: .home)
+                self.router?.transition(to: .backToPresenter)
                 
             case .error(let error):
                 self.showError(message: error)

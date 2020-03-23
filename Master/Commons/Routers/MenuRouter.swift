@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 
 enum MenuRouterTransitions {
     case menu
@@ -20,14 +19,13 @@ enum MenuRouterTransitions {
 
 class MenuRouter: RouterBase<MenuRouterTransitions> {
     // MARK: - Properties
-    private var sideMenuNavigationController: SideMenuNavigationController?
-    let navigationController: UINavigationController
+    private let navigationController: MNavigationController
     
     // MARK: - Life Cycle
-    override init(rootViewController: UIViewController) {
-        self.navigationController = (rootViewController as? UINavigationController) ?? UINavigationController()
+    init(navigationController: MNavigationController) {
+        self.navigationController = navigationController
         
-        super.init(rootViewController: rootViewController)
+        super.init()
     }
     
     // MARK: - Public Methods
@@ -40,7 +38,9 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
             handleLegalTransition()
             
         case .ordersList:
-            handleOrdersTransition()
+            handleAuthOption { [weak self] in
+                self?.handleOrdersTransition()
+            }
             
         case .logout:
             handleLogoutTransition()
@@ -50,45 +50,30 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
             
         case .help:
             handleHelpTransition()
-            
         }
     }
     
-    deinit {
-        sideMenuNavigationController = nil
+    // MARK: - Private Methods
+    private func handleAuthOption(onAuthenticated: @escaping CompletionBlock) {
+        let loginRouter = MainRouter(navigationController: navigationController)
+        loginRouter.transition(to: .main(onComplete: onAuthenticated))
     }
     
-    // MARK: - Private Methods
     private func handleMenuTransition() {
-        let menuVC = MenuViewController(router: self)
+        let menuVC = MenuViewController(viewModel: MenuViewModel(), router: self)
+        menuVC.modalPresentationStyle = .overCurrentContext
         
-        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: menuVC)
-        leftMenuNavigationController.setNavigationBarHidden(true, animated: false)
-        leftMenuNavigationController.menuWidth = UIScreen.main.bounds.width - (UIScreen.main.bounds.width / 4)
-        leftMenuNavigationController.statusBarEndAlpha = 0
-        
-        SideMenuManager.default.leftMenuNavigationController = leftMenuNavigationController
-        SideMenuManager.default.leftMenuNavigationController?.presentationStyle = .menuSlideIn
-        SideMenuManager.default.leftMenuNavigationController?.presentationStyle.presentingEndAlpha = 0.5
-        
-        sideMenuNavigationController = leftMenuNavigationController
-        navigationController.present(leftMenuNavigationController, animated: true, completion: nil)
+        navigationController.topViewController?.present(menuVC, animated: false, completion: nil)
     }
     
     private func handleLegalTransition() {
         let viewController = LegalViewController()
-        
-        sideMenuNavigationController?.dismiss(animated: true) { [weak self] in
-            self?.navigationController.pushViewController(viewController, animated: true)
-        }
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleOrdersTransition() {
-        let ordersRouter = OrdersRouter(rootViewController: navigationController)
-        
-        sideMenuNavigationController?.dismiss(animated: true) {
-            ordersRouter.transition(to: .orders)
-        }
+        let ordersRouter = OrdersRouter(navigationController: navigationController)
+        ordersRouter.transition(to: .orders)
     }
     
     private func handleLogoutTransition() {

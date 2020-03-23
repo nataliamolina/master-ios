@@ -16,13 +16,21 @@ class SplashScreenViewController: UIViewController {
     @IBOutlet private weak var animationView: UIView!
     
     // MARK: - Properties
-    private var router: RouterBase<MainRouterTransitions> {
-        return MainRouter(rootViewController: self)
-    }
-    
-    private let viewModel = SplashScreenViewModel()
+    private let router: RouterBase<MainRouterTransitions>
+    private let viewModel: SplashScreenViewModel
     
     // MARK: - Life Cycle
+    init(viewModel: SplashScreenViewModel, router: RouterBase<MainRouterTransitions>) {
+        self.viewModel = viewModel
+        self.router = router
+        
+        super.init(nibName: String(describing: SplashScreenViewController.self), bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,26 +58,15 @@ class SplashScreenViewController: UIViewController {
     private func setupBindings() {
         viewModel.status.listen { [weak self] status in
             switch status {
-            case .preloadReady(let hasSession):
-                self?.route(toHome: hasSession)
-                
+            case .preloadReady, .tokenExpired:
+                self?.router.transition(to: .home)
+
             case .error(let error):
                 self?.showError(message: error)
-                
-            case .tokenExpired:
-                self?.route(toHome: false)
                 
             default:
                 return
             }
-        }
-    }
-    
-    private func route(toHome: Bool) {
-        if toHome {
-            router.transition(to: .home)
-        } else {
-            router.transition(to: .main)
         }
     }
 }

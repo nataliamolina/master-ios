@@ -8,6 +8,7 @@
 
 import Foundation
 import EasyBinding
+import AuthenticationServices
 
 enum MainViewModelStatus {
     case gmailLoginReady
@@ -15,7 +16,7 @@ enum MainViewModelStatus {
     case error(error: String?)
 }
 
-class MainViewModel {
+class MainViewModel: NSObject {
     // MARK: - Properties
     let googleClientID = "693225996301-dfpnfbpnkv5p7tomsdh69u94afuud6mt.apps.googleusercontent.com"
     let videoName = "login_bg_video_new"
@@ -32,9 +33,9 @@ class MainViewModel {
         
         self.service = service ?? defaultService
         
-        isLoading.listen { [weak self] value in
-            self?.controlsEnabled.value = !value
-        }
+        super.init()
+        
+        setupControlState()
     }
     
     // MARK: - Public Methods
@@ -68,7 +69,23 @@ class MainViewModel {
         }
     }
     
+    @available(iOS 13.0, *)
+    func getAppleAuthorizationRequest() -> ASAuthorizationAppleIDRequest {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        
+        request.requestedScopes = [.fullName, .email]
+        
+        return request
+    }
+    
     // MARK: - Private Methods
+    
+    private func setupControlState() {
+        isLoading.listen { [weak self] value in
+            self?.controlsEnabled.value = !value
+        }
+    }
     
     private func fetchUserInformation() {
         service.fetchUserSession { [weak self] (response: User?, error: CMError?) in
@@ -87,5 +104,21 @@ class MainViewModel {
     
     private func saveSessionWith(user: User) {
         Session.shared.profile = user.asUserProfile
+    }
+}
+
+// MARK: - ASAuthorizationControllerDelegate
+@available(iOS 13.0, *)
+extension MainViewModel: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            let userIdentifier = appleIDCredential.user
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        // Handle error.
     }
 }

@@ -9,11 +9,5 @@
 import UIKit
 
 class RouterBase<T> {
-    var rootViewController: UIViewController
-    
-    init(rootViewController: UIViewController) {
-        self.rootViewController = rootViewController
-    }
-    
     func transition(to transition: T) {}
 }

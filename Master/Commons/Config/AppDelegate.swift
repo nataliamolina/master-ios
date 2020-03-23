@@ -16,6 +16,7 @@ import Paymentez
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    private var appNavigationController = MNavigationController()
     var window: UIWindow?
     
     func application(_ application: UIApplication,
@@ -75,7 +76,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupInitialVC() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = SplashScreenViewController()
+        window?.rootViewController = SplashScreenViewController(viewModel: SplashScreenViewModel(),
+                                                                router: MainRouter(navigationController: appNavigationController))
         window?.makeKeyAndVisible()
     }
     

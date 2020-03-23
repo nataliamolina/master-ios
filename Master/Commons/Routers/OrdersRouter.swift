@@ -19,13 +19,13 @@ enum OrdersRouterTransitions {
 
 class OrdersRouter: RouterBase<OrdersRouterTransitions> {
     // MARK: - Properties
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
     
     // MARK: - Life Cycle
-    override init(rootViewController: UIViewController) {
-        self.navigationController = (rootViewController as? UINavigationController) ?? UINavigationController()
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
         
-        super.init(rootViewController: rootViewController)
+        super.init()
     }
     
     // MARK: - Public Methods
@@ -70,7 +70,7 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
     }
     
     private func handlePaymentDoneTransition() {
-        let checkoutRouter = CheckoutRouter(rootViewController: navigationController)
+        let checkoutRouter = CheckoutRouter(navigationController: navigationController)
         
         navigationController.popToRootViewController {
             checkoutRouter.transition(to: .successOrder)

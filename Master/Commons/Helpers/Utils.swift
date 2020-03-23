@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias CompletionBlock = () -> Void
+
 struct Utils {
     static var plist: NSDictionary? {
         guard let path = Bundle.main.path(forResource: "Info", ofType: "plist") else {

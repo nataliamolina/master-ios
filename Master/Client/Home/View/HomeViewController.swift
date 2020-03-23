@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 import Hero
 
 class HomeViewController: UIViewController {
@@ -114,7 +113,7 @@ class HomeViewController: UIViewController {
         
         showSuccess(message: pendingNotification.message)
         pushNotificationsRouter = PushNotificationsRouter(notification: pendingNotification)
-        pushNotificationsRouter?.ordersRouter = OrdersRouter(rootViewController: navController)
+        pushNotificationsRouter?.ordersRouter = OrdersRouter(navigationController: navController)
         pushNotificationsRouter?.navigateToPushNotification()
     }
     

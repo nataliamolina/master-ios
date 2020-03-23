@@ -373,6 +373,9 @@
 		2C671726241DC63A00C86531 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671725241DC63A00C86531 /* ImageUploader.swift */; };
 		2C671727241DC63A00C86531 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671725241DC63A00C86531 /* ImageUploader.swift */; };
 		2C671728241DC63A00C86531 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C671725241DC63A00C86531 /* ImageUploader.swift */; };
+		2C69EA122429290700CD581E /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA112429290700CD581E /* MNavigationController.swift */; };
+		2C69EA132429290700CD581E /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA112429290700CD581E /* MNavigationController.swift */; };
+		2C69EA142429290700CD581E /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA112429290700CD581E /* MNavigationController.swift */; };
 		2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
 		2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */; };
 		2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8E23F4E9E900267899 /* LoginRequest.swift */; };
@@ -903,6 +906,7 @@
 		2C67171D241DC49700C86531 /* ProviderPhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderPhotoRequest.swift; sourceTree = "<group>"; };
 		2C671721241DC58900C86531 /* ProviderPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderPhotoViewModel.swift; sourceTree = "<group>"; };
 		2C671725241DC63A00C86531 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		2C69EA112429290700CD581E /* MNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNavigationController.swift; sourceTree = "<group>"; };
 		2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoints.swift; sourceTree = "<group>"; };
 		2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		2C73AE8E23F4E9E900267899 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -2333,6 +2337,7 @@
 				2CFF4DAE23F9AE560024B3F1 /* MImageView.swift */,
 				2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */,
 				2CC7312E24045586006FF85D /* XibView.swift */,
+				2C69EA112429290700CD581E /* MNavigationController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3211,6 +3216,7 @@
 				2C3E510D240C79B500873495 /* HomeEndpoints.swift in Sources */,
 				2C3E510E240C79B500873495 /* MenuRouter.swift in Sources */,
 				2C3E510F240C79B500873495 /* ServerResponse.swift in Sources */,
+				2C69EA132429290700CD581E /* MNavigationController.swift in Sources */,
 				2C3E5110240C79B500873495 /* MAnimatedTableViewCell.swift in Sources */,
 				2C3E5111240C79B500873495 /* MainViewController.swift in Sources */,
 				2C3E5112240C79B500873495 /* MenuViewModel.swift in Sources */,
@@ -3415,6 +3421,7 @@
 				2CC3DC472411EBCC001E76B2 /* HomeEndpoints.swift in Sources */,
 				2CC3DC482411EBCC001E76B2 /* MenuRouter.swift in Sources */,
 				2CC3DC492411EBCC001E76B2 /* ServerResponse.swift in Sources */,
+				2C69EA122429290700CD581E /* MNavigationController.swift in Sources */,
 				2CC3DC4A2411EBCC001E76B2 /* MAnimatedTableViewCell.swift in Sources */,
 				2CC3DC4B2411EBCC001E76B2 /* MainViewController.swift in Sources */,
 				2CC3DC4C2411EBCC001E76B2 /* MenuViewModel.swift in Sources */,
@@ -3619,6 +3626,7 @@
 				2CD6715E240B83E9007917E8 /* MenuRouter.swift in Sources */,
 				2C8C6C6A23F4BB6700FE06BE /* ServerResponse.swift in Sources */,
 				2C99B27F24005929003525B9 /* MAnimatedTableViewCell.swift in Sources */,
+				2C69EA142429290700CD581E /* MNavigationController.swift in Sources */,
 				A5F30D4823B4CB48005258A8 /* MainViewController.swift in Sources */,
 				2C7E7FB123F8743E00D7835E /* MenuViewModel.swift in Sources */,
 				2C73AE9723F4FD5700267899 /* Result.swift in Sources */,
@@ -4002,7 +4010,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "master-prov-dev";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -4038,7 +4046,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "master-prov-adhoc";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
