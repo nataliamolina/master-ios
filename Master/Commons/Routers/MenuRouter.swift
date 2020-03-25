@@ -77,7 +77,8 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     }
     
     private func handleLogoutTransition() {
-        navigationController.dismiss(animated: true, completion: nil)
+        let mainRouter = MainRouter(navigationController: MNavigationController())
+        mainRouter.transition(to: .asRoot)
     }
     
     private func handleHelpTransition() {

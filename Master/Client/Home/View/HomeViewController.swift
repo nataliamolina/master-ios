@@ -107,7 +107,7 @@ class HomeViewController: UIViewController {
     private func handlePushNotificationIfNeeded(pendingNotification: PushNotification) {
         guard
             let pendingNotification = PushNotifications.shared.pendingNotification,
-            let navController = navigationController else {
+            let navController = navigationController as? MNavigationController else {
                 return
         }
         

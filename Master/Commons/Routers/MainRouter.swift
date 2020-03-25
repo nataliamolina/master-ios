@@ -16,6 +16,7 @@ enum MainRouterTransitions {
     case backToPresenter
     case home
     case close
+    case asRoot
 }
 
 class MainRouter: RouterBase<MainRouterTransitions> {
@@ -57,10 +58,23 @@ class MainRouter: RouterBase<MainRouterTransitions> {
             
         case .close:
             navigationController.dismiss(animated: true, completion: nil)
+            
+        case .asRoot:
+            handleAsRootTransition()
         }
     }
     
     // MARK: - Private Methods
+    private func handleAsRootTransition() {
+        let viewController = MainViewController()
+        viewController.router = MainRouter(navigationController: mainNavigationController)
+        
+        mainNavigationController.setViewControllers([viewController], animated: true)
+        mainNavigationController.interactivePopGestureRecognizer?.delegate = viewController
+        mainNavigationController.interactivePopGestureRecognizer?.isEnabled = true
+        
+        Master.setRootVC(navigationController: mainNavigationController)
+    }
     
     private func handleMainTransition(onComplete: CompletionBlock?) {
         self.onComplete = onComplete

@@ -103,16 +103,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
         navigationController.hero.isEnabled = true
         navigationController.hero.modalAnimationType = .zoom
         
-        guard let window = UIApplication.shared.keyWindow else {
-            return
-        }
-
-        let options: UIView.AnimationOptions = .transitionCrossDissolve
-        let duration: TimeInterval = 0.3
-
-        window.rootViewController = navigationController
-        
-        UIView.transition(with: window, duration: duration, options: options, animations: {}, completion: nil)
+        Master.setRootVC(navigationController: navigationController)
     }
     
     private func handleCategoryDetailTransition(serviceId: Int, serviceImageUrl: String) {
@@ -145,10 +136,6 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleProviderTransition() {
-        guard let topVC = navigationController.topViewController else {
-            return
-        }
-        
         let router = ProviderRouter(navigationController: navigationController)
         router.transition(to: .main)
     }

@@ -14,15 +14,15 @@ enum OrdersRouterTransitions {
     case rateOrder(viewModel: RateViewModel)
     case payment(viewModel: PaymentViewModel)
     case paymentDone
-    case endFlow(onComplete: (() -> Void)?)
+    case endFlow(onComplete: CompletionBlock?)
 }
 
 class OrdersRouter: RouterBase<OrdersRouterTransitions> {
     // MARK: - Properties
-    private let navigationController: UINavigationController
+    private let navigationController: MNavigationController
     
     // MARK: - Life Cycle
-    init(navigationController: UINavigationController) {
+    init(navigationController: MNavigationController) {
         self.navigationController = navigationController
         
         super.init()

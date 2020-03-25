@@ -14,6 +14,7 @@ enum CheckoutViewModelStatus {
     case error(error: String?)
     case fieldError(name: String)
     case orderSucceded
+    case needsAuthentication
 }
 
 private enum Sections: Int {
@@ -172,6 +173,12 @@ class CheckoutViewModel {
                                    servicesIds: getCartIds(),
                                    orderDate: jsonDate,
                                    time: getFormattedTimeFrom(date: date))
+        
+        if !Session.shared.isLoggedIn {
+            status.value = .needsAuthentication
+            
+            return
+        }
         
         loadingState(true)
         

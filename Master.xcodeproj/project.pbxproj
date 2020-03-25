@@ -376,6 +376,9 @@
 		2C69EA122429290700CD581E /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA112429290700CD581E /* MNavigationController.swift */; };
 		2C69EA132429290700CD581E /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA112429290700CD581E /* MNavigationController.swift */; };
 		2C69EA142429290700CD581E /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA112429290700CD581E /* MNavigationController.swift */; };
+		2C69EA1A24297AED00CD581E /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA1924297AED00CD581E /* Master.swift */; };
+		2C69EA1B24297AED00CD581E /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA1924297AED00CD581E /* Master.swift */; };
+		2C69EA1C24297AED00CD581E /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C69EA1924297AED00CD581E /* Master.swift */; };
 		2C73AE8B23F4E93A00267899 /* EmailLoginEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */; };
 		2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */; };
 		2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE8E23F4E9E900267899 /* LoginRequest.swift */; };
@@ -907,6 +910,7 @@
 		2C671721241DC58900C86531 /* ProviderPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderPhotoViewModel.swift; sourceTree = "<group>"; };
 		2C671725241DC63A00C86531 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		2C69EA112429290700CD581E /* MNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNavigationController.swift; sourceTree = "<group>"; };
+		2C69EA1924297AED00CD581E /* Master.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
 		2C73AE8A23F4E93A00267899 /* EmailLoginEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginEndpoints.swift; sourceTree = "<group>"; };
 		2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		2C73AE8E23F4E9E900267899 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
@@ -2251,6 +2255,7 @@
 				A5F30D3F23B4C890005258A8 /* Bases */,
 				A58132B623B4C7570032FC8B /* LaunchScreen.storyboard */,
 				A5F30D3E23B4C80B005258A8 /* Config */,
+				2C69EA1924297AED00CD581E /* Master.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -3249,6 +3254,7 @@
 				2C2DCB1E241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2CA96F91240F5F850056C2F0 /* PaymentRequest.swift in Sources */,
 				2C3E5125240C79B500873495 /* ProviderListViewModel.swift in Sources */,
+				2C69EA1B24297AED00CD581E /* Master.swift in Sources */,
 				2C3E5126240C79B500873495 /* ProviderCell.swift in Sources */,
 				2C3E5127240C79B500873495 /* CheckoutFieldCellViewModel.swift in Sources */,
 				2C3E5128240C79B500873495 /* ProviderProfileCell.swift in Sources */,
@@ -3454,6 +3460,7 @@
 				2C2DCB1D241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2CC3DC5F2411EBCC001E76B2 /* PaymentRequest.swift in Sources */,
 				2CC3DC602411EBCC001E76B2 /* ProviderListViewModel.swift in Sources */,
+				2C69EA1A24297AED00CD581E /* Master.swift in Sources */,
 				2CC3DC612411EBCC001E76B2 /* ProviderCell.swift in Sources */,
 				2CC3DC622411EBCC001E76B2 /* CheckoutFieldCellViewModel.swift in Sources */,
 				2CC3DC632411EBCC001E76B2 /* ProviderProfileCell.swift in Sources */,
@@ -3659,6 +3666,7 @@
 				2C2DCB1F241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2C7E7FC823F8A17200D7835E /* ProviderCellViewModel.swift in Sources */,
 				2C7E7FBF23F89DF200D7835E /* ProviderListViewModel.swift in Sources */,
+				2C69EA1C24297AED00CD581E /* Master.swift in Sources */,
 				2C7E7FC523F8A0A600D7835E /* ProviderCell.swift in Sources */,
 				2CC7313B24047401006FF85D /* CheckoutFieldCellViewModel.swift in Sources */,
 				2CFF4DA423F99D1C0024B3F1 /* ProviderProfileCell.swift in Sources */,

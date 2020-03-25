@@ -69,6 +69,10 @@ class HomeViewModel {
     }
     
     func updatePushToken() {
+        guard Session.shared.isLoggedIn else {
+            return
+        }
+        
         InstanceID.instanceID().instanceID { [weak self] (result, _) in
             guard let token = result?.token else {
                 return
@@ -81,6 +85,10 @@ class HomeViewModel {
     // MARK: - Private Methods
     
     private func fetchOrders() {
+        guard Session.shared.isLoggedIn else {
+            return
+        }
+        
         ordersService.fetchOrders { [weak self] (response: [Order]?, error: CMError?) in
             guard let models = response, error == nil else {
                 return

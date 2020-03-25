@@ -10,6 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var topConstraint: NSLayoutConstraint!
     @IBOutlet private weak var dismissAreaView: UIView!
     @IBOutlet private weak var mainContainerViewTrailingConstraint: NSLayoutConstraint!
     @IBOutlet private weak var mainContainerView: UIView!
@@ -72,6 +73,9 @@ class MenuViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI(firstName: String, imageUrl: String) {
+        let topOffset: CGFloat = 20
+        topConstraint.constant = UIApplication.shared.statusBarFrame.height + topOffset
+        
         userNamesLabel.text = firstName
         userImageView.kf.setImage(with: URL(string: imageUrl), placeholder: UIImage.avatar)
         

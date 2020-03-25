@@ -13,6 +13,7 @@
                 <outlet property="dismissAreaView" destination="PgA-Bc-dNh" id="9XY-fk-Kbw"/>
                 <outlet property="mainContainerView" destination="qJ0-qT-olc" id="9YO-BT-4Gb"/>
                 <outlet property="mainContainerViewTrailingConstraint" destination="nzB-q0-Xrb" id="WAb-s1-Clo"/>
+                <outlet property="topConstraint" destination="bIe-6E-Jo5" id="6iz-eD-Mv2"/>
                 <outlet property="userImageView" destination="2Rc-8W-df5" id="cTo-49-1DB"/>
                 <outlet property="userNamesLabel" destination="h38-xt-LKa" id="Qwb-sm-ysz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

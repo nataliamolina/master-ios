@@ -32,6 +32,10 @@ class Session {
         }
     }
     
+    var isLoggedIn: Bool {
+        return token?.isEmpty == false
+    }
+    
     // MARK: - Life Cycle
     private init() {}
     

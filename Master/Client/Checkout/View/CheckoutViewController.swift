@@ -36,6 +36,8 @@ class CheckoutViewController: UIViewController {
     }
     
     private func setupUI() {
+        // FIXME
+        title = "Reserva"
         disableTitle()
         
         setupBindings()
@@ -64,6 +66,9 @@ class CheckoutViewController: UIViewController {
             case .orderSucceded:
                 self?.router.transition(to: .successOrder)
                 
+            case .needsAuthentication:
+                self?.handlePendingAuthentication()
+                
             default:
                 return
             }
@@ -72,6 +77,12 @@ class CheckoutViewController: UIViewController {
         viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
         }
+    }
+    
+    private func handlePendingAuthentication() {
+        router.transition(to: .login { [weak self] in
+            self?.viewModel.performProviderReservation()
+        })
     }
     
     private func showCityDialog() {

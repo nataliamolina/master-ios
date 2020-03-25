@@ -13,15 +13,16 @@ enum CheckoutRouterTransitions {
     case successOrder
     case ordersList
     case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate?)
+    case login(onComplete: CompletionBlock)
 }
 
 class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
     // MARK: - Properties
     private var successOrderViewControllerRef: SuccessOrderViewController?
-    private let navigationController: UINavigationController
+    private let navigationController: MNavigationController
     
     // MARK: - Life Cycle
-    init(navigationController: UINavigationController) {
+    init(navigationController: MNavigationController) {
         self.navigationController = navigationController
         
         super.init()
@@ -41,10 +42,18 @@ class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
             
         case .ordersList:
             handleOrdersTransition()
+            
+        case .login(let onComplete):
+            handleLoginTransition(onComplete: onComplete)
         }
     }
     
     // MARK: - Private Methods
+    private func handleLoginTransition(onComplete: @escaping CompletionBlock) {
+        let loginFlowRouter = MainRouter(navigationController: navigationController)
+        loginFlowRouter.transition(to: .main(onComplete: onComplete))
+    }
+    
     private func handleCheckoutTransition(viewModel: CheckoutViewModel) {
         let viewController = CheckoutViewController(router: self, viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
