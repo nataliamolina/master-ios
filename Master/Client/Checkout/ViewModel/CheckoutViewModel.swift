@@ -153,7 +153,7 @@ class CheckoutViewModel {
                 return
         }
         
-        performPayment(address: address, notes: notes, jsonDate: json, date: date)
+         performPayment(address: address, notes: notes, jsonDate: json, date: date)
     }
     
     // MARK: - Private Methods

@@ -56,6 +56,12 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     
     // MARK: - Private Methods
     private func handleAuthOption(onAuthenticated: @escaping CompletionBlock) {
+        if Session.shared.isLoggedIn {
+            onAuthenticated()
+            
+            return
+        }
+        
         self.onAuthenticated = onAuthenticated
         
         let loginRouter = MainRouter(navigationController: navigationController, delegate: self)
