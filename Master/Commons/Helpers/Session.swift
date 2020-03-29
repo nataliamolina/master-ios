@@ -23,8 +23,9 @@ class Session {
     
     var token: String? {
         set(newValue) {
-            storage.save(value: newValue ?? "",
-                         key: SessionKeys.sessionToken.rawValue)
+            newValue != nil ?
+                storage.save(value: newValue ?? "", key: SessionKeys.sessionToken.rawValue) :
+                storage.delete(key: SessionKeys.sessionToken.rawValue)
         }
         get {
             let value: String? = storage.get(key: SessionKeys.sessionToken.rawValue)

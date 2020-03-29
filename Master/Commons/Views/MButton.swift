@@ -24,16 +24,16 @@ class MButton: UIButton {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        UIView.animate(withDuration: touchAnimationTime) {
-            self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        UIView.animate(withDuration: touchAnimationTime) { [weak self] in
+            self?.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
-        UIView.animate(withDuration: touchAnimationTime) {
-            self.transform = CGAffineTransform(scaleX: 1, y: 1)
+        UIView.animate(withDuration: touchAnimationTime) { [weak self] in
+            self?.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
     }
     

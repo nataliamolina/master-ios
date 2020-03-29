@@ -25,14 +25,25 @@ class EmailLoginViewController: UIViewController {
     
     @IBAction private func legalButtonAction() {
         dismissKeyboard()
-        router?.transition(to: .legal)
+        router.transition(to: .legal)
     }
     
     // MARK: - Properties
-    private let viewModel = EmailLoginViewModel()
-    var router: RouterBase<MainRouterTransitions>?
+    private let viewModel: EmailLoginViewModel
+    private let router: RouterBase<MainRouterTransitions>
     
     // MARK: - Life Cycle
+    init(router: RouterBase<MainRouterTransitions>, viewModel: EmailLoginViewModel) {
+        self.router = router
+        self.viewModel = viewModel
+        
+        super.init(nibName: String(describing: EmailLoginViewController.self), bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +67,7 @@ class EmailLoginViewController: UIViewController {
             
             switch status {
             case .loginReady:
-                self.router?.transition(to: .backToPresenter)
+                self.router.transition(to: .backToPresenter)
                 
             case .error(let error):
                 self.showError(message: error)

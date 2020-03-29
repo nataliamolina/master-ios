@@ -90,8 +90,8 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     }
     
     private func handleEmailLoginTransition() {
-        let viewController = EmailLoginViewController()
-        viewController.router = self
+        let viewController = EmailLoginViewController(router: MainRouter(navigationController: navigationController),
+                                                      viewModel: EmailLoginViewModel())
         
         navigationController.pushViewController(viewController, animated: true)
     }
