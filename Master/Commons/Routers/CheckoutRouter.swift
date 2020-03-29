@@ -11,7 +11,6 @@ import UIKit
 enum CheckoutRouterTransitions {
     case checkout(viewModel: CheckoutViewModel)
     case successOrder
-    case ordersList
     case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate?)
     case login(onComplete: CompletionBlock)
 }
@@ -20,12 +19,17 @@ class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
     // MARK: - Properties
     private var successOrderViewControllerRef: SuccessOrderViewController?
     private let navigationController: MNavigationController
-    
+    private var onAuthenticated: CompletionBlock?
+    private let loginFlowRouter: MainRouter
+
     // MARK: - Life Cycle
     init(navigationController: MNavigationController) {
         self.navigationController = navigationController
-        
+        self.loginFlowRouter = MainRouter(navigationController: navigationController, delegate: nil)
+
         super.init()
+        
+        self.loginFlowRouter.delegate = self
     }
     
     // MARK: - Public Methods
@@ -40,9 +44,6 @@ class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
         case .successOrder:
             handleSuccessOrderTransition()
             
-        case .ordersList:
-            handleOrdersTransition()
-            
         case .login(let onComplete):
             handleLoginTransition(onComplete: onComplete)
         }
@@ -50,8 +51,9 @@ class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
     
     // MARK: - Private Methods
     private func handleLoginTransition(onComplete: @escaping CompletionBlock) {
-        let loginFlowRouter = MainRouter(navigationController: navigationController)
-        loginFlowRouter.transition(to: .main(onComplete: onComplete))
+        self.onAuthenticated = onComplete
+        
+        loginFlowRouter.transition(to: .main)
     }
     
     private func handleCheckoutTransition(viewModel: CheckoutViewModel) {
@@ -66,7 +68,7 @@ class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
     }
     
     private func handleSuccessOrderTransition() {
-        let viewController = SuccessOrderViewController(router: self)
+        let viewController = SuccessOrderViewController(router: HomeRouter(navigationController: MNavigationController()))
         viewController.modalPresentationStyle = .fullScreen
         viewController.hero.isEnabled = true
         viewController.hero.modalAnimationType = .zoom
@@ -84,5 +86,16 @@ class CheckoutRouter: RouterBase<CheckoutRouterTransitions> {
             self?.navigationController.popToRootViewController(animated: true)
             self?.successOrderViewControllerRef = nil
         })
+    }
+}
+
+// MARK: - MainRouterDelegate
+extension CheckoutRouter: MainRouterDelegate {
+    func authDidEnd(withSuccess: Bool) {
+        guard withSuccess else {
+            return
+        }
+        
+        onAuthenticated?()
     }
 }

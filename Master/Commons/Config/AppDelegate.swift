@@ -77,7 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupInitialVC() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = SplashScreenViewController(viewModel: SplashScreenViewModel(),
-                                                                router: MainRouter(navigationController: appNavigationController))
+                                                                router: MainRouter(navigationController: appNavigationController,
+                                                                                   delegate: nil))
         window?.makeKeyAndVisible()
     }
     

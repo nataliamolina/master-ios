@@ -9,7 +9,7 @@
 import UIKit
 
 enum MainRouterTransitions {
-    case main(onComplete: CompletionBlock?)
+    case main
     case emailLogin
     case register
     case legal
@@ -19,16 +19,21 @@ enum MainRouterTransitions {
     case asRoot
 }
 
+protocol MainRouterDelegate: class {
+    func authDidEnd(withSuccess: Bool)
+}
+
 class MainRouter: RouterBase<MainRouterTransitions> {
     // MARK: - Properties
     private let navigationController: MNavigationController
     private let mainNavigationController: MNavigationController
-    private var onComplete: CompletionBlock?
+    weak var delegate: MainRouterDelegate?
     
     // MARK: - Life Cycle
-    init(navigationController: MNavigationController) {
+    init(navigationController: MNavigationController, delegate: MainRouterDelegate?) {
         self.navigationController = navigationController
         self.mainNavigationController = MNavigationController()
+        self.delegate = delegate
         
         super.init()
     }
@@ -36,8 +41,8 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     // MARK: - Public Methods
     override func transition(to transition: MainRouterTransitions) {
         switch transition {
-        case .main(let onComplete):
-            handleMainTransition(onComplete: onComplete)
+        case .main:
+            handleMainTransition()
             
         case .emailLogin:
             handleEmailLoginTransition()
@@ -49,8 +54,10 @@ class MainRouter: RouterBase<MainRouterTransitions> {
             handleLegalTransition()
             
         case .backToPresenter:
-            navigationController.dismiss(animated: true) { [weak self] in
-                self?.onComplete?()
+            mainNavigationController.popToRootViewController { [weak self] in
+                self?.mainNavigationController.dismiss(animated: true) {
+                    self?.delegate?.authDidEnd(withSuccess: Session.shared.token != nil)
+                }
             }
             
         case .home:
@@ -66,8 +73,8 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     
     // MARK: - Private Methods
     private func handleAsRootTransition() {
-        let viewController = MainViewController()
-        viewController.router = MainRouter(navigationController: mainNavigationController)
+        let newRouter = MainRouter(navigationController: mainNavigationController, delegate: nil)
+        let viewController = MainViewController(router: newRouter, viewModel: MainViewModel())
         
         mainNavigationController.setViewControllers([viewController], animated: true)
         mainNavigationController.interactivePopGestureRecognizer?.delegate = viewController
@@ -76,11 +83,8 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         Master.setRootVC(navigationController: mainNavigationController)
     }
     
-    private func handleMainTransition(onComplete: CompletionBlock?) {
-        self.onComplete = onComplete
-        
-        let viewController = MainViewController()
-        viewController.router = MainRouter(navigationController: mainNavigationController)
+    private func handleMainTransition() {
+        let viewController = MainViewController(router: self, viewModel: MainViewModel())
         
         mainNavigationController.setViewControllers([viewController], animated: true)
         mainNavigationController.interactivePopGestureRecognizer?.delegate = viewController
@@ -90,10 +94,9 @@ class MainRouter: RouterBase<MainRouterTransitions> {
     }
     
     private func handleEmailLoginTransition() {
-        let viewController = EmailLoginViewController(router: MainRouter(navigationController: navigationController),
-                                                      viewModel: EmailLoginViewModel())
+        let viewController = EmailLoginViewController(router: self, viewModel: EmailLoginViewModel())
         
-        navigationController.pushViewController(viewController, animated: true)
+        mainNavigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleHomeTransition() {
@@ -106,13 +109,13 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         let viewController = RegisterViewController()
         viewController.router = self
         
-        navigationController.pushViewController(viewController, animated: true)
+        mainNavigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleLegalTransition() {
         let viewController = LegalViewController()
         viewController.customTitle = "legal.title".localized
         
-        navigationController.pushViewController(viewController, animated: true)
+        mainNavigationController.pushViewController(viewController, animated: true)
     }
 }

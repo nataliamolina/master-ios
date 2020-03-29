@@ -15,11 +15,11 @@ class SuccessOrderViewController: UIViewController {
     
     // MARK: - UI Actions
     @IBAction func continueButtonAction() {
-        router.transition(to: .ordersList)
+        router.transition(to: .home)
     }
     
     // MARK: - Properties
-    private let router: RouterBase<CheckoutRouterTransitions>
+    private let router: RouterBase<HomeRouterTransitions>
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class SuccessOrderViewController: UIViewController {
     
     // MARK: - Life Cycle
     
-    init(router: RouterBase<CheckoutRouterTransitions>) {
+    init(router: RouterBase<HomeRouterTransitions>) {
         self.router = router
         
         super.init(nibName: String(describing: SuccessOrderViewController.self), bundle: nil)

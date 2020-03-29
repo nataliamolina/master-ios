@@ -24,10 +24,12 @@ enum HomeRouterTransitions {
 class HomeRouter: RouterBase<HomeRouterTransitions> {
     // MARK: - Properties
     private let navigationController: MNavigationController
-    
+    private let menuRouter: MenuRouter
+
     // MARK: - Life Cycle
     init(navigationController: MNavigationController) {
         self.navigationController = navigationController
+        self.menuRouter = MenuRouter(navigationController: navigationController)
         
         super.init()
         
@@ -93,7 +95,6 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleMenuTransition() {
-        let menuRouter = MenuRouter(navigationController: navigationController)
         menuRouter.transition(to: .menu)
     }
     

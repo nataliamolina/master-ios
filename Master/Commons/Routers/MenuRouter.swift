@@ -20,6 +20,7 @@ enum MenuRouterTransitions {
 class MenuRouter: RouterBase<MenuRouterTransitions> {
     // MARK: - Properties
     private let navigationController: MNavigationController
+    private var onAuthenticated: CompletionBlock?
     
     // MARK: - Life Cycle
     init(navigationController: MNavigationController) {
@@ -55,8 +56,10 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     
     // MARK: - Private Methods
     private func handleAuthOption(onAuthenticated: @escaping CompletionBlock) {
-        let loginRouter = MainRouter(navigationController: navigationController)
-        loginRouter.transition(to: .main(onComplete: onAuthenticated))
+        self.onAuthenticated = onAuthenticated
+        
+        let loginRouter = MainRouter(navigationController: navigationController, delegate: self)
+        loginRouter.transition(to: .main)
     }
     
     private func handleMenuTransition() {
@@ -77,8 +80,8 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     }
     
     private func handleLogoutTransition() {
-        let mainRouter = MainRouter(navigationController: MNavigationController())
-        mainRouter.transition(to: .asRoot)
+        let mainRouter = HomeRouter(navigationController: MNavigationController())
+        mainRouter.transition(to: .home)
     }
     
     private func handleHelpTransition() {
@@ -87,5 +90,16 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
         }
         
         UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
+    }
+}
+
+// MARK: - MainRouterDelegate
+extension MenuRouter: MainRouterDelegate {
+    func authDidEnd(withSuccess: Bool) {
+        guard withSuccess else {
+            return
+        }
+        
+        onAuthenticated?()
     }
 }

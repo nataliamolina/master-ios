@@ -22,26 +22,37 @@ class MainViewController: UIViewController {
     
     // MARK: - UI References
     @IBAction func emailLoginButtonAction() {
-        router?.transition(to: .emailLogin)
+        router.transition(to: .emailLogin)
     }
     
     @IBAction func registerButtonAction() {
-        router?.transition(to: .register)
+        router.transition(to: .register)
     }
     
     @IBAction func closeButtonAction() {
-        router?.transition(to: .close)
+        router.transition(to: .close)
     }
     
     // MARK: - Properties
-    var router: RouterBase<MainRouterTransitions>?
+    private let router: RouterBase<MainRouterTransitions>
     private let heroTransition = HeroTransition()
     private var avPlayer: AVPlayer?
     private var avPlayerLayer: AVPlayerLayer?
     private var paused = false
-    private let viewModel = MainViewModel()
+    private let viewModel: MainViewModel
     
     // MARK: - Life Cycle
+    init(router: RouterBase<MainRouterTransitions>, viewModel: MainViewModel) {
+          self.router = router
+          self.viewModel = viewModel
+          
+          super.init(nibName: String(describing: MainViewController.self), bundle: nil)
+      }
+      
+      required init?(coder: NSCoder) {
+          fatalError("init(coder:) has not been implemented")
+      }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -132,7 +143,7 @@ class MainViewController: UIViewController {
             
             switch status {
             case .gmailLoginReady:
-                self.router?.transition(to: .backToPresenter)
+                self.router.transition(to: .backToPresenter)
                 
             case .error(let error):
                 self.showError(message: error)
