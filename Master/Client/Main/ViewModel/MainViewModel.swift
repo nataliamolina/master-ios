@@ -46,8 +46,7 @@ class MainViewModel: NSObject {
         
         isLoading.value = true
         
-        let request = GmailRequest(platformId: 1,
-                                   photoUrl: photoUrl,
+        let request = GmailRequest(photoUrl: photoUrl,
                                    id: id,
                                    gmailToken: gmailToken,
                                    email: email,
@@ -105,20 +104,50 @@ class MainViewModel: NSObject {
     private func saveSessionWith(user: User) {
         Session.shared.profile = user.asUserProfile
     }
+    
+    private func loginWithAppleId(id: String, firstName: String, lastName: String, email: String) {
+        isLoading.value = true
+        
+        let request = AppleSignInRequest(id: id, email: email, firstName: firstName, lastName: lastName)
+        
+        service.performAppleSignInRequest(request: request) { [weak self] (response: LoginResponse?, error: CMError?) in
+            self?.isLoading.value = false
+            
+            guard let authToken = response?.authToken, error == nil else {
+                self?.status.value = .error(error: error?.localizedDescription)
+                
+                return
+            }
+            
+            Session.shared.token = authToken
+            self?.service.saveAuthenticationToken(authToken)
+            self?.fetchUserInformation()
+        }
+    }
 }
 
 // MARK: - ASAuthorizationControllerDelegate
 @available(iOS 13.0, *)
 extension MainViewModel: ASAuthorizationControllerDelegate {
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            let userIdentifier = appleIDCredential.user
-            let fullName = appleIDCredential.fullName
-            let email = appleIDCredential.email
+    func authorizationController(controller: ASAuthorizationController,
+                                 didCompleteWithAuthorization authorization: ASAuthorization) {
+        
+        isLoading.value = false
+        
+        guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential else {
+            return
         }
+        
+        let fullName = appleIDCredential.fullName ?? PersonNameComponents()
+        let email = appleIDCredential.email ?? ""
+        
+        loginWithAppleId(id: appleIDCredential.user,
+                         firstName: fullName.givenName ?? "",
+                         lastName: fullName.familyName ?? "",
+                         email: email)
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        // Handle error.
+        isLoading.value = false
     }
 }

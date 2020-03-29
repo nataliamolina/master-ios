@@ -44,20 +44,20 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="753"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-lo-YFi">
-                            <rect key="frame" x="41.5" y="190" width="331" height="186.5"/>
+                            <rect key="frame" x="41.5" y="283.5" width="331" height="186"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="1fB-lo-YFi" secondAttribute="height" multiplier="16:9" id="ODn-3j-lHb"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin Pedidos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlW-ei-Sgs">
-                            <rect key="frame" x="20" y="384.5" width="374" height="22"/>
+                            <rect key="frame" x="20" y="477.5" width="374" height="22"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aún no tienes tu primer pedido" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZo-p1-D9a">
-                            <rect key="frame" x="20" y="414.5" width="374" height="20.5"/>
+                            <rect key="frame" x="20" y="507.5" width="374" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                         <constraint firstItem="hlW-ei-Sgs" firstAttribute="top" secondItem="1fB-lo-YFi" secondAttribute="bottom" constant="8" symbolic="YES" id="8zD-Ri-DaO"/>
                         <constraint firstItem="1fB-lo-YFi" firstAttribute="centerX" secondItem="Wt3-0O-dbb" secondAttribute="centerX" id="A6w-Je-kuh"/>
                         <constraint firstItem="hlW-ei-Sgs" firstAttribute="leading" secondItem="Wt3-0O-dbb" secondAttribute="leading" constant="20" id="AOj-jT-fJO"/>
-                        <constraint firstItem="1fB-lo-YFi" firstAttribute="bottom" secondItem="Wt3-0O-dbb" secondAttribute="centerY" id="BjZ-8O-l8Y"/>
+                        <constraint firstItem="1fB-lo-YFi" firstAttribute="centerY" secondItem="Wt3-0O-dbb" secondAttribute="centerY" id="BjZ-8O-l8Y"/>
                         <constraint firstItem="BZo-p1-D9a" firstAttribute="leading" secondItem="Wt3-0O-dbb" secondAttribute="leading" constant="20" id="Maf-Ls-kE4"/>
                         <constraint firstItem="BZo-p1-D9a" firstAttribute="top" secondItem="hlW-ei-Sgs" secondAttribute="bottom" constant="8" symbolic="YES" id="Mny-IT-ZJO"/>
                         <constraint firstAttribute="trailing" secondItem="hlW-ei-Sgs" secondAttribute="trailing" constant="20" id="dYe-WQ-kxI"/>

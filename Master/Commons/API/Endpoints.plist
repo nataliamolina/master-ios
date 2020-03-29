@@ -44,6 +44,8 @@
 	<string>register</string>
 	<key>gmailLogin</key>
 	<string>login/gmail</string>
+	<key>appleLogin</key>
+	<string>login/apple</string>
 	<key>emailLogin</key>
 	<string>login</string>
 	<key>getUserSession</key>

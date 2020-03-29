@@ -17,6 +17,9 @@ protocol EmailLoginServiceProtocol {
     func performGmailRequest(request: GmailRequest,
                              onComplete: @escaping (_ result: LoginResponse?, _ error: CMError?) -> Void)
     
+    func performAppleSignInRequest(request: AppleSignInRequest,
+                                   onComplete: @escaping (_ result: LoginResponse?, _ error: CMError?) -> Void)
+    
     func fetchUserSession(onComplete: @escaping (_ result: User?, _ error: CMError?) -> Void)
     func saveAuthenticationToken(_ token: String)
 }

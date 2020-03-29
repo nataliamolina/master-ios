@@ -91,6 +91,9 @@ class MainViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        signInButton.colorScheme = .light
+        signInButton.style = .standard
+        
         title = ""
         
         setupBindings()
@@ -110,16 +113,18 @@ class MainViewController: UIViewController {
     
     @available(iOS 13.0, *)
     private func setupAppelSignInButton() {
-        let authorizationButton = ASAuthorizationAppleIDButton()
+        let authorizationButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn,
+                                                               authorizationButtonStyle: .white)
         authorizationButton.addTarget(self, action: #selector(handleAppleIdRequest), for: .touchUpInside)
-        authorizationButton.cornerRadius = 10
-        authorizationButton.frame = CGRect(x: 0, y: 0, width: authorizationButton.frame.width, height: 47)
+        authorizationButton.cornerRadius = 5
         
-        stackView.insertArrangedSubview(authorizationButton, at: 4)
+        stackView.insertArrangedSubview(authorizationButton, at: 3)
     }
     
     @available(iOS 13.0, *)
     @objc private func handleAppleIdRequest() {
+        Loader.show()
+        
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         

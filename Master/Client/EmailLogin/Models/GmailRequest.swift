@@ -9,7 +9,7 @@
 import Foundation
 
 struct GmailRequest: Codable {
-    let platformId: Int
+    let platformId: Int = Utils.platformId
     let photoUrl: String
     let id: String
     let gmailToken: String

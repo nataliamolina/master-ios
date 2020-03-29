@@ -715,6 +715,9 @@
 		2CF6ABCD23F7B43000F9EF40 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABCC23F7B43000F9EF40 /* HomeViewModel.swift */; };
 		2CF6ABD323F7D84500F9EF40 /* ProviderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD123F7D84500F9EF40 /* ProviderListViewController.swift */; };
 		2CF6ABD423F7D84500F9EF40 /* ProviderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD223F7D84500F9EF40 /* ProviderListViewController.xib */; };
+		2CF6FA032431373E00F7E53B /* AppleSignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6FA022431373E00F7E53B /* AppleSignInRequest.swift */; };
+		2CF6FA042431373E00F7E53B /* AppleSignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6FA022431373E00F7E53B /* AppleSignInRequest.swift */; };
+		2CF6FA052431373E00F7E53B /* AppleSignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6FA022431373E00F7E53B /* AppleSignInRequest.swift */; };
 		2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4D9D23F99A980024B3F1 /* ProviderServiceCell.swift */; };
 		2CFF4DA023F99A980024B3F1 /* ProviderServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF4D9E23F99A980024B3F1 /* ProviderServiceCell.xib */; };
 		2CFF4DA423F99D1C0024B3F1 /* ProviderProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF4DA223F99D1C0024B3F1 /* ProviderProfileCell.swift */; };
@@ -1026,6 +1029,7 @@
 		2CF6ABCC23F7B43000F9EF40 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2CF6ABD123F7D84500F9EF40 /* ProviderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderListViewController.swift; sourceTree = "<group>"; };
 		2CF6ABD223F7D84500F9EF40 /* ProviderListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderListViewController.xib; sourceTree = "<group>"; };
+		2CF6FA022431373E00F7E53B /* AppleSignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInRequest.swift; sourceTree = "<group>"; };
 		2CFF4D9D23F99A980024B3F1 /* ProviderServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceCell.swift; sourceTree = "<group>"; };
 		2CFF4D9E23F99A980024B3F1 /* ProviderServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderServiceCell.xib; sourceTree = "<group>"; };
 		2CFF4DA223F99D1C0024B3F1 /* ProviderProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileCell.swift; sourceTree = "<group>"; };
@@ -1332,6 +1336,7 @@
 				2C73AE8C23F4E9AC00267899 /* LoginResponse.swift */,
 				2C73AE8E23F4E9E900267899 /* LoginRequest.swift */,
 				2C42088A23F647680058873D /* GmailRequest.swift */,
+				2CF6FA022431373E00F7E53B /* AppleSignInRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3134,6 +3139,7 @@
 				2C3E50C6240C79B500873495 /* XibView.swift in Sources */,
 				2C2DCAFD241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
 				2C3E50C7240C79B500873495 /* RegisterViewController.swift in Sources */,
+				2CF6FA042431373E00F7E53B /* AppleSignInRequest.swift in Sources */,
 				2C3E50C8240C79B500873495 /* ProviderServiceCell.swift in Sources */,
 				2C3E50C9240C79B500873495 /* ProductSelectorResult.swift in Sources */,
 				2C3E50CA240C79B500873495 /* SelectorCellViewModel.swift in Sources */,
@@ -3340,6 +3346,7 @@
 				2CC3DBFB2411EBCC001E76B2 /* XibView.swift in Sources */,
 				2C2DCAFC241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
 				2CC3DBFC2411EBCC001E76B2 /* RegisterViewController.swift in Sources */,
+				2CF6FA032431373E00F7E53B /* AppleSignInRequest.swift in Sources */,
 				2CC3DBFD2411EBCC001E76B2 /* ProviderServiceCell.swift in Sources */,
 				2CC3DBFE2411EBCC001E76B2 /* ProductSelectorResult.swift in Sources */,
 				2CC3DBFF2411EBCC001E76B2 /* SelectorCellViewModel.swift in Sources */,
@@ -3546,6 +3553,7 @@
 				2CF6ABC123F7AF2C00F9EF40 /* Order.swift in Sources */,
 				2C2DCAFE241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
 				2CC7312F24045586006FF85D /* XibView.swift in Sources */,
+				2CF6FA052431373E00F7E53B /* AppleSignInRequest.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2CEAD743240F57B80095E9A4 /* PaymentResponse.swift in Sources */,
 				2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */,

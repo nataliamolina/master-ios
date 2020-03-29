@@ -39,6 +39,15 @@ class EmailLoginService: EmailLoginServiceProtocol {
         connectionDependency.setAuthenticationToken(token)
     }
     
+    func performAppleSignInRequest(request: AppleSignInRequest,
+                                   onComplete: @escaping (_ result: LoginResponse?, _ error: CMError?) -> Void) {
+        connectionDependency
+            .post(url: Endpoint.appleLogin, request: request) { (response: LoginResponse?, error: CMError?) in
+                
+                onComplete(response, error)
+        }
+    }
+    
     func performGmailRequest(request: GmailRequest,
                              onComplete: @escaping (_ result: LoginResponse?, _ error: CMError?) -> Void) {
         

@@ -12,6 +12,7 @@ private enum EndpointsKeys: String {
     case emailLogin
     case getUserSession
     case gmailLogin
+    case appleLogin
 }
 
 extension Endpoint {
@@ -25,5 +26,9 @@ extension Endpoint {
     
     static var gmailLogin: String {
         return Endpoint.url(with: EndpointsKeys.gmailLogin.rawValue)
+    }
+    
+    static var appleLogin: String {
+        return Endpoint.url(with: EndpointsKeys.appleLogin.rawValue)
     }
 }
