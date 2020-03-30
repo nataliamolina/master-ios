@@ -18,7 +18,7 @@ class MenuViewController: UIViewController {
     @IBOutlet private weak var userImageView: UIImageView!
     @IBOutlet private weak var logoutButton: MButton!
     @IBOutlet private weak var welcomeLabel: UILabel!
-
+    
     // MARK: - UI Actions
     @IBAction private func logoutAction() {
         performLogout()
@@ -39,6 +39,12 @@ class MenuViewController: UIViewController {
     @IBAction func helpButtonAction() {
         closeMenu { [weak self] in
             self?.router.transition(to: .help)
+        }
+    }
+    
+    @IBAction func providerModButtonAction() {
+        closeMenu { [weak self] in
+            self?.router.transition(to: .provider)
         }
     }
     

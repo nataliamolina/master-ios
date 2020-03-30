@@ -16,6 +16,7 @@ enum MenuRouterTransitions {
     case logout
     case privacy
     case help
+    case provider
 }
 
 class MenuRouter: RouterBase<MenuRouterTransitions> {
@@ -42,6 +43,11 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
         case .ordersList:
             handleAuthOption { [weak self] in
                 self?.handleOrdersTransition()
+            }
+            
+        case .provider:
+            handleAuthOption { [weak self] in
+                self?.handleProviderTransition()
             }
             
         case .logout:
@@ -92,6 +98,11 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     private func handleOrdersTransition() {
         let ordersRouter = OrdersRouter(navigationController: navigationController)
         ordersRouter.transition(to: .orders)
+    }
+    
+    private func handleProviderTransition() {
+        let router = ProviderRouter(navigationController: navigationController)
+        router.transition(to: .main)
     }
     
     private func handleLogoutTransition() {

@@ -19,15 +19,16 @@ enum ProviderRouterTransitions {
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     // MARK: - Properties
-    private let navigationController: UINavigationController
-    
+    private let navigationController: MNavigationController
+    private let providerNavigationController: MNavigationController
+
     // MARK: - Life Cycle
-    init(navigationController: UINavigationController) {
+    init(navigationController: MNavigationController) {
         self.navigationController = navigationController
+        self.providerNavigationController = MNavigationController()
         
         super.init()
         
-        setupNavigationController()
     }
     
     // MARK: - Public Methods
@@ -54,45 +55,34 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     }
     
     // MARK: - Private Methods
-    private func setupNavigationController() {
-        navigationController.navigationBar.tintColor = UIColor.Master.green
-        
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController.navigationBar.shadowImage = UIImage()
-        navigationController.navigationBar.barTintColor = UIColor(white: 1, alpha: 0)
-        navigationController.view.backgroundColor = .clear
-        navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.prefersLargeTitles = false
-        navigationController.modalPresentationStyle = .fullScreen
-        navigationController.hero.isEnabled = true
-        navigationController.hero.modalAnimationType = .zoom
-    }
     
     private func handleMainTransition() {
         let viewController = ProviderMainViewController(router: self, viewModel: ProviderMainViewModel())
-        navigationController.setViewControllers([viewController], animated: false)
-        navigationController.interactivePopGestureRecognizer?.delegate = viewController
-        navigationController.interactivePopGestureRecognizer?.isEnabled = true
+        providerNavigationController.setViewControllers([viewController], animated: false)
+        providerNavigationController.interactivePopGestureRecognizer?.delegate = viewController
+        providerNavigationController.interactivePopGestureRecognizer?.isEnabled = true
+        providerNavigationController.modalPresentationStyle = .fullScreen
+        providerNavigationController.navigationBar.prefersLargeTitles = false
         
-        navigationController.present(navigationController, animated: true, completion: nil)
+        navigationController.present(providerNavigationController, animated: true, completion: nil)
     }
     
     private func handleRegisterTransition() {
         let viewController = ProviderRegisterViewController(router: self, viewModel: ProviderRegisterViewModel())
         
-        navigationController.pushViewController(viewController, animated: true)
+        providerNavigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleUploadTransition() {
         let viewController = ProviderPhotoViewController(viewModel: ProviderPhotoViewModel(), router: self)
         
-        navigationController.pushViewController(viewController, animated: true)
+        providerNavigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleListSelectorTransition(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?) {
         let viewController = ListSelectorViewController(viewModel: viewModel, delegate: delegate)
         
-        navigationController.pushViewController(viewController, animated: true)
+        providerNavigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleHomeTransition() {
@@ -102,14 +92,14 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         
         let viewController = ProviderHomeViewController(viewModel: ProviderHomeViewModel(provider: providerProfile), router: self)
 
-        navigationController.popToRootViewController { [weak self] in
-            self?.navigationController.pushViewController(viewController, animated: true)
+        providerNavigationController.popToRootViewController { [weak self] in
+            self?.providerNavigationController.pushViewController(viewController, animated: true)
         }
     }
     
     private func handleLegalTransition() {
         let viewController = LegalViewController()
         
-        navigationController.pushViewController(viewController, animated: true)
+        providerNavigationController.pushViewController(viewController, animated: true)
     }
 }

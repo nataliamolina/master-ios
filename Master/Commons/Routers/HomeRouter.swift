@@ -25,6 +25,7 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     // MARK: - Properties
     private let navigationController: MNavigationController
     private let menuRouter: MenuRouter
+    private var onAuthenticated: CompletionBlock?
 
     // MARK: - Life Cycle
     init(navigationController: MNavigationController) {
@@ -67,23 +68,31 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
             handleMenuTransition()
             
         case .providerHome:
-            handleProviderTransition()
-            
+            handleAuthOption { [weak self] in
+                self?.handleProviderTransition()
+            }
         }
     }
     
     // MARK: - Private Methods
     private func setupNavigationController() {
-        navigationController.navigationBar.tintColor = UIColor.Master.green
-        
         navigationController.navigationBar.prefersLargeTitles = false
-        navigationController.navigationBar.shadowImage = UIImage()
-        navigationController.navigationBar.backgroundColor = .white
-        navigationController.navigationBar.barTintColor = .white
-        navigationController.navigationBar.isTranslucent = true
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.hero.isEnabled = true
         navigationController.hero.modalAnimationType = .zoom
+    }
+    
+    private func handleAuthOption(onAuthenticated: @escaping CompletionBlock) {
+        if Session.shared.isLoggedIn {
+            onAuthenticated()
+            
+            return
+        }
+        
+        self.onAuthenticated = onAuthenticated
+        
+        let loginRouter = MainRouter(navigationController: navigationController, delegate: self)
+        loginRouter.transition(to: .main)
     }
     
     private func handleProductSelectorTransition(viewModel: ProductSelectorDataSource,
@@ -137,7 +146,22 @@ class HomeRouter: RouterBase<HomeRouterTransitions> {
     }
     
     private func handleProviderTransition() {
-        let router = ProviderRouter(navigationController: navigationController)
-        router.transition(to: .main)
+        navigationController.popViewControllerWithHandler { [weak self] in
+            guard let self = self else { return }
+            
+            let router = ProviderRouter(navigationController: self.navigationController)
+            router.transition(to: .main)
+        }
+    }
+}
+
+// MARK: - MainRouterDelegate
+extension HomeRouter: MainRouterDelegate {
+    func authDidEnd(withSuccess: Bool) {
+        guard withSuccess else {
+            return
+        }
+        
+        onAuthenticated?()
     }
 }
