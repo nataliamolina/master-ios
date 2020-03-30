@@ -12,6 +12,7 @@ enum MenuRouterTransitions {
     case menu
     case ordersList
     case legal
+    case login
     case logout
     case privacy
     case help
@@ -51,6 +52,9 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
             
         case .help:
             handleHelpTransition()
+            
+        case .login:
+            handleLoginOption()
         }
     }
     
@@ -64,6 +68,11 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
         
         self.onAuthenticated = onAuthenticated
         
+        let loginRouter = MainRouter(navigationController: navigationController, delegate: self)
+        loginRouter.transition(to: .main)
+    }
+    
+    private func handleLoginOption() {
         let loginRouter = MainRouter(navigationController: navigationController, delegate: self)
         loginRouter.transition(to: .main)
     }

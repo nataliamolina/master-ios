@@ -31,12 +31,15 @@
 
 // Menu
 "menu.greetings" = "Hola, ";
+"menu.greetings.nosession" = "¡Hola!";
 "menu.services" = "Servicios";
 "menu.orders" = "Mis pedidos";
 "menu.account" = "Mi cuenta";
 "menu.legal" = "Legal";
 "menu.help" = "Ayuda";
 "menu.logout" = "Cerrar sesión";
+"menu.provider" = "Modo Proveedor";
+"menu.login" = "Iniciar Sesión";
 
 // Main
 "main.title" = "Iniciar Sesión";

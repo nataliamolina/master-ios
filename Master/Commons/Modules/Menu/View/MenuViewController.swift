@@ -16,7 +16,9 @@ class MenuViewController: UIViewController {
     @IBOutlet private weak var mainContainerView: UIView!
     @IBOutlet private weak var userNamesLabel: UILabel!
     @IBOutlet private weak var userImageView: UIImageView!
-    
+    @IBOutlet private weak var logoutButton: MButton!
+    @IBOutlet private weak var welcomeLabel: UILabel!
+
     // MARK: - UI Actions
     @IBAction private func logoutAction() {
         performLogout()
@@ -73,6 +75,13 @@ class MenuViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI(firstName: String, imageUrl: String) {
+        if !Session.shared.isLoggedIn {
+            logoutButton.setTitle("menu.login".localized, for: .normal)
+            welcomeLabel.text = "menu.greetings.nosession".localized
+        } else {
+            logoutButton.setTitle("menu.logout".localized, for: .normal)
+        }
+        
         let topOffset: CGFloat = 20
         topConstraint.constant = UIApplication.shared.statusBarFrame.height + topOffset
         
@@ -84,6 +93,14 @@ class MenuViewController: UIViewController {
     }
     
     private func performLogout() {
+        if !Session.shared.isLoggedIn {
+            closeMenu { [weak self] in
+                self?.router.transition(to: .login)
+            }
+            
+            return
+        }
+        
         viewModel.logout()
         
         dismiss(animated: true, completion: nil)

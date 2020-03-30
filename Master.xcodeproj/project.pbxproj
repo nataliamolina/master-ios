@@ -3759,7 +3759,7 @@
 				PRODUCT_NAME = Master;
 				PROVISIONING_PROFILE_SPECIFIER = "master-prov-dev";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -3796,7 +3796,7 @@
 				PRODUCT_NAME = Master;
 				PROVISIONING_PROFILE_SPECIFIER = "master-prov-prod";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
