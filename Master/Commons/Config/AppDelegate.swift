@@ -76,9 +76,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupInitialVC() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = SplashScreenViewController(viewModel: SplashScreenViewModel(),
-                                                                router: MainRouter(navigationController: appNavigationController,
-                                                                                   delegate: nil))
+        
+        let viewModel = SplashScreenViewModel()
+        let mainRouter = MainRouter(navigationController: appNavigationController, delegate: nil)
+        let viewController = SplashScreenViewController(viewModel: viewModel, router: mainRouter)
+        
+        window?.rootViewController = AddProviderServiceViewController() // viewController
         window?.makeKeyAndVisible()
     }
     

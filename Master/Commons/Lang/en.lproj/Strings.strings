@@ -142,3 +142,18 @@
 
 // Provider Home
 "provider.home.addService" = "Añadir Servicio +";
+
+// Provider Add Service
+"provider.addService.title" = "Agregar Servicio";
+"provider.addService.desc" = "Agrega un servicio que ofrezcas como Master, debes cuidar de cada detalle para generar confianza en tus clientes.";
+"provider.addService.name" = "Nombre del servicio";
+"provider.addService.serviceDesc" = "Descripción";
+"provider.addService.category" = "Categoría";
+"provider.addService.price" = "Precio";
+"provider.addService.photo" = "Foto del servicio";
+"provider.addService.addPhoto" = "Tomar/Seleccionar foto";
+
+"provider.addService.category.placeholder" = "Selecciona una categoría";
+"provider.addService.name.placeholder" = "Ej: Servicio de mantenimiento";
+"provider.addService.serviceDesc.placeholder" = "Ej: El mejor servicio de la ciudad, siempre cuidando...";
+"provider.addService.price.placeholder" = "Ej: $25.000";
