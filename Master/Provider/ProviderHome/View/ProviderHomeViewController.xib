@@ -39,19 +39,35 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a8P-oj-fcy">
-                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="679"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvZ-EG-yhg" customClass="MButton" customModule="Local" customModuleProvider="target">
+                    <rect key="frame" x="20" y="731" width="335" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="5u6-K5-ysf"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="provider.home.addService"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="a8P-oj-fcy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8V9-fX-XcV"/>
-                <constraint firstItem="a8P-oj-fcy" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8py-DR-5fe"/>
                 <constraint firstItem="mWc-YD-NAT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8zn-PT-ey2"/>
                 <constraint firstItem="TV1-dc-yyy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Gw0-Ba-f54"/>
+                <constraint firstItem="VvZ-EG-yhg" firstAttribute="top" secondItem="a8P-oj-fcy" secondAttribute="bottom" constant="8" symbolic="YES" id="IOR-0O-2ID"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VvZ-EG-yhg" secondAttribute="bottom" id="L4d-Uc-lSM"/>
                 <constraint firstItem="bz6-pg-SrC" firstAttribute="top" secondItem="TV1-dc-yyy" secondAttribute="bottom" constant="10" id="b18-Xf-Nou"/>
                 <constraint firstItem="mWc-YD-NAT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="cM4-Im-5ht"/>
                 <constraint firstItem="bz6-pg-SrC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ddh-sH-HDr"/>
+                <constraint firstItem="VvZ-EG-yhg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dlV-gd-Eh3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VvZ-EG-yhg" secondAttribute="trailing" constant="20" id="loL-mL-OlL"/>
                 <constraint firstItem="a8P-oj-fcy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="lv5-uP-757"/>
                 <constraint firstItem="a8P-oj-fcy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qGB-f7-ikp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TV1-dc-yyy" secondAttribute="trailing" constant="50" id="tod-Y6-fg7"/>

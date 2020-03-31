@@ -327,6 +327,15 @@
 		2C4EBFD42432EEAF0081AC5F /* ProviderOrderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFD32432EEAE0081AC5F /* ProviderOrderCellViewModel.swift */; };
 		2C4EBFD52432EEAF0081AC5F /* ProviderOrderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFD32432EEAE0081AC5F /* ProviderOrderCellViewModel.swift */; };
 		2C4EBFD62432EEAF0081AC5F /* ProviderOrderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFD32432EEAE0081AC5F /* ProviderOrderCellViewModel.swift */; };
+		2C4EBFDB2432FA160081AC5F /* AddProviderServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFD92432FA160081AC5F /* AddProviderServiceViewController.swift */; };
+		2C4EBFDC2432FA160081AC5F /* AddProviderServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFD92432FA160081AC5F /* AddProviderServiceViewController.swift */; };
+		2C4EBFDD2432FA160081AC5F /* AddProviderServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFD92432FA160081AC5F /* AddProviderServiceViewController.swift */; };
+		2C4EBFDE2432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4EBFDA2432FA160081AC5F /* AddProviderServiceViewController.xib */; };
+		2C4EBFDF2432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4EBFDA2432FA160081AC5F /* AddProviderServiceViewController.xib */; };
+		2C4EBFE02432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4EBFDA2432FA160081AC5F /* AddProviderServiceViewController.xib */; };
+		2C4EBFE52432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFE42432FA840081AC5F /* AddProviderServiceEndpoints.swift */; };
+		2C4EBFE62432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFE42432FA840081AC5F /* AddProviderServiceEndpoints.swift */; };
+		2C4EBFE72432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFE42432FA840081AC5F /* AddProviderServiceEndpoints.swift */; };
 		2C55F3AF2408BAF600F458AC /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55F3AE2408BAF600F458AC /* DatePicker.swift */; };
 		2C55F3B12408DE9D00F458AC /* CheckoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55F3B02408DE9D00F458AC /* CheckoutService.swift */; };
 		2C57B72D24170BC100A3281F /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B72C24170BC100A3281F /* PushNotifications.swift */; };
@@ -903,6 +912,9 @@
 		2C4EBFCB2432E9CF0081AC5F /* ProviderOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderOrderCell.swift; sourceTree = "<group>"; };
 		2C4EBFCC2432E9CF0081AC5F /* ProviderOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderOrderCell.xib; sourceTree = "<group>"; };
 		2C4EBFD32432EEAE0081AC5F /* ProviderOrderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderOrderCellViewModel.swift; sourceTree = "<group>"; };
+		2C4EBFD92432FA160081AC5F /* AddProviderServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProviderServiceViewController.swift; sourceTree = "<group>"; };
+		2C4EBFDA2432FA160081AC5F /* AddProviderServiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProviderServiceViewController.xib; sourceTree = "<group>"; };
+		2C4EBFE42432FA840081AC5F /* AddProviderServiceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProviderServiceEndpoints.swift; sourceTree = "<group>"; };
 		2C55F3AE2408BAF600F458AC /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		2C55F3B02408DE9D00F458AC /* CheckoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutService.swift; sourceTree = "<group>"; };
 		2C57B72C24170BC100A3281F /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
@@ -1543,6 +1555,40 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		2C4EBFD82432F92D0081AC5F /* AddProviderService */ = {
+			isa = PBXGroup;
+			children = (
+				2C4EBFE32432FA6A0081AC5F /* Service */,
+				2C4EBFE22432FA630081AC5F /* ViewModel */,
+				2C4EBFE12432FA560081AC5F /* View */,
+			);
+			path = AddProviderService;
+			sourceTree = "<group>";
+		};
+		2C4EBFE12432FA560081AC5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C4EBFD92432FA160081AC5F /* AddProviderServiceViewController.swift */,
+				2C4EBFDA2432FA160081AC5F /* AddProviderServiceViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C4EBFE22432FA630081AC5F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C4EBFE32432FA6A0081AC5F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2C4EBFE42432FA840081AC5F /* AddProviderServiceEndpoints.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		2C57B73024170C5900A3281F /* PushNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -2029,6 +2075,7 @@
 		2CD8AC52241AC028005C8628 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				2C4EBFD82432F92D0081AC5F /* AddProviderService */,
 				2C1F2F67241EB81E008E803D /* ProviderHome */,
 				2C6716F3241D456600C86531 /* ProviderPhoto */,
 				2C2DCAF9241D27100024409E /* ProviderRegister */,
@@ -2615,6 +2662,7 @@
 				2C3E514B240C79B500873495 /* login_bg_video_new.mp4 in Resources */,
 				2C671706241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				2C3E514C240C79B500873495 /* HomeViewController.xib in Resources */,
+				2C4EBFDF2432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */,
 				2C3E514D240C79B500873495 /* OrderDetailViewController.xib in Resources */,
 				2C3E514E240C79B500873495 /* SelectorCell.xib in Resources */,
 				2C1636E22416BBC50083A59A /* RateView.xib in Resources */,
@@ -2673,6 +2721,7 @@
 				2CC3DC872411EBCC001E76B2 /* login_bg_video_new.mp4 in Resources */,
 				2C671705241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				2CC3DC882411EBCC001E76B2 /* HomeViewController.xib in Resources */,
+				2C4EBFDE2432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */,
 				2CC3DC892411EBCC001E76B2 /* OrderDetailViewController.xib in Resources */,
 				2CC3DC8A2411EBCC001E76B2 /* SelectorCell.xib in Resources */,
 				2C1636E12416BBC50083A59A /* RateView.xib in Resources */,
@@ -2731,6 +2780,7 @@
 				2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */,
 				2C671707241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				A5F30D6D23B4DB34005258A8 /* HomeViewController.xib in Resources */,
+				2C4EBFE02432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */,
 				2C3B8077240C0A2B00D4C6FE /* OrderDetailViewController.xib in Resources */,
 				2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */,
 				2C1636E32416BBC50083A59A /* RateView.xib in Resources */,
@@ -3122,6 +3172,7 @@
 				2C1F2F7B241EB81F008E803D /* ProviderHomeEndpoints.swift in Sources */,
 				2C3E50AA240C79B500873495 /* UINavigationController+Extensions.swift in Sources */,
 				2C3E50AB240C79B500873495 /* EmailLoginService.swift in Sources */,
+				2C4EBFE62432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
 				2C1636C1241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DE2416BB8A0083A59A /* RateView.swift in Sources */,
 				2C3E50AC240C79B500873495 /* TitleCell.swift in Sources */,
@@ -3161,6 +3212,7 @@
 				2C3E50C3240C79B500873495 /* RegisterRequest.swift in Sources */,
 				2C3E50C4240C79B500873495 /* OrdersViewController.swift in Sources */,
 				2C6716F1241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */,
+				2C4EBFDC2432FA160081AC5F /* AddProviderServiceViewController.swift in Sources */,
 				2C3E50C5240C79B500873495 /* Order.swift in Sources */,
 				2C3E50C6240C79B500873495 /* XibView.swift in Sources */,
 				2C2DCAFD241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
@@ -3331,6 +3383,7 @@
 				2C1F2F7A241EB81F008E803D /* ProviderHomeEndpoints.swift in Sources */,
 				2CC3DBDE2411EBCC001E76B2 /* UINavigationController+Extensions.swift in Sources */,
 				2CC3DBDF2411EBCC001E76B2 /* EmailLoginService.swift in Sources */,
+				2C4EBFE52432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
 				2C1636C0241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DD2416BB8A0083A59A /* RateView.swift in Sources */,
 				2CC3DBE02411EBCC001E76B2 /* TitleCell.swift in Sources */,
@@ -3370,6 +3423,7 @@
 				2CC3DBF82411EBCC001E76B2 /* RegisterRequest.swift in Sources */,
 				2CC3DBF92411EBCC001E76B2 /* OrdersViewController.swift in Sources */,
 				2C6716F0241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */,
+				2C4EBFDB2432FA160081AC5F /* AddProviderServiceViewController.swift in Sources */,
 				2CC3DBFA2411EBCC001E76B2 /* Order.swift in Sources */,
 				2CC3DBFB2411EBCC001E76B2 /* XibView.swift in Sources */,
 				2C2DCAFC241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
@@ -3540,6 +3594,7 @@
 				2C1F2F7C241EB81F008E803D /* ProviderHomeEndpoints.swift in Sources */,
 				2C7E7FB723F89A2200D7835E /* ProviderListService.swift in Sources */,
 				2C829ECC240B3AC500D7DD81 /* UINavigationController+Extensions.swift in Sources */,
+				2C4EBFE72432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
 				2C1636C2241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DF2416BB8A0083A59A /* RateView.swift in Sources */,
 				2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */,
@@ -3579,6 +3634,7 @@
 				2CCFED7223F62B85005E5CB1 /* RegisterRequest.swift in Sources */,
 				2CEAD747240F58E10095E9A4 /* PaymentServiceProtocol.swift in Sources */,
 				2C6716F2241D428A00C86531 /* ProviderRegisterServiceProtocol.swift in Sources */,
+				2C4EBFDD2432FA160081AC5F /* AddProviderServiceViewController.swift in Sources */,
 				2C829EC9240B3A4800D7DD81 /* OrdersViewController.swift in Sources */,
 				2CF6ABC123F7AF2C00F9EF40 /* Order.swift in Sources */,
 				2C2DCAFE241D27330024409E /* ProviderRegisterViewController.swift in Sources */,
