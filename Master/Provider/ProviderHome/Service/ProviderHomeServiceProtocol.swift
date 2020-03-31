@@ -11,5 +11,6 @@ import Foundation
 protocol ProviderHomeServiceProtocol {
     var connectionDependency: ConnectionManagerProtocol { get }
     
-    func fetchProfile(userId: Int, onComplete: @escaping (_ result: Provider?, _ error: CMError?) -> Void)
+    func fetchProviderServices(onComplete: @escaping (_ result: [ProviderService], _ error: CMError?) -> Void)
+    func fetchProviderOrders(onComplete: @escaping (_ result: [Order], _ error: CMError?) -> Void)
 }

@@ -45,7 +45,7 @@ class ProviderHomeViewController: UIViewController {
         tableView.registerNib(ProviderServiceCell.self)
         tableView.registerNib(ProviderProfileCell.self)
         tableView.registerNib(SelectorCell.self)
-        tableView.registerNib(CommentCell.self)
+        tableView.registerNib(ProviderOrderCell.self)
         
         setupBindings()
         
@@ -77,7 +77,7 @@ class ProviderHomeViewController: UIViewController {
 // MARK: - SelectorCellDelegate
 extension ProviderHomeViewController: SelectorCellDelegate {
     func buttonTapped(at index: Int, title: String, button: MButton) {
-        
+        viewModel.toggleCommentsSection(with: index)
     }
 }
 

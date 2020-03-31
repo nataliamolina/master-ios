@@ -19,11 +19,15 @@ class ProviderHomeService: ProviderHomeServiceProtocol {
     
     // MARK: - Public Methods
     
-    func fetchProfile(userId: Int, onComplete: @escaping (_ result: Provider?, _ error: CMError?) -> Void) {
-        let endpoint = Endpoint.providerProfileBy("\(userId)")
-        
-        connectionDependency.get(url: endpoint) { (response: Provider?, error: CMError?) in
-            onComplete(response, error)
+    func fetchProviderServices(onComplete: @escaping (_ result: [ProviderService], _ error: CMError?) -> Void) {
+        connectionDependency.get(url: Endpoint.getProviderServices) { (response: [ProviderService]?, error: CMError?) in
+            onComplete(response ?? [], error)
+        }
+    }
+    
+    func fetchProviderOrders(onComplete: @escaping (_ result: [Order], _ error: CMError?) -> Void) {
+        connectionDependency.get(url: Endpoint.getProviderOrders) { (response: [Order]?, error: CMError?) in
+            onComplete(response ?? [], error)
         }
     }
 }

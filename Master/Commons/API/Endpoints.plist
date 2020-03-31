@@ -54,5 +54,9 @@
 	<string>login/validate</string>
 	<key>serverStatus</key>
 	<string>server/ios</string>
+	<key>getProviderOrders</key>
+	<string>orders/provider</string>
+	<key>getProviderServices</key>
+	<string>provider-services</string>
 </dict>
 </plist>
