@@ -15,6 +15,7 @@ enum ProviderRouterTransitions {
     case home
     case legal
     case listSelector(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?)
+    case addService(viewModel: AddProviderServiceViewModel)
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
@@ -51,6 +52,9 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             
         case .legal:
             handleLegalTransition()
+            
+        case .addService(let viewModel):
+            handleAddProviderService(viewModel: viewModel)
         }
     }
     
@@ -65,6 +69,12 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         providerNavigationController.navigationBar.prefersLargeTitles = false
         
         navigationController.present(providerNavigationController, animated: true, completion: nil)
+    }
+    
+    private func handleAddProviderService(viewModel: AddProviderServiceViewModel) {
+        let viewController = AddProviderServiceViewController(router: self, viewModel: viewModel)
+        
+        providerNavigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleRegisterTransition() {

@@ -12,4 +12,8 @@ extension String {
     func replace(_ char: String, with: String) -> String {
         return self.replacingOccurrences(of: char, with: with)
     }
+    
+    var asDouble: Double {
+        return Double(self) ?? 0
+    }
 }

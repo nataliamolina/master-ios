@@ -81,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainRouter = MainRouter(navigationController: appNavigationController, delegate: nil)
         let viewController = SplashScreenViewController(viewModel: viewModel, router: mainRouter)
         
-        window?.rootViewController = AddProviderServiceViewController() // viewController
+        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
     

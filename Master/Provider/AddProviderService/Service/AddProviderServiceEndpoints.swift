@@ -9,9 +9,16 @@
 import Foundation
 
 private enum EndpointsKeys: String {
-    case temp
+    case getServiceCategories
+    case postProviderService
 }
 
 extension Endpoint {
-
+    static var getServiceCategories: String {
+        return Endpoint.url(with: EndpointsKeys.getServiceCategories.rawValue)
+    }
+    
+    static var postProviderService: String {
+        return Endpoint.url(with: EndpointsKeys.postProviderService.rawValue)
+    }
 }

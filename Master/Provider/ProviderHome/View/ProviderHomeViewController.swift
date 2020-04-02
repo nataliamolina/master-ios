@@ -12,6 +12,11 @@ class ProviderHomeViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: - UI Actions
+    @IBAction private func addServiceButtonAction() {
+        router.transition(to: .addService(viewModel: viewModel.getAddServiceViewModel()))
+    }
+    
     // MARK: - Properties
     private let router: RouterBase<ProviderRouterTransitions>
     private let viewModel: ProviderHomeViewModel

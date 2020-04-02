@@ -74,6 +74,10 @@ class ProviderHomeViewModel {
         }
     }
     
+    func getAddServiceViewModel() -> AddProviderServiceViewModel {
+        return AddProviderServiceViewModel()
+    }
+    
     // MARK: - Private Methods
     
     private func setOrdersDataSource() {
@@ -153,7 +157,5 @@ class ProviderHomeViewModel {
                                        orderState: $0.orderState.type,
                                        isLastItem: $0.id == models.last?.id)
         }
-        
-        dataSource.value.append(ordersDataSource)
     }
 }
