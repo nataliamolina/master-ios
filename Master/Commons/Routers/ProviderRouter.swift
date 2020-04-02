@@ -15,7 +15,8 @@ enum ProviderRouterTransitions {
     case home
     case legal
     case listSelector(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?)
-    case addService(viewModel: AddProviderServiceViewModel)
+    case addService(viewModel: AddProviderServiceViewModel, delegate: AddProviderServiceDelegate)
+    case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate)
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
@@ -53,8 +54,11 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         case .legal:
             handleLegalTransition()
             
-        case .addService(let viewModel):
-            handleAddProviderService(viewModel: viewModel)
+        case .addService(let viewModel, let delegate):
+            handleAddProviderService(viewModel: viewModel, delegate: delegate)
+            
+        case .completeText(let viewModel, let delegate):
+            handleCompleteText(viewModel: viewModel, delegate: delegate)
         }
     }
     
@@ -71,8 +75,18 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         navigationController.present(providerNavigationController, animated: true, completion: nil)
     }
     
-    private func handleAddProviderService(viewModel: AddProviderServiceViewModel) {
-        let viewController = AddProviderServiceViewController(router: self, viewModel: viewModel)
+    private func handleCompleteText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate) {
+        let viewController = CompleteTextViewController(viewModel: viewModel, delegate: delegate)
+            
+        providerNavigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleAddProviderService(viewModel: AddProviderServiceViewModel,
+                                          delegate: AddProviderServiceDelegate) {
+        
+        let viewController = AddProviderServiceViewController(router: self,
+                                                              viewModel: viewModel,
+                                                              delegate: delegate)
         
         providerNavigationController.pushViewController(viewController, animated: true)
     }

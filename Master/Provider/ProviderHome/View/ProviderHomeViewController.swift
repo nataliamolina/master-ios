@@ -14,7 +14,8 @@ class ProviderHomeViewController: UIViewController {
     
     // MARK: - UI Actions
     @IBAction private func addServiceButtonAction() {
-        router.transition(to: .addService(viewModel: viewModel.getAddServiceViewModel()))
+        router.transition(to: .addService(viewModel: viewModel.getAddServiceViewModel(),
+                                          delegate: self))
     }
     
     // MARK: - Properties
@@ -54,7 +55,7 @@ class ProviderHomeViewController: UIViewController {
         
         setupBindings()
         
-        viewModel.fetchProfile()
+        viewModel.fetchData()
     }
     
     private func setupBindings() {
@@ -100,5 +101,12 @@ extension ProviderHomeViewController: UITableViewDataSource {
         return tableView.getWith(cellViewModel: viewModel.getViewModelAt(indexPath: indexPath),
                                  indexPath: indexPath,
                                  delegate: self)
+    }
+}
+
+// MARK: - AddProviderServiceDelegate
+extension ProviderHomeViewController: AddProviderServiceDelegate {
+    func serviceAdded() {
+        viewModel.fetchData()
     }
 }

@@ -14,8 +14,9 @@ protocol CompleteTextViewDelegate: class {
 
 class CompleteTextViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var textViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var textView: MTextView!
     @IBOutlet private weak var helpLabel: UILabel!
     @IBOutlet private weak var backButton: MButton!
     @IBOutlet private weak var backButtonBottomConstraint: NSLayoutConstraint!
@@ -62,13 +63,13 @@ class CompleteTextViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        textField.becomeFirstResponder()
+        textView.becomeFirstResponder()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        textField.resignFirstResponder()
+        textView.resignFirstResponder()
     }
     
     // MARK: - Private Methods
@@ -76,18 +77,18 @@ class CompleteTextViewController: UIViewController {
     // MARK: - Private Methods
     private func setupUI() {
         titleLabel.text = viewModel.title
-        textField.text = viewModel.value
-        textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
-        textField.keyboardType = viewModel.keyboardType
+        textView.text = viewModel.value
+        textView.delegate = self
+        textView.keyboardType = viewModel.keyboardType
         
         if !viewModel.placeholder.isEmpty {
-            textField.placeholder = viewModel.placeholder
+            textView.text = viewModel.placeholder
         }
         
         if !viewModel.desc.isEmpty {
             helpLabel.text = viewModel.desc
         }
-
+        
         viewModel.isValidForm.bindTo(backButton, to: .state)
         
         enableKeyboardDismiss()
@@ -116,8 +117,17 @@ class CompleteTextViewController: UIViewController {
         backButtonBottomConstraint.constant = backButtonBottomValue
         animateLayout()
     }
-    
-    @objc private func valueChanged() {
-        viewModel.value = textField.text
+}
+
+// MARK: - UITextViewDelegate
+extension CompleteTextViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        let sizeToFitIn = CGSize(width: textView.bounds.size.width, height: CGFloat(MAXFLOAT))
+        let newSize = textView.sizeThatFits(sizeToFitIn)
+        
+        textViewHeightConstraint.constant = newSize.height
+        self.textView.updateBottomLine()
+        
+        viewModel.value = textView.text
     }
 }

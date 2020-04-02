@@ -43,7 +43,7 @@ class ProviderHomeViewModel {
     
     // MARK: - Public Methods
     
-    func fetchProfile() {
+    func fetchData() {
         status.value = .providerProfileLoaded(name: provider.user.firstName)
         providerModelToViewModel(provider)
         
@@ -89,6 +89,10 @@ class ProviderHomeViewModel {
     }
     
     private func fetchProviderServices() {
+        if dataSource.value.indices.contains(Sections.list.rawValue) {
+            dataSource.value[Sections.list.rawValue].removeAll()
+        }
+        
         isLoading.value = true
         
         service.fetchProviderServices { [weak self] (response: [ProviderService], error: CMError?) in

@@ -76,6 +76,15 @@ class AddProviderServiceViewModel {
         return ListSelectorViewModel(title: nil, desc: nil, dataSource: serviceCategories)
     }
     
+    func getCompleteTextViewModel(savedValue: String?) -> CompleteTextViewModel {
+        // FIXME: Strings
+        return CompleteTextViewModel(title: "Completa",
+                                     desc: "Ingresa la descripción de tu servicio",
+                                     placeholder: "",
+                                     index: 0,
+                                     savedValue: savedValue)
+    }
+    
     // MARK: - Private Methods
     
     private func getServiceCategories() {

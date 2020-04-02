@@ -447,6 +447,9 @@
 		2C8B3A2F243649B2005FE926 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A2E243649B2005FE926 /* UITextField+Extensions.swift */; };
 		2C8B3A30243649B2005FE926 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A2E243649B2005FE926 /* UITextField+Extensions.swift */; };
 		2C8B3A31243649B2005FE926 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A2E243649B2005FE926 /* UITextField+Extensions.swift */; };
+		2C8B3A3324365716005FE926 /* MTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3224365716005FE926 /* MTextView.swift */; };
+		2C8B3A3424365716005FE926 /* MTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3224365716005FE926 /* MTextView.swift */; };
+		2C8B3A3524365716005FE926 /* MTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3224365716005FE926 /* MTextView.swift */; };
 		2C8C6C5B23F4B64000FE06BE /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* AppStorage.swift */; };
 		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
 		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
@@ -993,6 +996,7 @@
 		2C8B3A2624363313005FE926 /* ProviderServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceRequest.swift; sourceTree = "<group>"; };
 		2C8B3A2A243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProviderServiceServiceServiceProtocol.swift; sourceTree = "<group>"; };
 		2C8B3A2E243649B2005FE926 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		2C8B3A3224365716005FE926 /* MTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTextView.swift; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -1974,14 +1978,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2CAD87AE24049A340063AEB2 /* SingleTextField */ = {
+		2CAD87AE24049A340063AEB2 /* CompleteTextView */ = {
 			isa = PBXGroup;
 			children = (
 				2CAD87AF24049A5A0063AEB2 /* CompleteTextViewController.swift */,
 				2CAD87B024049A5A0063AEB2 /* CompleteTextViewController.xib */,
 				2CAD87B32404AA230063AEB2 /* CompleteTextViewModel.swift */,
 			);
-			path = SingleTextField;
+			path = CompleteTextView;
 			sourceTree = "<group>";
 		};
 		2CC6C58C2417035A003C11D2 /* View */ = {
@@ -2442,7 +2446,7 @@
 				2C6716FF241D89C000C86531 /* ListSelector */,
 				2C976A09240ACEF00073DD07 /* Loader */,
 				2C3E0EEA2408A284005453BA /* DatePicker */,
-				2CAD87AE24049A340063AEB2 /* SingleTextField */,
+				2CAD87AE24049A340063AEB2 /* CompleteTextView */,
 				2C76018523FE349600252531 /* ProductSelector */,
 				A5F30D4B23B4CBC3005258A8 /* MButton.swift */,
 				A5F30D5623B4D470005258A8 /* MTextField.swift */,
@@ -2451,6 +2455,7 @@
 				2C99B27E24005929003525B9 /* MAnimatedTableViewCell.swift */,
 				2CC7312E24045586006FF85D /* XibView.swift */,
 				2C69EA112429290700CD581E /* MNavigationController.swift */,
+				2C8B3A3224365716005FE926 /* MTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3357,6 +3362,7 @@
 				2C3E5116240C79B500873495 /* ConnectionManagerProtocol.swift in Sources */,
 				2C3E5117240C79B500873495 /* CompleteTextViewController.swift in Sources */,
 				2C671712241DC3EE00C86531 /* ProviderPhotoEndpoints.swift in Sources */,
+				2C8B3A3424365716005FE926 /* MTextView.swift in Sources */,
 				2C3E5118240C79B500873495 /* SplashScreenServiceProtocol.swift in Sources */,
 				2C3E5119240C79B500873495 /* EmailLoginViewController.swift in Sources */,
 				2C3E511A240C79B500873495 /* MButton.swift in Sources */,
@@ -3573,6 +3579,7 @@
 				2CC3DC502411EBCC001E76B2 /* ConnectionManagerProtocol.swift in Sources */,
 				2CC3DC512411EBCC001E76B2 /* CompleteTextViewController.swift in Sources */,
 				2C671711241DC3EE00C86531 /* ProviderPhotoEndpoints.swift in Sources */,
+				2C8B3A3324365716005FE926 /* MTextView.swift in Sources */,
 				2CC3DC522411EBCC001E76B2 /* SplashScreenServiceProtocol.swift in Sources */,
 				2CC3DC532411EBCC001E76B2 /* EmailLoginViewController.swift in Sources */,
 				2CC3DC542411EBCC001E76B2 /* MButton.swift in Sources */,
@@ -3789,6 +3796,7 @@
 				2CAD87B124049A5A0063AEB2 /* CompleteTextViewController.swift in Sources */,
 				2C198D1923F4C34600346395 /* SplashScreenServiceProtocol.swift in Sources */,
 				2C671713241DC3EE00C86531 /* ProviderPhotoEndpoints.swift in Sources */,
+				2C8B3A3524365716005FE926 /* MTextView.swift in Sources */,
 				2CEAD749240F59040095E9A4 /* PaymentViewModel.swift in Sources */,
 				A5F30D5423B4D2CC005258A8 /* EmailLoginViewController.swift in Sources */,
 				A5F30D4C23B4CBC3005258A8 /* MButton.swift in Sources */,

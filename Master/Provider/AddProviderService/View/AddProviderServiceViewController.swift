@@ -10,12 +10,17 @@ import UIKit
 import AVKit
 import MobileCoreServices
 
+protocol AddProviderServiceDelegate: class {
+    func serviceAdded()
+}
+
 class AddProviderServiceViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var serviceImageTakenView: UIImageView!
     @IBOutlet private weak var serviceNameTextField: MTextField!
-    @IBOutlet private weak var serviceDescTextView: UITextView!
+    @IBOutlet private weak var serviceDescView: UIView!
+    @IBOutlet private weak var serviceDescTextField: MTextField!
     @IBOutlet private weak var servicePriceTextField: MTextField!
     @IBOutlet private weak var serviceCategoryTextField: MTextField!
     @IBOutlet private weak var serviceCategoryView: UIView!
@@ -42,12 +47,17 @@ class AddProviderServiceViewController: UIViewController {
     private let viewModel: AddProviderServiceViewModel
     private var originalInset: UIEdgeInsets = .zero
     private var imagePicker: UIImagePickerController?
+    private weak var delegate: AddProviderServiceDelegate?
     
     // MARK: - Life Cycle
-    init(router: RouterBase<ProviderRouterTransitions>, viewModel: AddProviderServiceViewModel) {
+    init(router: RouterBase<ProviderRouterTransitions>,
+         viewModel: AddProviderServiceViewModel,
+         delegate: AddProviderServiceDelegate?) {
+        
         self.router = router
         self.viewModel = viewModel
-        
+        self.delegate = delegate
+
         super.init(nibName: String(describing: AddProviderServiceViewController.self), bundle: nil)
     }
     
@@ -78,7 +88,7 @@ class AddProviderServiceViewController: UIViewController {
         viewModel.postProviderService(url: url,
                                       name: serviceNameTextField.safeText,
                                       price: getValueFromFormattedCurrency(),
-                                      desc: serviceDescTextView.text)
+                                      desc: serviceDescTextField.safeText)
     }
     
     private func getValueFromFormattedCurrency() -> Double {
@@ -110,6 +120,9 @@ class AddProviderServiceViewController: UIViewController {
         serviceCategoryView.addGestureRecognizer(UITapGestureRecognizer(target: self,
                                                                         action: #selector(serviceCategoryTapped)))
         
+        serviceDescView.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                                    action: #selector(serviceDescTapped)))
+        
         setupKeyboardListeners()
         disableTitle()
         addIconInNavigationBar()
@@ -129,7 +142,9 @@ class AddProviderServiceViewController: UIViewController {
                 self?.showError(message: error)
                 
             case .postSuccessful:
-                return
+                self?.navigationController?.popViewControllerWithHandler { [weak self] in
+                    self?.delegate?.serviceAdded()
+                }
                 
             default:
                 return
@@ -154,8 +169,14 @@ class AddProviderServiceViewController: UIViewController {
             return
         }
         
-        if serviceDescTextView.text.count <= 2 {
+        if serviceDescTextField.safeText.count <= 2 {
             showWarning(message: "Ingresa una descripción del servicio válida.")
+            
+            return
+        }
+        
+        if serviceDescTextField.safeText.count >= 100 {
+            showWarning(message: "La descripción del servicio es muy larga.")
             
             return
         }
@@ -167,6 +188,12 @@ class AddProviderServiceViewController: UIViewController {
         }
         
         onValidBlock()
+    }
+    
+    @objc func serviceDescTapped() {
+        let textViewModel = viewModel.getCompleteTextViewModel(savedValue: serviceDescTextField.text)
+        
+        router.transition(to: .completeText(viewModel: textViewModel, delegate: self))
     }
     
     @objc private func priceFieldEditingChanged() {
@@ -315,5 +342,12 @@ extension AddProviderServiceViewController: ListSelectorViewControllerDelegate {
     func optionSelectedAt(index: Int, option: ListItemProtocol) {
         serviceCategoryTextField.text = option.value
         viewModel.categoryId = (option.identifier as? Int) ?? viewModel.categoryId
+    }
+}
+
+// MARK: - CompleteTextViewDelegate
+extension AddProviderServiceViewController: CompleteTextViewDelegate {
+    func continueButtonTapped(viewModel: CompleteTextViewModel) {
+        serviceDescTextField.text = viewModel.value
     }
 }
