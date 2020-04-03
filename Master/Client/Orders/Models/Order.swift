@@ -17,6 +17,34 @@ enum OrderStateType: String, Codable {
     case pendingForPayment = "pending_for_payment"
     case paymentDone = "payment_done"
     case ratingPending
+    
+    var id: Int {
+        switch self {
+        case .pending:
+            return 1
+            
+        case .accepted:
+            return 2
+            
+        case .inProgress:
+            return 3
+            
+        case .rejected:
+            return 4
+            
+        case .finished:
+            return 5
+            
+        case .pendingForPayment:
+            return 6
+            
+        case .paymentDone:
+            return 7
+            
+        case .ratingPending:
+            return -1
+        }
+    }
 }
 
 struct Order: Codable {

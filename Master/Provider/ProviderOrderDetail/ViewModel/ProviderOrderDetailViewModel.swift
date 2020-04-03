@@ -56,6 +56,25 @@ class ProviderOrderDetailViewModel {
         }
     }
     
+    // WIP
+    func updateOrderState(_ state: OrderState) {
+        isLoading.value = true
+        
+        service.updateOrderState(orderId: orderId,
+                                 stateId: state.type.id) { [weak self] (response: OrderState?, error: CMError?) in
+                                    
+            self?.isLoading.value = false
+            
+            guard let model = response, error == nil else {
+                self?.status.value = .error(error: error?.localizedDescription)
+                
+                return
+            }
+                                    
+                                    
+        }
+    }
+    
     func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {
         return dataSource.value.safeContains(indexPath.row)
     }

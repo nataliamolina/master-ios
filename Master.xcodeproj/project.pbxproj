@@ -468,6 +468,9 @@
 		2C8B3A532436D17B005FE926 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */; };
 		2C8B3A542436D17B005FE926 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */; };
 		2C8B3A552436D17B005FE926 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */; };
+		2C8B3A572436E20A005FE926 /* ProviderOrderDetailEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A562436E20A005FE926 /* ProviderOrderDetailEndpoints.swift */; };
+		2C8B3A582436E20B005FE926 /* ProviderOrderDetailEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A562436E20A005FE926 /* ProviderOrderDetailEndpoints.swift */; };
+		2C8B3A592436E20B005FE926 /* ProviderOrderDetailEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A562436E20A005FE926 /* ProviderOrderDetailEndpoints.swift */; };
 		2C8C6C5B23F4B64000FE06BE /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* AppStorage.swift */; };
 		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
 		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
@@ -1021,6 +1024,7 @@
 		2C8B3A3D243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOrderDetailServiceProtocol.swift; sourceTree = "<group>"; };
 		2C8B3A3F243699EC005FE926 /* ProviderOrderDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOrderDetailService.swift; sourceTree = "<group>"; };
 		2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		2C8B3A562436E20A005FE926 /* ProviderOrderDetailEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderOrderDetailEndpoints.swift; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -1905,6 +1909,7 @@
 			children = (
 				2C8B3A3D243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift */,
 				2C8B3A3F243699EC005FE926 /* ProviderOrderDetailService.swift */,
+				2C8B3A562436E20A005FE926 /* ProviderOrderDetailEndpoints.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -3327,6 +3332,7 @@
 				2C3E50C7240C79B500873495 /* RegisterViewController.swift in Sources */,
 				2CF6FA042431373E00F7E53B /* AppleSignInRequest.swift in Sources */,
 				2C3E50C8240C79B500873495 /* ProviderServiceCell.swift in Sources */,
+				2C8B3A582436E20B005FE926 /* ProviderOrderDetailEndpoints.swift in Sources */,
 				2C3E50C9240C79B500873495 /* ProductSelectorResult.swift in Sources */,
 				2C3E50CA240C79B500873495 /* SelectorCellViewModel.swift in Sources */,
 				2C8B3A41243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
@@ -3549,6 +3555,7 @@
 				2CC3DBFC2411EBCC001E76B2 /* RegisterViewController.swift in Sources */,
 				2CF6FA032431373E00F7E53B /* AppleSignInRequest.swift in Sources */,
 				2CC3DBFD2411EBCC001E76B2 /* ProviderServiceCell.swift in Sources */,
+				2C8B3A572436E20A005FE926 /* ProviderOrderDetailEndpoints.swift in Sources */,
 				2CC3DBFE2411EBCC001E76B2 /* ProductSelectorResult.swift in Sources */,
 				2CC3DBFF2411EBCC001E76B2 /* SelectorCellViewModel.swift in Sources */,
 				2C8B3A40243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
@@ -3771,6 +3778,7 @@
 				2CC7312F24045586006FF85D /* XibView.swift in Sources */,
 				2CF6FA052431373E00F7E53B /* AppleSignInRequest.swift in Sources */,
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
+				2C8B3A592436E20B005FE926 /* ProviderOrderDetailEndpoints.swift in Sources */,
 				2CEAD743240F57B80095E9A4 /* PaymentResponse.swift in Sources */,
 				2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */,
 				2C8B3A42243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,

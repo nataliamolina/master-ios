@@ -51,4 +51,15 @@ class ProviderOrderDetailService: ProviderOrderDetailServiceProtocol {
             onComplete(response?.result ?? false, error)
         }
     }
+    
+    func updateOrderState(orderId: Int, stateId: Int,
+                          onComplete: @escaping (_ result: OrderState?, _ error: CMError?) -> Void) {
+        
+        let endpoint = Endpoint.updateOrderState(orderId: orderId, stateId: stateId)
+        
+        connectionDependency.put(url: endpoint) { (response: OrderState?, error: CMError?) in
+            
+            onComplete(response, error)
+        }
+    }
 }

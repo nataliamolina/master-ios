@@ -19,4 +19,7 @@ protocol ProviderOrderDetailServiceProtocol {
     
     func validateOrderRating(id: Int,
                              onComplete: @escaping (_ result: Bool, _ error: CMError?) -> Void)
+    
+    func updateOrderState(orderId: Int, stateId: Int,
+                          onComplete: @escaping (_ result: OrderState?, _ error: CMError?) -> Void)
 }
