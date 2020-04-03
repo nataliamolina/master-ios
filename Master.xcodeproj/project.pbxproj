@@ -450,6 +450,24 @@
 		2C8B3A3324365716005FE926 /* MTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3224365716005FE926 /* MTextView.swift */; };
 		2C8B3A3424365716005FE926 /* MTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3224365716005FE926 /* MTextView.swift */; };
 		2C8B3A3524365716005FE926 /* MTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3224365716005FE926 /* MTextView.swift */; };
+		2C8B3A40243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A38243699EC005FE926 /* ProviderOrderDetailViewModel.swift */; };
+		2C8B3A41243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A38243699EC005FE926 /* ProviderOrderDetailViewModel.swift */; };
+		2C8B3A42243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A38243699EC005FE926 /* ProviderOrderDetailViewModel.swift */; };
+		2C8B3A43243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3A243699EC005FE926 /* ProviderOrderDetailViewController.swift */; };
+		2C8B3A44243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3A243699EC005FE926 /* ProviderOrderDetailViewController.swift */; };
+		2C8B3A45243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3A243699EC005FE926 /* ProviderOrderDetailViewController.swift */; };
+		2C8B3A46243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3B243699EC005FE926 /* ProviderOrderDetailViewController.xib */; };
+		2C8B3A47243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3B243699EC005FE926 /* ProviderOrderDetailViewController.xib */; };
+		2C8B3A48243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3B243699EC005FE926 /* ProviderOrderDetailViewController.xib */; };
+		2C8B3A49243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3D243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift */; };
+		2C8B3A4A243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3D243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift */; };
+		2C8B3A4B243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3D243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift */; };
+		2C8B3A4F243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3F243699EC005FE926 /* ProviderOrderDetailService.swift */; };
+		2C8B3A50243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3F243699EC005FE926 /* ProviderOrderDetailService.swift */; };
+		2C8B3A51243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A3F243699EC005FE926 /* ProviderOrderDetailService.swift */; };
+		2C8B3A532436D17B005FE926 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */; };
+		2C8B3A542436D17B005FE926 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */; };
+		2C8B3A552436D17B005FE926 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */; };
 		2C8C6C5B23F4B64000FE06BE /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5A23F4B64000FE06BE /* AppStorage.swift */; };
 		2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C5C23F4B6FE00FE06BE /* Session.swift */; };
 		2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */; };
@@ -997,6 +1015,12 @@
 		2C8B3A2A243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProviderServiceServiceServiceProtocol.swift; sourceTree = "<group>"; };
 		2C8B3A2E243649B2005FE926 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		2C8B3A3224365716005FE926 /* MTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTextView.swift; sourceTree = "<group>"; };
+		2C8B3A38243699EC005FE926 /* ProviderOrderDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOrderDetailViewModel.swift; sourceTree = "<group>"; };
+		2C8B3A3A243699EC005FE926 /* ProviderOrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOrderDetailViewController.swift; sourceTree = "<group>"; };
+		2C8B3A3B243699EC005FE926 /* ProviderOrderDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProviderOrderDetailViewController.xib; sourceTree = "<group>"; };
+		2C8B3A3D243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOrderDetailServiceProtocol.swift; sourceTree = "<group>"; };
+		2C8B3A3F243699EC005FE926 /* ProviderOrderDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderOrderDetailService.swift; sourceTree = "<group>"; };
+		2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		2C8C6C5A23F4B64000FE06BE /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		2C8C6C5C23F4B6FE00FE06BE /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		2C8C6C6223F4BA9D00FE06BE /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -1849,6 +1873,42 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2C8B3A36243699EC005FE926 /* ProviderOrderDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B3A37243699EC005FE926 /* ViewModel */,
+				2C8B3A39243699EC005FE926 /* View */,
+				2C8B3A3C243699EC005FE926 /* Service */,
+			);
+			path = ProviderOrderDetail;
+			sourceTree = "<group>";
+		};
+		2C8B3A37243699EC005FE926 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B3A38243699EC005FE926 /* ProviderOrderDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C8B3A39243699EC005FE926 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B3A3A243699EC005FE926 /* ProviderOrderDetailViewController.swift */,
+				2C8B3A3B243699EC005FE926 /* ProviderOrderDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8B3A3C243699EC005FE926 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B3A3D243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift */,
+				2C8B3A3F243699EC005FE926 /* ProviderOrderDetailService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		2C8C6C5E23F4B9D100FE06BE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2111,6 +2171,7 @@
 		2CD8AC52241AC028005C8628 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				2C8B3A36243699EC005FE926 /* ProviderOrderDetail */,
 				2C4EBFD82432F92D0081AC5F /* AddProviderService */,
 				2C1F2F67241EB81E008E803D /* ProviderHome */,
 				2C6716F3241D456600C86531 /* ProviderPhoto */,
@@ -2429,6 +2490,7 @@
 				2C829ECB240B3AC500D7DD81 /* UINavigationController+Extensions.swift */,
 				2CA2B0C024144C7F000C7131 /* String+Lang.swift */,
 				2C8B3A2E243649B2005FE926 /* UITextField+Extensions.swift */,
+				2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2710,6 +2772,7 @@
 				2C3E5150240C79B500873495 /* loader_anim.json in Resources */,
 				2C3E5151240C79B500873495 /* RegisterViewController.xib in Resources */,
 				2C3E5152240C79B500873495 /* DatePickerViewController.xib in Resources */,
+				2C8B3A47243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */,
 				2C3E5153240C79B500873495 /* CategoryCell.xib in Resources */,
 				2C3E5154240C79B500873495 /* OrderCell.xib in Resources */,
 				2C3E5155240C79B500873495 /* loading_order_anim.json in Resources */,
@@ -2769,6 +2832,7 @@
 				2CC3DC8D2411EBCC001E76B2 /* loader_anim.json in Resources */,
 				2CC3DC8E2411EBCC001E76B2 /* RegisterViewController.xib in Resources */,
 				2CC3DC8F2411EBCC001E76B2 /* DatePickerViewController.xib in Resources */,
+				2C8B3A46243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */,
 				2CC3DC902411EBCC001E76B2 /* CategoryCell.xib in Resources */,
 				2CC3DC912411EBCC001E76B2 /* OrderCell.xib in Resources */,
 				2CC3DC922411EBCC001E76B2 /* loading_order_anim.json in Resources */,
@@ -2828,6 +2892,7 @@
 				2C829EBB240AD4FD00D7DD81 /* loader_anim.json in Resources */,
 				A5F30D5E23B4D8DF005258A8 /* RegisterViewController.xib in Resources */,
 				2C3E0EEE2408A299005453BA /* DatePickerViewController.xib in Resources */,
+				2C8B3A48243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */,
 				A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */,
 				2C829ED1240B3E1E00D7DD81 /* OrderCell.xib in Resources */,
 				2C22B39923F8AFC300678A41 /* loading_order_anim.json in Resources */,
@@ -3213,6 +3278,7 @@
 				2C3E50AA240C79B500873495 /* UINavigationController+Extensions.swift in Sources */,
 				2C3E50AB240C79B500873495 /* EmailLoginService.swift in Sources */,
 				2C4EBFE62432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
+				2C8B3A50243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C1241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DE2416BB8A0083A59A /* RateView.swift in Sources */,
 				2C3E50AC240C79B500873495 /* TitleCell.swift in Sources */,
@@ -3263,7 +3329,9 @@
 				2C3E50C8240C79B500873495 /* ProviderServiceCell.swift in Sources */,
 				2C3E50C9240C79B500873495 /* ProductSelectorResult.swift in Sources */,
 				2C3E50CA240C79B500873495 /* SelectorCellViewModel.swift in Sources */,
+				2C8B3A41243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
 				2C3E50CB240C79B500873495 /* ProviderWithScore.swift in Sources */,
+				2C8B3A542436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
 				2C3E50CC240C79B500873495 /* CheckoutRouter.swift in Sources */,
 				2C3E50CD240C79B500873495 /* UIImage+Extensions.swift in Sources */,
 				2CA96F90240F5F820056C2F0 /* PaymentResponse.swift in Sources */,
@@ -3271,6 +3339,7 @@
 				2C3E50CF240C79B500873495 /* OrderDetailService.swift in Sources */,
 				2C3E50D0240C79B500873495 /* OrdersService.swift in Sources */,
 				2C3E50D1240C79B500873495 /* ProviderProfileService.swift in Sources */,
+				2C8B3A4A243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */,
 				2C3E50D2240C79B500873495 /* Service.swift in Sources */,
 				2C3E50D3240C79B500873495 /* UITableViewCell+Extensions.swift in Sources */,
 				2C3E50D4240C79B500873495 /* CheckoutProviderCellViewModel.swift in Sources */,
@@ -3365,6 +3434,7 @@
 				2C8B3A3424365716005FE926 /* MTextView.swift in Sources */,
 				2C3E5118240C79B500873495 /* SplashScreenServiceProtocol.swift in Sources */,
 				2C3E5119240C79B500873495 /* EmailLoginViewController.swift in Sources */,
+				2C8B3A44243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */,
 				2C3E511A240C79B500873495 /* MButton.swift in Sources */,
 				2C3E511B240C79B500873495 /* ConnectionManager.swift in Sources */,
 				2CD8AC5E241AC072005C8628 /* ProviderRouter.swift in Sources */,
@@ -3430,6 +3500,7 @@
 				2CC3DBDE2411EBCC001E76B2 /* UINavigationController+Extensions.swift in Sources */,
 				2CC3DBDF2411EBCC001E76B2 /* EmailLoginService.swift in Sources */,
 				2C4EBFE52432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
+				2C8B3A4F243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C0241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DD2416BB8A0083A59A /* RateView.swift in Sources */,
 				2CC3DBE02411EBCC001E76B2 /* TitleCell.swift in Sources */,
@@ -3480,7 +3551,9 @@
 				2CC3DBFD2411EBCC001E76B2 /* ProviderServiceCell.swift in Sources */,
 				2CC3DBFE2411EBCC001E76B2 /* ProductSelectorResult.swift in Sources */,
 				2CC3DBFF2411EBCC001E76B2 /* SelectorCellViewModel.swift in Sources */,
+				2C8B3A40243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
 				2CC3DC002411EBCC001E76B2 /* ProviderWithScore.swift in Sources */,
+				2C8B3A532436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
 				2CC3DC012411EBCC001E76B2 /* CheckoutRouter.swift in Sources */,
 				2CC3DC022411EBCC001E76B2 /* UIImage+Extensions.swift in Sources */,
 				2CC3DC032411EBCC001E76B2 /* PaymentResponse.swift in Sources */,
@@ -3488,6 +3561,7 @@
 				2CC3DC052411EBCC001E76B2 /* OrderDetailService.swift in Sources */,
 				2CC3DC062411EBCC001E76B2 /* OrdersService.swift in Sources */,
 				2CC3DC072411EBCC001E76B2 /* ProviderProfileService.swift in Sources */,
+				2C8B3A49243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */,
 				2CC3DC082411EBCC001E76B2 /* Service.swift in Sources */,
 				2CC3DC092411EBCC001E76B2 /* UITableViewCell+Extensions.swift in Sources */,
 				2CC3DC0A2411EBCC001E76B2 /* CheckoutProviderCellViewModel.swift in Sources */,
@@ -3582,6 +3656,7 @@
 				2C8B3A3324365716005FE926 /* MTextView.swift in Sources */,
 				2CC3DC522411EBCC001E76B2 /* SplashScreenServiceProtocol.swift in Sources */,
 				2CC3DC532411EBCC001E76B2 /* EmailLoginViewController.swift in Sources */,
+				2C8B3A43243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */,
 				2CC3DC542411EBCC001E76B2 /* MButton.swift in Sources */,
 				2CC3DC552411EBCC001E76B2 /* ConnectionManager.swift in Sources */,
 				2CD8AC5D241AC072005C8628 /* ProviderRouter.swift in Sources */,
@@ -3647,6 +3722,7 @@
 				2C7E7FB723F89A2200D7835E /* ProviderListService.swift in Sources */,
 				2C829ECC240B3AC500D7DD81 /* UINavigationController+Extensions.swift in Sources */,
 				2C4EBFE72432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
+				2C8B3A51243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C2241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DF2416BB8A0083A59A /* RateView.swift in Sources */,
 				2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */,
@@ -3697,7 +3773,9 @@
 				A5F30D5D23B4D8DF005258A8 /* RegisterViewController.swift in Sources */,
 				2CEAD743240F57B80095E9A4 /* PaymentResponse.swift in Sources */,
 				2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */,
+				2C8B3A42243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
 				2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */,
+				2C8B3A552436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
 				2CFF4DBD23FA007B0024B3F1 /* SelectorCellViewModel.swift in Sources */,
 				2C7E7FBA23F89A6E00D7835E /* ProviderWithScore.swift in Sources */,
 				2C829EC4240B205E00D7DD81 /* CheckoutRouter.swift in Sources */,
@@ -3705,6 +3783,7 @@
 				2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */,
 				2C3B8080240C0B5B00D4C6FE /* OrderDetailService.swift in Sources */,
 				2CF6ABBE23F7AF0200F9EF40 /* OrdersService.swift in Sources */,
+				2C8B3A4B243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */,
 				2CA494DC23F998C600F87AD6 /* ProviderProfileService.swift in Sources */,
 				2CF6ABB623F7ADBD00F9EF40 /* Service.swift in Sources */,
 				A5F30D6423B4DA63005258A8 /* UITableViewCell+Extensions.swift in Sources */,
@@ -3799,6 +3878,7 @@
 				2C8B3A3524365716005FE926 /* MTextView.swift in Sources */,
 				2CEAD749240F59040095E9A4 /* PaymentViewModel.swift in Sources */,
 				A5F30D5423B4D2CC005258A8 /* EmailLoginViewController.swift in Sources */,
+				2C8B3A45243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */,
 				A5F30D4C23B4CBC3005258A8 /* MButton.swift in Sources */,
 				2C8C6C6C23F4BDA700FE06BE /* ConnectionManager.swift in Sources */,
 				2CD8AC5F241AC072005C8628 /* ProviderRouter.swift in Sources */,

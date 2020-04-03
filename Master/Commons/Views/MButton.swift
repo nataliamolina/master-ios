@@ -16,6 +16,7 @@ enum MButtonType: Int {
     case onlyWhiteText // 4
     case redBorder // 5
     case yellow // 6
+    case fullRed
 }
 
 class MButton: UIButton {

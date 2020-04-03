@@ -1,5 +1,5 @@
 //
-//  OrderDetailViewModel.swift
+//  ProviderOrderDetailViewModel.swift
 //  Master
 //
 //  Created by Carlos Mejía on 1/03/20.
@@ -9,29 +9,26 @@
 import UIKit
 import EasyBinding
 
-enum OrderDetailViewModelStatus {
+enum ProviderOrderDetailViewModelStatus {
     case undefined
     case error(error: String?)
 }
 
-class OrderDetailViewModel {
+class ProviderOrderDetailViewModel {
     // MARK: - Properties
     private var cart = [OrderProviderService]()
-    private let service: OrderDetailServiceProtocol
+    private let service: ProviderOrderDetailServiceProtocol
     private let orderId: Int
     private typealias CheckoutLang = CheckoutConstants.Lang
 
-    var rateAttempts = 0
     let formattedTotal = Var("$0")
-    let status = Var<OrderDetailViewModelStatus>(.undefined)
+    let status = Var<ProviderOrderDetailViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource = Var<[CellViewModelProtocol]>([])
-    let pendingPayment = Var<Bool>(true)
-    let needsToRateOrder = Var(false)
     
     // MARK: - Life Cycle
-    init(orderId: Int, service: OrderDetailServiceProtocol? = nil) {
-        let defaultService = OrderDetailService(connectionDependency: ConnectionManager())
+    init(orderId: Int, service: ProviderOrderDetailServiceProtocol? = nil) {
+        let defaultService = ProviderOrderDetailService(connectionDependency: ConnectionManager())
         
         self.orderId = orderId
         self.service = service ?? defaultService
@@ -54,13 +51,8 @@ class OrderDetailViewModel {
             }
             
             self?.cart = model.orderProviderServices ?? []
-            self?.pendingPayment.value = !(model.orderState.type == .pendingForPayment)
             self?.responseToViewModels(model: model)
             self?.fetchOrderServices()
-            
-            if model.orderState.type == .finished {
-                self?.validateOrderRating()
-            }
         }
     }
     
@@ -88,7 +80,10 @@ class OrderDetailViewModel {
                                                              status: model.orderState.type,
                                                              providerName: model.provider.user.names,
                                                              orderDate: Utils.jsonToFormattedDate(model.orderDate),
-                                                             isProvider: false)
+                                                             isProvider: true)
+        
+        // FIXME: Strings
+        let helpButtonViewModel = ButtonCellViewModel(style: .redBorder, title: "¿Necesitas Ayuda?", value: nil)
         
         let fieldsCells = [
             CheckoutFieldCellViewModel(title: CheckoutLang.address,
@@ -112,6 +107,7 @@ class OrderDetailViewModel {
         ]
         
         dataSource.value.append(headerViewModel)
+        dataSource.value.append(helpButtonViewModel)
         dataSource.value.append(contentsOf: fieldsCells)
         
     }
@@ -145,30 +141,7 @@ class OrderDetailViewModel {
         
         dataSource.value.append(contentsOf: getGroupedServices(models: products))
     }
-    
-    private func validateOrderRating() {
-        service.validateOrderRating(id: orderId) { [weak self] (response: Bool, error: CMError?) in
-            guard !response, error == nil else {
-                self?.status.value = .error(error: error?.localizedDescription)
-                
-                return
-            }
-            
-            self?.needsToRateOrder.value = true
-            self?.showRatingButton()
-        }
-    }
-    
-    private func showRatingButton() {
-        guard var headerViewModel = dataSource.value.first as? OrderDetailHeaderCellViewModel else {
-            return
-        }
-        
-        headerViewModel.status = .ratingPending
-        
-        dataSource.value[0] = headerViewModel
-    }
-    
+
     private func getGroupedServices(models: [ProviderServiceCellViewModel]) -> [ProviderServiceCellViewModel] {
         var result = [ProviderServiceCellViewModel]()
         

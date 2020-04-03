@@ -16,4 +16,8 @@ extension String {
     var asDouble: Double {
         return Double(self) ?? 0
     }
+    
+    var asInt: Int {
+        return Int(self) ?? 0
+    }
 }

@@ -43,7 +43,7 @@ class SelectorCell: UITableViewCell, ConfigurableCellProtocol {
         viewModel.buttons.enumerated().forEach { (index, item) in
             let button = MButton()
             button.style = item.style
-            button.setTitle(item.title, for: .normal)
+            button.title = item.title
             button.tag = index
             button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
             

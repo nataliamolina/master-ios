@@ -82,10 +82,10 @@ class MenuViewController: UIViewController {
     // MARK: - Private Methods
     private func setupUI(firstName: String, imageUrl: String) {
         if !Session.shared.isLoggedIn {
-            logoutButton.setTitle("menu.login".localized, for: .normal)
+            logoutButton.title = "menu.login".localized
             welcomeLabel.text = "menu.greetings.nosession".localized
         } else {
-            logoutButton.setTitle("menu.logout".localized, for: .normal)
+            logoutButton.title = "menu.logout".localized
         }
         
         let topOffset: CGFloat = 20

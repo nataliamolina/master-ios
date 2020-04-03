@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderProfileViewController" customModule="Master" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderProfileViewController" customModule="Local" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="vHA-Vx-o8m" id="WL7-bG-ESr"/>
                 <outlet property="totalLabel" destination="B17-Qn-cT0" id="Se8-kV-Se4"/>
@@ -23,11 +23,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vHA-Vx-o8m">
-                    <rect key="frame" x="0.0" y="44" width="414" height="782"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="748"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQX-XT-CZe">
-                    <rect key="frame" x="0.0" y="826" width="414" height="70"/>
+                    <rect key="frame" x="0.0" y="792" width="414" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgf-wh-2Ua">
                             <rect key="frame" x="20" y="25" width="42" height="20.5"/>
@@ -44,7 +44,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-zZ-3C4" customClass="MButton" customModule="Master" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-zZ-3C4" customClass="MButton" customModule="Local" customModuleProvider="target">
                             <rect key="frame" x="294" y="11.5" width="100" height="47"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="47" id="adM-No-zfA"/>
@@ -73,15 +73,23 @@
                         <constraint firstItem="bgf-wh-2Ua" firstAttribute="centerY" secondItem="AQX-XT-CZe" secondAttribute="centerY" id="taA-c9-YGv"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfr-Jo-0xM">
+                    <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                    <color key="backgroundColor" red="0.49803921569999998" green="0.76862745099999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="AQX-XT-CZe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4BJ-Wu-ZRU"/>
                 <constraint firstItem="vHA-Vx-o8m" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7MA-tO-N0m"/>
                 <constraint firstItem="AQX-XT-CZe" firstAttribute="top" secondItem="vHA-Vx-o8m" secondAttribute="bottom" id="Df0-b5-Vbx"/>
+                <constraint firstAttribute="trailing" secondItem="Bfr-Jo-0xM" secondAttribute="trailing" id="PV0-jz-xHI"/>
                 <constraint firstItem="AQX-XT-CZe" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Uyr-kJ-Z90"/>
                 <constraint firstItem="vHA-Vx-o8m" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y8u-bu-3if"/>
-                <constraint firstAttribute="bottom" secondItem="AQX-XT-CZe" secondAttribute="bottom" id="aP5-Te-TRW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AQX-XT-CZe" secondAttribute="bottom" id="aP5-Te-TRW"/>
+                <constraint firstItem="Bfr-Jo-0xM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iQ9-vm-gvM"/>
+                <constraint firstAttribute="bottom" secondItem="Bfr-Jo-0xM" secondAttribute="bottom" id="q6z-YT-5hU"/>
+                <constraint firstItem="Bfr-Jo-0xM" firstAttribute="top" secondItem="AQX-XT-CZe" secondAttribute="bottom" id="spu-G4-bnQ"/>
                 <constraint firstItem="vHA-Vx-o8m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u73-df-13x"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

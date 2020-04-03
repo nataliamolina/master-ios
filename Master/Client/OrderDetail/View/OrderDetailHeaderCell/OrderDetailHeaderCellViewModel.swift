@@ -13,14 +13,14 @@ protocol OrderDetailHeaderCellDataSource {
     var status: OrderStateType { get }
     var providerName: String { get }
     var orderDate: String { get }
-    var showMainButton: Bool { get }
+    var isProvider: Bool { get }
 }
 
 struct OrderDetailHeaderCellViewModel: OrderDetailHeaderCellDataSource, CellViewModelProtocol {
     let orderId: Int
-    let status: OrderStateType
+    var status: OrderStateType
     let providerName: String
     let orderDate: String
     let identifier: String = OrderDetailHeaderCell.cellIdentifier
-    var showMainButton: Bool
+    let isProvider: Bool
 }

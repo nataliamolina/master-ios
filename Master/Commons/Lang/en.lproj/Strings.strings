@@ -29,6 +29,7 @@
 "general.state.pending" = "Pendiente";
 "general.state.paymentPending" = "Pendiente de pago";
 "general.state.paymentDone" = "Pago realizado";
+"general.state.ratingPending" = "Calificación pendiente";
 
 // Menu
 "menu.greetings" = "Hola, ";

@@ -42,10 +42,7 @@ class ButtonCell: UITableViewCell, ConfigurableCellProtocol {
         self.delegate = delegate as? ButtonCellDelegate
         self.mainButton.style = viewModel.style
         
-        self.mainButton.setTitle(viewModel.title, for: .normal)
-        self.mainButton.setTitle(viewModel.title, for: .selected)
-        self.mainButton.setTitle(viewModel.title, for: .focused)
-        self.mainButton.setTitle(viewModel.title, for: .application)
+        self.mainButton.title = viewModel.title
     }
     
     // MARK: - Private Methods

@@ -110,3 +110,10 @@ extension ProviderHomeViewController: AddProviderServiceDelegate {
         viewModel.fetchData()
     }
 }
+
+// MARK: - AddProviderServiceDelegate
+extension ProviderHomeViewController: ProviderOrderCellDelegate {
+    func cellTapped(_ cell: ProviderOrderCell, viewModel: ProviderOrderCellDataSource) {
+        router.transition(to: .orderDetail(viewModel: ProviderOrderDetailViewModel(orderId: viewModel.id.asInt)))
+    }
+}

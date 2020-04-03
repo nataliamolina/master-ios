@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderDetailViewController" customModule="Local" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderOrderDetailViewController" customModule="Local" customModuleProvider="target">
             <connections>
                 <outlet property="paymentButton" destination="kgm-8Y-7fq" id="TfB-Ax-pip"/>
                 <outlet property="tableView" destination="xS5-g2-eo8" id="UWj-bs-vDW"/>
@@ -18,14 +18,18 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xS5-g2-eo8">
+                    <rect key="frame" x="0.0" y="44" width="375" height="664"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITO-j4-rAh">
-                    <rect key="frame" x="0.0" y="792" width="414" height="70"/>
+                    <rect key="frame" x="0.0" y="708" width="375" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktA-nx-Vav">
-                            <rect key="frame" x="20" y="26.5" width="35.5" height="17"/>
+                            <rect key="frame" x="19.999999999999996" y="26.666666666666629" width="35.666666666666657" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -34,13 +38,13 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF0-rs-09t">
-                            <rect key="frame" x="65.5" y="22.5" width="54" height="25"/>
+                            <rect key="frame" x="65.666666666666671" y="22.333333333333371" width="54" height="25.333333333333329"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgm-8Y-7fq" customClass="MButton" customModule="Local" customModuleProvider="target">
-                            <rect key="frame" x="294" y="11.5" width="100" height="47"/>
+                            <rect key="frame" x="255" y="11.666666666666629" width="100" height="47"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="HSh-ol-Rmj"/>
                                 <constraint firstAttribute="height" constant="47" id="uM2-uU-obN"/>
@@ -57,7 +61,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.49701553580000002" green="0.76978808639999996" blue="0.70195633170000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.49803921568627452" green="0.76862745098039209" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstItem="ktA-nx-Vav" firstAttribute="centerY" secondItem="ITO-j4-rAh" secondAttribute="centerY" id="6wc-iS-GD3"/>
                         <constraint firstItem="kgm-8Y-7fq" firstAttribute="centerY" secondItem="ITO-j4-rAh" secondAttribute="centerY" id="78E-5v-hm9"/>
@@ -68,12 +72,8 @@
                         <constraint firstItem="bF0-rs-09t" firstAttribute="centerY" secondItem="ktA-nx-Vav" secondAttribute="centerY" id="vTl-JS-fjI"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xS5-g2-eo8">
-                    <rect key="frame" x="0.0" y="44" width="414" height="748"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvM-4r-EcZ">
-                    <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHF-j0-edc">
+                    <rect key="frame" x="0.0" y="778" width="375" height="34"/>
                     <color key="backgroundColor" red="0.49803921569999998" green="0.76862745099999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </view>
             </subviews>
@@ -81,18 +81,18 @@
             <constraints>
                 <constraint firstItem="ITO-j4-rAh" firstAttribute="top" secondItem="xS5-g2-eo8" secondAttribute="bottom" id="0fg-5X-Ige"/>
                 <constraint firstItem="ITO-j4-rAh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1is-PP-cuD"/>
-                <constraint firstAttribute="bottom" secondItem="zvM-4r-EcZ" secondAttribute="bottom" id="4oW-bZ-Kei"/>
+                <constraint firstAttribute="trailing" secondItem="RHF-j0-edc" secondAttribute="trailing" id="4Tb-Cx-Wk1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xS5-g2-eo8" secondAttribute="trailing" id="EmT-w9-dqr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ITO-j4-rAh" secondAttribute="bottom" id="Wjy-PL-jcY"/>
-                <constraint firstItem="zvM-4r-EcZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YXE-6J-sVk"/>
-                <constraint firstItem="zvM-4r-EcZ" firstAttribute="top" secondItem="ITO-j4-rAh" secondAttribute="bottom" id="ccr-aH-wdT"/>
-                <constraint firstAttribute="trailing" secondItem="zvM-4r-EcZ" secondAttribute="trailing" id="i0b-6h-cGR"/>
+                <constraint firstItem="RHF-j0-edc" firstAttribute="top" secondItem="ITO-j4-rAh" secondAttribute="bottom" id="Z42-ba-wnV"/>
+                <constraint firstItem="RHF-j0-edc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jJB-pa-U01"/>
                 <constraint firstItem="xS5-g2-eo8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lBy-bh-ni7"/>
+                <constraint firstAttribute="bottom" secondItem="RHF-j0-edc" secondAttribute="bottom" id="oi0-bh-sDT"/>
                 <constraint firstItem="ITO-j4-rAh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pot-6W-SV6"/>
                 <constraint firstItem="xS5-g2-eo8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uu1-JX-jsq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+            <point key="canvasLocation" x="136.80000000000001" y="152.95566502463055"/>
         </view>
     </objects>
 </document>

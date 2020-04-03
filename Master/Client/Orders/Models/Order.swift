@@ -16,6 +16,7 @@ enum OrderStateType: String, Codable {
     case finished = "finished"
     case pendingForPayment = "pending_for_payment"
     case paymentDone = "payment_done"
+    case ratingPending
 }
 
 struct Order: Codable {

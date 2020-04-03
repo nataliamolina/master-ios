@@ -34,7 +34,9 @@ class MLegalButton: UIButton {
         titleLabel?.lineBreakMode = .byWordWrapping
         
         let text = "general.legal.continue".localized
-        setTitle(text, for: .normal)
+        
+        title = text
+        
         let titleString = NSMutableAttributedString(string: text)
         titleString.addAttribute(NSAttributedString.Key.underlineStyle,
                                  value: NSUnderlineStyle.single.rawValue,

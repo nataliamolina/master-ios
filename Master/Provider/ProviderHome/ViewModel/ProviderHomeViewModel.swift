@@ -110,8 +110,11 @@ class ProviderHomeViewModel {
     }
     
     private func fetchProviderOrders() {
+        isLoading.value = true
+
         service.fetchProviderOrders { [weak self] (response: [Order], error: CMError?) in
-            
+            self?.isLoading.value = false
+
             guard error == nil else {
                 self?.isLoading.value = false
                 

@@ -36,7 +36,8 @@ class StatusHelper {
         .rejected: UIColor.Master.red,
         .pending: UIColor.Master.yellow,
         .pendingForPayment: UIColor.Master.yellow,
-        .paymentDone: UIColor.Master.green
+        .paymentDone: UIColor.Master.green,
+        .ratingPending: UIColor.Master.yellow
     ]
     
     private let buttonStyles: [OrderStateType: MButtonType] = [
@@ -46,7 +47,8 @@ class StatusHelper {
         .rejected: .redBorder,
         .pending: .yellow,
         .pendingForPayment: .yellow,
-        .paymentDone: .green
+        .paymentDone: .green,
+        .ratingPending: .yellow
     ]
     
     private let stateName: [OrderStateType: String] = [
@@ -56,6 +58,7 @@ class StatusHelper {
         .rejected: "general.state.rejected".localized,
         .pending: "general.state.pending".localized,
         .pendingForPayment: "general.state.paymentPending".localized,
-        .paymentDone: "general.state.paymentDone".localized
+        .paymentDone: "general.state.paymentDone".localized,
+        .ratingPending: "general.state.ratingPending".localized
     ]
 }

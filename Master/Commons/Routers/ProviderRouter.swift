@@ -17,6 +17,7 @@ enum ProviderRouterTransitions {
     case listSelector(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?)
     case addService(viewModel: AddProviderServiceViewModel, delegate: AddProviderServiceDelegate)
     case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate)
+    case orderDetail(viewModel: ProviderOrderDetailViewModel)
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
@@ -59,6 +60,10 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             
         case .completeText(let viewModel, let delegate):
             handleCompleteText(viewModel: viewModel, delegate: delegate)
+            
+        case .orderDetail(let viewModel):
+            handleOrderDetail(viewModel: viewModel)
+            
         }
     }
     
@@ -73,6 +78,12 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         providerNavigationController.navigationBar.prefersLargeTitles = false
         
         navigationController.present(providerNavigationController, animated: true, completion: nil)
+    }
+    
+    private func handleOrderDetail(viewModel: ProviderOrderDetailViewModel) {
+        let viewController = ProviderOrderDetailViewController(viewModel: viewModel, router: self)
+            
+        providerNavigationController.pushViewController(viewController, animated: true)
     }
     
     private func handleCompleteText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate) {

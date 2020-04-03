@@ -1,5 +1,5 @@
 //
-//  OrderDetailViewController.swift
+//  ProviderOrderDetailViewController.swift
 //  Master
 //
 //  Created by Carlos Mejía on 1/03/20.
@@ -8,28 +8,25 @@
 
 import UIKit
 
-class OrderDetailViewController: UIViewController {
+class ProviderOrderDetailViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var paymentButton: MButton!
-
+    
     // MARK: - UI Actions
-    @IBAction private func paymentButtonAction() {
-        router.transition(to: .payment(viewModel: viewModel.getPaymentViewModel()))
-    }
-
+    
     // MARK: - Properties
-    private let router: RouterBase<OrdersRouterTransitions>
-    private let viewModel: OrderDetailViewModel
+    private let router: RouterBase<ProviderRouterTransitions>
+    private let viewModel: ProviderOrderDetailViewModel
     
     // MARK: - Life Cycle
     
-    init(viewModel: OrderDetailViewModel, router: RouterBase<OrdersRouterTransitions>) {
+    init(viewModel: ProviderOrderDetailViewModel, router: RouterBase<ProviderRouterTransitions>) {
         self.viewModel = viewModel
         self.router = router
         
-        super.init(nibName: String(describing: OrderDetailViewController.self), bundle: nil)
+        super.init(nibName: String(describing: ProviderOrderDetailViewController.self), bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -58,7 +55,8 @@ class OrderDetailViewController: UIViewController {
         tableView.registerNib(OrderDetailHeaderCell.self)
         tableView.registerNib(ProviderServiceCell.self)
         tableView.registerNib(CheckoutFieldCell.self)
-
+        tableView.registerNib(ButtonCell.self)
+        
         setupBindings()
         
         viewModel.fetchDetail()
@@ -67,25 +65,15 @@ class OrderDetailViewController: UIViewController {
     private func setupBindings() {
         viewModel.formattedTotal.bindTo(totalLabel, to: .text)
         viewModel.dataSource.bindTo(tableView, to: .dataSource)
-        viewModel.pendingPayment.bindTo(paymentButton, to: .visibility)
         
         viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
-        }
-        
-        viewModel.needsToRateOrder.listen { [weak self] needsToRateOrder in
-            guard let self = self, needsToRateOrder, self.viewModel.rateAttempts == 0 else {
-                return
-            }
-            
-            self.viewModel.rateAttempts += 1
-            self.router.transition(to: .rateOrder(viewModel: self.viewModel.getRateViewModel()))
         }
     }
 }
 
 // MARK: - UITableViewDataSource
-extension OrderDetailViewController: UITableViewDataSource {
+extension ProviderOrderDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSource.value.count
     }
@@ -98,8 +86,21 @@ extension OrderDetailViewController: UITableViewDataSource {
 }
 
 // MARK: - OrderDetailHeaderCellDelegate
-extension OrderDetailViewController: OrderDetailHeaderCellDelegate {
+extension ProviderOrderDetailViewController: OrderDetailHeaderCellDelegate {
     func actionButtonTapped(_ cell: OrderDetailHeaderCell, type: OrderDetailHeaderCellButtonType) {
-        router.transition(to: .rateOrder(viewModel: viewModel.getRateViewModel()))
+        
+    }
+}
+
+// MARK: - ButtonCellDelegate
+extension ProviderOrderDetailViewController: ButtonCellDelegate {
+    func cellTapped(_ cell: ButtonCell, viewModel: ButtonCellDataSource) {
+        guard
+            let whatsappURL = URL(string: Session.shared.helpUrl),
+            UIApplication.shared.canOpenURL(whatsappURL) else {
+                return
+        }
+        
+        UIApplication.shared.open(whatsappURL, options: [:], completionHandler: nil)
     }
 }

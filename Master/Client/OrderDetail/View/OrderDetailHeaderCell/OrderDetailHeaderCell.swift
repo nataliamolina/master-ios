@@ -8,8 +8,13 @@
 
 import UIKit
 
+enum OrderDetailHeaderCellButtonType {
+    case left
+    case right
+}
+
 protocol OrderDetailHeaderCellDelegate: class {
-    func actionButtonTapped(_ cell: OrderDetailHeaderCell)
+    func actionButtonTapped(_ cell: OrderDetailHeaderCell, type: OrderDetailHeaderCellButtonType)
 }
 
 private struct Lang {
@@ -21,13 +26,18 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var orderIdLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private weak var statusView: UIView!
-    @IBOutlet private weak var mainActionButton: MButton!
+    @IBOutlet private weak var leftActionButton: MButton!
+    @IBOutlet private weak var rightActionButton: MButton!
     @IBOutlet private weak var providerNameLabel: UILabel!
     @IBOutlet private weak var orderDateLabel: UILabel!
     
     // MARK: - UI Actions
-    @IBAction private func mainButtonAction() {
-        delegate?.actionButtonTapped(self)
+    @IBAction private func leftButtonAction() {
+        delegate?.actionButtonTapped(self, type: .left)
+    }
+    
+    @IBAction private func rightButtonAction() {
+        delegate?.actionButtonTapped(self, type: .right)
     }
     
     // MARK: - Properties
@@ -56,7 +66,28 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         statusHelper.setupLabel(statusLabel, state: viewModel.status)
         statusHelper.setupView(statusView, state: viewModel.status)
         
-        mainActionButton.isHidden = !viewModel.showMainButton
+        switch viewModel.status {
+        case .ratingPending:
+            rightActionButton.isHidden = true
+            rightActionButton.title = "orderDetail.rate".localized
+            
+        case .pending:
+            guard viewModel.isProvider else {
+                hiddeButtons()
+                
+                return
+            }
+            
+            // FIXME: Move this to other method and fix strings
+            leftActionButton.style = .fullRed
+            leftActionButton.title = "Rechazar Servicio"
+            
+            rightActionButton.style = .green
+            rightActionButton.title = "Aceptar Servicio"
+            
+        default:
+            hiddeButtons()
+        }
     }
     
     // MARK: - Private Methods
@@ -65,5 +96,10 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         statusLabel.text = nil
         providerNameLabel.text = nil
         orderDateLabel.text = nil
+    }
+    
+    private func hiddeButtons() {
+        leftActionButton.isHidden = true
+        rightActionButton.isHidden = true
     }
 }
