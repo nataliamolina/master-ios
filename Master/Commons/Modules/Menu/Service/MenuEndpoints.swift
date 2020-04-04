@@ -8,12 +8,4 @@
 
 import Foundation
 
-private enum EndpointsKeys: String {
-    case logout
-}
-
-extension Endpoint {
-    static var logout: String {
-        return Endpoint.url(with: EndpointsKeys.logout.rawValue)
-    }
-}
+extension Endpoint {}

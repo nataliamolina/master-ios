@@ -14,7 +14,7 @@ enum OrderDetailHeaderCellButtonType {
 }
 
 protocol OrderDetailHeaderCellDelegate: class {
-    func actionButtonTapped(_ cell: OrderDetailHeaderCell, type: OrderDetailHeaderCellButtonType)
+    func actionButtonTapped(_ cell: OrderDetailHeaderCell, position: OrderDetailHeaderCellButtonType, state: OrderStateType)
 }
 
 private struct Lang {
@@ -23,6 +23,7 @@ private struct Lang {
 
 class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     // MARK: - UI References
+    @IBOutlet private weak var buttonsStackview: UIStackView!
     @IBOutlet private weak var orderIdLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
     @IBOutlet private weak var statusView: UIView!
@@ -33,14 +34,15 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     
     // MARK: - UI Actions
     @IBAction private func leftButtonAction() {
-        delegate?.actionButtonTapped(self, type: .left)
+        delegate?.actionButtonTapped(self, position: .left, state: state)
     }
     
     @IBAction private func rightButtonAction() {
-        delegate?.actionButtonTapped(self, type: .right)
+        delegate?.actionButtonTapped(self, position: .right, state: state)
     }
     
     // MARK: - Properties
+    private var state: OrderStateType = .unknown
     private let statusHelper = StatusHelper()
     private weak var delegate: OrderDetailHeaderCellDelegate?
     
@@ -57,6 +59,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
             return
         }
         
+        self.state = viewModel.status
         self.delegate = delegate as? OrderDetailHeaderCellDelegate
         
         self.orderIdLabel.text = Lang.orderId + viewModel.orderId.asString
@@ -99,6 +102,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     }
     
     private func hiddeButtons() {
+        buttonsStackview.isHidden = true
         leftActionButton.isHidden = true
         rightActionButton.isHidden = true
     }

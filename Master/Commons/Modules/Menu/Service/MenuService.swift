@@ -18,10 +18,4 @@ class MenuService: MenuServiceProtocol {
     }
     
     // MARK: - Public Methods
-    
-    func logout(onComplete: (() -> Void)?) {
-        connectionDependency.putWithBoolResponse(url: Endpoint.logout) { (_, _) in
-            onComplete?()
-        }
-    }
 }

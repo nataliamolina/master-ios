@@ -11,7 +11,8 @@ import Foundation
 class PushNotificationsRouter {
     private let notification: PushNotification
     var ordersRouter: RouterBase<OrdersRouterTransitions>?
-    
+    var providerRouter: RouterBase<ProviderRouterTransitions>?
+
     init(notification: PushNotification) {
         self.notification = notification
     }
@@ -20,11 +21,16 @@ class PushNotificationsRouter {
         switch notification.type {
         case .userOrderUpdated:
             ordersRouter?.transition(to: .orderDetail(viewModel: getOrderDetailViewModel()))
-        default:
-            return
+            
+        case .providerOrderUpdated:
+            providerRouter?.transition(to: .orderDetailFromPush(viewModel: getProviderOrderDetailViewModel()))
         }
         
         PushNotifications.shared.notificationResolved()
+    }
+    
+    private func getProviderOrderDetailViewModel() -> ProviderOrderDetailViewModel {
+        return ProviderOrderDetailViewModel(orderId: Int(notification.actionId) ?? 0)
     }
     
     private func getOrderDetailViewModel() -> OrderDetailViewModel {

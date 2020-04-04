@@ -49,8 +49,6 @@ class HomeViewController: UIViewController {
             
             viewModel.fetchServices()
         }
-        
-        viewModel.updatePushToken()
     }
     
     // MARK: - Private Methods
@@ -92,7 +90,7 @@ class HomeViewController: UIViewController {
     private func setupBindings() {
         viewModel.hasPendingOrders.listen { hasPendingOrders in
             UIView.animate(withDuration: 0.4) { [weak self] in
-                self?.pendingView.isHidden = !hasPendingOrders
+                self?.pendingView.isHidden = hasPendingOrders ? false : true
             }
         }
         
@@ -114,6 +112,7 @@ class HomeViewController: UIViewController {
         showSuccess(message: pendingNotification.message)
         pushNotificationsRouter = PushNotificationsRouter(notification: pendingNotification)
         pushNotificationsRouter?.ordersRouter = OrdersRouter(navigationController: navController)
+        pushNotificationsRouter?.providerRouter = ProviderRouter(navigationController: navController)
         pushNotificationsRouter?.navigateToPushNotification()
     }
     

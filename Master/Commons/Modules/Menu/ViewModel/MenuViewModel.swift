@@ -20,10 +20,6 @@ class MenuViewModel {
     }
     
     func logout() {
-        GIDSignIn.sharedInstance()?.signOut()
-        Session.shared.token = nil
-        Session.shared.profile = .empty
-        
-        service.logout(onComplete: nil)
+        Session.shared.logout()
     }
 }

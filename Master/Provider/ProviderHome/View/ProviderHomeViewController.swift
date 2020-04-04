@@ -56,6 +56,17 @@ class ProviderHomeViewController: UIViewController {
         setupBindings()
         
         viewModel.fetchData()
+        
+        checkPendingDetailFromPush()
+    }
+    
+    private func checkPendingDetailFromPush() {
+        if let currentRouter = (router as? ProviderRouter),
+            let pendingViewModel = currentRouter.pendingDetailFromPush {
+            
+            router.transition(to: .orderDetail(viewModel: pendingViewModel))
+            currentRouter.pendingDetailFromPush = nil
+        }
     }
     
     private func setupBindings() {

@@ -18,7 +18,7 @@ struct UserProfile {
     let document: String
     
     static var empty: UserProfile {
-        return UserProfile(id: 0,
+        return UserProfile(id: -1,
                            imageUrl: "",
                            email: "",
                            firstName: "",
@@ -27,3 +27,4 @@ struct UserProfile {
                            document: "")
     }
 }
+

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Firebase
+import GoogleSignIn
 
 enum SessionKeys: String {
     case sessionToken
@@ -14,13 +16,14 @@ enum SessionKeys: String {
 
 class Session {
     // MARK: - Properties
+    private let service: SessionServiceProtocol = SessionService(connectionDependency: ConnectionManager())
     private let storage: AppStorageProtocol = AppStorage()
     static let shared = Session()
     
     var helpUrl: String = ""
-    var profile: UserProfile = .empty
     var provider: ProviderProfile?
-    
+    private(set) var profile: UserProfile = .empty
+
     var token: String? {
         set(newValue) {
             newValue != nil ?
@@ -41,10 +44,32 @@ class Session {
     private init() {}
     
     // MARK: - Public Methods
+    func login(profile: UserProfile) {
+        updatePushToken()
+        
+        self.profile = profile
+    }
+    
     func logout() {
+        logoutInServerSide()
+        GIDSignIn.sharedInstance()?.signOut()
         token = nil
         profile = .empty
     }
     
     // MARK: - Private Methods
+        
+    private func updatePushToken() {
+        InstanceID.instanceID().instanceID { [weak self] (result, _) in
+            guard let token = result?.token else {
+                return
+            }
+            
+            self?.service.updatePushToken(token, onComplete: {_, _ in})
+        }
+    }
+    
+    private func logoutInServerSide() {
+        service.logout(onComplete: nil)
+    }
 }

@@ -102,7 +102,7 @@ class MainViewModel: NSObject {
     }
     
     private func saveSessionWith(user: User) {
-        Session.shared.profile = user.asUserProfile
+        Session.shared.login(profile: user.asUserProfile)
     }
     
     private func loginWithAppleId(id: String, firstName: String, lastName: String, email: String) {

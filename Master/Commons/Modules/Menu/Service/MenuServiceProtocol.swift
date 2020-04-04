@@ -10,6 +10,4 @@ import Foundation
 
 protocol MenuServiceProtocol {
     var connectionDependency: ConnectionManagerProtocol { get }
-    
-    func logout(onComplete: (() -> Void)?)
 }

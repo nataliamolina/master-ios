@@ -18,13 +18,15 @@ enum ProviderRouterTransitions {
     case addService(viewModel: AddProviderServiceViewModel, delegate: AddProviderServiceDelegate)
     case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate)
     case orderDetail(viewModel: ProviderOrderDetailViewModel)
+    case orderDetailFromPush(viewModel: ProviderOrderDetailViewModel)
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     // MARK: - Properties
     private let navigationController: MNavigationController
     private let providerNavigationController: MNavigationController
-
+    var pendingDetailFromPush: ProviderOrderDetailViewModel?
+    
     // MARK: - Life Cycle
     init(navigationController: MNavigationController) {
         self.navigationController = navigationController
@@ -64,6 +66,9 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         case .orderDetail(let viewModel):
             handleOrderDetail(viewModel: viewModel)
             
+        case .orderDetailFromPush(let viewModel):
+            handleOrderDetailFromPush(viewModel: viewModel)
+            
         }
     }
     
@@ -84,6 +89,12 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         let viewController = ProviderOrderDetailViewController(viewModel: viewModel, router: self)
             
         providerNavigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleOrderDetailFromPush(viewModel: ProviderOrderDetailViewModel) {
+        pendingDetailFromPush = viewModel
+        
+        handleMainTransition()
     }
     
     private func handleCompleteText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate) {

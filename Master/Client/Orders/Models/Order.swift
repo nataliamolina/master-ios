@@ -17,6 +17,7 @@ enum OrderStateType: String, Codable {
     case pendingForPayment = "pending_for_payment"
     case paymentDone = "payment_done"
     case ratingPending
+    case unknown
     
     var id: Int {
         switch self {
@@ -41,7 +42,7 @@ enum OrderStateType: String, Codable {
         case .paymentDone:
             return 7
             
-        case .ratingPending:
+        case .ratingPending, .unknown:
             return -1
         }
     }

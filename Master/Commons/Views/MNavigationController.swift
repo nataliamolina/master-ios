@@ -36,7 +36,7 @@ class MNavigationController: UINavigationController {
         commonSetup()
     }
     
-    private func commonSetup() {
+    func commonSetup() {
         navigationBar.tintColor = UIColor.Master.green
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.prefersLargeTitles = true

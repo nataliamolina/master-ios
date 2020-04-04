@@ -131,6 +131,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="buttonsStackview" destination="8Nz-p2-vvb" id="j9u-3H-3az"/>
                 <outlet property="leftActionButton" destination="jk7-Dg-9MH" id="lDj-jo-N2m"/>
                 <outlet property="orderDateLabel" destination="kLn-Ag-9mk" id="YAQ-1i-FEE"/>
                 <outlet property="orderIdLabel" destination="41E-lQ-yDb" id="7MV-vy-3Wb"/>

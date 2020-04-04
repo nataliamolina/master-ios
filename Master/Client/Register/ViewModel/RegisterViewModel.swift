@@ -84,6 +84,6 @@ class RegisterViewModel {
     }
     
     private func saveSessionWith(user: User) {
-        Session.shared.profile = user.asUserProfile
+        Session.shared.login(profile: user.asUserProfile)
     }
 }

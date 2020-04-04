@@ -10,10 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderProfileViewController" customModule="Local" customModuleProvider="target">
             <connections>
+                <outlet property="continueButton" destination="Tre-zZ-3C4" id="Dpt-2h-mdA"/>
                 <outlet property="tableView" destination="vHA-Vx-o8m" id="WL7-bG-ESr"/>
                 <outlet property="totalLabel" destination="B17-Qn-cT0" id="Se8-kV-Se4"/>
-                <outlet property="totalViewBottomConstraint" destination="aP5-Te-TRW" id="GaD-e5-yFb"/>
-                <outlet property="totalViewHeightConstraint" destination="o1Y-qo-CRr" id="FQa-mT-aDV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -80,8 +79,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="AQX-XT-CZe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4BJ-Wu-ZRU"/>
+                <constraint firstItem="AQX-XT-CZe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" identifier="leading" id="4BJ-Wu-ZRU"/>
                 <constraint firstItem="vHA-Vx-o8m" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7MA-tO-N0m"/>
+                <constraint firstItem="AQX-XT-CZe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="9bu-NZ-Rn9"/>
                 <constraint firstItem="AQX-XT-CZe" firstAttribute="top" secondItem="vHA-Vx-o8m" secondAttribute="bottom" id="Df0-b5-Vbx"/>
                 <constraint firstAttribute="trailing" secondItem="Bfr-Jo-0xM" secondAttribute="trailing" id="PV0-jz-xHI"/>
                 <constraint firstItem="AQX-XT-CZe" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Uyr-kJ-Z90"/>

@@ -24,10 +24,4 @@ class HomeService: HomeServiceProtocol {
             onComplete(response, error)
         }
     }
-    
-    func updatePushToken(_ token: String, onComplete: @escaping (_ result: String?, _ error: CMError?) -> Void) {
-        connectionDependency.put(url: Endpoint.updateToken(with: token)) { (response: String?, error: CMError?) in
-            onComplete(response, error)
-        }
-    }
 }

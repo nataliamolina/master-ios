@@ -87,7 +87,7 @@ class SplashScreenViewModel {
                 return
             }
             
-            Session.shared.profile = user.asUserProfile
+            Session.shared.login(profile: user.asUserProfile)
             self?.status.value = .preloadReady
         }
     }

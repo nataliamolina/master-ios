@@ -69,6 +69,34 @@ class ProviderOrderDetailViewController: UIViewController {
         viewModel.isLoading.listen { isLoading in
             isLoading ? Loader.show() : Loader.dismiss()
         }
+        
+        viewModel.status.listen { [weak self] status in
+            switch status {
+            case .error(let error):
+                self?.showError(message: error)
+                
+            case .stateUpdated:
+                self?.viewModel.fetchDetail()
+                
+            case .undefined:
+                return
+            }
+        }
+    }
+    
+    private func confirmServiceUpdate(onConfirmed: @escaping () -> Void) {
+        // FIXME: Strings
+        let dialog = UIAlertController(title: "Confirmar",
+                                       message: "Al cambiar el estado del pedido, este será notificado al usuario.",
+                                       preferredStyle: .alert)
+        
+        dialog.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+        
+        dialog.addAction(UIAlertAction(title: "Aceptar", style: .destructive, handler: { _ in
+            onConfirmed()
+        }))
+        
+        present(dialog, animated: true, completion: nil)
     }
 }
 
@@ -87,8 +115,23 @@ extension ProviderOrderDetailViewController: UITableViewDataSource {
 
 // MARK: - OrderDetailHeaderCellDelegate
 extension ProviderOrderDetailViewController: OrderDetailHeaderCellDelegate {
-    func actionButtonTapped(_ cell: OrderDetailHeaderCell, type: OrderDetailHeaderCellButtonType) {
+    func actionButtonTapped(_ cell: OrderDetailHeaderCell,
+                            position: OrderDetailHeaderCellButtonType,
+                            state: OrderStateType) {
         
+        confirmServiceUpdate { [weak self] in
+            switch position {
+            case .left:
+                if state == .pending {
+                    self?.viewModel.rejectOrder()
+                } else {
+                    self?.viewModel.updateOrderState()
+                }
+                
+            case .right:
+                self?.viewModel.updateOrderState()
+            }
+        }
     }
 }
 

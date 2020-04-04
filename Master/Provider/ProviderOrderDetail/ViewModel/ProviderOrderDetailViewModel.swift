@@ -12,6 +12,7 @@ import EasyBinding
 enum ProviderOrderDetailViewModelStatus {
     case undefined
     case error(error: String?)
+    case stateUpdated
 }
 
 class ProviderOrderDetailViewModel {
@@ -19,8 +20,9 @@ class ProviderOrderDetailViewModel {
     private var cart = [OrderProviderService]()
     private let service: ProviderOrderDetailServiceProtocol
     private let orderId: Int
+    private var currentState: OrderStateType = .unknown
     private typealias CheckoutLang = CheckoutConstants.Lang
-
+    
     let formattedTotal = Var("$0")
     let status = Var<ProviderOrderDetailViewModelStatus>(.undefined)
     let isLoading = Var(false)
@@ -56,22 +58,23 @@ class ProviderOrderDetailViewModel {
         }
     }
     
-    // WIP
-    func updateOrderState(_ state: OrderState) {
-        isLoading.value = true
-        
-        service.updateOrderState(orderId: orderId,
-                                 stateId: state.type.id) { [weak self] (response: OrderState?, error: CMError?) in
-                                    
-            self?.isLoading.value = false
+    func rejectOrder() {
+        performOrderState(.rejected)
+    }
+    
+    func updateOrderState() {
+        switch currentState {
+        case .paymentDone:
+            performOrderState(.inProgress)
             
-            guard let model = response, error == nil else {
-                self?.status.value = .error(error: error?.localizedDescription)
-                
-                return
-            }
-                                    
-                                    
+        case .inProgress:
+            performOrderState(.finished)
+            
+        case .pending:
+            performOrderState(.pendingForPayment)
+            
+        default:
+            return
         }
     }
     
@@ -92,7 +95,26 @@ class ProviderOrderDetailViewModel {
     
     // MARK: - Private Methods
     
+    private func performOrderState(_ state: OrderStateType) {
+        isLoading.value = true
+        
+        service.updateOrderState(orderId: orderId, stateId: state.id) { [weak self] (response: OrderState?, error: CMError?) in
+            
+            self?.isLoading.value = false
+            
+            guard let newState = response, error == nil else {
+                self?.status.value = .error(error: error?.localizedDescription)
+                
+                return
+            }
+            
+            self?.currentState = newState.type
+            self?.status.value = .stateUpdated
+        }
+    }
+    
     private func responseToViewModels(model: Order) {
+        self.currentState = model.orderState.type
         self.formattedTotal.value = model.grossTotal.toFormattedCurrency()
         
         let headerViewModel = OrderDetailHeaderCellViewModel(orderId: model.id,
@@ -160,7 +182,7 @@ class ProviderOrderDetailViewModel {
         
         dataSource.value.append(contentsOf: getGroupedServices(models: products))
     }
-
+    
     private func getGroupedServices(models: [ProviderServiceCellViewModel]) -> [ProviderServiceCellViewModel] {
         var result = [ProviderServiceCellViewModel]()
         

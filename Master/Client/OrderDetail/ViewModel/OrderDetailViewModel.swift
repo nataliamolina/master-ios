@@ -45,21 +45,25 @@ class OrderDetailViewModel {
         isLoading.value = true
         
         service.fetchOrderDetailBy(id: orderId) { [weak self] (response: Order?, error: CMError?) in
-            self?.isLoading.value = false
+            guard let self = self else {
+                return
+            }
+            
+            self.isLoading.value = false
             
             guard let model = response, error == nil else {
-                self?.status.value = .error(error: error?.localizedDescription)
+                self.status.value = .error(error: error?.localizedDescription)
                 
                 return
             }
             
-            self?.cart = model.orderProviderServices ?? []
-            self?.pendingPayment.value = !(model.orderState.type == .pendingForPayment)
-            self?.responseToViewModels(model: model)
-            self?.fetchOrderServices()
+            self.cart = model.orderProviderServices ?? []
+            self.pendingPayment.value = !(model.orderState.type == .pendingForPayment)
+            self.responseToViewModels(model: model)
+            self.fetchOrderServices()
             
             if model.orderState.type == .finished {
-                self?.validateOrderRating()
+                self.validateOrderRating()
             }
         }
     }

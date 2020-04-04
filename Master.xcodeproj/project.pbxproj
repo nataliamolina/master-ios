@@ -10,6 +10,15 @@
 		2C05F05823F8D9E6003D1925 /* Endpoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C05F05723F8D9E6003D1925 /* Endpoints.plist */; };
 		2C05F05A23F8DA3C003D1925 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05F05923F8DA3C003D1925 /* Utils.swift */; };
 		2C05F05C23F8E6BC003D1925 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C05F05B23F8E6BC003D1925 /* String+Extensions.swift */; };
+		2C0D25B92438E20300DB206D /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25B82438E20300DB206D /* SessionService.swift */; };
+		2C0D25BA2438E20300DB206D /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25B82438E20300DB206D /* SessionService.swift */; };
+		2C0D25BB2438E20300DB206D /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25B82438E20300DB206D /* SessionService.swift */; };
+		2C0D25BD2438E25400DB206D /* SessionEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25BC2438E25400DB206D /* SessionEndpoints.swift */; };
+		2C0D25BE2438E25400DB206D /* SessionEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25BC2438E25400DB206D /* SessionEndpoints.swift */; };
+		2C0D25BF2438E25400DB206D /* SessionEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25BC2438E25400DB206D /* SessionEndpoints.swift */; };
+		2C0D25C12438E2C100DB206D /* SessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */; };
+		2C0D25C22438E2C100DB206D /* SessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */; };
+		2C0D25C32438E2C100DB206D /* SessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */; };
 		2C1218CD2405E7580098BE55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C1218CC2405E7580098BE55 /* GoogleService-Info.plist */; };
 		2C147105241DCA82009E2FDA /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C147104241DCA82009E2FDA /* Threads.swift */; };
 		2C147106241DCA82009E2FDA /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C147104241DCA82009E2FDA /* Threads.swift */; };
@@ -878,6 +887,9 @@
 		2C05F05723F8D9E6003D1925 /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoints.plist; sourceTree = "<group>"; };
 		2C05F05923F8DA3C003D1925 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2C05F05B23F8E6BC003D1925 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		2C0D25B82438E20300DB206D /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		2C0D25BC2438E25400DB206D /* SessionEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEndpoints.swift; sourceTree = "<group>"; };
+		2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionServiceProtocol.swift; sourceTree = "<group>"; };
 		2C1218CC2405E7580098BE55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C147104241DCA82009E2FDA /* Threads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threads.swift; sourceTree = "<group>"; };
 		2C1636BE241684410083A59A /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
@@ -1238,6 +1250,17 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		2C0D25B72438E1F300DB206D /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C6C5C23F4B6FE00FE06BE /* Session.swift */,
+				2C0D25B82438E20300DB206D /* SessionService.swift */,
+				2C0D25BC2438E25400DB206D /* SessionEndpoints.swift */,
+				2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		2C1636BA241684140083A59A /* Rate */ = {
 			isa = PBXGroup;
 			children = (
@@ -1514,7 +1537,6 @@
 			children = (
 				2C05F05923F8DA3C003D1925 /* Utils.swift */,
 				2C8C6C5A23F4B64000FE06BE /* AppStorage.swift */,
-				2C8C6C5C23F4B6FE00FE06BE /* Session.swift */,
 				2C3B808B240C12CE00D4C6FE /* StatusHelper.swift */,
 				2C671725241DC63A00C86531 /* ImageUploader.swift */,
 				2C147104241DCA82009E2FDA /* Threads.swift */,
@@ -2417,6 +2439,7 @@
 		A5F30D3A23B4C7F0005258A8 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				2C0D25B72438E1F300DB206D /* Session */,
 				2C57B73024170C5900A3281F /* PushNotifications */,
 				2C22B38E23F8AE0A00678A41 /* Animations */,
 				2C7E7FA923F85BAC00D7835E /* Modules */,
@@ -3283,6 +3306,7 @@
 				2C3E50AA240C79B500873495 /* UINavigationController+Extensions.swift in Sources */,
 				2C3E50AB240C79B500873495 /* EmailLoginService.swift in Sources */,
 				2C4EBFE62432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
+				2C0D25BA2438E20300DB206D /* SessionService.swift in Sources */,
 				2C8B3A50243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C1241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DE2416BB8A0083A59A /* RateView.swift in Sources */,
@@ -3337,6 +3361,7 @@
 				2C3E50CA240C79B500873495 /* SelectorCellViewModel.swift in Sources */,
 				2C8B3A41243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
 				2C3E50CB240C79B500873495 /* ProviderWithScore.swift in Sources */,
+				2C0D25C22438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
 				2C8B3A542436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
 				2C3E50CC240C79B500873495 /* CheckoutRouter.swift in Sources */,
 				2C3E50CD240C79B500873495 /* UIImage+Extensions.swift in Sources */,
@@ -3373,6 +3398,7 @@
 				2C3E50E8240C79B500873495 /* OrdersViewModel.swift in Sources */,
 				2C3E50E9240C79B500873495 /* GmailRequest.swift in Sources */,
 				2CA96F8F240F5F790056C2F0 /* PaymentServiceProtocol.swift in Sources */,
+				2C0D25BE2438E25400DB206D /* SessionEndpoints.swift in Sources */,
 				2C1F2F81241EB81F008E803D /* ProviderHomeService.swift in Sources */,
 				2C2DCB27241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */,
 				2C3E50EA240C79B500873495 /* CheckoutProviderCell.swift in Sources */,
@@ -3506,6 +3532,7 @@
 				2CC3DBDE2411EBCC001E76B2 /* UINavigationController+Extensions.swift in Sources */,
 				2CC3DBDF2411EBCC001E76B2 /* EmailLoginService.swift in Sources */,
 				2C4EBFE52432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
+				2C0D25B92438E20300DB206D /* SessionService.swift in Sources */,
 				2C8B3A4F243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C0241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DD2416BB8A0083A59A /* RateView.swift in Sources */,
@@ -3560,6 +3587,7 @@
 				2CC3DBFF2411EBCC001E76B2 /* SelectorCellViewModel.swift in Sources */,
 				2C8B3A40243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
 				2CC3DC002411EBCC001E76B2 /* ProviderWithScore.swift in Sources */,
+				2C0D25C12438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
 				2C8B3A532436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
 				2CC3DC012411EBCC001E76B2 /* CheckoutRouter.swift in Sources */,
 				2CC3DC022411EBCC001E76B2 /* UIImage+Extensions.swift in Sources */,
@@ -3596,6 +3624,7 @@
 				2CC3DC1E2411EBCC001E76B2 /* OrdersViewModel.swift in Sources */,
 				2CC3DC1F2411EBCC001E76B2 /* GmailRequest.swift in Sources */,
 				2CC3DC202411EBCC001E76B2 /* PaymentServiceProtocol.swift in Sources */,
+				2C0D25BD2438E25400DB206D /* SessionEndpoints.swift in Sources */,
 				2C1F2F80241EB81F008E803D /* ProviderHomeService.swift in Sources */,
 				2C2DCB26241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */,
 				2CC3DC212411EBCC001E76B2 /* CheckoutProviderCell.swift in Sources */,
@@ -3729,6 +3758,7 @@
 				2C7E7FB723F89A2200D7835E /* ProviderListService.swift in Sources */,
 				2C829ECC240B3AC500D7DD81 /* UINavigationController+Extensions.swift in Sources */,
 				2C4EBFE72432FA840081AC5F /* AddProviderServiceEndpoints.swift in Sources */,
+				2C0D25BB2438E20300DB206D /* SessionService.swift in Sources */,
 				2C8B3A51243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C2241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DF2416BB8A0083A59A /* RateView.swift in Sources */,
@@ -3783,6 +3813,7 @@
 				2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */,
 				2C8B3A42243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
 				2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */,
+				2C0D25C32438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
 				2C8B3A552436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
 				2CFF4DBD23FA007B0024B3F1 /* SelectorCellViewModel.swift in Sources */,
 				2C7E7FBA23F89A6E00D7835E /* ProviderWithScore.swift in Sources */,
@@ -3819,6 +3850,7 @@
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				2C829ED4240B435300D7DD81 /* OrdersViewModel.swift in Sources */,
 				2C42088B23F647680058873D /* GmailRequest.swift in Sources */,
+				2C0D25BF2438E25400DB206D /* SessionEndpoints.swift in Sources */,
 				2C1F2F82241EB81F008E803D /* ProviderHomeService.swift in Sources */,
 				2C2DCB28241D2D130024409E /* ProviderMainServiceProtocol.swift in Sources */,
 				2CC731382404722E006FF85D /* CheckoutProviderCell.swift in Sources */,

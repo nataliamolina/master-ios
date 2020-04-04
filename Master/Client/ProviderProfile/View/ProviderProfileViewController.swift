@@ -11,10 +11,9 @@ import UIKit
 class ProviderProfileViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var totalViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var totalViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var continueButton: UIButton!
     @IBOutlet private weak var totalLabel: UILabel!
-    
+
     // MARK: - UI Actions
     @IBAction private func continueButtonAction() {
         guard let checkoutViewModel = viewModel.getViewModelForCheckout() else { return }
@@ -24,8 +23,9 @@ class ProviderProfileViewController: UIViewController {
     // MARK: - Properties
     private let router: RouterBase<HomeRouterTransitions>
     private let viewModel: ProviderProfileViewModel
+    
     private var isTotalViewVisible: Bool {
-        return totalViewBottomConstraint.constant == 0
+        return continueButton.isHidden == false
     }
     
     // MARK: - Life Cycle
@@ -59,7 +59,7 @@ class ProviderProfileViewController: UIViewController {
         tableView.registerNib(SelectorCell.self)
         tableView.registerNib(CommentCell.self)
         
-        totalViewBottomConstraint.constant = -totalViewHeightConstraint.constant
+        continueButton.isHidden = true
         
         setupBindings()
         
@@ -130,7 +130,7 @@ extension ProviderProfileViewController: ProductSelectorDelegate {
     
     func doneButtonTapped(result: ProductSelectorResult) {
         if !isTotalViewVisible {
-            totalViewBottomConstraint.constant = 0
+            continueButton.isHidden = false
             
             UIView.animate(withDuration: 0.5) { [weak self] in
                 self?.view.layoutIfNeeded()

@@ -13,12 +13,12 @@ class OrderDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var paymentButton: MButton!
-
+    
     // MARK: - UI Actions
     @IBAction private func paymentButtonAction() {
         router.transition(to: .payment(viewModel: viewModel.getPaymentViewModel()))
     }
-
+    
     // MARK: - Properties
     private let router: RouterBase<OrdersRouterTransitions>
     private let viewModel: OrderDetailViewModel
@@ -42,6 +42,12 @@ class OrderDetailViewController: UIViewController {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        viewModel.fetchDetail()
+    }
+    
     // MARK: - Public Methods
     
     // MARK: - Private Methods
@@ -58,10 +64,8 @@ class OrderDetailViewController: UIViewController {
         tableView.registerNib(OrderDetailHeaderCell.self)
         tableView.registerNib(ProviderServiceCell.self)
         tableView.registerNib(CheckoutFieldCell.self)
-
-        setupBindings()
         
-        viewModel.fetchDetail()
+        setupBindings()
     }
     
     private func setupBindings() {
@@ -99,7 +103,7 @@ extension OrderDetailViewController: UITableViewDataSource {
 
 // MARK: - OrderDetailHeaderCellDelegate
 extension OrderDetailViewController: OrderDetailHeaderCellDelegate {
-    func actionButtonTapped(_ cell: OrderDetailHeaderCell, type: OrderDetailHeaderCellButtonType) {
+    func actionButtonTapped(_ cell: OrderDetailHeaderCell, position: OrderDetailHeaderCellButtonType, state: OrderStateType) {
         router.transition(to: .rateOrder(viewModel: viewModel.getRateViewModel()))
     }
 }
