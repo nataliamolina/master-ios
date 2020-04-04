@@ -96,8 +96,10 @@ class ProviderPhotoViewController: UIViewController {
     }
     
     @objc private func showSourceSelector() {
+        let style: UIAlertController.Style = UIDevice.current.userInterfaceIdiom == .pad ? .alert : .actionSheet
+
         // FIXME: Strings
-        let dialog = UIAlertController(title: "Foto de perfil", message: "Selecciona un medio para tu foto", preferredStyle: .actionSheet)
+        let dialog = UIAlertController(title: "Foto de perfil", message: "Selecciona un medio para tu foto", preferredStyle: style)
         
         dialog.addAction(UIAlertAction(title: "Cámara", style: .default, handler: { [weak self] _ in
             self?.openPhotoPicker()

@@ -16,7 +16,6 @@ def commons
   pod 'Simple-Networking', '~> 0.3.7'
   pod 'SimpleKeychain'
   pod 'Kingfisher', '~> 5.0'
-  pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'Hero'
   pod 'Localize'
   pod 'GoogleSignIn'
@@ -24,6 +23,7 @@ def commons
   pod 'lottie-ios'
   pod 'FloatRatingView', '~> 4'
   pod 'MBRadioButton'
+  pod 'SPAlert'
   firebase
 end
 

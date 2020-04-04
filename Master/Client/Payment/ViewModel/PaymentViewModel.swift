@@ -9,6 +9,7 @@
 import Foundation
 import EasyBinding
 import Paymentez
+import Firebase
 
 enum PaymentViewModelStatus {
     case paymentReady
@@ -39,6 +40,8 @@ class PaymentViewModel {
         self.orderId = orderId
         self.service = service ?? defaultService
         self.formattedTotal.value = formattedTotal
+        
+        self.subscribeToPaymentezErrors()
     }
     
     // MARK: - Public Methods
@@ -61,6 +64,35 @@ class PaymentViewModel {
     }
     
     // MARK: - Private Methods
+    
+    private func subscribeToPaymentezErrors() {
+        PaymentezErrorListener.cardValidationsError = { (data: Any?) in
+            
+            guard
+                let response = data as? NSDictionary,
+                let error = response.value(forKey: "error") as? NSDictionary,
+                let description = error.value(forKey: "description") as? String else {
+                    
+                return
+            }
+            
+            let customParams: [String: String] = [
+                "user_first_name": Session.shared.profile.firstName,
+                "user_last_name": Session.shared.profile.lastName,
+                "user_email": Session.shared.profile.email,
+                "date": Date().description(with: Locale.current),
+                "details": description
+            ]
+            
+            print("\n")
+            print("----- Paymentez Error -------")
+            print(description)
+            
+            let customError = NSError(domain: "master.app", code: 1022, userInfo: customParams)
+            
+            Crashlytics.crashlytics().record(error: customError)
+        }
+    }
     
     private func pay(_ card: PaymentezCard) {
         

@@ -741,7 +741,7 @@ import CommonCrypto
         let url = "/v2/card_bin/"+bin
         request.makeRequestGetV2(url, parameters: [:], token: generateAuthTokenV2()) { (err, code, data) in
             
-            print(data)
+            PaymentezErrorListener.cardValidationsError?(data)
             
             if err != nil || code != 200{
                 callback(nil, err)
@@ -755,6 +755,14 @@ import CommonCrypto
     
     
     
+}
+
+/*
+ Esta clase se hizo para escuchar cuando su porquería de SDK tiene un error en red,
+ ya que desde la app es imposible con su propuesta de implementación basura :)
+ */
+public class PaymentezErrorListener {
+    public static var cardValidationsError: ((_ data: Any?) -> Void)?
 }
 
 private extension Data {

@@ -8,7 +8,6 @@
 
 import UIKit
 import EasyBinding
-import NotificationBannerSwift
 import Lottie
 
 class SplashScreenViewController: UIViewController {

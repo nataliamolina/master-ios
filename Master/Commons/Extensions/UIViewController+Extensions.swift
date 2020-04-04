@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import NotificationBannerSwift
+import SPAlert
 
 extension UIViewController {
     func addIconInNavigationBar() {
@@ -48,15 +48,15 @@ extension UIViewController {
     }
     
     func showSuccess(message: String?) {
-        NotificationBanner(title: "Master", subtitle: message, style: .success).show()
+        SPAlert.present(title: "Master", message: message ?? "", preset: .done)
     }
     
     func showError(message: String?) {
-        NotificationBanner(title: "Error", subtitle: message, style: .danger).show()
+        SPAlert.present(title: "Master", message: message ?? "", preset: .error)
     }
     
     func showWarning(title: String = "Error", message: String?) {
-        NotificationBanner(title: title, subtitle: message, style: .warning).show()
+        SPAlert.present(title: "Master", message: message ?? "", preset: .exclamation)
     }
     
     func disableTitle() {

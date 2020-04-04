@@ -208,8 +208,10 @@ class AddProviderServiceViewController: UIViewController {
     }
     
     @objc private func serviceImageTapped() {
+        let style: UIAlertController.Style = UIDevice.current.userInterfaceIdiom == .pad ? .alert : .actionSheet
+        
         // FIXME: Strings
-        let dialog = UIAlertController(title: "Foto del servicio", message: "Selecciona un medio para la foto", preferredStyle: .actionSheet)
+        let dialog = UIAlertController(title: "Foto del servicio", message: "Selecciona un medio para la foto", preferredStyle: style)
         
         dialog.addAction(UIAlertAction(title: "Cámara", style: .default, handler: { [weak self] _ in
             self?.openPhotoPicker()
