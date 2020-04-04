@@ -11,16 +11,18 @@ import UIKit
 class Loader {
     
     static func show() {
-        guard let window = UIApplication.shared.keyWindow else {
-            return
-        }
-        
-        DispatchQueue.main.async {
-            let loaderView: LoaderView = .fromNib()
-            loaderView.frame = UIScreen.main.bounds
-            loaderView.showLoader()
+        dismiss {
+            guard let window = UIApplication.shared.keyWindow else {
+                return
+            }
             
-            window.addSubview(loaderView)
+            DispatchQueue.main.async {
+                let loaderView: LoaderView = .fromNib()
+                loaderView.frame = UIScreen.main.bounds
+                loaderView.showLoader()
+                
+                window.addSubview(loaderView)
+            }
         }
     }
     
@@ -28,6 +30,8 @@ class Loader {
         guard let loaderReference = UIApplication.shared.keyWindow?.subviews.filter({
             $0 is LoaderView
         }).first as? LoaderView else {
+            onComplete?()
+            
             return
         }
         

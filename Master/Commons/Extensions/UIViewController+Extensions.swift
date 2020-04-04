@@ -48,7 +48,11 @@ extension UIViewController {
     }
     
     func showSuccess(message: String?) {
-        SPAlert.present(title: "Master", message: message ?? "", preset: .done)
+        if (message?.count ?? 0) > 50 {
+            SPAlert.present(message: message ?? "")
+        } else {
+            SPAlert.present(title: "Master", message: message ?? "", preset: .done)
+        }
     }
     
     func showError(message: String?) {

@@ -67,9 +67,7 @@ class HomeViewModel {
         return viewModel.serviceId
     }
     
-    // MARK: - Private Methods
-    
-    private func fetchOrders() {
+    func fetchOrders() {
         guard Session.shared.isLoggedIn else {
             return
         }
@@ -85,6 +83,8 @@ class HomeViewModel {
             }.isEmpty == false
         }
     }
+    
+    // MARK: - Private Methods
     
     private func setupTotalOrders(models: [Order]) {
         totalOrders.value = models.filter {

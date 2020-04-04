@@ -44,10 +44,12 @@ class HomeViewController: UIViewController {
         
         setupNavigationGesture()
         
-        if HomeViewModel.needsToReloadOrders {
-            HomeViewModel.needsToReloadOrders = false
-            
-            viewModel.fetchServices()
+        viewModel.fetchOrders()
+        
+        PushNotifications.shared.hasPendingNotification.listen(triggerInitialValue: true) { [weak self] hasPendingNotification in
+            if hasPendingNotification {
+                self?.checkPendingNotification()
+            }
         }
     }
     
@@ -71,12 +73,6 @@ class HomeViewController: UIViewController {
         setupLogoIcon()
         
         viewModel.fetchServices()
-        
-        PushNotifications.shared.hasPendingNotification.listen(triggerInitialValue: true) { [weak self] hasPendingNotification in
-            if hasPendingNotification {
-                self?.checkPendingNotification()
-            }
-        }
     }
     
     private func checkPendingNotification() {

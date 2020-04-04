@@ -1,0 +1,160 @@
+/* 
+  Localizable.strings
+  Master
+
+  Created by Carlos Mejía on 10/02/20.
+  Copyright © 2020 Master. All rights reserved.
+*/
+
+// General
+"general.error" = "Ocurrió un error inesperado, por favor intenta nuevamente.";
+"general.legal.continue" = "Al continuar, estás aceptando nuestros términos y condiciones.";
+"general.close" = "Cerrar";
+"general.accept" = "Aceptar";
+"general.services" = "Servicios";
+"general.orders" = "Ordenes";
+"general.comments" = "Comentarios";
+"general.continue" = "Continuar";
+"general.add" = "Agregar";
+"general.bogota" = "Bogotá";
+"general.ups" = "¡Ups!";
+"general.select" = "Seleccionar";
+"general.selectOption" = "Selecciona una opción";
+
+// States
+"general.state.acepted" = "Aceptado";
+"general.state.finished" = "Terminado";
+"general.state.inProgress" = "En progreso";
+"general.state.rejected" = "Rechazado";
+"general.state.pending" = "Pendiente";
+"general.state.paymentPending" = "Pendiente de pago";
+"general.state.paymentDone" = "Pago realizado";
+"general.state.ratingPending" = "Calificación pendiente";
+
+// Menu
+"menu.greetings" = "Hola, ";
+"menu.greetings.nosession" = "¡Hola!";
+"menu.services" = "Servicios";
+"menu.orders" = "Mis pedidos";
+"menu.account" = "Mi cuenta";
+"menu.legal" = "Legal";
+"menu.help" = "Ayuda";
+"menu.logout" = "Cerrar sesión";
+"menu.provider" = "Modo Proveedor";
+"menu.login" = "Iniciar Sesión";
+
+// Main
+"main.title" = "Iniciar Sesión";
+"main.desc" = "Es necesario que inicies sesión para continuar.";
+"main.button.email" = "Continuar con Email";
+"main.button.register" = "Registrarme";
+
+// Email Login
+"emailLogin.title" = "Continuar con Email";
+"emailLogin.placeholder.email" = "Correo";
+"emailLogin.placeholder.password" = "Contraseña";
+"emailLogin.button.login" = "Iniciar Sesión";
+
+// Register
+"register.title" = "Registro";
+"register.placeholder.email" = "Correo";
+"register.placeholder.password" = "Contraseña";
+"register.placeholder.names" = "Nombre y Apellido";
+"register.placeholder.phone" = "Celular";
+"register.button.register" = "Continuar";
+"register.label.legal" = "¡Hola!, los datos que completarás a continuación son 100% privados, nunca haremos mal uso de ellos.";
+
+// Home
+"home.pendingServices" = "Servicios en Curso:";
+
+// Service Detail
+"serviceDetail.orders" = "pedidos";
+"serviceDetail.emptyState.title" = "Estamos buscando Masters para ti";
+"serviceDetail.emptyState.desc" = "Estamos buscando Masters que se quieran unir a la comunidad más grande de servicios online, pronto los tendremos disponibles.";
+"serviceDetail.emptyState.button" = "Quiero ser un Master";
+
+// Provider Detail
+"providerDetail.total" = "Total: ";
+"providerDetail.continue" = "Continuar";
+
+// Checkout
+"checkout.title" = "Reserva";
+"checkout.desc" = "Completa la siguiente información para acordar detalles con tu Master.";
+"checkout.fields.text" = "Completar información";
+"checkout.fields.products" = " productos";
+"checkout.fields.product" = " producto";
+"checkout.bogotaRestriction" = "Por el momento sólo estamos operando en la ciudad de Bogotá.";
+
+// Complete Text
+"completeText.help" = "Completa la información a continuación";
+"completeText.placeholder" = "Completar";
+
+// Date Picker
+"datePicker.title" = "Fecha y hora";
+
+// Success Order
+"successOrder.title" = "¡Listo!";
+"successOrder.desc" = "To solicitud se ha procesado con éxito, pronto tendrás noticias de tu Máster.";
+
+// Legal
+"legal.title" = "Legal";
+"legal.tyc" = "Términos";
+"legal.privacy" = "Privacidad";
+
+// Order Detail
+"orderDetail.title" = "Pedido #";
+"orderDetail.total" = "Total";
+"orderDetail.pay" = "Pagar";
+"orderDetail.rate" = "Calificar Servicio";
+
+// Payment
+"payment.title" = "Pago";
+"payment.desc" = "Tu Master ha aceptado tu solicitud, ahora debes hacer el pago del servicio. ¡Ya casi acabamos!";
+"payment.pay" = "Pagar";
+"payment.total" = "Total";
+"payment.cardOwner" = "Propietario";
+"payment.cardNumber" = "Número de tarjeta";
+"payment.invalidCard" = "Porfavor Revisa nuevamente los datos de tu tarjeta";
+
+// Rate
+"rate.title" = "Calificar Servicio";
+"rate.desc" = "Cuentanos que te pareció el servicio prestado por tu Master, sé lo más sincero posible, esto ayudará a tu Master a mejorar y a nosotros también.";
+"rate.text" = "¿Te gustó el servicio?, ¿Hay algo que mejorar?";
+"rate.button" = "Enviar Calificación";
+
+// Provider Main
+
+// Provider Register
+"provider.register.title" = "¡Hola Master!";
+"provider.register.desc" = "A continuación encontrarás el formulario de registro para convertirte en Master. \n \nEs importante que llenes todos los campos con información verídica para que puedas ser aceptado en el programa de Masters lo más pronto posible.";
+"provider.register.document" = "No. Cédula";
+"provider.register.bank" = "Toda la información Bancaria que nos indicas es únicamente usada con el propósito de pagarte como Master, es 100% confidencial y segura.";
+"provider.register.bankNumer" = "Número de Cuenta Bancaria";
+"provider.register.bankName" = "Nombre del Banco";
+"provider.register.bankType" = "Selecciona un tipo de cuenta";
+"provider.register.about" = "¡Cuéntanos sobre ti!";
+"provider.register.aboutPlaceholder" = "Ejemplo: Soy un gran cocinero...";
+"provider.register.button" = "Unirme al Programa";
+
+// Provider Photo
+"provider.photo.title" = "¡Tu Foto!";
+"provider.photo.desc" = "Tu foto es necesaria para dar seguridad y confianza a los usuarios, usa la más profesional que tengas, procura que tenga buena luz, no uses gafas de sol o elementos sobre la cabeza.";
+"provider.photo.button" = "Tomar una foto";
+
+// Provider Home
+"provider.home.addService" = "Añadir Servicio +";
+
+// Provider Add Service
+"provider.addService.title" = "Agregar Servicio";
+"provider.addService.desc" = "Agrega un servicio que ofrezcas como Master, debes cuidar de cada detalle para generar confianza en tus clientes.";
+"provider.addService.name" = "Nombre del servicio";
+"provider.addService.serviceDesc" = "Descripción";
+"provider.addService.category" = "Categoría";
+"provider.addService.price" = "Precio";
+"provider.addService.photo" = "Foto del servicio";
+"provider.addService.addPhoto" = "Tomar/Seleccionar foto";
+
+"provider.addService.category.placeholder" = "Selecciona una categoría";
+"provider.addService.name.placeholder" = "Ej: Servicio de mantenimiento";
+"provider.addService.serviceDesc.placeholder" = "Ej: El mejor servicio de la ciudad, siempre cuidando...";
+"provider.addService.price.placeholder" = "Ej: $25.000";

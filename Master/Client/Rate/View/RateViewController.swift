@@ -27,6 +27,7 @@ class RateViewController: UIViewController {
     
     // MARK: - Life Cycle
     init(router: RouterBase<OrdersRouterTransitions>, viewModel: RateViewModel) {
+        
         self.router = router
         self.viewModel = viewModel
         

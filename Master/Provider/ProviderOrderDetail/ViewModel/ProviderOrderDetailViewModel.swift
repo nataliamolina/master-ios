@@ -39,8 +39,6 @@ class ProviderOrderDetailViewModel {
     // MARK: - Public Methods
     
     func fetchDetail() {
-        dataSource.value.removeAll()
-        
         isLoading.value = true
         
         service.fetchOrderDetailBy(id: orderId) { [weak self] (response: Order?, error: CMError?) in
@@ -114,6 +112,8 @@ class ProviderOrderDetailViewModel {
     }
     
     private func responseToViewModels(model: Order) {
+        dataSource.value.removeAll()
+
         self.currentState = model.orderState.type
         self.formattedTotal.value = model.grossTotal.toFormattedCurrency()
         

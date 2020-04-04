@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return
         }
         
-        PaymentezSDKClient.setEnvironment(appKey, secretKey: appCode, testMode: !prodPayment)
+        PaymentezSDKClient.setEnvironment(appCode, secretKey: appKey, testMode: prodPayment == false)
     }
     
     private func setupInitialVC() {

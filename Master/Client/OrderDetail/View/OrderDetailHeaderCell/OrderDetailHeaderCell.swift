@@ -59,6 +59,8 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
             return
         }
         
+        resetButtons()
+        
         self.state = viewModel.status
         self.delegate = delegate as? OrderDetailHeaderCellDelegate
         
@@ -69,13 +71,34 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         statusHelper.setupLabel(statusLabel, state: viewModel.status)
         statusHelper.setupView(statusView, state: viewModel.status)
         
-        switch viewModel.status {
+        setupButtonsWith(state: viewModel.status, isProvider: viewModel.isProvider)
+    }
+    
+    // MARK: - Private Methods
+    private func setupUI() {
+        orderIdLabel.text = nil
+        statusLabel.text = nil
+        providerNameLabel.text = nil
+        orderDateLabel.text = nil
+    }
+    
+    private func setupButtonsWith(state: OrderStateType, isProvider: Bool) {
+        switch state {
         case .ratingPending:
+            guard !isProvider else {
+                hiddeButtons()
+                
+                return
+            }
+            
             rightActionButton.isHidden = true
-            rightActionButton.title = "orderDetail.rate".localized
+            
+            leftActionButton.isHidden = false
+            leftActionButton.style = .redBorder
+            leftActionButton.title = "orderDetail.rate".localized
             
         case .pending:
-            guard viewModel.isProvider else {
+            guard isProvider else {
                 hiddeButtons()
                 
                 return
@@ -88,22 +111,42 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
             rightActionButton.style = .green
             rightActionButton.title = "Aceptar Servicio"
             
+        case .paymentDone:
+            guard isProvider else {
+                hiddeButtons()
+                
+                return
+            }
+            
+            rightActionButton.isHidden = true
+            leftActionButton.style = .green
+            leftActionButton.title = "Iniciar Servicio"
+            
+        case .inProgress:
+            guard isProvider else {
+                hiddeButtons()
+                
+                return
+            }
+            
+            rightActionButton.isHidden = true
+            leftActionButton.style = .fullRed
+            leftActionButton.title = "Finalziar Servicio"
+            
         default:
             hiddeButtons()
         }
-    }
-    
-    // MARK: - Private Methods
-    private func setupUI() {
-        orderIdLabel.text = nil
-        statusLabel.text = nil
-        providerNameLabel.text = nil
-        orderDateLabel.text = nil
     }
     
     private func hiddeButtons() {
         buttonsStackview.isHidden = true
         leftActionButton.isHidden = true
         rightActionButton.isHidden = true
+    }
+    
+    private func resetButtons() {
+        buttonsStackview.isHidden = false
+        leftActionButton.isHidden = false
+        rightActionButton.isHidden = false
     }
 }

@@ -42,12 +42,6 @@ class OrderDetailViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        viewModel.fetchDetail()
-    }
-    
     // MARK: - Public Methods
     
     // MARK: - Private Methods
@@ -66,6 +60,8 @@ class OrderDetailViewController: UIViewController {
         tableView.registerNib(CheckoutFieldCell.self)
         
         setupBindings()
+        
+        viewModel.fetchDetail()
     }
     
     private func setupBindings() {
@@ -78,11 +74,10 @@ class OrderDetailViewController: UIViewController {
         }
         
         viewModel.needsToRateOrder.listen { [weak self] needsToRateOrder in
-            guard let self = self, needsToRateOrder, self.viewModel.rateAttempts == 0 else {
+            guard let self = self, needsToRateOrder else {
                 return
             }
             
-            self.viewModel.rateAttempts += 1
             self.router.transition(to: .rateOrder(viewModel: self.viewModel.getRateViewModel()))
         }
     }

@@ -21,7 +21,6 @@ class OrderDetailViewModel {
     private let orderId: Int
     private typealias CheckoutLang = CheckoutConstants.Lang
 
-    var rateAttempts = 0
     let formattedTotal = Var("$0")
     let status = Var<OrderDetailViewModelStatus>(.undefined)
     let isLoading = Var(false)
@@ -40,8 +39,6 @@ class OrderDetailViewModel {
     // MARK: - Public Methods
     
     func fetchDetail() {
-        dataSource.value.removeAll()
-        
         isLoading.value = true
         
         service.fetchOrderDetailBy(id: orderId) { [weak self] (response: Order?, error: CMError?) in
@@ -86,6 +83,8 @@ class OrderDetailViewModel {
     // MARK: - Private Methods
     
     private func responseToViewModels(model: Order) {
+        dataSource.value.removeAll()
+
         self.formattedTotal.value = model.grossTotal.toFormattedCurrency()
         
         let headerViewModel = OrderDetailHeaderCellViewModel(orderId: model.id,
