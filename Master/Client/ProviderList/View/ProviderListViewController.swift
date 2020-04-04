@@ -11,6 +11,7 @@ import Lottie
 
 class ProviderListViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var bannerHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var lottieView: UIView!
     @IBOutlet private weak var emptyStateView: UIView!
     @IBOutlet private weak var tableView: UITableView!
@@ -49,6 +50,10 @@ class ProviderListViewController: UIViewController {
         // FIXME
         title = "Masters"
         disableTitle()
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            bannerHeightConstraint.constant += 50
+        }
         
         headerImage.kf.setImage(with: URL(string: viewModel.serviceImageUrl ?? ""))
         
