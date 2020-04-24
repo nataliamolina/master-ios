@@ -17,6 +17,7 @@ enum MainRouterTransitions {
     case home
     case close
     case asRoot
+    case citySelector(viewModel: CitySelectorViewModel)
 }
 
 protocol MainRouterDelegate: class {
@@ -68,6 +69,9 @@ class MainRouter: RouterBase<MainRouterTransitions> {
             
         case .asRoot:
             handleAsRootTransition()
+            
+        case .citySelector(let viewModel):
+            handleCitySelector(viewModel: viewModel)
         }
     }
     
@@ -81,6 +85,13 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         mainNavigationController.interactivePopGestureRecognizer?.isEnabled = true
         
         Master.setRootVC(navigationController: mainNavigationController)
+    }
+    
+    private func handleCitySelector(viewModel: CitySelectorViewModel) {
+        let viewController = CitySelectorViewController(viewModel: viewModel, router: self)
+        viewController.modalPresentationStyle = .fullScreen
+        
+        Master.rootViewController?.present(viewController, animated: true, completion: nil)
     }
     
     private func handleMainTransition() {

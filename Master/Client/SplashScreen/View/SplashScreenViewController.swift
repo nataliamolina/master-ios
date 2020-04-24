@@ -56,13 +56,15 @@ class SplashScreenViewController: UIViewController {
     
     private func setupBindings() {
         viewModel.status.listen { [weak self] status in
+            guard let self = self else { return }
+            
             switch status {
             case .preloadReady, .tokenExpired:
-                self?.router.transition(to: .home)
-
-            case .error(let error):
-                self?.showError(message: error)
+                self.router.transition(to: .home)
                 
+            case .needSelectCity:
+                self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))
+
             default:
                 return
             }

@@ -13,28 +13,46 @@ enum SplashScreenViewModelStatus {
     case preloadReady
     case tokenExpired
     case undefined
+    case needSelectCity
     case error(error: String?)
 }
 
 class SplashScreenViewModel {
     // MARK: - Properties
     let status = Var<SplashScreenViewModelStatus>(.undefined)
-    let service: SplashScreenServiceProtocol
-    let loginService: EmailLoginServiceProtocol
+    
+    private let service: SplashScreenServiceProtocol
+    private let loginService: EmailLoginServiceProtocol
+    private let storedData: AppStorageProtocol
+    
+    private var needsToSelectCity: Bool {
+        let result: String? = storedData.get(key: CitySelectorViewModel.Keys.cityName.rawValue)
+        
+        return result == nil
+    }
     
     // MARK: - Life Cycle
-    init(service: SplashScreenServiceProtocol? = nil, loginService: EmailLoginServiceProtocol? = nil) {
+    init(service: SplashScreenServiceProtocol? = nil,
+         loginService: EmailLoginServiceProtocol? = nil,
+         storedData: AppStorageProtocol? = nil) {
+        
         let connectionManager = ConnectionManager()
         
+        let defaultStorageService = AppStorage()
         let defaultService = SplashScreenService(connectionDependency: connectionManager)
         let defaultLoginService = EmailLoginService(connectionDependency: connectionManager)
         
         self.service = service ?? defaultService
         self.loginService = loginService ?? defaultLoginService
+        self.storedData = storedData ?? defaultStorageService
     }
     
     func fetchRequiredServices() {
         checkServerStatus()
+    }
+    
+    func getCitySelectorViewModel() -> CitySelectorViewModel {
+        return CitySelectorViewModel()
     }
     
     // MARK: - Private Methods
@@ -42,7 +60,7 @@ class SplashScreenViewModel {
     private func checkServerStatus() {
         service.checkServerStatus { [weak self] (response: ServerStatus?, error: CMError?) in
             Session.shared.helpUrl = response?.helpUrl ?? ""
-
+            
             if response?.isOnline == true {
                 self?.validateTokenIfNeeded()
                 
@@ -55,7 +73,7 @@ class SplashScreenViewModel {
     
     private func validateTokenIfNeeded() {
         guard let token = Session.shared.token, !token.isEmpty else {
-            status.value = .preloadReady
+            status.value = needsToSelectCity ? .needSelectCity : .preloadReady
             
             return
         }
@@ -79,16 +97,18 @@ class SplashScreenViewModel {
     
     private func fetchUserInformation() {
         loginService.fetchUserSession { [weak self] (response: User?, error: CMError?) in
+            guard let self = self else { return }
             
             guard let user = response, error == nil else {
                 Session.shared.logout()
-                self?.status.value = .tokenExpired
+                self.status.value = .tokenExpired
                 
                 return
             }
             
             Session.shared.login(profile: user.asUserProfile)
-            self?.status.value = .preloadReady
+            
+            self.status.value = self.needsToSelectCity ? .needSelectCity : .preloadReady
         }
     }
 }

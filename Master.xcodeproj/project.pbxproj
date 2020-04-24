@@ -325,8 +325,35 @@
 		2C3E5159240C79B500873495 /* ProviderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF6ABD223F7D84500F9EF40 /* ProviderListViewController.xib */; };
 		2C3E515A240C79B500873495 /* CheckoutFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEECC9F2400D37B00C67D80 /* CheckoutFieldCell.xib */; };
 		2C3EB4E22405F894002BB2DA /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */; };
+		2C4010BE245390EA002F9674 /* CitySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4010BC245390EA002F9674 /* CitySelectorViewController.swift */; };
+		2C4010BF245390EA002F9674 /* CitySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4010BC245390EA002F9674 /* CitySelectorViewController.swift */; };
+		2C4010C0245390EA002F9674 /* CitySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4010BC245390EA002F9674 /* CitySelectorViewController.swift */; };
+		2C4010C1245390EA002F9674 /* CitySelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4010BD245390EA002F9674 /* CitySelectorViewController.xib */; };
+		2C4010C2245390EA002F9674 /* CitySelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4010BD245390EA002F9674 /* CitySelectorViewController.xib */; };
+		2C4010C3245390EA002F9674 /* CitySelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4010BD245390EA002F9674 /* CitySelectorViewController.xib */; };
 		2C42088B23F647680058873D /* GmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088A23F647680058873D /* GmailRequest.swift */; };
 		2C42088E23F647E00058873D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42088D23F647E00058873D /* MainViewModel.swift */; };
+		2C44ACC7245399860099B523 /* city_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C44ACC6245399860099B523 /* city_anim.json */; };
+		2C44ACC8245399860099B523 /* city_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C44ACC6245399860099B523 /* city_anim.json */; };
+		2C44ACC9245399860099B523 /* city_anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C44ACC6245399860099B523 /* city_anim.json */; };
+		2C44ACCB24539DDF0099B523 /* CitySelectorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACCA24539DDF0099B523 /* CitySelectorService.swift */; };
+		2C44ACCC24539DDF0099B523 /* CitySelectorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACCA24539DDF0099B523 /* CitySelectorService.swift */; };
+		2C44ACCD24539DDF0099B523 /* CitySelectorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACCA24539DDF0099B523 /* CitySelectorService.swift */; };
+		2C44ACCF24539E080099B523 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACCE24539E080099B523 /* City.swift */; };
+		2C44ACD024539E080099B523 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACCE24539E080099B523 /* City.swift */; };
+		2C44ACD124539E080099B523 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACCE24539E080099B523 /* City.swift */; };
+		2C44ACD324539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACD224539E590099B523 /* CitySelectorServiceProtocol.swift */; };
+		2C44ACD424539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACD224539E590099B523 /* CitySelectorServiceProtocol.swift */; };
+		2C44ACD524539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACD224539E590099B523 /* CitySelectorServiceProtocol.swift */; };
+		2C44ACD724539E710099B523 /* CitySelectorEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACD624539E710099B523 /* CitySelectorEndpoints.swift */; };
+		2C44ACD824539E710099B523 /* CitySelectorEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACD624539E710099B523 /* CitySelectorEndpoints.swift */; };
+		2C44ACD924539E710099B523 /* CitySelectorEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACD624539E710099B523 /* CitySelectorEndpoints.swift */; };
+		2C44ACDB24539F1D0099B523 /* CitySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACDA24539F1D0099B523 /* CitySelectorViewModel.swift */; };
+		2C44ACDC24539F1D0099B523 /* CitySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACDA24539F1D0099B523 /* CitySelectorViewModel.swift */; };
+		2C44ACDD24539F1D0099B523 /* CitySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACDA24539F1D0099B523 /* CitySelectorViewModel.swift */; };
+		2C44ACDF2453A0320099B523 /* CitySelectorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACDE2453A0320099B523 /* CitySelectorItem.swift */; };
+		2C44ACE02453A0320099B523 /* CitySelectorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACDE2453A0320099B523 /* CitySelectorItem.swift */; };
+		2C44ACE12453A0320099B523 /* CitySelectorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44ACDE2453A0320099B523 /* CitySelectorItem.swift */; };
 		2C4EBFCD2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFCB2432E9CF0081AC5F /* ProviderOrderCell.swift */; };
 		2C4EBFCE2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFCB2432E9CF0081AC5F /* ProviderOrderCell.swift */; };
 		2C4EBFCF2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EBFCB2432E9CF0081AC5F /* ProviderOrderCell.swift */; };
@@ -959,8 +986,17 @@
 		2C3E5161240C79B500873495 /* Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Master.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3E5162240C79B500873495 /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Dev-Info.plist"; path = "/Users/carlosmejia/master/ios/Dev-Info.plist"; sourceTree = "<absolute>"; };
 		2C3EB4E12405F894002BB2DA /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		2C4010BC245390EA002F9674 /* CitySelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorViewController.swift; sourceTree = "<group>"; };
+		2C4010BD245390EA002F9674 /* CitySelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitySelectorViewController.xib; sourceTree = "<group>"; };
 		2C42088A23F647680058873D /* GmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailRequest.swift; sourceTree = "<group>"; };
 		2C42088D23F647E00058873D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2C44ACC6245399860099B523 /* city_anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city_anim.json; sourceTree = "<group>"; };
+		2C44ACCA24539DDF0099B523 /* CitySelectorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorService.swift; sourceTree = "<group>"; };
+		2C44ACCE24539E080099B523 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		2C44ACD224539E590099B523 /* CitySelectorServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorServiceProtocol.swift; sourceTree = "<group>"; };
+		2C44ACD624539E710099B523 /* CitySelectorEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorEndpoints.swift; sourceTree = "<group>"; };
+		2C44ACDA24539F1D0099B523 /* CitySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorViewModel.swift; sourceTree = "<group>"; };
+		2C44ACDE2453A0320099B523 /* CitySelectorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorItem.swift; sourceTree = "<group>"; };
 		2C4EBFCB2432E9CF0081AC5F /* ProviderOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderOrderCell.swift; sourceTree = "<group>"; };
 		2C4EBFCC2432E9CF0081AC5F /* ProviderOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderOrderCell.xib; sourceTree = "<group>"; };
 		2C4EBFD32432EEAE0081AC5F /* ProviderOrderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderOrderCellViewModel.swift; sourceTree = "<group>"; };
@@ -1372,6 +1408,7 @@
 		2C22B38E23F8AE0A00678A41 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				2C44ACC6245399860099B523 /* city_anim.json */,
 				2C829EBA240AD4FC00D7DD81 /* loader_anim.json */,
 				2C22B39323F8AFC300678A41 /* empty_state_anim.json */,
 				2C22B39523F8AFC300678A41 /* empty_state_providers.json */,
@@ -1610,6 +1647,53 @@
 				2C55F3AE2408BAF600F458AC /* DatePicker.swift */,
 			);
 			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		2C4010BB245390D8002F9674 /* CitySelector */ = {
+			isa = PBXGroup;
+			children = (
+				2C4010C72453910B002F9674 /* Models */,
+				2C4010C624539106002F9674 /* Service */,
+				2C4010C5245390FF002F9674 /* ViewModel */,
+				2C4010C4245390F6002F9674 /* View */,
+			);
+			path = CitySelector;
+			sourceTree = "<group>";
+		};
+		2C4010C4245390F6002F9674 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C4010BD245390EA002F9674 /* CitySelectorViewController.xib */,
+				2C4010BC245390EA002F9674 /* CitySelectorViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C4010C5245390FF002F9674 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C44ACDA24539F1D0099B523 /* CitySelectorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C4010C624539106002F9674 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2C44ACCA24539DDF0099B523 /* CitySelectorService.swift */,
+				2C44ACD224539E590099B523 /* CitySelectorServiceProtocol.swift */,
+				2C44ACD624539E710099B523 /* CitySelectorEndpoints.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2C4010C72453910B002F9674 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C44ACCE24539E080099B523 /* City.swift */,
+				2C44ACDE2453A0320099B523 /* CitySelectorItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2C42088C23F647D60058873D /* ViewModel */ = {
@@ -2179,6 +2263,7 @@
 		2CD8AC51241AC01B005C8628 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				2C4010BB245390D8002F9674 /* CitySelector */,
 				2C1636BA241684140083A59A /* Rate */,
 				2C8897A2240C851D00423B11 /* Payment */,
 				2C3B8073240C0A1100D4C6FE /* OrderDetail */,
@@ -2759,6 +2844,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4010C2245390EA002F9674 /* CitySelectorViewController.xib in Resources */,
 				2C3E5131240C79B500873495 /* OrderDetailHeaderCell.xib in Resources */,
 				2C3E5132240C79B500873495 /* CommentCell.xib in Resources */,
 				2C3E5133240C79B500873495 /* empty_state_anim.json in Resources */,
@@ -2803,6 +2889,7 @@
 				2C3E5151240C79B500873495 /* RegisterViewController.xib in Resources */,
 				2C3E5152240C79B500873495 /* DatePickerViewController.xib in Resources */,
 				2C8B3A47243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */,
+				2C44ACC8245399860099B523 /* city_anim.json in Resources */,
 				2C3E5153240C79B500873495 /* CategoryCell.xib in Resources */,
 				2C3E5154240C79B500873495 /* OrderCell.xib in Resources */,
 				2C3E5155240C79B500873495 /* loading_order_anim.json in Resources */,
@@ -2819,6 +2906,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4010C1245390EA002F9674 /* CitySelectorViewController.xib in Resources */,
 				2CC3DC6D2411EBCC001E76B2 /* OrderDetailHeaderCell.xib in Resources */,
 				2CC3DC6E2411EBCC001E76B2 /* CommentCell.xib in Resources */,
 				2CC3DC6F2411EBCC001E76B2 /* empty_state_anim.json in Resources */,
@@ -2863,6 +2951,7 @@
 				2CC3DC8E2411EBCC001E76B2 /* RegisterViewController.xib in Resources */,
 				2CC3DC8F2411EBCC001E76B2 /* DatePickerViewController.xib in Resources */,
 				2C8B3A46243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */,
+				2C44ACC7245399860099B523 /* city_anim.json in Resources */,
 				2CC3DC902411EBCC001E76B2 /* CategoryCell.xib in Resources */,
 				2CC3DC912411EBCC001E76B2 /* OrderCell.xib in Resources */,
 				2CC3DC922411EBCC001E76B2 /* loading_order_anim.json in Resources */,
@@ -2879,6 +2968,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4010C3245390EA002F9674 /* CitySelectorViewController.xib in Resources */,
 				2C3B8087240C0D4F00D4C6FE /* OrderDetailHeaderCell.xib in Resources */,
 				2CFF4DC423FA144D0024B3F1 /* CommentCell.xib in Resources */,
 				2C22B39823F8AFC300678A41 /* empty_state_anim.json in Resources */,
@@ -2923,6 +3013,7 @@
 				A5F30D5E23B4D8DF005258A8 /* RegisterViewController.xib in Resources */,
 				2C3E0EEE2408A299005453BA /* DatePickerViewController.xib in Resources */,
 				2C8B3A48243699EC005FE926 /* ProviderOrderDetailViewController.xib in Resources */,
+				2C44ACC9245399860099B523 /* city_anim.json in Resources */,
 				A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */,
 				2C829ED1240B3E1E00D7DD81 /* OrderCell.xib in Resources */,
 				2C22B39923F8AFC300678A41 /* loading_order_anim.json in Resources */,
@@ -3289,8 +3380,10 @@
 				2C3E50A2240C79B500873495 /* UITableView+Extensions.swift in Sources */,
 				2C671727241DC63A00C86531 /* ImageUploader.swift in Sources */,
 				2C3E50A3240C79B500873495 /* ProviderListServiceEndpoint.swift in Sources */,
+				2C44ACD424539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */,
 				2CD8AC56241AC03E005C8628 /* ProviderMainViewController.swift in Sources */,
 				2C3E50A4240C79B500873495 /* RouterBase.swift in Sources */,
+				2C44ACE02453A0320099B523 /* CitySelectorItem.swift in Sources */,
 				2C8B3A2824363313005FE926 /* ProviderServiceRequest.swift in Sources */,
 				2C3E50A5240C79B500873495 /* CompleteTextViewModel.swift in Sources */,
 				2C1F2F72241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
@@ -3344,6 +3437,7 @@
 				2C2DCB23241D2A850024409E /* ProviderProfile.swift in Sources */,
 				2C67171F241DC49700C86531 /* ProviderPhotoRequest.swift in Sources */,
 				2C3E50BF240C79B500873495 /* LoginRequest.swift in Sources */,
+				2C44ACCC24539DDF0099B523 /* CitySelectorService.swift in Sources */,
 				2C3E50C0240C79B500873495 /* MainViewModel.swift in Sources */,
 				2C3E50C1240C79B500873495 /* OrderCell.swift in Sources */,
 				2C8B3A30243649B2005FE926 /* UITextField+Extensions.swift in Sources */,
@@ -3399,6 +3493,7 @@
 				2C3E50E7240C79B500873495 /* Array+Extensions.swift in Sources */,
 				2C3E50E8240C79B500873495 /* OrdersViewModel.swift in Sources */,
 				2C3E50E9240C79B500873495 /* GmailRequest.swift in Sources */,
+				2C44ACD024539E080099B523 /* City.swift in Sources */,
 				2CA96F8F240F5F790056C2F0 /* PaymentServiceProtocol.swift in Sources */,
 				2C0D25BE2438E25400DB206D /* SessionEndpoints.swift in Sources */,
 				2C1F2F81241EB81F008E803D /* ProviderHomeService.swift in Sources */,
@@ -3407,6 +3502,7 @@
 				2C6716FA241D458800C86531 /* ProviderPhotoViewController.swift in Sources */,
 				2C3E50EB240C79B500873495 /* OrderRequest.swift in Sources */,
 				2C3E50EC240C79B500873495 /* CellViewModelProtocol.swift in Sources */,
+				2C44ACD824539E710099B523 /* CitySelectorEndpoints.swift in Sources */,
 				2C3E50ED240C79B500873495 /* LoginResponse.swift in Sources */,
 				2C8897A5240C852F00423B11 /* PaymentViewController.swift in Sources */,
 				2C3E50EE240C79B500873495 /* DatePicker.swift in Sources */,
@@ -3446,6 +3542,7 @@
 				2C3E5109240C79B500873495 /* CheckoutHeaderCell.swift in Sources */,
 				2C67171A241DC47000C86531 /* ProviderPhotoServiceProtocol.swift in Sources */,
 				2C3E510A240C79B500873495 /* Utils.swift in Sources */,
+				2C4010BF245390EA002F9674 /* CitySelectorViewController.swift in Sources */,
 				2C3E510B240C79B500873495 /* MainRouter.swift in Sources */,
 				2C3E510C240C79B500873495 /* CheckoutViewModel.swift in Sources */,
 				2C3E510D240C79B500873495 /* HomeEndpoints.swift in Sources */,
@@ -3485,6 +3582,7 @@
 				2C3E5123240C79B500873495 /* SelectorCell.swift in Sources */,
 				2C3E5124240C79B500873495 /* ProviderCellViewModel.swift in Sources */,
 				2C6716ED241D41C700C86531 /* ProviderRequest.swift in Sources */,
+				2C44ACDC24539F1D0099B523 /* CitySelectorViewModel.swift in Sources */,
 				2C2DCB1E241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2CA96F91240F5F850056C2F0 /* PaymentRequest.swift in Sources */,
 				2C3E5125240C79B500873495 /* ProviderListViewModel.swift in Sources */,
@@ -3515,8 +3613,10 @@
 				2CC3DBD62411EBCC001E76B2 /* UITableView+Extensions.swift in Sources */,
 				2C671726241DC63A00C86531 /* ImageUploader.swift in Sources */,
 				2CC3DBD72411EBCC001E76B2 /* ProviderListServiceEndpoint.swift in Sources */,
+				2C44ACD324539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */,
 				2CD8AC55241AC03E005C8628 /* ProviderMainViewController.swift in Sources */,
 				2CC3DBD82411EBCC001E76B2 /* RouterBase.swift in Sources */,
+				2C44ACDF2453A0320099B523 /* CitySelectorItem.swift in Sources */,
 				2C8B3A2724363313005FE926 /* ProviderServiceRequest.swift in Sources */,
 				2CC3DBD92411EBCC001E76B2 /* CompleteTextViewModel.swift in Sources */,
 				2C1F2F71241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
@@ -3570,6 +3670,7 @@
 				2C2DCB22241D2A850024409E /* ProviderProfile.swift in Sources */,
 				2C67171E241DC49700C86531 /* ProviderPhotoRequest.swift in Sources */,
 				2CC3DBF42411EBCC001E76B2 /* LoginRequest.swift in Sources */,
+				2C44ACCB24539DDF0099B523 /* CitySelectorService.swift in Sources */,
 				2CC3DBF52411EBCC001E76B2 /* MainViewModel.swift in Sources */,
 				2CC3DBF62411EBCC001E76B2 /* OrderCell.swift in Sources */,
 				2C8B3A2F243649B2005FE926 /* UITextField+Extensions.swift in Sources */,
@@ -3625,6 +3726,7 @@
 				2CC3DC1D2411EBCC001E76B2 /* Array+Extensions.swift in Sources */,
 				2CC3DC1E2411EBCC001E76B2 /* OrdersViewModel.swift in Sources */,
 				2CC3DC1F2411EBCC001E76B2 /* GmailRequest.swift in Sources */,
+				2C44ACCF24539E080099B523 /* City.swift in Sources */,
 				2CC3DC202411EBCC001E76B2 /* PaymentServiceProtocol.swift in Sources */,
 				2C0D25BD2438E25400DB206D /* SessionEndpoints.swift in Sources */,
 				2C1F2F80241EB81F008E803D /* ProviderHomeService.swift in Sources */,
@@ -3633,6 +3735,7 @@
 				2C6716F9241D458800C86531 /* ProviderPhotoViewController.swift in Sources */,
 				2CC3DC222411EBCC001E76B2 /* OrderRequest.swift in Sources */,
 				2CC3DC232411EBCC001E76B2 /* CellViewModelProtocol.swift in Sources */,
+				2C44ACD724539E710099B523 /* CitySelectorEndpoints.swift in Sources */,
 				2CC3DC242411EBCC001E76B2 /* LoginResponse.swift in Sources */,
 				2CC3DC252411EBCC001E76B2 /* PaymentViewController.swift in Sources */,
 				2CC3DC262411EBCC001E76B2 /* DatePicker.swift in Sources */,
@@ -3672,6 +3775,7 @@
 				2CC3DC432411EBCC001E76B2 /* CheckoutHeaderCell.swift in Sources */,
 				2C671719241DC47000C86531 /* ProviderPhotoServiceProtocol.swift in Sources */,
 				2CC3DC442411EBCC001E76B2 /* Utils.swift in Sources */,
+				2C4010BE245390EA002F9674 /* CitySelectorViewController.swift in Sources */,
 				2CC3DC452411EBCC001E76B2 /* MainRouter.swift in Sources */,
 				2CC3DC462411EBCC001E76B2 /* CheckoutViewModel.swift in Sources */,
 				2CC3DC472411EBCC001E76B2 /* HomeEndpoints.swift in Sources */,
@@ -3711,6 +3815,7 @@
 				2CC3DC5D2411EBCC001E76B2 /* SelectorCell.swift in Sources */,
 				2CC3DC5E2411EBCC001E76B2 /* ProviderCellViewModel.swift in Sources */,
 				2C6716EC241D41C700C86531 /* ProviderRequest.swift in Sources */,
+				2C44ACDB24539F1D0099B523 /* CitySelectorViewModel.swift in Sources */,
 				2C2DCB1D241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2CC3DC5F2411EBCC001E76B2 /* PaymentRequest.swift in Sources */,
 				2CC3DC602411EBCC001E76B2 /* ProviderListViewModel.swift in Sources */,
@@ -3741,8 +3846,10 @@
 				2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */,
 				2C671728241DC63A00C86531 /* ImageUploader.swift in Sources */,
 				A5F30D6623B4DA85005258A8 /* UITableView+Extensions.swift in Sources */,
+				2C44ACD524539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */,
 				2CD8AC57241AC03E005C8628 /* ProviderMainViewController.swift in Sources */,
 				2C7E7FBC23F89AC600D7835E /* ProviderListServiceEndpoint.swift in Sources */,
+				2C44ACE12453A0320099B523 /* CitySelectorItem.swift in Sources */,
 				2C8B3A2924363313005FE926 /* ProviderServiceRequest.swift in Sources */,
 				2C198D2623F4E6AF00346395 /* RouterBase.swift in Sources */,
 				2C1F2F73241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
@@ -3796,6 +3903,7 @@
 				2C2DCB24241D2A850024409E /* ProviderProfile.swift in Sources */,
 				2C671720241DC49700C86531 /* ProviderPhotoRequest.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
+				2C44ACCD24539DDF0099B523 /* CitySelectorService.swift in Sources */,
 				2C42088E23F647E00058873D /* MainViewModel.swift in Sources */,
 				2C829ED0240B3E1E00D7DD81 /* OrderCell.swift in Sources */,
 				2C8B3A31243649B2005FE926 /* UITextField+Extensions.swift in Sources */,
@@ -3851,6 +3959,7 @@
 				2C305D9B24008EFF005B76EB /* UIApplication+Extensions.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				2C829ED4240B435300D7DD81 /* OrdersViewModel.swift in Sources */,
+				2C44ACD124539E080099B523 /* City.swift in Sources */,
 				2C42088B23F647680058873D /* GmailRequest.swift in Sources */,
 				2C0D25BF2438E25400DB206D /* SessionEndpoints.swift in Sources */,
 				2C1F2F82241EB81F008E803D /* ProviderHomeService.swift in Sources */,
@@ -3859,6 +3968,7 @@
 				2C6716FB241D458800C86531 /* ProviderPhotoViewController.swift in Sources */,
 				2C976A06240AC2B40073DD07 /* OrderRequest.swift in Sources */,
 				A5F30D6223B4DA41005258A8 /* CellViewModelProtocol.swift in Sources */,
+				2C44ACD924539E710099B523 /* CitySelectorEndpoints.swift in Sources */,
 				2C73AE8D23F4E9AC00267899 /* LoginResponse.swift in Sources */,
 				2C8897A6240C852F00423B11 /* PaymentViewController.swift in Sources */,
 				2C55F3AF2408BAF600F458AC /* DatePicker.swift in Sources */,
@@ -3898,6 +4008,7 @@
 				2C198D2423F4E4FB00346395 /* MainRouter.swift in Sources */,
 				2C67171B241DC47000C86531 /* ProviderPhotoServiceProtocol.swift in Sources */,
 				2CEAD73E240F57380095E9A4 /* PaymentEndpoints.swift in Sources */,
+				2C4010C0245390EA002F9674 /* CitySelectorViewController.swift in Sources */,
 				2CC731422404769C006FF85D /* CheckoutViewModel.swift in Sources */,
 				2CF6ABBA23F7AE6700F9EF40 /* HomeEndpoints.swift in Sources */,
 				2CD6715E240B83E9007917E8 /* MenuRouter.swift in Sources */,
@@ -3937,6 +4048,7 @@
 				2C3B8076240C0A2B00D4C6FE /* OrderDetailViewController.swift in Sources */,
 				2CFF4DBA23F9FE650024B3F1 /* SelectorCell.swift in Sources */,
 				2C6716EE241D41C700C86531 /* ProviderRequest.swift in Sources */,
+				2C44ACDD24539F1D0099B523 /* CitySelectorViewModel.swift in Sources */,
 				2C2DCB1F241D27E00024409E /* ProviderMainEndpoints.swift in Sources */,
 				2C7E7FC823F8A17200D7835E /* ProviderCellViewModel.swift in Sources */,
 				2C7E7FBF23F89DF200D7835E /* ProviderListViewModel.swift in Sources */,
@@ -4071,7 +4183,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB081F81D4EC75F9BDA36846 /* Pods-Local.debug.xcconfig */;
 			buildSettings = {
-				API_ENDPOINT = "http://192.168.1.121:5001/api/v1/";
+				API_ENDPOINT = "http://127.0.0.1:5001/api/v1/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
@@ -4110,7 +4222,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC4B790CF36A3F6920ACA0B3 /* Pods-Local.release.xcconfig */;
 			buildSettings = {
-				API_ENDPOINT = "http://192.168.1.121:5001/api/v1/";
+				API_ENDPOINT = "http://127.0.0.1:5001/api/v1/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;

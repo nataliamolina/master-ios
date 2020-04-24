@@ -158,3 +158,7 @@
 "provider.addService.name.placeholder" = "Ej: Servicio de mantenimiento";
 "provider.addService.serviceDesc.placeholder" = "Ej: El mejor servicio de la ciudad, siempre cuidando...";
 "provider.addService.price.placeholder" = "Ej: $25.000";
+
+"selectCity.title" = "¡Hola!";
+"selectCity.desc" = "Nos gustaría saber en qué ciudad estás para mostrarte Masters cerca de ti.";
+

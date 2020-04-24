@@ -23,6 +23,10 @@ class Master {
         UIView.transition(with: window, duration: duration, options: options, animations: {}, completion: nil)
     }
     
+    static var rootViewController: UIViewController? {
+        return UIApplication.shared.keyWindow?.rootViewController
+    }
+    
     static func setRootVC(navigationController: UINavigationController) {
         setRootVC(viewController: navigationController)
     }
