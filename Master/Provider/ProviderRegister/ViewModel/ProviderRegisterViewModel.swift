@@ -17,13 +17,26 @@ enum ProviderRegisterViewModelStatus {
 
 class ProviderRegisterViewModel {
     // MARK: - Properties
+    private var cityDataSource = [ListItem]()
+    private let cityService: CitySelectorServiceProtocol
     private let service: ProviderRegisterServiceProtocol
+    
     let status = Var<ProviderRegisterViewModelStatus>(.undefined)
     let isLoading = Var(false)
     
+    var citySelectedId: Int?
+
     // MARK: - Life Cycle
-    init(service: ProviderRegisterServiceProtocol = ProviderRegisterService(connectionDependency: ConnectionManager())) {
-        self.service = service
+    init(service: ProviderRegisterServiceProtocol? = nil,
+         cityService: CitySelectorServiceProtocol? = nil) {
+        
+        let defaultService = ProviderRegisterService(connectionDependency: ConnectionManager())
+        let defaulCitytService = CitySelectorService(connectionDependency: ConnectionManager())
+        
+        self.service = service ?? defaultService
+        self.cityService = cityService ?? defaulCitytService
+        
+        fetchCityList()
     }
     
     // MARK: - Public Methods
@@ -47,14 +60,45 @@ class ProviderRegisterViewModel {
     func getListSelectorViewModel() -> ListSelectorViewModel {
         let bankTypes = [
             ListItem(value: "Cuenta de Ahorros", identifier: 0),
-            ListItem(value: "Cuenta Corriente", identifier: 0),
-            ListItem(value: "Otro", identifier: 0)
+            ListItem(value: "Cuenta Corriente", identifier: 1),
+            ListItem(value: "Otro", identifier: 2)
          ]
          
-        return ListSelectorViewModel(title: nil, desc: "Selecciona tu tipo de cuenta", dataSource: bankTypes)
+        return ListSelectorViewModel(title: nil,
+                                     desc: "Selecciona tu tipo de cuenta",
+                                     dataSource: bankTypes,
+                                     identifier: ProviderRegisterIdentifiers.bankType.rawValue)
+    }
+    
+    func getCityListSelectorViewModel() -> ListSelectorViewModel {
+        return ListSelectorViewModel(title: nil,
+                                     desc: "Selecciona una ciudad",
+                                     dataSource: cityDataSource,
+                                     identifier: ProviderRegisterIdentifiers.city.rawValue)
+    }
+       
+    func getCompleteTextViewModel(savedValue: String?) -> CompleteTextViewModel {
+        // FIXME: Strings
+        return CompleteTextViewModel(title: "provider.register.about".localized,
+                                     desc: "provider.register.aboutPlaceholder".localized,
+                                     placeholder: "",
+                                     index: 0,
+                                     savedValue: savedValue)
     }
     
     // MARK: - Private Methods
+    
+    private func fetchCityList() {
+        loadingState(true)
+
+        cityService.fetchCities { [weak self] (response: [City], _) in
+            self?.loadingState(false)
+
+            self?.cityDataSource = response.map {
+                ListItem(value: $0.name, identifier: $0.id)
+            }
+        }
+    }
     
     private func loadingState(_ state: Bool) {
         DispatchQueue.main.async { [weak self] in

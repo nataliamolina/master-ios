@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderRegisterViewController" customModule="Local" customModuleProvider="target">
             <connections>
-                <outlet property="aboutTextView" destination="ssP-bo-KbV" id="2ui-aC-INC"/>
+                <outlet property="aboutTextView" destination="M85-rU-rzc" id="qnH-AP-eUy"/>
+                <outlet property="aboutView" destination="SBM-Df-few" id="gUF-fl-o5w"/>
                 <outlet property="bankNameTextField" destination="XM7-kr-cET" id="mN1-0h-mmB"/>
                 <outlet property="bankNumberTextField" destination="YQT-El-Cf4" id="Buy-yX-qfl"/>
                 <outlet property="bankTypeTextField" destination="0N5-RE-mwU" id="ARc-uF-Jx5"/>
                 <outlet property="bankTypeView" destination="Quq-Mw-wQF" id="lV2-YD-hVc"/>
+                <outlet property="cityTextField" destination="WZY-5Q-ixw" id="IZ1-qA-jdH"/>
+                <outlet property="cityView" destination="hOf-li-oJy" id="44h-rG-XH0"/>
                 <outlet property="documentTextField" destination="lb4-Yl-tim" id="ly8-Uq-OWb"/>
                 <outlet property="scrollView" destination="9FU-Sb-TqN" id="cnc-fI-5pP"/>
                 <outlet property="view" destination="VMp-26-4AF" id="ENj-vJ-VRX"/>
@@ -29,10 +32,10 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frK-8H-gaX">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="771"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="817"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ipW-UY-qzY">
-                                    <rect key="frame" x="20" y="0.0" width="374" height="751"/>
+                                    <rect key="frame" x="20" y="0.0" width="374" height="797"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX0-GM-W00">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
@@ -83,8 +86,17 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="provider.register.bankNumer"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyk-6u-i2p">
+                                            <rect key="frame" x="0.0" y="255" width="374" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="provider.register.bankName"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XM7-kr-cET" customClass="MTextField" customModule="Local" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="255" width="374" height="40"/>
+                                            <rect key="frame" x="0.0" y="292" width="374" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="iub-ac-Sxl"/>
                                             </constraints>
@@ -94,8 +106,37 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizePlaceholder" value="provider.register.bankName"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5l-X9-aLR">
+                                            <rect key="frame" x="0.0" y="352" width="374" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="provider.register.city"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOf-li-oJy">
+                                            <rect key="frame" x="0.0" y="389" width="374" height="40"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccionar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZY-5Q-ixw" customClass="MTextField" customModule="Local" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="eSK-GV-Vz1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WZY-5Q-ixw" secondAttribute="trailing" id="ddr-3j-Pqs"/>
+                                                <constraint firstItem="WZY-5Q-ixw" firstAttribute="leading" secondItem="hOf-li-oJy" secondAttribute="leading" id="e7v-rv-h5e"/>
+                                                <constraint firstItem="WZY-5Q-ixw" firstAttribute="top" secondItem="hOf-li-oJy" secondAttribute="top" id="hFb-20-fh5"/>
+                                                <constraint firstAttribute="bottom" secondItem="WZY-5Q-ixw" secondAttribute="bottom" id="vP3-sW-MPH"/>
+                                            </constraints>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etj-JY-0dI">
-                                            <rect key="frame" x="0.0" y="315" width="374" height="17"/>
+                                            <rect key="frame" x="0.0" y="449" width="374" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -104,7 +145,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Quq-Mw-wQF">
-                                            <rect key="frame" x="0.0" y="352" width="374" height="40"/>
+                                            <rect key="frame" x="0.0" y="486" width="374" height="40"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccionar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0N5-RE-mwU" customClass="MTextField" customModule="Local" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -124,7 +165,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-gQ-muM">
-                                            <rect key="frame" x="0.0" y="412" width="374" height="17"/>
+                                            <rect key="frame" x="0.0" y="546" width="374" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -132,30 +173,40 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="provider.register.about"/>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ssP-bo-KbV">
-                                            <rect key="frame" x="0.0" y="449" width="374" height="128"/>
-                                            <color key="backgroundColor" red="0.95699077072538863" green="0.95699077072538863" blue="0.95699077072538863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-Df-few">
+                                            <rect key="frame" x="0.0" y="583" width="374" height="40"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Completar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M85-rU-rzc" customClass="MTextField" customModule="Local" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="LLs-mk-z4K"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="128" id="cro-QJ-ua9"/>
+                                                <constraint firstItem="M85-rU-rzc" firstAttribute="leading" secondItem="SBM-Df-few" secondAttribute="leading" id="ESb-Na-7cW"/>
+                                                <constraint firstAttribute="trailing" secondItem="M85-rU-rzc" secondAttribute="trailing" id="Uqg-UL-JRm"/>
+                                                <constraint firstAttribute="bottom" secondItem="M85-rU-rzc" secondAttribute="bottom" id="dve-df-qQi"/>
+                                                <constraint firstItem="M85-rU-rzc" firstAttribute="top" secondItem="SBM-Df-few" secondAttribute="top" id="rNx-nu-Vb8"/>
                                             </constraints>
-                                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="provider.register.aboutPlaceholder"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </textView>
+                                        </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-ST-roO" customClass="MLegalButton" customModule="Local" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="597" width="374" height="47"/>
+                                            <rect key="frame" x="0.0" y="643" width="374" height="47"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="47" id="RXu-Z1-EMp"/>
                                             </constraints>
                                             <state key="normal" title="Button">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="legalButtonAction" destination="-1" eventType="touchUpInside" id="MAU-Dx-ro5"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-wK-Ryz" customClass="MButton" customModule="Local" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="664" width="374" height="47"/>
+                                            <rect key="frame" x="0.0" y="710" width="374" height="47"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="47" id="zUE-X4-ZIm"/>
                                             </constraints>
@@ -171,7 +222,7 @@
                                             </connections>
                                         </button>
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CBq-6n-IOS">
-                                            <rect key="frame" x="0.0" y="731" width="374" height="20"/>
+                                            <rect key="frame" x="0.0" y="777" width="374" height="20"/>
                                             <color key="color" red="0.49019607840000001" green="0.80000000000000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </activityIndicatorView>
                                     </subviews>
@@ -207,7 +258,7 @@
                 <constraint firstAttribute="trailing" secondItem="9FU-Sb-TqN" secondAttribute="trailing" id="cN2-aW-MzI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="idZ-vC-ReO"/>
-            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
+            <point key="canvasLocation" x="140.57971014492756" y="81.696428571428569"/>
         </view>
     </objects>
 </document>

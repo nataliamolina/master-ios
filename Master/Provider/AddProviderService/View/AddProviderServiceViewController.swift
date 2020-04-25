@@ -341,7 +341,7 @@ fileprivate extension String {
 
 // MARK: - ListSelectorViewControllerDelegate
 extension AddProviderServiceViewController: ListSelectorViewControllerDelegate {
-    func optionSelectedAt(index: Int, option: ListItemProtocol) {
+    func optionSelectedAt(index: Int, option: ListItemProtocol, uniqueIdentifier: String?) {
         serviceCategoryTextField.text = option.value
         viewModel.categoryId = (option.identifier as? Int) ?? viewModel.categoryId
     }

@@ -16,4 +16,5 @@ struct ProviderRequest: Codable {
     let bankAccountNumber: String
     let bankAccountType: String
     let bankName: String
+    let cityId: Int
 }

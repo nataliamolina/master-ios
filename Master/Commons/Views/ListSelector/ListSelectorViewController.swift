@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ListSelectorViewControllerDelegate: class {
-    func optionSelectedAt(index: Int, option: ListItemProtocol)
+    func optionSelectedAt(index: Int, option: ListItemProtocol, uniqueIdentifier: String?)
 }
 
 class ListSelectorViewController: UIViewController {
@@ -73,6 +73,7 @@ extension ListSelectorViewController: UITableViewDelegate {
         }
         
         navigationController?.popViewController(animated: true)
-        delegate?.optionSelectedAt(index: indexPath.row, option: item)
+        
+        delegate?.optionSelectedAt(index: indexPath.row, option: item, uniqueIdentifier: viewModel.identifier)
     }
 }

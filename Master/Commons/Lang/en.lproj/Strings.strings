@@ -42,6 +42,7 @@
 "menu.logout" = "Cerrar sesión";
 "menu.provider" = "Modo Proveedor";
 "menu.login" = "Iniciar Sesión";
+"menu.location" = "Estás en";
 
 // Main
 "main.title" = "Iniciar Sesión";
@@ -135,6 +136,7 @@
 "provider.register.about" = "¡Cuéntanos sobre ti!";
 "provider.register.aboutPlaceholder" = "Ejemplo: Soy un gran cocinero...";
 "provider.register.button" = "Unirme al Programa";
+"provider.register.city" = "¿En qué ciudad estás?";
 
 // Provider Photo
 "provider.photo.title" = "¡Tu Foto!";

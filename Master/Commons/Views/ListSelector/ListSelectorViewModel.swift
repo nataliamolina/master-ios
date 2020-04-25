@@ -17,4 +17,18 @@ struct ListSelectorViewModel {
     let title: String?
     let desc: String?
     let dataSource: [ListItemProtocol]
+    
+    /// Used when the List selector is called multiple times in the same screen for different fields.
+    let identifier: String?
+    
+    init(title: String?,
+         desc: String?,
+         dataSource: [ListItemProtocol],
+         identifier: String? = nil) {
+        
+        self.title = title
+        self.desc = desc
+        self.dataSource = dataSource
+        self.identifier = identifier
+    }
 }

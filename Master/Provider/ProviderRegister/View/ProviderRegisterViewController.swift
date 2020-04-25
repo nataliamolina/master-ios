@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ProviderRegisterIdentifiers: String {
+    case city
+    case bankType
+}
+
 class ProviderRegisterViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var scrollView: UIScrollView!
@@ -16,11 +21,19 @@ class ProviderRegisterViewController: UIViewController {
     @IBOutlet private weak var bankNameTextField: MTextField!
     @IBOutlet private weak var bankTypeTextField: MTextField!
     @IBOutlet private weak var bankTypeView: UIView!
-    @IBOutlet private weak var aboutTextView: UITextView!
+    @IBOutlet private weak var aboutTextView: MTextField!
+    @IBOutlet private weak var aboutView: UIView!
+    
+    @IBOutlet private weak var cityTextField: MTextField!
+    @IBOutlet private weak var cityView: UIView!
     
     // MARK: - UI Actions
     @IBAction private func registerButtonAction() {
         validateForm()
+    }
+    
+    @IBAction private func legalButtonAction() {
+        router.transition(to: .legal)
     }
     
     // MARK: - Properties
@@ -63,6 +76,8 @@ class ProviderRegisterViewController: UIViewController {
         disableTitle()
         
         bankTypeView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bankTypeFieldTapped)))
+        cityView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cityFieldTapped)))
+        aboutView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(aboutViewTapped)))
         
         originalInset = scrollView.contentInset
         
@@ -118,7 +133,7 @@ class ProviderRegisterViewController: UIViewController {
             return
         }
         
-        if aboutTextView.text.isEmpty || aboutTextView.text.count < 3 {
+        if aboutTextView.safeText.isEmpty || aboutTextView.safeText.count < 3 {
             showWarning(message: "Es muy importante para tus futuros clientes saber algo de ti, por favor completa el campo.")
             
             return
@@ -130,11 +145,12 @@ class ProviderRegisterViewController: UIViewController {
     private func submitForm() {
         let request = ProviderRequest(nickName: "",
                                       photoUrl: "",
-                                      description: aboutTextView.text.trimmingCharacters(in: .whitespacesAndNewlines),
+                                      description: aboutTextView.safeText.trimmingCharacters(in: .whitespacesAndNewlines),
                                       document: documentTextField.safeText,
                                       bankAccountNumber: bankNumberTextField.safeText,
                                       bankAccountType: bankTypeTextField.safeText,
-                                      bankName: bankNameTextField.safeText)
+                                      bankName: bankNameTextField.safeText,
+                                      cityId: viewModel.citySelectedId ?? 1)
         
         viewModel.postProviderRegister(request: request)
     }
@@ -149,6 +165,16 @@ class ProviderRegisterViewController: UIViewController {
                                                selector: #selector(keyboardWillHide),
                                                name: UIResponder.keyboardWillHideNotification ,
                                                object: nil)
+    }
+    
+    @objc func aboutViewTapped() {
+        let textViewModel = viewModel.getCompleteTextViewModel(savedValue: aboutTextView.text)
+        
+        router.transition(to: .completeText(viewModel: textViewModel, delegate: self))
+    }
+    
+    @objc func cityFieldTapped() {
+        router.transition(to: .listSelector(viewModel: viewModel.getCityListSelectorViewModel(), delegate: self))
     }
     
     @objc private func bankTypeFieldTapped() {
@@ -172,7 +198,24 @@ class ProviderRegisterViewController: UIViewController {
 
 // MARK: - ListSelectorViewControllerDelegate
 extension ProviderRegisterViewController: ListSelectorViewControllerDelegate {
-    func optionSelectedAt(index: Int, option: ListItemProtocol) {
-        bankTypeTextField.text = option.value
+    func optionSelectedAt(index: Int, option: ListItemProtocol, uniqueIdentifier: String?) {
+        switch uniqueIdentifier {
+        case ProviderRegisterIdentifiers.city.rawValue:
+            viewModel.citySelectedId = option.identifier as? Int
+            cityTextField.text = option.value
+            
+        case ProviderRegisterIdentifiers.bankType.rawValue:
+            bankTypeTextField.text = option.value
+            
+        default:
+            return
+        }
+    }
+}
+
+// MARK: - CompleteTextViewDelegate
+extension ProviderRegisterViewController: CompleteTextViewDelegate {
+    func continueButtonTapped(viewModel: CompleteTextViewModel) {
+        aboutTextView.text = viewModel.value
     }
 }

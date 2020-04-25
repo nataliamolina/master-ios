@@ -10,6 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
     // MARK: - UI References
+    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var topConstraint: NSLayoutConstraint!
     @IBOutlet private weak var dismissAreaView: UIView!
     @IBOutlet private weak var mainContainerViewTrailingConstraint: NSLayoutConstraint!
@@ -18,28 +19,10 @@ class MenuViewController: UIViewController {
     @IBOutlet private weak var userImageView: UIImageView!
     @IBOutlet private weak var logoutButton: MButton!
     @IBOutlet private weak var welcomeLabel: UILabel!
-    
+        
     // MARK: - UI Actions
     @IBAction private func logoutAction() {
         performLogout()
-    }
-    
-    @IBAction func ordersButtonAction() {
-        closeMenu { [weak self] in
-            self?.router.transition(to: .ordersList)
-        }
-    }
-    
-    @IBAction func legalButtonAction() {
-        closeMenu { [weak self] in
-            self?.router.transition(to: .legal)
-        }
-    }
-    
-    @IBAction func helpButtonAction() {
-        closeMenu { [weak self] in
-            self?.router.transition(to: .help)
-        }
     }
     
     @IBAction func providerModButtonAction() {
@@ -81,6 +64,12 @@ class MenuViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI(firstName: String, imageUrl: String) {
+        tableView.registerNib(MenuOptionCell.self)
+        tableView.registerNib(MenuTitleCell.self)
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = .none
+        
         if !Session.shared.isLoggedIn {
             logoutButton.title = "menu.login".localized
             welcomeLabel.text = "menu.greetings.nosession".localized
@@ -88,12 +77,9 @@ class MenuViewController: UIViewController {
             logoutButton.title = "menu.logout".localized
         }
         
-        let topOffset: CGFloat = 20
-        topConstraint.constant = UIApplication.shared.statusBarFrame.height + topOffset
-        
         userNamesLabel.text = firstName
         userImageView.kf.setImage(with: URL(string: imageUrl), placeholder: UIImage.avatar)
-        
+                
         hideMenu()
         setupGestureRecognizers()
     }
@@ -181,4 +167,44 @@ class MenuViewController: UIViewController {
             closeMenu()
         }
     }
+}
+
+// MARK: - UITableViewDataSource
+extension MenuViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.getWith(cellViewModel: viewModel.getViewModelAt(indexPath: indexPath),
+                                 indexPath: indexPath,
+                                 delegate: self)
+    }
+}
+
+// MARK: - MenuOptionCellDelegate
+extension MenuViewController: MenuOptionCellDelegate {
+    func optionTapped(_ option: MenuOption) {
+        let optionBlock = { [weak self] (transition: MenuRouterTransitions) in
+            self?.closeMenu {
+                self?.router.transition(to: transition)
+            }
+        }
+        
+        switch option {
+        case .help:
+            optionBlock(.help)
+            
+        case .legal:
+            optionBlock(.legal)
+            
+        case .orders:
+            optionBlock(.ordersList)
+            
+        case .city:
+            optionBlock(.citySelector)
+            
+        }
+    }
+
 }

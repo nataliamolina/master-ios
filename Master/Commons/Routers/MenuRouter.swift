@@ -17,6 +17,7 @@ enum MenuRouterTransitions {
     case privacy
     case help
     case provider
+    case citySelector
 }
 
 class MenuRouter: RouterBase<MenuRouterTransitions> {
@@ -61,6 +62,10 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
             
         case .login:
             handleLoginOption()
+            
+        case .citySelector:
+            handleCitySelectorOption()
+
         }
     }
     
@@ -76,6 +81,12 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
         
         let loginRouter = MainRouter(navigationController: navigationController, delegate: self)
         loginRouter.transition(to: .main)
+    }
+    
+    private func handleCitySelectorOption() {
+        let router = MainRouter(navigationController: MNavigationController(), delegate: nil)
+        
+        router.transition(to: .citySelector(viewModel: CitySelectorViewModel()))
     }
     
     private func handleLoginOption() {
