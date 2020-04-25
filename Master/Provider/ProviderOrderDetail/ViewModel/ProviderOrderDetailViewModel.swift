@@ -142,8 +142,14 @@ class ProviderOrderDetailViewModel {
             CheckoutFieldCellViewModel(title: CheckoutLang.notes, 
                                        value: model.notes.isEmpty ? "-" : model.notes,
                                        image: .note,
-                                       bottomLineVisible: false,
                                        type: .notes,
+                                       detailIconVisible: false),
+            
+            CheckoutFieldCellViewModel(title: CheckoutLang.city,
+                                       value: model.city?.name ?? "",
+                                       image: .building,
+                                       bottomLineVisible: false,
+                                       type: .city,
                                        detailIconVisible: false)
         ]
         

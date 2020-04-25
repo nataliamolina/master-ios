@@ -129,7 +129,7 @@ extension CheckoutViewController: CheckoutFieldCellDelegate {
             showTextEditorBy(index: index)
             
         case .city:
-            showCityDialog()
+            return
             
         default:
             return

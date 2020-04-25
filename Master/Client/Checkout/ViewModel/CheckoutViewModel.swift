@@ -30,6 +30,19 @@ class CheckoutViewModel {
     private let cart: [ProviderServiceCellViewModel]
     private let categoryId: Int
     private let service: CheckoutServiceProtocol
+    private let storageService: AppStorageProtocol
+    
+    private var currentCity: String {
+        let result: String? = storageService.get(key: CitySelectorViewModel.Keys.cityName.rawValue)
+        
+        return result ?? ""
+    }
+    
+    private var currentCityId: Int {
+        let result: Int? = storageService.get(key: CitySelectorViewModel.Keys.cityId.rawValue)
+        
+        return result ?? 1
+    }
     
     let status = Var<CheckoutViewModelStatus>(.undefined)
     let isLoading = Var(false)
@@ -39,12 +52,16 @@ class CheckoutViewModel {
     init(provider: CheckoutProvider,
          cart: [ProviderServiceCellViewModel],
          categoryId: Int,
-         service: CheckoutServiceProtocol = CheckoutService(connectionDependency: ConnectionManager())) {
+         service: CheckoutServiceProtocol = CheckoutService(connectionDependency: ConnectionManager()),
+         storageService: AppStorageProtocol? = nil) {
+        
+        let defaultStorageService = AppStorage()
         
         self.provider = provider
         self.cart = cart
         self.categoryId = categoryId
         self.service = service
+        self.storageService = storageService ?? defaultStorageService
     }
     
     // MARK: - Public Methods
@@ -58,7 +75,7 @@ class CheckoutViewModel {
         
         let fieldsCells = [
             CheckoutFieldCellViewModel(title: Lang.address, value: "", image: .gps, type: .address),
-            CheckoutFieldCellViewModel(title: Lang.city, value: Lang.bogota, image: .building, type: .city),
+            CheckoutFieldCellViewModel(title: Lang.city, value: currentCity, image: .building, type: .city),
             CheckoutFieldCellViewModel(title: Lang.dateAndHour, value: "", image: .calendar, type: .dates),
             CheckoutFieldCellViewModel(title: Lang.notes, value: "", image: .note, type: .notes),
             
@@ -172,7 +189,8 @@ class CheckoutViewModel {
                                    serviceCategoryId: categoryId,
                                    servicesIds: getCartIds(),
                                    orderDate: jsonDate,
-                                   time: getFormattedTimeFrom(date: date))
+                                   time: getFormattedTimeFrom(date: date),
+                                   cityId: currentCityId)
         
         if !Session.shared.isLoggedIn {
             status.value = .needsAuthentication
