@@ -41,7 +41,7 @@
 	<key>providerProfileByUserId</key>
 	<string>provider/profile/{userId}</string>
 	<key>serviceDetail</key>
-	<string>provider/service/category/{id}</string>
+	<string>provider/service/category/{id}/city/{cityId}</string>
 	<key>userOrders</key>
 	<string>orders/user</string>
 	<key>updatePushToken</key>

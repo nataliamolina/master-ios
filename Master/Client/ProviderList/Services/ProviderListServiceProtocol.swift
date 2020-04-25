@@ -12,5 +12,6 @@ protocol ProviderListServiceProtocol {
     var connectionDependency: ConnectionManagerProtocol { get }
     
     func fetchServiceDetailById(_ id: Int,
+                                cityId: Int,
                                 onComplete: @escaping (_ result: [ProviderWithScore]?, _ error: CMError?) -> Void)
 }

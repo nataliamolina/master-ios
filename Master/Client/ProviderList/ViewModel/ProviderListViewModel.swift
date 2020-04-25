@@ -17,21 +17,33 @@ enum ProviderListViewModelStatus {
 
 class ProviderListViewModel {
     // MARK: - Properties
+    private let storageService: AppStorageProtocol
     private let serviceId: Int
+    
     let serviceImageUrl: String?
     let status = Var<ProviderListViewModelStatus>(.undefined)
     let isLoading = Var(false)
     let dataSource = Var<[CellViewModelProtocol]>([])
+
+    private var currentCityId: Int {
+        let result: Int? = storageService.get(key: CitySelectorViewModel.Keys.cityId.rawValue)
+        
+        return result ?? 1
+    }
     
     private let service: ProviderListServiceProtocol
     
     // MARK: - Life Cycle
-    init(serviceId: Int, serviceImageUrl: String?, service: ProviderListServiceProtocol? = nil) {
+    init(serviceId: Int, serviceImageUrl: String?,
+         service: ProviderListServiceProtocol? = nil,
+         storageService: AppStorageProtocol? = nil) {
+        
         let defaultService = ProviderListService(connectionDependency: ConnectionManager())
         
         self.serviceImageUrl = serviceImageUrl
         self.serviceId = serviceId
         self.service = service ?? defaultService
+        self.storageService = storageService ?? AppStorage()
     }
     
     // MARK: - Public Methods
@@ -39,7 +51,7 @@ class ProviderListViewModel {
     func fetchDetail() {
         isLoading.value = true
         
-        service.fetchServiceDetailById(serviceId) { [weak self] (response: [ProviderWithScore]?, error: CMError?) in
+        service.fetchServiceDetailById(serviceId, cityId: currentCityId) { [weak self] (response: [ProviderWithScore]?, error: CMError?) in
             self?.isLoading.value = false
             
             guard let models = response, error == nil else {

@@ -13,7 +13,11 @@ private enum EndpointsKeys: String {
 }
 
 extension Endpoint {
-    static func serviceDetailById(_ id: Int) -> String {
-        return Endpoint.url(with: EndpointsKeys.serviceDetail.rawValue).replace("{id}", with: "\(id)")
+    static func serviceDetailById(_ id: Int, cityId: Int) -> String {
+        var url = Endpoint.url(with: EndpointsKeys.serviceDetail.rawValue)
+        url = url.replace("{id}", with: "\(id)")
+        url = url.replace("{cityId}", with: "\(cityId)")
+
+        return url
     }
 }

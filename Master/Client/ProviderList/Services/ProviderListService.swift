@@ -20,9 +20,10 @@ class ProviderListService: ProviderListServiceProtocol {
     // MARK: - Public Methods
     
     func fetchServiceDetailById(_ id: Int,
+                                cityId: Int,
                                 onComplete: @escaping (_ result: [ProviderWithScore]?, _ error: CMError?) -> Void) {
         
-        let endpoint = Endpoint.serviceDetailById(id)
+        let endpoint = Endpoint.serviceDetailById(id, cityId: cityId)
         
         connectionDependency.get(url: endpoint) { (response: [ProviderWithScore]?, error: CMError?) in
             
