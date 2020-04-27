@@ -132,6 +132,24 @@
 		2C30BED22454DB7400347529 /* MenuTitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30BED02454DB7400347529 /* MenuTitleCellViewModel.swift */; };
 		2C30BED32454DB7400347529 /* MenuTitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30BED02454DB7400347529 /* MenuTitleCellViewModel.swift */; };
 		2C3160FC23F8B32500A5F6B8 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3160FB23F8B32500A5F6B8 /* AnimationType.swift */; };
+		2C366A0224565A3A0048B968 /* CheckoutRadioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A0024565A3A0048B968 /* CheckoutRadioCell.swift */; };
+		2C366A0324565A3A0048B968 /* CheckoutRadioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A0024565A3A0048B968 /* CheckoutRadioCell.swift */; };
+		2C366A0424565A3A0048B968 /* CheckoutRadioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A0024565A3A0048B968 /* CheckoutRadioCell.swift */; };
+		2C366A0524565A3A0048B968 /* CheckoutRadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C366A0124565A3A0048B968 /* CheckoutRadioCell.xib */; };
+		2C366A0624565A3A0048B968 /* CheckoutRadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C366A0124565A3A0048B968 /* CheckoutRadioCell.xib */; };
+		2C366A0724565A3A0048B968 /* CheckoutRadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C366A0124565A3A0048B968 /* CheckoutRadioCell.xib */; };
+		2C366A0A24565D4E0048B968 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A0924565D4E0048B968 /* RadioView.swift */; };
+		2C366A0B24565D4E0048B968 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A0924565D4E0048B968 /* RadioView.swift */; };
+		2C366A0C24565D4E0048B968 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A0924565D4E0048B968 /* RadioView.swift */; };
+		2C366A0E24565D570048B968 /* RadioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C366A0D24565D570048B968 /* RadioView.xib */; };
+		2C366A0F24565D570048B968 /* RadioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C366A0D24565D570048B968 /* RadioView.xib */; };
+		2C366A1024565D570048B968 /* RadioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C366A0D24565D570048B968 /* RadioView.xib */; };
+		2C366A12245666350048B968 /* CheckoutRadioCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A11245666350048B968 /* CheckoutRadioCellViewModel.swift */; };
+		2C366A13245666350048B968 /* CheckoutRadioCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A11245666350048B968 /* CheckoutRadioCellViewModel.swift */; };
+		2C366A14245666350048B968 /* CheckoutRadioCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A11245666350048B968 /* CheckoutRadioCellViewModel.swift */; };
+		2C366A16245666450048B968 /* RadioOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A15245666450048B968 /* RadioOption.swift */; };
+		2C366A17245666450048B968 /* RadioOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A15245666450048B968 /* RadioOption.swift */; };
+		2C366A18245666450048B968 /* RadioOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C366A15245666450048B968 /* RadioOption.swift */; };
 		2C3B8071240BFD8F00D4C6FE /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B806F240BFD8F00D4C6FE /* LegalViewController.swift */; };
 		2C3B8072240BFD8F00D4C6FE /* LegalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B8070240BFD8F00D4C6FE /* LegalViewController.xib */; };
 		2C3B8076240C0A2B00D4C6FE /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B8074240C0A2B00D4C6FE /* OrderDetailViewController.swift */; };
@@ -996,6 +1014,12 @@
 		2C30BECC2454D93400347529 /* MenuTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTitle.swift; sourceTree = "<group>"; };
 		2C30BED02454DB7400347529 /* MenuTitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTitleCellViewModel.swift; sourceTree = "<group>"; };
 		2C3160FB23F8B32500A5F6B8 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		2C366A0024565A3A0048B968 /* CheckoutRadioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutRadioCell.swift; sourceTree = "<group>"; };
+		2C366A0124565A3A0048B968 /* CheckoutRadioCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutRadioCell.xib; sourceTree = "<group>"; };
+		2C366A0924565D4E0048B968 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		2C366A0D24565D570048B968 /* RadioView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadioView.xib; sourceTree = "<group>"; };
+		2C366A11245666350048B968 /* CheckoutRadioCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutRadioCellViewModel.swift; sourceTree = "<group>"; };
+		2C366A15245666450048B968 /* RadioOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioOption.swift; sourceTree = "<group>"; };
 		2C3B806F240BFD8F00D4C6FE /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		2C3B8070240BFD8F00D4C6FE /* LegalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LegalViewController.xib; sourceTree = "<group>"; };
 		2C3B8074240C0A2B00D4C6FE /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
@@ -1612,6 +1636,27 @@
 				2C147104241DCA82009E2FDA /* Threads.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2C3669FF24565A210048B968 /* CheckoutRadioCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C366A11245666350048B968 /* CheckoutRadioCellViewModel.swift */,
+				2C366A0824565D340048B968 /* Views */,
+				2C366A0024565A3A0048B968 /* CheckoutRadioCell.swift */,
+				2C366A0124565A3A0048B968 /* CheckoutRadioCell.xib */,
+			);
+			path = CheckoutRadioCell;
+			sourceTree = "<group>";
+		};
+		2C366A0824565D340048B968 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C366A15245666450048B968 /* RadioOption.swift */,
+				2C366A0924565D4E0048B968 /* RadioView.swift */,
+				2C366A0D24565D570048B968 /* RadioView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2C3B806E240BFD7900D4C6FE /* Legal */ = {
@@ -2420,6 +2465,7 @@
 		2CEECC992400D1FD00C67D80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C3669FF24565A210048B968 /* CheckoutRadioCell */,
 				2CC731352404721C006FF85D /* CheckoutProviderCell */,
 				2CC73130240471B5006FF85D /* CheckoutHeaderCell */,
 				2CEECC9A2400D20600C67D80 /* CheckoutFieldCell */,
@@ -2929,6 +2975,7 @@
 				2C3E5140240C79B500873495 /* Endpoints.plist in Resources */,
 				2C3E5141240C79B500873495 /* ProviderProfileCell.xib in Resources */,
 				2C3E5142240C79B500873495 /* OrdersViewController.xib in Resources */,
+				2C366A0624565A3A0048B968 /* CheckoutRadioCell.xib in Resources */,
 				2C3E5143240C79B500873495 /* ProviderCell.xib in Resources */,
 				2C3E5144240C79B500873495 /* CheckoutProviderCell.xib in Resources */,
 				2C6716FD241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
@@ -2958,6 +3005,7 @@
 				2C44ACC8245399860099B523 /* city_anim.json in Resources */,
 				2C3E5153240C79B500873495 /* CategoryCell.xib in Resources */,
 				2C3E5154240C79B500873495 /* OrderCell.xib in Resources */,
+				2C366A0F24565D570048B968 /* RadioView.xib in Resources */,
 				2C3E5155240C79B500873495 /* loading_order_anim.json in Resources */,
 				2C1636C4241684410083A59A /* RateViewController.xib in Resources */,
 				2C3E5156240C79B500873495 /* empty_state_providers.json in Resources */,
@@ -2993,6 +3041,7 @@
 				2CC3DC7C2411EBCC001E76B2 /* Endpoints.plist in Resources */,
 				2CC3DC7D2411EBCC001E76B2 /* ProviderProfileCell.xib in Resources */,
 				2CC3DC7E2411EBCC001E76B2 /* OrdersViewController.xib in Resources */,
+				2C366A0524565A3A0048B968 /* CheckoutRadioCell.xib in Resources */,
 				2CC3DC7F2411EBCC001E76B2 /* ProviderCell.xib in Resources */,
 				2CC3DC802411EBCC001E76B2 /* CheckoutProviderCell.xib in Resources */,
 				2C6716FC241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
@@ -3022,6 +3071,7 @@
 				2C44ACC7245399860099B523 /* city_anim.json in Resources */,
 				2CC3DC902411EBCC001E76B2 /* CategoryCell.xib in Resources */,
 				2CC3DC912411EBCC001E76B2 /* OrderCell.xib in Resources */,
+				2C366A0E24565D570048B968 /* RadioView.xib in Resources */,
 				2CC3DC922411EBCC001E76B2 /* loading_order_anim.json in Resources */,
 				2C1636C3241684410083A59A /* RateViewController.xib in Resources */,
 				2CC3DC932411EBCC001E76B2 /* empty_state_providers.json in Resources */,
@@ -3057,6 +3107,7 @@
 				2C05F05823F8D9E6003D1925 /* Endpoints.plist in Resources */,
 				2CFF4DA523F99D1C0024B3F1 /* ProviderProfileCell.xib in Resources */,
 				2C829ECA240B3A4800D7DD81 /* OrdersViewController.xib in Resources */,
+				2C366A0724565A3A0048B968 /* CheckoutRadioCell.xib in Resources */,
 				2C7E7FC623F8A0A600D7835E /* ProviderCell.xib in Resources */,
 				2CC731392404722E006FF85D /* CheckoutProviderCell.xib in Resources */,
 				2C6716FE241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
@@ -3086,6 +3137,7 @@
 				2C44ACC9245399860099B523 /* city_anim.json in Resources */,
 				A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */,
 				2C829ED1240B3E1E00D7DD81 /* OrderCell.xib in Resources */,
+				2C366A1024565D570048B968 /* RadioView.xib in Resources */,
 				2C22B39923F8AFC300678A41 /* loading_order_anim.json in Resources */,
 				2C1636C5241684410083A59A /* RateViewController.xib in Resources */,
 				2C22B39A23F8AFC300678A41 /* empty_state_providers.json in Resources */,
@@ -3445,6 +3497,7 @@
 				2C3E509D240C79B500873495 /* SplashScreenService.swift in Sources */,
 				2C3E509E240C79B500873495 /* ButtonCell.swift in Sources */,
 				2C3E509F240C79B500873495 /* String+Extensions.swift in Sources */,
+				2C366A0B24565D4E0048B968 /* RadioView.swift in Sources */,
 				2C3E50A0240C79B500873495 /* OrderDetailHeaderCell.swift in Sources */,
 				2C3E50A1240C79B500873495 /* RegisterViewModel.swift in Sources */,
 				2C3E50A2240C79B500873495 /* UITableView+Extensions.swift in Sources */,
@@ -3458,6 +3511,7 @@
 				2C3E50A5240C79B500873495 /* CompleteTextViewModel.swift in Sources */,
 				2C1F2F72241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D52416AF300083A59A /* CommentRequest.swift in Sources */,
+				2C366A17245666450048B968 /* RadioOption.swift in Sources */,
 				2CA2B0C224144D14000C7131 /* String+Lang.swift in Sources */,
 				2C8B3A2C243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift in Sources */,
 				2C3E50A6240C79B500873495 /* AppDelegate.swift in Sources */,
@@ -3466,6 +3520,7 @@
 				2C3E50A8240C79B500873495 /* ButtonCellViewModel.swift in Sources */,
 				2C3E50A9240C79B500873495 /* ProviderListService.swift in Sources */,
 				2CC6C599241704CF003C11D2 /* MenuServiceProtocol.swift in Sources */,
+				2C366A0324565A3A0048B968 /* CheckoutRadioCell.swift in Sources */,
 				2C2DCB0B241D27740024409E /* ProviderRegisterService.swift in Sources */,
 				2C1F2F7B241EB81F008E803D /* ProviderHomeEndpoints.swift in Sources */,
 				2C3E50AA240C79B500873495 /* UINavigationController+Extensions.swift in Sources */,
@@ -3633,6 +3688,7 @@
 				2C3E5114240C79B500873495 /* RegisterService.swift in Sources */,
 				2C671716241DC45900C86531 /* ProviderPhotoService.swift in Sources */,
 				2C8B3A23243631E0005FE926 /* AddProviderServiceService.swift in Sources */,
+				2C366A13245666350048B968 /* CheckoutRadioCellViewModel.swift in Sources */,
 				2C3E5115240C79B500873495 /* ProviderProfileCellViewModel.swift in Sources */,
 				2C4EBFCE2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */,
 				2C3E5116240C79B500873495 /* ConnectionManagerProtocol.swift in Sources */,
@@ -3684,6 +3740,7 @@
 				2CC3DBD12411EBCC001E76B2 /* SplashScreenService.swift in Sources */,
 				2CC3DBD22411EBCC001E76B2 /* ButtonCell.swift in Sources */,
 				2CC3DBD32411EBCC001E76B2 /* String+Extensions.swift in Sources */,
+				2C366A0A24565D4E0048B968 /* RadioView.swift in Sources */,
 				2CC3DBD42411EBCC001E76B2 /* OrderDetailHeaderCell.swift in Sources */,
 				2CC3DBD52411EBCC001E76B2 /* RegisterViewModel.swift in Sources */,
 				2CC3DBD62411EBCC001E76B2 /* UITableView+Extensions.swift in Sources */,
@@ -3697,6 +3754,7 @@
 				2CC3DBD92411EBCC001E76B2 /* CompleteTextViewModel.swift in Sources */,
 				2C1F2F71241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D42416AF300083A59A /* CommentRequest.swift in Sources */,
+				2C366A16245666450048B968 /* RadioOption.swift in Sources */,
 				2CA2B0C324144D15000C7131 /* String+Lang.swift in Sources */,
 				2C8B3A2B243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift in Sources */,
 				2CC3DBDA2411EBCC001E76B2 /* AppDelegate.swift in Sources */,
@@ -3705,6 +3763,7 @@
 				2CC3DBDC2411EBCC001E76B2 /* ButtonCellViewModel.swift in Sources */,
 				2CC3DBDD2411EBCC001E76B2 /* ProviderListService.swift in Sources */,
 				2CC6C598241704CF003C11D2 /* MenuServiceProtocol.swift in Sources */,
+				2C366A0224565A3A0048B968 /* CheckoutRadioCell.swift in Sources */,
 				2C2DCB0A241D27740024409E /* ProviderRegisterService.swift in Sources */,
 				2C1F2F7A241EB81F008E803D /* ProviderHomeEndpoints.swift in Sources */,
 				2CC3DBDE2411EBCC001E76B2 /* UINavigationController+Extensions.swift in Sources */,
@@ -3872,6 +3931,7 @@
 				2CC3DC4E2411EBCC001E76B2 /* RegisterService.swift in Sources */,
 				2C671715241DC45900C86531 /* ProviderPhotoService.swift in Sources */,
 				2C8B3A22243631E0005FE926 /* AddProviderServiceService.swift in Sources */,
+				2C366A12245666350048B968 /* CheckoutRadioCellViewModel.swift in Sources */,
 				2CC3DC4F2411EBCC001E76B2 /* ProviderProfileCellViewModel.swift in Sources */,
 				2C4EBFCD2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */,
 				2CC3DC502411EBCC001E76B2 /* ConnectionManagerProtocol.swift in Sources */,
@@ -3923,6 +3983,7 @@
 				2C198D1723F4C33600346395 /* SplashScreenService.swift in Sources */,
 				2CC7314724047814006FF85D /* ButtonCell.swift in Sources */,
 				2CEAD740240F57860095E9A4 /* PaymentService.swift in Sources */,
+				2C366A0C24565D4E0048B968 /* RadioView.swift in Sources */,
 				2C05F05C23F8E6BC003D1925 /* String+Extensions.swift in Sources */,
 				2C3B8086240C0D4F00D4C6FE /* OrderDetailHeaderCell.swift in Sources */,
 				2CCFED7623F62BF7005E5CB1 /* RegisterViewModel.swift in Sources */,
@@ -3936,6 +3997,7 @@
 				2C198D2623F4E6AF00346395 /* RouterBase.swift in Sources */,
 				2C1F2F73241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D62416AF300083A59A /* CommentRequest.swift in Sources */,
+				2C366A18245666450048B968 /* RadioOption.swift in Sources */,
 				2CA2B0C124144C7F000C7131 /* String+Lang.swift in Sources */,
 				2C8B3A2D243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift in Sources */,
 				2CAD87B42404AA230063AEB2 /* CompleteTextViewModel.swift in Sources */,
@@ -3944,6 +4006,7 @@
 				2CF6ABD323F7D84500F9EF40 /* ProviderListViewController.swift in Sources */,
 				2CC7314A24047B56006FF85D /* ButtonCellViewModel.swift in Sources */,
 				2CC6C59A241704CF003C11D2 /* MenuServiceProtocol.swift in Sources */,
+				2C366A0424565A3A0048B968 /* CheckoutRadioCell.swift in Sources */,
 				2C2DCB0C241D27740024409E /* ProviderRegisterService.swift in Sources */,
 				2C1F2F7C241EB81F008E803D /* ProviderHomeEndpoints.swift in Sources */,
 				2C7E7FB723F89A2200D7835E /* ProviderListService.swift in Sources */,
@@ -4111,6 +4174,7 @@
 				2CFF4DB123F9B1420024B3F1 /* ProviderProfileCellViewModel.swift in Sources */,
 				2C671717241DC45900C86531 /* ProviderPhotoService.swift in Sources */,
 				2C8B3A24243631E0005FE926 /* AddProviderServiceService.swift in Sources */,
+				2C366A14245666350048B968 /* CheckoutRadioCellViewModel.swift in Sources */,
 				2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */,
 				2C4EBFCF2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */,
 				2CAD87B124049A5A0063AEB2 /* CompleteTextViewController.swift in Sources */,

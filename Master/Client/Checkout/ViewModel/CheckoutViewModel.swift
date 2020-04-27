@@ -73,17 +73,27 @@ class CheckoutViewModel {
                                                          description: provider.description,
                                                          photoUrl: provider.photoUrl)
         
-        let fieldsCells = [
+        let fieldsCells: [CellViewModelProtocol] = [
             CheckoutFieldCellViewModel(title: Lang.address, value: "", image: .gps, type: .address),
-            CheckoutFieldCellViewModel(title: Lang.city, value: currentCity, image: .building, type: .city),
+            
             CheckoutFieldCellViewModel(title: Lang.dateAndHour, value: "", image: .calendar, type: .dates),
+            
             CheckoutFieldCellViewModel(title: Lang.notes, value: "", image: .note, type: .notes),
+            
+            CheckoutFieldCellViewModel(title: Lang.city,
+                                       value: currentCity,
+                                       image: .building,
+                                       type: .city,
+                                       detailIconVisible: false),
             
             CheckoutFieldCellViewModel(title: Lang.products,
                                        value: Lang.cartTotal(getCartCountTotal()),
                                        image: .cart,
                                        bottomLineVisible: false,
-                                       type: .cart)
+                                       type: .cart,
+                                       detailIconVisible: false),
+            
+            CheckoutRadioCellViewModel(options: getRadioOptions())
         ]
         
         let buttonCell = ButtonCellViewModel(style: .green, title: Lang.reserve, value: nil)
@@ -170,10 +180,17 @@ class CheckoutViewModel {
                 return
         }
         
-         performPayment(address: address, notes: notes, jsonDate: json, date: date)
+        performPayment(address: address, notes: notes, jsonDate: json, date: date)
     }
     
     // MARK: - Private Methods
+    private func getRadioOptions() -> [RadioOption] {
+        return [
+            RadioOption(name: "Quiero recibir la comida preparada", value: false),
+            RadioOption(name: "Quiero que el Chef haga la preparación en dirección indicada", value: true)
+        ]
+    }
+    
     private func getCartTotal() -> Double {
         return cart.map { $0.totalPrice }.reduce(0, +)
     }

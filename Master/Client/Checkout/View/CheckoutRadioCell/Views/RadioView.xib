@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RadioView" customModule="Local" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjx-Lp-WdL">
+                    <rect key="frame" x="0.0" y="10" width="20" height="20"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Pjx-Lp-WdL" secondAttribute="height" multiplier="1:1" id="T78-ek-VCG"/>
+                        <constraint firstAttribute="width" constant="20" id="g5t-0v-9W7"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hk-bS-xIG">
+                    <rect key="frame" x="30" y="11.5" width="364" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                    <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9Hk-bS-xIG" secondAttribute="trailing" constant="20" id="51Z-mn-Axj"/>
+                <constraint firstItem="9Hk-bS-xIG" firstAttribute="centerY" secondItem="Pjx-Lp-WdL" secondAttribute="centerY" id="BYj-3g-6I4"/>
+                <constraint firstItem="Pjx-Lp-WdL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ru0-v3-FdA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Pjx-Lp-WdL" secondAttribute="bottom" constant="10" id="Xbp-3d-uy6"/>
+                <constraint firstItem="Pjx-Lp-WdL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="agq-yo-gdO"/>
+                <constraint firstItem="Pjx-Lp-WdL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eSa-az-FZI"/>
+                <constraint firstItem="9Hk-bS-xIG" firstAttribute="leading" secondItem="Pjx-Lp-WdL" secondAttribute="trailing" constant="10" id="qGY-UU-Jl9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="radioContainer" destination="Pjx-Lp-WdL" id="LoT-CX-Xjl"/>
+                <outlet property="titleLabel" destination="9Hk-bS-xIG" id="fmx-kw-gIO"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="-133.59375"/>
+        </view>
+    </objects>
+</document>

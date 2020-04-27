@@ -48,6 +48,7 @@ class CheckoutViewController: UIViewController {
         tableView.registerNib(CheckoutHeaderCell.self)
         tableView.registerNib(CheckoutProviderCell.self)
         tableView.registerNib(ButtonCell.self)
+        tableView.registerNib(CheckoutRadioCell.self)
         
         viewModel.createViewModels()
     }
@@ -83,10 +84,6 @@ class CheckoutViewController: UIViewController {
         router.transition(to: .login { [weak self] in
             self?.viewModel.performProviderReservation()
         })
-    }
-    
-    private func showCityDialog() {
-        showWarning(title: Lang.ups, message: Lang.bogotaRestriction)
     }
     
     private func showTextEditorBy(index: Int) {

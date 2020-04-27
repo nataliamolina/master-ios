@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="128" id="4p6-zP-nbV" customClass="CheckoutRadioCell" customModule="Local" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4p6-zP-nbV" id="bBg-h2-afn">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFa-Ou-UwE">
+                        <rect key="frame" x="20" y="5" width="399" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="JGQ-J9-7da"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" red="0.45881891250000001" green="0.45882040260000001" blue="0.45882362129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="checkout.conditions"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ugC-Hh-MUf">
+                        <rect key="frame" x="20" y="35" width="399" height="73"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhU-9u-gdV">
+                                <rect key="frame" x="0.0" y="0.0" width="399" height="73"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.45881891250000001" green="0.45882040260000001" blue="0.45882362129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="conditions"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ugC-Hh-MUf" firstAttribute="leading" secondItem="bBg-h2-afn" secondAttribute="leading" constant="20" id="8Oc-Au-hMY"/>
+                    <constraint firstItem="jFa-Ou-UwE" firstAttribute="leading" secondItem="bBg-h2-afn" secondAttribute="leading" constant="20" id="HfP-XM-x69"/>
+                    <constraint firstItem="jFa-Ou-UwE" firstAttribute="top" secondItem="bBg-h2-afn" secondAttribute="top" constant="5" id="bxp-ma-56n"/>
+                    <constraint firstItem="ugC-Hh-MUf" firstAttribute="top" secondItem="jFa-Ou-UwE" secondAttribute="bottom" constant="10" id="cVF-uu-gf4"/>
+                    <constraint firstAttribute="bottom" secondItem="ugC-Hh-MUf" secondAttribute="bottom" constant="20" symbolic="YES" id="nux-3g-7lE"/>
+                    <constraint firstAttribute="trailing" secondItem="ugC-Hh-MUf" secondAttribute="trailing" constant="20" id="uIL-Gf-rLO"/>
+                    <constraint firstAttribute="trailing" secondItem="jFa-Ou-UwE" secondAttribute="trailing" constant="20" id="wJU-yl-aWq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="stackView" destination="ugC-Hh-MUf" id="0Cd-b5-Oej"/>
+            </connections>
+            <point key="canvasLocation" x="-157.24637681159422" y="257.8125"/>
+        </tableViewCell>
+    </objects>
+</document>

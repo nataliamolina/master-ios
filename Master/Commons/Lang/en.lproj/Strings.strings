@@ -84,7 +84,7 @@
 "checkout.fields.text" = "Completar información";
 "checkout.fields.products" = " productos";
 "checkout.fields.product" = " producto";
-"checkout.bogotaRestriction" = "Por el momento sólo estamos operando en la ciudad de Bogotá.";
+"checkout.conditions" = "Condiciones";
 
 // Complete Text
 "completeText.help" = "Completa la información a continuación";
