@@ -38,10 +38,15 @@ class CitySelectorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
         setupBindings()
         
         viewModel.fetchData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        setupUI()
     }
     
     // MARK: - Private Methods

@@ -84,7 +84,9 @@
 "checkout.fields.text" = "Completar información";
 "checkout.fields.products" = " productos";
 "checkout.fields.product" = " producto";
-"checkout.bogotaRestriction" = "Por el momento sólo estamos operando en la ciudad de Bogotá.";
+"checkout.conditions" = "Condiciones";
+"checkout.requirements.foodInHouse" = "Quiero que el Chef haga la preparación en dirección indicada.";
+"checkout.requirements.delivery" = "Quiero recibir la comida preparada.";
 
 // Complete Text
 "completeText.help" = "Completa la información a continuación";

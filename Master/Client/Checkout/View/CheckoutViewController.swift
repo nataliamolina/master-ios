@@ -141,6 +141,13 @@ extension CheckoutViewController: CompleteTextViewDelegate {
     }
 }
 
+// MARK: - CheckoutRadioCellDelegate
+extension CheckoutViewController: CheckoutRadioCellDelegate {
+    func cellTapped(_ cell: CheckoutRadioCell, option: RadioOption) {
+        viewModel.customOptionSelected = option
+    }
+}
+
 // MARK: - UITableViewDataSource
 extension CheckoutViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

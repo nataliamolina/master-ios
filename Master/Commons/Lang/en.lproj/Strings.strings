@@ -85,6 +85,8 @@
 "checkout.fields.products" = " productos";
 "checkout.fields.product" = " producto";
 "checkout.conditions" = "Condiciones";
+"checkout.requirements.foodInHouse" = "Quiero que el Chef haga la preparación en dirección indicada.";
+"checkout.requirements.delivery" = "Quiero recibir la comida preparada.";
 
 // Complete Text
 "completeText.help" = "Completa la información a continuación";

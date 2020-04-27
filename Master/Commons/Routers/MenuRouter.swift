@@ -84,9 +84,11 @@ class MenuRouter: RouterBase<MenuRouterTransitions> {
     }
     
     private func handleCitySelectorOption() {
-        let router = MainRouter(navigationController: MNavigationController(), delegate: nil)
-        
-        router.transition(to: .citySelector(viewModel: CitySelectorViewModel()))
+        DispatchQueue.main.async {
+            let router = MainRouter(navigationController: MNavigationController(), delegate: nil)
+            
+            router.transition(to: .citySelector(viewModel: CitySelectorViewModel()))
+        }
     }
     
     private func handleLoginOption() {

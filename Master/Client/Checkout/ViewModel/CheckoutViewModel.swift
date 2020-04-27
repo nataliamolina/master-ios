@@ -48,6 +48,8 @@ class CheckoutViewModel {
     let isLoading = Var(false)
     let dataSource: Var<[CellViewModelProtocol]> = Var([])
     
+    var customOptionSelected: RadioOption?
+    
     // MARK: - Life Cycle
     init(provider: CheckoutProvider,
          cart: [ProviderServiceCellViewModel],
@@ -73,7 +75,7 @@ class CheckoutViewModel {
                                                          description: provider.description,
                                                          photoUrl: provider.photoUrl)
         
-        let fieldsCells: [CellViewModelProtocol] = [
+        var fieldsCells: [CellViewModelProtocol] = [
             CheckoutFieldCellViewModel(title: Lang.address, value: "", image: .gps, type: .address),
             
             CheckoutFieldCellViewModel(title: Lang.dateAndHour, value: "", image: .calendar, type: .dates),
@@ -91,9 +93,7 @@ class CheckoutViewModel {
                                        image: .cart,
                                        bottomLineVisible: false,
                                        type: .cart,
-                                       detailIconVisible: false),
-            
-            CheckoutRadioCellViewModel(options: getRadioOptions())
+                                       detailIconVisible: false)
         ]
         
         let buttonCell = ButtonCellViewModel(style: .green, title: Lang.reserve, value: nil)
@@ -103,6 +103,10 @@ class CheckoutViewModel {
             providerCell,
             buttonCell
         ]
+        
+        if !getRadioOptions().isEmpty {
+            fieldsCells.append(CheckoutRadioCellViewModel(options: getRadioOptions()))
+        }
         
         viewModels.insert(contentsOf: fieldsCells, at: 2)
         
@@ -185,9 +189,17 @@ class CheckoutViewModel {
     
     // MARK: - Private Methods
     private func getRadioOptions() -> [RadioOption] {
+        guard categoryId == 1 else {
+            return []
+        }
+        
+        let selectedOption = RadioOption(name: "checkout.requirements.foodInHouse".localized, value: true)
+        
+        customOptionSelected = selectedOption
+        
         return [
-            RadioOption(name: "Quiero recibir la comida preparada", value: false),
-            RadioOption(name: "Quiero que el Chef haga la preparación en dirección indicada", value: true)
+            RadioOption(name: "checkout.requirements.delivery".localized, value: false),
+            selectedOption
         ]
     }
     
@@ -207,7 +219,8 @@ class CheckoutViewModel {
                                    servicesIds: getCartIds(),
                                    orderDate: jsonDate,
                                    time: getFormattedTimeFrom(date: date),
-                                   cityId: currentCityId)
+                                   cityId: currentCityId,
+                                   serviceRequirements: getRequirements())
         
         if !Session.shared.isLoggedIn {
             status.value = .needsAuthentication
@@ -256,5 +269,9 @@ class CheckoutViewModel {
         DispatchQueue.main.async { [weak self] in
             self?.isLoading.value = state
         }
+    }
+    
+    private func getRequirements() -> String {
+        return customOptionSelected?.name ?? ""
     }
 }

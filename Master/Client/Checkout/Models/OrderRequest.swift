@@ -18,4 +18,5 @@ struct OrderRequest: Codable {
     let orderDate: String
     let time: String
     let cityId: Int?
+    let serviceRequirements: String?
 }
