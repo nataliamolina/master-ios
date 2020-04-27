@@ -14,6 +14,7 @@ struct CheckoutConstants {
         static let title = "checkout.title".localized
         static let address = "Dirección".localized
         static let city = "Ciudad".localized
+        static let conditions = "Condiciones".localized
         static let dateAndHour = "Fecha y Hora".localized
         static let notes = "Notas".localized
         static let products = "Productos".localized

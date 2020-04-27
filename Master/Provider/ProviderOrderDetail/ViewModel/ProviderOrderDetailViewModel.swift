@@ -148,6 +148,12 @@ class ProviderOrderDetailViewModel {
             CheckoutFieldCellViewModel(title: CheckoutLang.city,
                                        value: model.city?.name ?? "",
                                        image: .building,
+                                       type: .city,
+                                       detailIconVisible: false),
+            
+            CheckoutFieldCellViewModel(title: CheckoutLang.conditions,
+                                       value: model.serviceRequirements ?? "",
+                                       image: .checkList,
                                        bottomLineVisible: false,
                                        type: .city,
                                        detailIconVisible: false)

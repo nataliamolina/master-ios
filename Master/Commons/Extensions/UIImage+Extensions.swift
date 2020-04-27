@@ -64,4 +64,8 @@ extension UIImage {
     static var emptyStar: UIImage? {
         return UIImage(named: "empty_star_template")
     }
+    
+    static var checkList: UIImage? {
+        return UIImage(named: "check_icon_template")
+    }
 }
