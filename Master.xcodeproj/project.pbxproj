@@ -19,6 +19,9 @@
 		2C0D25C12438E2C100DB206D /* SessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */; };
 		2C0D25C22438E2C100DB206D /* SessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */; };
 		2C0D25C32438E2C100DB206D /* SessionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */; };
+		2C0F27692457CDD4005FDB63 /* welcomeAnim_02.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F27682457CDD4005FDB63 /* welcomeAnim_02.json */; };
+		2C0F276A2457CDD4005FDB63 /* welcomeAnim_02.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F27682457CDD4005FDB63 /* welcomeAnim_02.json */; };
+		2C0F276B2457CDD4005FDB63 /* welcomeAnim_02.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F27682457CDD4005FDB63 /* welcomeAnim_02.json */; };
 		2C1218CD2405E7580098BE55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C1218CC2405E7580098BE55 /* GoogleService-Info.plist */; };
 		2C147105241DCA82009E2FDA /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C147104241DCA82009E2FDA /* Threads.swift */; };
 		2C147106241DCA82009E2FDA /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C147104241DCA82009E2FDA /* Threads.swift */; };
@@ -413,6 +416,12 @@
 		2C57B73624170EE700A3281F /* PushNotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */; };
 		2C57B73724170EE700A3281F /* PushNotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */; };
 		2C57B73824170EE700A3281F /* PushNotificationsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */; };
+		2C58158F24568B8E001088E5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C58158D24568B8E001088E5 /* WelcomeViewController.swift */; };
+		2C58159024568B8E001088E5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C58158D24568B8E001088E5 /* WelcomeViewController.swift */; };
+		2C58159124568B8E001088E5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C58158D24568B8E001088E5 /* WelcomeViewController.swift */; };
+		2C58159224568B8E001088E5 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C58158E24568B8E001088E5 /* WelcomeViewController.xib */; };
+		2C58159324568B8E001088E5 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C58158E24568B8E001088E5 /* WelcomeViewController.xib */; };
+		2C58159424568B8E001088E5 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C58158E24568B8E001088E5 /* WelcomeViewController.xib */; };
 		2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */; };
 		2C63EF32240C161500852EAE /* OrdersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63EF31240C161500852EAE /* OrdersRouter.swift */; };
 		2C6716EC241D41C700C86531 /* ProviderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6716EB241D41C700C86531 /* ProviderRequest.swift */; };
@@ -473,6 +482,27 @@
 		2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73AE9823F4FE8700267899 /* HomeRouter.swift */; };
 		2C76018723FE34AD00252531 /* ProductSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76018623FE34AD00252531 /* ProductSelectorViewController.swift */; };
 		2C76018923FE34BE00252531 /* ProductSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C76018823FE34BE00252531 /* ProductSelectorViewController.xib */; };
+		2C76E30F24571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E30E24571B6B00FCE5E2 /* UICollectionView+Extensions.swift */; };
+		2C76E31024571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E30E24571B6B00FCE5E2 /* UICollectionView+Extensions.swift */; };
+		2C76E31124571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E30E24571B6B00FCE5E2 /* UICollectionView+Extensions.swift */; };
+		2C76E31324571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E31224571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift */; };
+		2C76E31424571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E31224571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift */; };
+		2C76E31524571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E31224571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift */; };
+		2C76E31A2457218800FCE5E2 /* BasicWelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E3182457218800FCE5E2 /* BasicWelcomeCell.swift */; };
+		2C76E31B2457218800FCE5E2 /* BasicWelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E3182457218800FCE5E2 /* BasicWelcomeCell.swift */; };
+		2C76E31C2457218800FCE5E2 /* BasicWelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E3182457218800FCE5E2 /* BasicWelcomeCell.swift */; };
+		2C76E31D2457218800FCE5E2 /* BasicWelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3192457218800FCE5E2 /* BasicWelcomeCell.xib */; };
+		2C76E31E2457218800FCE5E2 /* BasicWelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3192457218800FCE5E2 /* BasicWelcomeCell.xib */; };
+		2C76E31F2457218800FCE5E2 /* BasicWelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3192457218800FCE5E2 /* BasicWelcomeCell.xib */; };
+		2C76E321245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E320245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift */; };
+		2C76E322245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E320245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift */; };
+		2C76E323245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76E320245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift */; };
+		2C76E32A2457279100FCE5E2 /* welcomeAnim_03.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3252457279100FCE5E2 /* welcomeAnim_03.json */; };
+		2C76E32B2457279100FCE5E2 /* welcomeAnim_03.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3252457279100FCE5E2 /* welcomeAnim_03.json */; };
+		2C76E32C2457279100FCE5E2 /* welcomeAnim_03.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3252457279100FCE5E2 /* welcomeAnim_03.json */; };
+		2C76E32D2457279100FCE5E2 /* welcomeAnim_01.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3262457279100FCE5E2 /* welcomeAnim_01.json */; };
+		2C76E32E2457279100FCE5E2 /* welcomeAnim_01.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3262457279100FCE5E2 /* welcomeAnim_01.json */; };
+		2C76E32F2457279100FCE5E2 /* welcomeAnim_01.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C76E3262457279100FCE5E2 /* welcomeAnim_01.json */; };
 		2C7E7FAC23F85BC000D7835E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */; };
 		2C7E7FAD23F85BC000D7835E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */; };
 		2C7E7FB123F8743E00D7835E /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */; };
@@ -959,6 +989,7 @@
 		2C0D25B82438E20300DB206D /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		2C0D25BC2438E25400DB206D /* SessionEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEndpoints.swift; sourceTree = "<group>"; };
 		2C0D25C02438E2C100DB206D /* SessionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionServiceProtocol.swift; sourceTree = "<group>"; };
+		2C0F27682457CDD4005FDB63 /* welcomeAnim_02.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcomeAnim_02.json; sourceTree = "<group>"; };
 		2C1218CC2405E7580098BE55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C147104241DCA82009E2FDA /* Threads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threads.swift; sourceTree = "<group>"; };
 		2C1636BE241684410083A59A /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
@@ -1060,6 +1091,8 @@
 		2C57B72C24170BC100A3281F /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
 		2C57B73124170C6A00A3281F /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
 		2C57B73524170EE700A3281F /* PushNotificationsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsRouter.swift; sourceTree = "<group>"; };
+		2C58158D24568B8E001088E5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2C58158E24568B8E001088E5 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		2C5DE68723F6437600183E34 /* login_bg_video_new.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_bg_video_new.mp4; sourceTree = "<group>"; };
 		2C63EF31240C161500852EAE /* OrdersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersRouter.swift; sourceTree = "<group>"; };
 		2C6716EB241D41C700C86531 /* ProviderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRequest.swift; sourceTree = "<group>"; };
@@ -1088,6 +1121,13 @@
 		2C73AE9823F4FE8700267899 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		2C76018623FE34AD00252531 /* ProductSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectorViewController.swift; sourceTree = "<group>"; };
 		2C76018823FE34BE00252531 /* ProductSelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSelectorViewController.xib; sourceTree = "<group>"; };
+		2C76E30E24571B6B00FCE5E2 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		2C76E31224571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		2C76E3182457218800FCE5E2 /* BasicWelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWelcomeCell.swift; sourceTree = "<group>"; };
+		2C76E3192457218800FCE5E2 /* BasicWelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicWelcomeCell.xib; sourceTree = "<group>"; };
+		2C76E320245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWelcomeCellViewModel.swift; sourceTree = "<group>"; };
+		2C76E3252457279100FCE5E2 /* welcomeAnim_03.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcomeAnim_03.json; sourceTree = "<group>"; };
+		2C76E3262457279100FCE5E2 /* welcomeAnim_01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = welcomeAnim_01.json; sourceTree = "<group>"; };
 		2C7E7FAA23F85BC000D7835E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2C7E7FAB23F85BC000D7835E /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		2C7E7FB023F8743E00D7835E /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -1464,6 +1504,9 @@
 		2C22B38E23F8AE0A00678A41 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				2C0F27682457CDD4005FDB63 /* welcomeAnim_02.json */,
+				2C76E3262457279100FCE5E2 /* welcomeAnim_01.json */,
+				2C76E3252457279100FCE5E2 /* welcomeAnim_03.json */,
 				2C44ACC6245399860099B523 /* city_anim.json */,
 				2C829EBA240AD4FC00D7DD81 /* loader_anim.json */,
 				2C22B39323F8AFC300678A41 /* empty_state_anim.json */,
@@ -1839,6 +1882,32 @@
 			path = PushNotifications;
 			sourceTree = "<group>";
 		};
+		2C58158C24568B63001088E5 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				2C76E3162457216700FCE5E2 /* Cells */,
+				2C58159624568B9D001088E5 /* ViewModel */,
+				2C58159524568B95001088E5 /* View */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		2C58159524568B95001088E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C58158D24568B8E001088E5 /* WelcomeViewController.swift */,
+				2C58158E24568B8E001088E5 /* WelcomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C58159624568B9D001088E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2C5DE68923F6445000183E34 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1930,9 +1999,28 @@
 			path = ProductSelector;
 			sourceTree = "<group>";
 		};
+		2C76E3162457216700FCE5E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2C76E3172457216C00FCE5E2 /* BasicWelcomeCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2C76E3172457216C00FCE5E2 /* BasicWelcomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C76E3182457218800FCE5E2 /* BasicWelcomeCell.swift */,
+				2C76E3192457218800FCE5E2 /* BasicWelcomeCell.xib */,
+				2C76E320245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift */,
+			);
+			path = BasicWelcomeCell;
+			sourceTree = "<group>";
+		};
 		2C7E7FA923F85BAC00D7835E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2C58158C24568B63001088E5 /* Welcome */,
 				2C3B806E240BFD7900D4C6FE /* Legal */,
 				2C7E7FB223F874F100D7835E /* Menu */,
 			);
@@ -2715,6 +2803,8 @@
 				2CA2B0C024144C7F000C7131 /* String+Lang.swift */,
 				2C8B3A2E243649B2005FE926 /* UITextField+Extensions.swift */,
 				2C8B3A522436D17B005FE926 /* UIButton+Extensions.swift */,
+				2C76E30E24571B6B00FCE5E2 /* UICollectionView+Extensions.swift */,
+				2C76E31224571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2956,9 +3046,11 @@
 			files = (
 				2C4010C2245390EA002F9674 /* CitySelectorViewController.xib in Resources */,
 				2C3E5131240C79B500873495 /* OrderDetailHeaderCell.xib in Resources */,
+				2C76E31E2457218800FCE5E2 /* BasicWelcomeCell.xib in Resources */,
 				2C3E5132240C79B500873495 /* CommentCell.xib in Resources */,
 				2C3E5133240C79B500873495 /* empty_state_anim.json in Resources */,
 				2C3E5134240C79B500873495 /* payment_anim.json in Resources */,
+				2C58159324568B8E001088E5 /* WelcomeViewController.xib in Resources */,
 				2C3E5135240C79B500873495 /* ProviderProfileViewController.xib in Resources */,
 				2C3E5136240C79B500873495 /* LegalViewController.xib in Resources */,
 				2C3E5137240C79B500873495 /* LaunchScreen.storyboard in Resources */,
@@ -2989,12 +3081,15 @@
 				2C3E5149240C79B500873495 /* ButtonCell.xib in Resources */,
 				2C3E514A240C79B500873495 /* MainViewController.xib in Resources */,
 				2C3E514B240C79B500873495 /* login_bg_video_new.mp4 in Resources */,
+				2C76E32B2457279100FCE5E2 /* welcomeAnim_03.json in Resources */,
 				2C671706241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				2C3E514C240C79B500873495 /* HomeViewController.xib in Resources */,
 				2C4EBFDF2432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */,
 				2C3E514D240C79B500873495 /* OrderDetailViewController.xib in Resources */,
 				2C3E514E240C79B500873495 /* SelectorCell.xib in Resources */,
+				2C76E32E2457279100FCE5E2 /* welcomeAnim_01.json in Resources */,
 				2C1636E22416BBC50083A59A /* RateView.xib in Resources */,
+				2C0F276A2457CDD4005FDB63 /* welcomeAnim_02.json in Resources */,
 				2C2DCB00241D27330024409E /* ProviderRegisterViewController.xib in Resources */,
 				2C3E514F240C79B500873495 /* GoogleService-Info.plist in Resources */,
 				2C8897A7240C852F00423B11 /* PaymentViewController.xib in Resources */,
@@ -3022,9 +3117,11 @@
 			files = (
 				2C4010C1245390EA002F9674 /* CitySelectorViewController.xib in Resources */,
 				2CC3DC6D2411EBCC001E76B2 /* OrderDetailHeaderCell.xib in Resources */,
+				2C76E31D2457218800FCE5E2 /* BasicWelcomeCell.xib in Resources */,
 				2CC3DC6E2411EBCC001E76B2 /* CommentCell.xib in Resources */,
 				2CC3DC6F2411EBCC001E76B2 /* empty_state_anim.json in Resources */,
 				2CC3DC702411EBCC001E76B2 /* payment_anim.json in Resources */,
+				2C58159224568B8E001088E5 /* WelcomeViewController.xib in Resources */,
 				2CC3DC712411EBCC001E76B2 /* ProviderProfileViewController.xib in Resources */,
 				2CC3DC722411EBCC001E76B2 /* LegalViewController.xib in Resources */,
 				2CC3DC732411EBCC001E76B2 /* LaunchScreen.storyboard in Resources */,
@@ -3055,12 +3152,15 @@
 				2CC3DC852411EBCC001E76B2 /* ButtonCell.xib in Resources */,
 				2CC3DC862411EBCC001E76B2 /* MainViewController.xib in Resources */,
 				2CC3DC872411EBCC001E76B2 /* login_bg_video_new.mp4 in Resources */,
+				2C76E32A2457279100FCE5E2 /* welcomeAnim_03.json in Resources */,
 				2C671705241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				2CC3DC882411EBCC001E76B2 /* HomeViewController.xib in Resources */,
 				2C4EBFDE2432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */,
 				2CC3DC892411EBCC001E76B2 /* OrderDetailViewController.xib in Resources */,
 				2CC3DC8A2411EBCC001E76B2 /* SelectorCell.xib in Resources */,
+				2C76E32D2457279100FCE5E2 /* welcomeAnim_01.json in Resources */,
 				2C1636E12416BBC50083A59A /* RateView.xib in Resources */,
+				2C0F27692457CDD4005FDB63 /* welcomeAnim_02.json in Resources */,
 				2C2DCAFF241D27330024409E /* ProviderRegisterViewController.xib in Resources */,
 				2CC3DC8B2411EBCC001E76B2 /* GoogleService-Info.plist in Resources */,
 				2CC3DC8C2411EBCC001E76B2 /* PaymentViewController.xib in Resources */,
@@ -3088,9 +3188,11 @@
 			files = (
 				2C4010C3245390EA002F9674 /* CitySelectorViewController.xib in Resources */,
 				2C3B8087240C0D4F00D4C6FE /* OrderDetailHeaderCell.xib in Resources */,
+				2C76E31F2457218800FCE5E2 /* BasicWelcomeCell.xib in Resources */,
 				2CFF4DC423FA144D0024B3F1 /* CommentCell.xib in Resources */,
 				2C22B39823F8AFC300678A41 /* empty_state_anim.json in Resources */,
 				2C22B39B23F8AFC300678A41 /* payment_anim.json in Resources */,
+				2C58159424568B8E001088E5 /* WelcomeViewController.xib in Resources */,
 				2CA494D423F9989B00F87AD6 /* ProviderProfileViewController.xib in Resources */,
 				2C3B8072240BFD8F00D4C6FE /* LegalViewController.xib in Resources */,
 				A58132B823B4C7570032FC8B /* LaunchScreen.storyboard in Resources */,
@@ -3121,12 +3223,15 @@
 				2CC7314824047814006FF85D /* ButtonCell.xib in Resources */,
 				A5F30D4923B4CB48005258A8 /* MainViewController.xib in Resources */,
 				2C5DE68823F6437600183E34 /* login_bg_video_new.mp4 in Resources */,
+				2C76E32C2457279100FCE5E2 /* welcomeAnim_03.json in Resources */,
 				2C671707241D89E500C86531 /* ListSelectorViewController.xib in Resources */,
 				A5F30D6D23B4DB34005258A8 /* HomeViewController.xib in Resources */,
 				2C4EBFE02432FA160081AC5F /* AddProviderServiceViewController.xib in Resources */,
 				2C3B8077240C0A2B00D4C6FE /* OrderDetailViewController.xib in Resources */,
 				2CFF4DBB23F9FE650024B3F1 /* SelectorCell.xib in Resources */,
+				2C76E32F2457279100FCE5E2 /* welcomeAnim_01.json in Resources */,
 				2C1636E32416BBC50083A59A /* RateView.xib in Resources */,
+				2C0F276B2457CDD4005FDB63 /* welcomeAnim_02.json in Resources */,
 				2C2DCB01241D27330024409E /* ProviderRegisterViewController.xib in Resources */,
 				2C1218CD2405E7580098BE55 /* GoogleService-Info.plist in Resources */,
 				2C8897A8240C852F00423B11 /* PaymentViewController.xib in Resources */,
@@ -3582,6 +3687,7 @@
 				2C3E50C9240C79B500873495 /* ProductSelectorResult.swift in Sources */,
 				2C3E50CA240C79B500873495 /* SelectorCellViewModel.swift in Sources */,
 				2C8B3A41243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
+				2C76E322245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */,
 				2C3E50CB240C79B500873495 /* ProviderWithScore.swift in Sources */,
 				2C0D25C22438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
 				2C8B3A542436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
@@ -3645,10 +3751,12 @@
 				2C3E50F4240C79B500873495 /* Styles.swift in Sources */,
 				2C3E50F5240C79B500873495 /* EmptyCodable.swift in Sources */,
 				2C3E50F6240C79B500873495 /* HomeServiceProtocol.swift in Sources */,
+				2C76E31024571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */,
 				2C3E50F7240C79B500873495 /* SplashScreenViewController.swift in Sources */,
 				2C3E50F8240C79B500873495 /* MenuViewController.swift in Sources */,
 				2C3E50F9240C79B500873495 /* Session.swift in Sources */,
 				2C3E50FA240C79B500873495 /* ProviderServiceCellViewModel.swift in Sources */,
+				2C76E31B2457218800FCE5E2 /* BasicWelcomeCell.swift in Sources */,
 				2C3E50FB240C79B500873495 /* OrdersRouter.swift in Sources */,
 				2C3E50FC240C79B500873495 /* OrderDetailViewModel.swift in Sources */,
 				2C3E50FD240C79B500873495 /* ProviderProfileViewModel.swift in Sources */,
@@ -3661,6 +3769,7 @@
 				2C3E5101240C79B500873495 /* CategoryCellViewModel.swift in Sources */,
 				2C1636CD2416AE2F0083A59A /* RateViewModel.swift in Sources */,
 				2C3E5102240C79B500873495 /* ConfigurableCellProtocol.swift in Sources */,
+				2C76E31424571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift in Sources */,
 				2C1636C92416AE240083A59A /* RateService.swift in Sources */,
 				2C3E5103240C79B500873495 /* ProductSelectorDataSource.swift in Sources */,
 				2C3E5104240C79B500873495 /* SplashScreenViewModel.swift in Sources */,
@@ -3725,6 +3834,7 @@
 				2C3E5129240C79B500873495 /* DatePickerViewController.swift in Sources */,
 				2C3E512A240C79B500873495 /* CommentsResponse.swift in Sources */,
 				2C3E512B240C79B500873495 /* CheckoutFieldCell.swift in Sources */,
+				2C58159024568B8E001088E5 /* WelcomeViewController.swift in Sources */,
 				2C3E512C240C79B500873495 /* CheckoutConstants.swift in Sources */,
 				2C3E512D240C79B500873495 /* OrderCellViewModel.swift in Sources */,
 			);
@@ -3825,6 +3935,7 @@
 				2CC3DBFE2411EBCC001E76B2 /* ProductSelectorResult.swift in Sources */,
 				2CC3DBFF2411EBCC001E76B2 /* SelectorCellViewModel.swift in Sources */,
 				2C8B3A40243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
+				2C76E321245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */,
 				2CC3DC002411EBCC001E76B2 /* ProviderWithScore.swift in Sources */,
 				2C0D25C12438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
 				2C8B3A532436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
@@ -3888,10 +3999,12 @@
 				2CC3DC2C2411EBCC001E76B2 /* Styles.swift in Sources */,
 				2CC3DC2D2411EBCC001E76B2 /* EmptyCodable.swift in Sources */,
 				2CC3DC2E2411EBCC001E76B2 /* HomeServiceProtocol.swift in Sources */,
+				2C76E30F24571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */,
 				2CC3DC2F2411EBCC001E76B2 /* SplashScreenViewController.swift in Sources */,
 				2CC3DC302411EBCC001E76B2 /* MenuViewController.swift in Sources */,
 				2CC3DC312411EBCC001E76B2 /* Session.swift in Sources */,
 				2CC3DC322411EBCC001E76B2 /* ProviderServiceCellViewModel.swift in Sources */,
+				2C76E31A2457218800FCE5E2 /* BasicWelcomeCell.swift in Sources */,
 				2CC3DC332411EBCC001E76B2 /* OrdersRouter.swift in Sources */,
 				2CC3DC342411EBCC001E76B2 /* OrderDetailViewModel.swift in Sources */,
 				2CC3DC352411EBCC001E76B2 /* ProviderProfileViewModel.swift in Sources */,
@@ -3904,6 +4017,7 @@
 				2CC3DC3A2411EBCC001E76B2 /* CategoryCellViewModel.swift in Sources */,
 				2C1636CC2416AE2F0083A59A /* RateViewModel.swift in Sources */,
 				2CC3DC3B2411EBCC001E76B2 /* ConfigurableCellProtocol.swift in Sources */,
+				2C76E31324571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift in Sources */,
 				2C1636C82416AE240083A59A /* RateService.swift in Sources */,
 				2CC3DC3C2411EBCC001E76B2 /* ProductSelectorDataSource.swift in Sources */,
 				2CC3DC3D2411EBCC001E76B2 /* SplashScreenViewModel.swift in Sources */,
@@ -3968,6 +4082,7 @@
 				2CC3DC642411EBCC001E76B2 /* DatePickerViewController.swift in Sources */,
 				2CC3DC652411EBCC001E76B2 /* CommentsResponse.swift in Sources */,
 				2CC3DC662411EBCC001E76B2 /* CheckoutFieldCell.swift in Sources */,
+				2C58158F24568B8E001088E5 /* WelcomeViewController.swift in Sources */,
 				2CC3DC672411EBCC001E76B2 /* CheckoutConstants.swift in Sources */,
 				2CC3DC682411EBCC001E76B2 /* OrderCellViewModel.swift in Sources */,
 			);
@@ -4068,6 +4183,7 @@
 				2CEAD743240F57B80095E9A4 /* PaymentResponse.swift in Sources */,
 				2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */,
 				2C8B3A42243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
+				2C76E323245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */,
 				2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */,
 				2C0D25C32438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
 				2C8B3A552436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
@@ -4131,10 +4247,12 @@
 				A5F30D5023B4CDB7005258A8 /* Styles.swift in Sources */,
 				2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */,
 				2CFF4DA723F99D670024B3F1 /* HomeServiceProtocol.swift in Sources */,
+				2C76E31124571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */,
 				A5F30D3823B4C7DE005258A8 /* SplashScreenViewController.swift in Sources */,
 				2C7E7FAC23F85BC000D7835E /* MenuViewController.swift in Sources */,
 				2C8C6C5D23F4B6FE00FE06BE /* Session.swift in Sources */,
 				2CFF4DB523F9F25B0024B3F1 /* ProviderServiceCellViewModel.swift in Sources */,
+				2C76E31C2457218800FCE5E2 /* BasicWelcomeCell.swift in Sources */,
 				2C63EF32240C161500852EAE /* OrdersRouter.swift in Sources */,
 				2C3B808E240C135000D4C6FE /* OrderDetailViewModel.swift in Sources */,
 				2CA494DA23F998B800F87AD6 /* ProviderProfileViewModel.swift in Sources */,
@@ -4147,6 +4265,7 @@
 				A5F30D6823B4DAE5005258A8 /* ConfigurableCellProtocol.swift in Sources */,
 				2C1636CE2416AE2F0083A59A /* RateViewModel.swift in Sources */,
 				2C305D9924008EE3005B76EB /* ProductSelectorDataSource.swift in Sources */,
+				2C76E31524571B8900FCE5E2 /* UICollectionViewCell+Extensions.swift in Sources */,
 				2C1636CA2416AE240083A59A /* RateService.swift in Sources */,
 				2C198D1B23F4C35700346395 /* SplashScreenViewModel.swift in Sources */,
 				2CF6ABC923F7B23B00F9EF40 /* OrdersEndpoints.swift in Sources */,
@@ -4211,6 +4330,7 @@
 				2C3E0EED2408A299005453BA /* DatePickerViewController.swift in Sources */,
 				2CFF4DA923F9A0370024B3F1 /* CommentsResponse.swift in Sources */,
 				2CEECC9C2400D22200C67D80 /* CheckoutFieldCell.swift in Sources */,
+				2C58159124568B8E001088E5 /* WelcomeViewController.swift in Sources */,
 				2CAD87A9240485840063AEB2 /* CheckoutConstants.swift in Sources */,
 				2CD6715B240B6B14007917E8 /* OrderCellViewModel.swift in Sources */,
 			);

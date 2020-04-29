@@ -63,7 +63,14 @@ class SplashScreenViewController: UIViewController {
                 self.router.transition(to: .home)
                 
             case .needSelectCity:
-                self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))
+                let viewModel = self.viewModel.getCitySelectorViewModel()
+                
+                self.router.transition(to: .citySelector(viewModel: viewModel))
+                
+            case .needShowsTutorial:
+                let viewModel = self.viewModel.getWelcomeViewModel()
+
+                self.router.transition(to: .tutotial(viewModel: viewModel))
 
             default:
                 return

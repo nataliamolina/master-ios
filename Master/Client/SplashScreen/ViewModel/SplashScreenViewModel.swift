@@ -14,11 +14,16 @@ enum SplashScreenViewModelStatus {
     case tokenExpired
     case undefined
     case needSelectCity
+    case needShowsTutorial
     case error(error: String?)
 }
 
 class SplashScreenViewModel {
     // MARK: - Properties
+    enum Keys: String {
+        case welcome
+    }
+    
     let status = Var<SplashScreenViewModelStatus>(.undefined)
     
     private let service: SplashScreenServiceProtocol
@@ -27,6 +32,12 @@ class SplashScreenViewModel {
     
     private var needsToSelectCity: Bool {
         let result: String? = storedData.get(key: CitySelectorViewModel.Keys.cityName.rawValue)
+        
+        return result == nil
+    }
+    
+    private var needsToShowWelcome: Bool {
+        let result: String? = storedData.get(key: Keys.welcome.rawValue)
         
         return result == nil
     }
@@ -53,6 +64,10 @@ class SplashScreenViewModel {
     
     func getCitySelectorViewModel() -> CitySelectorViewModel {
         return CitySelectorViewModel()
+    }
+    
+    func getWelcomeViewModel() -> WelcomeViewModel {
+        return WelcomeViewModel()
     }
     
     // MARK: - Private Methods
@@ -108,7 +123,19 @@ class SplashScreenViewModel {
             
             Session.shared.login(profile: user.asUserProfile)
             
-            self.status.value = self.needsToSelectCity ? .needSelectCity : .preloadReady
+            if self.needsToShowWelcome {
+                self.status.value = .needShowsTutorial
+                
+                return
+            }
+            
+            if self.needsToSelectCity {
+                self.status.value = .needSelectCity
+                
+                return
+            }
+            
+            self.status.value = .preloadReady
         }
     }
 }

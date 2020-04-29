@@ -166,3 +166,13 @@
 "selectCity.title" = "¡Hola!";
 "selectCity.desc" = "Nos gustaría saber en qué ciudad estás para mostrarte Masters cerca de ti.";
 
+"welcome.screen1.title" = "Simpre cuidándonos";
+"welcome.screen1.desc" = "Cuídate y cuida a tus seres queridos quedándote en casa. Nuestros Masters irán para ayudarte en todo lo que necesites siguiendo todos los protocolos de higiene y seguridad.";
+
+"welcome.screen2.title" = "Agenda tus citas";
+"welcome.screen2.desc" = "Elige el Master que se acomode a tus requerimientos, la fecha y el lugar donde se efectuará el servicio y crea la solicitud.";
+
+"welcome.screen3.title" = "¿Listo?";
+"welcome.screen3.desc" = "¿Eres un profesional y quieres convertirte en un Master?.";
+
+"welcome.skip" = "Saltar";

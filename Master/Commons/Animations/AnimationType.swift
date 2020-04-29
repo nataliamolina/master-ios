@@ -14,4 +14,7 @@ enum AnimationType: String {
     case loader = "loader_anim"
     case success = "success_anim"
     case city = "city_anim"
+    case firstWelcome = "welcomeAnim_01"
+    case secondWelcome = "welcomeAnim_02"
+    case thirdWelcome = "welcomeAnim_03"
 }
