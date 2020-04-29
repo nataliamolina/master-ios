@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="335" height="400"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHb-na-f4y" customClass="AnimationView" customModule="Lottie">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHb-na-f4y">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="300"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
@@ -34,7 +34,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BUo-Wl-jnu">
-                        <rect key="frame" x="157" y="190" width="20" height="20"/>
+                        <rect key="frame" x="157.5" y="140" width="20" height="20"/>
                         <color key="color" red="0.49803921569999998" green="0.76862745099999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </activityIndicatorView>
                 </subviews>

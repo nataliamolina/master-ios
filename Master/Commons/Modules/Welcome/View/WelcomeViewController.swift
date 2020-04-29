@@ -8,36 +8,6 @@
 
 import UIKit
 
-class WelcomeViewModel {
-    // MARK: - Properties
-    private(set) var dataSource = [CellViewModelProtocol]()
-    private let storageService: AppStorageProtocol
-    
-    // MARK: - Life Cycle
-    init(storageService: AppStorageProtocol = AppStorage()) {
-        self.storageService = storageService
-        
-        setupDataSource()
-    }
-    
-    // MARK: - Private Methods
-    private func setupDataSource() {
-        dataSource.append(contentsOf: [
-            BasicWelcomeCellViewModel(title: "welcome.screen1.title".localized,
-                                      desc: "welcome.screen1.desc".localized,
-                                      animName: .firstWelcome),
-            
-            BasicWelcomeCellViewModel(title: "welcome.screen2.title".localized,
-                                      desc: "welcome.screen2.desc".localized,
-                                      animName: .secondWelcome),
-            
-            BasicWelcomeCellViewModel(title: "welcome.screen3.title".localized,
-                                      desc: "welcome.screen3.desc".localized,
-                                      animName: .thirdWelcome)
-        ])
-    }
-}
-
 class WelcomeViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -104,16 +74,10 @@ extension WelcomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let cell = collectionView.visibleCells.first as? BasicWelcomeCell
-        cell?.setupAnimation()
-        
         pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
     }
 
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        let cell = collectionView.visibleCells.first as? BasicWelcomeCell
-        cell?.setupAnimation()
-        
         pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
     }
 }

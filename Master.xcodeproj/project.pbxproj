@@ -60,6 +60,9 @@
 		2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D1E23F4D00800346395 /* EmptyCodable.swift */; };
 		2C198D2423F4E4FB00346395 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D2323F4E4FB00346395 /* MainRouter.swift */; };
 		2C198D2623F4E6AF00346395 /* RouterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C198D2523F4E6AF00346395 /* RouterBase.swift */; };
+		2C1DFD62245919F4000EB5C4 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DFD61245919F4000EB5C4 /* WelcomeViewModel.swift */; };
+		2C1DFD63245919F4000EB5C4 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DFD61245919F4000EB5C4 /* WelcomeViewModel.swift */; };
+		2C1DFD64245919F4000EB5C4 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DFD61245919F4000EB5C4 /* WelcomeViewModel.swift */; };
 		2C1F2F71241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F2F69241EB81E008E803D /* ProviderHomeViewModel.swift */; };
 		2C1F2F72241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F2F69241EB81E008E803D /* ProviderHomeViewModel.swift */; };
 		2C1F2F73241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1F2F69241EB81E008E803D /* ProviderHomeViewModel.swift */; };
@@ -1009,6 +1012,7 @@
 		2C198D2323F4E4FB00346395 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		2C198D2523F4E6AF00346395 /* RouterBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBase.swift; sourceTree = "<group>"; };
 		2C1A6F4424062153000DB0FC /* Master.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Master.entitlements; sourceTree = "<group>"; };
+		2C1DFD61245919F4000EB5C4 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		2C1F2F69241EB81E008E803D /* ProviderHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderHomeViewModel.swift; sourceTree = "<group>"; };
 		2C1F2F6B241EB81E008E803D /* ProviderHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProviderHomeViewController.xib; sourceTree = "<group>"; };
 		2C1F2F6C241EB81E008E803D /* ProviderHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderHomeViewController.swift; sourceTree = "<group>"; };
@@ -1904,6 +1908,7 @@
 		2C58159624568B9D001088E5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2C1DFD61245919F4000EB5C4 /* WelcomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -3635,6 +3640,7 @@
 				2C8B3A50243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C1241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DE2416BB8A0083A59A /* RateView.swift in Sources */,
+				2C1DFD63245919F4000EB5C4 /* WelcomeViewModel.swift in Sources */,
 				2C3E50AC240C79B500873495 /* TitleCell.swift in Sources */,
 				2C3E50AD240C79B500873495 /* MTextField.swift in Sources */,
 				2C3E50AE240C79B500873495 /* ServiceCategory.swift in Sources */,
@@ -3883,6 +3889,7 @@
 				2C8B3A4F243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C0241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DD2416BB8A0083A59A /* RateView.swift in Sources */,
+				2C1DFD62245919F4000EB5C4 /* WelcomeViewModel.swift in Sources */,
 				2CC3DBE02411EBCC001E76B2 /* TitleCell.swift in Sources */,
 				2CC3DBE12411EBCC001E76B2 /* MTextField.swift in Sources */,
 				2CC3DBE22411EBCC001E76B2 /* ServiceCategory.swift in Sources */,
@@ -4131,6 +4138,7 @@
 				2C8B3A51243699EC005FE926 /* ProviderOrderDetailService.swift in Sources */,
 				2C1636C2241684410083A59A /* RateViewController.swift in Sources */,
 				2C1636DF2416BB8A0083A59A /* RateView.swift in Sources */,
+				2C1DFD64245919F4000EB5C4 /* WelcomeViewModel.swift in Sources */,
 				2C2B1ACA23F2745500243D3E /* EmailLoginService.swift in Sources */,
 				2C829ED8240B44FC00D7DD81 /* TitleCell.swift in Sources */,
 				A5F30D5723B4D470005258A8 /* MTextField.swift in Sources */,
