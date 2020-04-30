@@ -36,10 +36,6 @@ class BasicWelcomeCell: UICollectionViewCell, ConfigurableCellProtocol {
         
         titleLabel.text = nil
         descLabel.text = nil
-        
-        animationViewRef?.pause()
-        animationViewRef = nil
-        animationView.subviews.forEach { $0.removeFromSuperview() }
     }
     
     // MARK: - Public Methods
@@ -56,12 +52,14 @@ class BasicWelcomeCell: UICollectionViewCell, ConfigurableCellProtocol {
         
         animationName = viewModel.animName.rawValue
         
-        DispatchQueue.main.async { [weak self] in
-            self?.setupAnimation()
+        if indexPath?.row == 0 {
+            setupAnimation()
         }
     }
     
-    private func setupAnimation() {
+    func setupAnimation() {
+        destroyCurrentAnimation()
+        
         let animation = AnimationView(name: animationName)
         animation.play()
         animation.loopMode = .loop
@@ -105,5 +103,11 @@ class BasicWelcomeCell: UICollectionViewCell, ConfigurableCellProtocol {
         ])
         
         activityIndicator.stopAnimating()
+    }
+    
+    private func destroyCurrentAnimation() {
+        animationViewRef?.pause()
+        animationViewRef = nil
+        animationView.subviews.forEach { $0.removeFromSuperview() }
     }
 }

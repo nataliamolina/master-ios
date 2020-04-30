@@ -53,7 +53,7 @@ class SplashScreenViewController: UIViewController {
         
         setupBindings()
     }
-    
+
     private func setupBindings() {
         viewModel.status.listen { [weak self] status in
             guard let self = self else { return }

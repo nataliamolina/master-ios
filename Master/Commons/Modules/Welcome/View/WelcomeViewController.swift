@@ -12,15 +12,37 @@ class WelcomeViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet private weak var prevPageButton: UIButton!
+    @IBOutlet private weak var nextPageButton: UIButton!
+    @IBOutlet private weak var masterButtonsView: UIView!
     
     // MARK: - UI Actions
     @IBAction private func skipButtonAction() {
-        
+        router.transition(to: .home)
+    }
+    
+    @IBAction func masterButtonAction() {
+    }
+    
+    @IBAction func continueButtonAction() {
+        router.transition(to: .home)
+    }
+    
+    @IBAction private func prevPageButtonAction() {
+        collectionView.scrollToItem(at: IndexPath(row: currentIndex - 1, section: 0), at: .left, animated: true)
+    }
+    
+    @IBAction private func nextPageButtonAction() {
+        collectionView.scrollToItem(at: IndexPath(row: currentIndex + 1, section: 0), at: .right, animated: true)
     }
     
     // MARK: - Properties
     private let router: MainRouter
     private let viewModel: WelcomeViewModel
+    
+    private var currentIndex: Int {
+        return collectionView.indexPathsForVisibleItems.first?.row ?? 0
+    }
 
     // MARK: - Life Cycle
     init(viewModel: WelcomeViewModel, router: MainRouter) {
@@ -28,6 +50,9 @@ class WelcomeViewController: UIViewController {
         self.router = router
         
         super.init(nibName: String(describing: WelcomeViewController.self), bundle: nil)
+        
+        hero.isEnabled = true
+        hero.modalAnimationType = .selectBy(presenting: .zoom, dismissing: .zoomOut)
     }
     
     required init?(coder: NSCoder) {
@@ -42,6 +67,8 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
+        prevPageButton.isHidden = true
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerNib(BasicWelcomeCell.self)
@@ -74,10 +101,26 @@ extension WelcomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        updateCurrentPage(scrollView)
     }
 
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        updateCurrentPage(scrollView)
+    }
+    
+    private func updateCurrentPage(_ scrollView: UIScrollView) {
+        let newPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        pageControl.currentPage = newPage
+
+        if let visibleCell = collectionView.cellForItem(at: IndexPath(row: newPage, section: 0)) as? BasicWelcomeCell {
+            visibleCell.setupAnimation()
+        }
+        
+        let isLastItem = newPage == viewModel.dataSource.count - 1
+        
+        prevPageButton.isHidden = newPage <= 0
+        nextPageButton.isHidden = isLastItem
+        
+        masterButtonsView.isHidden = !isLastItem
     }
 }

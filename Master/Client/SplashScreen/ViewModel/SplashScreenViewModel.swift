@@ -88,7 +88,7 @@ class SplashScreenViewModel {
     
     private func validateTokenIfNeeded() {
         guard let token = Session.shared.token, !token.isEmpty else {
-            status.value = needsToSelectCity ? .needSelectCity : .preloadReady
+            resolveFinalRoute()
             
             return
         }
@@ -110,6 +110,22 @@ class SplashScreenViewModel {
         }
     }
     
+    private func resolveFinalRoute() {
+        if self.needsToShowWelcome {
+            status.value = .needShowsTutorial
+            
+            return
+        }
+        
+        if self.needsToSelectCity {
+            status.value = .needSelectCity
+            
+            return
+        }
+        
+        status.value = .preloadReady
+    }
+    
     private func fetchUserInformation() {
         loginService.fetchUserSession { [weak self] (response: User?, error: CMError?) in
             guard let self = self else { return }
@@ -123,19 +139,7 @@ class SplashScreenViewModel {
             
             Session.shared.login(profile: user.asUserProfile)
             
-            if self.needsToShowWelcome {
-                self.status.value = .needShowsTutorial
-                
-                return
-            }
-            
-            if self.needsToSelectCity {
-                self.status.value = .needSelectCity
-                
-                return
-            }
-            
-            self.status.value = .preloadReady
+            self.resolveFinalRoute()
         }
     }
 }
