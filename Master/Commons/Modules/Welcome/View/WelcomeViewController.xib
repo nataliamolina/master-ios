@@ -116,7 +116,7 @@
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="styleId">
-                                    <integer key="value" value="3"/>
+                                    <integer key="value" value="1"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="welcome.master.join"/>
                             </userDefinedRuntimeAttributes>
@@ -132,7 +132,7 @@
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="styleId">
-                                    <integer key="value" value="1"/>
+                                    <integer key="value" value="3"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="welcome.client.join"/>
                             </userDefinedRuntimeAttributes>

@@ -176,5 +176,5 @@
 "welcome.screen3.desc" = "¿Eres un profesional y quieres convertirte en un Master?.";
 
 "welcome.skip" = "Saltar";
-"welcome.master.join" = "Ir al registro de Master";
-"welcome.client.join" = "Continuar";
+"welcome.master.join" = "Si, soy proveedor de servicios";
+"welcome.client.join" = "No, continuar";
