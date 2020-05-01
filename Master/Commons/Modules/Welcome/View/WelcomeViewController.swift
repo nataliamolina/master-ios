@@ -18,13 +18,17 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - UI Actions
     @IBAction private func skipButtonAction() {
+        saveWatchedState()
         router.transition(to: .home)
     }
     
     @IBAction func masterButtonAction() {
+        saveWatchedState()
+        router.transition(to: .provider)
     }
     
     @IBAction func continueButtonAction() {
+        saveWatchedState()
         router.transition(to: .home)
     }
     
@@ -39,13 +43,18 @@ class WelcomeViewController: UIViewController {
     // MARK: - Properties
     private let router: MainRouter
     private let viewModel: WelcomeViewModel
-    
+    private let storeService: AppStorageProtocol
+
     private var currentIndex: Int {
         return collectionView.indexPathsForVisibleItems.first?.row ?? 0
     }
 
     // MARK: - Life Cycle
-    init(viewModel: WelcomeViewModel, router: MainRouter) {
+    init(viewModel: WelcomeViewModel,
+         router: MainRouter,
+         storeService: AppStorageProtocol = AppStorage()) {
+        
+        self.storeService = storeService
         self.viewModel = viewModel
         self.router = router
         
@@ -72,6 +81,10 @@ class WelcomeViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerNib(BasicWelcomeCell.self)
+    }
+    
+    private func saveWatchedState() {
+        storeService.save(value: true, key: SplashScreenViewModel.Keys.welcome.rawValue)
     }
 }
 

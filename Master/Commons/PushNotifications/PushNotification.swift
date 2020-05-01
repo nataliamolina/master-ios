@@ -9,6 +9,7 @@
 import Foundation
 
 enum PushNotificationType: String, Codable {
+    case providerProfile = "PROVIDER_PROFILE"
     case providerOrderUpdated = "PROVIDER_ORDERS_UPDATED"
     case userOrderUpdated = "USER_ORDER_UPDATED"
 }

@@ -19,12 +19,14 @@ enum ProviderRouterTransitions {
     case completeText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate)
     case orderDetail(viewModel: ProviderOrderDetailViewModel)
     case orderDetailFromPush(viewModel: ProviderOrderDetailViewModel)
+    case showProfile
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     // MARK: - Properties
     private let navigationController: MNavigationController
     private let providerNavigationController: MNavigationController
+    private var onAuthenticated: CompletionBlock?
     var pendingDetailFromPush: ProviderOrderDetailViewModel?
     
     // MARK: - Life Cycle
@@ -69,10 +71,26 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         case .orderDetailFromPush(let viewModel):
             handleOrderDetailFromPush(viewModel: viewModel)
             
+        case .showProfile:
+            handleAuthOption { [weak self] in
+                self?.handleMainTransition()
+            }
         }
     }
     
     // MARK: - Private Methods
+    private func handleAuthOption(onAuthenticated: @escaping CompletionBlock) {
+        if Session.shared.isLoggedIn {
+            onAuthenticated()
+            
+            return
+        }
+        
+        self.onAuthenticated = onAuthenticated
+        
+        let loginRouter = MainRouter(navigationController: navigationController, delegate: self)
+        loginRouter.transition(to: .main)
+    }
     
     private func handleMainTransition() {
         let viewController = ProviderMainViewController(router: self, viewModel: ProviderMainViewModel())
@@ -87,7 +105,7 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     
     private func handleOrderDetail(viewModel: ProviderOrderDetailViewModel) {
         let viewController = ProviderOrderDetailViewController(viewModel: viewModel, router: self)
-            
+        
         providerNavigationController.pushViewController(viewController, animated: true)
     }
     
@@ -99,7 +117,7 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     
     private func handleCompleteText(viewModel: CompleteTextViewModel, delegate: CompleteTextViewDelegate) {
         let viewController = CompleteTextViewController(viewModel: viewModel, delegate: delegate)
-            
+        
         providerNavigationController.pushViewController(viewController, animated: true)
     }
     
@@ -137,7 +155,7 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         }
         
         let viewController = ProviderHomeViewController(viewModel: ProviderHomeViewModel(provider: providerProfile), router: self)
-
+        
         providerNavigationController.popToRootViewController { [weak self] in
             self?.providerNavigationController.pushViewController(viewController, animated: true)
         }
@@ -147,5 +165,16 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         let viewController = LegalViewController()
         
         providerNavigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - MainRouterDelegate
+extension ProviderRouter: MainRouterDelegate {
+    func authDidEnd(withSuccess: Bool) {
+        guard withSuccess else {
+            return
+        }
+        
+        onAuthenticated?()
     }
 }
