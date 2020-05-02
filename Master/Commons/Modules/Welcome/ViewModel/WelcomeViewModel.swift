@@ -20,6 +20,11 @@ class WelcomeViewModel {
         setupDataSource()
     }
     
+    // MARK: - Public Methods
+    func getCitySelectorViewModel() -> CitySelectorViewModel {
+        return CitySelectorViewModel()
+    }
+    
     // MARK: - Private Methods
     private func setupDataSource() {
         dataSource.append(contentsOf: [

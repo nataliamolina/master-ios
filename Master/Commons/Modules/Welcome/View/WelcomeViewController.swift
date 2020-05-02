@@ -19,17 +19,40 @@ class WelcomeViewController: UIViewController {
     // MARK: - UI Actions
     @IBAction private func skipButtonAction() {
         saveWatchedState()
-        router.transition(to: .home)
+        
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            
+            self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))
+        }
     }
     
     @IBAction func masterButtonAction() {
         saveWatchedState()
-        router.transition(to: .provider)
+        
+        var pushDictinary = [String: String]()
+        pushDictinary["title"] = ""
+        pushDictinary["body"] = ""
+        pushDictinary["actionType"] = PushNotificationType.providerProfile.rawValue
+        pushDictinary["actionId"] = ""
+        
+        PushNotifications.shared.handle(userInfo: pushDictinary)
+        
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            
+            self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))
+        }
     }
     
     @IBAction func continueButtonAction() {
         saveWatchedState()
-        router.transition(to: .home)
+        
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            
+            self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))
+        }
     }
     
     @IBAction private func prevPageButtonAction() {
@@ -44,11 +67,11 @@ class WelcomeViewController: UIViewController {
     private let router: MainRouter
     private let viewModel: WelcomeViewModel
     private let storeService: AppStorageProtocol
-
+    
     private var currentIndex: Int {
         return collectionView.indexPathsForVisibleItems.first?.row ?? 0
     }
-
+    
     // MARK: - Life Cycle
     init(viewModel: WelcomeViewModel,
          router: MainRouter,
@@ -84,7 +107,7 @@ class WelcomeViewController: UIViewController {
     }
     
     private func saveWatchedState() {
-        storeService.save(value: true, key: SplashScreenViewModel.Keys.welcome.rawValue)
+        storeService.save(value: false, key: SplashScreenViewModel.Keys.welcome.rawValue)
     }
 }
 
@@ -116,7 +139,7 @@ extension WelcomeViewController: UICollectionViewDelegateFlowLayout {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         updateCurrentPage(scrollView)
     }
-
+    
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         updateCurrentPage(scrollView)
     }
@@ -124,7 +147,7 @@ extension WelcomeViewController: UICollectionViewDelegateFlowLayout {
     private func updateCurrentPage(_ scrollView: UIScrollView) {
         let newPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
         pageControl.currentPage = newPage
-
+        
         if let visibleCell = collectionView.cellForItem(at: IndexPath(row: newPage, section: 0)) as? BasicWelcomeCell {
             visibleCell.setupAnimation()
         }

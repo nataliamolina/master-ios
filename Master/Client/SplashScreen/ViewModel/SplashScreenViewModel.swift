@@ -37,9 +37,9 @@ class SplashScreenViewModel {
     }
     
     private var needsToShowWelcome: Bool {
-        let result: String? = storedData.get(key: Keys.welcome.rawValue)
+        let result: Bool? = storedData.get(key: Keys.welcome.rawValue) ?? true
         
-        return result == nil
+        return result == true
     }
     
     // MARK: - Life Cycle

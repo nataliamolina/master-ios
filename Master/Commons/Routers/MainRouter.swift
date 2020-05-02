@@ -19,7 +19,6 @@ enum MainRouterTransitions {
     case asRoot
     case citySelector(viewModel: CitySelectorViewModel)
     case tutotial(viewModel: WelcomeViewModel)
-    case provider
 }
 
 protocol MainRouterDelegate: class {
@@ -77,9 +76,6 @@ class MainRouter: RouterBase<MainRouterTransitions> {
             
         case .tutotial(let viewModel):
             handleTutorialTransition(viewModel: viewModel)
-            
-        case .provider:
-            handleProviderTransition()
         }
     }
     
@@ -93,18 +89,6 @@ class MainRouter: RouterBase<MainRouterTransitions> {
         mainNavigationController.interactivePopGestureRecognizer?.isEnabled = true
         
         Master.setRootVC(navigationController: mainNavigationController)
-    }
-    
-    private func handleProviderTransition() {
-        var pushDictinary = [String: String]()
-        pushDictinary["title"] = ""
-        pushDictinary["body"] = ""
-        pushDictinary["actionType"] = PushNotificationType.providerProfile.rawValue
-        pushDictinary["actionId"] = ""
-
-        PushNotifications.shared.handle(userInfo: pushDictinary)
-        
-        handleHomeTransition()
     }
     
     private func handleTutorialTransition(viewModel: WelcomeViewModel) {
