@@ -52,6 +52,7 @@ class ProviderRegisterViewModel {
                 return
             }
             
+            Session.shared.login(profile: provider.user.asUserProfile)
             Session.shared.provider = provider.asProviderProfile
             self?.status.value = .registerDone
         }

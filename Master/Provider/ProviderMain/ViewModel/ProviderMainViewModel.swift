@@ -19,13 +19,27 @@ enum ProviderMainViewModelStatus {
 
 class ProviderMainViewModel {
     // MARK: - Properties
-    private let service: ProviderMainServiceProtocol
+    enum Keys: String {
+        case providerWelcome
+    }
     
+    private let service: ProviderMainServiceProtocol
+    private let storageService: AppStorageProtocol
+
     let status = Var<ProviderMainViewModelStatus>(.undefined)
     let isLoading = Var(false)
     
+    var isOnBoardingRequired: Bool {
+        let result: Bool? = storageService.get(key: Keys.providerWelcome.rawValue)
+        
+        return result == nil
+    }
+    
     // MARK: - Life Cycle
-    init(service: ProviderMainServiceProtocol = ProviderMainService(connectionDependency: ConnectionManager())) {
+    init(service: ProviderMainServiceProtocol = ProviderMainService(connectionDependency: ConnectionManager()),
+         storageService: AppStorageProtocol = AppStorage()) {
+        
+        self.storageService = storageService
         self.service = service
     }
     

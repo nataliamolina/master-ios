@@ -20,13 +20,6 @@ class ProviderMainViewController: UIViewController {
     private let router: RouterBase<ProviderRouterTransitions>
     
     // MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupUI()
-    }
-    
-    // MARK: - Life Cycle
     init(router: RouterBase<ProviderRouterTransitions>, viewModel: ProviderMainViewModel) {
         self.router = router
         self.viewModel = viewModel
@@ -38,6 +31,22 @@ class ProviderMainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if viewModel.isOnBoardingRequired {
+            router.transition(to: .onBoarding)
+        } else {
+            viewModel.getProviderProfile()
+        }
+    }
+    
     // MARK: - Private Methods
     private func setupUI() {
         // FIXME
@@ -45,8 +54,6 @@ class ProviderMainViewController: UIViewController {
         disableTitle()
         
         setupBindings()
-        
-        viewModel.getProviderProfile()
     }
     
     private func setupBindings() {

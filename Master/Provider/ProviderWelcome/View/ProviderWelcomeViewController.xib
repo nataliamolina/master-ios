@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderWelcomeViewController" customModule="Local" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="T4N-hK-KNK" id="EIR-pc-YdO"/>
+                <outlet property="nextPageButton" destination="SCu-4g-Ctp" id="n2B-8X-nd3"/>
+                <outlet property="pageControl" destination="0BI-87-nPX" id="wjk-3b-aFb"/>
+                <outlet property="prevPageButton" destination="BWh-Xc-aZj" id="5P5-WG-gU9"/>
+                <outlet property="view" destination="qhA-k5-TIV" id="TAf-4O-dgq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="qhA-k5-TIV">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="T4N-hK-KNK">
+                    <rect key="frame" x="30" y="134" width="354" height="606"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DdR-8I-83u">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDy-ln-zvD">
+                    <rect key="frame" x="184" y="792" width="46" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="welcome.skip"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="skipButtonAction" destination="-1" eventType="touchUpInside" id="maU-Df-krH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-4g-Ctp">
+                    <rect key="frame" x="334" y="782" width="50" height="50"/>
+                    <color key="backgroundColor" red="0.49803921569999998" green="0.76862745099999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Ewz-jO-mSk"/>
+                        <constraint firstAttribute="height" constant="50" id="tGQ-dH-b3Y"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                    <state key="normal" image="next_template"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nextPageButtonAction" destination="-1" eventType="touchUpInside" id="8dL-cf-nrj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWh-Xc-aZj">
+                    <rect key="frame" x="30" y="782" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="6WV-yT-MpL"/>
+                        <constraint firstAttribute="width" constant="50" id="bD1-xh-GSV"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                    <state key="normal" image="back_template"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="prevPageButtonAction" destination="-1" eventType="touchUpInside" id="YIN-Vp-ZRN"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vml-VA-HHU">
+                    <rect key="frame" x="30" y="74" width="354" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="VMa-nb-XgU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="37"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="selectCity.title"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0BI-87-nPX">
+                    <rect key="frame" x="187.5" y="740" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" red="0.49803921569999998" green="0.76862745099999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="IAw-If-Ihv" firstAttribute="bottom" secondItem="wDy-ln-zvD" secondAttribute="bottom" constant="40" id="3Kl-m7-EZW"/>
+                <constraint firstItem="IAw-If-Ihv" firstAttribute="trailing" secondItem="T4N-hK-KNK" secondAttribute="trailing" constant="30" id="6If-eg-RiZ"/>
+                <constraint firstItem="0BI-87-nPX" firstAttribute="centerX" secondItem="qhA-k5-TIV" secondAttribute="centerX" id="7dk-nl-VKO"/>
+                <constraint firstItem="BWh-Xc-aZj" firstAttribute="leading" secondItem="IAw-If-Ihv" secondAttribute="leading" constant="30" id="DhG-WW-jH1"/>
+                <constraint firstItem="0BI-87-nPX" firstAttribute="top" secondItem="T4N-hK-KNK" secondAttribute="bottom" id="Fmn-gv-HEx"/>
+                <constraint firstItem="SCu-4g-Ctp" firstAttribute="centerY" secondItem="wDy-ln-zvD" secondAttribute="centerY" id="OUV-KL-Ng0"/>
+                <constraint firstItem="vml-VA-HHU" firstAttribute="leading" secondItem="IAw-If-Ihv" secondAttribute="leading" constant="30" id="Rsi-Pn-hCr"/>
+                <constraint firstItem="wDy-ln-zvD" firstAttribute="centerX" secondItem="qhA-k5-TIV" secondAttribute="centerX" id="XWB-cq-TMi"/>
+                <constraint firstItem="T4N-hK-KNK" firstAttribute="leading" secondItem="IAw-If-Ihv" secondAttribute="leading" constant="30" id="Zra-X4-waH"/>
+                <constraint firstItem="vml-VA-HHU" firstAttribute="top" secondItem="IAw-If-Ihv" secondAttribute="top" constant="30" id="cxh-Bc-0Pu"/>
+                <constraint firstItem="T4N-hK-KNK" firstAttribute="top" secondItem="vml-VA-HHU" secondAttribute="bottom" constant="30" id="gK8-qy-1oV"/>
+                <constraint firstItem="wDy-ln-zvD" firstAttribute="top" secondItem="0BI-87-nPX" secondAttribute="bottom" constant="15" id="iur-em-2Du"/>
+                <constraint firstItem="BWh-Xc-aZj" firstAttribute="centerY" secondItem="wDy-ln-zvD" secondAttribute="centerY" id="kg5-gi-dU8"/>
+                <constraint firstItem="IAw-If-Ihv" firstAttribute="trailing" secondItem="vml-VA-HHU" secondAttribute="trailing" constant="30" id="lKT-Nj-vZa"/>
+                <constraint firstItem="IAw-If-Ihv" firstAttribute="trailing" secondItem="SCu-4g-Ctp" secondAttribute="trailing" constant="30" id="m6y-e9-vID"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="IAw-If-Ihv"/>
+            <point key="canvasLocation" x="136.80000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_template" width="512" height="512"/>
+        <image name="next_template" width="512" height="512"/>
+    </resources>
+</document>

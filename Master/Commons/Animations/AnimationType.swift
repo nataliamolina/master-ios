@@ -17,4 +17,6 @@ enum AnimationType: String {
     case firstWelcome = "welcomeAnim_01"
     case secondWelcome = "welcomeAnim_02"
     case thirdWelcome = "welcomeAnim_03"
+    case providerFirstWelcome = "provider_welcome_1"
+    case providerSecondWelcome = "provider_welcome_2"
 }

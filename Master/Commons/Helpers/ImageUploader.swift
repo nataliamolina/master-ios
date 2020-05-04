@@ -17,8 +17,10 @@ class ImageUploader {
     private var mStorageRef = Storage.storage().reference()
     
     func upload(image: UIImageView, name: String, path: String) {
-        
-        guard let downsizedImageData = getDownsizedImageBytes(image: image, compressionQuality: 0.5) else {
+        guard
+            !name.isEmpty,
+            !path.isEmpty,
+            let downsizedImageData = getDownsizedImageBytes(image: image, compressionQuality: 0.5) else {
             onCompleteBlock?(false, nil, "Unable to compress image or create storage reference.")
             
             return

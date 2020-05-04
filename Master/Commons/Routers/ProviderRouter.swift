@@ -20,6 +20,7 @@ enum ProviderRouterTransitions {
     case orderDetail(viewModel: ProviderOrderDetailViewModel)
     case orderDetailFromPush(viewModel: ProviderOrderDetailViewModel)
     case showProfile
+    case onBoarding
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
@@ -75,6 +76,9 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             handleAuthOption { [weak self] in
                 self?.handleMainTransition()
             }
+            
+        case .onBoarding:
+            handleOnBoardingTransition()
         }
     }
     
@@ -90,6 +94,12 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         
         let loginRouter = MainRouter(navigationController: navigationController, delegate: self)
         loginRouter.transition(to: .main)
+    }
+    
+    private func handleOnBoardingTransition() {
+        let viewController = ProviderWelcomeViewController(viewModel: ProviderWelcomeViewModel(), router: self)
+               
+       providerNavigationController.present(viewController, animated: true, completion: nil)
     }
     
     private func handleMainTransition() {
