@@ -56,6 +56,7 @@ class ProviderWelcomeViewController: UIViewController {
         
         super.init(nibName: String(describing: ProviderWelcomeViewController.self), bundle: nil)
         
+        modalPresentationStyle = .fullScreen
         hero.isEnabled = true
         hero.modalAnimationType = .selectBy(presenting: .zoom, dismissing: .zoomOut)
     }

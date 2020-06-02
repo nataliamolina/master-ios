@@ -11,7 +11,6 @@ import UIKit
 class ProviderMainViewController: UIViewController {
     // MARK: - UI References
     @IBAction private func closeButtonAction(_ sender: Any) {
-        navigationController?.hero.modalAnimationType =  .zoomOut
         dismiss(animated: true, completion: nil)
     }
     
@@ -25,6 +24,9 @@ class ProviderMainViewController: UIViewController {
         self.viewModel = viewModel
         
         super.init(nibName: String(describing: ProviderMainViewController.self), bundle: nil)
+        
+        self.hero.isEnabled = true
+        self.hero.modalAnimationType = .selectBy(presenting: .zoom, dismissing: .zoomOut)
     }
     
     required init?(coder: NSCoder) {
@@ -40,11 +42,27 @@ class ProviderMainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if ProviderHomeViewModel.homeAlreadyOpened {
+            dismiss(animated: true, completion: nil)
+            
+            ProviderHomeViewModel.homeAlreadyOpened = false
+            
+            return
+        }
+        
         if viewModel.isOnBoardingRequired {
             router.transition(to: .onBoarding)
-        } else {
-            viewModel.getProviderProfile()
+            
+            return
         }
+        
+        if !viewModel.isProfileAlreadyLoaded {
+            viewModel.getProviderProfile()
+            
+            return
+        }
+        
+        router.transition(to: .home)
     }
     
     // MARK: - Private Methods

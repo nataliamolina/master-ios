@@ -58,6 +58,8 @@ class ProviderHomeViewController: UIViewController {
         viewModel.fetchData()
         
         checkPendingDetailFromPush()
+        
+        ProviderHomeViewModel.homeAlreadyOpened = true
     }
     
     private func checkPendingDetailFromPush() {

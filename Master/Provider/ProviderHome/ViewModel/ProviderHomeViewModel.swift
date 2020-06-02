@@ -23,6 +23,8 @@ private enum Sections: Int {
 
 class ProviderHomeViewModel {
     // MARK: - Properties
+    static var homeAlreadyOpened = false
+
     private var ordersDataSource = [ProviderOrderCellViewModel]()
     private var providerServicesDataSource = [ProviderServiceCellViewModel]()
     private let provider: ProviderProfile

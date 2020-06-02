@@ -18,7 +18,7 @@ enum ProviderMainViewModelStatus {
 }
 
 class ProviderMainViewModel {
-    // MARK: - Properties
+    // MARK: - Properties    
     enum Keys: String {
         case providerWelcome
     }
@@ -33,6 +33,10 @@ class ProviderMainViewModel {
         let result: Bool? = storageService.get(key: Keys.providerWelcome.rawValue)
         
         return result == nil
+    }
+    
+    var isProfileAlreadyLoaded: Bool {
+        return Session.shared.provider != nil
     }
     
     // MARK: - Life Cycle
