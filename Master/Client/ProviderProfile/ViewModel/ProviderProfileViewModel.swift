@@ -110,9 +110,20 @@ class ProviderProfileViewModel {
         dataSource.value[Sections.buttons.rawValue] = [buttonsViewModel]
         
         if index == 1 {
-            setCommentsDataSource()
+            
         } else {
+            
+        }
+        
+        switch index {
+        case 0:
             setProviderServicesDataSource()
+        case 1:
+            setInfoProvider()
+        case 2:
+            setCommentsDataSource()
+        default:
+            break
         }
     }
     
@@ -150,6 +161,10 @@ class ProviderProfileViewModel {
     }
     
     private func setProviderServicesDataSource() {
+        dataSource.value[Sections.list.rawValue] = providerServicesDataSource
+    }
+    
+    private func setInfoProvider() {
         dataSource.value[Sections.list.rawValue] = providerServicesDataSource
     }
     
@@ -207,6 +222,7 @@ class ProviderProfileViewModel {
     private func getButtonsCellViewModel() -> SelectorCellViewModel {
         return SelectorCellViewModel(buttons: [
             SelectorCellButton(style: .green, title: "general.services".localized),
+            SelectorCellButton(style: .greenBorder, title: "general.info".localized),
             SelectorCellButton(style: .greenBorder, title: "general.comments".localized)
         ])
     }
