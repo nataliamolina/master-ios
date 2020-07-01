@@ -69,10 +69,15 @@ class ProviderHomeViewModel {
         
         dataSource.value[Sections.buttons.rawValue] = [buttonsViewModel]
         
-        if index == 1 {
-            setOrdersDataSource()
-        } else {
+        switch index {
+        case 0:
             setProviderServicesDataSource()
+        case 1:
+            setInfo()
+        case 2:
+            setOrdersDataSource()
+        default:
+            break
         }
     }
     
@@ -83,6 +88,10 @@ class ProviderHomeViewModel {
     // MARK: - Private Methods
     
     private func setOrdersDataSource() {
+        dataSource.value[Sections.list.rawValue] = ordersDataSource
+    }
+    
+    private func setInfo() {
         dataSource.value[Sections.list.rawValue] = ordersDataSource
     }
     
@@ -141,6 +150,7 @@ class ProviderHomeViewModel {
     private func getButtonsCellViewModel() -> SelectorCellViewModel {
         return SelectorCellViewModel(buttons: [
             SelectorCellButton(style: .green, title: "general.services".localized),
+            SelectorCellButton(style: .greenBorder, title: "general.info".localized),
             SelectorCellButton(style: .greenBorder, title: "general.orders".localized)
         ])
     }

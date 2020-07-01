@@ -100,6 +100,13 @@ extension ProviderHomeViewController: SelectorCellDelegate {
     }
 }
 
+// MARK: - ProviderInfoCellDelegate
+extension ProviderHomeViewController: ProviderInfoCellDelegate {
+    func editCellTapped(_ cell: ProviderInfoCell, viewModel: ProviderInfoCellDataSource) {
+        router.transition(to: .orderDetail(viewModel: ProviderOrderDetailViewModel(orderId: viewModel.id.asInt)))
+    }
+}
+
 // MARK: - UITableViewDataSource
 extension ProviderHomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {

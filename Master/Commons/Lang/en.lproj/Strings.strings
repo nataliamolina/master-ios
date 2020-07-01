@@ -13,6 +13,7 @@
 "general.accept" = "Aceptar";
 "general.services" = "Servicios";
 "general.orders" = "Ordenes";
+"general.info" = "Info";
 "general.comments" = "Comentarios";
 "general.continue" = "Continuar";
 "general.add" = "Agregar";
@@ -77,6 +78,18 @@
 // Provider Detail
 "providerDetail.total" = "Total: ";
 "providerDetail.continue" = "Continuar";
+
+// Provider Info
+"providerInfo.sinceDate" = "Desde";
+"providerInfo.toDate" = "Hasta";
+"providerInfo.save" = "Guardar";
+"providerExperience.experience" = "Experiencia ";
+"providerExperience.position" = "Cargo";
+"providerExperience.experience" = "Lugar ";
+"providerExperience.now" = "Actualmente estoy en este cargo";
+"providerStudies.experience" = "Estudio";
+"providerStudies.position" = "Institución";
+"providerStudies.experience" = "Ciudad ";
 
 // Checkout
 "checkout.title" = "Reserva";
