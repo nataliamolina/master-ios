@@ -10,21 +10,21 @@ import UIKit
 
 class ProviderStudiesViewController: UIViewController {
 
+    // MARK: - UI References
+    @IBOutlet private weak var sinceTextField: UITextField!
+    @IBOutlet private weak var toTextField: UITextField!
+    @IBOutlet private weak var professionTextField: UITextField!
+    @IBOutlet private weak var universityTextField: UITextField!
+    @IBOutlet private weak var cityTextField: UITextField!
+    
+    // MARK: - Properties
+    
+    // MARK: - Constants
+    private let datePicker = UIDatePicker()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
