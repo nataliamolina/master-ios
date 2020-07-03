@@ -949,6 +949,21 @@
 		A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6F23B4DB97005258A8 /* CategoryCell.swift */; };
 		A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D7023B4DB97005258A8 /* CategoryCell.xib */; };
 		A5F30D7423B4DC94005258A8 /* CategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */; };
+		B73D198724AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
+		B73D198824AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
+		B73D198924AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
+		B73D198A24AE9AAA00D166DE /* ProviderProfileTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73D198624AE9AAA00D166DE /* ProviderProfileTitleCell.xib */; };
+		B73D198B24AE9AAA00D166DE /* ProviderProfileTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73D198624AE9AAA00D166DE /* ProviderProfileTitleCell.xib */; };
+		B73D198C24AE9AAA00D166DE /* ProviderProfileTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73D198624AE9AAA00D166DE /* ProviderProfileTitleCell.xib */; };
+		B73D198E24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198D24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift */; };
+		B73D198F24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198D24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift */; };
+		B73D199024AEA13200D166DE /* ProviderProfileTitlevViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198D24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift */; };
+		B73D199624AEC55200D166DE /* ProviderStudiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D199524AEC55200D166DE /* ProviderStudiesService.swift */; };
+		B73D199724AEC55200D166DE /* ProviderStudiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D199524AEC55200D166DE /* ProviderStudiesService.swift */; };
+		B73D199824AEC55200D166DE /* ProviderStudiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D199524AEC55200D166DE /* ProviderStudiesService.swift */; };
+		B73D199B24AEC61700D166DE /* ProviderExperiencesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D199A24AEC61700D166DE /* ProviderExperiencesService.swift */; };
+		B73D199C24AEC61700D166DE /* ProviderExperiencesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D199A24AEC61700D166DE /* ProviderExperiencesService.swift */; };
+		B73D199D24AEC61700D166DE /* ProviderExperiencesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D199A24AEC61700D166DE /* ProviderExperiencesService.swift */; };
 		B7C7372E24AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */; };
 		B7C7372F24AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */; };
 		B7C7373024AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */; };
@@ -1356,6 +1371,11 @@
 		A5F30D7023B4DB97005258A8 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModel.swift; sourceTree = "<group>"; };
 		A8ED18371995DD3D60F7D239 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileTitleCell.swift; sourceTree = "<group>"; };
+		B73D198624AE9AAA00D166DE /* ProviderProfileTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderProfileTitleCell.xib; sourceTree = "<group>"; };
+		B73D198D24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileTitlevViewModel.swift; sourceTree = "<group>"; };
+		B73D199524AEC55200D166DE /* ProviderStudiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderStudiesService.swift; sourceTree = "<group>"; };
+		B73D199A24AEC61700D166DE /* ProviderExperiencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderExperiencesService.swift; sourceTree = "<group>"; };
 		B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoCell.swift; sourceTree = "<group>"; };
 		B7C7372D24AC1CD00028A8C7 /* ProviderInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderInfoCell.xib; sourceTree = "<group>"; };
 		B7C7373424AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoCellViewModel.swift; sourceTree = "<group>"; };
@@ -2320,6 +2340,7 @@
 		2CA494CD23F9986E00F87AD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B73D198424AE9A6E00D166DE /* ProviderProfileTitleCell */,
 				2C1636DB2416BB7C0083A59A /* RateView */,
 				2CFF4DC023FA143C0024B3F1 /* CommentCell */,
 				2CFF4DA123F99D050024B3F1 /* ProviderProfileCell */,
@@ -2979,6 +3000,25 @@
 			path = CategoryCell;
 			sourceTree = "<group>";
 		};
+		B73D198424AE9A6E00D166DE /* ProviderProfileTitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */,
+				B73D198624AE9AAA00D166DE /* ProviderProfileTitleCell.xib */,
+				B73D198D24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift */,
+			);
+			path = ProviderProfileTitleCell;
+			sourceTree = "<group>";
+		};
+		B73D199924AEC5E000D166DE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B73D199524AEC55200D166DE /* ProviderStudiesService.swift */,
+				B73D199A24AEC61700D166DE /* ProviderExperiencesService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B7C7372A24AC1C050028A8C7 /* ProviderOrder */ = {
 			isa = PBXGroup;
 			children = (
@@ -2992,6 +3032,7 @@
 		B7C7372B24AC1C1B0028A8C7 /* ProviderInfo */ = {
 			isa = PBXGroup;
 			children = (
+				B73D199924AEC5E000D166DE /* Service */,
 				B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */,
 				B7C7372D24AC1CD00028A8C7 /* ProviderInfoCell.xib */,
 				B7C7373424AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift */,
@@ -3219,6 +3260,7 @@
 				2C3E5132240C79B500873495 /* CommentCell.xib in Resources */,
 				2C3E5133240C79B500873495 /* empty_state_anim.json in Resources */,
 				2C3E5134240C79B500873495 /* payment_anim.json in Resources */,
+				B73D198B24AE9AAA00D166DE /* ProviderProfileTitleCell.xib in Resources */,
 				2C58159324568B8E001088E5 /* WelcomeViewController.xib in Resources */,
 				2C3E5135240C79B500873495 /* ProviderProfileViewController.xib in Resources */,
 				2C3E5136240C79B500873495 /* LegalViewController.xib in Resources */,
@@ -3296,6 +3338,7 @@
 				2CC3DC6E2411EBCC001E76B2 /* CommentCell.xib in Resources */,
 				2CC3DC6F2411EBCC001E76B2 /* empty_state_anim.json in Resources */,
 				2CC3DC702411EBCC001E76B2 /* payment_anim.json in Resources */,
+				B73D198A24AE9AAA00D166DE /* ProviderProfileTitleCell.xib in Resources */,
 				2C58159224568B8E001088E5 /* WelcomeViewController.xib in Resources */,
 				2CC3DC712411EBCC001E76B2 /* ProviderProfileViewController.xib in Resources */,
 				2CC3DC722411EBCC001E76B2 /* LegalViewController.xib in Resources */,
@@ -3373,6 +3416,7 @@
 				2CFF4DC423FA144D0024B3F1 /* CommentCell.xib in Resources */,
 				2C22B39823F8AFC300678A41 /* empty_state_anim.json in Resources */,
 				2C22B39B23F8AFC300678A41 /* payment_anim.json in Resources */,
+				B73D198C24AE9AAA00D166DE /* ProviderProfileTitleCell.xib in Resources */,
 				2C58159424568B8E001088E5 /* WelcomeViewController.xib in Resources */,
 				2CA494D423F9989B00F87AD6 /* ProviderProfileViewController.xib in Resources */,
 				2C3B8072240BFD8F00D4C6FE /* LegalViewController.xib in Resources */,
@@ -3805,6 +3849,7 @@
 				2C1F2F72241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D52416AF300083A59A /* CommentRequest.swift in Sources */,
 				2C366A17245666450048B968 /* RadioOption.swift in Sources */,
+				B73D198824AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */,
 				2CA2B0C224144D14000C7131 /* String+Lang.swift in Sources */,
 				2C8B3A2C243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift in Sources */,
 				2C3E50A6240C79B500873495 /* AppDelegate.swift in Sources */,
@@ -3832,6 +3877,7 @@
 				2C57B73724170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2C3E50AF240C79B500873495 /* HomeViewModel.swift in Sources */,
 				2C67170A241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */,
+				B73D199724AEC55200D166DE /* ProviderStudiesService.swift in Sources */,
 				2C3E50B0240C79B500873495 /* OrdersServiceProtocol.swift in Sources */,
 				2C3E50B1240C79B500873495 /* HomeViewController.swift in Sources */,
 				2C3E50B2240C79B500873495 /* StatusHelper.swift in Sources */,
@@ -3942,6 +3988,7 @@
 				2C3E50F2240C79B500873495 /* CheckoutHeaderCellViewModel.swift in Sources */,
 				2C3E50F3240C79B500873495 /* CommentCellViewModel.swift in Sources */,
 				2C3E50F4240C79B500873495 /* Styles.swift in Sources */,
+				B73D198F24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift in Sources */,
 				2C3E50F5240C79B500873495 /* EmptyCodable.swift in Sources */,
 				2C3E50F6240C79B500873495 /* HomeServiceProtocol.swift in Sources */,
 				2C76E31024571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */,
@@ -4002,6 +4049,7 @@
 				2C3E5118240C79B500873495 /* SplashScreenServiceProtocol.swift in Sources */,
 				2C3E5119240C79B500873495 /* EmailLoginViewController.swift in Sources */,
 				2C8B3A44243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */,
+				B73D199C24AEC61700D166DE /* ProviderExperiencesService.swift in Sources */,
 				2C3E511A240C79B500873495 /* MButton.swift in Sources */,
 				2C3E511B240C79B500873495 /* ConnectionManager.swift in Sources */,
 				2CD8AC5E241AC072005C8628 /* ProviderRouter.swift in Sources */,
@@ -4062,6 +4110,7 @@
 				2C1F2F71241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D42416AF300083A59A /* CommentRequest.swift in Sources */,
 				2C366A16245666450048B968 /* RadioOption.swift in Sources */,
+				B73D198724AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */,
 				2CA2B0C324144D15000C7131 /* String+Lang.swift in Sources */,
 				2C8B3A2B243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift in Sources */,
 				2CC3DBDA2411EBCC001E76B2 /* AppDelegate.swift in Sources */,
@@ -4089,6 +4138,7 @@
 				2C57B73624170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2CC3DBE32411EBCC001E76B2 /* HomeViewModel.swift in Sources */,
 				2C671709241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */,
+				B73D199624AEC55200D166DE /* ProviderStudiesService.swift in Sources */,
 				2CC3DBE42411EBCC001E76B2 /* OrdersServiceProtocol.swift in Sources */,
 				2CC3DBE52411EBCC001E76B2 /* HomeViewController.swift in Sources */,
 				2CC3DBE62411EBCC001E76B2 /* StatusHelper.swift in Sources */,
@@ -4199,6 +4249,7 @@
 				2CC3DC2A2411EBCC001E76B2 /* CheckoutHeaderCellViewModel.swift in Sources */,
 				2CC3DC2B2411EBCC001E76B2 /* CommentCellViewModel.swift in Sources */,
 				2CC3DC2C2411EBCC001E76B2 /* Styles.swift in Sources */,
+				B73D198E24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift in Sources */,
 				2CC3DC2D2411EBCC001E76B2 /* EmptyCodable.swift in Sources */,
 				2CC3DC2E2411EBCC001E76B2 /* HomeServiceProtocol.swift in Sources */,
 				2C76E30F24571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */,
@@ -4259,6 +4310,7 @@
 				2CC3DC522411EBCC001E76B2 /* SplashScreenServiceProtocol.swift in Sources */,
 				2CC3DC532411EBCC001E76B2 /* EmailLoginViewController.swift in Sources */,
 				2C8B3A43243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */,
+				B73D199B24AEC61700D166DE /* ProviderExperiencesService.swift in Sources */,
 				2CC3DC542411EBCC001E76B2 /* MButton.swift in Sources */,
 				2CC3DC552411EBCC001E76B2 /* ConnectionManager.swift in Sources */,
 				2CD8AC5D241AC072005C8628 /* ProviderRouter.swift in Sources */,
@@ -4319,6 +4371,7 @@
 				2C1F2F73241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D62416AF300083A59A /* CommentRequest.swift in Sources */,
 				2C366A18245666450048B968 /* RadioOption.swift in Sources */,
+				B73D198924AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */,
 				2CA2B0C124144C7F000C7131 /* String+Lang.swift in Sources */,
 				2C8B3A2D243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift in Sources */,
 				2CAD87B42404AA230063AEB2 /* CompleteTextViewModel.swift in Sources */,
@@ -4346,6 +4399,7 @@
 				2C57B73824170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
 				2CF6ABB823F7AE3500F9EF40 /* ServiceCategory.swift in Sources */,
 				2C67170B241D8E0B00C86531 /* ListSelectorViewModel.swift in Sources */,
+				B73D199824AEC55200D166DE /* ProviderStudiesService.swift in Sources */,
 				2CF6ABCD23F7B43000F9EF40 /* HomeViewModel.swift in Sources */,
 				2CF6ABCB23F7B26A00F9EF40 /* OrdersServiceProtocol.swift in Sources */,
 				A5F30D6C23B4DB34005258A8 /* HomeViewController.swift in Sources */,
@@ -4456,6 +4510,7 @@
 				2CC7313D24047500006FF85D /* CheckoutHeaderCellViewModel.swift in Sources */,
 				2CFF4DC623FA15760024B3F1 /* CommentCellViewModel.swift in Sources */,
 				A5F30D5023B4CDB7005258A8 /* Styles.swift in Sources */,
+				B73D199024AEA13200D166DE /* ProviderProfileTitlevViewModel.swift in Sources */,
 				2C198D1F23F4D00800346395 /* EmptyCodable.swift in Sources */,
 				2CFF4DA723F99D670024B3F1 /* HomeServiceProtocol.swift in Sources */,
 				2C76E31124571B6B00FCE5E2 /* UICollectionView+Extensions.swift in Sources */,
@@ -4516,6 +4571,7 @@
 				2CEAD749240F59040095E9A4 /* PaymentViewModel.swift in Sources */,
 				A5F30D5423B4D2CC005258A8 /* EmailLoginViewController.swift in Sources */,
 				2C8B3A45243699EC005FE926 /* ProviderOrderDetailViewController.swift in Sources */,
+				B73D199D24AEC61700D166DE /* ProviderExperiencesService.swift in Sources */,
 				A5F30D4C23B4CBC3005258A8 /* MButton.swift in Sources */,
 				2C8C6C6C23F4BDA700FE06BE /* ConnectionManager.swift in Sources */,
 				2CD8AC5F241AC072005C8628 /* ProviderRouter.swift in Sources */,

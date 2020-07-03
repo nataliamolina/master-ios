@@ -18,7 +18,10 @@ enum ProviderHomeViewModelStatus {
 private enum Sections: Int {
     case header
     case buttons
+    case title
     case list
+    case secondTitle
+    case secondList
 }
 
 class ProviderHomeViewModel {
@@ -26,6 +29,8 @@ class ProviderHomeViewModel {
     static var homeAlreadyOpened = false
 
     private var ordersDataSource = [ProviderOrderCellViewModel]()
+    private var providerExperiencesDataSource = [ProviderInfoCell]()
+    private var providerStudiesDataSource = [ProviderInfoCell]()
     private var providerServicesDataSource = [ProviderServiceCellViewModel]()
     private let provider: ProviderProfile
     
@@ -133,6 +138,48 @@ class ProviderHomeViewModel {
             }
             
             self?.ordersToViewModels(models: response)
+        }
+    }
+    
+    private func fetchProviderStudies() {
+        if dataSource.value.indices.contains(Sections.list.rawValue) {
+            dataSource.value[Sections.list.rawValue].removeAll()
+        }
+        
+        isLoading.value = true
+        //ProviderStudiesService
+        service.fetchProviderServices { [weak self] (response: [ProviderService], error: CMError?) in
+            self?.isLoading.value = false
+            
+            guard error == nil else {
+                self?.isLoading.value = false
+                
+                return
+            }
+            
+            self?.servicesToViewModels(models: response)
+            self?.fetchProviderOrders()
+        }
+    }
+    
+    private func fetchProviderExperiences() {
+        if dataSource.value.indices.contains(Sections.list.rawValue) {
+            dataSource.value[Sections.list.rawValue].removeAll()
+        }
+        
+        isLoading.value = true
+        //ProviderExperiencesService
+        service.fetchProviderServices { [weak self] (response: [ProviderService], error: CMError?) in
+            self?.isLoading.value = false
+            
+            guard error == nil else {
+                self?.isLoading.value = false
+                
+                return
+            }
+            
+            self?.servicesToViewModels(models: response)
+            self?.fetchProviderOrders()
         }
     }
     

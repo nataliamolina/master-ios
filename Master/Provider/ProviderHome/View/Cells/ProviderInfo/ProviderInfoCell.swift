@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ProviderInfoType {
+    case studies
+    case experience
+}
+
 protocol ProviderInfoCellDelegate: class {
     func editCellTapped(_ cell: ProviderInfoCell, viewModel: ProviderInfoCellDataSource)
 }
