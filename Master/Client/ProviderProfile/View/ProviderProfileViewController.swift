@@ -58,6 +58,8 @@ class ProviderProfileViewController: UIViewController {
         tableView.registerNib(ProviderProfileCell.self)
         tableView.registerNib(SelectorCell.self)
         tableView.registerNib(CommentCell.self)
+        tableView.registerNib(ProviderInfoCell.self)
+        tableView.registerNib(ProviderProfileTitleCell.self)
         
         continueButton.isHidden = true
         

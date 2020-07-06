@@ -9,6 +9,7 @@
 import Foundation
 
 class ProviderProfileService: ProviderProfileServiceProtocol {
+        
     // MARK: - Properties
     let connectionDependency: ConnectionManagerProtocol
     
@@ -42,6 +43,14 @@ class ProviderProfileService: ProviderProfileServiceProtocol {
         let endpoint = Endpoint.commentsBy(providerId: "\(providerId)")
 
         connectionDependency.get(url: endpoint) { (response: CommentsResponse?, error: CMError?) in
+            onComplete(response, error)
+        }
+    }
+    
+    func fetchProviderInfo(providerId: Int, onComplete: @escaping ([ProviderInfoServiceModel]?, CMError?) -> Void) {
+        let endpoint = Endpoint.providerInfoBy("\(providerId)")
+
+        connectionDependency.get(url: endpoint) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
             onComplete(response, error)
         }
     }

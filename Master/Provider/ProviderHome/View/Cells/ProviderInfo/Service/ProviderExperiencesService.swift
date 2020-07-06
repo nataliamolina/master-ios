@@ -10,13 +10,13 @@ import Foundation
 
 struct ProviderExperiencesService: Codable {
     let id: Int
-    let profession: String
-    let university: String
+    let experience: String
+    let position: String
     let dateSince: String
     let dateTo: String
-    let city: String
+    let place: String
     
     var providerInfoType: ProviderInfoType {
-        return .studies
+        return .experience
     }
 }

@@ -21,6 +21,8 @@ enum ProviderRouterTransitions {
     case orderDetailFromPush(viewModel: ProviderOrderDetailViewModel)
     case showProfile
     case onBoarding
+    case providerStudies(viewModel: ProviderInfoViewModel, delegate: ProviderInfoEditDelegate)
+    case providerExperience(viewModel: ProviderInfoViewModel, delegate: ProviderInfoEditDelegate)
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
@@ -79,6 +81,12 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             
         case .onBoarding:
             handleOnBoardingTransition()
+            
+        case .providerStudies(let viewModel, let delegate):
+            handleStudiesTransition(viewModel: viewModel, delegate: delegate)
+            
+        case .providerExperience(let viewModel, let delegate):
+            handleExperiencesTransition(viewModel: viewModel, delegate: delegate)
         }
     }
     
@@ -173,6 +181,18 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     
     private func handleLegalTransition() {
         let viewController = LegalViewController()
+        
+        providerNavigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleStudiesTransition(viewModel: ProviderInfoViewModel, delegate: ProviderInfoEditDelegate?) {
+        let viewController = ProviderStudiesViewController(viewModel: viewModel, delegate: delegate)
+        
+        providerNavigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleExperiencesTransition(viewModel: ProviderInfoViewModel, delegate: ProviderInfoEditDelegate?) {
+        let viewController = ProviderExperienceViewController(viewModel: viewModel, delegate: delegate)
         
         providerNavigationController.pushViewController(viewController, animated: true)
     }

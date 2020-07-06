@@ -52,6 +52,8 @@ class ProviderHomeViewController: UIViewController {
         tableView.registerNib(ProviderProfileCell.self)
         tableView.registerNib(SelectorCell.self)
         tableView.registerNib(ProviderOrderCell.self)
+        tableView.registerNib(ProviderInfoCell.self)
+        tableView.registerNib(ProviderProfileTitleCell.self)
         
         setupBindings()
         
@@ -103,7 +105,11 @@ extension ProviderHomeViewController: SelectorCellDelegate {
 // MARK: - ProviderInfoCellDelegate
 extension ProviderHomeViewController: ProviderInfoCellDelegate {
     func editCellTapped(_ cell: ProviderInfoCell, viewModel: ProviderInfoCellDataSource) {
-        router.transition(to: .orderDetail(viewModel: ProviderOrderDetailViewModel(orderId: viewModel.id.asInt)))
+        if viewModel.providerInfoType == .study {
+            router.transition(to: .providerStudies(viewModel: self.viewModel.getProviderInfoViewModel(infoCell: viewModel), delegate: self))
+            return
+        }
+        router.transition(to: .providerExperience(viewModel: self.viewModel.getProviderInfoViewModel(infoCell: viewModel), delegate: self))
     }
 }
 
@@ -135,5 +141,23 @@ extension ProviderHomeViewController: AddProviderServiceDelegate {
 extension ProviderHomeViewController: ProviderOrderCellDelegate {
     func cellTapped(_ cell: ProviderOrderCell, viewModel: ProviderOrderCellDataSource) {
         router.transition(to: .orderDetail(viewModel: ProviderOrderDetailViewModel(orderId: viewModel.id.asInt)))
+    }
+}
+
+// MARK: - ProviderInfoEditDelegate
+extension ProviderHomeViewController: ProviderInfoEditDelegate {
+    func serviceEdited() {
+        viewModel.fetchData()
+    }
+}
+
+// MARK: - ProviderProfileTitleCellDelegate
+extension ProviderHomeViewController: ProviderProfileTitleCellDelegate {
+    func addInfoCellTapped(_ cell: ProviderProfileTitleCell, viewModel: ProviderProfileTitleViewModel) {
+        if viewModel.providerInfoType == .study {
+            router.transition(to: .providerStudies(viewModel: self.viewModel.getProviderInfoViewModel(), delegate: self))
+            return
+        }
+        router.transition(to: .providerExperience(viewModel: self.viewModel.getProviderInfoViewModel(), delegate: self))
     }
 }

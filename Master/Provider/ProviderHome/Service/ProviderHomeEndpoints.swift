@@ -11,6 +11,7 @@ import Foundation
 private enum EndpointsKeys: String {
     case getProviderOrders
     case getProviderServices
+    case getProviderInfo
 }
 
 extension Endpoint {
@@ -20,5 +21,9 @@ extension Endpoint {
     
     static var getProviderServices: String {
         return Endpoint.url(with: EndpointsKeys.getProviderServices.rawValue)
+    }
+    
+    static var getProviderInfo: String {
+        return Endpoint.url(with: EndpointsKeys.getProviderInfo.rawValue)
     }
 }

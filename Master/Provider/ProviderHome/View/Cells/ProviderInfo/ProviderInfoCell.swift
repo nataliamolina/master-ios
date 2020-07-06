@@ -8,9 +8,10 @@
 
 import UIKit
 
-enum ProviderInfoType {
-    case studies
+enum ProviderInfoType: String, Codable {
+    case study
     case experience
+    case none
 }
 
 protocol ProviderInfoCellDelegate: class {
@@ -24,6 +25,12 @@ class ProviderInfoCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var placeLabel: UILabel!
     @IBOutlet private weak var editButton: UIButton!
+    
+    // MARK: - UI Actions
+    @IBAction private func editInfoAction() {
+        guard let viewModel = viewModel else { return }
+        delegate?.editCellTapped(self, viewModel: viewModel)
+    }
     
     // MARK: - Properties
     private let statusHelper = StatusHelper()
@@ -55,8 +62,8 @@ class ProviderInfoCell: UITableViewCell, ConfigurableCellProtocol {
         
         titleLabel.text = viewModel.title
         subTitleLabel.text = viewModel.subTitle
-        dateLabel.text = viewModel.date
-        placeLabel.text = viewModel.place
+        dateLabel.text = "\(viewModel.startDate) - \(viewModel.finishDate) "
+        placeLabel.text = "\(viewModel.city) - \(viewModel.country)"
         editButton.isHidden = !viewModel.isProvider
     }
 }
