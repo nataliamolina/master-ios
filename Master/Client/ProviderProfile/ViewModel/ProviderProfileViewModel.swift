@@ -18,7 +18,10 @@ enum ProviderProfileViewModelStatus {
 private enum Sections: Int {
     case header
     case buttons
+    case title
     case list
+    case secondTitle
+    case secondList
 }
 
 class ProviderProfileViewModel {
@@ -28,6 +31,8 @@ class ProviderProfileViewModel {
     private let categoryId: Int
     private var commentsDataSource = [CommentCellViewModel]()
     private var providerServicesDataSource = [ProviderServiceCellViewModel]()
+    private var providerExperiencesDataSource = [ProviderInfoCellViewModel]()
+    private var providerStudiesDataSource = [ProviderInfoCellViewModel]()
     
     let average: Var<Double> = Var(0)
     let status = Var<ProviderProfileViewModelStatus>(.undefined)
@@ -83,7 +88,7 @@ class ProviderProfileViewModel {
         guard
             let providerViewModel = dataSource.value[Sections.header.rawValue].first as? ProviderProfileCellViewModel,
             let cart = dataSource.value[Sections.list.rawValue] as? [ProviderServiceCellViewModel] else {
-            return nil
+                return nil
         }
         
         let checkoutProvider = CheckoutProvider(id: providerId,
@@ -157,15 +162,24 @@ class ProviderProfileViewModel {
     }
     
     private func setCommentsDataSource() {
+        dataSource.value[Sections.title.rawValue] = []
+        dataSource.value[Sections.secondTitle.rawValue] = []
+        dataSource.value[Sections.secondList.rawValue] = []
         dataSource.value[Sections.list.rawValue] = commentsDataSource
     }
     
     private func setProviderServicesDataSource() {
+        dataSource.value[Sections.title.rawValue] = []
+        dataSource.value[Sections.secondTitle.rawValue] = []
+        dataSource.value[Sections.secondList.rawValue] = []
         dataSource.value[Sections.list.rawValue] = providerServicesDataSource
     }
     
     private func setInfoProvider() {
-        dataSource.value[Sections.list.rawValue] = providerServicesDataSource
+        dataSource.value[Sections.title.rawValue] = [ProviderProfileTitleViewModel(title: "providerInfo.studies".localized, showButton: false, providerInfoType: .study)]
+        dataSource.value[Sections.list.rawValue] = providerExperiencesDataSource
+        dataSource.value[Sections.secondTitle.rawValue] = [ProviderProfileTitleViewModel(title: "providerInfo.experinces".localized, showButton: false, providerInfoType: .experience)]
+        dataSource.value[Sections.secondList.rawValue] = providerStudiesDataSource
     }
     
     private func fetchProviderServices() {
@@ -184,7 +198,6 @@ class ProviderProfileViewModel {
     
     private func fetchProviderComments() {
         service.fetchComments(providerId: providerId) { [weak self] (response: CommentsResponse?, error: CMError?) in
-            self?.isLoading.value = false
             
             guard let model = response, error == nil else {
                 self?.isLoading.value = false
@@ -193,8 +206,24 @@ class ProviderProfileViewModel {
             }
             
             self?.commentsToViewModel(model)
+            self?.fetchProviderInfo()
         }
     }
+    
+   private func fetchProviderInfo() {
+        service.fetchProviderInfo(providerId: providerId) { [weak self] (response: [ProviderInfoServiceModel]?, error: CMError?) in
+            
+            guard error == nil else {
+                self?.isLoading.value = false
+                
+                return
+            }
+            
+            self?.providerInfoToViewModels(models: response)
+        }
+    }
+    
+    
     
     private func commentsToViewModel(_ model: CommentsResponse) {
         average.value = model.average.rounded(toPlaces: 1)
@@ -217,6 +246,10 @@ class ProviderProfileViewModel {
         
         dataSource.value = [[profileViewModel]]
         dataSource.value.append([getButtonsCellViewModel()])
+        dataSource.value.append([])
+        dataSource.value.append([])
+        dataSource.value.append([])
+        dataSource.value.append([])
     }
     
     private func getButtonsCellViewModel() -> SelectorCellViewModel {
@@ -237,6 +270,39 @@ class ProviderProfileViewModel {
                                          productId: $0.getId())
         }
         
-        dataSource.value.append(providerServicesDataSource)
+        setProviderServicesDataSource()
+    }
+    
+    private func providerInfoToViewModels(models: [ProviderInfoServiceModel]?) {
+        guard let models = models else { return }
+        
+        let studies = models.filter { $0.dataType == .study }
+        let experiences = models.filter { $0.dataType == .experience }
+        
+        providerExperiencesDataSource = experiences.map {
+            ProviderInfoCellViewModel(title: $0.position,
+                                      subTitle: $0.location,
+                                      startDate: $0.startDate,
+                                      finishDate: $0.endDate,
+                                      country: $0.country,
+                                      city: $0.city,
+                                      id: $0.id ?? 0,
+                                      isProvider: false,
+                                      isCurrent: $0.isCurrent,
+                                      providerInfoType: $0.dataType)
+        }
+        
+        providerStudiesDataSource = studies.map {
+            ProviderInfoCellViewModel(title: $0.position,
+                                      subTitle: $0.location,
+                                      startDate: $0.startDate,
+                                      finishDate: $0.endDate,
+                                      country: $0.country,
+                                      city: $0.city,
+                                      id: $0.id ?? 0,
+                                      isProvider: false,
+                                      isCurrent: $0.isCurrent,
+                                      providerInfoType: $0.dataType)
+        }
     }
 }

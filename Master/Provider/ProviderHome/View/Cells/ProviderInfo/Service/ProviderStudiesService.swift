@@ -17,6 +17,6 @@ struct ProviderStudiesService: Codable {
     let city: String
     
     var providerInfoType: ProviderInfoType {
-        return .studies
+        return .study
     }
 }

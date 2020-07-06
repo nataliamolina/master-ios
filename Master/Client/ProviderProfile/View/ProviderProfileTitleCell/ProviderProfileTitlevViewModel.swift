@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct ProviderProfileTitleViewModel {
+struct ProviderProfileTitleViewModel: CellViewModelProtocol {
+    var identifier: String = ProviderProfileTitleCell.cellIdentifier
     let title: String
     let showButton: Bool
+    let providerInfoType: ProviderInfoType
 }

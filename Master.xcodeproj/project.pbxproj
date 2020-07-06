@@ -973,24 +973,39 @@
 		B7C7373524AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7373424AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift */; };
 		B7C7373624AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7373424AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift */; };
 		B7C7373724AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7373424AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift */; };
-		B7C7374424AC2B180028A8C7 /* ProviderExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7374324AC2B180028A8C7 /* ProviderExperienceViewModel.swift */; };
-		B7C7374524AC2B180028A8C7 /* ProviderExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7374324AC2B180028A8C7 /* ProviderExperienceViewModel.swift */; };
-		B7C7374624AC2B180028A8C7 /* ProviderExperienceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7374324AC2B180028A8C7 /* ProviderExperienceViewModel.swift */; };
 		B7C7374A24AC2B420028A8C7 /* ProviderExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7374824AC2B420028A8C7 /* ProviderExperienceViewController.swift */; };
 		B7C7374B24AC2B420028A8C7 /* ProviderExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7374824AC2B420028A8C7 /* ProviderExperienceViewController.swift */; };
 		B7C7374C24AC2B420028A8C7 /* ProviderExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7374824AC2B420028A8C7 /* ProviderExperienceViewController.swift */; };
 		B7C7374D24AC2B420028A8C7 /* ProviderExperienceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7374924AC2B420028A8C7 /* ProviderExperienceViewController.xib */; };
 		B7C7374E24AC2B420028A8C7 /* ProviderExperienceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7374924AC2B420028A8C7 /* ProviderExperienceViewController.xib */; };
 		B7C7374F24AC2B420028A8C7 /* ProviderExperienceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7374924AC2B420028A8C7 /* ProviderExperienceViewController.xib */; };
-		B7C7375424AC2B950028A8C7 /* ProviderStudiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7375324AC2B950028A8C7 /* ProviderStudiesViewModel.swift */; };
-		B7C7375524AC2B950028A8C7 /* ProviderStudiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7375324AC2B950028A8C7 /* ProviderStudiesViewModel.swift */; };
-		B7C7375624AC2B950028A8C7 /* ProviderStudiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7375324AC2B950028A8C7 /* ProviderStudiesViewModel.swift */; };
 		B7C7375924AC2BB60028A8C7 /* ProviderStudiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7375724AC2BB60028A8C7 /* ProviderStudiesViewController.swift */; };
 		B7C7375A24AC2BB60028A8C7 /* ProviderStudiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7375724AC2BB60028A8C7 /* ProviderStudiesViewController.swift */; };
 		B7C7375B24AC2BB60028A8C7 /* ProviderStudiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7375724AC2BB60028A8C7 /* ProviderStudiesViewController.swift */; };
 		B7C7375C24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
 		B7C7375D24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
 		B7C7375E24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
+		B7E6FEB124B2783000F7B67F /* ProviderInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */; };
+		B7E6FEB224B2783000F7B67F /* ProviderInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */; };
+		B7E6FEB324B2783000F7B67F /* ProviderInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */; };
+		B7E6FEB824B27EBC00F7B67F /* ProviderInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB724B27EBC00F7B67F /* ProviderInfoViewModel.swift */; };
+		B7E6FEB924B27EBC00F7B67F /* ProviderInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB724B27EBC00F7B67F /* ProviderInfoViewModel.swift */; };
+		B7E6FEBA24B27EBC00F7B67F /* ProviderInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB724B27EBC00F7B67F /* ProviderInfoViewModel.swift */; };
+		B7E6FEBC24B2893F00F7B67F /* ProviderInfoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEBB24B2893F00F7B67F /* ProviderInfoEndpoint.swift */; };
+		B7E6FEBD24B2893F00F7B67F /* ProviderInfoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEBB24B2893F00F7B67F /* ProviderInfoEndpoint.swift */; };
+		B7E6FEBE24B2893F00F7B67F /* ProviderInfoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEBB24B2893F00F7B67F /* ProviderInfoEndpoint.swift */; };
+		B7E6FEC024B28A9800F7B67F /* ProviderInfoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEBF24B28A9800F7B67F /* ProviderInfoServiceProtocol.swift */; };
+		B7E6FEC124B28A9800F7B67F /* ProviderInfoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEBF24B28A9800F7B67F /* ProviderInfoServiceProtocol.swift */; };
+		B7E6FEC224B28A9800F7B67F /* ProviderInfoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEBF24B28A9800F7B67F /* ProviderInfoServiceProtocol.swift */; };
+		B7E6FEC424B28B1200F7B67F /* ProviderInfoServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEC324B28B1200F7B67F /* ProviderInfoServiceModel.swift */; };
+		B7E6FEC524B28B1200F7B67F /* ProviderInfoServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEC324B28B1200F7B67F /* ProviderInfoServiceModel.swift */; };
+		B7E6FEC624B28B1200F7B67F /* ProviderInfoServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEC324B28B1200F7B67F /* ProviderInfoServiceModel.swift */; };
+		B7E6FEC824B296D900F7B67F /* ProviderInfoServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEC724B296D900F7B67F /* ProviderInfoServiceRequest.swift */; };
+		B7E6FEC924B296D900F7B67F /* ProviderInfoServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEC724B296D900F7B67F /* ProviderInfoServiceRequest.swift */; };
+		B7E6FECA24B296D900F7B67F /* ProviderInfoServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEC724B296D900F7B67F /* ProviderInfoServiceRequest.swift */; };
+		B7E6FECC24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
+		B7E6FECD24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
+		B7E6FECE24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
 		E5D514CBDA39FA984304D3BA /* libPods-Master.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ED18371995DD3D60F7D239 /* libPods-Master.a */; };
 		E941E1CEF0512E9C1A4C452D /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BD96F90BD74A7B915A7191 /* libPods-MasterTests.a */; };
 /* End PBXBuildFile section */
@@ -1379,12 +1394,17 @@
 		B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoCell.swift; sourceTree = "<group>"; };
 		B7C7372D24AC1CD00028A8C7 /* ProviderInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderInfoCell.xib; sourceTree = "<group>"; };
 		B7C7373424AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoCellViewModel.swift; sourceTree = "<group>"; };
-		B7C7374324AC2B180028A8C7 /* ProviderExperienceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderExperienceViewModel.swift; sourceTree = "<group>"; };
 		B7C7374824AC2B420028A8C7 /* ProviderExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderExperienceViewController.swift; sourceTree = "<group>"; };
 		B7C7374924AC2B420028A8C7 /* ProviderExperienceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderExperienceViewController.xib; sourceTree = "<group>"; };
-		B7C7375324AC2B950028A8C7 /* ProviderStudiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderStudiesViewModel.swift; sourceTree = "<group>"; };
 		B7C7375724AC2BB60028A8C7 /* ProviderStudiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderStudiesViewController.swift; sourceTree = "<group>"; };
 		B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderStudiesViewController.xib; sourceTree = "<group>"; };
+		B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoModel.swift; sourceTree = "<group>"; };
+		B7E6FEB724B27EBC00F7B67F /* ProviderInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoViewModel.swift; sourceTree = "<group>"; };
+		B7E6FEBB24B2893F00F7B67F /* ProviderInfoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoEndpoint.swift; sourceTree = "<group>"; };
+		B7E6FEBF24B28A9800F7B67F /* ProviderInfoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoServiceProtocol.swift; sourceTree = "<group>"; };
+		B7E6FEC324B28B1200F7B67F /* ProviderInfoServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoServiceModel.swift; sourceTree = "<group>"; };
+		B7E6FEC724B296D900F7B67F /* ProviderInfoServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoServiceRequest.swift; sourceTree = "<group>"; };
+		B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoService.swift; sourceTree = "<group>"; };
 		C124397E13D1D5DCB184DCAF /* Pods-Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev.debug.xcconfig"; path = "Target Support Files/Pods-Dev/Pods-Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		C76166256FB300EFAFF75F95 /* Pods-Master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master.debug.xcconfig"; path = "Target Support Files/Pods-Master/Pods-Master.debug.xcconfig"; sourceTree = "<group>"; };
 		C93990FA84FB48D3E3AD7A70 /* Pods-Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev.release.xcconfig"; path = "Target Support Files/Pods-Dev/Pods-Dev.release.xcconfig"; sourceTree = "<group>"; };
@@ -2303,6 +2323,7 @@
 				2C73AE9623F4FD5700267899 /* Result.swift */,
 				2CF6ABC223F7B00A00F9EF40 /* Provider.swift */,
 				2CF6ABC623F7B21000F9EF40 /* ProviderService.swift */,
+				B7E6FEC324B28B1200F7B67F /* ProviderInfoServiceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3043,6 +3064,9 @@
 		B7C7373824AC2A5F0028A8C7 /* ProviderInfo */ = {
 			isa = PBXGroup;
 			children = (
+				B7E6FEB624B27E8D00F7B67F /* ViewModel */,
+				B7E6FEB524B2788100F7B67F /* Service */,
+				B7E6FEB424B2784A00F7B67F /* Model */,
 				B7C7375024AC2B5D0028A8C7 /* ProviderStudies */,
 				B7C7374724AC2B310028A8C7 /* ProviderExperience */,
 			);
@@ -3058,18 +3082,9 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B7C7373A24AC2A820028A8C7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B7C7374324AC2B180028A8C7 /* ProviderExperienceViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		B7C7374724AC2B310028A8C7 /* ProviderExperience */ = {
 			isa = PBXGroup;
 			children = (
-				B7C7373A24AC2A820028A8C7 /* ViewModel */,
 				B7C7373924AC2A7B0028A8C7 /* View */,
 			);
 			path = ProviderExperience;
@@ -3079,17 +3094,8 @@
 			isa = PBXGroup;
 			children = (
 				B7C7375224AC2B820028A8C7 /* View */,
-				B7C7375124AC2B780028A8C7 /* ViewModel */,
 			);
 			path = ProviderStudies;
-			sourceTree = "<group>";
-		};
-		B7C7375124AC2B780028A8C7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B7C7375324AC2B950028A8C7 /* ProviderStudiesViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B7C7375224AC2B820028A8C7 /* View */ = {
@@ -3099,6 +3105,33 @@
 				B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B7E6FEB424B2784A00F7B67F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */,
+				B7E6FEC724B296D900F7B67F /* ProviderInfoServiceRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7E6FEB524B2788100F7B67F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B7E6FEBB24B2893F00F7B67F /* ProviderInfoEndpoint.swift */,
+				B7E6FEBF24B28A9800F7B67F /* ProviderInfoServiceProtocol.swift */,
+				B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B7E6FEB624B27E8D00F7B67F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7E6FEB724B27EBC00F7B67F /* ProviderInfoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C54A025159B1A14E4438C4AD /* Pods */ = {
@@ -3842,6 +3875,7 @@
 				2C44ACD424539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */,
 				2CD8AC56241AC03E005C8628 /* ProviderMainViewController.swift in Sources */,
 				2C3E50A4240C79B500873495 /* RouterBase.swift in Sources */,
+				B7E6FEC524B28B1200F7B67F /* ProviderInfoServiceModel.swift in Sources */,
 				2C44ACE02453A0320099B523 /* CitySelectorItem.swift in Sources */,
 				2CE9E1F0245FC54900739A7D /* ProviderWelcomeViewModel.swift in Sources */,
 				2C8B3A2824363313005FE926 /* ProviderServiceRequest.swift in Sources */,
@@ -3890,6 +3924,7 @@
 				2C3E50B6240C79B500873495 /* CategoryCell.swift in Sources */,
 				2C3E50B7240C79B500873495 /* HomeRouter.swift in Sources */,
 				2C3E50B8240C79B500873495 /* LoaderView.swift in Sources */,
+				B7E6FEB224B2783000F7B67F /* ProviderInfoModel.swift in Sources */,
 				2C671723241DC58900C86531 /* ProviderPhotoViewModel.swift in Sources */,
 				2CA96F8C240F5F5D0056C2F0 /* PaymentViewModel.swift in Sources */,
 				2C3E50B9240C79B500873495 /* OrderDetailEndpoints.swift in Sources */,
@@ -3904,6 +3939,7 @@
 				2C67171F241DC49700C86531 /* ProviderPhotoRequest.swift in Sources */,
 				2C3E50BF240C79B500873495 /* LoginRequest.swift in Sources */,
 				2C44ACCC24539DDF0099B523 /* CitySelectorService.swift in Sources */,
+				B7E6FEBD24B2893F00F7B67F /* ProviderInfoEndpoint.swift in Sources */,
 				2C3E50C0240C79B500873495 /* MainViewModel.swift in Sources */,
 				2C3E50C1240C79B500873495 /* OrderCell.swift in Sources */,
 				2C8B3A30243649B2005FE926 /* UITextField+Extensions.swift in Sources */,
@@ -3923,6 +3959,7 @@
 				2C3E50C9240C79B500873495 /* ProductSelectorResult.swift in Sources */,
 				2C3E50CA240C79B500873495 /* SelectorCellViewModel.swift in Sources */,
 				2C8B3A41243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
+				B7E6FEC124B28A9800F7B67F /* ProviderInfoServiceProtocol.swift in Sources */,
 				2C76E322245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */,
 				2C3E50CB240C79B500873495 /* ProviderWithScore.swift in Sources */,
 				2C0D25C22438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
@@ -3934,10 +3971,10 @@
 				2C3E50CF240C79B500873495 /* OrderDetailService.swift in Sources */,
 				2C3E50D0240C79B500873495 /* OrdersService.swift in Sources */,
 				2C3E50D1240C79B500873495 /* ProviderProfileService.swift in Sources */,
-				B7C7375524AC2B950028A8C7 /* ProviderStudiesViewModel.swift in Sources */,
 				2C8B3A4A243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */,
 				2C3E50D2240C79B500873495 /* Service.swift in Sources */,
 				2C3E50D3240C79B500873495 /* UITableViewCell+Extensions.swift in Sources */,
+				B7E6FEC924B296D900F7B67F /* ProviderInfoServiceRequest.swift in Sources */,
 				2C3E50D4240C79B500873495 /* CheckoutProviderCellViewModel.swift in Sources */,
 				2C3E50D5240C79B500873495 /* OrderServiceProtocol.swift in Sources */,
 				2C1F2F7E241EB81F008E803D /* ProviderHomeServiceProtocol.swift in Sources */,
@@ -3964,6 +4001,7 @@
 				2C3E50E6240C79B500873495 /* UIApplication+Extensions.swift in Sources */,
 				2C3E50E7240C79B500873495 /* Array+Extensions.swift in Sources */,
 				2CE9E1E9245FC53B00739A7D /* ProviderWelcomeViewController.swift in Sources */,
+				B7E6FECD24B2971B00F7B67F /* ProviderInfoService.swift in Sources */,
 				2C3E50E8240C79B500873495 /* OrdersViewModel.swift in Sources */,
 				2C3E50E9240C79B500873495 /* GmailRequest.swift in Sources */,
 				2C44ACD024539E080099B523 /* City.swift in Sources */,
@@ -3983,7 +4021,6 @@
 				2C3E50EF240C79B500873495 /* OrderProviderService.swift in Sources */,
 				2C3E50F0240C79B500873495 /* LegalViewController.swift in Sources */,
 				2C3E50F1240C79B500873495 /* ProviderProfileServiceProtocol.swift in Sources */,
-				B7C7374524AC2B180028A8C7 /* ProviderExperienceViewModel.swift in Sources */,
 				2C147106241DCA82009E2FDA /* Threads.swift in Sources */,
 				2C3E50F2240C79B500873495 /* CheckoutHeaderCellViewModel.swift in Sources */,
 				2C3E50F3240C79B500873495 /* CommentCellViewModel.swift in Sources */,
@@ -4043,6 +4080,7 @@
 				2C4EBFCE2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */,
 				B7C7372F24AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */,
 				2C3E5116240C79B500873495 /* ConnectionManagerProtocol.swift in Sources */,
+				B7E6FEB924B27EBC00F7B67F /* ProviderInfoViewModel.swift in Sources */,
 				2C3E5117240C79B500873495 /* CompleteTextViewController.swift in Sources */,
 				2C671712241DC3EE00C86531 /* ProviderPhotoEndpoints.swift in Sources */,
 				2C8B3A3424365716005FE926 /* MTextView.swift in Sources */,
@@ -4103,6 +4141,7 @@
 				2C44ACD324539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */,
 				2CD8AC55241AC03E005C8628 /* ProviderMainViewController.swift in Sources */,
 				2CC3DBD82411EBCC001E76B2 /* RouterBase.swift in Sources */,
+				B7E6FEC424B28B1200F7B67F /* ProviderInfoServiceModel.swift in Sources */,
 				2C44ACDF2453A0320099B523 /* CitySelectorItem.swift in Sources */,
 				2CE9E1EF245FC54900739A7D /* ProviderWelcomeViewModel.swift in Sources */,
 				2C8B3A2724363313005FE926 /* ProviderServiceRequest.swift in Sources */,
@@ -4151,6 +4190,7 @@
 				2CC3DBEA2411EBCC001E76B2 /* CategoryCell.swift in Sources */,
 				2CC3DBEB2411EBCC001E76B2 /* HomeRouter.swift in Sources */,
 				2CC3DBEC2411EBCC001E76B2 /* LoaderView.swift in Sources */,
+				B7E6FEB124B2783000F7B67F /* ProviderInfoModel.swift in Sources */,
 				2C671722241DC58900C86531 /* ProviderPhotoViewModel.swift in Sources */,
 				2CC3DBED2411EBCC001E76B2 /* PaymentViewModel.swift in Sources */,
 				2CC3DBEE2411EBCC001E76B2 /* OrderDetailEndpoints.swift in Sources */,
@@ -4165,6 +4205,7 @@
 				2C67171E241DC49700C86531 /* ProviderPhotoRequest.swift in Sources */,
 				2CC3DBF42411EBCC001E76B2 /* LoginRequest.swift in Sources */,
 				2C44ACCB24539DDF0099B523 /* CitySelectorService.swift in Sources */,
+				B7E6FEBC24B2893F00F7B67F /* ProviderInfoEndpoint.swift in Sources */,
 				2CC3DBF52411EBCC001E76B2 /* MainViewModel.swift in Sources */,
 				2CC3DBF62411EBCC001E76B2 /* OrderCell.swift in Sources */,
 				2C8B3A2F243649B2005FE926 /* UITextField+Extensions.swift in Sources */,
@@ -4184,6 +4225,7 @@
 				2CC3DBFE2411EBCC001E76B2 /* ProductSelectorResult.swift in Sources */,
 				2CC3DBFF2411EBCC001E76B2 /* SelectorCellViewModel.swift in Sources */,
 				2C8B3A40243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
+				B7E6FEC024B28A9800F7B67F /* ProviderInfoServiceProtocol.swift in Sources */,
 				2C76E321245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */,
 				2CC3DC002411EBCC001E76B2 /* ProviderWithScore.swift in Sources */,
 				2C0D25C12438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
@@ -4195,10 +4237,10 @@
 				2CC3DC052411EBCC001E76B2 /* OrderDetailService.swift in Sources */,
 				2CC3DC062411EBCC001E76B2 /* OrdersService.swift in Sources */,
 				2CC3DC072411EBCC001E76B2 /* ProviderProfileService.swift in Sources */,
-				B7C7375424AC2B950028A8C7 /* ProviderStudiesViewModel.swift in Sources */,
 				2C8B3A49243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */,
 				2CC3DC082411EBCC001E76B2 /* Service.swift in Sources */,
 				2CC3DC092411EBCC001E76B2 /* UITableViewCell+Extensions.swift in Sources */,
+				B7E6FEC824B296D900F7B67F /* ProviderInfoServiceRequest.swift in Sources */,
 				2CC3DC0A2411EBCC001E76B2 /* CheckoutProviderCellViewModel.swift in Sources */,
 				2CC3DC0B2411EBCC001E76B2 /* OrderServiceProtocol.swift in Sources */,
 				2C1F2F7D241EB81F008E803D /* ProviderHomeServiceProtocol.swift in Sources */,
@@ -4225,6 +4267,7 @@
 				2CC3DC1C2411EBCC001E76B2 /* UIApplication+Extensions.swift in Sources */,
 				2CC3DC1D2411EBCC001E76B2 /* Array+Extensions.swift in Sources */,
 				2CE9E1E8245FC53B00739A7D /* ProviderWelcomeViewController.swift in Sources */,
+				B7E6FECC24B2971B00F7B67F /* ProviderInfoService.swift in Sources */,
 				2CC3DC1E2411EBCC001E76B2 /* OrdersViewModel.swift in Sources */,
 				2CC3DC1F2411EBCC001E76B2 /* GmailRequest.swift in Sources */,
 				2C44ACCF24539E080099B523 /* City.swift in Sources */,
@@ -4244,7 +4287,6 @@
 				2CC3DC272411EBCC001E76B2 /* OrderProviderService.swift in Sources */,
 				2CC3DC282411EBCC001E76B2 /* LegalViewController.swift in Sources */,
 				2CC3DC292411EBCC001E76B2 /* ProviderProfileServiceProtocol.swift in Sources */,
-				B7C7374424AC2B180028A8C7 /* ProviderExperienceViewModel.swift in Sources */,
 				2C147105241DCA82009E2FDA /* Threads.swift in Sources */,
 				2CC3DC2A2411EBCC001E76B2 /* CheckoutHeaderCellViewModel.swift in Sources */,
 				2CC3DC2B2411EBCC001E76B2 /* CommentCellViewModel.swift in Sources */,
@@ -4304,6 +4346,7 @@
 				2C4EBFCD2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */,
 				B7C7372E24AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */,
 				2CC3DC502411EBCC001E76B2 /* ConnectionManagerProtocol.swift in Sources */,
+				B7E6FEB824B27EBC00F7B67F /* ProviderInfoViewModel.swift in Sources */,
 				2CC3DC512411EBCC001E76B2 /* CompleteTextViewController.swift in Sources */,
 				2C671711241DC3EE00C86531 /* ProviderPhotoEndpoints.swift in Sources */,
 				2C8B3A3324365716005FE926 /* MTextView.swift in Sources */,
@@ -4364,6 +4407,7 @@
 				2C44ACD524539E590099B523 /* CitySelectorServiceProtocol.swift in Sources */,
 				2CD8AC57241AC03E005C8628 /* ProviderMainViewController.swift in Sources */,
 				2C7E7FBC23F89AC600D7835E /* ProviderListServiceEndpoint.swift in Sources */,
+				B7E6FEC624B28B1200F7B67F /* ProviderInfoServiceModel.swift in Sources */,
 				2C44ACE12453A0320099B523 /* CitySelectorItem.swift in Sources */,
 				2CE9E1F1245FC54900739A7D /* ProviderWelcomeViewModel.swift in Sources */,
 				2C8B3A2924363313005FE926 /* ProviderServiceRequest.swift in Sources */,
@@ -4412,6 +4456,7 @@
 				2C8C6C6523F4BB3400FE06BE /* User.swift in Sources */,
 				A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */,
 				2C73AE9923F4FE8700267899 /* HomeRouter.swift in Sources */,
+				B7E6FEB324B2783000F7B67F /* ProviderInfoModel.swift in Sources */,
 				2C671724241DC58900C86531 /* ProviderPhotoViewModel.swift in Sources */,
 				2C976A0C240ACF070073DD07 /* LoaderView.swift in Sources */,
 				2C3B807C240C0AEE00D4C6FE /* OrderDetailEndpoints.swift in Sources */,
@@ -4426,6 +4471,7 @@
 				2C671720241DC49700C86531 /* ProviderPhotoRequest.swift in Sources */,
 				2C73AE8F23F4E9E900267899 /* LoginRequest.swift in Sources */,
 				2C44ACCD24539DDF0099B523 /* CitySelectorService.swift in Sources */,
+				B7E6FEBE24B2893F00F7B67F /* ProviderInfoEndpoint.swift in Sources */,
 				2C42088E23F647E00058873D /* MainViewModel.swift in Sources */,
 				2C829ED0240B3E1E00D7DD81 /* OrderCell.swift in Sources */,
 				2C8B3A31243649B2005FE926 /* UITextField+Extensions.swift in Sources */,
@@ -4445,6 +4491,7 @@
 				2CEAD743240F57B80095E9A4 /* PaymentResponse.swift in Sources */,
 				2CFF4D9F23F99A980024B3F1 /* ProviderServiceCell.swift in Sources */,
 				2C8B3A42243699EC005FE926 /* ProviderOrderDetailViewModel.swift in Sources */,
+				B7E6FEC224B28A9800F7B67F /* ProviderInfoServiceProtocol.swift in Sources */,
 				2C76E323245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */,
 				2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */,
 				2C0D25C32438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
@@ -4456,10 +4503,10 @@
 				2C198D1D23F4CD3A00346395 /* SplashScreenEndpoints.swift in Sources */,
 				2C3B8080240C0B5B00D4C6FE /* OrderDetailService.swift in Sources */,
 				2CF6ABBE23F7AF0200F9EF40 /* OrdersService.swift in Sources */,
-				B7C7375624AC2B950028A8C7 /* ProviderStudiesViewModel.swift in Sources */,
 				2C8B3A4B243699EC005FE926 /* ProviderOrderDetailServiceProtocol.swift in Sources */,
 				2CA494DC23F998C600F87AD6 /* ProviderProfileService.swift in Sources */,
 				2CF6ABB623F7ADBD00F9EF40 /* Service.swift in Sources */,
+				B7E6FECA24B296D900F7B67F /* ProviderInfoServiceRequest.swift in Sources */,
 				A5F30D6423B4DA63005258A8 /* UITableViewCell+Extensions.swift in Sources */,
 				2CC7313F240475C6006FF85D /* CheckoutProviderCellViewModel.swift in Sources */,
 				2C1F2F7F241EB81F008E803D /* ProviderHomeServiceProtocol.swift in Sources */,
@@ -4486,6 +4533,7 @@
 				2CF6ABB323F7AD9200F9EF40 /* HomeService.swift in Sources */,
 				2C305D9B24008EFF005B76EB /* UIApplication+Extensions.swift in Sources */,
 				2CE9E1EA245FC53B00739A7D /* ProviderWelcomeViewController.swift in Sources */,
+				B7E6FECE24B2971B00F7B67F /* ProviderInfoService.swift in Sources */,
 				A5F30D4223B4C8A0005258A8 /* Array+Extensions.swift in Sources */,
 				2C829ED4240B435300D7DD81 /* OrdersViewModel.swift in Sources */,
 				2C44ACD124539E080099B523 /* City.swift in Sources */,
@@ -4505,7 +4553,6 @@
 				2CFF4DBF23FA130B0024B3F1 /* OrderProviderService.swift in Sources */,
 				2C3B8071240BFD8F00D4C6FE /* LegalViewController.swift in Sources */,
 				2CFF4DAD23F9A0570024B3F1 /* ProviderProfileServiceProtocol.swift in Sources */,
-				B7C7374624AC2B180028A8C7 /* ProviderExperienceViewModel.swift in Sources */,
 				2C147107241DCA82009E2FDA /* Threads.swift in Sources */,
 				2CC7313D24047500006FF85D /* CheckoutHeaderCellViewModel.swift in Sources */,
 				2CFF4DC623FA15760024B3F1 /* CommentCellViewModel.swift in Sources */,
@@ -4565,6 +4612,7 @@
 				2C4EBFCF2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */,
 				B7C7373024AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */,
 				2CAD87B124049A5A0063AEB2 /* CompleteTextViewController.swift in Sources */,
+				B7E6FEBA24B27EBC00F7B67F /* ProviderInfoViewModel.swift in Sources */,
 				2C198D1923F4C34600346395 /* SplashScreenServiceProtocol.swift in Sources */,
 				2C671713241DC3EE00C86531 /* ProviderPhotoEndpoints.swift in Sources */,
 				2C8B3A3524365716005FE926 /* MTextView.swift in Sources */,

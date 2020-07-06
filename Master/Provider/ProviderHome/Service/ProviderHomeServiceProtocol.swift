@@ -13,4 +13,5 @@ protocol ProviderHomeServiceProtocol {
     
     func fetchProviderServices(onComplete: @escaping (_ result: [ProviderService], _ error: CMError?) -> Void)
     func fetchProviderOrders(onComplete: @escaping (_ result: [Order], _ error: CMError?) -> Void)
+    func fetchProviderInfo(onComplete: @escaping (_ result: [ProviderInfoServiceModel], _ error: CMError?) -> Void)
 }

@@ -27,10 +27,10 @@ private enum Sections: Int {
 class ProviderHomeViewModel {
     // MARK: - Properties
     static var homeAlreadyOpened = false
-
+    
     private var ordersDataSource = [ProviderOrderCellViewModel]()
-    private var providerExperiencesDataSource = [ProviderInfoCell]()
-    private var providerStudiesDataSource = [ProviderInfoCell]()
+    private var providerExperiencesDataSource = [ProviderInfoCellViewModel]()
+    private var providerStudiesDataSource = [ProviderInfoCellViewModel]()
     private var providerServicesDataSource = [ProviderServiceCellViewModel]()
     private let provider: ProviderProfile
     
@@ -90,18 +90,42 @@ class ProviderHomeViewModel {
         return AddProviderServiceViewModel()
     }
     
+    func getProviderInfoViewModel(infoCell: ProviderInfoCellDataSource? = nil) -> ProviderInfoViewModel {
+        guard let info = infoCell else {
+            return ProviderInfoViewModel(info: ProviderInfoModel())
+        }
+        return ProviderInfoViewModel(info: ProviderInfoModel(id: info.id,
+                                                             dataType: info.providerInfoType,
+                                                             position: info.title,
+                                                             location: info.subTitle,
+                                                             startDate: info.startDate,
+                                                             endDate: info.finishDate,
+                                                             isCurrent: info.isCurrent,
+                                                             country: info.country,
+                                                             city: info.city))
+    }
+    
     // MARK: - Private Methods
     
     private func setOrdersDataSource() {
+        dataSource.value[Sections.title.rawValue] = []
         dataSource.value[Sections.list.rawValue] = ordersDataSource
+        dataSource.value[Sections.secondTitle.rawValue] = []
+        dataSource.value[Sections.secondList.rawValue] = []
     }
     
     private func setInfo() {
-        dataSource.value[Sections.list.rawValue] = ordersDataSource
+        dataSource.value[Sections.title.rawValue] = [ProviderProfileTitleViewModel(title: "providerInfo.experinces".localized, showButton: true, providerInfoType: .experience)]
+        dataSource.value[Sections.list.rawValue] = providerExperiencesDataSource
+        dataSource.value[Sections.secondTitle.rawValue] = [ProviderProfileTitleViewModel(title: "providerInfo.studies".localized, showButton: true, providerInfoType: .study)]
+        dataSource.value[Sections.secondList.rawValue] = providerStudiesDataSource
     }
     
     private func setProviderServicesDataSource() {
+        dataSource.value[Sections.title.rawValue] = []
         dataSource.value[Sections.list.rawValue] = providerServicesDataSource
+        dataSource.value[Sections.secondTitle.rawValue] = []
+        dataSource.value[Sections.secondList.rawValue] = []
     }
     
     private func fetchProviderServices() {
@@ -112,7 +136,6 @@ class ProviderHomeViewModel {
         isLoading.value = true
         
         service.fetchProviderServices { [weak self] (response: [ProviderService], error: CMError?) in
-            self?.isLoading.value = false
             
             guard error == nil else {
                 self?.isLoading.value = false
@@ -126,11 +149,8 @@ class ProviderHomeViewModel {
     }
     
     private func fetchProviderOrders() {
-        isLoading.value = true
-
         service.fetchProviderOrders { [weak self] (response: [Order], error: CMError?) in
-            self?.isLoading.value = false
-
+            
             guard error == nil else {
                 self?.isLoading.value = false
                 
@@ -138,17 +158,12 @@ class ProviderHomeViewModel {
             }
             
             self?.ordersToViewModels(models: response)
+            self?.fetchProviderInfo()
         }
     }
     
-    private func fetchProviderStudies() {
-        if dataSource.value.indices.contains(Sections.list.rawValue) {
-            dataSource.value[Sections.list.rawValue].removeAll()
-        }
-        
-        isLoading.value = true
-        //ProviderStudiesService
-        service.fetchProviderServices { [weak self] (response: [ProviderService], error: CMError?) in
+    private func fetchProviderInfo() {
+        service.fetchProviderInfo { [weak self] (response: [ProviderInfoServiceModel], error: CMError?) in
             self?.isLoading.value = false
             
             guard error == nil else {
@@ -157,29 +172,7 @@ class ProviderHomeViewModel {
                 return
             }
             
-            self?.servicesToViewModels(models: response)
-            self?.fetchProviderOrders()
-        }
-    }
-    
-    private func fetchProviderExperiences() {
-        if dataSource.value.indices.contains(Sections.list.rawValue) {
-            dataSource.value[Sections.list.rawValue].removeAll()
-        }
-        
-        isLoading.value = true
-        //ProviderExperiencesService
-        service.fetchProviderServices { [weak self] (response: [ProviderService], error: CMError?) in
-            self?.isLoading.value = false
-            
-            guard error == nil else {
-                self?.isLoading.value = false
-                
-                return
-            }
-            
-            self?.servicesToViewModels(models: response)
-            self?.fetchProviderOrders()
+            self?.experiencesToViewModels(models: response)
         }
     }
     
@@ -192,6 +185,10 @@ class ProviderHomeViewModel {
         
         dataSource.value = [[profileViewModel]]
         dataSource.value.append([getButtonsCellViewModel()])
+        dataSource.value.append([])
+        dataSource.value.append([])
+        dataSource.value.append([])
+        dataSource.value.append([])
     }
     
     private func getButtonsCellViewModel() -> SelectorCellViewModel {
@@ -211,8 +208,7 @@ class ProviderHomeViewModel {
                                          productCount: 0,
                                          productId: $0.getId())
         }
-        
-        dataSource.value.append(providerServicesDataSource)
+        setProviderServicesDataSource()
     }
     
     private func ordersToViewModels(models: [Order]) {
@@ -222,6 +218,39 @@ class ProviderHomeViewModel {
                                        orderCategory: $0.serviceCategory?.name ?? "",
                                        orderState: $0.orderState.type,
                                        isLastItem: $0.id == models.last?.id)
+        }
+    }
+    
+    private func experiencesToViewModels(models: [ProviderInfoServiceModel]?) {
+        guard let models = models else { return }
+        
+        let studies = models.filter { $0.dataType == .study }
+        let experiences = models.filter { $0.dataType == .experience }
+        
+        providerExperiencesDataSource = experiences.map {
+            ProviderInfoCellViewModel(title: $0.position,
+                                      subTitle: $0.location,
+                                      startDate: $0.startDate,
+                                      finishDate: $0.endDate,
+                                      country: $0.country,
+                                      city: $0.city,
+                                      id: $0.id,
+                                      isProvider: false,
+                                      isCurrent: $0.isCurrent,
+                                      providerInfoType: $0.dataType)
+        }
+        
+        providerStudiesDataSource = studies.map {
+            ProviderInfoCellViewModel(title: $0.position,
+                                      subTitle: $0.location,
+                                      startDate: $0.startDate,
+                                      finishDate: $0.endDate,
+                                      country: $0.country,
+                                      city: $0.city,
+                                      id: $0.id,
+                                      isProvider: false,
+                                      isCurrent: $0.isCurrent,
+                                      providerInfoType: $0.dataType)
         }
     }
 }
