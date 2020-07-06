@@ -12,4 +12,9 @@ extension String {
     struct Lang {
         static let generalError = "general.error".localized
     }
+    
+    struct FormatDate {
+        static let universalFormat = "yyyy-MM-dd'T00:00:00'"
+        static let shortFormat = "dd/MMM/yyyy"
+    }
 }

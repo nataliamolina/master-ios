@@ -15,6 +15,7 @@
                 <outlet property="isNowButton" destination="2kX-gC-cmU" id="x2r-pR-u3I"/>
                 <outlet property="placeTextField" destination="3mr-QE-N7t" id="Fy1-wJ-UeX"/>
                 <outlet property="positionTextField" destination="NZP-SF-0Tu" id="7YX-Ju-KGr"/>
+                <outlet property="saveButton" destination="0nn-dr-ynJ" id="uee-bS-bc7"/>
                 <outlet property="sinceTextField" destination="v1w-Fz-dBv" id="Nfl-ws-Xre"/>
                 <outlet property="toTextField" destination="i3o-ki-trq" id="xbb-QH-rsn"/>
                 <outlet property="view" destination="xtL-PS-SBR" id="wSu-cK-s2W"/>
@@ -62,7 +63,7 @@
                             <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="providerStudies.city"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="providerInfo.country"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LMh-16-bwh" customClass="MTextField" customModule="Local" customModuleProvider="target">
@@ -76,7 +77,7 @@
                             <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="providerStudies.city"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="providerInfo.city"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2y-lT-U5F" customClass="MTextField" customModule="Local" customModuleProvider="target">
@@ -163,27 +164,30 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nn-dr-ynJ" customClass="MButton" customModule="Local" customModuleProvider="target">
-                    <rect key="frame" x="157" y="795" width="100" height="47"/>
+                    <rect key="frame" x="20" y="795" width="374" height="47"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="pTd-2n-Euy"/>
                         <constraint firstAttribute="height" constant="47" id="vQa-0u-eai"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="providerInfo.save"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="styleId">
-                            <integer key="value" value="1"/>
+                            <integer key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveAction" destination="-1" eventType="touchUpInside" id="4ia-B4-cug"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fQ9-qV-o80" firstAttribute="bottom" secondItem="0nn-dr-ynJ" secondAttribute="bottom" constant="20" id="7GC-Dx-iSz"/>
+                <constraint firstItem="0nn-dr-ynJ" firstAttribute="leading" secondItem="fQ9-qV-o80" secondAttribute="leading" constant="20" id="Bbf-LI-juG"/>
                 <constraint firstItem="fQ9-qV-o80" firstAttribute="trailing" secondItem="Hde-pG-dnn" secondAttribute="trailing" constant="20" id="Eb3-28-U34"/>
-                <constraint firstItem="0nn-dr-ynJ" firstAttribute="centerX" secondItem="xtL-PS-SBR" secondAttribute="centerX" id="XVu-aE-Nw1"/>
                 <constraint firstItem="Hde-pG-dnn" firstAttribute="leading" secondItem="fQ9-qV-o80" secondAttribute="leading" constant="20" id="hsl-SP-nrs"/>
                 <constraint firstItem="Hde-pG-dnn" firstAttribute="top" secondItem="fQ9-qV-o80" secondAttribute="top" constant="30" id="l7o-7P-zUF"/>
+                <constraint firstItem="fQ9-qV-o80" firstAttribute="trailing" secondItem="0nn-dr-ynJ" secondAttribute="trailing" constant="20" id="wKF-Sb-xeo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fQ9-qV-o80"/>
             <point key="canvasLocation" x="139" y="121"/>

@@ -176,9 +176,20 @@ class ProviderProfileViewModel {
     }
     
     private func setInfoProvider() {
-        dataSource.value[Sections.title.rawValue] = [ProviderProfileTitleViewModel(title: "providerInfo.studies".localized, showButton: false, providerInfoType: .study)]
+        if !providerExperiencesDataSource.isEmpty {
+           dataSource.value[Sections.title.rawValue] = [
+            ProviderProfileTitleViewModel(title: "providerInfo.experinces".localized,
+                                          showButton: false,
+                                          providerInfoType: .study)]
+        }
         dataSource.value[Sections.list.rawValue] = providerExperiencesDataSource
-        dataSource.value[Sections.secondTitle.rawValue] = [ProviderProfileTitleViewModel(title: "providerInfo.experinces".localized, showButton: false, providerInfoType: .experience)]
+        
+        if !providerStudiesDataSource.isEmpty {
+          dataSource.value[Sections.secondTitle.rawValue] = [
+            ProviderProfileTitleViewModel(title: "providerInfo.studies".localized,
+                                          showButton: false,
+                                          providerInfoType: .experience)]
+        }
         dataSource.value[Sections.secondList.rawValue] = providerStudiesDataSource
     }
     
@@ -212,6 +223,7 @@ class ProviderProfileViewModel {
     
    private func fetchProviderInfo() {
         service.fetchProviderInfo(providerId: providerId) { [weak self] (response: [ProviderInfoServiceModel]?, error: CMError?) in
+            self?.isLoading.value = false
             
             guard error == nil else {
                 self?.isLoading.value = false
@@ -222,8 +234,6 @@ class ProviderProfileViewModel {
             self?.providerInfoToViewModels(models: response)
         }
     }
-    
-    
     
     private func commentsToViewModel(_ model: CommentsResponse) {
         average.value = model.average.rounded(toPlaces: 1)
@@ -276,8 +286,8 @@ class ProviderProfileViewModel {
     private func providerInfoToViewModels(models: [ProviderInfoServiceModel]?) {
         guard let models = models else { return }
         
-        let studies = models.filter { $0.dataType == .study }
-        let experiences = models.filter { $0.dataType == .experience }
+        let studies = models.filter { $0.dataType == ProviderInfoType.study.rawValue }
+        let experiences = models.filter { $0.dataType == ProviderInfoType.experience.rawValue }
         
         providerExperiencesDataSource = experiences.map {
             ProviderInfoCellViewModel(title: $0.position,
@@ -286,10 +296,10 @@ class ProviderProfileViewModel {
                                       finishDate: $0.endDate,
                                       country: $0.country,
                                       city: $0.city,
-                                      id: $0.id ?? 0,
+                                      id: $0.id,
                                       isProvider: false,
                                       isCurrent: $0.isCurrent,
-                                      providerInfoType: $0.dataType)
+                                      providerInfoType: ProviderInfoType(rawValue: $0.dataType) ?? .experience)
         }
         
         providerStudiesDataSource = studies.map {
@@ -299,10 +309,10 @@ class ProviderProfileViewModel {
                                       finishDate: $0.endDate,
                                       country: $0.country,
                                       city: $0.city,
-                                      id: $0.id ?? 0,
+                                      id: $0.id,
                                       isProvider: false,
                                       isCurrent: $0.isCurrent,
-                                      providerInfoType: $0.dataType)
+                                      providerInfoType: ProviderInfoType(rawValue: $0.dataType) ?? .study)
         }
     }
 }

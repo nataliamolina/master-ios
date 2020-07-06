@@ -12,7 +12,7 @@ private enum EndpointsKeys: String {
     case getCommentsByProviderId
     case providerServicesByCategoryId
     case providerProfileByUserId
-    case providerInfoByProviderId
+    case getProviderInfoByProviderId
 }
 
 extension Endpoint {
@@ -33,6 +33,6 @@ extension Endpoint {
     }
     
     static func providerInfoBy(_ providerId: String) -> String {
-        return Endpoint.url(with: EndpointsKeys.providerInfoByProviderId.rawValue).replace("{providerId}", with: providerId)
+        return Endpoint.url(with: EndpointsKeys.getProviderInfoByProviderId.rawValue).replace("{providerId}", with: providerId)
     }
 }

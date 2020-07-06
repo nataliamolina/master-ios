@@ -7,12 +7,20 @@
 //
 
 import Foundation
+import EasyBinding
 
+enum ProviderInfoServiceViewModelStatus {
+    case undefined
+    case error(error: String?)
+    case postSuccessful(info: [ProviderInfoServiceModel])
+    case putSuccessful(info: [ProviderInfoServiceModel])
+}
 class ProviderInfoViewModel {
     var info: ProviderInfoModel
+    let status = Var<ProviderInfoServiceViewModelStatus>(.undefined)
+    let isLoading = Var(false)
     
     private let service: ProviderInfoServiceModelProtocol
-    
     
     init(info: ProviderInfoModel,
          service: ProviderInfoServiceModelProtocol? = nil ) {
@@ -22,13 +30,45 @@ class ProviderInfoViewModel {
     }
     
     func saveInfo() {
-        service.postProviderInfo(request: getRequest()) { (result, error) in
-            <#code#>
+        guard let id = info.id, id != 0 else {
+            postInfo()
+            return
+        }
+        putInfo()
+    }
+    
+    private func postInfo() {
+        loadingState(true)
+        service.postProviderInfo(request: getRequest()) { [weak self] (result, error) in
+            self?.loadingState(false)
+            
+            if let error = error {
+                self?.status.value = .error(error: error.error)
+                
+                return
+            }
+            
+            self?.status.value = .postSuccessful(info: result ?? [])
         }
     }
     
-    func getRequest() -> ProviderInfoServiceModelRequest {
-        return ProviderInfoServiceModelRequest(dataType: info.dataType,
+    private func putInfo() {
+        loadingState(true)
+        service.putProviderInfo(request: getRequestPut()) { [weak self] (result, error) in
+            self?.loadingState(false)
+            
+            if let error = error {
+                self?.status.value = .error(error: error.error)
+                
+                return
+            }
+            
+            self?.status.value = .putSuccessful(info: result ?? [])
+        }
+    }
+    
+    private func getRequest() -> ProviderInfoServiceModelRequest {
+        return ProviderInfoServiceModelRequest(dataType: info.dataType.rawValue,
                                                position: info.position,
                                                location: info.location,
                                                startDate: info.startDate,
@@ -38,17 +78,21 @@ class ProviderInfoViewModel {
                                                city: info.city)
     }
     
-   /*
-     service.fetchProviderOrders { [weak self] (response: [Order], error: CMError?) in
-         
-         guard error == nil else {
-             self?.isLoading.value = false
-             
-             return
-         }
-         
-         self?.ordersToViewModels(models: response)
-         self?.fetchProviderInfo()
-     }
-     */
+    private func getRequestPut() -> ProviderInfoServiceModel {
+        return ProviderInfoServiceModel(id: info.id ?? 0,
+                                        dataType: info.dataType.rawValue,
+                                        position: info.position,
+                                        location: info.location,
+                                        startDate: info.startDate,
+                                        endDate: info.endDate,
+                                        isCurrent: info.isCurrent,
+                                        country: info.country,
+                                        city: info.city)
+    }
+    
+    private func loadingState(_ state: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            self?.isLoading.value = state
+        }
+    }
 }

@@ -84,14 +84,15 @@
 "providerInfo.experinces" = "Experiencia";
 "providerInfo.sinceDate" = "Desde";
 "providerInfo.toDate" = "Hasta";
+"providerInfo.current" = "Actual";
+"providerInfo.city" = "Ciudad";
+"providerInfo.country" = "País";
 "providerInfo.save" = "Guardar";
-"providerExperience.experience" = "Experiencia ";
 "providerExperience.position" = "Cargo";
 "providerExperience.experience" = "Lugar ";
 "providerExperience.now" = "Actualmente estoy en este cargo";
 "providerStudies.profession" = "Titulo";
 "providerStudies.university" = "Institución";
-"providerStudies.city" = "Ciudad ";
 "providerStudies.now" = "Actualmente estoy estudiando";
 
 // Checkout

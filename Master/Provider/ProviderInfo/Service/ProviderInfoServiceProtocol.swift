@@ -12,8 +12,8 @@ protocol ProviderInfoServiceModelProtocol {
     var connectionDependency: ConnectionManagerProtocol { get }
     
     func postProviderInfo(request: ProviderInfoServiceModelRequest,
-                          onComplete: @escaping (_ result: ProviderInfoServiceModel?, _ error: CMError?) -> Void)
+                          onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void)
     
-    func putProviderInfo(request: ProviderInfoModel,
-                         onComplete: @escaping (_ result: ProviderInfoServiceModel?, _ error: CMError?) -> Void)
+    func putProviderInfo(request: ProviderInfoServiceModel,
+                         onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void)
 }

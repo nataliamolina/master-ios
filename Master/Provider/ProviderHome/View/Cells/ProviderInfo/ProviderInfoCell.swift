@@ -62,8 +62,11 @@ class ProviderInfoCell: UITableViewCell, ConfigurableCellProtocol {
         
         titleLabel.text = viewModel.title
         subTitleLabel.text = viewModel.subTitle
-        dateLabel.text = "\(viewModel.startDate) - \(viewModel.finishDate) "
         placeLabel.text = "\(viewModel.city) - \(viewModel.country)"
         editButton.isHidden = !viewModel.isProvider
+        
+        let date = viewModel.isCurrent ? "providerInfo.current".localized : viewModel.endDateShow
+        
+       dateLabel.text = "\(viewModel.startDateShow) - \(date) "
     }
 }

@@ -9,17 +9,17 @@
 import Foundation
 
 private enum EndpointsKeys: String {
-    case editProviderInfo
-    case addProviderInfo
+    case updateProviderInfo
+    case postProviderInfo
 }
 extension Endpoint {
     
     static var addProviderInfo: String {
-        return Endpoint.url(with: EndpointsKeys.addProviderInfo.rawValue)
+        return Endpoint.url(with: EndpointsKeys.postProviderInfo.rawValue)
     }
     
     static func editProviderInfo(providerId: Int) -> String {
-        var endpoint = Endpoint.url(with: EndpointsKeys.editProviderInfo.rawValue)
+        var endpoint = Endpoint.url(with: EndpointsKeys.updateProviderInfo.rawValue)
         endpoint = endpoint.replace("{providerId}", with: providerId.asString)
         
         return endpoint

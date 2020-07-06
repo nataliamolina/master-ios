@@ -9,7 +9,7 @@
 import Foundation
 
 struct ProviderInfoServiceModelRequest: Codable {
-    var dataType: ProviderInfoType
+    var dataType: String
     var position: String
     var location: String
     var startDate: String
