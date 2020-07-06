@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProviderInfoEditDelegate: class {
-    func serviceEdited()
+    func serviceEdited(info: [ProviderInfoServiceModel])
 }
 class ProviderStudiesViewController: UIViewController {
     
@@ -21,6 +21,7 @@ class ProviderStudiesViewController: UIViewController {
     @IBOutlet private weak var countryTextField: UITextField!
     @IBOutlet private weak var cityTextField: UITextField!
     @IBOutlet private weak var isNowButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
     
     // MARK: - UI Actions
     @IBAction private func isNowAction() {
@@ -28,12 +29,15 @@ class ProviderStudiesViewController: UIViewController {
         nowValidate()
     }
     
+    @IBAction private func saveAction() {
+        saveInfo()
+    }
+    
     // MARK: - Properties
     private let datePicker = UIDatePicker()
     private let datePicker2 = UIDatePicker()
     private let viewModel: ProviderInfoViewModel?
     private weak var delegate: ProviderInfoEditDelegate?
-    private let formatdate = "dd/MMM/yyyy"
     
     // MARK: - Life Cycle
     init(viewModel: ProviderInfoViewModel,
@@ -48,6 +52,9 @@ class ProviderStudiesViewController: UIViewController {
     private func showDatePicker() {
         datePicker.datePickerMode = .date
         datePicker2.datePickerMode = .date
+        
+        datePicker.maximumDate = Date()
+        datePicker2.maximumDate = Date()
         
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -65,7 +72,8 @@ class ProviderStudiesViewController: UIViewController {
     }
     
     @objc private func donedatePicker() {
-        setDatestring(date: datePicker.date, date2: datePicker2.date)
+        validateTetField()
+        setDatestring()
         view.endEditing(true)
     }
     
@@ -73,16 +81,19 @@ class ProviderStudiesViewController: UIViewController {
         view.endEditing(true)
     }
     
-    private func setDatestring(date: Date?, date2: Date?) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = formatdate
+    private func setDatestring() {
+        viewModel?.info.startDate = datePicker.date.toString()
+        sinceTextField.text = viewModel?.info.startDateShow
+        checktodate()
         
-        if let dateSince = date {
-            sinceTextField.text = formatter.string(from: dateSince)
-        }
-        
-        if let dateTo = date2 {
-            toTextField.text = formatter.string(from: dateTo)
+        viewModel?.info.endDate = datePicker2.date.toString()
+        toTextField.text = viewModel?.info.endDateShow
+    }
+    
+    private func checktodate() {
+        datePicker2.minimumDate = datePicker.date
+        if datePicker2.date < datePicker.date {
+            datePicker2.date = datePicker.date
         }
     }
     
@@ -102,42 +113,102 @@ class ProviderStudiesViewController: UIViewController {
     }
     
     private func setupView() {
+        saveButton.isEnabled = false
+        professionTextField.delegate = self
+        universityTextField.delegate = self
+        countryTextField.delegate = self
+        cityTextField.delegate = self
+        sinceTextField.delegate = self
+        toTextField.delegate = self
+        
         enableKeyboardDismiss()
         showDatePicker()
+        setupBindings()
         setupWith()
     }
     
     private func setupWith() {
+        viewModel?.info.dataType = .study
         professionTextField.text = viewModel?.info.position
         universityTextField.text = viewModel?.info.location
         countryTextField.text = viewModel?.info.country
         cityTextField.text = viewModel?.info.city
-        sinceTextField.text = viewModel?.info.startDate
-        toTextField.text = viewModel?.info.endDate
+        sinceTextField.text = viewModel?.info.startDateShow
+        datePicker.date = viewModel?.info.startD ?? Date()
+        datePicker2.date = viewModel?.info.endD ?? Date()
         nowValidate()
+    }
+    
+    private func setupBindings() {
+        viewModel?.isLoading.listen { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
+        }
+        
+        viewModel?.status.listen { [weak self] status in
+            switch status {
+            case .error(let error):
+                self?.showError(message: error)
+                
+            case .postSuccessful(let info):
+                self?.navigationController?.popViewControllerWithHandler { [weak self] in
+                    self?.delegate?.serviceEdited(info: info)
+                }
+            case .putSuccessful(let info):
+                self?.navigationController?.popViewControllerWithHandler { [weak self] in
+                    self?.delegate?.serviceEdited(info: info)
+                }
+                
+            default:
+                return
+            }
+        }
     }
     
     private func nowValidate() {
         let image = viewModel?.info.isCurrent ?? false ? UIImage(named: "circleFill") : UIImage(named: "circle")
         isNowButton.setImage(image, for: .normal)
+        validateTetField()
+        
+        toTextField.text = viewModel?.info.isCurrent ?? false ? nil : viewModel?.info.endDateShow
+        toTextField.isEnabled = !(viewModel?.info.isCurrent ?? false)
     }
     
     private func saveInfo() {
         guard let position = professionTextField.text,
             let location = universityTextField.text,
             let country = countryTextField.text,
-            let city = cityTextField.text,
-            let startDate = sinceTextField.text,
-            let endDate = toTextField.text else {
+            let city = cityTextField.text else {
                 return
         }
         viewModel?.info.position = position
         viewModel?.info.location = location
         viewModel?.info.country = country
         viewModel?.info.city = city
-        viewModel?.info.startDate = startDate
-        viewModel?.info.endDate = endDate
         
         viewModel?.saveInfo()
+    }
+    
+    private func validateTetField() {
+        guard let position = professionTextField.text, !position.isEmpty,
+            let location = universityTextField.text, !location.isEmpty,
+            let country = countryTextField.text, !country.isEmpty,
+            let city = cityTextField.text, !city.isEmpty,
+            let startDate = sinceTextField.text, !startDate.isEmpty,
+            (toTextField.text != nil || viewModel?.info.isCurrent ?? false) else {
+                return
+        }
+        saveButton.isEnabled = true
+    }
+}
+
+extension ProviderStudiesViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        validateTetField()
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            dismissKeyboard()
+        }
+        return true
     }
 }

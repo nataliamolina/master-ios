@@ -32,8 +32,8 @@ class ProviderHomeService: ProviderHomeServiceProtocol {
         }
     }
     
-    func fetchProviderInfo(onComplete: @escaping ([ProviderInfoServiceModel], CMError?) -> Void) {
-        connectionDependency.get(url: Endpoint.getProviderInfo) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
+    func fetchProviderInfo(id: Int, onComplete: @escaping ([ProviderInfoServiceModel], CMError?) -> Void) {
+        connectionDependency.get(url: Endpoint.getProviderInfo(providerId: id)) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
             onComplete(response ?? [], error)
         }
     }

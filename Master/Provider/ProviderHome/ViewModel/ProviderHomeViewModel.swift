@@ -61,6 +61,11 @@ class ProviderHomeViewModel {
         return dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
     }
     
+    func updateInfo(models: [ProviderInfoServiceModel]?) {
+        providerInfoToViewModels(models: models)
+        setInfo()
+    }
+    
     func toggleCommentsSection(with index: Int) {
         let section = dataSource.value[Sections.buttons.rawValue].first
         
@@ -115,9 +120,15 @@ class ProviderHomeViewModel {
     }
     
     private func setInfo() {
-        dataSource.value[Sections.title.rawValue] = [ProviderProfileTitleViewModel(title: "providerInfo.experinces".localized, showButton: true, providerInfoType: .experience)]
+        dataSource.value[Sections.title.rawValue] = [
+            ProviderProfileTitleViewModel(title: "providerInfo.experinces".localized,
+                                          showButton: true,
+                                          providerInfoType: .experience)]
         dataSource.value[Sections.list.rawValue] = providerExperiencesDataSource
-        dataSource.value[Sections.secondTitle.rawValue] = [ProviderProfileTitleViewModel(title: "providerInfo.studies".localized, showButton: true, providerInfoType: .study)]
+        dataSource.value[Sections.secondTitle.rawValue] = [
+            ProviderProfileTitleViewModel(title: "providerInfo.studies".localized,
+                                          showButton: true,
+                                          providerInfoType: .study)]
         dataSource.value[Sections.secondList.rawValue] = providerStudiesDataSource
     }
     
@@ -163,7 +174,7 @@ class ProviderHomeViewModel {
     }
     
     private func fetchProviderInfo() {
-        service.fetchProviderInfo { [weak self] (response: [ProviderInfoServiceModel], error: CMError?) in
+        service.fetchProviderInfo(id: provider.id) { [weak self] (response: [ProviderInfoServiceModel], error: CMError?) in
             self?.isLoading.value = false
             
             guard error == nil else {
@@ -172,7 +183,7 @@ class ProviderHomeViewModel {
                 return
             }
             
-            self?.experiencesToViewModels(models: response)
+            self?.providerInfoToViewModels(models: response)
         }
     }
     
@@ -221,11 +232,11 @@ class ProviderHomeViewModel {
         }
     }
     
-    private func experiencesToViewModels(models: [ProviderInfoServiceModel]?) {
+    private func providerInfoToViewModels(models: [ProviderInfoServiceModel]?) {
         guard let models = models else { return }
         
-        let studies = models.filter { $0.dataType == .study }
-        let experiences = models.filter { $0.dataType == .experience }
+        let studies = models.filter { $0.dataType == ProviderInfoType.study.rawValue }
+        let experiences = models.filter { $0.dataType == ProviderInfoType.experience.rawValue }
         
         providerExperiencesDataSource = experiences.map {
             ProviderInfoCellViewModel(title: $0.position,
@@ -235,9 +246,9 @@ class ProviderHomeViewModel {
                                       country: $0.country,
                                       city: $0.city,
                                       id: $0.id,
-                                      isProvider: false,
+                                      isProvider: true,
                                       isCurrent: $0.isCurrent,
-                                      providerInfoType: $0.dataType)
+                                      providerInfoType: ProviderInfoType(rawValue: $0.dataType) ?? .experience)
         }
         
         providerStudiesDataSource = studies.map {
@@ -248,9 +259,9 @@ class ProviderHomeViewModel {
                                       country: $0.country,
                                       city: $0.city,
                                       id: $0.id,
-                                      isProvider: false,
+                                      isProvider: true,
                                       isCurrent: $0.isCurrent,
-                                      providerInfoType: $0.dataType)
+                                      providerInfoType: ProviderInfoType(rawValue: $0.dataType) ?? .study)
         }
     }
 }

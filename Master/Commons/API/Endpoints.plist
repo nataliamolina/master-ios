@@ -64,10 +64,12 @@
 	<string>server/ios</string>
 	<key>getProviderOrders</key>
 	<string>orders/provider</string>
-	<key>getProviderInfo</key>
-	<string> /api/v1/provider-data/</string>
+	<key>postProviderInfo</key>
+	<string>provider-data/</string>
 	<key>getProviderInfoByProviderId</key>
-	<string> /api/v1/provider-data/{providerId}</string>
+	<string>provider-data/{providerId}</string>
+	<key>updateProviderInfo</key>
+	<string>provider-data/update/{providerId}</string>
 	<key>getProviderServices</key>
 	<string>provider-services</string>
 </dict>

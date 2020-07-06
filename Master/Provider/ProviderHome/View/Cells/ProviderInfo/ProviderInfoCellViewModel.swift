@@ -19,6 +19,8 @@ protocol ProviderInfoCellDataSource {
     var isProvider: Bool { get }
     var isCurrent: Bool { get }
     var providerInfoType: ProviderInfoType { get }
+    var startDateShow: String { get }
+    var endDateShow: String { get }
 }
 struct ProviderInfoCellViewModel: ProviderInfoCellDataSource, CellViewModelProtocol {
     let title: String
@@ -32,4 +34,20 @@ struct ProviderInfoCellViewModel: ProviderInfoCellDataSource, CellViewModelProto
     let isCurrent: Bool
     let identifier: String = ProviderInfoCell.cellIdentifier
     let providerInfoType: ProviderInfoType
+    
+    var startD: Date? {
+        return startDate.toDate(format: String.FormatDate.universalFormat)
+    }
+    
+    var endD: Date? {
+        return finishDate.toDate(format: String.FormatDate.universalFormat)
+    }
+    
+    var startDateShow: String {
+        return startD?.toString(format: String.FormatDate.shortFormat) ?? ""
+    }
+    
+    var endDateShow: String {
+        return endD?.toString(format: String.FormatDate.shortFormat) ?? ""
+    }
 }

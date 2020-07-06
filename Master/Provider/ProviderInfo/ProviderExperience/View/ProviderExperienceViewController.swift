@@ -17,11 +17,16 @@ class ProviderExperienceViewController: UIViewController {
     @IBOutlet private weak var countryTextField: UITextField!
     @IBOutlet private weak var cityTextField: UITextField!
     @IBOutlet private weak var isNowButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
     
     // MARK: - UI Actions
     @IBAction private func isNowAction() {
         viewModel?.info.isCurrent.toggle()
         nowValidate()
+    }
+    
+    @IBAction private func saveAction() {
+        saveInfo()
     }
     
     // MARK: - Properties
@@ -45,6 +50,9 @@ class ProviderExperienceViewController: UIViewController {
         datePicker.datePickerMode = .date
         datePicker2.datePickerMode = .date
         
+        datePicker.maximumDate = Date()
+        datePicker2.maximumDate = Date()
+        
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "ok", style: .plain, target: self, action: #selector(donedatePicker))
@@ -61,7 +69,8 @@ class ProviderExperienceViewController: UIViewController {
     }
     
     @objc private func donedatePicker() {
-        setDatestring(date: datePicker.date, date2: datePicker.date)
+        validateTetField()
+        setDatestring()
         view.endEditing(true)
     }
     
@@ -69,16 +78,19 @@ class ProviderExperienceViewController: UIViewController {
         view.endEditing(true)
     }
     
-    private func setDatestring(date: Date?, date2: Date?) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = formatdate
+    private func setDatestring() {
+        viewModel?.info.startDate = datePicker.date.toString()
+        sinceTextField.text = viewModel?.info.startDateShow
+        checktodate()
         
-        if let dateSince = date {
-            sinceTextField.text = formatter.string(from: dateSince)
-        }
-        
-        if let dateTo = date2 {
-            toTextField.text = formatter.string(from: dateTo)
+        viewModel?.info.endDate = datePicker2.date.toString()
+        toTextField.text = viewModel?.info.endDateShow
+    }
+    
+    private func checktodate() {
+        datePicker2.minimumDate = datePicker.date
+        if datePicker2.date < datePicker.date {
+            datePicker2.date = datePicker.date
         }
     }
     
@@ -98,42 +110,103 @@ class ProviderExperienceViewController: UIViewController {
     }
     
     private func setupView() {
+        saveButton.isEnabled = false
+        saveButton.isEnabled = false
+        positionTextField.delegate = self
+        placeTextField.delegate = self
+        countryTextField.delegate = self
+        cityTextField.delegate = self
+        sinceTextField.delegate = self
+        toTextField.delegate = self
+        
         enableKeyboardDismiss()
         showDatePicker()
+        setupBindings()
         setupWith()
     }
     
+    private func setupBindings() {
+        viewModel?.isLoading.listen { isLoading in
+            isLoading ? Loader.show() : Loader.dismiss()
+        }
+        
+        viewModel?.status.listen { [weak self] status in
+            switch status {
+            case .error(let error):
+                self?.showError(message: error)
+                
+            case .postSuccessful(let info):
+                self?.navigationController?.popViewControllerWithHandler { [weak self] in
+                    self?.delegate?.serviceEdited(info: info)
+                }
+            case .putSuccessful(let info):
+                self?.navigationController?.popViewControllerWithHandler { [weak self] in
+                    self?.delegate?.serviceEdited(info: info)
+                }
+                
+            default:
+                return
+            }
+        }
+    }
+    
     private func setupWith() {
-        sinceTextField.text = viewModel?.info.startDate
-        toTextField.text = viewModel?.info.endDate
+        viewModel?.info.dataType = .experience
+        sinceTextField.text = viewModel?.info.startDateShow
+        toTextField.text = viewModel?.info.endDateShow
         positionTextField.text = viewModel?.info.position
         placeTextField.text = viewModel?.info.location
         countryTextField.text = viewModel?.info.country
-        cityTextField.text = viewModel?.info.city
+        datePicker.date = viewModel?.info.startD ?? Date()
+        datePicker2.date = viewModel?.info.endD ?? Date()
         nowValidate()
     }
     
     private func nowValidate() {
-       let image = viewModel?.info.isCurrent ?? false ? UIImage(named: "circleFill") : UIImage(named: "circle")
+        validateTetField()
+        let image = viewModel?.info.isCurrent ?? false ? UIImage(named: "circleFill") : UIImage(named: "circle")
         isNowButton.setImage(image, for: .normal)
+        
+        toTextField.text = viewModel?.info.isCurrent ?? false ? nil : viewModel?.info.endDateShow
+        toTextField.isEnabled = !(viewModel?.info.isCurrent ?? false)
     }
     
     private func saveInfo() {
         guard let position = positionTextField.text,
             let location = placeTextField.text,
             let country = countryTextField.text,
-            let city = cityTextField.text,
-            let startDate = sinceTextField.text,
-            let endDate = toTextField.text else {
+            let city = cityTextField.text else {
                 return
         }
         viewModel?.info.position = position
         viewModel?.info.location = location
         viewModel?.info.country = country
         viewModel?.info.city = city
-        viewModel?.info.startDate = startDate
-        viewModel?.info.endDate = endDate
         
         viewModel?.saveInfo()
+    }
+    
+    private func validateTetField() {
+        guard let position = positionTextField.text, !position.isEmpty,
+            let location = placeTextField.text, !location.isEmpty,
+            let country = countryTextField.text, !country.isEmpty,
+            let city = cityTextField.text, !city.isEmpty,
+            let startDate = sinceTextField.text, !startDate.isEmpty,
+            (toTextField.text != nil || viewModel?.info.isCurrent ?? false) else {
+                return
+        }
+        saveButton.isEnabled = true
+    }
+}
+
+extension ProviderExperienceViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        validateTetField()
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            dismissKeyboard()
+        }
+        return true
     }
 }

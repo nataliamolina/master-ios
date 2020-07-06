@@ -19,6 +19,22 @@ struct ProviderInfoModel: Codable {
     var country: String
     var city: String
     
+    var startD: Date? {
+        return startDate.toDate(format: String.FormatDate.universalFormat)
+    }
+    
+    var endD: Date? {
+        return endDate.toDate(format: String.FormatDate.universalFormat)
+    }
+    
+    var startDateShow: String {
+        return startD?.toString(format: String.FormatDate.shortFormat) ?? ""
+    }
+    
+    var endDateShow: String {
+        return endD?.toString(format: String.FormatDate.shortFormat) ?? ""
+    }
+    
     init(id: Int?,
          dataType: ProviderInfoType,
          position: String,

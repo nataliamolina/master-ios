@@ -19,15 +19,15 @@ class ProviderInfoService: ProviderInfoServiceModelProtocol {
     
     // MARK: - Public Methods
     func postProviderInfo(request: ProviderInfoServiceModelRequest,
-                          onComplete: @escaping (_ result: ProviderInfoServiceModel?, _ error: CMError?) -> Void) {
+                          onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void) {
         connectionDependency
-            .post(url: Endpoint.addProviderInfo, request: request) { (response: ProviderInfoServiceModel?, error: CMError?) in
+            .post(url: Endpoint.addProviderInfo, request: request) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
                 onComplete(response, error)
         }
     }
     
-    func putProviderInfo(request: ProviderInfoModel, onComplete: @escaping (ProviderInfoServiceModel?, CMError?) -> Void) {
-        connectionDependency.post(url: Endpoint.editProviderInfo(providerId: request.id ?? 0), request: request) { (response: ProviderInfoServiceModel?, error: CMError?) in
+    func putProviderInfo(request: ProviderInfoServiceModel, onComplete: @escaping ([ProviderInfoServiceModel]?, CMError?) -> Void) {
+        connectionDependency.put(url: Endpoint.editProviderInfo(providerId: request.id ?? 0), request: request) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
             onComplete(response, error)
             
         }

@@ -20,4 +20,10 @@ extension String {
     var asInt: Int {
         return Int(self) ?? 0
     }
+    
+    public func toDate(format: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.date(from: self)
+    }
 }

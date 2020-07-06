@@ -10,7 +10,7 @@ import Foundation
 
 struct ProviderInfoServiceModel: Codable {
     let id: Int
-    let dataType: ProviderInfoType
+    let dataType: String
     let position: String
     let location: String
     let startDate: String

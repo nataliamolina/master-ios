@@ -146,8 +146,8 @@ extension ProviderHomeViewController: ProviderOrderCellDelegate {
 
 // MARK: - ProviderInfoEditDelegate
 extension ProviderHomeViewController: ProviderInfoEditDelegate {
-    func serviceEdited() {
-        viewModel.fetchData()
+    func serviceEdited(info: [ProviderInfoServiceModel]) {
+        viewModel.updateInfo(models: info)
     }
 }
 
