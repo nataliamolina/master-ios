@@ -16,4 +16,5 @@ protocol ProviderInfoServiceModelProtocol {
     
     func putProviderInfo(request: ProviderInfoServiceModel,
                          onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void)
+    func deleteProviderInfo(providerId: Int, onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void)
 }

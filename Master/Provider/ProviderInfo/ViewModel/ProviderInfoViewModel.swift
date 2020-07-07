@@ -14,6 +14,7 @@ enum ProviderInfoServiceViewModelStatus {
     case error(error: String?)
     case postSuccessful(info: [ProviderInfoServiceModel])
     case putSuccessful(info: [ProviderInfoServiceModel])
+    case deleteSuccessful(info: [ProviderInfoServiceModel])
 }
 class ProviderInfoViewModel {
     var info: ProviderInfoModel
@@ -35,6 +36,10 @@ class ProviderInfoViewModel {
             return
         }
         putInfo()
+    }
+    
+    func delete() {
+        deleteInfo()
     }
     
     private func postInfo() {
@@ -64,6 +69,23 @@ class ProviderInfoViewModel {
             }
             
             self?.status.value = .putSuccessful(info: result ?? [])
+        }
+    }
+    
+    private func deleteInfo() {
+        guard let id = info.id else { return }
+        
+        loadingState(true)
+        service.deleteProviderInfo(providerId: id) { [weak self] (result, error) in
+            self?.loadingState(false)
+            
+            if let error = error {
+                self?.status.value = .error(error: error.error)
+                
+                return
+            }
+            
+            self?.status.value = .deleteSuccessful(info: result ?? [])
         }
     }
     
