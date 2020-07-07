@@ -13,6 +13,7 @@
 "general.accept" = "Aceptar";
 "general.services" = "Servicios";
 "general.orders" = "Ordenes";
+"general.info" = "Info";
 "general.comments" = "Comentarios";
 "general.continue" = "Continuar";
 "general.add" = "Agregar";
@@ -77,6 +78,30 @@
 // Provider Detail
 "providerDetail.total" = "Total: ";
 "providerDetail.continue" = "Continuar";
+
+// Provider Info
+"providerInfo.acept" = "Aceptar";
+"providerInfo.cancel" = "Cancelar";
+"providerInfo.studies" = "Estudios";
+"providerInfo.experinces" = "Experiencia";
+"providerInfo.sinceDate" = "Desde";
+"providerInfo.toDate" = "Hasta";
+"providerInfo.current" = "Actual";
+"providerInfo.city" = "Ciudad";
+"providerInfo.country" = "País";
+"providerInfo.save" = "Guardar";
+"providerExperience.delete" = "Eliminar esta experiencia";
+"providerExperience.dialog.title" = "Eliminar experiencia";
+"providerExperience.dialog.message" = "Está seguro que desea eliminar esta experiencia";
+"providerExperience.position" = "Cargo";
+"providerExperience.experience" = "Lugar ";
+"providerExperience.now" = "Actualmente estoy en este cargo";
+"providerStudies.delete" = "Eliminar este estudio";
+"providerStudies.profession" = "Titulo";
+"providerStudies.university" = "Institución";
+"providerStudies.now" = "Actualmente estoy estudiando";
+"providerStudies.dialog.title" = "Eliminar estudio";
+"providerStudies.dialog.message" = "Está seguro que desea eliminar este estudio";
 
 // Checkout
 "checkout.title" = "Reserva";

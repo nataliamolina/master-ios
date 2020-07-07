@@ -11,6 +11,7 @@ import Foundation
 private enum EndpointsKeys: String {
     case getProviderOrders
     case getProviderServices
+    case getProviderInfoByProviderId
 }
 
 extension Endpoint {
@@ -20,5 +21,12 @@ extension Endpoint {
     
     static var getProviderServices: String {
         return Endpoint.url(with: EndpointsKeys.getProviderServices.rawValue)
+    }
+    
+    static func getProviderInfo(providerId: Int) -> String {
+        var endpoint = Endpoint.url(with: EndpointsKeys.getProviderInfoByProviderId.rawValue)
+        endpoint = endpoint.replace("{providerId}", with: providerId.asString)
+        
+        return endpoint
     }
 }

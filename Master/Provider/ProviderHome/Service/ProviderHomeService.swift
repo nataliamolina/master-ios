@@ -9,6 +9,7 @@
 import Foundation
 
 class ProviderHomeService: ProviderHomeServiceProtocol {
+    
     // MARK: - Properties
     let connectionDependency: ConnectionManagerProtocol
     
@@ -27,6 +28,12 @@ class ProviderHomeService: ProviderHomeServiceProtocol {
     
     func fetchProviderOrders(onComplete: @escaping (_ result: [Order], _ error: CMError?) -> Void) {
         connectionDependency.get(url: Endpoint.getProviderOrders) { (response: [Order]?, error: CMError?) in
+            onComplete(response ?? [], error)
+        }
+    }
+    
+    func fetchProviderInfo(id: Int, onComplete: @escaping ([ProviderInfoServiceModel], CMError?) -> Void) {
+        connectionDependency.get(url: Endpoint.getProviderInfo(providerId: id)) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
             onComplete(response ?? [], error)
         }
     }

@@ -18,4 +18,6 @@ protocol ProviderProfileServiceProtocol {
                                onComplete: @escaping (_ result: [ProviderService]?, _ error: CMError?) -> Void)
     
     func fetchComments(providerId: Int, onComplete: @escaping (_ result: CommentsResponse?, _ error: CMError?) -> Void)
+    
+    func fetchProviderInfo(providerId: Int, onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void)
 }
