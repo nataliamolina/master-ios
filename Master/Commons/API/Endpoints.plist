@@ -70,6 +70,8 @@
 	<string>provider-data/{providerId}</string>
 	<key>updateProviderInfo</key>
 	<string>provider-data/update/{providerId}</string>
+	<key>deleteProviderInfo</key>
+	<string>provider-data/delete/{providerId}</string>
 	<key>getProviderServices</key>
 	<string>provider-services</string>
 </dict>

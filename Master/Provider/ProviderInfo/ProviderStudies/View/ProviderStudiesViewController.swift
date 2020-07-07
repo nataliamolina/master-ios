@@ -22,6 +22,7 @@ class ProviderStudiesViewController: UIViewController {
     @IBOutlet private weak var cityTextField: UITextField!
     @IBOutlet private weak var isNowButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet private weak var deleteView: UIView!
     
     // MARK: - UI Actions
     @IBAction private func isNowAction() {
@@ -120,11 +121,15 @@ class ProviderStudiesViewController: UIViewController {
         cityTextField.delegate = self
         sinceTextField.delegate = self
         toTextField.delegate = self
+        deleteView.isHidden = viewModel?.info.id == nil
         
         enableKeyboardDismiss()
         showDatePicker()
         setupBindings()
         setupWith()
+        
+        deleteView.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                               action: #selector(deleteExperience)))
     }
     
     private func setupWith() {
@@ -137,6 +142,12 @@ class ProviderStudiesViewController: UIViewController {
         datePicker.date = viewModel?.info.startD ?? Date()
         datePicker2.date = viewModel?.info.endD ?? Date()
         nowValidate()
+    }
+    
+    @objc private func deleteExperience() {
+        confirmInfoDelete { [weak self] in
+            self?.viewModel?.delete()
+        }
     }
     
     private func setupBindings() {
@@ -157,11 +168,28 @@ class ProviderStudiesViewController: UIViewController {
                 self?.navigationController?.popViewControllerWithHandler { [weak self] in
                     self?.delegate?.serviceEdited(info: info)
                 }
-                
+            case .deleteSuccessful(let info):
+                self?.navigationController?.popViewControllerWithHandler { [weak self] in
+                    self?.delegate?.serviceEdited(info: info)
+                }
             default:
                 return
             }
         }
+    }
+    
+    private func confirmInfoDelete(onConfirmed: @escaping () -> Void) {
+        let dialog = UIAlertController(title: "providerExperience.dialog.title".localized,
+                                       message: "providerExperience.dialog.message".localized,
+                                       preferredStyle: .alert)
+        
+        dialog.addAction(UIAlertAction(title: "providerInfo.cancel".localized, style: .default, handler: nil))
+        
+        dialog.addAction(UIAlertAction(title: "providerInfo.acept".localized, style: .destructive, handler: { _ in
+            onConfirmed()
+        }))
+        
+        present(dialog, animated: true, completion: nil)
     }
     
     private func nowValidate() {

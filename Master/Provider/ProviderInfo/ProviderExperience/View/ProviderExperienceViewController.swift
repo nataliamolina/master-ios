@@ -18,6 +18,7 @@ class ProviderExperienceViewController: UIViewController {
     @IBOutlet private weak var cityTextField: UITextField!
     @IBOutlet private weak var isNowButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet private weak var deleteView: UIView!
     
     // MARK: - UI Actions
     @IBAction private func isNowAction() {
@@ -118,11 +119,15 @@ class ProviderExperienceViewController: UIViewController {
         cityTextField.delegate = self
         sinceTextField.delegate = self
         toTextField.delegate = self
+        deleteView.isHidden = viewModel?.info.id == nil
         
         enableKeyboardDismiss()
         showDatePicker()
         setupBindings()
         setupWith()
+        
+        deleteView.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                               action: #selector(deleteExperience)))
     }
     
     private func setupBindings() {
@@ -143,6 +148,10 @@ class ProviderExperienceViewController: UIViewController {
                 self?.navigationController?.popViewControllerWithHandler { [weak self] in
                     self?.delegate?.serviceEdited(info: info)
                 }
+            case .deleteSuccessful(let info):
+                self?.navigationController?.popViewControllerWithHandler { [weak self] in
+                    self?.delegate?.serviceEdited(info: info)
+                }
                 
             default:
                 return
@@ -156,6 +165,7 @@ class ProviderExperienceViewController: UIViewController {
         toTextField.text = viewModel?.info.endDateShow
         positionTextField.text = viewModel?.info.position
         placeTextField.text = viewModel?.info.location
+        cityTextField.text = viewModel?.info.city
         countryTextField.text = viewModel?.info.country
         datePicker.date = viewModel?.info.startD ?? Date()
         datePicker2.date = viewModel?.info.endD ?? Date()
@@ -171,6 +181,12 @@ class ProviderExperienceViewController: UIViewController {
         toTextField.isEnabled = !(viewModel?.info.isCurrent ?? false)
     }
     
+    @objc private func deleteExperience() {
+        confirmInfoDelete { [weak self] in
+            self?.viewModel?.delete()
+        }
+    }
+    
     private func saveInfo() {
         guard let position = positionTextField.text,
             let location = placeTextField.text,
@@ -184,6 +200,20 @@ class ProviderExperienceViewController: UIViewController {
         viewModel?.info.city = city
         
         viewModel?.saveInfo()
+    }
+    
+    private func confirmInfoDelete(onConfirmed: @escaping () -> Void) {
+        let dialog = UIAlertController(title: "providerExperience.dialog.title".localized,
+                                       message: "providerExperience.dialog.message".localized,
+                                       preferredStyle: .alert)
+        
+        dialog.addAction(UIAlertAction(title: "providerInfo.cancel".localized, style: .default, handler: nil))
+        
+        dialog.addAction(UIAlertAction(title: "providerInfo.acept".localized, style: .destructive, handler: { _ in
+            onConfirmed()
+        }))
+        
+        present(dialog, animated: true, completion: nil)
     }
     
     private func validateTetField() {

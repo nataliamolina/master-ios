@@ -27,9 +27,16 @@ class ProviderInfoService: ProviderInfoServiceModelProtocol {
     }
     
     func putProviderInfo(request: ProviderInfoServiceModel, onComplete: @escaping ([ProviderInfoServiceModel]?, CMError?) -> Void) {
-        connectionDependency.put(url: Endpoint.editProviderInfo(providerId: request.id ?? 0), request: request) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
+        connectionDependency.put(url: Endpoint.editProviderInfo(providerId: request.id),
+                                 request: request) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
+                                    onComplete(response, error)
+                                    
+        }
+    }
+    
+    func deleteProviderInfo(providerId: Int, onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void) {
+        connectionDependency.delete(url: Endpoint.deleteProviderInfo(providerId: providerId)) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
             onComplete(response, error)
-            
         }
     }
 }
