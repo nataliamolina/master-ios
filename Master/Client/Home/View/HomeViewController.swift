@@ -155,9 +155,9 @@ extension HomeViewController: UITableViewDataSource {
         return viewModel.dataSource.value.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+   /* func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.sectionTitles.safeContains(section)
-    }
+    }*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSource.value.safeContains(section)?.count ?? 0
