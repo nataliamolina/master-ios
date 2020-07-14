@@ -79,11 +79,6 @@
 @end // end @protocol DeviceCollectorSDKDelegate
 
 /**
- * @class DeviceCollectorSDK
- * @abstract Device Collector wrapper object.
- */
-@interface DeviceCollectorSDK : NSObject <UIWebViewDelegate>
-/**
  * @method skipList
  * @abstract A list of collectors to skip
  * @param list An NSArray of DC_COLLECTOR_* define values
