@@ -22,7 +22,6 @@
 		2C8F8CD7240F3B1200743D60 /* PaymentezCardScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CA0240F3B1200743D60 /* PaymentezCardScan.swift */; };
 		2C8F8CD8240F3B1200743D60 /* libKountDataCollector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F8CA2240F3B1200743D60 /* libKountDataCollector.a */; };
 		2C8F8CD9240F3B1200743D60 /* KDataCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F8CA3240F3B1200743D60 /* KDataCollector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C8F8CDA240F3B1200743D60 /* libDeviceCollectorLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F8CA5240F3B1200743D60 /* libDeviceCollectorLibrary.a */; };
 		2C8F8CDB240F3B1200743D60 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CA6240F3B1200743D60 /* Extension.swift */; };
 		2C8F8CDC240F3B1200743D60 /* PaymentezRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CA7240F3B1200743D60 /* PaymentezRequest.swift */; };
 		2C8F8CDD240F3B1200743D60 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F8CA8240F3B1200743D60 /* UITextField+fixCaretPosition.swift */; };
@@ -98,7 +97,6 @@
 		2C8F8CA2240F3B1200743D60 /* libKountDataCollector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKountDataCollector.a; sourceTree = "<group>"; };
 		2C8F8CA3240F3B1200743D60 /* KDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDataCollector.h; sourceTree = "<group>"; };
 		2C8F8CA4240F3B1200743D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2C8F8CA5240F3B1200743D60 /* libDeviceCollectorLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDeviceCollectorLibrary.a; sourceTree = "<group>"; };
 		2C8F8CA6240F3B1200743D60 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		2C8F8CA7240F3B1200743D60 /* PaymentezRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentezRequest.swift; sourceTree = "<group>"; };
 		2C8F8CA8240F3B1200743D60 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				2CEAD71D240F427C0095E9A4 /* AudioToolbox.framework in Frameworks */,
 				2CEAD729240F43360095E9A4 /* Foundation.framework in Frameworks */,
 				2CEAD721240F431A0095E9A4 /* Accelerate.framework in Frameworks */,
-				2C8F8CDA240F3B1200743D60 /* libDeviceCollectorLibrary.a in Frameworks */,
 				A82C84D5A81EF4EB9FD9C07D /* libPods-Paymentez.a in Frameworks */,
 				2CEAD731240F434A0095E9A4 /* Security.framework in Frameworks */,
 				2CEAD727240F432C0095E9A4 /* CoreVideo.framework in Frameworks */,
@@ -230,7 +227,6 @@
 				2C8F8C9F240F3B1200743D60 /* PaymentezAddViewController.xib */,
 				2C8F8CA0240F3B1200743D60 /* PaymentezCardScan.swift */,
 				2C8F8CA1240F3B1200743D60 /* DeviceCollectorLibrary */,
-				2C8F8CA5240F3B1200743D60 /* libDeviceCollectorLibrary.a */,
 				2C8F8CA6240F3B1200743D60 /* Extension.swift */,
 				2C8F8CA7240F3B1200743D60 /* PaymentezRequest.swift */,
 				2C8F8CA8240F3B1200743D60 /* UITextField+fixCaretPosition.swift */,
