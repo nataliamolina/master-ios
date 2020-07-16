@@ -90,8 +90,8 @@ class HomeViewModel {
         totalOrders.value = models.filter {
             $0.orderState.type == .pending ||
                 $0.orderState.type == .pendingForPayment ||
-                $0.orderState.type == .inProgress
-            
+                $0.orderState.type == .inProgress ||
+            $0.orderState.type == .paymentDone
         }.count.asString
     }
     
