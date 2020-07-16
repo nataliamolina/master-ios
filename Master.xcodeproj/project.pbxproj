@@ -4958,7 +4958,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				ENABLE_BITCODE = NO;
@@ -4974,7 +4974,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.6;
+				MARKETING_VERSION = 1.1.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-AGR-CLIENT";
 				PAYMENTEZ_APP_KEY = ZgwDXC2we1BKKL1rcPEspf9lzNtiEp;
@@ -4997,7 +4997,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5012,7 +5012,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.6;
+				MARKETING_VERSION = 1.1.7;
 				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-AGR-CLIENT";
 				PAYMENTEZ_APP_KEY = ZgwDXC2we1BKKL1rcPEspf9lzNtiEp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;
