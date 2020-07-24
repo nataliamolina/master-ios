@@ -45,7 +45,7 @@ class AddProviderServiceViewModel {
         
         loadingState(true)
         
-        uploader.upload(image: image, name: Session.shared.profile.document, path: "providers/services")
+        uploader.upload(image: image, name: "\(Date().timeIntervalSince1970)", path: "providers/services")
         
         uploader.onCompleteBlock = { [weak self] (isDone: Bool, result: String?, error: String?) in
             self?.loadingState(false)
