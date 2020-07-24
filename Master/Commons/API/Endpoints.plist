@@ -6,6 +6,10 @@
 	<string>cities</string>
 	<key>postProviderService</key>
 	<string>provider-services</string>
+	<key>putProviderService</key>
+	<string>provider-services/{serviceId}</string>
+	<key>deleteProviderService</key>
+	<string>provider-services/{serviceId}</string>
 	<key>updateOrderState</key>
 	<string>orders/{orderId}/update/{stateId}</string>
 	<key>getServiceCategories</key>
@@ -14,6 +18,8 @@
 	<string>provider/profile/photo</string>
 	<key>registerProvider</key>
 	<string>provider</string>
+	<key>editProvider</key>
+	<string>provider/profile</string>
 	<key>getProviderPhoto</key>
 	<string>provider/profile/photo</string>
 	<key>getProviderProfile</key>

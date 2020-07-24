@@ -76,19 +76,20 @@ class PaymentViewModel {
                 return
             }
             
-            let customParams: [String: String] = [
+            let customParams: [String: Any] = [
                 "user_first_name": Session.shared.profile.firstName,
                 "user_last_name": Session.shared.profile.lastName,
                 "user_email": Session.shared.profile.email,
                 "date": Date().description(with: Locale.current),
-                "details": description
+                "details": description,
+                "response": response
             ]
             
             print("\n")
             print("----- Paymentez Error -------")
             print(description)
             
-            let customError = NSError(domain: "master.app", code: 1022, userInfo: customParams)
+            let customError = NSError(domain: "master.ios.paymentez.error", code: 1, userInfo: customParams)
             
             Crashlytics.crashlytics().record(error: customError)
         }

@@ -74,34 +74,45 @@
 "serviceDetail.emptyState.title" = "Estamos buscando Masters para ti";
 "serviceDetail.emptyState.desc" = "Estamos buscando Masters que se quieran unir a la comunidad más grande de servicios online, pronto los tendremos disponibles.";
 "serviceDetail.emptyState.button" = "Quiero ser un Master";
+"serviceDetail.dialog.title" = "Eliminar Servicio";
+"serviceDetail.dialog.message" = "Está seguro que desea eliminar este servicio?";
 
 // Provider Detail
 "providerDetail.total" = "Total: ";
 "providerDetail.continue" = "Continuar";
 
 // Provider Info
+"provider.edit" = "Editar";
+"provider.remove" = "Eliminar";
 "providerInfo.acept" = "Aceptar";
 "providerInfo.cancel" = "Cancelar";
 "providerInfo.studies" = "Estudios";
+"providerInfo.studies.title" = "Estudio";
 "providerInfo.experinces" = "Experiencia";
 "providerInfo.sinceDate" = "Desde";
 "providerInfo.toDate" = "Hasta";
 "providerInfo.current" = "Actual";
 "providerInfo.city" = "Ciudad";
+"providerInfo.country.ex" = "ej: Colombia";
+"providerInfo.city.ex" = "ej: Bogotá";
 "providerInfo.country" = "País";
 "providerInfo.save" = "Guardar";
 "providerExperience.delete" = "Eliminar esta experiencia";
 "providerExperience.dialog.title" = "Eliminar experiencia";
-"providerExperience.dialog.message" = "Está seguro que desea eliminar esta experiencia";
+"providerExperience.dialog.message" = "Está seguro que desea eliminar esta experiencia?";
 "providerExperience.position" = "Cargo";
 "providerExperience.experience" = "Lugar ";
+"providerExperience.position.ex" = "ej: Ayudante de cocina";
+"providerExperience.experience.ex" = "ej: restaurante Buena Vista";
 "providerExperience.now" = "Actualmente estoy en este cargo";
 "providerStudies.delete" = "Eliminar este estudio";
 "providerStudies.profession" = "Titulo";
 "providerStudies.university" = "Institución";
+"providerStudies.profession.ex" = "ej: Ing Sistemas";
+"providerStudies.university.ex" = "ej: Universidad Nacional";
 "providerStudies.now" = "Actualmente estoy estudiando";
 "providerStudies.dialog.title" = "Eliminar estudio";
-"providerStudies.dialog.message" = "Está seguro que desea eliminar este estudio";
+"providerStudies.dialog.message" = "Está seguro que desea eliminar este estudio?";
 
 // Checkout
 "checkout.title" = "Reserva";
@@ -164,6 +175,8 @@
 "provider.register.aboutPlaceholder" = "Ejemplo: Soy un gran cocinero...";
 "provider.register.button" = "Unirme al Programa";
 "provider.register.city" = "¿En qué ciudad estás?";
+"provider.edit.button" = "Modificar";
+"provider.edit.bank" = "Número de cuenta";
 
 // Provider Photo
 "provider.photo.title" = "¡Tu Foto!";
@@ -192,7 +205,7 @@
 "selectCity.desc" = "Nos gustaría saber en qué ciudad estás para mostrarte Masters cerca de ti.";
 
 "welcome.screen1.title" = "Simpre cuidándonos";
-"welcome.screen1.desc" = "Cuídate y cuida a tus seres queridos quedándote en casa. Nuestros Masters irán para ayudarte en todo lo que necesites.";
+"welcome.screen1.desc" = "Cuídate y cuida a tus seres queridos quedándote en casa. Nuestros Masters irán para ayudarte en todo lo que necesites siguiendo todos los protocolos de higiene y seguridad.";
 
 "welcome.screen2.title" = "Agenda tus citas";
 "welcome.screen2.desc" = "Elige el Master que se acomode a tus requerimientos, la fecha y el lugar donde se efectuará el servicio y crea la solicitud.";

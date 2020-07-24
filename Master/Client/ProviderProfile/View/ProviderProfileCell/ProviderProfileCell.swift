@@ -9,7 +9,8 @@
 import UIKit
 
 protocol ProviderProfileCellDelegate: class {
-    func cellTapped(_ cell: ProviderProfileCell)
+    func editPhoto()
+    func editDesc()
 }
 
 class ProviderProfileCell: UITableViewCell, ConfigurableCellProtocol {
@@ -17,6 +18,15 @@ class ProviderProfileCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var photoImageView: MImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var descLabel: UILabel!
+    
+    // MARK: - UI Actions
+    @IBAction private func editButtonAction() {
+        delegate?.editPhoto()
+    }
+    
+    @IBAction private func editInfoButtonAction() {
+        delegate?.editDesc()
+    }
     
     // MARK: - Properties
     private weak var delegate: ProviderProfileCellDelegate?
@@ -41,12 +51,11 @@ class ProviderProfileCell: UITableViewCell, ConfigurableCellProtocol {
         }
         
         self.delegate = delegate as? ProviderProfileCellDelegate
-        
         self.photoImageView.kf.setImage(with: URL(string: viewModel.photoUrl), placeholder: UIImage.avatar)
         self.nameLabel.text = viewModel.names
         self.descLabel.text = viewModel.description
     }
-    
+
     // MARK: - Private Methods
     private func setupUI() {
         photoImageView.kf.cancelDownloadTask()

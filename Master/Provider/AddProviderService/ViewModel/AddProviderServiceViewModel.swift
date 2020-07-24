@@ -13,6 +13,7 @@ enum AddProviderServiceViewModelStatus {
     case undefined
     case error(error: String?)
     case postSuccessful
+    case putSuccessful(providerService: ProviderService)
 }
 
 class AddProviderServiceViewModel {
@@ -20,6 +21,7 @@ class AddProviderServiceViewModel {
     private let uploader = ImageUploader()
     private let service: AddProviderServiceServiceProtocol
     private var serviceCategories = [ListItemProtocol]()
+    var serviceModel: ProviderServiceModel
     
     var categoryId = 0
     let placeholderRemoved = Var(false)
@@ -27,8 +29,10 @@ class AddProviderServiceViewModel {
     let isLoading = Var(false)
     
     // MARK: - Life Cycle
-    init(service: AddProviderServiceServiceProtocol = AddProviderServiceService(connectionDependency: ConnectionManager())) {
+    init(serviceModel: ProviderServiceModel,
+         service: AddProviderServiceServiceProtocol = AddProviderServiceService(connectionDependency: ConnectionManager())) {
         
+        self.serviceModel = serviceModel
         self.service = service
         
         getServiceCategories()
@@ -50,14 +54,22 @@ class AddProviderServiceViewModel {
         }
     }
     
-    func postProviderService(url: String, name: String, price: Double, desc: String) {
-        loadingState(true)
-        
+    func updateService(url: String, name: String, price: Double, desc: String) {
         let request = ProviderServiceRequest(photoUrl: url,
                                              name: name,
                                              price: price,
                                              description: desc,
                                              serviceCategoryId: categoryId)
+        if serviceModel.id == nil {
+            postProviderService(request: request)
+        } else {
+            putProviderService(request: request)
+        }
+        
+    }
+    
+    func postProviderService(request: ProviderServiceRequest) {
+        loadingState(true)
         
         service.postProviderService(request: request) { [weak self] (_, error: CMError?) in
             self?.loadingState(false)
@@ -72,6 +84,25 @@ class AddProviderServiceViewModel {
         }
     }
     
+    func putProviderService(request: ProviderServiceRequest) {
+        guard let id = serviceModel.id else { return }
+        
+        loadingState(true)
+        service.putProviderService(serviceId: id, request: request) { [weak self] (result: ProviderService?, error: CMError?) in
+            self?.loadingState(false)
+            
+            if let error = error {
+                self?.status.value = .error(error: error.error)
+                
+                return
+            }
+            
+            guard let service = result else { return }
+            
+            self?.status.value = .putSuccessful(providerService: service)
+        }
+    }
+        
     func getListSelectorViewModel() -> ListSelectorViewModel {
         return ListSelectorViewModel(title: nil, desc: nil, dataSource: serviceCategories)
     }

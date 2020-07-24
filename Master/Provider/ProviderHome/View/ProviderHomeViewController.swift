@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProviderHomeViewController: UIViewController {
     // MARK: - UI References
@@ -47,6 +48,7 @@ class ProviderHomeViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.delegate = self
         
         tableView.registerNib(ProviderServiceCell.self)
         tableView.registerNib(ProviderProfileCell.self)
@@ -102,14 +104,20 @@ extension ProviderHomeViewController: SelectorCellDelegate {
     }
 }
 
-// MARK: - ProviderInfoCellDelegate
-extension ProviderHomeViewController: ProviderInfoCellDelegate {
-    func editCellTapped(_ cell: ProviderInfoCell, viewModel: ProviderInfoCellDataSource) {
-        if viewModel.providerInfoType == .study {
-            router.transition(to: .providerStudies(viewModel: self.viewModel.getProviderInfoViewModel(infoCell: viewModel), delegate: self))
-            return
+// MARK: - ProviderPhotoViewControllerDelegate
+extension ProviderHomeViewController: ProviderPhotoViewControllerDelegate {
+    func imageEdited(provider: ProviderProfile?) {
+        if let image = provider?.photoUrl {
+          ImageCache.default.removeImage(forKey: image)
         }
-        router.transition(to: .providerExperience(viewModel: self.viewModel.getProviderInfoViewModel(infoCell: viewModel), delegate: self))
+       viewModel.updateProvider(provider: provider)
+    }
+}
+
+// MARK: - ProviderEditViewControllerDelegate
+extension ProviderHomeViewController: ProviderEditViewControllerDelegate {
+    func infoEdited(provider: ProviderProfile?) {
+        viewModel.updateProvider(provider: provider)
     }
 }
 
@@ -132,8 +140,12 @@ extension ProviderHomeViewController: UITableViewDataSource {
 
 // MARK: - AddProviderServiceDelegate
 extension ProviderHomeViewController: AddProviderServiceDelegate {
+    func serviceEdited(service: ProviderService) {
+        viewModel.fetchServices()
+    }
+    
     func serviceAdded() {
-        viewModel.fetchData()
+        viewModel.fetchServices()
     }
 }
 
@@ -151,6 +163,17 @@ extension ProviderHomeViewController: ProviderInfoEditDelegate {
     }
 }
 
+// MARK: - ProviderProfileCellDelegate
+extension ProviderHomeViewController: ProviderProfileCellDelegate {
+    func editPhoto() {
+        router.transition(to: .uploadPhoto(delegate: self))
+    }
+    
+    func editDesc() {
+        router.transition(to: .editProvider(delegate: self))
+    }
+}
+
 // MARK: - ProviderProfileTitleCellDelegate
 extension ProviderHomeViewController: ProviderProfileTitleCellDelegate {
     func addInfoCellTapped(_ cell: ProviderProfileTitleCell, viewModel: ProviderProfileTitleViewModel) {
@@ -159,5 +182,82 @@ extension ProviderHomeViewController: ProviderProfileTitleCellDelegate {
             return
         }
         router.transition(to: .providerExperience(viewModel: self.viewModel.getProviderInfoViewModel(), delegate: self))
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension ProviderHomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView,
+                   editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        guard viewModel.isEditedCell(indexPath: indexPath) else { return [] }
+        
+        let blockAction = UITableViewRowAction(style: .normal,
+                                               title: "provider.edit".localized) { [weak self] (_, indexPath) in
+                                                self?.editInfo(indexPath: indexPath)
+        }
+        
+        blockAction.backgroundColor = UIColor.Master.green
+        
+        let deleteAction = UITableViewRowAction(style: .normal,
+                                                title: "provider.remove".localized) { [weak self] (_, indexPath) in
+                                                    self?.deleInfo(indexPath: indexPath)
+        }
+        
+        deleteAction.backgroundColor = UIColor.Master.red
+        
+        return [deleteAction, blockAction]
+    }
+    
+    func editInfo(indexPath: IndexPath) {
+        if let dates = viewModel.getAddServiceViewModel(indexPath: indexPath) {
+           router.transition(to: .addService(viewModel: dates, delegate: self))
+        }
+        
+        guard let dates = viewModel.getProviderInfoCellDataSource(indexPath: indexPath) else { return }
+        
+        if dates.providerInfoType == .study {
+            router.transition(to: .providerStudies(viewModel: viewModel.getProviderInfoViewModel(infoCell: dates), delegate: self))
+            return
+        }
+        router.transition(to: .providerExperience(viewModel: viewModel.getProviderInfoViewModel(infoCell: dates), delegate: self))
+    }
+    
+    func deleInfo(indexPath: IndexPath) {
+        if let id = viewModel.getProviderServiceModelId(indexPath: indexPath) {
+            confirmInfoDelete(title: "serviceDetail.dialog.title".localized,
+                              message: "serviceDetail.dialog.message".localized) { [weak self] in
+                self?.viewModel.deleteService(providerId: id)
+            }
+        }
+        
+        guard let dates = viewModel.getProviderInfoCellDataSource(indexPath: indexPath) else { return }
+        
+        var title = "providerExperience.dialog.title".localized
+        var message = "providerExperience.dialog.message".localized
+        
+        if dates.providerInfoType == .study {
+             title = "providerStudies.dialog.title".localized
+             message = "providerStudies.dialog.message".localized
+        }
+        
+        confirmInfoDelete(title: title,
+        message: message) { [weak self] in
+            self?.viewModel.deleteInfo(id: dates.id)
+        }
+    }
+    
+    private func confirmInfoDelete(title: String, message: String, onConfirmed: @escaping () -> Void) {
+        let dialog = UIAlertController(title: title,
+                                       message: message,
+                                       preferredStyle: .alert)
+        
+        dialog.addAction(UIAlertAction(title: "providerInfo.cancel".localized, style: .default, handler: nil))
+        
+        dialog.addAction(UIAlertAction(title: "providerInfo.acept".localized, style: .destructive, handler: { _ in
+            onConfirmed()
+        }))
+        
+        present(dialog, animated: true, completion: nil)
     }
 }

@@ -1,29 +1,34 @@
 //
-//  ProviderRegisterViewModel.swift
+//  ProviderEditViewModel.swift
 //  Master
 //
-//  Created by Carlos Mejía on 14/03/20.
+//  Created by Maria Paula Gomez Prieto on 7/22/20.
 //  Copyright © 2020 Master. All rights reserved.
 //
 
 import Foundation
 import EasyBinding
 
-enum ProviderRegisterViewModelStatus {
+enum ProviderEditViewModelStatus {
     case undefined
     case error(error: String?)
-    case registerDone
+    case editDone
 }
 
-class ProviderRegisterViewModel {
+class ProviderEditViewModel {
     // MARK: - Properties
     private var cityDataSource = [ListItem]()
     private let cityService: CitySelectorServiceProtocol
     private let service: ProviderRegisterServiceProtocol
     
-    
-    let status = Var<ProviderRegisterViewModelStatus>(.undefined)
+    let status = Var<ProviderEditViewModelStatus>(.undefined)
     let isLoading = Var(false)
+    let document = Var("")
+    let about = Var("")
+    let city = Var("")
+    let banck = Var("")
+    let banckNumber = Var("")
+    let banckType = Var("")
     
     var citySelectedId: Int?
 
@@ -41,10 +46,10 @@ class ProviderRegisterViewModel {
     }
     
     // MARK: - Public Methods
-    func postProviderRegister(request: ProviderRequest) {
+    func putProviderEdit(request: ProviderEditRequest) {
         loadingState(true)
         
-        service.createProvider(request: request) { [weak self] (provider: Provider?, error: CMError?) in
+        service.editProvider(request: request) { [weak self] (provider: Provider?, error: CMError?) in
             self?.loadingState(false)
             
             guard let provider = provider else {
@@ -55,8 +60,25 @@ class ProviderRegisterViewModel {
             
             Session.shared.login(profile: provider.user.asUserProfile)
             Session.shared.provider = provider.asProviderProfile
-            self?.status.value = .registerDone
+            self?.status.value = .editDone
         }
+    }
+    
+    func getPhotoUrl() -> String {
+        return Session.shared.provider?.photoUrl ?? ""
+    }
+    
+    func getProvider() -> ProviderProfile? {
+       return Session.shared.provider
+    }
+    
+    func setValues() {
+        document.value = Session.shared.provider?.user.document ?? ""
+        about.value = Session.shared.provider?.description ?? ""
+        city.value = Session.shared.provider?.city.name ?? ""
+        banck.value = Session.shared.provider?.bankName ?? ""
+        banckNumber.value = Session.shared.provider?.bankAccountNumber ?? ""
+        banckType.value = Session.shared.provider?.bankAccountType ?? ""
     }
     
     func getListSelectorViewModel() -> ListSelectorViewModel {

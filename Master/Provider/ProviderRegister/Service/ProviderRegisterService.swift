@@ -24,4 +24,10 @@ class ProviderRegisterService: ProviderRegisterServiceProtocol {
             onComplete(response, error)
         }
     }
+    
+    func editProvider(request: ProviderEditRequest, onComplete: @escaping (_ result: Provider?, _ error: CMError?) -> Void) {
+        connectionDependency.put(url: Endpoint.editProvider, request: request) { (response: Provider?, error: CMError?) in
+            onComplete(response, error)
+        }
+    }
 }

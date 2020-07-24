@@ -57,6 +57,15 @@ class ProviderHomeViewModel {
         fetchProviderServices()
     }
     
+    func fetchServices() {
+        fetchProviderServices(updated: true)
+    }
+    
+    func isEditedCell(indexPath: IndexPath) -> Bool {
+        return (indexPath.section == Sections.list.rawValue || indexPath.section == Sections.secondList.rawValue) &&
+            !(dataSource.value[indexPath.section][indexPath.row] is ProviderOrderCellViewModel)
+    }
+    
     func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {
         return dataSource.value.safeContains(indexPath.section)?.safeContains(indexPath.row)
     }
@@ -64,6 +73,17 @@ class ProviderHomeViewModel {
     func updateInfo(models: [ProviderInfoServiceModel]?) {
         providerInfoToViewModels(models: models)
         setInfo()
+    }
+    
+    func updateProvider(provider: ProviderProfile?) {
+        guard let provider = provider else { return }
+        
+        let names = provider.user.firstName + " " + provider.user.lastName
+        
+        let profileViewModel = ProviderProfileCellViewModel(photoUrl: provider.photoUrl ?? "",
+                                                            names: names,
+                                                            description: provider.description)
+        dataSource.value[Sections.header.rawValue] = [profileViewModel]
     }
     
     func toggleCommentsSection(with index: Int) {
@@ -92,7 +112,28 @@ class ProviderHomeViewModel {
     }
     
     func getAddServiceViewModel() -> AddProviderServiceViewModel {
-        return AddProviderServiceViewModel()
+        return AddProviderServiceViewModel(serviceModel: ProviderServiceModel.empty)
+    }
+    
+    func getAddServiceViewModel(indexPath: IndexPath) -> AddProviderServiceViewModel? {
+        guard let dates = dataSource.value[indexPath.section][indexPath.row] as? ProviderServiceCellViewModel else { return nil}
+        let providerServiceModel = ProviderServiceModel(id: dates.productId,
+                                                        photoUrl: dates.getImageUrl(),
+                                                        name: dates.getName(),
+                                                        price: dates.getPrice(),
+                                                        description: dates.getDescription(),
+                                                        serviceCategory: dates.getServiceCategory())
+        return AddProviderServiceViewModel(serviceModel: providerServiceModel)
+    }
+    
+    func getProviderServiceModelId(indexPath: IndexPath) -> Int? {
+        guard let dates = dataSource.value[indexPath.section][indexPath.row] as? ProviderServiceCellViewModel else { return nil}
+        return dates.productId
+    }
+    
+    func getProviderInfoCellDataSource(indexPath: IndexPath) -> ProviderInfoCellDataSource? {
+        guard let dates = dataSource.value[indexPath.section][indexPath.row] as? ProviderInfoCellDataSource else { return nil}
+               return dates
     }
     
     func getProviderInfoViewModel(infoCell: ProviderInfoCellDataSource? = nil) -> ProviderInfoViewModel {
@@ -139,7 +180,7 @@ class ProviderHomeViewModel {
         dataSource.value[Sections.secondList.rawValue] = []
     }
     
-    private func fetchProviderServices() {
+    private func fetchProviderServices(updated: Bool = false) {
         if dataSource.value.indices.contains(Sections.list.rawValue) {
             dataSource.value[Sections.list.rawValue].removeAll()
         }
@@ -155,7 +196,43 @@ class ProviderHomeViewModel {
             }
             
             self?.servicesToViewModels(models: response)
-            self?.fetchProviderOrders()
+            
+            if !updated {
+               self?.fetchProviderOrders()
+            } else {
+                self?.isLoading.value = false
+            }
+        }
+    }
+    
+    func deleteService(providerId: Int) {
+        isLoading.value = true
+        
+        service.deleteProviderService(serviceId: providerId) { [weak self] (_, error: CMError?) in
+            self?.isLoading.value = false
+            
+            guard error == nil else {
+                self?.status.value = .error(error: error.debugDescription)
+                return
+            }
+            
+            self?.fetchProviderServices(updated: true)
+        }
+    }
+    
+    func deleteInfo(id: Int) {
+        
+        isLoading.value = true
+        service.deleteProviderInfo(providerId: id) { [weak self] (result, error) in
+            self?.isLoading.value = false
+            
+            if let error = error {
+                self?.status.value = .error(error: error.error)
+                
+                return
+            }
+            
+            self?.updateInfo(models: result)
         }
     }
     
@@ -217,7 +294,8 @@ class ProviderHomeViewModel {
                                          productDesc: $0.description,
                                          productPrice: $0.price,
                                          productCount: 0,
-                                         productId: $0.getId())
+                                         productId: $0.getId(),
+                                         serviceCategory: $0.getServiceCategory())
         }
         setProviderServicesDataSource()
     }

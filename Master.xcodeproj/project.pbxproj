@@ -961,6 +961,9 @@
 		B76D636524B388F90084F082 /* Date+Etensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D636424B388F90084F082 /* Date+Etensions.swift */; };
 		B76D636624B388F90084F082 /* Date+Etensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D636424B388F90084F082 /* Date+Etensions.swift */; };
 		B76D636724B388F90084F082 /* Date+Etensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76D636424B388F90084F082 /* Date+Etensions.swift */; };
+		B79258AF24C9D5C20012A9DC /* ProviderEditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79258AE24C9D5C20012A9DC /* ProviderEditRequest.swift */; };
+		B79258B024C9D5C20012A9DC /* ProviderEditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79258AE24C9D5C20012A9DC /* ProviderEditRequest.swift */; };
+		B79258B124C9D5C20012A9DC /* ProviderEditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79258AE24C9D5C20012A9DC /* ProviderEditRequest.swift */; };
 		B7C7372E24AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */; };
 		B7C7372F24AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */; };
 		B7C7373024AC1CD00028A8C7 /* ProviderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */; };
@@ -982,6 +985,9 @@
 		B7C7375C24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
 		B7C7375D24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
 		B7C7375E24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
+		B7E295A424C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */; };
+		B7E295A524C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */; };
+		B7E295A624C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */; };
 		B7E6FEB124B2783000F7B67F /* ProviderInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */; };
 		B7E6FEB224B2783000F7B67F /* ProviderInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */; };
 		B7E6FEB324B2783000F7B67F /* ProviderInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */; };
@@ -1003,6 +1009,15 @@
 		B7E6FECC24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
 		B7E6FECD24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
 		B7E6FECE24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
+		B7FA05A324C939B90088495F /* ProviderEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A124C939B90088495F /* ProviderEditViewController.swift */; };
+		B7FA05A424C939B90088495F /* ProviderEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A124C939B90088495F /* ProviderEditViewController.swift */; };
+		B7FA05A524C939B90088495F /* ProviderEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A124C939B90088495F /* ProviderEditViewController.swift */; };
+		B7FA05A624C939B90088495F /* ProviderEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FA05A224C939B90088495F /* ProviderEditViewController.xib */; };
+		B7FA05A724C939B90088495F /* ProviderEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FA05A224C939B90088495F /* ProviderEditViewController.xib */; };
+		B7FA05A824C939B90088495F /* ProviderEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FA05A224C939B90088495F /* ProviderEditViewController.xib */; };
+		B7FA05AA24C944400088495F /* ProviderEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A924C944400088495F /* ProviderEditViewModel.swift */; };
+		B7FA05AB24C944400088495F /* ProviderEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A924C944400088495F /* ProviderEditViewModel.swift */; };
+		B7FA05AC24C944400088495F /* ProviderEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A924C944400088495F /* ProviderEditViewModel.swift */; };
 		E5D514CBDA39FA984304D3BA /* libPods-Master.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8ED18371995DD3D60F7D239 /* libPods-Master.a */; };
 		E941E1CEF0512E9C1A4C452D /* libPods-MasterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BD96F90BD74A7B915A7191 /* libPods-MasterTests.a */; };
 /* End PBXBuildFile section */
@@ -1387,6 +1402,7 @@
 		B73D198624AE9AAA00D166DE /* ProviderProfileTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderProfileTitleCell.xib; sourceTree = "<group>"; };
 		B73D198D24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileTitlevViewModel.swift; sourceTree = "<group>"; };
 		B76D636424B388F90084F082 /* Date+Etensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Etensions.swift"; sourceTree = "<group>"; };
+		B79258AE24C9D5C20012A9DC /* ProviderEditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderEditRequest.swift; sourceTree = "<group>"; };
 		B7C7372C24AC1CD00028A8C7 /* ProviderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoCell.swift; sourceTree = "<group>"; };
 		B7C7372D24AC1CD00028A8C7 /* ProviderInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderInfoCell.xib; sourceTree = "<group>"; };
 		B7C7373424AC1CE70028A8C7 /* ProviderInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoCellViewModel.swift; sourceTree = "<group>"; };
@@ -1394,6 +1410,7 @@
 		B7C7374924AC2B420028A8C7 /* ProviderExperienceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderExperienceViewController.xib; sourceTree = "<group>"; };
 		B7C7375724AC2BB60028A8C7 /* ProviderStudiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderStudiesViewController.swift; sourceTree = "<group>"; };
 		B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderStudiesViewController.xib; sourceTree = "<group>"; };
+		B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceModel.swift; sourceTree = "<group>"; };
 		B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoModel.swift; sourceTree = "<group>"; };
 		B7E6FEB724B27EBC00F7B67F /* ProviderInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoViewModel.swift; sourceTree = "<group>"; };
 		B7E6FEBB24B2893F00F7B67F /* ProviderInfoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoEndpoint.swift; sourceTree = "<group>"; };
@@ -1401,6 +1418,9 @@
 		B7E6FEC324B28B1200F7B67F /* ProviderInfoServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoServiceModel.swift; sourceTree = "<group>"; };
 		B7E6FEC724B296D900F7B67F /* ProviderInfoServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoServiceRequest.swift; sourceTree = "<group>"; };
 		B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoService.swift; sourceTree = "<group>"; };
+		B7FA05A124C939B90088495F /* ProviderEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderEditViewController.swift; sourceTree = "<group>"; };
+		B7FA05A224C939B90088495F /* ProviderEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderEditViewController.xib; sourceTree = "<group>"; };
+		B7FA05A924C944400088495F /* ProviderEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderEditViewModel.swift; sourceTree = "<group>"; };
 		C124397E13D1D5DCB184DCAF /* Pods-Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev.debug.xcconfig"; path = "Target Support Files/Pods-Dev/Pods-Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		C76166256FB300EFAFF75F95 /* Pods-Master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master.debug.xcconfig"; path = "Target Support Files/Pods-Master/Pods-Master.debug.xcconfig"; sourceTree = "<group>"; };
 		C93990FA84FB48D3E3AD7A70 /* Pods-Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev.release.xcconfig"; path = "Target Support Files/Pods-Dev/Pods-Dev.release.xcconfig"; sourceTree = "<group>"; };
@@ -1690,6 +1710,8 @@
 			children = (
 				2C2DCAFA241D27330024409E /* ProviderRegisterViewController.swift */,
 				2C2DCAFB241D27330024409E /* ProviderRegisterViewController.xib */,
+				B7FA05A124C939B90088495F /* ProviderEditViewController.swift */,
+				B7FA05A224C939B90088495F /* ProviderEditViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1698,6 +1720,7 @@
 			isa = PBXGroup;
 			children = (
 				2C2DCB05241D275E0024409E /* ProviderRegisterViewModel.swift */,
+				B7FA05A924C944400088495F /* ProviderEditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -2026,6 +2049,7 @@
 			isa = PBXGroup;
 			children = (
 				2C6716EB241D41C700C86531 /* ProviderRequest.swift */,
+				B79258AE24C9D5C20012A9DC /* ProviderEditRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2243,6 +2267,7 @@
 			isa = PBXGroup;
 			children = (
 				2C8B3A2624363313005FE926 /* ProviderServiceRequest.swift */,
+				B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3345,6 +3370,7 @@
 				2C3E5158240C79B500873495 /* LoaderView.xib in Resources */,
 				2C3E5159240C79B500873495 /* ProviderListViewController.xib in Resources */,
 				2C3E515A240C79B500873495 /* CheckoutFieldCell.xib in Resources */,
+				B7FA05A724C939B90088495F /* ProviderEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3423,6 +3449,7 @@
 				2CC3DC952411EBCC001E76B2 /* LoaderView.xib in Resources */,
 				2CC3DC962411EBCC001E76B2 /* ProviderListViewController.xib in Resources */,
 				2CC3DC972411EBCC001E76B2 /* CheckoutFieldCell.xib in Resources */,
+				B7FA05A624C939B90088495F /* ProviderEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3501,6 +3528,7 @@
 				2C976A0D240ACF070073DD07 /* LoaderView.xib in Resources */,
 				2CF6ABD423F7D84500F9EF40 /* ProviderListViewController.xib in Resources */,
 				2CEECCA02400D37B00C67D80 /* CheckoutFieldCell.xib in Resources */,
+				B7FA05A824C939B90088495F /* ProviderEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3867,6 +3895,7 @@
 				2CE9E1F0245FC54900739A7D /* ProviderWelcomeViewModel.swift in Sources */,
 				2C8B3A2824363313005FE926 /* ProviderServiceRequest.swift in Sources */,
 				2C3E50A5240C79B500873495 /* CompleteTextViewModel.swift in Sources */,
+				B79258B024C9D5C20012A9DC /* ProviderEditRequest.swift in Sources */,
 				2C1F2F72241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D52416AF300083A59A /* CommentRequest.swift in Sources */,
 				2C366A17245666450048B968 /* RadioOption.swift in Sources */,
@@ -3972,10 +4001,12 @@
 				2C671703241D89E500C86531 /* ListSelectorViewController.swift in Sources */,
 				2C3E50DB240C79B500873495 /* Int+Extensions.swift in Sources */,
 				2C3E50DC240C79B500873495 /* ServerError.swift in Sources */,
+				B7E295A524C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */,
 				2C30BEC62454D73B00347529 /* MenuOptionCellViewModel.swift in Sources */,
 				2C30BECE2454D93400347529 /* MenuTitle.swift in Sources */,
 				2C3E50DD240C79B500873495 /* Provider.swift in Sources */,
 				2C3E50DE240C79B500873495 /* TitleCellViewModel.swift in Sources */,
+				B7FA05A424C939B90088495F /* ProviderEditViewController.swift in Sources */,
 				2C3E50DF240C79B500873495 /* OrderDetailHeaderCellViewModel.swift in Sources */,
 				2CB82E882454D3DE009ACF8B /* MenuOptionCell.swift in Sources */,
 				2C3E50E0240C79B500873495 /* OrderDetailServiceProtocol.swift in Sources */,
@@ -4105,6 +4136,7 @@
 				2C58159024568B8E001088E5 /* WelcomeViewController.swift in Sources */,
 				2C3E512C240C79B500873495 /* CheckoutConstants.swift in Sources */,
 				2C3E512D240C79B500873495 /* OrderCellViewModel.swift in Sources */,
+				B7FA05AB24C944400088495F /* ProviderEditViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4132,6 +4164,7 @@
 				2CE9E1EF245FC54900739A7D /* ProviderWelcomeViewModel.swift in Sources */,
 				2C8B3A2724363313005FE926 /* ProviderServiceRequest.swift in Sources */,
 				2CC3DBD92411EBCC001E76B2 /* CompleteTextViewModel.swift in Sources */,
+				B79258AF24C9D5C20012A9DC /* ProviderEditRequest.swift in Sources */,
 				2C1F2F71241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D42416AF300083A59A /* CommentRequest.swift in Sources */,
 				2C366A16245666450048B968 /* RadioOption.swift in Sources */,
@@ -4237,10 +4270,12 @@
 				2C671702241D89E500C86531 /* ListSelectorViewController.swift in Sources */,
 				2CC3DC112411EBCC001E76B2 /* Int+Extensions.swift in Sources */,
 				2CC3DC122411EBCC001E76B2 /* ServerError.swift in Sources */,
+				B7E295A424C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */,
 				2C30BEC52454D73B00347529 /* MenuOptionCellViewModel.swift in Sources */,
 				2C30BECD2454D93400347529 /* MenuTitle.swift in Sources */,
 				2CC3DC132411EBCC001E76B2 /* Provider.swift in Sources */,
 				2CC3DC142411EBCC001E76B2 /* TitleCellViewModel.swift in Sources */,
+				B7FA05A324C939B90088495F /* ProviderEditViewController.swift in Sources */,
 				2CC3DC152411EBCC001E76B2 /* OrderDetailHeaderCellViewModel.swift in Sources */,
 				2CB82E872454D3DE009ACF8B /* MenuOptionCell.swift in Sources */,
 				2CC3DC162411EBCC001E76B2 /* OrderDetailServiceProtocol.swift in Sources */,
@@ -4370,6 +4405,7 @@
 				2C58158F24568B8E001088E5 /* WelcomeViewController.swift in Sources */,
 				2CC3DC672411EBCC001E76B2 /* CheckoutConstants.swift in Sources */,
 				2CC3DC682411EBCC001E76B2 /* OrderCellViewModel.swift in Sources */,
+				B7FA05AA24C944400088495F /* ProviderEditViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4397,6 +4433,7 @@
 				2CE9E1F1245FC54900739A7D /* ProviderWelcomeViewModel.swift in Sources */,
 				2C8B3A2924363313005FE926 /* ProviderServiceRequest.swift in Sources */,
 				2C198D2623F4E6AF00346395 /* RouterBase.swift in Sources */,
+				B79258B124C9D5C20012A9DC /* ProviderEditRequest.swift in Sources */,
 				2C1F2F73241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D62416AF300083A59A /* CommentRequest.swift in Sources */,
 				2C366A18245666450048B968 /* RadioOption.swift in Sources */,
@@ -4502,10 +4539,12 @@
 				2C671704241D89E500C86531 /* ListSelectorViewController.swift in Sources */,
 				2CA494D323F9989B00F87AD6 /* ProviderProfileViewController.swift in Sources */,
 				2CFF4DB323F9F1370024B3F1 /* Int+Extensions.swift in Sources */,
+				B7E295A624C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */,
 				2C30BEC72454D73B00347529 /* MenuOptionCellViewModel.swift in Sources */,
 				2C30BECF2454D93400347529 /* MenuTitle.swift in Sources */,
 				2C8C6C6323F4BA9D00FE06BE /* ServerError.swift in Sources */,
 				2CF6ABC323F7B00A00F9EF40 /* Provider.swift in Sources */,
+				B7FA05A524C939B90088495F /* ProviderEditViewController.swift in Sources */,
 				2C829EDB240B459700D7DD81 /* TitleCellViewModel.swift in Sources */,
 				2CB82E892454D3DE009ACF8B /* MenuOptionCell.swift in Sources */,
 				2C3B808A240C11AB00D4C6FE /* OrderDetailHeaderCellViewModel.swift in Sources */,
@@ -4635,6 +4674,7 @@
 				2C58159124568B8E001088E5 /* WelcomeViewController.swift in Sources */,
 				2CAD87A9240485840063AEB2 /* CheckoutConstants.swift in Sources */,
 				2CD6715B240B6B14007917E8 /* OrderCellViewModel.swift in Sources */,
+				B7FA05AC24C944400088495F /* ProviderEditViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ import MobileCoreServices
 
 protocol AddProviderServiceDelegate: class {
     func serviceAdded()
+    func serviceEdited(service: ProviderService)
 }
 
 class AddProviderServiceViewController: UIViewController {
@@ -85,10 +86,29 @@ class AddProviderServiceViewController: UIViewController {
     
     // MARK: - Private Methods
     private func performPost(url: String) {
-        viewModel.postProviderService(url: url,
+        viewModel.updateService(url: url,
                                       name: serviceNameTextField.safeText,
                                       price: getValueFromFormattedCurrency(),
                                       desc: serviceDescTextField.safeText)
+    }
+    
+    private func setValues() {
+        serviceNameTextField.text = viewModel.serviceModel.name
+        serviceDescTextField.text = viewModel.serviceModel.description
+        
+        if let price = viewModel.serviceModel.price {
+            servicePriceTextField.text = "\(Int(price))".currencyInputFormatting()
+        }
+        
+        if let url = viewModel.serviceModel.photoUrl {
+           viewModel.placeholderRemoved.value = true
+           serviceImageTakenView.kf.setImage(with: URL(string: url), placeholder: UIImage.product)
+        }
+        
+        if let category = viewModel.serviceModel.serviceCategory {
+            serviceCategoryTextField.text = category.name
+            viewModel.categoryId = category.id
+        }
     }
     
     private func getValueFromFormattedCurrency() -> Double {
@@ -127,6 +147,7 @@ class AddProviderServiceViewController: UIViewController {
         disableTitle()
         addIconInNavigationBar()
         enableKeyboardDismiss()
+        setValues()
         
         servicePriceTextField.addTarget(self, action: #selector(priceFieldEditingChanged), for: .editingChanged)
     }
@@ -145,7 +166,10 @@ class AddProviderServiceViewController: UIViewController {
                 self?.navigationController?.popViewControllerWithHandler { [weak self] in
                     self?.delegate?.serviceAdded()
                 }
-                
+            case .putSuccessful(let service):
+                self?.navigationController?.popViewControllerWithHandler { [weak self] in
+                    self?.delegate?.serviceEdited(service: service)
+                }
             default:
                 return
             }

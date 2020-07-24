@@ -13,29 +13,36 @@ enum ProviderPhotoViewModelStatus {
     case undefined
     case error(error: String?)
     case uploadSuccessful
+    case editImage
 }
 
 class ProviderPhotoViewModel {
     // MARK: - Properties
     private let uploader = ImageUploader()
     private let service: ProviderPhotoServiceProtocol
+    private let edited: Bool
     
     let placeholderRemoved = Var(false)
     let status = Var<ProviderPhotoViewModelStatus>(.undefined)
     let isLoading = Var(false)
     
     // MARK: - Life Cycle
-    init(service: ProviderPhotoServiceProtocol = ProviderPhotoService(connectionDependency: ConnectionManager())) {
+    init(service: ProviderPhotoServiceProtocol = ProviderPhotoService(connectionDependency: ConnectionManager()), edited: Bool = false) {
         self.service = service
+        self.edited = edited
         
         uploader.onCompleteBlock = { [weak self] (isDone: Bool, result: String?, error: String?) in
             self?.loadingState(false)
             
-            if isDone {
+            guard isDone else {
+                self?.status.value = .error(error: String.Lang.generalError)
+                return
+            }
+            
+            if !edited {
                 self?.updateProviderPhoto(url: result ?? "")
             } else {
-                self?.status.value = .error(error: String.Lang.generalError)
-                print(error ?? "")
+                self?.status.value = .editImage
             }
         }
     }
@@ -46,6 +53,14 @@ class ProviderPhotoViewModel {
         loadingState(true)
         
         uploader.upload(image: image, name: Session.shared.profile.document, path: "providers/profilePictures")
+    }
+    
+    func getPhotoUrl() -> String? {
+        return Session.shared.provider?.photoUrl ?? nil
+    }
+    
+    func getProvider() -> ProviderProfile? {
+        return Session.shared.provider
     }
     
     // MARK: - Private Methods

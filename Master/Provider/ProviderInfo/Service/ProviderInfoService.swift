@@ -33,10 +33,4 @@ class ProviderInfoService: ProviderInfoServiceModelProtocol {
                                     
         }
     }
-    
-    func deleteProviderInfo(providerId: Int, onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void) {
-        connectionDependency.delete(url: Endpoint.deleteProviderInfo(providerId: providerId)) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
-            onComplete(response, error)
-        }
-    }
 }

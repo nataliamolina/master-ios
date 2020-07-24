@@ -12,4 +12,6 @@ protocol ProviderRegisterServiceProtocol {
     var connectionDependency: ConnectionManagerProtocol { get }
     
     func createProvider(request: ProviderRequest, onComplete: @escaping (_ result: Provider?, _ error: CMError?) -> Void)
+    
+    func editProvider(request: ProviderEditRequest, onComplete: @escaping (_ result: Provider?, _ error: CMError?) -> Void)
 }

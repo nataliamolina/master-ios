@@ -20,16 +20,10 @@ class ProviderStudiesViewController: UIViewController {
     @IBOutlet private weak var universityTextField: UITextField!
     @IBOutlet private weak var countryTextField: UITextField!
     @IBOutlet private weak var cityTextField: UITextField!
-    @IBOutlet private weak var isNowButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
-    @IBOutlet private weak var deleteView: UIView!
+    @IBOutlet private weak var radiostackView: UIStackView!
     
     // MARK: - UI Actions
-    @IBAction private func isNowAction() {
-        viewModel?.info.isCurrent.toggle()
-        nowValidate()
-    }
-    
     @IBAction private func saveAction() {
         saveInfo()
     }
@@ -121,15 +115,13 @@ class ProviderStudiesViewController: UIViewController {
         cityTextField.delegate = self
         sinceTextField.delegate = self
         toTextField.delegate = self
-        deleteView.isHidden = viewModel?.info.id == nil
         
         enableKeyboardDismiss()
         showDatePicker()
         setupBindings()
         setupWith()
         
-        deleteView.addGestureRecognizer(UITapGestureRecognizer(target: self,
-                                                               action: #selector(deleteExperience)))
+        navigationItem.title = "providerInfo.studies.title".localized
     }
     
     private func setupWith() {
@@ -141,13 +133,18 @@ class ProviderStudiesViewController: UIViewController {
         sinceTextField.text = viewModel?.info.startDateShow
         datePicker.date = viewModel?.info.startD ?? Date()
         datePicker2.date = viewModel?.info.endD ?? Date()
-        nowValidate()
+        setRadioButton()
     }
     
-    @objc private func deleteExperience() {
-        confirmInfoDelete { [weak self] in
-            self?.viewModel?.delete()
+    private func setRadioButton() {
+        let radioView: RadioView = .fromNib()
+        radioView.setupWith(name: "providerStudies.now".localized, isSelected: viewModel?.info.isCurrent ?? false, index: 0)
+        radioView.onTappedBlock = { [weak self] index in
+            self?.viewModel?.info.isCurrent.toggle()
+            self?.nowValidate()
         }
+        radiostackView.addSubview(radioView)
+        nowValidate()
     }
     
     private func setupBindings() {
@@ -178,23 +175,7 @@ class ProviderStudiesViewController: UIViewController {
         }
     }
     
-    private func confirmInfoDelete(onConfirmed: @escaping () -> Void) {
-        let dialog = UIAlertController(title: "providerExperience.dialog.title".localized,
-                                       message: "providerExperience.dialog.message".localized,
-                                       preferredStyle: .alert)
-        
-        dialog.addAction(UIAlertAction(title: "providerInfo.cancel".localized, style: .default, handler: nil))
-        
-        dialog.addAction(UIAlertAction(title: "providerInfo.acept".localized, style: .destructive, handler: { _ in
-            onConfirmed()
-        }))
-        
-        present(dialog, animated: true, completion: nil)
-    }
-    
     private func nowValidate() {
-        let image = viewModel?.info.isCurrent ?? false ? UIImage(named: "circleFill") : UIImage(named: "circle")
-        isNowButton.setImage(image, for: .normal)
         validateTetField()
         
         toTextField.text = viewModel?.info.isCurrent ?? false ? nil : viewModel?.info.endDateShow

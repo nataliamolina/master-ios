@@ -27,4 +27,3 @@ struct UserProfile {
                            document: "")
     }
 }
-

@@ -11,7 +11,8 @@ import UIKit
 enum ProviderRouterTransitions {
     case main
     case register
-    case uploadPhoto
+    case editProvider(delegate: ProviderEditViewControllerDelegate?)
+    case uploadPhoto(delegate: ProviderPhotoViewControllerDelegate?)
     case home
     case legal
     case listSelector(viewModel: ListSelectorViewModel, delegate: ListSelectorViewControllerDelegate?)
@@ -53,8 +54,8 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         case .register:
             handleRegisterTransition()
             
-        case .uploadPhoto:
-            handleUploadTransition()
+        case .uploadPhoto(let delegate):
+            handleUploadTransition(delegate: delegate)
             
         case .listSelector(let viewModel, let delegate):
             handleListSelectorTransition(viewModel: viewModel, delegate: delegate)
@@ -87,6 +88,9 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             
         case .providerExperience(let viewModel, let delegate):
             handleExperiencesTransition(viewModel: viewModel, delegate: delegate)
+            
+        case .editProvider(let delegate):
+            handleEditProviderTransition(delegate: delegate)
         }
     }
     
@@ -154,9 +158,15 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         
         providerNavigationController.pushViewController(viewController, animated: true)
     }
-    
-    private func handleUploadTransition() {
-        let viewController = ProviderPhotoViewController(viewModel: ProviderPhotoViewModel(), router: self)
+
+    private func handleEditProviderTransition(delegate: ProviderEditViewControllerDelegate?) {
+        let viewController = ProviderEditViewController(router: self, viewModel: ProviderEditViewModel(), delegate: delegate)
+        
+        providerNavigationController.pushViewController(viewController, animated: true)
+    }
+    private func handleUploadTransition(delegate: ProviderPhotoViewControllerDelegate?) {
+        let edited = delegate != nil
+        let viewController = ProviderPhotoViewController(viewModel: ProviderPhotoViewModel(edited: edited), router: self, delegate: delegate)
         
         providerNavigationController.pushViewController(viewController, animated: true)
     }

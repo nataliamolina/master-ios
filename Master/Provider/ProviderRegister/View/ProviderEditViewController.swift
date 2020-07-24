@@ -1,22 +1,19 @@
 //
-//  ProviderRegisterViewController.swift
+//  ProviderEditViewController.swift
 //  Master
 //
-//  Created by Carlos Mejía on 14/03/20.
+//  Created by Maria Paula Gomez Prieto on 7/22/20.
 //  Copyright © 2020 Master. All rights reserved.
 //
 
 import UIKit
 
-enum ProviderRegisterIdentifiers: String {
-    case city
-    case bankType
+protocol ProviderEditViewControllerDelegate: class {
+    func infoEdited(provider: ProviderProfile?)
 }
 
-class ProviderRegisterViewController: UIViewController {
+class ProviderEditViewController: UIViewController {
     // MARK: - UI References
-    @IBOutlet private weak var scrollView: UIScrollView!
-    @IBOutlet private weak var documentTextField: MTextField!
     @IBOutlet private weak var bankNumberTextField: MTextField!
     @IBOutlet private weak var bankNameTextField: MTextField!
     @IBOutlet private weak var bankTypeTextField: MTextField!
@@ -28,25 +25,23 @@ class ProviderRegisterViewController: UIViewController {
     @IBOutlet private weak var cityView: UIView!
     
     // MARK: - UI Actions
-    @IBAction private func registerButtonAction() {
+    @IBAction private func editButtonAction() {
         validateForm()
     }
     
-    @IBAction private func legalButtonAction() {
-        router.transition(to: .legal)
-    }
-    
     // MARK: - Properties
-    private var originalInset: UIEdgeInsets = .zero
-    private let viewModel: ProviderRegisterViewModel
+    private let viewModel: ProviderEditViewModel
     private let router: RouterBase<ProviderRouterTransitions>
+    private let delegate: ProviderEditViewControllerDelegate?
     
     // MARK: - Life Cycle
-    init(router: RouterBase<ProviderRouterTransitions>, viewModel: ProviderRegisterViewModel) {
+    init(router: RouterBase<ProviderRouterTransitions>, viewModel: ProviderEditViewModel,
+         delegate: ProviderEditViewControllerDelegate?) {
         self.router = router
         self.viewModel = viewModel
+        self.delegate = delegate
         
-        super.init(nibName: String(describing: ProviderRegisterViewController.self), bundle: nil)
+        super.init(nibName: String(describing: ProviderEditViewController.self), bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -71,19 +66,14 @@ class ProviderRegisterViewController: UIViewController {
     
     // MARK: - Private Methods
     private func setupUI() {
-        // FIXME
-        title = "Registro"
         disableTitle()
         
         bankTypeView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(bankTypeFieldTapped)))
         cityView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cityFieldTapped)))
         aboutView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(aboutViewTapped)))
         
-        originalInset = scrollView.contentInset
-        
         enableKeyboardDismiss()
         disableTitle()
-        setupKeyboardListeners()
         addIconInNavigationBar()
         setupBindings()
     }
@@ -98,37 +88,32 @@ class ProviderRegisterViewController: UIViewController {
             case .error(let error):
                 self?.showError(message: error)
                 
-            case .registerDone:
-                self?.router.transition(to: .uploadPhoto(delegate: nil))
+            case .editDone:
+                self?.delegate?.infoEdited(provider: self?.viewModel.getProvider())
+                self?.navigationController?.popViewController(animated: true)
                 
             default:
                 return
             }
         }
+     
+        viewModel.about.bindTo(aboutTextView, to: .text)
+        viewModel.city.bindTo(cityTextField, to: .text)
+        viewModel.banck.bindTo(bankNameTextField, to: .text)
+        viewModel.banckNumber.bindTo(bankNumberTextField, to: .text)
+        viewModel.banckType.bindTo(bankTypeTextField, to: .text)
+        viewModel.setValues()
     }
     
     private func validateForm() {
-        // FIXME: Messages
-        if documentTextField.safeText.isEmpty || documentTextField.safeText.count < 4 {
-            showWarning(message: "Debes ingresar un documento válio.")
-            
-            return
-        }
-        
-        if bankNumberTextField.safeText.isEmpty || bankNumberTextField.safeText.count < 4 {
+        if  !bankNumberTextField.safeText.isEmpty && bankNumberTextField.safeText.count < 4 {
             showWarning(message: "Debes ingresar un número bancario válio.")
             
             return
         }
         
-        if bankNameTextField.safeText.isEmpty || bankNameTextField.safeText.count < 4 {
+        if  !bankNameTextField.safeText.isEmpty && bankNameTextField.safeText.count < 4 {
             showWarning(message: "Debes ingresar un nombre de banco.")
-            
-            return
-        }
-        
-        if bankTypeTextField.safeText.isEmpty {
-            showWarning(message: "Debes ingresar un tipo de banco.")
             
             return
         }
@@ -143,28 +128,15 @@ class ProviderRegisterViewController: UIViewController {
     }
     
     private func submitForm() {
-        let request = ProviderRequest(nickName: "",
-                                      photoUrl: "",
+        let request = ProviderEditRequest(photoUrl: viewModel.getPhotoUrl(),
                                       description: aboutTextView.safeText.trimmingCharacters(in: .whitespacesAndNewlines),
-                                      document: documentTextField.safeText,
+                                      document: "",
                                       bankAccountNumber: bankNumberTextField.safeText,
                                       bankAccountType: bankTypeTextField.safeText,
                                       bankName: bankNameTextField.safeText,
                                       cityId: viewModel.citySelectedId ?? 1)
         
-        viewModel.postProviderRegister(request: request)
-    }
-    
-    private func setupKeyboardListeners() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow(notification:)),
-                                               name: UIResponder.keyboardWillShowNotification ,
-                                               object: nil)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: UIResponder.keyboardWillHideNotification ,
-                                               object: nil)
+        viewModel.putProviderEdit(request: request)
     }
     
     @objc func aboutViewTapped() {
@@ -180,24 +152,10 @@ class ProviderRegisterViewController: UIViewController {
     @objc private func bankTypeFieldTapped() {
         router.transition(to: .listSelector(viewModel: viewModel.getListSelectorViewModel(), delegate: self))
     }
-    
-    @objc private func keyboardWillShow(notification: NSNotification) {
-        let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
-        
-        scrollView.contentInset = UIEdgeInsets(top: originalInset.top,
-                                               left: originalInset.left,
-                                               bottom: originalInset.bottom + (keyboardSize?.height ?? 0),
-                                               right: originalInset.right)
-    }
-    
-    @objc private func keyboardWillHide() {
-        scrollView.contentInset = originalInset
-        animateLayout()
-    }
 }
 
 // MARK: - ListSelectorViewControllerDelegate
-extension ProviderRegisterViewController: ListSelectorViewControllerDelegate {
+extension ProviderEditViewController: ListSelectorViewControllerDelegate {
     func optionSelectedAt(index: Int, option: ListItemProtocol, uniqueIdentifier: String?) {
         switch uniqueIdentifier {
         case ProviderRegisterIdentifiers.city.rawValue:
@@ -214,7 +172,7 @@ extension ProviderRegisterViewController: ListSelectorViewControllerDelegate {
 }
 
 // MARK: - CompleteTextViewDelegate
-extension ProviderRegisterViewController: CompleteTextViewDelegate {
+extension ProviderEditViewController: CompleteTextViewDelegate {
     func continueButtonTapped(viewModel: CompleteTextViewModel) {
         aboutTextView.text = viewModel.value
     }

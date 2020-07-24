@@ -46,30 +46,16 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW9-nV-5sA">
-                        <rect key="frame" x="351" y="28" width="20" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="CTp-Kv-XUt"/>
-                            <constraint firstAttribute="width" constant="20" id="VbG-FU-B7P"/>
-                        </constraints>
-                        <state key="normal" image="edit_icon"/>
-                        <connections>
-                            <action selector="editInfoAction" destination="bWn-tF-k8B" eventType="touchUpInside" id="Rqy-tZ-a2E"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="unT-64-qoY" secondAttribute="bottom" constant="10" id="6pb-zl-bNM"/>
-                    <constraint firstItem="IW9-nV-5sA" firstAttribute="top" secondItem="unT-64-qoY" secondAttribute="top" constant="8" id="g3L-xf-dZt"/>
                     <constraint firstItem="unT-64-qoY" firstAttribute="top" secondItem="pzc-NF-euY" secondAttribute="top" constant="20" id="hOH-Ik-bZO"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="IW9-nV-5sA" secondAttribute="trailing" id="oTY-n2-NB7"/>
                     <constraint firstItem="unT-64-qoY" firstAttribute="leading" secondItem="pzc-NF-euY" secondAttribute="leading" constant="20" id="wJW-3i-zvL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="fxm-qS-6Wb"/>
             <connections>
                 <outlet property="dateLabel" destination="STv-WU-fmg" id="oAu-wf-VG4"/>
-                <outlet property="editButton" destination="IW9-nV-5sA" id="2cy-Qq-r8r"/>
                 <outlet property="placeLabel" destination="Fxt-9n-WmZ" id="QxU-3V-qmk"/>
                 <outlet property="subTitleLabel" destination="PXb-gI-Lzv" id="5OB-Rq-cQs"/>
                 <outlet property="titleLabel" destination="Rmz-Hl-CCs" id="6Z7-c7-uwU"/>
@@ -77,7 +63,4 @@
             <point key="canvasLocation" x="151.44927536231884" y="192.1875"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="edit_icon" width="512" height="512"/>
-    </resources>
 </document>

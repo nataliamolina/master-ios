@@ -16,16 +16,10 @@ class ProviderExperienceViewController: UIViewController {
     @IBOutlet private weak var placeTextField: UITextField!
     @IBOutlet private weak var countryTextField: UITextField!
     @IBOutlet private weak var cityTextField: UITextField!
-    @IBOutlet private weak var isNowButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
-    @IBOutlet private weak var deleteView: UIView!
+    @IBOutlet private weak var radiostackView: UIStackView!
     
     // MARK: - UI Actions
-    @IBAction private func isNowAction() {
-        viewModel?.info.isCurrent.toggle()
-        nowValidate()
-    }
-    
     @IBAction private func saveAction() {
         saveInfo()
     }
@@ -67,6 +61,17 @@ class ProviderExperienceViewController: UIViewController {
         toTextField.inputAccessoryView = toolbar
         toTextField.inputView = datePicker2
         
+    }
+    
+    private func setRadioButton() {
+        let radioView: RadioView = .fromNib()
+        radioView.setupWith(name: "providerExperience.now".localized, isSelected: viewModel?.info.isCurrent ?? false, index: 0)
+        radioView.onTappedBlock = { [weak self] index in
+            self?.viewModel?.info.isCurrent.toggle()
+            self?.nowValidate()
+        }
+        radiostackView.addSubview(radioView)
+        nowValidate()
     }
     
     @objc private func donedatePicker() {
@@ -119,15 +124,12 @@ class ProviderExperienceViewController: UIViewController {
         cityTextField.delegate = self
         sinceTextField.delegate = self
         toTextField.delegate = self
-        deleteView.isHidden = viewModel?.info.id == nil
         
         enableKeyboardDismiss()
         showDatePicker()
         setupBindings()
         setupWith()
-        
-        deleteView.addGestureRecognizer(UITapGestureRecognizer(target: self,
-                                                               action: #selector(deleteExperience)))
+        navigationItem.title = "providerInfo.experinces".localized
     }
     
     private func setupBindings() {
@@ -169,22 +171,14 @@ class ProviderExperienceViewController: UIViewController {
         countryTextField.text = viewModel?.info.country
         datePicker.date = viewModel?.info.startD ?? Date()
         datePicker2.date = viewModel?.info.endD ?? Date()
-        nowValidate()
+        setRadioButton()
     }
     
     private func nowValidate() {
         validateTetField()
-        let image = viewModel?.info.isCurrent ?? false ? UIImage(named: "circleFill") : UIImage(named: "circle")
-        isNowButton.setImage(image, for: .normal)
         
         toTextField.text = viewModel?.info.isCurrent ?? false ? nil : viewModel?.info.endDateShow
         toTextField.isEnabled = !(viewModel?.info.isCurrent ?? false)
-    }
-    
-    @objc private func deleteExperience() {
-        confirmInfoDelete { [weak self] in
-            self?.viewModel?.delete()
-        }
     }
     
     private func saveInfo() {
@@ -200,20 +194,6 @@ class ProviderExperienceViewController: UIViewController {
         viewModel?.info.city = city
         
         viewModel?.saveInfo()
-    }
-    
-    private func confirmInfoDelete(onConfirmed: @escaping () -> Void) {
-        let dialog = UIAlertController(title: "providerExperience.dialog.title".localized,
-                                       message: "providerExperience.dialog.message".localized,
-                                       preferredStyle: .alert)
-        
-        dialog.addAction(UIAlertAction(title: "providerInfo.cancel".localized, style: .default, handler: nil))
-        
-        dialog.addAction(UIAlertAction(title: "providerInfo.acept".localized, style: .destructive, handler: { _ in
-            onConfirmed()
-        }))
-        
-        present(dialog, animated: true, completion: nil)
     }
     
     private func validateTetField() {

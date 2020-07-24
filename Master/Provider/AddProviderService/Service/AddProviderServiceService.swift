@@ -34,4 +34,11 @@ class AddProviderServiceService: AddProviderServiceServiceProtocol {
                 onComplete(response, error)
         }
     }
+    
+    func putProviderService(serviceId: Int, request: ProviderServiceRequest, onComplete: @escaping (ProviderService?, CMError?) -> Void) {
+        connectionDependency
+            .put(url: Endpoint.putServiceCategories(serviceId: serviceId), request: request) { (response: ProviderService?, error: CMError?) in
+                onComplete(response, error)
+        }
+    }
 }

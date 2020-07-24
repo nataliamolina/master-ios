@@ -24,6 +24,7 @@ class ProviderServiceCellViewModel: ProviderServiceCellDataSource, CellViewModel
     let productPrice: Double
     let productId: Int
     var productCount: Int
+    let serviceCategory: ServiceCategory?
     
     var totalPrice: Double {
         return Double(productCount * Int(productPrice))
@@ -34,7 +35,8 @@ class ProviderServiceCellViewModel: ProviderServiceCellDataSource, CellViewModel
          productDesc: String,
          productPrice: Double,
          productCount: Int,
-         productId: Int) {
+         productId: Int,
+         serviceCategory: ServiceCategory? = nil) {
         
         self.productImageUrl = productImageUrl
         self.productName = productName
@@ -42,6 +44,7 @@ class ProviderServiceCellViewModel: ProviderServiceCellDataSource, CellViewModel
         self.productPrice = productPrice
         self.productCount = productCount
         self.productId = productId
+        self.serviceCategory = serviceCategory
     }
 }
 
@@ -88,5 +91,9 @@ extension ProviderServiceCellViewModel: ProductSelectorDataSource {
     
     func getIdentifier() -> String {
         return productId.asString
+    }
+    
+    func getServiceCategory() -> ServiceCategory? {
+        return serviceCategory
     }
 }

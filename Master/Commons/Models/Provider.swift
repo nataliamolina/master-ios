@@ -14,11 +14,18 @@ struct Provider: Codable {
     let nickname: String
     var photoUrl: String
     let description: String
+    let bankAccountNumber: String
+    let bankAccountType: String
+    let bankName: String
+    let city: City
     
     var asProviderProfile: ProviderProfile {
         return ProviderProfile(id: id,
                                user: user.asUserProfile,
                                photoUrl: photoUrl,
-                               description: description)
+                               description: description,
+                               bankAccountNumber: bankAccountNumber,
+                               bankAccountType: bankAccountType,
+                               bankName: bankName, city: city)
     }
 }

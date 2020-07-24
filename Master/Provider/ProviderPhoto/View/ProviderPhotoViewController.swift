@@ -11,6 +11,10 @@ import Firebase
 import AVKit
 import MobileCoreServices
 
+protocol ProviderPhotoViewControllerDelegate: class {
+    func imageEdited(provider: ProviderProfile?)
+}
+
 class ProviderPhotoViewController: UIViewController {
     // MARK: - UI References
     @IBOutlet private weak var photoImageView: UIImageView!
@@ -30,12 +34,15 @@ class ProviderPhotoViewController: UIViewController {
     private let viewModel: ProviderPhotoViewModel
     private let router: RouterBase<ProviderRouterTransitions>
     private var imagePicker: UIImagePickerController?
+    private weak var delegate: ProviderPhotoViewControllerDelegate?
     
     // MARK: - Life Cycle
     
-    init(viewModel: ProviderPhotoViewModel, router: RouterBase<ProviderRouterTransitions>) {
+    init(viewModel: ProviderPhotoViewModel, router: RouterBase<ProviderRouterTransitions>,
+         delegate: ProviderPhotoViewControllerDelegate?) {
         self.viewModel = viewModel
         self.router = router
+        self.delegate = delegate
         
         super.init(nibName: String(describing: ProviderPhotoViewController.self), bundle: nil)
     }
@@ -87,11 +94,19 @@ class ProviderPhotoViewController: UIViewController {
             case .uploadSuccessful:
                 self?.router.transition(to: .home)
                 
+            case .editImage:
+                self?.delegate?.imageEdited(provider: self?.viewModel.getProvider())
+                self?.navigationController?.popViewController(animated: true)
+                
             default:
                 return
             }
         }
         
+        if let url = viewModel.getPhotoUrl() {
+           viewModel.placeholderRemoved.value = true
+            photoImageView.kf.setImage(with: URL(string: url), placeholder: UIImage.avatar)
+        }
         viewModel.placeholderRemoved.bindTo(uploadButton, to: .state)
     }
     

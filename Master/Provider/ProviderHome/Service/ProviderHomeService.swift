@@ -37,4 +37,17 @@ class ProviderHomeService: ProviderHomeServiceProtocol {
             onComplete(response ?? [], error)
         }
     }
+    
+    func deleteProviderService(serviceId: Int, onComplete: @escaping (Bool?, CMError?) -> Void) {
+        connectionDependency
+            .delete(url: Endpoint.deleteProviderService(serviceId: serviceId)) { (response: Bool?, error: CMError?) in
+                onComplete(response, error)
+        }
+    }
+    
+    func deleteProviderInfo(providerId: Int, onComplete: @escaping (_ result: [ProviderInfoServiceModel]?, _ error: CMError?) -> Void) {
+           connectionDependency.delete(url: Endpoint.deleteProviderInfo(providerId: providerId)) { (response: [ProviderInfoServiceModel]?, error: CMError?) in
+               onComplete(response, error)
+           }
+       }
 }

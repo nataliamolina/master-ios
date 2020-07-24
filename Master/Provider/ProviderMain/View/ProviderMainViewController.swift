@@ -91,7 +91,7 @@ class ProviderMainViewController: UIViewController {
                 self?.router.transition(to: .home)
                 
             case .needsToUploadPhoto:
-                self?.router.transition(to: .uploadPhoto)
+                self?.router.transition(to: .uploadPhoto(delegate: nil))
                 
             case .needToCreateProviderAccount:
                 self?.router.transition(to: .register)
