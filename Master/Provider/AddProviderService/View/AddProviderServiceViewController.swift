@@ -199,12 +199,6 @@ class AddProviderServiceViewController: UIViewController {
             return
         }
         
-        if serviceDescTextField.safeText.count >= 100 {
-            showWarning(message: "La descripción del servicio es muy larga.")
-            
-            return
-        }
-        
         if serviceCategoryTextField.safeText.isEmpty {
             showWarning(message: "Selecciona una categoría para tu servicio.")
             

@@ -18,6 +18,7 @@ class ProviderProfileCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var photoImageView: MImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var descLabel: UILabel!
+    @IBOutlet private weak var editProviderView: UIView!
     
     // MARK: - UI Actions
     @IBAction private func editButtonAction() {
@@ -54,6 +55,10 @@ class ProviderProfileCell: UITableViewCell, ConfigurableCellProtocol {
         self.photoImageView.kf.setImage(with: URL(string: viewModel.photoUrl), placeholder: UIImage.avatar)
         self.nameLabel.text = viewModel.names
         self.descLabel.text = viewModel.description
+        
+        if self.delegate != nil {
+            editProviderView.isHidden = false
+        }
     }
 
     // MARK: - Private Methods
