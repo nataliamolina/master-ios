@@ -16,5 +16,5 @@ struct ProviderProfile {
     let bankAccountNumber: String
     let bankAccountType: String
     let bankName: String
-    let city: City
+    let city: City?
 }

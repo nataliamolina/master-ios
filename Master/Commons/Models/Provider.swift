@@ -17,7 +17,7 @@ struct Provider: Codable {
     let bankAccountNumber: String
     let bankAccountType: String
     let bankName: String
-    let city: City
+    let city: City?
     
     var asProviderProfile: ProviderProfile {
         return ProviderProfile(id: id,

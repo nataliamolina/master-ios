@@ -75,7 +75,7 @@ class ProviderEditViewModel {
     func setValues() {
         document.value = Session.shared.provider?.user.document ?? ""
         about.value = Session.shared.provider?.description ?? ""
-        city.value = Session.shared.provider?.city.name ?? ""
+        city.value = Session.shared.provider?.city?.name ?? ""
         banck.value = Session.shared.provider?.bankName ?? ""
         banckNumber.value = Session.shared.provider?.bankAccountNumber ?? ""
         banckType.value = Session.shared.provider?.bankAccountType ?? ""
