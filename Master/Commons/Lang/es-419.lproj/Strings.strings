@@ -210,7 +210,7 @@
 "welcome.screen2.title" = "Agenda tus citas";
 "welcome.screen2.desc" = "Elige el Master que se acomode a tus requerimientos, la fecha y el lugar donde se efectuará el servicio y crea la solicitud.";
 
-"welcome.provider.screen1.desc" = "1. Registra tus datos personales \n 2. Agrega el detalle de tus servicios, foto, descripción y valor. \n \n 3. Los usuarios solicitaran tu servicio y deberás aceptar o denegar la orden según tu disponibiidad. \n \n 4. Nos quedaremos con 20% del valor total de la orden, así que no olvides incluir este monto en el valor de tus servicios.";
+"welcome.provider.screen1.desc" = "1. Registra tus datos personales \n\n 2. Agrega el detalle de tus servicios, foto, descripción y valor. \n \n 3. Los usuarios solicitaran tu servicio y deberás aceptar o denegar la orden según tu disponibiidad.";
 
 "welcome.provider.screen2.desc" = "5. Entre más servicios realices, más oportunidades tendrás de que te vuelvan a solicitar. \n \n 6. Las calificaciones que te dan los usuarios son públicas ¡así que da lo mejor de ti!.";
 

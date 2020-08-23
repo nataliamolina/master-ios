@@ -17,12 +17,14 @@ import Paymentez
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private var appNavigationController = MNavigationController()
+    private var remoteConfig: RemoteConfig?
     var window: UIWindow?
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupFirebase()
+        setupRemoteConfig()
         setupPushNotifications(application)
         setupPaymentez()
         setupInitialVC()
@@ -122,6 +124,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         localize.update(provider: .strings)
         localize.update(language: "en")
     }
+    
+    private func setupRemoteConfig() {
+        RemoteConfigMaster.delegate = self
+        remoteConfig = RemoteConfig.remoteConfig()
+        let settings = RemoteConfigSettings()
+        settings.minimumFetchInterval = TimeInterval(0)
+        remoteConfig?.configSettings = settings
+        remoteConfig?.fetch(withExpirationDuration: TimeInterval(0)) { [weak self](status, _) -> Void in
+            if status == .success { 
+                self?.remoteConfig?.activate(completionHandler: nil)
+            }
+        }
+    }
 }
 
 // MARK: - Push Notification methods
@@ -149,5 +164,15 @@ extension AppDelegate {
 extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
+    }
+}
+
+// MARK: - RemoteConfigDelegate
+extension AppDelegate: RemoteConfigDelegate {
+    func getRemoteConfig(module: String) -> String {
+        if let data = remoteConfig?[module].stringValue {
+            return data
+        }
+        return ""
     }
 }

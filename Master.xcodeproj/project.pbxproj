@@ -949,6 +949,7 @@
 		A5F30D7123B4DB97005258A8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D6F23B4DB97005258A8 /* CategoryCell.swift */; };
 		A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D7023B4DB97005258A8 /* CategoryCell.xib */; };
 		A5F30D7423B4DC94005258A8 /* CategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */; };
+		B7110B0424F1BDCE00ECF1F5 /* RemoteConfigMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7110B0324F1BDCE00ECF1F5 /* RemoteConfigMaster.swift */; };
 		B73D198724AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
 		B73D198824AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
 		B73D198924AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
@@ -1398,6 +1399,7 @@
 		A5F30D7023B4DB97005258A8 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModel.swift; sourceTree = "<group>"; };
 		A8ED18371995DD3D60F7D239 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7110B0324F1BDCE00ECF1F5 /* RemoteConfigMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigMaster.swift; sourceTree = "<group>"; };
 		B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileTitleCell.swift; sourceTree = "<group>"; };
 		B73D198624AE9AAA00D166DE /* ProviderProfileTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderProfileTitleCell.xib; sourceTree = "<group>"; };
 		B73D198D24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileTitlevViewModel.swift; sourceTree = "<group>"; };
@@ -2924,6 +2926,7 @@
 				2C3E5162240C79B500873495 /* Dev-Info.plist */,
 				2C1218CC2405E7580098BE55 /* GoogleService-Info.plist */,
 				A58132AD23B4C7560032FC8B /* AppDelegate.swift */,
+				B7110B0324F1BDCE00ECF1F5 /* RemoteConfigMaster.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -4515,6 +4518,7 @@
 				B7E6FEC224B28A9800F7B67F /* ProviderInfoServiceProtocol.swift in Sources */,
 				2C76E323245723B400FCE5E2 /* BasicWelcomeCellViewModel.swift in Sources */,
 				2C305D9F2400A1DE005B76EB /* ProductSelectorResult.swift in Sources */,
+				B7110B0424F1BDCE00ECF1F5 /* RemoteConfigMaster.swift in Sources */,
 				2C0D25C32438E2C100DB206D /* SessionServiceProtocol.swift in Sources */,
 				2C8B3A552436D17B005FE926 /* UIButton+Extensions.swift in Sources */,
 				2CFF4DBD23FA007B0024B3F1 /* SelectorCellViewModel.swift in Sources */,

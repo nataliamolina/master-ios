@@ -18,9 +18,14 @@ PODS:
   - Firebase/Messaging (6.28.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 4.6.0)
+  - Firebase/RemoteConfig (6.28.0):
+    - Firebase/CoreOnly
+    - FirebaseRemoteConfig (~> 4.7.0)
   - Firebase/Storage (6.28.0):
     - Firebase/CoreOnly
     - FirebaseStorage (~> 3.8.0)
+  - FirebaseABTesting (4.1.0):
+    - FirebaseCore (~> 6.8)
   - FirebaseAnalytics (6.6.2):
     - FirebaseCore (~> 6.8)
     - FirebaseInstallations (~> 1.4)
@@ -63,6 +68,12 @@ PODS:
     - GoogleUtilities/Reachability (~> 6.7)
     - GoogleUtilities/UserDefaults (~> 6.7)
     - Protobuf (>= 3.9.2, ~> 3.9)
+  - FirebaseRemoteConfig (4.7.0):
+    - FirebaseABTesting (~> 4.0)
+    - FirebaseCore (~> 6.8)
+    - FirebaseInstallations (~> 1.1)
+    - GoogleUtilities/Environment (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
   - FirebaseStorage (3.8.0):
     - FirebaseCore (~> 6.8)
     - GTMSessionFetcher/Core (~> 1.1)
@@ -131,6 +142,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Crashlytics
   - Firebase/Messaging
+  - Firebase/RemoteConfig
   - Firebase/Storage
   - FloatRatingView (~> 4)
   - GoogleSignIn
@@ -149,6 +161,7 @@ SPEC REPOS:
     - AppAuth
     - EasyBinding
     - Firebase
+    - FirebaseABTesting
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseCoreDiagnostics
@@ -156,6 +169,7 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
+    - FirebaseRemoteConfig
     - FirebaseStorage
     - FloatRatingView
     - GoogleAppMeasurement
@@ -181,6 +195,7 @@ SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   EasyBinding: 61a98683f01b921c666f884ebcc26d23826a7003
   Firebase: dc81c6c4701aa965eda3b1433d1b993e3f291e7b
+  FirebaseABTesting: 9e368b88c2f1c5d7a433828d9d224779b53207b6
   FirebaseAnalytics: 5fa308e1b13f838d0f6dc74719ac2a72e8c5afc4
   FirebaseCore: aab9d4dd2d819197a0157166cb065ae88ff612b5
   FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
@@ -188,6 +203,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 3c520c951305cbf9ca54eb891ff9e6d1fd384881
   FirebaseInstanceID: 358d5cb393d2750a745569ede06827c35aea530b
   FirebaseMessaging: bdd4d573eab37ebee29bad4e7c4b0ef18fa1a952
+  FirebaseRemoteConfig: a7d272194b5336a66ca3e35beb5de67f18c79b91
   FirebaseStorage: 3ef81ca5fa7817f85451ca09d516a34d2c7542a7
   FloatRatingView: bb6bdddfbeec51b1d387b4bd50abc27b4dfccd48
   GoogleAppMeasurement: 8cd1f289d60e629cf16ab03363b9e89c776b9651
@@ -209,6 +225,6 @@ SPEC CHECKSUMS:
   SPAlert: 1a8afa1c6ac86a82ab5b2cfdf7f9a51e68cb6c0c
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 1e9ec8c73d85d4799936480107098e5d84c1c3cc
+PODFILE CHECKSUM: 605aa54073d4013bf506914c1dc72bec899b9fb4
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

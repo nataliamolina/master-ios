@@ -22,7 +22,6 @@ class SplashScreenViewController: UIViewController {
     init(viewModel: SplashScreenViewModel, router: RouterBase<MainRouterTransitions>) {
         self.viewModel = viewModel
         self.router = router
-        
         super.init(nibName: String(describing: SplashScreenViewController.self), bundle: nil)
     }
     
@@ -53,7 +52,7 @@ class SplashScreenViewController: UIViewController {
         
         setupBindings()
     }
-
+    
     private func setupBindings() {
         viewModel.status.listen { [weak self] status in
             guard let self = self else { return }

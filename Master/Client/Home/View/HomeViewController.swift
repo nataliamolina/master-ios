@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
         
         setupNavigationGesture()
-        
+        checkVersion()
         viewModel.fetchOrders()
         
         PushNotifications.shared.hasPendingNotification.listen(triggerInitialValue: true) { [weak self] hasPendingNotification in
@@ -124,6 +124,31 @@ class HomeViewController: UIViewController {
         imageView.image = .greenLogoIcon
         
         navigationItem.titleView = imageView
+    }
+    
+    private func checkVersion() {
+        let featureFlags = RemoteConfigMaster()
+        let flag = "VERSION_APP"
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        if featureFlags.isAvaliable(module: flag) != version &&
+            !featureFlags.isAvaliable(module: flag).isEmpty {
+            confirmServiceUpdate(onConfirmed: {})
+            return
+        }
+    }
+    
+    private func confirmServiceUpdate(onConfirmed: @escaping () -> Void) {
+        let dialog = UIAlertController(title: "Actualización",
+                                       message: "Actualmnete hay una actualización disponibles, ingresa a tu App Store y actualiza.",
+                                       preferredStyle: .alert)
+        
+        dialog.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+        
+        dialog.addAction(UIAlertAction(title: "Aceptar", style: .destructive, handler: { _ in
+            onConfirmed()
+        }))
+        
+        present(dialog, animated: true, completion: nil)
     }
     
     @objc private func menuButtonTapped() {
