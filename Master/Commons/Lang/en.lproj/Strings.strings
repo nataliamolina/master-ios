@@ -212,7 +212,7 @@
 
 "welcome.provider.screen1.desc" = "1. Registra tus datos personales \n\n 2. Agrega el detalle de tus servicios, foto, descripción y valor. \n \n 3. Los usuarios solicitaran tu servicio y deberás aceptar o denegar la orden según tu disponibiidad.";
 
-"welcome.provider.screen2.desc" = "5. Entre más servicios realices, más oportunidades tendrás de que te vuelvan a solicitar. \n \n 6. Las calificaciones que te dan los usuarios son públicas ¡así que da lo mejor de ti!.";
+"welcome.provider.screen2.desc" = "4. Entre más servicios realices, más oportunidades tendrás de que te vuelvan a solicitar. \n \n 5. Las calificaciones que te dan los usuarios son públicas ¡así que da lo mejor de ti!.";
 
 "welcome.screen3.title" = "Todo listo";
 "welcome.screen3.desc" = "¿Eres un profesional y quieres convertirte en un Master?.";
@@ -220,3 +220,8 @@
 "welcome.skip" = "Saltar";
 "welcome.master.join" = "Si, soy proveedor de servicios";
 "welcome.client.join" = "No, continuar";
+
+"updateApp.title" = "¡Hola!";
+"updateApp.message" = "Hemos realizado algunos cambios en la app, entra a App Store para tener la última versión";
+"updateApp.cancelButton" = "Continuar";
+"updateApp.aceptButton" = "Actualizar";

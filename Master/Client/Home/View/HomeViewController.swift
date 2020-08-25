@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
     private let viewModel = HomeViewModel()
     private let router: RouterBase<HomeRouterTransitions>
     private let heroTransition = HeroTransition()
+    private let flag = "VERSION_APP"
+    private let urlAppSore = "https://apps.apple.com/co/app/master/id1501439287"
     
     // MARK: - Life Cycle
     
@@ -128,23 +130,26 @@ class HomeViewController: UIViewController {
     
     private func checkVersion() {
         let featureFlags = RemoteConfigMaster()
-        let flag = "VERSION_APP"
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         if featureFlags.isAvaliable(module: flag) != version &&
             !featureFlags.isAvaliable(module: flag).isEmpty {
-            confirmServiceUpdate(onConfirmed: {})
+            confirmServiceUpdate(onConfirmed: { [weak self] in
+                if let url = URL(string: self?.urlAppSore ?? "") {
+                    UIApplication.shared.open(url)
+                }
+            })
             return
         }
     }
     
     private func confirmServiceUpdate(onConfirmed: @escaping () -> Void) {
-        let dialog = UIAlertController(title: "Actualización",
-                                       message: "Actualmnete hay una actualización disponibles, ingresa a tu App Store y actualiza.",
+        let dialog = UIAlertController(title: "updateApp.title".localized,
+                                       message: "updateApp.message".localized,
                                        preferredStyle: .alert)
         
-        dialog.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+        dialog.addAction(UIAlertAction(title: "updateApp.cancelButton".localized, style: .default, handler: nil))
         
-        dialog.addAction(UIAlertAction(title: "Aceptar", style: .destructive, handler: { _ in
+        dialog.addAction(UIAlertAction(title: "updateApp.aceptButton".localized, style: .default, handler:  { _ in
             onConfirmed()
         }))
         
@@ -180,9 +185,9 @@ extension HomeViewController: UITableViewDataSource {
         return viewModel.dataSource.value.count
     }
     
-   /* func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel.sectionTitles.safeContains(section)
-    }*/
+    /* func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+     return viewModel.sectionTitles.safeContains(section)
+     }*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.dataSource.value.safeContains(section)?.count ?? 0

@@ -49,6 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {}
     
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        application.applicationIconBadgeNumber = 0
+        UIApplication.shared.applicationIconBadgeNumber = 0
+    }
+    
     func applicationWillTerminate(_ application: UIApplication) {}
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
