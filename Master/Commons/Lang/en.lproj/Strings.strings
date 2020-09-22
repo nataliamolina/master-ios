@@ -145,6 +145,13 @@
 "orderDetail.total" = "Total";
 "orderDetail.pay" = "Pagar";
 "orderDetail.rate" = "Calificar Servicio";
+"orderDetail.message" = "Al aceptar el servicio tendras la oportunidad de establecer un excedente, en caso de ser necesario";
+"orderExcess.title" = "Aceptar Servicio";
+"orderExcess.message" = "Agregar excedente a esta orden";
+"orderExcess.subTitle" = "Excedente";
+"orderExcess.description" = "Explicale al usurio porque le estas corando un poco más";
+"orderExcess.acept" = "Aceptar";
+"orderExcess.cancel" = "Cancelar";
 
 // Payment
 "payment.title" = "Pago";

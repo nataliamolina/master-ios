@@ -98,6 +98,17 @@ class ProviderOrderDetailViewController: UIViewController {
         
         present(dialog, animated: true, completion: nil)
     }
+    
+    private func showExcess() {
+        router.transition(to: .excess(delegate: self))
+    }
+}
+
+// MARK: - ExcessViewControllerDelegate
+extension ProviderOrderDetailViewController: ExcessViewControllerDelegate {
+    func saveExcess(price: Double, description: String) {
+        viewModel.updateOrderState()
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -118,6 +129,11 @@ extension ProviderOrderDetailViewController: OrderDetailHeaderCellDelegate {
     func actionButtonTapped(_ cell: OrderDetailHeaderCell,
                             position: OrderDetailHeaderCellButtonType,
                             state: OrderStateType) {
+        
+        if position == .right && state == .pending {
+           showExcess()
+            return
+        }
         
         confirmServiceUpdate { [weak self] in
             switch position {

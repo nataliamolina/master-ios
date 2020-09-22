@@ -24,6 +24,7 @@ enum ProviderRouterTransitions {
     case onBoarding
     case providerStudies(viewModel: ProviderInfoViewModel, delegate: ProviderInfoEditDelegate)
     case providerExperience(viewModel: ProviderInfoViewModel, delegate: ProviderInfoEditDelegate)
+    case excess(delegate: ExcessViewControllerDelegate?)
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
@@ -91,6 +92,9 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             
         case .editProvider(let delegate):
             handleEditProviderTransition(delegate: delegate)
+            
+        case .excess(let delegate):
+            handleExcessTransition(delegate: delegate)
         }
     }
     
@@ -110,8 +114,8 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
     
     private func handleOnBoardingTransition() {
         let viewController = ProviderWelcomeViewController(viewModel: ProviderWelcomeViewModel(), router: self)
-               
-       providerNavigationController.present(viewController, animated: true, completion: nil)
+        
+        providerNavigationController.present(viewController, animated: true, completion: nil)
     }
     
     private func handleMainTransition() {
@@ -158,7 +162,7 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         
         providerNavigationController.pushViewController(viewController, animated: true)
     }
-
+    
     private func handleEditProviderTransition(delegate: ProviderEditViewControllerDelegate?) {
         let viewController = ProviderEditViewController(router: self, viewModel: ProviderEditViewModel(), delegate: delegate)
         
@@ -205,6 +209,12 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         let viewController = ProviderExperienceViewController(viewModel: viewModel, delegate: delegate)
         
         providerNavigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleExcessTransition(delegate: ExcessViewControllerDelegate?) {
+        let viewController = ExcessViewController(delegate: delegate)
+        
+        providerNavigationController.present(viewController, animated: true)
     }
 }
 

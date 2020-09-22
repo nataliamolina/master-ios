@@ -31,6 +31,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var rightActionButton: MButton!
     @IBOutlet private weak var providerNameLabel: UILabel!
     @IBOutlet private weak var orderDateLabel: UILabel!
+    @IBOutlet private weak var orderMessageLabel: UILabel!
     
     // MARK: - UI Actions
     @IBAction private func leftButtonAction() {
@@ -80,6 +81,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         statusLabel.text = nil
         providerNameLabel.text = nil
         orderDateLabel.text = nil
+        orderMessageLabel.isHidden = true
     }
     
     private func setupButtonsWith(state: OrderStateType, isProvider: Bool) {
@@ -110,6 +112,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
             
             rightActionButton.style = .green
             rightActionButton.title = "Aceptar Servicio"
+            orderMessageLabel.isHidden = false
             
         case .paymentDone:
             guard isProvider else {

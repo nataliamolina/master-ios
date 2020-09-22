@@ -950,6 +950,12 @@
 		A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F30D7023B4DB97005258A8 /* CategoryCell.xib */; };
 		A5F30D7423B4DC94005258A8 /* CategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */; };
 		B7110B0424F1BDCE00ECF1F5 /* RemoteConfigMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7110B0324F1BDCE00ECF1F5 /* RemoteConfigMaster.swift */; };
+		B71619A425197ED9007F958E /* ExcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71619A225197ED9007F958E /* ExcessViewController.swift */; };
+		B71619A525197ED9007F958E /* ExcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71619A225197ED9007F958E /* ExcessViewController.swift */; };
+		B71619A625197ED9007F958E /* ExcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71619A225197ED9007F958E /* ExcessViewController.swift */; };
+		B71619A725197ED9007F958E /* ExcessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B71619A325197ED9007F958E /* ExcessViewController.xib */; };
+		B71619A825197ED9007F958E /* ExcessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B71619A325197ED9007F958E /* ExcessViewController.xib */; };
+		B71619A925197ED9007F958E /* ExcessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B71619A325197ED9007F958E /* ExcessViewController.xib */; };
 		B73D198724AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
 		B73D198824AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
 		B73D198924AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */; };
@@ -1400,6 +1406,8 @@
 		A5F30D7323B4DC94005258A8 /* CategoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModel.swift; sourceTree = "<group>"; };
 		A8ED18371995DD3D60F7D239 /* libPods-Master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7110B0324F1BDCE00ECF1F5 /* RemoteConfigMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigMaster.swift; sourceTree = "<group>"; };
+		B71619A225197ED9007F958E /* ExcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcessViewController.swift; sourceTree = "<group>"; };
+		B71619A325197ED9007F958E /* ExcessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExcessViewController.xib; sourceTree = "<group>"; };
 		B73D198524AE9AAA00D166DE /* ProviderProfileTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileTitleCell.swift; sourceTree = "<group>"; };
 		B73D198624AE9AAA00D166DE /* ProviderProfileTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderProfileTitleCell.xib; sourceTree = "<group>"; };
 		B73D198D24AEA13200D166DE /* ProviderProfileTitlevViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProfileTitlevViewModel.swift; sourceTree = "<group>"; };
@@ -2606,6 +2614,7 @@
 		2CD8AC52241AC028005C8628 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				B71619A125197DF5007F958E /* Dialog */,
 				B7C7373824AC2A5F0028A8C7 /* ProviderInfo */,
 				2CE9E1E2245FC50E00739A7D /* ProviderWelcome */,
 				2C8B3A36243699EC005FE926 /* ProviderOrderDetail */,
@@ -3046,6 +3055,15 @@
 			path = CategoryCell;
 			sourceTree = "<group>";
 		};
+		B71619A125197DF5007F958E /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				B71619A225197ED9007F958E /* ExcessViewController.swift */,
+				B71619A325197ED9007F958E /* ExcessViewController.xib */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
 		B73D198424AE9A6E00D166DE /* ProviderProfileTitleCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3328,6 +3346,7 @@
 				2C3E5141240C79B500873495 /* ProviderProfileCell.xib in Resources */,
 				2C3E5142240C79B500873495 /* OrdersViewController.xib in Resources */,
 				2C366A0624565A3A0048B968 /* CheckoutRadioCell.xib in Resources */,
+				B71619A825197ED9007F958E /* ExcessViewController.xib in Resources */,
 				2C3E5143240C79B500873495 /* ProviderCell.xib in Resources */,
 				2C3E5144240C79B500873495 /* CheckoutProviderCell.xib in Resources */,
 				2C6716FD241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
@@ -3407,6 +3426,7 @@
 				2CC3DC7D2411EBCC001E76B2 /* ProviderProfileCell.xib in Resources */,
 				2CC3DC7E2411EBCC001E76B2 /* OrdersViewController.xib in Resources */,
 				2C366A0524565A3A0048B968 /* CheckoutRadioCell.xib in Resources */,
+				B71619A725197ED9007F958E /* ExcessViewController.xib in Resources */,
 				2CC3DC7F2411EBCC001E76B2 /* ProviderCell.xib in Resources */,
 				2CC3DC802411EBCC001E76B2 /* CheckoutProviderCell.xib in Resources */,
 				2C6716FC241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
@@ -3486,6 +3506,7 @@
 				2CFF4DA523F99D1C0024B3F1 /* ProviderProfileCell.xib in Resources */,
 				2C829ECA240B3A4800D7DD81 /* OrdersViewController.xib in Resources */,
 				2C366A0724565A3A0048B968 /* CheckoutRadioCell.xib in Resources */,
+				B71619A925197ED9007F958E /* ExcessViewController.xib in Resources */,
 				2C7E7FC623F8A0A600D7835E /* ProviderCell.xib in Resources */,
 				2CC731392404722E006FF85D /* CheckoutProviderCell.xib in Resources */,
 				2C6716FE241D458800C86531 /* ProviderPhotoViewController.xib in Resources */,
@@ -3925,6 +3946,7 @@
 				2C1DFD63245919F4000EB5C4 /* WelcomeViewModel.swift in Sources */,
 				2C3E50AC240C79B500873495 /* TitleCell.swift in Sources */,
 				2C3E50AD240C79B500873495 /* MTextField.swift in Sources */,
+				B71619A525197ED9007F958E /* ExcessViewController.swift in Sources */,
 				2C3E50AE240C79B500873495 /* ServiceCategory.swift in Sources */,
 				2C1636D92416AF9A0083A59A /* RateServiceProtocol.swift in Sources */,
 				2C57B73724170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
@@ -4194,6 +4216,7 @@
 				2C1DFD62245919F4000EB5C4 /* WelcomeViewModel.swift in Sources */,
 				2CC3DBE02411EBCC001E76B2 /* TitleCell.swift in Sources */,
 				2CC3DBE12411EBCC001E76B2 /* MTextField.swift in Sources */,
+				B71619A425197ED9007F958E /* ExcessViewController.swift in Sources */,
 				2CC3DBE22411EBCC001E76B2 /* ServiceCategory.swift in Sources */,
 				2C1636D82416AF9A0083A59A /* RateServiceProtocol.swift in Sources */,
 				2C57B73624170EE700A3281F /* PushNotificationsRouter.swift in Sources */,
@@ -4439,6 +4462,7 @@
 				B79258B124C9D5C20012A9DC /* ProviderEditRequest.swift in Sources */,
 				2C1F2F73241EB81F008E803D /* ProviderHomeViewModel.swift in Sources */,
 				2C1636D62416AF300083A59A /* CommentRequest.swift in Sources */,
+				B71619A625197ED9007F958E /* ExcessViewController.swift in Sources */,
 				2C366A18245666450048B968 /* RadioOption.swift in Sources */,
 				B73D198924AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */,
 				2CA2B0C124144C7F000C7131 /* String+Lang.swift in Sources */,
