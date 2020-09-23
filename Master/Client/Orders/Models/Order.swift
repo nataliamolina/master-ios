@@ -63,6 +63,8 @@ struct Order: Codable {
     let orderProviderServices: [OrderProviderService]?
     let city: City?
     let serviceRequirements: String?
+    let excess: Double?
+    let descriptionExcess: String?
 }
 
 struct OrderState: Codable {

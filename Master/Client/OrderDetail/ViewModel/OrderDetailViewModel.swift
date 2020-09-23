@@ -121,8 +121,20 @@ class OrderDetailViewModel {
             CheckoutFieldCellViewModel(title: CheckoutLang.conditions,
                                        value: model.serviceRequirements ?? "-",
                                        image: .checkList,
-                                       bottomLineVisible: false,
                                        type: .city,
+                                       detailIconVisible: false),
+            
+            CheckoutFieldCellViewModel(title: CheckoutLang.excess,
+                                       value: "\(model.excess ?? 0)",
+                                       image: .dollar,
+                                       type: .excess,
+                                       detailIconVisible: false),
+            
+            CheckoutFieldCellViewModel(title: CheckoutLang.description,
+                                       value: model.descriptionExcess ?? "",
+                                       image: .note,
+                                       bottomLineVisible: false,
+                                       type: .descExcess,
                                        detailIconVisible: false)
         ]
         

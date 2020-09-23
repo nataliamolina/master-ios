@@ -85,14 +85,13 @@ class ProviderOrderDetailViewController: UIViewController {
     }
     
     private func confirmServiceUpdate(onConfirmed: @escaping () -> Void) {
-        // FIXME: Strings
-        let dialog = UIAlertController(title: "Confirmar",
-                                       message: "Al cambiar el estado del pedido, este será notificado al usuario.",
+        let dialog = UIAlertController(title: "changeState.title".localized,
+                                       message: "changeState.message".localized,
                                        preferredStyle: .alert)
         
-        dialog.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+        dialog.addAction(UIAlertAction(title: "changeState.cancel".localized, style: .default, handler: nil))
         
-        dialog.addAction(UIAlertAction(title: "Aceptar", style: .destructive, handler: { _ in
+        dialog.addAction(UIAlertAction(title: "changeState.acept".localized, style: .destructive, handler: { _ in
             onConfirmed()
         }))
         

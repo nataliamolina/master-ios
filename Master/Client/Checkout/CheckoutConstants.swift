@@ -10,13 +10,14 @@ import Foundation
 
 struct CheckoutConstants {
     struct Lang {
-        // FIXME: Heeeelp
         static let title = "checkout.title".localized
         static let address = "Dirección".localized
         static let city = "Ciudad".localized
         static let conditions = "Condiciones".localized
         static let dateAndHour = "Fecha y Hora".localized
         static let notes = "Notas".localized
+        static let excess = "Excedente".localized
+        static let description = "Descripción excedente".localized
         static let products = "Productos".localized
         static let reserve = "Reservar Master".localized
         static let bogota = "general.bogota".localized

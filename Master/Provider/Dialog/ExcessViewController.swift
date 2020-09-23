@@ -67,9 +67,11 @@ class ExcessViewController: UIViewController {
     
     private func setupUI() {
         let radio: RadioView = .fromNib()
+        var selected = false
         radio.setupWith(name: "orderExcess.message".localized, isSelected: false, index: 0)
         radio.onTappedBlock = { [weak self] _ in
-            self?.excessStackView.isHidden = false
+            selected.toggle()
+            self?.excessStackView.isHidden = !selected
         }
         radioView.addSubview(radio)
         
@@ -108,7 +110,7 @@ class ExcessViewController: UIViewController {
     @objc private func keyboardWillShow(notification: NSNotification) {
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
         
-        let frame = (UIScreen.main.bounds.height - dialogView.frame.height)/2
+        let frame = (UIScreen.main.bounds.height - dialogView.frame.height)
         
         dialogViewConstraint.constant = keyboardSize.height - frame
     }

@@ -37,6 +37,10 @@ extension UIImage {
         return UIImage(named: "building_icon")
     }
     
+    static var dollar: UIImage? {
+        return UIImage(named: "dollar")
+    }
+    
     static var calendar: UIImage? {
         return UIImage(named: "calendar_icon")
     }

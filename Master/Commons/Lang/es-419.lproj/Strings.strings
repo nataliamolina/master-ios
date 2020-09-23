@@ -150,7 +150,7 @@
 "orderExcess.message" = "Agregar excedente a esta orden";
 "orderExcess.subTitle" = "Excedente";
 "orderExcess.description" = "Explicale al usurio porque le estas corando un poco más";
-"orderExcess.acept" = "Aceptar";
+"orderExcess.acept" = "Confirmar";
 "orderExcess.cancel" = "Cancelar";
 
 // Payment
@@ -232,3 +232,8 @@
 "updateApp.message" = "Hemos realizado algunos cambios en la app, entra a App Store para tener la última versión";
 "updateApp.cancelButton" = "Continuar";
 "updateApp.aceptButton" = "Actualizar";
+
+"changeState.title" = "Confirmar";
+"changeState.message" = "Al cambiar el estado del pedido, este será notificado al usuario.";
+"changeState.acept" = "Aceptar";
+"changeState.cancel" = "Cancelar";

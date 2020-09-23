@@ -14,6 +14,8 @@ enum CheckoutFieldCellType {
     case dates
     case notes
     case cart
+    case excess
+    case descExcess
 }
 
 protocol CheckoutFieldCellDataSource {
