@@ -20,15 +20,7 @@ class RegisterViewController: UIViewController {
     // MARK: - IBActions
     @IBAction private func registerButtonAction() {
         dismissKeyboard()
-        
-        let firstName = namesTextField.safeText.components(separatedBy: " ").first ?? ""
-        let lastName = namesTextField.safeText.components(separatedBy: " ").last ?? ""
-        
-        viewModel.register(email: emailTextField.safeText,
-                           password: passwordTextField.safeText,
-                           firstName: firstName,
-                           lastName: lastName,
-                           phoneNumber: phoneTextField.safeText)
+        validateForm()
     }
     
     @IBAction private func legalButtonAction() {
@@ -47,6 +39,42 @@ class RegisterViewController: UIViewController {
     }
     
     // MARK: - Private Methods
+    private func validateForm() {
+        // FIXME: Messages
+        if namesTextField.safeText.isEmpty || namesTextField.safeText.count < 3 {
+            showWarning(message: "Debes ingresar un nombre válio.")
+            
+            return
+        }
+        
+        if phoneTextField.safeText.isEmpty || passwordTextField.safeText.count < 6 {
+            showWarning(message: "Debes ingresar un telefono valido..")
+            
+            return
+        }
+        
+        if emailTextField.safeText.isEmpty || emailTextField.safeText.count < 11 || !emailTextField.safeText.contains("@") {
+            showWarning(message: "Debes ingresar un correo válio.")
+            
+            return
+        }
+        
+        if passwordTextField.safeText.isEmpty || passwordTextField.safeText.count < 4 {
+            showWarning(message: "Debes ingresar una contraseña valida.")
+            
+            return
+        }
+        
+        let firstName = namesTextField.safeText.components(separatedBy: " ").first ?? ""
+        let lastName = namesTextField.safeText.components(separatedBy: " ").last ?? ""
+        
+        viewModel.register(email: emailTextField.safeText,
+                           password: passwordTextField.safeText,
+                           firstName: firstName,
+                           lastName: lastName,
+                           phoneNumber: phoneTextField.safeText)
+    }
+    
     private func setupUI() {
         title = viewModel.title
         viewModel.controlsEnabled.bindTo(emailTextField, to: .state)

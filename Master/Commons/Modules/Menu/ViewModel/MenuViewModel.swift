@@ -47,19 +47,19 @@ class MenuViewModel {
     private func createMenu() {
         let serviceTitle = MenuTitleCellViewModel(title: .services, isFirstItem: true)
         let accountTitle = MenuTitleCellViewModel(title: .account, isFirstItem: false)
-        let cityTitle = MenuTitleCellViewModel(title: .city, isFirstItem: false)
+       // let cityTitle = MenuTitleCellViewModel(title: .city, isFirstItem: false)
         
         let orders = MenuOptionCellViewModel(option: .orders)
         let legal = MenuOptionCellViewModel(option: .legal)
         let help = MenuOptionCellViewModel(option: .help)
-        let city = MenuOptionCellViewModel(option: .city(name: currentCity))
+       // let city = MenuOptionCellViewModel(option: .city(name: currentCity))
         
         dataSource.append(serviceTitle)
         dataSource.append(orders)
         dataSource.append(accountTitle)
         dataSource.append(legal)
         dataSource.append(help)
-        dataSource.append(cityTitle)
-        dataSource.append(city)
+       // dataSource.append(cityTitle)
+       // dataSource.append(city)
     }
 }

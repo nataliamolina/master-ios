@@ -23,7 +23,8 @@ class WelcomeViewController: UIViewController {
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
             
-            self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))
+            /*self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))*/
+             self.router.transition(to: .home)
         }
     }
     
@@ -41,7 +42,8 @@ class WelcomeViewController: UIViewController {
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
             
-            self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))
+           /* self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))*/
+             self.router.transition(to: .home)
         }
     }
     
@@ -51,7 +53,8 @@ class WelcomeViewController: UIViewController {
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
             
-            self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))
+           /* self.router.transition(to: .citySelector(viewModel: self.viewModel.getCitySelectorViewModel()))*/
+             self.router.transition(to: .home)
         }
     }
     
