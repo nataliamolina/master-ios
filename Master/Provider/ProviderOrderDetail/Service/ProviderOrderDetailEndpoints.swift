@@ -13,11 +13,7 @@ private enum EndpointsKeys: String {
 }
 
 extension Endpoint {
-    static func updateOrderState(orderId: Int, stateId: Int) -> String {
-        var endpoint = Endpoint.url(with: EndpointsKeys.updateOrderState.rawValue)
-        endpoint = endpoint.replacingOccurrences(of: "{orderId}", with: orderId.asString)
-        endpoint = endpoint.replacingOccurrences(of: "{stateId}", with: stateId.asString)
-
-        return endpoint
+    static func updateOrderState() -> String {
+        return Endpoint.url(with: EndpointsKeys.updateOrderState.rawValue)
     }
 }

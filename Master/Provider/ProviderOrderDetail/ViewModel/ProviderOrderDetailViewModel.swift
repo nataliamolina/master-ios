@@ -22,6 +22,7 @@ class ProviderOrderDetailViewModel {
     private let orderId: Int
     private var currentState: OrderStateType = .unknown
     private typealias CheckoutLang = CheckoutConstants.Lang
+    var model: Order?
     
     let formattedTotal = Var("$0")
     let status = Var<ProviderOrderDetailViewModelStatus>(.undefined)
@@ -57,19 +58,24 @@ class ProviderOrderDetailViewModel {
     }
     
     func rejectOrder() {
-        performOrderState(.rejected)
+        performOrderState(.rejected,
+                          extraPrice: model?.extraCost ?? 0,
+                          extraDescription: model?.extraCostDescription ?? "")
     }
     
     func updateOrderState() {
         switch currentState {
         case .paymentDone:
-            performOrderState(.inProgress)
+            performOrderState(.inProgress, extraPrice: model?.extraCost ?? 0,
+            extraDescription: model?.extraCostDescription ?? "")
             
         case .inProgress:
-            performOrderState(.finished)
+            performOrderState(.finished, extraPrice: model?.extraCost ?? 0,
+            extraDescription: model?.extraCostDescription ?? "")
             
         case .pending:
-            performOrderState(.pendingForPayment)
+            performOrderState(.pendingForPayment, extraPrice: model?.extraCost ?? 0,
+            extraDescription: model?.extraCostDescription ?? "")
             
         default:
             return
@@ -93,10 +99,15 @@ class ProviderOrderDetailViewModel {
     
     // MARK: - Private Methods
     
-    private func performOrderState(_ state: OrderStateType) {
+    private func performOrderState(_ state: OrderStateType,
+                                   extraPrice: Double,
+                                   extraDescription: String) {
         isLoading.value = true
-        
-        service.updateOrderState(orderId: orderId, stateId: state.id) { [weak self] (response: OrderState?, error: CMError?) in
+        let request = ProviderOrderRequest(orderId: orderId,
+                                           state: state.id,
+                                           extraPrice: extraPrice,
+                                           extraDescription: extraDescription)
+        service.updateOrderState(request: request) { [weak self] (response: OrderState?, error: CMError?) in
             
             self?.isLoading.value = false
             
@@ -108,12 +119,16 @@ class ProviderOrderDetailViewModel {
             
             self?.currentState = newState.type
             self?.status.value = .stateUpdated
+            
+            guard let model = self?.model else { return }
+            self?.responseToViewModels(model: model)
         }
     }
     
     private func responseToViewModels(model: Order) {
         dataSource.value.removeAll()
-
+        
+        self.model = model
         self.currentState = model.orderState.type
         self.formattedTotal.value = model.grossTotal.toFormattedCurrency()
         
@@ -156,6 +171,19 @@ class ProviderOrderDetailViewModel {
                                        image: .checkList,
                                        bottomLineVisible: false,
                                        type: .city,
+                                       detailIconVisible: false),
+            
+            CheckoutFieldCellViewModel(title: CheckoutLang.excess,
+                                       value: "\(model.extraCost ?? 0)",
+                                       image: .dollar,
+                                       type: .excess,
+                                       detailIconVisible: false),
+            
+            CheckoutFieldCellViewModel(title: CheckoutLang.description,
+                                       value: model.extraCostDescription ?? "",
+                                       image: .note,
+                                       bottomLineVisible: false,
+                                       type: .descExcess,
                                        detailIconVisible: false)
         ]
         

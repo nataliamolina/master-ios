@@ -3,82 +3,82 @@
 <plist version="1.0">
 <dict>
 	<key>cities</key>
-	<string>cities</string>
+	<string>v1/cities</string>
 	<key>postProviderService</key>
-	<string>provider-services</string>
+	<string>v1/provider-services</string>
 	<key>putProviderService</key>
-	<string>provider-services/{serviceId}</string>
+	<string>v1/provider-services/{serviceId}</string>
 	<key>deleteProviderService</key>
-	<string>provider-services/{serviceId}</string>
+	<string>v1/provider-services/{serviceId}</string>
 	<key>updateOrderState</key>
-	<string>orders/{orderId}/update/{stateId}</string>
+	<string>v2/orders/state</string>
 	<key>getServiceCategories</key>
-	<string>services/categories</string>
+	<string>v1/services/categories</string>
 	<key>updateProviderPhoto</key>
-	<string>provider/profile/photo</string>
+	<string>v1/provider/profile/photo</string>
 	<key>registerProvider</key>
-	<string>provider</string>
+	<string>v1/provider</string>
 	<key>editProvider</key>
-	<string>provider/profile</string>
+	<string>v1/provider/profile</string>
 	<key>getProviderPhoto</key>
-	<string>provider/profile/photo</string>
+	<string>v1/provider/profile/photo</string>
 	<key>getProviderProfile</key>
-	<string>provider/profile</string>
+	<string>v1/provider/profile</string>
 	<key>logout</key>
-	<string>login/logout</string>
+	<string>v1/login/logout</string>
 	<key>addComment</key>
-	<string>orders/comments</string>
+	<string>v1/orders/comments</string>
 	<key>payOrder</key>
-	<string>orders/pay</string>
+	<string>v1/orders/pay</string>
 	<key>deleteCards</key>
-	<string>cards</string>
+	<string>v1/cards</string>
 	<key>validateOrderRatingById</key>
-	<string>orders/comments/validate/{orderId}</string>
+	<string>v1/orders/comments/validate/{orderId}</string>
 	<key>getOrderServicesById</key>
-	<string>orders/{orderId}/services</string>
+	<string>v1/orders/{orderId}/services</string>
 	<key>getOrderById</key>
-	<string>orders/{orderId}</string>
+	<string>v1/orders/{orderId}</string>
 	<key>postOrder</key>
-	<string>orders</string>
+	<string>v1/orders</string>
 	<key>getCommentsByProviderId</key>
-	<string>orders/comments/provider/{providerId}</string>
+	<string>v1/orders/comments/provider/{providerId}</string>
 	<key>providerServicesByCategoryId</key>
-	<string>provider-services/provider/{providerId}/category/{categoryId}</string>
+	<string>v1/provider-services/provider/{providerId}/category/{categoryId}</string>
 	<key>providerProfileByUserId</key>
-	<string>provider/profile/{userId}</string>
+	<string>v1/provider/profile/{userId}</string>
 	<key>serviceDetail</key>
-	<string>provider/service/category/{id}/city/{cityId}</string>
+	<string>v1/provider/service/category/{id}/city/{cityId}</string>
 	<key>userOrders</key>
-	<string>orders/user</string>
+	<string>v1/orders/user</string>
 	<key>updatePushToken</key>
-	<string>user/push-token/{token}</string>
+	<string>v1/user/push-token/{token}</string>
 	<key>services</key>
-	<string>services</string>
+	<string>v1/services</string>
 	<key>register</key>
-	<string>register</string>
+	<string>v1/register</string>
 	<key>gmailLogin</key>
-	<string>login/gmail</string>
+	<string>v1/login/gmail</string>
 	<key>appleLogin</key>
-	<string>login/apple</string>
+	<string>v1/login/apple</string>
 	<key>emailLogin</key>
-	<string>login</string>
+	<string>v1/login</string>
 	<key>getUserSession</key>
-	<string>user</string>
+	<string>v1/user</string>
 	<key>validateSession</key>
-	<string>login/validate</string>
+	<string>v1/login/validate</string>
 	<key>serverStatus</key>
-	<string>server/ios</string>
+	<string>v1/server/ios</string>
 	<key>getProviderOrders</key>
-	<string>orders/provider</string>
+	<string>v1/orders/provider</string>
 	<key>postProviderInfo</key>
-	<string>provider-data/</string>
+	<string>v1/provider-data/</string>
 	<key>getProviderInfoByProviderId</key>
-	<string>provider-data/{providerId}</string>
+	<string>v1/provider-data/{providerId}</string>
 	<key>updateProviderInfo</key>
-	<string>provider-data/update/{providerId}</string>
+	<string>v1/provider-data/update/{providerId}</string>
 	<key>deleteProviderInfo</key>
-	<string>provider-data/delete/{providerId}</string>
+	<string>v1/provider-data/delete/{providerId}</string>
 	<key>getProviderServices</key>
-	<string>provider-services</string>
+	<string>v1/provider-services</string>
 </dict>
 </plist>

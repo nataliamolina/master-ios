@@ -105,8 +105,11 @@ class ProviderOrderDetailViewController: UIViewController {
 
 // MARK: - ExcessViewControllerDelegate
 extension ProviderOrderDetailViewController: ExcessViewControllerDelegate {
-    func saveExcess(price: Double, description: String) {
+    func saveExcess(viewController: ExcessViewController, price: Double, description: String) {
+        viewModel.model?.extraCost = price
+        viewModel.model?.extraCostDescription = description
         viewModel.updateOrderState()
+        viewController.dismiss(animated: true, completion: nil)
     }
 }
 

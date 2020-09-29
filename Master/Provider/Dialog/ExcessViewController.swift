@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ExcessViewControllerDelegate: class {
-    func saveExcess(price: Double, description: String)
+    func saveExcess(viewController: ExcessViewController, price: Double, description: String)
 }
 class ExcessViewController: UIViewController {
     // MARK: - UI References
@@ -33,8 +33,8 @@ class ExcessViewController: UIViewController {
     }
     
     @IBAction private func saveAction() {
-        let price = Double(descriptionTextField.text ?? "0") ?? 0
-        delegate?.saveExcess(price: price, description: "")
+        let price = Double( priceTextField.text ?? "0") ?? 0
+        delegate?.saveExcess(viewController: self, price: price, description: descriptionTextField.text)
     }
     
     // MARK: - Life Cycle

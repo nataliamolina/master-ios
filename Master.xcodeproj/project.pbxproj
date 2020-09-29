@@ -992,6 +992,9 @@
 		B7C7375C24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
 		B7C7375D24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
 		B7C7375E24AC2BB60028A8C7 /* ProviderStudiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */; };
+		B7CE6D5A2522DD47004B6C85 /* ProviderOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE6D592522DD47004B6C85 /* ProviderOrderRequest.swift */; };
+		B7CE6D5B2522DD47004B6C85 /* ProviderOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE6D592522DD47004B6C85 /* ProviderOrderRequest.swift */; };
+		B7CE6D5C2522DD47004B6C85 /* ProviderOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE6D592522DD47004B6C85 /* ProviderOrderRequest.swift */; };
 		B7E295A424C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */; };
 		B7E295A524C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */; };
 		B7E295A624C7D0C7005A1DDB /* ProviderServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */; };
@@ -1420,6 +1423,7 @@
 		B7C7374924AC2B420028A8C7 /* ProviderExperienceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderExperienceViewController.xib; sourceTree = "<group>"; };
 		B7C7375724AC2BB60028A8C7 /* ProviderStudiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderStudiesViewController.swift; sourceTree = "<group>"; };
 		B7C7375824AC2BB60028A8C7 /* ProviderStudiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderStudiesViewController.xib; sourceTree = "<group>"; };
+		B7CE6D592522DD47004B6C85 /* ProviderOrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderOrderRequest.swift; sourceTree = "<group>"; };
 		B7E295A324C7D0C7005A1DDB /* ProviderServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceModel.swift; sourceTree = "<group>"; };
 		B7E6FEB024B2783000F7B67F /* ProviderInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoModel.swift; sourceTree = "<group>"; };
 		B7E6FEB724B27EBC00F7B67F /* ProviderInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoViewModel.swift; sourceTree = "<group>"; };
@@ -2296,6 +2300,7 @@
 			isa = PBXGroup;
 			children = (
 				2C8B3A38243699EC005FE926 /* ProviderOrderDetailViewModel.swift */,
+				B7CE6D592522DD47004B6C85 /* ProviderOrderRequest.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -4080,6 +4085,7 @@
 				2C3E50FC240C79B500873495 /* OrderDetailViewModel.swift in Sources */,
 				2C3E50FD240C79B500873495 /* ProviderProfileViewModel.swift in Sources */,
 				2CA96F8D240F5F6C0056C2F0 /* PaymentEndpoints.swift in Sources */,
+				B7CE6D5B2522DD47004B6C85 /* ProviderOrderRequest.swift in Sources */,
 				2C3E50FE240C79B500873495 /* ProviderProfileEndpoints.swift in Sources */,
 				2C57B72E24170BC100A3281F /* PushNotifications.swift in Sources */,
 				B7C7374B24AC2B420028A8C7 /* ProviderExperienceViewController.swift in Sources */,
@@ -4350,6 +4356,7 @@
 				2CC3DC342411EBCC001E76B2 /* OrderDetailViewModel.swift in Sources */,
 				2CC3DC352411EBCC001E76B2 /* ProviderProfileViewModel.swift in Sources */,
 				2CC3DC362411EBCC001E76B2 /* PaymentEndpoints.swift in Sources */,
+				B7CE6D5A2522DD47004B6C85 /* ProviderOrderRequest.swift in Sources */,
 				2CC3DC372411EBCC001E76B2 /* ProviderProfileEndpoints.swift in Sources */,
 				2C57B72D24170BC100A3281F /* PushNotifications.swift in Sources */,
 				B7C7374A24AC2B420028A8C7 /* ProviderExperienceViewController.swift in Sources */,
@@ -4465,6 +4472,7 @@
 				B71619A625197ED9007F958E /* ExcessViewController.swift in Sources */,
 				2C366A18245666450048B968 /* RadioOption.swift in Sources */,
 				B73D198924AE9AAA00D166DE /* ProviderProfileTitleCell.swift in Sources */,
+				B7CE6D5C2522DD47004B6C85 /* ProviderOrderRequest.swift in Sources */,
 				2CA2B0C124144C7F000C7131 /* String+Lang.swift in Sources */,
 				2C8B3A2D243633EE005FE926 /* AddProviderServiceServiceServiceProtocol.swift in Sources */,
 				2CAD87B42404AA230063AEB2 /* CompleteTextViewModel.swift in Sources */,
@@ -5019,7 +5027,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C76166256FB300EFAFF75F95 /* Pods-Master.debug.xcconfig */;
 			buildSettings = {
-				API_ENDPOINT = "https://master-api-prod.azurewebsites.net/api/v1/";
+				API_ENDPOINT = "https://master-api-prod.azurewebsites.net/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
@@ -5058,7 +5066,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FB596B87A221933D3ACEFCF /* Pods-Master.release.xcconfig */;
 			buildSettings = {
-				API_ENDPOINT = "https://master-api-prod.azurewebsites.net/api/v1/";
+				API_ENDPOINT = "https://master-api-prod.azurewebsites.net/api/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;

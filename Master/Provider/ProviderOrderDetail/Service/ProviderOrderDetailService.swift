@@ -52,12 +52,12 @@ class ProviderOrderDetailService: ProviderOrderDetailServiceProtocol {
         }
     }
     
-    func updateOrderState(orderId: Int, stateId: Int,
+    func updateOrderState(request: ProviderOrderRequest,
                           onComplete: @escaping (_ result: OrderState?, _ error: CMError?) -> Void) {
         
-        let endpoint = Endpoint.updateOrderState(orderId: orderId, stateId: stateId)
+        let endpoint = Endpoint.updateOrderState()
         
-        connectionDependency.put(url: endpoint) { (response: OrderState?, error: CMError?) in
+        connectionDependency.put(url: endpoint, request: request) { (response: OrderState?, error: CMError?) in
             
             onComplete(response, error)
         }

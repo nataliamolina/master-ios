@@ -125,13 +125,13 @@ class OrderDetailViewModel {
                                        detailIconVisible: false),
             
             CheckoutFieldCellViewModel(title: CheckoutLang.excess,
-                                       value: "\(model.excess ?? 0)",
+                                       value: "\(model.extraCost ?? 0)",
                                        image: .dollar,
                                        type: .excess,
                                        detailIconVisible: false),
             
             CheckoutFieldCellViewModel(title: CheckoutLang.description,
-                                       value: model.descriptionExcess ?? "",
+                                       value: model.extraCostDescription ?? "",
                                        image: .note,
                                        bottomLineVisible: false,
                                        type: .descExcess,
