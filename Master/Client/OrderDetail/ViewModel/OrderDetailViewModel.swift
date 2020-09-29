@@ -85,7 +85,7 @@ class OrderDetailViewModel {
     private func responseToViewModels(model: Order) {
         dataSource.value.removeAll()
 
-        self.formattedTotal.value = model.grossTotal.toFormattedCurrency()
+        self.formattedTotal.value = (model.grossTotal + (model.extraCost ?? 0)).toFormattedCurrency()
         
         let headerViewModel = OrderDetailHeaderCellViewModel(orderId: model.id,
                                                              status: model.orderState.type,
@@ -125,7 +125,7 @@ class OrderDetailViewModel {
                                        detailIconVisible: false),
             
             CheckoutFieldCellViewModel(title: CheckoutLang.excess,
-                                       value: "\(model.extraCost ?? 0)",
+                                       value: (model.extraCost ?? 0).toFormattedCurrency(),
                                        image: .dollar,
                                        type: .excess,
                                        detailIconVisible: false),
