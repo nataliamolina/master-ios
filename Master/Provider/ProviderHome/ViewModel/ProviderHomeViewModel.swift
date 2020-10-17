@@ -279,11 +279,11 @@ class ProviderHomeViewModel {
         dataSource.value.append([])
     }
     
-    private func getButtonsCellViewModel() -> SelectorCellViewModel {
+    private func getButtonsCellViewModel(services: Int = 0, info: Int = 0, orders: Int = 0) -> SelectorCellViewModel {
         return SelectorCellViewModel(buttons: [
-            SelectorCellButton(style: .green, title: "general.services".localized),
-            SelectorCellButton(style: .greenBorder, title: "general.info".localized),
-            SelectorCellButton(style: .greenBorder, title: "general.orders".localized)
+            SelectorCellButton(style: .green, title: "general.services".localized, items: services),
+            SelectorCellButton(style: .greenBorder, title: "general.info".localized, items: info),
+            SelectorCellButton(style: .greenBorder, title: "general.orders".localized, items: orders)
         ])
     }
     
@@ -308,6 +308,7 @@ class ProviderHomeViewModel {
                                        orderState: $0.orderState.type,
                                        isLastItem: $0.id == models.last?.id)
         }
+        dataSource.value[Sections.buttons.rawValue] = [getButtonsCellViewModel(orders: models.count)]
     }
     
     private func providerInfoToViewModels(models: [ProviderInfoServiceModel]?) {

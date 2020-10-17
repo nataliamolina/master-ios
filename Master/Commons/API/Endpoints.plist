@@ -19,7 +19,7 @@
 	<key>registerProvider</key>
 	<string>v1/provider</string>
 	<key>editProvider</key>
-	<string>v1/provider/profile</string>
+	<string>v2/provider/profile</string>
 	<key>getProviderPhoto</key>
 	<string>v1/provider/profile/photo</string>
 	<key>getProviderProfile</key>

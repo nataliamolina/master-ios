@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleButtonView" customModule="Master" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="z6Y-3G-6l0" id="Vw5-ta-b8f"/>
+                <outlet property="itemsCountLabel" destination="iA8-o6-XcU" id="bSk-oy-CBj"/>
+                <outlet property="itemsCountView" destination="45f-0W-zL2" id="8Pt-Om-99x"/>
+                <outlet property="titleButton" destination="Uke-Nq-dEd" id="YU9-eb-lyT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="z6Y-3G-6l0">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uke-Nq-dEd" customClass="MButton" customModule="Local" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="336" height="135"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45f-0W-zL2">
+                    <rect key="frame" x="255" y="54" width="81" height="81"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iA8-o6-XcU">
+                            <rect key="frame" x="37" y="32" width="7" height="17"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstItem="iA8-o6-XcU" firstAttribute="centerY" secondItem="45f-0W-zL2" secondAttribute="centerY" id="4sg-AQ-LCX"/>
+                        <constraint firstAttribute="width" secondItem="45f-0W-zL2" secondAttribute="height" multiplier="1:1" id="JdB-fR-LgE"/>
+                        <constraint firstItem="iA8-o6-XcU" firstAttribute="centerX" secondItem="45f-0W-zL2" secondAttribute="centerX" id="SgP-NU-vSm"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="tds-9j-f75"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Uke-Nq-dEd" secondAttribute="trailing" id="0Dn-xr-pmj"/>
+                <constraint firstAttribute="bottom" secondItem="45f-0W-zL2" secondAttribute="bottom" id="CGn-Vf-Byq"/>
+                <constraint firstItem="Uke-Nq-dEd" firstAttribute="leading" secondItem="z6Y-3G-6l0" secondAttribute="leading" id="DH4-ae-2oX"/>
+                <constraint firstAttribute="bottom" secondItem="Uke-Nq-dEd" secondAttribute="bottom" id="TiU-qP-re1"/>
+                <constraint firstItem="45f-0W-zL2" firstAttribute="height" secondItem="Uke-Nq-dEd" secondAttribute="height" multiplier="0.6" id="ndj-Co-Jc1"/>
+                <constraint firstItem="Uke-Nq-dEd" firstAttribute="top" secondItem="z6Y-3G-6l0" secondAttribute="top" id="rda-BI-14f"/>
+                <constraint firstAttribute="trailing" secondItem="45f-0W-zL2" secondAttribute="trailing" id="ydG-9E-qDt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="704.34782608695662" y="-185.15625"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

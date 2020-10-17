@@ -20,6 +20,8 @@ class ProviderEditViewController: UIViewController {
     @IBOutlet private weak var bankTypeView: UIView!
     @IBOutlet private weak var aboutTextView: MTextField!
     @IBOutlet private weak var aboutView: UIView!
+    @IBOutlet private weak var nameTextField: MTextField!
+    @IBOutlet private weak var lastNameTextField: MTextField!
     
     @IBOutlet private weak var cityTextField: MTextField!
     @IBOutlet private weak var cityView: UIView!
@@ -32,7 +34,7 @@ class ProviderEditViewController: UIViewController {
     // MARK: - Properties
     private let viewModel: ProviderEditViewModel
     private let router: RouterBase<ProviderRouterTransitions>
-    private let delegate: ProviderEditViewControllerDelegate?
+    private weak var delegate: ProviderEditViewControllerDelegate?
     
     // MARK: - Life Cycle
     init(router: RouterBase<ProviderRouterTransitions>, viewModel: ProviderEditViewModel,
@@ -102,6 +104,8 @@ class ProviderEditViewController: UIViewController {
         viewModel.banck.bindTo(bankNameTextField, to: .text)
         viewModel.banckNumber.bindTo(bankNumberTextField, to: .text)
         viewModel.banckType.bindTo(bankTypeTextField, to: .text)
+        viewModel.name.bindTo(nameTextField, to: .text)
+        viewModel.lastName.bindTo(lastNameTextField, to: .text)
         viewModel.setValues()
     }
     
@@ -134,7 +138,9 @@ class ProviderEditViewController: UIViewController {
                                       bankAccountNumber: bankNumberTextField.safeText,
                                       bankAccountType: bankTypeTextField.safeText,
                                       bankName: bankNameTextField.safeText,
-                                      cityId: viewModel.citySelectedId ?? 1)
+                                      cityId: viewModel.citySelectedId ?? 1,
+                                      firstName: nameTextField.safeText,
+                                      lastName: lastNameTextField.safeText)
         
         viewModel.putProviderEdit(request: request)
     }

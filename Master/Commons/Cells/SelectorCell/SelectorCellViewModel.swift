@@ -11,6 +11,7 @@ import Foundation
 struct SelectorCellButton {
     var style: MButtonType
     let title: String
+    let items: Int
 }
 
 protocol SelectorCellDataSource {

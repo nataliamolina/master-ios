@@ -1019,6 +1019,8 @@
 		B7E6FECC24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
 		B7E6FECD24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
 		B7E6FECE24B2971B00F7B67F /* ProviderInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */; };
+		B7EF6DE3253A75E0003968CC /* TitleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EF6DE2253A75E0003968CC /* TitleButtonView.swift */; };
+		B7EF6DE7253A7667003968CC /* TitleButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EF6DE6253A7667003968CC /* TitleButtonView.xib */; };
 		B7FA05A324C939B90088495F /* ProviderEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A124C939B90088495F /* ProviderEditViewController.swift */; };
 		B7FA05A424C939B90088495F /* ProviderEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A124C939B90088495F /* ProviderEditViewController.swift */; };
 		B7FA05A524C939B90088495F /* ProviderEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA05A124C939B90088495F /* ProviderEditViewController.swift */; };
@@ -1432,6 +1434,8 @@
 		B7E6FEC324B28B1200F7B67F /* ProviderInfoServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoServiceModel.swift; sourceTree = "<group>"; };
 		B7E6FEC724B296D900F7B67F /* ProviderInfoServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoServiceRequest.swift; sourceTree = "<group>"; };
 		B7E6FECB24B2971B00F7B67F /* ProviderInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoService.swift; sourceTree = "<group>"; };
+		B7EF6DE2253A75E0003968CC /* TitleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleButtonView.swift; sourceTree = "<group>"; };
+		B7EF6DE6253A7667003968CC /* TitleButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleButtonView.xib; sourceTree = "<group>"; };
 		B7FA05A124C939B90088495F /* ProviderEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderEditViewController.swift; sourceTree = "<group>"; };
 		B7FA05A224C939B90088495F /* ProviderEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProviderEditViewController.xib; sourceTree = "<group>"; };
 		B7FA05A924C944400088495F /* ProviderEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderEditViewModel.swift; sourceTree = "<group>"; };
@@ -2988,6 +2992,7 @@
 		A5F30D4A23B4CBB6005258A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B7EF6DE5253A7654003968CC /* TitleButtonView */,
 				2C6716FF241D89C000C86531 /* ListSelector */,
 				2C976A09240ACEF00073DD07 /* Loader */,
 				2C3E0EEA2408A284005453BA /* DatePicker */,
@@ -3170,6 +3175,15 @@
 				B7E6FEB724B27EBC00F7B67F /* ProviderInfoViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B7EF6DE5253A7654003968CC /* TitleButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				B7EF6DE2253A75E0003968CC /* TitleButtonView.swift */,
+				B7EF6DE6253A7667003968CC /* TitleButtonView.xib */,
+			);
+			path = TitleButtonView;
 			sourceTree = "<group>";
 		};
 		C54A025159B1A14E4438C4AD /* Pods */ = {
@@ -3548,6 +3562,7 @@
 				A5F30D7223B4DB97005258A8 /* CategoryCell.xib in Resources */,
 				2C829ED1240B3E1E00D7DD81 /* OrderCell.xib in Resources */,
 				2C366A1024565D570048B968 /* RadioView.xib in Resources */,
+				B7EF6DE7253A7667003968CC /* TitleButtonView.xib in Resources */,
 				2C22B39923F8AFC300678A41 /* loading_order_anim.json in Resources */,
 				B7C7374F24AC2B420028A8C7 /* ProviderExperienceViewController.xib in Resources */,
 				2C1636C5241684410083A59A /* RateViewController.xib in Resources */,
@@ -4667,6 +4682,7 @@
 				2CFF4DB123F9B1420024B3F1 /* ProviderProfileCellViewModel.swift in Sources */,
 				2C671717241DC45900C86531 /* ProviderPhotoService.swift in Sources */,
 				2C8B3A24243631E0005FE926 /* AddProviderServiceService.swift in Sources */,
+				B7EF6DE3253A75E0003968CC /* TitleButtonView.swift in Sources */,
 				2C366A14245666350048B968 /* CheckoutRadioCellViewModel.swift in Sources */,
 				2C8C6C6E23F4C00600FE06BE /* ConnectionManagerProtocol.swift in Sources */,
 				2C4EBFCF2432E9CF0081AC5F /* ProviderOrderCell.swift in Sources */,
@@ -4762,7 +4778,7 @@
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development: Carlos Mejía (765XN25GLY)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -4786,7 +4802,7 @@
 				PAYMENTEZ_APP_KEY = lgAIjiCmwHAJDPVza9dtkEmu3TElFu;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;
 				PRODUCT_NAME = Master;
-				PROVISIONING_PROFILE_SPECIFIER = "master-prov-dev";
+				PROVISIONING_PROFILE_SPECIFIER = "master-prov-prod";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -4801,7 +4817,7 @@
 				CLIENT_HEADER = 58ecda0e640;
 				CLIENT_ID = a9a1384d84d95902e718859d56261c1a;
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development: Carlos Mejía (765XN25GLY)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
@@ -4823,7 +4839,7 @@
 				PAYMENTEZ_APP_KEY = lgAIjiCmwHAJDPVza9dtkEmu3TElFu;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;
 				PRODUCT_NAME = Master;
-				PROVISIONING_PROFILE_SPECIFIER = "master-prov-dev";
+				PROVISIONING_PROFILE_SPECIFIER = "master-prov-prod";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -5034,7 +5050,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				ENABLE_BITCODE = NO;
@@ -5050,7 +5066,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.2.4;
 				ONLY_ACTIVE_ARCH = YES;
 				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-AGR-CLIENT";
 				PAYMENTEZ_APP_KEY = ZgwDXC2we1BKKL1rcPEspf9lzNtiEp;
@@ -5073,7 +5089,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: MASTERAPP SAS (5D4G5VBTAB)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 25;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5088,7 +5104,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.2.4;
 				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-AGR-CLIENT";
 				PAYMENTEZ_APP_KEY = ZgwDXC2we1BKKL1rcPEspf9lzNtiEp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;

@@ -41,11 +41,11 @@ class SelectorCell: UITableViewCell, ConfigurableCellProtocol {
         self.delegate = delegate as? SelectorCellDelegate
         
         viewModel.buttons.enumerated().forEach { (index, item) in
-            let button = MButton()
-            button.style = item.style
-            button.title = item.title
+            let button = TitleButtonView()
+            button.setButton(title: item.title, style: item.style, items: item.items)
             button.tag = index
-            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+            button.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                               action: #selector(buttonTapped)))
             
             stackView.addArrangedSubview(button)
         }

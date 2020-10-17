@@ -41,7 +41,7 @@
 "menu.legal" = "Legal";
 "menu.help" = "Ayuda";
 "menu.logout" = "Cerrar sesión";
-"menu.provider" = "Modo Proveedor";
+"menu.provider" = "Cambiar Modo Proveedor";
 "menu.login" = "Iniciar Sesión";
 "menu.location" = "Estás en";
 
@@ -172,6 +172,8 @@
 
 // Provider Register
 "provider.register.title" = "¡Hola Master!";
+"provider.register.name" = "Nombre";
+"provider.register.lastName" = "Apellido";
 "provider.register.desc" = "A continuación encontrarás el formulario de registro para convertirte en Master. \n \nEs importante que llenes todos los campos con información verídica para que puedas ser aceptado en el programa de Masters lo más pronto posible.";
 "provider.register.document" = "No. Cédula";
 "provider.register.bank" = "Toda la información Bancaria que nos indicas es únicamente usada con el propósito de pagarte como Master, es 100% confidencial y segura.";

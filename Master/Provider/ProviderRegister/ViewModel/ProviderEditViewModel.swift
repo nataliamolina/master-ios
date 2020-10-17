@@ -29,6 +29,9 @@ class ProviderEditViewModel {
     let banck = Var("")
     let banckNumber = Var("")
     let banckType = Var("")
+    let name = Var("")
+    let lastName = Var("")
+    
     
     var citySelectedId: Int?
 
@@ -79,6 +82,8 @@ class ProviderEditViewModel {
         banck.value = Session.shared.provider?.bankName ?? ""
         banckNumber.value = Session.shared.provider?.bankAccountNumber ?? ""
         banckType.value = Session.shared.provider?.bankAccountType ?? ""
+        name.value = Session.shared.provider?.user.firstName ?? ""
+        lastName.value = Session.shared.provider?.user.lastName ?? ""
     }
     
     func getListSelectorViewModel() -> ListSelectorViewModel {
