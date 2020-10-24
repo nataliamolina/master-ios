@@ -22,9 +22,12 @@
             <rect key="frame" x="0.0" y="0.0" width="336" height="135"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uke-Nq-dEd" customClass="MButton" customModule="Local" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uke-Nq-dEd" customClass="MButton" customModule="Master" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="336" height="135"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="addServiceButtonAction" destination="-1" eventType="touchUpInside" id="XXD-HX-ieJ"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45f-0W-zL2">
                     <rect key="frame" x="255" y="54" width="81" height="81"/>

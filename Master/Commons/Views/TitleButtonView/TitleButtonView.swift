@@ -16,6 +16,9 @@ class TitleButtonView: UIView {
     @IBOutlet private weak var itemsCountView: UIView!
     @IBOutlet private weak var itemsCountLabel: UILabel!
     
+    private weak var delegate: SelectorCellDelegate?
+    private var index: Int = 0
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -26,11 +29,13 @@ class TitleButtonView: UIView {
         setupView()
     }
     
-    func setButton(title: String, style: MButtonType, items: Int = 0) {
+    func setButton(index: Int, title: String, style: MButtonType, delegate: SelectorCellDelegate?, items: Int = 0) {
         titleButton.style = style
         titleButton.title = title
         itemsCountView.isHidden = items <= 0
         itemsCountLabel.text = "\(items)"
+        self.index = index
+        self.delegate = delegate
     }
     
     private func setupView() {
@@ -38,6 +43,11 @@ class TitleButtonView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+    
+    // MARK: - UI Actions
+    @IBAction private func addServiceButtonAction() {
+        delegate?.buttonTapped(at: index, title: titleButton.title ?? "", button: titleButton)
     }
     
 }

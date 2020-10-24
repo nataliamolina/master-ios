@@ -42,10 +42,7 @@ class SelectorCell: UITableViewCell, ConfigurableCellProtocol {
         
         viewModel.buttons.enumerated().forEach { (index, item) in
             let button = TitleButtonView()
-            button.setButton(title: item.title, style: item.style, items: item.items)
-            button.tag = index
-            button.addGestureRecognizer(UITapGestureRecognizer(target: self,
-                                                               action: #selector(buttonTapped)))
+            button.setButton(index: index, title: item.title, style: item.style, delegate: self.delegate, items: item.items)
             
             stackView.addArrangedSubview(button)
         }
@@ -54,9 +51,5 @@ class SelectorCell: UITableViewCell, ConfigurableCellProtocol {
     // MARK: - Private Methods
     private func setupUI() {
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-    }
-    
-    @objc private func buttonTapped(_ button: MButton) {
-        delegate?.buttonTapped(at: button.tag, title: button.titleLabel?.text ?? "", button: button)
     }
 }
