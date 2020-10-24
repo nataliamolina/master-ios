@@ -308,7 +308,8 @@ class ProviderHomeViewModel {
                                        orderState: $0.orderState.type,
                                        isLastItem: $0.id == models.last?.id)
         }
-        dataSource.value[Sections.buttons.rawValue] = [getButtonsCellViewModel(orders: models.count)]
+        let ordersCount = models.filter({ $0.orderState.type == .pending || $0.orderState.type == .paymentDone }).count
+        dataSource.value[Sections.buttons.rawValue] = [getButtonsCellViewModel(orders: ordersCount)]
     }
     
     private func providerInfoToViewModels(models: [ProviderInfoServiceModel]?) {
