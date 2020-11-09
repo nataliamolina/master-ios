@@ -12,6 +12,7 @@ import Localize
 import GoogleSignIn
 import UserNotifications
 import Paymentez
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
