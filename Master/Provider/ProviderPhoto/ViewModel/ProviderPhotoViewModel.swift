@@ -39,11 +39,17 @@ class ProviderPhotoViewModel {
                 return
             }
             
-            if !edited {
+            guard edited else {
                 self?.updateProviderPhoto(url: result ?? "")
-            } else {
-                self?.status.value = .editImage
+                return
             }
+            
+            guard let urlString = result, urlString != self?.getPhotoUrl() else {
+                self?.status.value = .editImage
+                return
+            }
+            
+            self?.updateProviderPhoto(url: result ?? "", status: .editImage)
         }
     }
     
@@ -65,7 +71,7 @@ class ProviderPhotoViewModel {
     
     // MARK: - Private Methods
     
-    private func updateProviderPhoto(url: String) {
+    private func updateProviderPhoto(url: String, status: ProviderPhotoViewModelStatus = .uploadSuccessful) {
         loadingState(true)
         
         let request = ProviderPhotoRequest(photoUrl: url)
@@ -79,7 +85,7 @@ class ProviderPhotoViewModel {
                 return
             }
             
-            self?.status.value = .uploadSuccessful
+            self?.status.value = status
         }
     }
     

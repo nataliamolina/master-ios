@@ -57,7 +57,7 @@ class DatePickerViewController: UIViewController {
         
         calendarViewBottomConstraint.constant = hiddenContainerValue
         
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissView)))
+        /*view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissView)))*/
         
         setupDatePicker()
     }
