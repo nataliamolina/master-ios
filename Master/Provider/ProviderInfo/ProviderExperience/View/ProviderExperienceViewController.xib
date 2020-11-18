@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,8 +16,8 @@
                 <outlet property="positionTextField" destination="NZP-SF-0Tu" id="7YX-Ju-KGr"/>
                 <outlet property="radiostackView" destination="gGv-zu-PlK" id="6Zc-vy-mhm"/>
                 <outlet property="saveButton" destination="0nn-dr-ynJ" id="uee-bS-bc7"/>
-                <outlet property="sinceTextField" destination="v1w-Fz-dBv" id="Nfl-ws-Xre"/>
-                <outlet property="toTextField" destination="i3o-ki-trq" id="xbb-QH-rsn"/>
+                <outlet property="sinceLabel" destination="qzv-u2-c6v" id="VJ9-fX-wfX"/>
+                <outlet property="toLabel" destination="rca-Ol-LRw" id="xUa-Km-L5H"/>
                 <outlet property="view" destination="xtL-PS-SBR" id="wSu-cK-s2W"/>
             </connections>
         </placeholder>
@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Hde-pG-dnn">
-                    <rect key="frame" x="20" y="56" width="374" height="379.5"/>
+                    <rect key="frame" x="20" y="56" width="374" height="385.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fof-eQ-Oa6">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -39,7 +39,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZP-SF-0Tu" customClass="MTextField" customModule="Local" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="33.5" width="374" height="17"/>
+                            <rect key="frame" x="0.0" y="33.5" width="374" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             <userDefinedRuntimeAttributes>
@@ -47,7 +47,7 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9t-vY-8ew">
-                            <rect key="frame" x="0.0" y="64.5" width="374" height="19.5"/>
+                            <rect key="frame" x="0.0" y="66" width="374" height="19.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mr-QE-N7t" customClass="MTextField" customModule="Local" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="98" width="374" height="17"/>
+                            <rect key="frame" x="0.0" y="99.5" width="374" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             <userDefinedRuntimeAttributes>
@@ -64,7 +64,7 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpe-Yj-jHh">
-                            <rect key="frame" x="0.0" y="129" width="374" height="19.5"/>
+                            <rect key="frame" x="0.0" y="132" width="374" height="19.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LMh-16-bwh" customClass="MTextField" customModule="Local" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="162.5" width="374" height="17"/>
+                            <rect key="frame" x="0.0" y="165.5" width="374" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             <userDefinedRuntimeAttributes>
@@ -81,7 +81,7 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ1-Hw-PLz">
-                            <rect key="frame" x="0.0" y="193.5" width="374" height="19.5"/>
+                            <rect key="frame" x="0.0" y="198" width="374" height="19.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2y-lT-U5F" customClass="MTextField" customModule="Local" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="227" width="374" height="17"/>
+                            <rect key="frame" x="0.0" y="231.5" width="374" height="18.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             <userDefinedRuntimeAttributes>
@@ -98,7 +98,7 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="RXX-xT-S1x">
-                            <rect key="frame" x="0.0" y="258" width="374" height="57.5"/>
+                            <rect key="frame" x="0.0" y="264" width="374" height="57.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HCQ-j9-Uv3">
                                     <rect key="frame" x="0.0" y="0.0" width="167" height="57.5"/>
@@ -112,16 +112,16 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="providerInfo.sinceDate"/>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1w-Fz-dBv">
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzv-u2-c6v">
                                             <rect key="frame" x="0.0" y="29.5" width="167" height="28"/>
-                                            <color key="backgroundColor" white="0.84426726600000002" alpha="0.70320526541095896" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.86263364549999999" green="0.86275809999999997" blue="0.86260634660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="28" id="cfd-3o-xtq"/>
+                                                <constraint firstAttribute="height" constant="28" id="Y5Q-Uf-lYe"/>
                                             </constraints>
-                                            <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YDb-e9-cD5">
@@ -136,26 +136,29 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="providerInfo.toDate"/>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i3o-ki-trq">
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rca-Ol-LRw">
                                             <rect key="frame" x="0.0" y="29.5" width="167" height="28"/>
-                                            <color key="backgroundColor" white="0.84426726600000002" alpha="0.70489083904109584" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
+                                            <color key="backgroundColor" red="0.86263364549999999" green="0.86275809999999997" blue="0.86260634660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="uUC-Lx-aTL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </stackView>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gGv-zu-PlK">
-                            <rect key="frame" x="0.0" y="329.5" width="374" height="50"/>
+                            <rect key="frame" x="0.0" y="335.5" width="374" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="mvc-mp-aaN"/>
                             </constraints>
                         </stackView>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nn-dr-ynJ" customClass="MButton" customModule="Local" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nn-dr-ynJ" customClass="MButton" customModule="Local" customModuleProvider="target">
                     <rect key="frame" x="20" y="795" width="374" height="47"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="47" id="vQa-0u-eai"/>
@@ -172,6 +175,7 @@
                     </connections>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fQ9-qV-o80"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fQ9-qV-o80" firstAttribute="bottom" secondItem="0nn-dr-ynJ" secondAttribute="bottom" constant="20" id="7GC-Dx-iSz"/>
@@ -181,7 +185,6 @@
                 <constraint firstItem="Hde-pG-dnn" firstAttribute="top" secondItem="fQ9-qV-o80" secondAttribute="top" constant="12" id="l7o-7P-zUF"/>
                 <constraint firstItem="fQ9-qV-o80" firstAttribute="trailing" secondItem="0nn-dr-ynJ" secondAttribute="trailing" constant="20" id="wKF-Sb-xeo"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fQ9-qV-o80"/>
             <point key="canvasLocation" x="139" y="121"/>
         </view>
     </objects>

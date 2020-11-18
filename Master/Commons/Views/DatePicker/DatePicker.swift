@@ -11,10 +11,16 @@ import UIKit
 class DatePicker {
     static func show(in viewController: UIViewController,
                      delegate: DatePickerViewDelegate?,
-                     index: Int = 0) {
+                     index: Int = 0,
+                     minDate: Date? = nil,
+                     maxDate: Date? = nil,
+                     nowDate: Date? = nil) {
         
         let selectorViewController = DatePickerViewController()
         selectorViewController.delegate = delegate
+        selectorViewController.minDate = minDate
+        selectorViewController.maxDate = maxDate
+        selectorViewController.nowDate = nowDate
         selectorViewController.modalPresentationStyle = .overCurrentContext
         selectorViewController.index = index
         

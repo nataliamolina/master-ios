@@ -20,6 +20,8 @@ class ProviderInfoViewModel {
     var info: ProviderInfoModel
     let status = Var<ProviderInfoServiceViewModelStatus>(.undefined)
     let isLoading = Var(false)
+    var startDate: Date = Date()
+    var endDate: Date = Date()
     
     private let service: ProviderInfoServiceModelProtocol
     

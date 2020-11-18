@@ -30,6 +30,10 @@ class DatePickerViewController: UIViewController {
     
     // MARK: - Properties
     weak var delegate: DatePickerViewDelegate?
+    var minDate: Date?
+    var maxDate: Date?
+    var nowDate: Date?
+    
     private lazy var hiddenContainerValue = -calendarView.frame.height
     private var originalColor: UIColor?
     private let animationDuration: TimeInterval = 0.3
@@ -59,7 +63,22 @@ class DatePickerViewController: UIViewController {
         
         /*view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissView)))*/
         
-        setupDatePicker()
+        if minDate == nil && maxDate == nil {
+            setupDatePicker()
+            return
+        }
+        
+        if let date = minDate {
+            setupMinDatePicker(minDate: date)
+        }
+        
+        if let date = maxDate {
+            setupMaxDatePicker(maxDate: date)
+        }
+        
+        if let date = nowDate {
+            datePicker.date = date
+        }
     }
     
     private func setupDatePicker() {
@@ -79,6 +98,14 @@ class DatePickerViewController: UIViewController {
             
             datePicker.maximumDate = date
         }
+    }
+    
+    func setupMinDatePicker(minDate: Date) {
+        datePicker.minimumDate = minDate
+    }
+    
+    func setupMaxDatePicker(maxDate: Date) {
+        datePicker.maximumDate = maxDate
     }
     
     @objc private func dismissView() {

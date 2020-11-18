@@ -8,14 +8,19 @@
 
 import UIKit
 
+enum DateInput: Int {
+    case since
+    case end
+}
+
 protocol ProviderInfoEditDelegate: class {
     func serviceEdited(info: [ProviderInfoServiceModel])
 }
 class ProviderStudiesViewController: UIViewController {
     
     // MARK: - UI References
-    @IBOutlet private weak var sinceTextField: UITextField!
-    @IBOutlet private weak var toTextField: UITextField!
+    @IBOutlet private weak var sinceLabel: UILabel!
+    @IBOutlet private weak var toLabel: UILabel!
     @IBOutlet private weak var professionTextField: UITextField!
     @IBOutlet private weak var universityTextField: UITextField!
     @IBOutlet private weak var countryTextField: UITextField!
@@ -29,8 +34,6 @@ class ProviderStudiesViewController: UIViewController {
     }
     
     // MARK: - Properties
-    private let datePicker = UIDatePicker()
-    private let datePicker2 = UIDatePicker()
     private let viewModel: ProviderInfoViewModel?
     private weak var delegate: ProviderInfoEditDelegate?
     
@@ -44,52 +47,21 @@ class ProviderStudiesViewController: UIViewController {
         super.init(nibName: String(describing: ProviderStudiesViewController.self), bundle: nil)
     }
     
-    private func showDatePicker() {
-        datePicker.datePickerMode = .date
-        datePicker2.datePickerMode = .date
+    private func setDatestring(index: DateInput, date: Date) {
         
-        datePicker.maximumDate = Date()
-        datePicker2.maximumDate = Date()
-        
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "ok", style: .plain, target: self, action: #selector(donedatePicker))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        
-        toolbar.setItems([spaceButton, spaceButton, doneButton], animated: false)
-        
-        sinceTextField.inputAccessoryView = toolbar
-        sinceTextField.inputView = datePicker
-        
-        toTextField.inputAccessoryView = toolbar
-        toTextField.inputView = datePicker2
-        
-    }
-    
-    @objc private func donedatePicker() {
-        validateTetField()
-        setDatestring()
-        view.endEditing(true)
-    }
-    
-    @objc private func cancelDatePicker() {
-        view.endEditing(true)
-    }
-    
-    private func setDatestring() {
-        viewModel?.info.startDate = datePicker.date.toString()
-        sinceTextField.text = viewModel?.info.startDateShow
-        checktodate()
-        
-        viewModel?.info.endDate = datePicker2.date.toString()
-        toTextField.text = viewModel?.info.endDateShow
-    }
-    
-    private func checktodate() {
-        datePicker2.minimumDate = datePicker.date
-        if datePicker2.date < datePicker.date {
-            datePicker2.date = datePicker.date
+        switch index {
+        case .since:
+            viewModel?.startDate = date
+            viewModel?.info.startDate = date.toString()
+            sinceLabel.text = viewModel?.info.startDateShow
+            
+        case .end:
+            viewModel?.endDate = date
+            viewModel?.info.endDate = date.toString()
+            toLabel.text = viewModel?.info.endDateShow
         }
+        
+        validateTetField()
     }
     
     required init?(coder: NSCoder) {
@@ -113,11 +85,8 @@ class ProviderStudiesViewController: UIViewController {
         universityTextField.delegate = self
         countryTextField.delegate = self
         cityTextField.delegate = self
-        sinceTextField.delegate = self
-        toTextField.delegate = self
         
         enableKeyboardDismiss()
-        showDatePicker()
         setupBindings()
         setupWith()
         
@@ -130,10 +99,31 @@ class ProviderStudiesViewController: UIViewController {
         universityTextField.text = viewModel?.info.location
         countryTextField.text = viewModel?.info.country
         cityTextField.text = viewModel?.info.city
-        sinceTextField.text = viewModel?.info.startDateShow
-        datePicker.date = viewModel?.info.startD ?? Date()
-        datePicker2.date = viewModel?.info.endD ?? Date()
+        sinceLabel.text = viewModel?.info.startDateShow
+        toLabel.text = viewModel?.info.endDateShow
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(openDatePickerStart))
+        sinceLabel.isUserInteractionEnabled = true
+        sinceLabel.addGestureRecognizer(tap)
+        
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(openDatePickerEnd))
+        toLabel.isUserInteractionEnabled = true
+        toLabel.addGestureRecognizer(tap2)
+        
         setRadioButton()
+    }
+    
+    @objc func openDatePickerStart() {
+        DatePicker.show(in: self, delegate: self, index: DateInput.since.rawValue,
+                        maxDate: viewModel?.endDate,
+                        nowDate: viewModel?.startDate)
+    }
+    
+    @objc func openDatePickerEnd() {
+        DatePicker.show(in: self, delegate: self, index: DateInput.end.rawValue,
+                        minDate: viewModel?.startDate,
+                        maxDate: Date(),
+                        nowDate: viewModel?.endDate)
     }
     
     private func setRadioButton() {
@@ -178,8 +168,9 @@ class ProviderStudiesViewController: UIViewController {
     private func nowValidate() {
         validateTetField()
         
-        toTextField.text = viewModel?.info.isCurrent ?? false ? nil : viewModel?.info.endDateShow
-        toTextField.isEnabled = !(viewModel?.info.isCurrent ?? false)
+        toLabel.text = viewModel?.info.isCurrent ?? false ? nil : viewModel?.info.endDateShow
+        toLabel.isEnabled = !(viewModel?.info.isCurrent ?? false)
+        toLabel.isUserInteractionEnabled = !(viewModel?.info.isCurrent ?? false)
     }
     
     private func saveInfo() {
@@ -202,8 +193,8 @@ class ProviderStudiesViewController: UIViewController {
             let location = universityTextField.text, !location.isEmpty,
             let country = countryTextField.text, !country.isEmpty,
             let city = cityTextField.text, !city.isEmpty,
-            let startDate = sinceTextField.text, !startDate.isEmpty,
-            (toTextField.text != nil || viewModel?.info.isCurrent ?? false) else {
+            let startDate = sinceLabel.text, !startDate.isEmpty,
+            (toLabel.text != nil || viewModel?.info.isCurrent ?? false) else {
                 return
         }
         saveButton.isEnabled = true
@@ -211,13 +202,27 @@ class ProviderStudiesViewController: UIViewController {
 }
 
 extension ProviderStudiesViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        validateTetField()
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         validateTetField()
+        
         if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
         } else {
             dismissKeyboard()
         }
         return true
+    }
+}
+
+// MARK: - DatePickerViewDelegate
+extension ProviderStudiesViewController: DatePickerViewDelegate {
+    func dateSelected(_ date: Date, at index: Int) {
+        
+        guard let dateType = DateInput(rawValue: index) else { return }
+        setDatestring(index: dateType, date: date)
     }
 }
