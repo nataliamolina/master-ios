@@ -19,6 +19,11 @@ class OrderDetailViewController: UIViewController {
         router.transition(to: .payment(viewModel: viewModel.getPaymentViewModel()))
     }
     
+    // MARK: - UI Actions
+    @IBAction private func goToChatAction() {
+        router.transition(to: .chat(viewModel: viewModel.getChatViewModel()))
+    }
+    
     // MARK: - Properties
     private let router: RouterBase<OrdersRouterTransitions>
     private let viewModel: OrderDetailViewModel

@@ -57,7 +57,7 @@ class OrdersViewModel {
     }
     
     func getOrderDetailViewModel(with cellViewModel: OrderCellDataSource) -> OrderDetailViewModel {
-        return OrderDetailViewModel(orderId: Int(cellViewModel.id) ?? 0)
+        return OrderDetailViewModel(orderId: Int(cellViewModel.id) ?? 0, providerName: cellViewModel.providerName)
     }
     
     // MARK: - Private Methods

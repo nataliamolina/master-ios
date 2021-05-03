@@ -26,4 +26,8 @@ extension String {
         formatter.dateFormat = format
         return formatter.date(from: self)
     }
+    
+    var comparable: String {
+        return lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }

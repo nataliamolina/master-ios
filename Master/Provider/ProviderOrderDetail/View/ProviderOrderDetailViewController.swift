@@ -16,6 +16,11 @@ class ProviderOrderDetailViewController: UIViewController {
     
     // MARK: - UI Actions
     
+    // MARK: - UI Actions
+    @IBAction private func goToChatAction() {
+        router.transition(to: .chat(viewModel: viewModel.getChatViewModel()))
+    }
+    
     // MARK: - Properties
     private let router: RouterBase<ProviderRouterTransitions>
     private let viewModel: ProviderOrderDetailViewModel

@@ -57,6 +57,13 @@ class ProviderOrderDetailViewModel {
         }
     }
     
+    func getChatViewModel() -> ChatViewModel {
+        return ChatViewModel(chatId: (model?.id ?? 0).asString,
+                             userId: (model?.provider.id ?? 0).asString,
+                             photoUrl: model?.user.imageUrl ?? "",
+                             name: (model?.user.firstName ?? "") + (model?.user.lastName ?? ""))
+    }
+    
     func rejectOrder() {
         performOrderState(.rejected,
                           extraPrice: model?.extraCost ?? 0,

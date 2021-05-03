@@ -25,6 +25,7 @@ enum ProviderRouterTransitions {
     case providerStudies(viewModel: ProviderInfoViewModel, delegate: ProviderInfoEditDelegate)
     case providerExperience(viewModel: ProviderInfoViewModel, delegate: ProviderInfoEditDelegate)
     case excess(delegate: ExcessViewControllerDelegate?)
+    case chat(viewModel: ChatViewModel)
 }
 
 class ProviderRouter: RouterBase<ProviderRouterTransitions> {
@@ -95,6 +96,9 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
             
         case .excess(let delegate):
             handleExcessTransition(delegate: delegate)
+            
+        case .chat(let viewModel):
+            handleChatTransition(viewModel: viewModel)
         }
     }
     
@@ -215,6 +219,12 @@ class ProviderRouter: RouterBase<ProviderRouterTransitions> {
         let viewController = ExcessViewController(delegate: delegate)
         
         providerNavigationController.present(viewController, animated: true)
+    }
+    
+    private func handleChatTransition(viewModel: ChatViewModel) {
+        let viewController = ChatViewController(viewModel: viewModel)
+        viewController.modalPresentationStyle = .fullScreen
+        providerNavigationController.present(viewController, animated: true, completion: nil)
     }
 }
 
