@@ -7,11 +7,8 @@
 //
 
 import Foundation
-
-import Foundation
 import UIKit
 
-// swiftlint:disable class_delegate_protocol
 protocol CardsViewModelDelegate: class {
     func messageArrivedAt(indexPath: IndexPath)
     func chatMessagesLoaded()

@@ -46,16 +46,14 @@ class ChatClient {
      - parameter chatId: Id of the movie to find in DB.
      */
     func sendMessage(_ text: String, userId: String, chatId: String) {
-        let dbReference = chatListRef.child(chatId).childByAutoId()
-        
-        guard let dbRefId = dbReference.key else {
-            return
-        }
-        
-        let messageToSave = ChatMessage(messageId: dbRefId,
+        let date = Date()
+        let id = (Int(date.timeIntervalSince1970)).asString
+          
+        let dbReference = chatListRef.child(chatId).child(id)
+        let messageToSave = ChatMessage(messageId: id,
                                         authorId: userId,
                                         message: text,
-                                        createdAt: Date().asJson)
+                                        createdAt: date.asJson)
         
         dbReference.setValue(messageToSave.dictionary)
     }
