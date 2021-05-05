@@ -23,11 +23,17 @@ protocol ChatClientDelegate: class {
     func newMessageArrived(result: ChatClientResultType)
 }
 
+enum SendMessageType {
+    case toProvider
+    case toUser
+}
+
 class ChatViewModel {
     // MARK: - Properties
     weak var delegate: CardsViewModelDelegate?
     private var chatId: String
     private var userId: String
+    private var sentTo: SendMessageType
     var photoUrl: String
     var name: String
     
@@ -43,6 +49,7 @@ class ChatViewModel {
          userId: String,
          photoUrl: String,
          name: String,
+         sentTo: SendMessageType,
          chatManager: ChatClient = ChatClient()) {
         
         self.userId = userId
@@ -50,6 +57,7 @@ class ChatViewModel {
         self.name = name
         self.photoUrl = photoUrl
         self.chatManager = chatManager
+        self.sentTo = sentTo
         self.chatManager.delegate = self
         
         fetchData()

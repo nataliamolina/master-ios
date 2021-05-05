@@ -69,11 +69,13 @@ class OrderDetailViewModel {
     }
     
     func getChatViewModel() -> ChatViewModel {
-        let name: String = model?.provider.nickname ?? ""
+        let name: String = (model?.provider.user.firstName ?? "") + " " + (model?.provider.user.lastName ?? "")
+        
         return ChatViewModel(chatId: (model?.id ?? 0).asString,
                              userId: (model?.user.id ?? 0).asString,
                              photoUrl: model?.provider.photoUrl ?? "",
-                             name: !name.isEmpty ? name : providerName)
+                             name: !name.isEmpty ? name : providerName,
+                             sentTo: .toProvider)
     }
     
     func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {

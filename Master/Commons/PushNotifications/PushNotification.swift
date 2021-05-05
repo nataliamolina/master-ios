@@ -12,6 +12,8 @@ enum PushNotificationType: String, Codable {
     case providerProfile = "PROVIDER_PROFILE"
     case providerOrderUpdated = "PROVIDER_ORDERS_UPDATED"
     case userOrderUpdated = "USER_ORDER_UPDATED"
+    case chatProvider = "CHAT_PROVIDER"
+    case chatUser = "CHAT_USER"
 }
 
 struct PushNotification: Codable {

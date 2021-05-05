@@ -27,6 +27,12 @@ class PushNotificationsRouter {
             
         case .providerProfile:
             providerRouter?.transition(to: .showProfile)
+            
+        case .chatProvider:
+            providerRouter?.transition(to: .orderDetailFromPush(viewModel: getProviderOrderDetailViewModel()))
+            
+        case .chatUser:
+            ordersRouter?.transition(to: .orderDetail(viewModel: getOrderDetailViewModel()))
         }
         
         PushNotifications.shared.notificationResolved()
