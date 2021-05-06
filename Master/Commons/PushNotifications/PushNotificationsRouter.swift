@@ -18,7 +18,7 @@ class PushNotificationsRouter {
     }
     
     func navigateToPushNotification() {
-        switch notification.type {
+        switch notification.actionType {
         case .userOrderUpdated:
             ordersRouter?.transition(to: .orderDetail(viewModel: getOrderDetailViewModel()))
             

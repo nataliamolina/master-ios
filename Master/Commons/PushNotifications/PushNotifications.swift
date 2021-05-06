@@ -32,7 +32,7 @@ class PushNotifications {
                 return
         }
         
-        pendingNotification = PushNotification(title: title, message: body, type: convertedType, actionId: actionId)
+        pendingNotification = PushNotification(title: title, message: body, actionType: convertedType, actionId: actionId)
     }
     
     func notificationResolved() {

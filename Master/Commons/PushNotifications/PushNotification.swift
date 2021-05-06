@@ -19,6 +19,6 @@ enum PushNotificationType: String, Codable {
 struct PushNotification: Codable {
     let title: String
     let message: String
-    let type: PushNotificationType
+    let actionType: PushNotificationType
     let actionId: String
 }

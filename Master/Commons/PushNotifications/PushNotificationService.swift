@@ -19,7 +19,7 @@ class PushNotificationService: PushNotificationServiceProtocol {
         sendPushNotification(to: token,
                              pushData: PushNotification(title: title,
                                                         message: message,
-                                                        type: actionType,
+                                                        actionType: actionType,
                                                         actionId: actionId))
     }
     
