@@ -176,20 +176,8 @@ class ChatViewController: UIViewController {
     }
 }
 
-// MARK: - CardsViewModelDelegate
-extension ChatViewController: CardsViewModelDelegate {
-    func messageUpdatedAt(indexPath: IndexPath) {
-        tableView.beginUpdates()
-        tableView.reloadRows(at: [indexPath], with: .fade)
-        tableView.endUpdates()
-    }
-    
-    func likeArrivedAt(indexPath: IndexPath) {
-        tableView.beginUpdates()
-        tableView.reloadRows(at: [indexPath], with: .fade)
-        tableView.endUpdates()
-    }
-    
+// MARK: - ChatViewModelDelegate
+extension ChatViewController: ChatViewModelDelegate {    
     func chatMessagesLoaded() {
         tableView.reloadData()
         tableView.scrollToBottomRow()

@@ -18,6 +18,7 @@ struct User: Codable {
     let document: String
     let provider: UserProvider?
     let documentType: UserDocument?
+    let pushToken: String?
     
     var asUserProfile: UserProfile {
         return UserProfile(id: id,

@@ -62,7 +62,8 @@ class ProviderOrderDetailViewModel {
                              userId: (model?.provider.id ?? 0).asString,
                              photoUrl: model?.user.imageUrl ?? "",
                              name: (model?.user.firstName ?? "") + (model?.user.lastName ?? ""),
-                             sentTo: .toUser)
+                             sentToToken: model?.user.pushToken ?? "",
+                             sentTo: .chatUser)
     }
     
     func rejectOrder() {

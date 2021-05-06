@@ -8,6 +8,10 @@
 	<string>${CLIENT_ID}</string>
 	<key>ApiEndpoint</key>
 	<string>${API_ENDPOINT}</string>
+	<key>FirebasePush</key>
+	<string>${FIREBASE_PUSH}</string>
+	<key>FirebasePushKey</key>
+	<string>$(FIREBASE_KEY)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol CardsViewModelDelegate: class {
+protocol ChatViewModelDelegate: class {
     func messageArrivedAt(indexPath: IndexPath)
     func chatMessagesLoaded()
 }
@@ -23,17 +23,14 @@ protocol ChatClientDelegate: class {
     func newMessageArrived(result: ChatClientResultType)
 }
 
-enum SendMessageType {
-    case toProvider
-    case toUser
-}
-
 class ChatViewModel {
     // MARK: - Properties
-    weak var delegate: CardsViewModelDelegate?
+    weak var delegate: ChatViewModelDelegate?
     private var chatId: String
     private var userId: String
-    private var sentTo: SendMessageType
+    private var sentTo: PushNotificationType
+    private var sentToToken: String
+    private var pushNotificationService: PushNotificationServiceProtocol
     var photoUrl: String
     var name: String
     
@@ -49,15 +46,19 @@ class ChatViewModel {
          userId: String,
          photoUrl: String,
          name: String,
-         sentTo: SendMessageType,
-         chatManager: ChatClient = ChatClient()) {
+         sentToToken: String,
+         sentTo: PushNotificationType,
+         chatManager: ChatClient = ChatClient(),
+         pushNotificationService: PushNotificationServiceProtocol = PushNotificationService()) {
         
         self.userId = userId
         self.chatId = chatId
         self.name = name
         self.photoUrl = photoUrl
         self.chatManager = chatManager
+        self.sentToToken = sentToToken
         self.sentTo = sentTo
+        self.pushNotificationService = pushNotificationService
         self.chatManager.delegate = self
         
         fetchData()
@@ -75,6 +76,11 @@ class ChatViewModel {
 
     func sendChatMessage(_ message: String) {
         chatManager.sendMessage(message, userId: userId, chatId: chatId)
+        pushNotificationService.send(to: sentToToken,
+                                     title: name,
+                                     message: message,
+                                     actionId: chatId,
+                                     actionType: sentTo)
     }
     
     func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {

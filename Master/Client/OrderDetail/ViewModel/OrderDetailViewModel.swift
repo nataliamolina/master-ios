@@ -75,7 +75,8 @@ class OrderDetailViewModel {
                              userId: (model?.user.id ?? 0).asString,
                              photoUrl: model?.provider.photoUrl ?? "",
                              name: !name.isEmpty ? name : providerName,
-                             sentTo: .toProvider)
+                             sentToToken: model?.provider.user.pushToken ?? "",
+                             sentTo: .chatProvider)
     }
     
     func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {
