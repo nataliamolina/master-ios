@@ -51,15 +51,15 @@
                             </userDefinedRuntimeAttributes>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnY-2T-Q3g">
-                            <rect key="frame" x="368" y="15" width="30" height="30"/>
+                            <rect key="frame" x="358" y="10" width="40" height="40"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="bnY-2T-Q3g" secondAttribute="height" multiplier="1:1" id="bfY-1B-oHs"/>
-                                <constraint firstAttribute="width" constant="30" id="krT-WN-Ry4"/>
+                                <constraint firstAttribute="width" constant="40" id="krT-WN-Ry4"/>
                             </constraints>
                             <color key="tintColor" red="0.3878961802" green="0.77893602849999999" blue="0.69805008170000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                            <state key="normal" image="red_icon_template">
+                            <state key="normal" image="send">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -148,6 +148,6 @@
     <resources>
         <image name="avatar" width="300" height="300"/>
         <image name="back_template" width="512" height="512"/>
-        <image name="red_icon_template" width="64" height="64"/>
+        <image name="send" width="24" height="24"/>
     </resources>
 </document>

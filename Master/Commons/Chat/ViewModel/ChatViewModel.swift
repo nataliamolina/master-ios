@@ -77,7 +77,7 @@ class ChatViewModel {
     func sendChatMessage(_ message: String) {
         chatManager.sendMessage(message, userId: userId, chatId: chatId)
         pushNotificationService.send(to: sentToToken,
-                                     title: name,
+                                     title: "title.push".localized + chatId,
                                      message: message,
                                      actionId: chatId,
                                      actionType: sentTo)

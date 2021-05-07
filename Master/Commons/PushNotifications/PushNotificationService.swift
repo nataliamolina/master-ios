@@ -25,22 +25,21 @@ class PushNotificationService: PushNotificationServiceProtocol {
     
     // MARK: - Private Methods
     private func sendPushNotification(to token: String, pushData: PushNotification) {
-        let endpoint: URL = NSURL(fileURLWithPath: Endpoint.firebasePush()) as URL
+        guard let endpoint = NSURL(string: Endpoint.firebasePush()) else {  return  }
         
         guard let requestData = PushRequest(to: token, data: pushData).data else { return }
         
-        let request = NSMutableURLRequest(url: endpoint)
+        let request = NSMutableURLRequest(url: endpoint as URL)
         request.httpMethod = "POST"
         request.httpBody = requestData
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("key=" + Endpoint.getFirebaseApiKey(), forHTTPHeaderField: "Authorization")
+        request.setValue("key=\(Endpoint.getFirebaseApiKey())", forHTTPHeaderField: "Authorization")
         
-        URLSession.shared.dataTask(with: request as URLRequest)  { (data, response, error) in
-            
+        let task =  URLSession.shared.dataTask(with: request as URLRequest)  { ( _, _, error) in
             if let error = error {
-                print("Push notification failed: " + error.localizedDescription)
+                print(error.localizedDescription)
             }
-            
-        }.resume()
+        }
+        task.resume()
     }
 }

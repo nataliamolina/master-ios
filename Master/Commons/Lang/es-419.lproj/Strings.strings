@@ -239,3 +239,5 @@
 "changeState.message" = "Al cambiar el estado del pedido, este será notificado al usuario.";
 "changeState.acept" = "Aceptar";
 "changeState.cancel" = "Cancelar";
+
+"title.push" = "Mensaje del Pedido #";

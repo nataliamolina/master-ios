@@ -148,6 +148,6 @@ extension Encodable {
     }
     
     var data: Data? {
-        return try? JSONSerialization.data(withJSONObject: self.dictionary ?? [:] , options: [.prettyPrinted])
+        return try? JSONSerialization.data(withJSONObject: self.dictionary ?? [:], options: [.prettyPrinted])
     }
 }
