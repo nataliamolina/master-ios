@@ -8,10 +8,6 @@
 	<string>${CLIENT_ID}</string>
 	<key>ApiEndpoint</key>
 	<string>${API_ENDPOINT}</string>
-	<key>FirebasePush</key>
-	<string>${FIREBASE_PUSH}</string>
-	<key>FirebasePushKey</key>
-	<string>$(FIREBASE_KEY)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -55,6 +51,10 @@
 	<string>2685307465044048</string>
 	<key>FacebookDisplayName</key>
 	<string>Master</string>
+	<key>FirebasePush</key>
+	<string>${FIREBASE_PUSH}</string>
+	<key>FirebasePushKey</key>
+	<string>$(FIREBASE_KEY)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>whatsapp</string>

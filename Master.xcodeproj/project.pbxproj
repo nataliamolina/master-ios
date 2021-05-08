@@ -5154,7 +5154,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				ENABLE_BITCODE = NO;
@@ -5172,7 +5172,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-AGR-CLIENT";
 				PAYMENTEZ_APP_KEY = ZgwDXC2we1BKKL1rcPEspf9lzNtiEp;
@@ -5195,7 +5195,7 @@
 				CODE_SIGN_ENTITLEMENTS = Master/Master.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5D4G5VBTAB;
 				ENABLE_BITCODE = NO;
 				FIREBASE_KEY = "AAAAoWd9QA0:APA91bF8xYgQ-4ItNu-1jx-ZDvu1MMUQ2SyfyMiZmWalmPSCfaz-U8yZu1v5B8y0nBYxSSbZC4F7WhDdPOaWozBmiEjDwWkI_UpJ7ZQlYRi3UYKR9C6PrJA_ug5PzYMiNd3iBbqkt1Up";
@@ -5212,7 +5212,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				PAYMENTEZ_APP_CODE = "MASTERAPP-CO-AGR-CLIENT";
 				PAYMENTEZ_APP_KEY = ZgwDXC2we1BKKL1rcPEspf9lzNtiEp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.masterapp.ios;

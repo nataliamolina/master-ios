@@ -13,6 +13,8 @@ class ProviderOrderDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var paymentButton: MButton!
+    @IBOutlet weak var chatView: UIView!
+    @IBOutlet weak var chatViewShadow: UIView!
     
     // MARK: - UI Actions
     
@@ -54,6 +56,11 @@ class ProviderOrderDetailViewController: UIViewController {
         disableTitle()
         
         paymentButton.isHidden = true
+        
+        chatView.clipsToBounds = true
+        chatView.layer.cornerRadius = chatView.frame.width / 2
+        chatViewShadow.clipsToBounds = true
+        chatViewShadow.layer.cornerRadius = chatViewShadow.frame.width / 2
         
         tableView.dataSource = self
         tableView.separatorStyle = .none

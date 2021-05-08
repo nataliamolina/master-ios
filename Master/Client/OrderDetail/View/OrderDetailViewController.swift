@@ -13,6 +13,8 @@ class OrderDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var paymentButton: MButton!
+    @IBOutlet weak var chatView: UIView!
+    @IBOutlet weak var chatViewShadow: UIView!
     
     // MARK: - UI Actions
     @IBAction private func paymentButtonAction() {
@@ -63,6 +65,11 @@ class OrderDetailViewController: UIViewController {
         tableView.registerNib(OrderDetailHeaderCell.self)
         tableView.registerNib(ProviderServiceCell.self)
         tableView.registerNib(CheckoutFieldCell.self)
+        
+        chatView.clipsToBounds = true
+        chatView.layer.cornerRadius = chatView.frame.width / 2
+        chatViewShadow.clipsToBounds = true
+        chatViewShadow.layer.cornerRadius = chatViewShadow.frame.width / 2
         
         setupBindings()
         

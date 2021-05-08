@@ -69,7 +69,7 @@ class OrderDetailViewModel {
     }
     
     func getChatViewModel() -> ChatViewModel {
-        let name: String = (model?.provider.user.firstName ?? "") + " " + (model?.provider.user.lastName ?? "")
+        let name: String = model?.provider.user.names ?? ""
         
         return ChatViewModel(chatId: (model?.id ?? 0).asString,
                              userId: (model?.user.id ?? 0).asString,

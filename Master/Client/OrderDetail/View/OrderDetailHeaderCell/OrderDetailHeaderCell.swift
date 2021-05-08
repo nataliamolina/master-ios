@@ -32,6 +32,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
     @IBOutlet private weak var providerNameLabel: UILabel!
     @IBOutlet private weak var orderDateLabel: UILabel!
     @IBOutlet private weak var orderMessageLabel: UILabel!
+    @IBOutlet private weak var providerInfoView: UIView!
     
     // MARK: - UI Actions
     @IBAction private func leftButtonAction() {
@@ -71,6 +72,7 @@ class OrderDetailHeaderCell: UITableViewCell, ConfigurableCellProtocol {
         
         statusHelper.setupLabel(statusLabel, state: viewModel.status)
         statusHelper.setupView(statusView, state: viewModel.status)
+        providerInfoView.isHidden = viewModel.isProvider
         
         setupButtonsWith(state: viewModel.status, isProvider: viewModel.isProvider)
     }

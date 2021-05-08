@@ -61,7 +61,7 @@ class ProviderOrderDetailViewModel {
         return ChatViewModel(chatId: (model?.id ?? 0).asString,
                              userId: (model?.provider.id ?? 0).asString,
                              photoUrl: model?.user.imageUrl ?? "",
-                             name: (model?.user.firstName ?? "") + (model?.user.lastName ?? ""),
+                             name: model?.user.names ?? "",
                              sentToToken: model?.user.pushToken ?? "",
                              sentTo: .chatUser)
     }

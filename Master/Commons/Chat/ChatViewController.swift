@@ -19,6 +19,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var chatTextViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var chatTextBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var chatView: UIView!
     
     // MARK: - Properties
     private var viewModel: ChatViewModel
@@ -94,7 +95,7 @@ class ChatViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.registerNib(ChatTableViewCell.self)
         
-        userNameLabel.text = viewModel.name.isEmpty ? "Master" : viewModel.name
+        userNameLabel.text = viewModel.name.isEmpty ? "Master" : viewModel.name.localizedCapitalized
         if !viewModel.photoUrl.isEmpty {
             userImageView.kf.setImage(with: URL(string: viewModel.photoUrl))
         }
@@ -134,7 +135,7 @@ class ChatViewController: UIViewController {
         }
         keyboardHeight = keyboardSize.height
         
-        chatTextBottomConstraint.constant += keyboardSize.height
+        chatTextBottomConstraint.constant += (keyboardSize.height - 30)
         
         UIView.animate(withDuration: generalTime, animations: { [weak self] in
             self?.view.layoutIfNeeded()
