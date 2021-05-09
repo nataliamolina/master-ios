@@ -15,6 +15,7 @@ enum OrdersRouterTransitions {
     case payment(viewModel: PaymentViewModel)
     case paymentDone
     case endFlow(onComplete: CompletionBlock?)
+    case chat(viewModel: ChatViewModel)
 }
 
 class OrdersRouter: RouterBase<OrdersRouterTransitions> {
@@ -48,6 +49,9 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
             
         case .endFlow(let onComplete):
             routeToEndFlow(onComplete: onComplete)
+            
+        case .chat(let viewModel):
+            handleChatTransition(viewModel: viewModel)
         }
     }
     
@@ -85,5 +89,11 @@ class OrdersRouter: RouterBase<OrdersRouterTransitions> {
         let viewController = RateViewController(router: self, viewModel: viewModel)
         
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func handleChatTransition(viewModel: ChatViewModel) {
+        let viewController = ChatViewController(viewModel: viewModel)
+        viewController.modalPresentationStyle = .fullScreen
+        navigationController.present(viewController, animated: true, completion: nil)
     }
 }

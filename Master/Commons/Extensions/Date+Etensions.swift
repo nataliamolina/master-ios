@@ -20,4 +20,11 @@ public extension Date {
         formatter.locale = locale
         return formatter.string(from: self)
     }
+    
+    var asJson: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        
+        return dateFormatter.string(from: Date())
+    }
 }

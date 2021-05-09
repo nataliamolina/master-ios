@@ -18,4 +18,12 @@ struct Endpoint {
     static func url(with key: String) -> String {
         return base + ((Utils.endpoints?.value(forKey: key) as? String) ?? "")
     }
+    
+    static func firebasePush() -> String {
+        return  Utils.plist?.value(forKey: "FirebasePush") as? String ?? ""
+    }
+    
+    static func getFirebaseApiKey() -> String {
+        return Utils.plist?.value(forKey: "FirebasePushKey") as? String ?? ""
+    }
 }

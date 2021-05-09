@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -37,7 +38,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="QSv-OL-aSn" secondAttribute="trailing" constant="5" id="15p-Gd-80Y"/>
                                             <constraint firstItem="QSv-OL-aSn" firstAttribute="leading" secondItem="Zcx-2j-F2G" secondAttribute="leading" constant="5" id="IhT-IY-068"/>
@@ -52,7 +53,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Zcx-2j-F2G" firstAttribute="centerY" secondItem="41E-lQ-yDb" secondAttribute="centerY" id="HbR-mE-KuX"/>
                                     <constraint firstItem="Zcx-2j-F2G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="41E-lQ-yDb" secondAttribute="trailing" constant="20" id="aof-f2-rxS"/>
@@ -65,14 +66,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8Nz-p2-vvb">
                                 <rect key="frame" x="0.0" y="70" width="508" height="47"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jk7-Dg-9MH" customClass="MButton" customModule="Local" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jk7-Dg-9MH" customClass="MButton" customModule="Local" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="246.5" height="47"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="leftButtonAction" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q0S-fU-zav"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-gw-24S" customClass="MButton" customModule="Local" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-gw-24S" customClass="MButton" customModule="Local" customModuleProvider="target">
                                         <rect key="frame" x="261.5" y="0.0" width="246.5" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="uQt-QZ-CSd"/>
@@ -145,6 +146,7 @@
                 <outlet property="orderDateLabel" destination="kLn-Ag-9mk" id="YAQ-1i-FEE"/>
                 <outlet property="orderIdLabel" destination="41E-lQ-yDb" id="7MV-vy-3Wb"/>
                 <outlet property="orderMessageLabel" destination="6ny-YQ-oke" id="vPP-XE-ZUg"/>
+                <outlet property="providerInfoView" destination="bmd-s0-Kkc" id="kC9-0W-ult"/>
                 <outlet property="providerNameLabel" destination="01e-aU-Lmq" id="Cf2-Y9-std"/>
                 <outlet property="rightActionButton" destination="UKe-gw-24S" id="IVY-2S-DVk"/>
                 <outlet property="statusLabel" destination="QSv-OL-aSn" id="JY3-6s-aJW"/>
@@ -153,4 +155,9 @@
             <point key="canvasLocation" x="334.78260869565219" y="256.13839285714283"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

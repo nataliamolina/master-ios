@@ -51,6 +51,10 @@
 	<string>2685307465044048</string>
 	<key>FacebookDisplayName</key>
 	<string>Master</string>
+	<key>FirebasePush</key>
+	<string>${FIREBASE_PUSH}</string>
+	<key>FirebasePushKey</key>
+	<string>$(FIREBASE_KEY)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>whatsapp</string>

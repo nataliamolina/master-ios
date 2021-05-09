@@ -10,6 +10,7 @@ def firebase
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
+  pod 'Firebase/Database'
 end
 
 def commons

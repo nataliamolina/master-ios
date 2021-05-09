@@ -17,9 +17,11 @@ enum OrderDetailViewModelStatus {
 class OrderDetailViewModel {
     // MARK: - Properties
     private var cart = [OrderProviderService]()
+    private var model: Order?
     private let service: OrderDetailServiceProtocol
     private let orderId: Int
     private typealias CheckoutLang = CheckoutConstants.Lang
+    private var providerName: String
 
     let formattedTotal = Var("$0")
     let status = Var<OrderDetailViewModelStatus>(.undefined)
@@ -29,11 +31,12 @@ class OrderDetailViewModel {
     let needsToRateOrder = Var(false)
     
     // MARK: - Life Cycle
-    init(orderId: Int, service: OrderDetailServiceProtocol? = nil) {
+    init(orderId: Int, service: OrderDetailServiceProtocol? = nil, providerName: String = "") {
         let defaultService = OrderDetailService(connectionDependency: ConnectionManager())
         
         self.orderId = orderId
         self.service = service ?? defaultService
+        self.providerName = providerName
     }
     
     // MARK: - Public Methods
@@ -65,6 +68,17 @@ class OrderDetailViewModel {
         }
     }
     
+    func getChatViewModel() -> ChatViewModel {
+        let name: String = model?.provider.user.names ?? ""
+        
+        return ChatViewModel(chatId: (model?.id ?? 0).asString,
+                             userId: (model?.user.id ?? 0).asString,
+                             photoUrl: model?.provider.photoUrl ?? "",
+                             name: !name.isEmpty ? name : providerName,
+                             sentToToken: model?.provider.user.pushToken ?? "",
+                             sentTo: .chatProvider)
+    }
+    
     func getViewModelAt(indexPath: IndexPath) -> CellViewModelProtocol? {
         return dataSource.value.safeContains(indexPath.row)
     }
@@ -84,6 +98,7 @@ class OrderDetailViewModel {
     
     private func responseToViewModels(model: Order) {
         dataSource.value.removeAll()
+        self.model = model
 
         self.formattedTotal.value = (model.grossTotal + (model.extraCost ?? 0)).toFormattedCurrency()
         

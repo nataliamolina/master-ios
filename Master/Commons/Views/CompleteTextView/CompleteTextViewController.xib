@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -61,16 +62,17 @@
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UHY-ph-K8O" customClass="MTextView" customModule="Local" customModuleProvider="target">
                     <rect key="frame" x="20" y="123" width="374" height="100"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="FZd-dc-1rr"/>
                     </constraints>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="UHY-ph-K8O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3Hj-YD-Lsc"/>
@@ -80,14 +82,23 @@
                 <constraint firstItem="71j-N0-LG9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IbZ-AA-8lo"/>
                 <constraint firstItem="71j-N0-LG9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Lrv-ut-HLz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wG6-K3-JD0" secondAttribute="bottom" id="VMn-Qf-Igf"/>
+                <constraint firstItem="wG6-K3-JD0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UHY-ph-K8O" secondAttribute="bottom" constant="8" id="VYh-Zi-YuC"/>
                 <constraint firstItem="eHf-iz-jfH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dWI-sV-OWV"/>
+                <constraint firstItem="wG6-K3-JD0" firstAttribute="top" relation="lessThanOrEqual" secondItem="UHY-ph-K8O" secondAttribute="bottom" constant="592" id="jmC-j4-xP3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eHf-iz-jfH" secondAttribute="trailing" constant="20" id="kXe-iE-KAF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UHY-ph-K8O" secondAttribute="trailing" constant="20" id="maF-Gb-f1A"/>
                 <constraint firstItem="wG6-K3-JD0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tfx-WE-wrg"/>
                 <constraint firstItem="eHf-iz-jfH" firstAttribute="top" secondItem="71j-N0-LG9" secondAttribute="bottom" constant="10" id="wdv-zd-45N"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="135"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

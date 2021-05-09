@@ -39,6 +39,9 @@ PODS:
   - Firebase/Crashlytics (6.28.0):
     - Firebase/CoreOnly
     - FirebaseCrashlytics (~> 4.3.0)
+  - Firebase/Database (6.28.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 6.4.0)
   - Firebase/Messaging (6.28.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 4.6.0)
@@ -74,6 +77,9 @@ PODS:
     - GoogleDataTransport (~> 7.0)
     - nanopb (~> 1.30905.0)
     - PromisesObjC (~> 1.2)
+  - FirebaseDatabase (6.4.0):
+    - FirebaseCore (~> 6.8)
+    - leveldb-library (~> 1.22)
   - FirebaseInstallations (1.5.0):
     - FirebaseCore (~> 6.8)
     - GoogleUtilities/Environment (~> 6.7)
@@ -145,6 +151,7 @@ PODS:
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
+  - leveldb-library (1.22.1)
   - Localize (2.3.0)
   - lottie-ios (3.1.8)
   - MBRadioButton (1.4)
@@ -171,6 +178,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/Crashlytics
+  - Firebase/Database
   - Firebase/Messaging
   - Firebase/RemoteConfig
   - Firebase/Storage
@@ -202,6 +210,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCrashlytics
+    - FirebaseDatabase
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
@@ -216,6 +225,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - Hero
     - Kingfisher
+    - leveldb-library
     - Localize
     - lottie-ios
     - MBRadioButton
@@ -242,6 +252,7 @@ SPEC CHECKSUMS:
   FirebaseCore: aab9d4dd2d819197a0157166cb065ae88ff612b5
   FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
   FirebaseCrashlytics: f6ae039fdaf07980425f2ae9f49131fc94009c58
+  FirebaseDatabase: 55e69fe802ccb438d9c6ee51eb32fd425d5409d3
   FirebaseInstallations: 3c520c951305cbf9ca54eb891ff9e6d1fd384881
   FirebaseInstanceID: 358d5cb393d2750a745569ede06827c35aea530b
   FirebaseMessaging: bdd4d573eab37ebee29bad4e7c4b0ef18fa1a952
@@ -256,6 +267,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Localize: cb1ae53ed73decaad0dce217806ed983091913f5
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   MBRadioButton: dcf111c9bb633d4cf6e83200d804af6e025033c8
@@ -267,6 +279,6 @@ SPEC CHECKSUMS:
   SPAlert: 1a8afa1c6ac86a82ab5b2cfdf7f9a51e68cb6c0c
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 5e49ab941009a28cf07a2dd8e5dbef1b2cbc71b5
+PODFILE CHECKSUM: 3d3239a700d48585765deaf9bb8c0cd71e4c69b1
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

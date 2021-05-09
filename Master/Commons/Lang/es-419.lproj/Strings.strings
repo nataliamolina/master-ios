@@ -239,3 +239,8 @@
 "changeState.message" = "Al cambiar el estado del pedido, este será notificado al usuario.";
 "changeState.acept" = "Aceptar";
 "changeState.cancel" = "Cancelar";
+
+"title.push" = "Mensaje del Pedido #";
+"title.chat.withphone" = "Por favor";
+"message.chat.withphone" = "No compartas tus datos personales hasta terminar la orden";
+"button.chat.withphone" = "Entendido";
