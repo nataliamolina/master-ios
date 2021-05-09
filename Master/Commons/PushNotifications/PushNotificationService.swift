@@ -35,7 +35,7 @@ class PushNotificationService: PushNotificationServiceProtocol {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("key=\(Endpoint.getFirebaseApiKey())", forHTTPHeaderField: "Authorization")
         
-        let task =  URLSession.shared.dataTask(with: request as URLRequest)  { ( _, _, error) in
+        let task =  URLSession.shared.dataTask(with: request as URLRequest) { ( _, _, error) in
             if let error = error {
                 print(error.localizedDescription)
             }

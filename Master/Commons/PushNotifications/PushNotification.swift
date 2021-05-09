@@ -21,4 +21,11 @@ struct PushNotification: Codable {
     let message: String
     let actionType: PushNotificationType
     let actionId: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case title
+        case message = "body"
+        case actionType
+        case actionId
+    }
 }

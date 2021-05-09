@@ -122,6 +122,16 @@ class ChatViewController: UIViewController {
         chatTextView.text = nil
         chatTextViewHeightConstraint.constant = minTextViewHeight
     }
+    
+    private func confirmServiceUpdate() {
+        let dialog = UIAlertController(title: "title.chat.withphone".localized,
+                                       message: "message.chat.withphone".localized,
+                                       preferredStyle: .alert)
+        
+        dialog.addAction(UIAlertAction(title: "button.chat.withphone".localized, style: .default, handler: nil))
+
+        present(dialog, animated: true, completion: nil)
+    }
 
     /**
      Method to catch when the keyboard appears and modifify the ScrollView contentInset to improve the User experience using the form.
@@ -218,6 +228,20 @@ extension ChatViewController: UITextViewDelegate {
             chatTextViewHeightConstraint.constant = height
             chatTextView.setContentOffset(.zero, animated: false)
         }
+        
+        let check: Bool = checkTextNumber(String(chatTextView.text))
+        sendChatButton.isHidden = check
+        
+        if check {
+            confirmServiceUpdate()
+        }
+    }
+    
+    private func checkTextNumber(_ text: String) -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: "[0-9]{10}") else { return false}
+        let range = NSRange(location: 0, length: text.utf16.count)
+        
+        return regex.firstMatch(in: text, options: [], range: range) != nil
     }
 }
 
